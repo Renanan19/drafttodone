@@ -225,19 +225,17 @@ function WaitlistForm({
         // Demo mode — no key configured yet.
         await new Promise((r) => setTimeout(r, 650));
       } else {
+        // FormData (multipart) is a CORS-safelisted content type → no preflight,
+        // so Web3Forms' ACAO:* applies and the browser submission succeeds.
+        const formData = new FormData();
+        formData.append("access_key", WEB3FORMS_ACCESS_KEY);
+        formData.append("email", value);
+        formData.append("subject", "New DraftToDone waitlist signup");
+        formData.append("from_name", "DraftToDone Waitlist");
+        formData.append("botcheck", "");
         const res = await fetch("https://api.web3forms.com/submit", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_ACCESS_KEY,
-            email: value,
-            subject: "New DraftToDone waitlist signup",
-            from_name: "DraftToDone Waitlist",
-            botcheck: "",
-          }),
+          body: formData,
         });
         const data = await res.json();
         if (!data.success) throw new Error(data.message ?? "Submission failed");
