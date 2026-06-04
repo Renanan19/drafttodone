@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Fraunces, Hanken_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Newsreader, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-newsreader",
   display: "swap",
   style: ["normal", "italic"],
 });
@@ -15,23 +15,17 @@ const hanken = Hanken_Grotesk({
   display: "swap",
 });
 
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains",
-  display: "swap",
-});
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://drafttocover.io"),
-  title: "DraftToCover.io — The Complete AI Publishing Machine",
+  metadataBase: new URL("https://drafttodone.io"),
+  title: "DraftToDone.io — The Complete AI Publishing Machine",
   description:
     "Generate the entire product — front cover to back cover, manuscript, and optimized title. Build your publishing empire with 6 ready-to-publish books a week.",
   openGraph: {
-    title: "DraftToCover.io — The Complete AI Publishing Machine",
+    title: "DraftToDone.io — The Complete AI Publishing Machine",
     description:
       "Don't just write a book. Generate the entire product. Join the waitlist for early beta access.",
     type: "website",
-    url: "https://drafttocover.io",
+    url: "https://drafttodone.io",
   },
 };
 
@@ -41,11 +35,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${fraunces.variable} ${hanken.variable} ${jetbrains.variable}`}
-    >
-      <body>{children}</body>
+    <html lang="en" className={`${newsreader.variable} ${hanken.variable}`}>
+      <body>
+        {/* No-JS fallback: reveal-up elements must stay visible without the observer */}
+        <noscript>
+          <style>{`.reveal-up{opacity:1 !important;transform:none !important}`}</style>
+        </noscript>
+        {children}
+      </body>
     </html>
   );
 }

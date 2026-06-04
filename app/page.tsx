@@ -1,19 +1,163 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
-  BookOpen,
-  Image as ImageIcon,
-  Settings,
   ArrowRight,
   ArrowUpRight,
-  CheckCircle2,
+  BookOpen,
+  Check,
+  Image as ImageIcon,
+  Loader2,
   Lock,
-  Mail,
+  Settings,
   Sparkles,
   X,
   type LucideIcon,
 } from "lucide-react";
+
+/* -------------------------------------------------------------------------- */
+/*  Web3Forms — paste your access key (free at https://web3forms.com).        */
+/*  Public by design: the key only allows submitting to YOUR form.            */
+/*  Until set, the form runs in demo mode (shows success, sends nothing).     */
+/* -------------------------------------------------------------------------- */
+const WEB3FORMS_ACCESS_KEY =
+  process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "YOUR_ACCESS_KEY_HERE";
+
+/* -------------------------------------------------------------------------- */
+/*  Bilingual copy (EN / FR)                                                  */
+/* -------------------------------------------------------------------------- */
+const COPY = {
+  en: {
+    nav: { followX: "Follow on X", join: "Join the waitlist" },
+    hero: {
+      eyebrow: "Now in private beta",
+      h1main: "The complete AI publishing",
+      h1accent: "machine.",
+      sub: "Don't just write a book. Generate the entire product — front cover to back cover, manuscript, and optimized title. Build your publishing empire with",
+      subHighlight: "6 ready-to-publish books a week.",
+      microcopy: "Limited spots for early beta access.",
+      chips: ["Manuscript", "Front cover", "Back cover", "Verified pen name"],
+      caption: "Six ready-to-publish books. Every week.",
+    },
+    form: {
+      placeholder: "Enter your email",
+      cta: "Join the Waitlist",
+      loading: "Joining…",
+      done: "Added",
+      retry: "Try again",
+      error: "Something went wrong. Please try again.",
+    },
+    toast: {
+      title: "Thanks for subscribing!",
+      withEmail: "You're on the list —",
+      noEmail: "You're on the early access list.",
+      dismiss: "Dismiss notification",
+    },
+    origin: {
+      eyebrow: "The origin story",
+      h2: "Why I'm building this.",
+      pre: "I used to make",
+      money: "€400/month",
+      mid: "on Amazon KDP until a bad pun for a pen name got me",
+      ban: "permanently banned overnight.",
+      post:
+        "Now, I'm taking the private algorithm I used to automate my entire publishing process and turning it into a SaaS. Follow my journey to",
+      mrr: "recover my lost MRR.",
+      sign: "Building in public",
+    },
+    features: {
+      eyebrow: "The engine",
+      h2: "From blank page to published.",
+      sub: "Three systems. One pipeline. Every asset a marketplace demands — generated, formatted, and ready to upload.",
+      items: [
+        {
+          title: "Full Manuscript Generation",
+          text: "The AI determines the ideal length and writes the entire book autonomously based on your niche.",
+        },
+        {
+          title: "Complete Cover Design",
+          text: "Generates the front cover, spine, and back cover layout with AI imagery, ready for print.",
+        },
+        {
+          title: "Optimized Metadata",
+          text: "Generates SEO-optimized titles, descriptions, and verified pen names to avoid copyright strikes.",
+        },
+      ],
+    },
+    cta: {
+      h2: "Ready to scale your publishing business?",
+      sub: "Join the founders building their catalog on autopilot. Early access opens soon.",
+    },
+    footer: "© 2026 DraftToDone.io. Built in public.",
+  },
+  fr: {
+    nav: { followX: "Suivre sur X", join: "Rejoindre la liste" },
+    hero: {
+      eyebrow: "En bêta privée",
+      h1main: "Toute la chaîne d'édition,",
+      h1accent: "automatisée par l'IA.",
+      sub: "N'écrivez pas seulement un livre. Générez le produit complet — de la première à la quatrième de couverture, le manuscrit et le titre optimisé. Bâtissez votre empire éditorial avec",
+      subHighlight: "6 livres prêts à publier par semaine.",
+      microcopy: "Places limitées pour l'accès bêta anticipé.",
+      chips: ["Manuscrit", "Couverture", "Quatrième", "Nom de plume vérifié"],
+      caption: "Six livres prêts à publier. Chaque semaine.",
+    },
+    form: {
+      placeholder: "Votre adresse e-mail",
+      cta: "Rejoindre la liste",
+      loading: "Inscription…",
+      done: "Inscrit",
+      retry: "Réessayer",
+      error: "Une erreur est survenue. Veuillez réessayer.",
+    },
+    toast: {
+      title: "Merci de votre inscription !",
+      withEmail: "Vous êtes sur la liste —",
+      noEmail: "Vous êtes sur la liste d'accès anticipé.",
+      dismiss: "Fermer la notification",
+    },
+    origin: {
+      eyebrow: "L'histoire",
+      h2: "Pourquoi je construis ça.",
+      pre: "Je gagnais",
+      money: "400 €/mois",
+      mid: "sur Amazon KDP jusqu'à ce qu'un mauvais jeu de mots comme nom de plume me fasse",
+      ban: "bannir définitivement, du jour au lendemain.",
+      post:
+        "Aujourd'hui, je transforme en SaaS l'algorithme privé qui automatisait toute ma chaîne de publication. Suivez mon parcours pour",
+      mrr: "récupérer mon MRR perdu.",
+      sign: "Construit en public",
+    },
+    features: {
+      eyebrow: "Le moteur",
+      h2: "De la page blanche au livre publié.",
+      sub: "Trois systèmes. Un seul pipeline. Chaque élément exigé par les plateformes — généré, formaté et prêt à publier.",
+      items: [
+        {
+          title: "Génération complète du manuscrit",
+          text: "L'IA détermine la longueur idéale et rédige le livre entier de façon autonome selon votre niche.",
+        },
+        {
+          title: "Couverture complète",
+          text: "Génère la première de couverture, le dos et la quatrième avec des visuels IA, prêts pour l'impression.",
+        },
+        {
+          title: "Métadonnées optimisées",
+          text: "Génère des titres et descriptions optimisés pour le SEO et des noms de plume vérifiés pour éviter les litiges de droits.",
+        },
+      ],
+    },
+    cta: {
+      h2: "Prêt à faire passer votre activité d'édition à l'échelle ?",
+      sub: "Rejoignez les fondateurs qui bâtissent leur catalogue en pilote automatique. L'accès anticipé ouvre bientôt.",
+    },
+    footer: "© 2026 DraftToDone.io. Construit en public.",
+  },
+} as const;
+
+type Lang = keyof typeof COPY;
+type Copy = (typeof COPY)[Lang];
+type FormCopy = Copy["form"];
 
 /* -------------------------------------------------------------------------- */
 /*  Logo                                                                      */
@@ -21,70 +165,141 @@ import {
 function Logo() {
   return (
     <a href="#" className="flex items-center gap-2.5">
-      <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-signal to-violet text-ink shadow-[0_6px_20px_-6px_rgba(94,139,255,0.85)]">
-        <BookOpen className="h-4 w-4" strokeWidth={2.5} />
+      <span className="grid h-8 w-8 place-items-center rounded-[9px] bg-ink">
+        <Check className="h-4 w-4 text-mint-soft" strokeWidth={3} />
       </span>
-      <span className="font-display text-lg tracking-tight text-paper">
-        DraftToCover<span className="text-signal">.io</span>
+      <span className="font-display text-[19px] font-medium tracking-tight text-ink">
+        DraftToDone<span className="text-mint">.io</span>
       </span>
     </a>
   );
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Waitlist form (reused in hero + bottom CTA)                               */
+/*  Language toggle                                                           */
 /* -------------------------------------------------------------------------- */
-function WaitlistForm({ onSuccess }: { onSuccess: (email: string) => void }) {
-  const [email, setEmail] = useState("");
-  const [done, setDone] = useState(false);
+function LangToggle({ lang, setLang }: { lang: Lang; setLang: (l: Lang) => void }) {
+  return (
+    <div className="inline-flex items-center rounded-full border border-line bg-paper p-0.5 text-[12px] font-medium">
+      {(["en", "fr"] as const).map((l) => (
+        <button
+          key={l}
+          onClick={() => setLang(l)}
+          aria-pressed={lang === l}
+          className={`rounded-full px-2.5 py-1 uppercase tracking-wide transition-colors ${
+            lang === l ? "bg-ink text-paper" : "text-muted hover:text-ink"
+          }`}
+        >
+          {l}
+        </button>
+      ))}
+    </div>
+  );
+}
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+/* -------------------------------------------------------------------------- */
+/*  Waitlist form (hero + bottom CTA)                                         */
+/* -------------------------------------------------------------------------- */
+type Status = "idle" | "loading" | "done" | "error";
+
+function WaitlistForm({
+  t,
+  onSuccess,
+  id,
+}: {
+  t: FormCopy;
+  onSuccess: (email: string) => void;
+  id?: string;
+}) {
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<Status>("idle");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const value = email.trim();
-    if (!value) return;
-    onSuccess(value);
-    setEmail("");
-    setDone(true);
-    window.setTimeout(() => setDone(false), 2600);
+    if (!value || status === "loading") return;
+    setStatus("loading");
+
+    try {
+      if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
+        // Demo mode — no key configured yet.
+        await new Promise((r) => setTimeout(r, 650));
+      } else {
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_ACCESS_KEY,
+            email: value,
+            subject: "New DraftToDone waitlist signup",
+            from_name: "DraftToDone Waitlist",
+            botcheck: "",
+          }),
+        });
+        const data = await res.json();
+        if (!data.success) throw new Error(data.message ?? "Submission failed");
+      }
+
+      onSuccess(value);
+      setEmail("");
+      setStatus("done");
+      window.setTimeout(() => setStatus("idle"), 2600);
+    } catch {
+      setStatus("error");
+      window.setTimeout(() => setStatus("idle"), 4500);
+    }
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="group flex w-full flex-col gap-2.5 rounded-2xl border border-line bg-surface/50 p-2 backdrop-blur-sm transition-colors focus-within:border-signal/50 sm:flex-row sm:items-center"
-    >
-      <div className="flex flex-1 items-center gap-2.5 px-3">
-        <Mail className="h-4 w-4 shrink-0 text-faint" />
+    <div>
+      <form
+        id={id}
+        onSubmit={handleSubmit}
+        className="flex w-full scroll-mt-28 flex-col gap-2.5 sm:flex-row"
+      >
+        {/* honeypot */}
+        <input
+          type="checkbox"
+          name="botcheck"
+          tabIndex={-1}
+          aria-hidden
+          className="hidden"
+        />
         <input
           type="email"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email"
-          aria-label="Email address"
-          className="w-full bg-transparent py-3 text-[15px] text-paper outline-none placeholder:text-faint"
+          placeholder={t.placeholder}
+          aria-label={t.placeholder}
+          className="w-full flex-1 rounded-xl border border-line bg-paper px-4 py-3.5 text-[15px] text-ink outline-none transition-all placeholder:text-faint focus:border-ink/25 focus:ring-4 focus:ring-mint/15"
         />
-      </div>
-      <button
-        type="submit"
-        className="glow-btn inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-signal px-5 py-3 text-[15px] font-semibold text-ink transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0"
-      >
-        {done ? (
-          <>
-            <CheckCircle2 className="h-4 w-4" strokeWidth={2.5} />
-            Added
-          </>
-        ) : (
-          <>
-            Join the Waitlist
-            <ArrowRight
-              className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
-              strokeWidth={2.5}
-            />
-          </>
-        )}
-      </button>
-    </form>
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-ink px-6 py-3.5 text-[15px] font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft active:translate-y-0 disabled:cursor-wait disabled:opacity-80"
+        >
+          {status === "loading" && <Loader2 className="h-4 w-4 animate-spin" />}
+          {status === "done" && <Check className="h-4 w-4" strokeWidth={2.5} />}
+          {status === "loading"
+            ? t.loading
+            : status === "done"
+              ? t.done
+              : status === "error"
+                ? t.retry
+                : t.cta}
+          {(status === "idle" || status === "error") && (
+            <ArrowRight className="h-4 w-4" strokeWidth={2.25} />
+          )}
+        </button>
+      </form>
+      {status === "error" && (
+        <p className="mt-2 text-sm text-red-500">{t.error}</p>
+      )}
+    </div>
   );
 }
 
@@ -94,10 +309,12 @@ function WaitlistForm({ onSuccess }: { onSuccess: (email: string) => void }) {
 function Toast({
   show,
   email,
+  t,
   onClose,
 }: {
   show: boolean;
   email: string;
+  t: Copy["toast"];
   onClose: () => void;
 }) {
   return (
@@ -108,27 +325,27 @@ function Toast({
         show ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
       }`}
     >
-      <div className="pointer-events-auto flex max-w-[22rem] items-start gap-3 rounded-2xl border border-signal/30 bg-surface/90 px-4 py-3.5 shadow-[0_24px_70px_-20px_rgba(94,139,255,0.7)] backdrop-blur-xl">
-        <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-signal/15 text-signal">
-          <CheckCircle2 className="h-4 w-4" strokeWidth={2.5} />
+      <div className="pointer-events-auto flex max-w-[22rem] items-start gap-3 rounded-2xl border border-line bg-paper px-4 py-3.5 shadow-[0_24px_70px_-24px_rgba(16,24,40,0.45)]">
+        <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-mint-soft text-mint-deep">
+          <Check className="h-4 w-4" strokeWidth={3} />
         </span>
         <div className="min-w-0">
-          <p className="text-sm font-semibold text-paper">Thanks for subscribing!</p>
+          <p className="text-sm font-semibold text-ink">{t.title}</p>
           <p className="mt-0.5 text-[13px] text-muted">
             {email ? (
               <>
-                You&apos;re on the list —{" "}
-                <span className="break-all text-signal-bright">{email}</span>
+                {t.withEmail}{" "}
+                <span className="break-all font-medium text-ink">{email}</span>
               </>
             ) : (
-              "You're on the early access list."
+              t.noEmail
             )}
           </p>
         </div>
         <button
           onClick={onClose}
-          aria-label="Dismiss notification"
-          className="shrink-0 text-faint transition-colors hover:text-paper"
+          aria-label={t.dismiss}
+          className="shrink-0 text-faint transition-colors hover:text-ink"
         >
           <X className="h-4 w-4" />
         </button>
@@ -144,26 +361,105 @@ function FeatureCard({
   index,
   icon: Icon,
   title,
-  children,
+  text,
+  delay,
 }: {
   index: string;
   icon: LucideIcon;
   title: string;
-  children: React.ReactNode;
+  text: string;
+  delay: number;
 }) {
   return (
-    <article className="group relative overflow-hidden rounded-2xl border border-line bg-surface/40 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-signal/40">
-      <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-signal to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-      <div className="pointer-events-none absolute -right-12 -top-12 h-36 w-36 rounded-full bg-signal/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+    <article
+      data-reveal
+      style={{ transitionDelay: `${delay}ms` }}
+      className="reveal-up group relative rounded-2xl border border-line bg-paper p-7 transition-shadow duration-300 hover:shadow-[0_24px_60px_-30px_rgba(16,24,40,0.45)]"
+    >
       <div className="flex items-center justify-between">
-        <span className="grid h-12 w-12 place-items-center rounded-xl border border-line bg-ink/60 text-signal transition-colors duration-300 group-hover:border-signal/40">
+        <span className="grid h-12 w-12 place-items-center rounded-xl bg-paper-3 text-ink transition-colors duration-300 group-hover:bg-mint-soft group-hover:text-mint-deep">
           <Icon className="h-5 w-5" strokeWidth={1.75} />
         </span>
-        <span className="font-mono text-xs tracking-widest text-faint">{index}</span>
+        <span className="font-display text-sm italic text-faint">{index}</span>
       </div>
-      <h3 className="mt-6 font-display text-xl text-paper">{title}</h3>
-      <p className="mt-3 text-[15px] leading-relaxed text-muted">{children}</p>
+      <h3 className="mt-6 font-display text-xl font-medium text-ink">{title}</h3>
+      <p className="mt-3 text-[15px] leading-relaxed text-muted">{text}</p>
     </article>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Hero visual — fan of AI-generated book covers on a mint pedestal          */
+/* -------------------------------------------------------------------------- */
+function BookCover({
+  cls,
+  title,
+  label,
+  className = "",
+}: {
+  cls: string;
+  title: string;
+  label: string;
+  className?: string;
+}) {
+  return (
+    <div
+      className={`cover ${cls} relative flex aspect-[5/7] w-28 flex-col justify-between overflow-hidden rounded-[10px] p-3.5 transition-all duration-500 ease-out sm:w-36 ${className}`}
+    >
+      <div className="flex justify-end">
+        <span className="grid h-5 w-5 place-items-center rounded-full bg-white/55 text-ink/70 backdrop-blur-sm">
+          <Check className="h-3 w-3" strokeWidth={3} />
+        </span>
+      </div>
+      <div>
+        <p className="font-display text-base font-medium leading-tight text-ink/85 sm:text-lg">
+          {title}
+        </p>
+        <p className="mt-1 text-[9px] uppercase tracking-[0.18em] text-ink/45">
+          {label}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function BookFan({ caption }: { caption: string }) {
+  return (
+    <div data-reveal className="reveal-up relative mt-16" style={{ transitionDelay: "420ms" }}>
+      {/* pedestal glow */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-[min(720px,92vw)] -translate-x-1/2 -translate-y-1/2 rounded-[100%] bg-[radial-gradient(closest-side,rgba(126,224,203,0.55),rgba(191,233,255,0.25),transparent)] blur-2xl"
+      />
+      {/* ground shadow */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute bottom-2 left-1/2 h-7 w-64 -translate-x-1/2 rounded-[100%] bg-ink/10 blur-xl"
+      />
+
+      <div className="float-slow group relative flex items-end justify-center">
+        <BookCover
+          cls="cover-peach"
+          title="Morning Light"
+          label="A Novel"
+          className="z-10 -mr-7 -rotate-[9deg] translate-y-3 group-hover:-translate-x-5 group-hover:-rotate-[15deg]"
+        />
+        <BookCover
+          cls="cover-mint"
+          title="The Quiet Coast"
+          label="Fiction"
+          className="z-20 scale-110 group-hover:-translate-y-2"
+        />
+        <BookCover
+          cls="cover-lilac"
+          title="After the Rain"
+          label="Stories"
+          className="z-10 -ml-7 rotate-[9deg] translate-y-3 group-hover:translate-x-5 group-hover:rotate-[15deg]"
+        />
+      </div>
+
+      <p className="relative mt-10 text-center text-sm text-muted">{caption}</p>
+    </div>
   );
 }
 
@@ -171,41 +467,85 @@ function FeatureCard({
 /*  Page                                                                      */
 /* -------------------------------------------------------------------------- */
 export default function Home() {
+  const [lang, setLang] = useState<Lang>("en");
   const [toast, setToast] = useState({ show: false, email: "" });
+  const t = COPY[lang];
+
+  /* language: detect + persist */
+  useEffect(() => {
+    let initial: Lang = "en";
+    try {
+      const saved = localStorage.getItem("dtd-lang") as Lang | null;
+      if (saved === "en" || saved === "fr") initial = saved;
+      else if (navigator.language?.toLowerCase().startsWith("fr")) initial = "fr";
+    } catch {
+      /* ignore */
+    }
+    setLang(initial);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    try {
+      localStorage.setItem("dtd-lang", lang);
+    } catch {
+      /* ignore */
+    }
+  }, [lang]);
+
+  /* scroll reveal */
+  useEffect(() => {
+    const els = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
+          }
+        }
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
 
   function handleSuccess(email: string) {
     setToast({ show: true, email });
-    window.setTimeout(() => setToast((t) => ({ ...t, show: false })), 4200);
+    window.setTimeout(() => setToast((s) => ({ ...s, show: false })), 4200);
   }
 
-  const closeToast = () => setToast((t) => ({ ...t, show: false }));
+  const closeToast = () => setToast((s) => ({ ...s, show: false }));
 
-  const chips = ["Manuscript", "Front cover", "Back cover", "Verified pen name"];
+  const featureIcons: LucideIcon[] = [BookOpen, ImageIcon, Settings];
 
   return (
-    <div className="relative min-h-screen bg-ink">
-      {/* film grain */}
-      <div
-        aria-hidden
-        className="grain pointer-events-none fixed inset-0 z-[110] opacity-[0.04] mix-blend-soft-light"
-      />
-
-      <Toast show={toast.show} email={toast.email} onClose={closeToast} />
+    <div className="relative min-h-screen bg-paper">
+      <Toast show={toast.show} email={toast.email} t={t.toast} onClose={closeToast} />
 
       {/* ---------------------------------------------------------------- */}
       {/* Header                                                           */}
       {/* ---------------------------------------------------------------- */}
-      <header className="sticky top-0 z-40 border-b border-line/60 bg-ink/70 backdrop-blur-xl">
+      <header className="sticky top-0 z-40 border-b border-line/70 bg-paper/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-6">
           <Logo />
-          <a
-            href="#"
-            className="group inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-paper"
-          >
-            <span className="hidden sm:inline">Follow the journey on</span>
-            <span className="font-semibold text-paper">X</span>
-            <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-          </a>
+          <div className="flex items-center gap-3 sm:gap-4">
+            <LangToggle lang={lang} setLang={setLang} />
+            <a
+              href="#"
+              className="group hidden items-center gap-1 text-sm text-muted transition-colors hover:text-ink sm:inline-flex"
+            >
+              {t.nav.followX}
+              <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </a>
+            <a
+              href="#waitlist"
+              className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
+            >
+              {t.nav.join}
+            </a>
+          </div>
         </div>
       </header>
 
@@ -213,96 +553,114 @@ export default function Home() {
         {/* -------------------------------------------------------------- */}
         {/* Hero                                                           */}
         {/* -------------------------------------------------------------- */}
-        <section className="relative isolate overflow-hidden">
-          {/* atmosphere */}
+        <section className="relative overflow-hidden">
+          {/* soft top atmosphere */}
           <div
             aria-hidden
-            className="pointer-events-none absolute left-1/2 top-[-14%] h-[520px] w-[min(900px,95vw)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(94,139,255,0.28),transparent)] blur-[30px]"
+            className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(60%_100%_at_50%_0%,rgba(169,240,214,0.28),transparent)]"
           />
-          <div
-            aria-hidden
-            className="float-slow pointer-events-none absolute right-[6%] top-[22%] h-72 w-72 rounded-full bg-[radial-gradient(closest-side,rgba(154,123,255,0.22),transparent)] blur-[20px]"
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 [-webkit-mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent)] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent)]"
-          >
-            <div className="absolute inset-0 [background-image:linear-gradient(to_right,rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.045)_1px,transparent_1px)] [background-size:56px_56px]" />
-          </div>
-
-          <div className="relative mx-auto max-w-4xl px-5 pb-20 pt-20 text-center sm:px-6 sm:pt-28">
-            <p className="reveal mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-surface/50 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.25em] text-signal-bright backdrop-blur-sm">
-              <span className="live-dot h-1.5 w-1.5 rounded-full bg-signal" />
-              Now in private beta
+          <div className="relative mx-auto max-w-3xl px-5 pb-8 pt-16 text-center sm:px-6 sm:pt-24">
+            <p
+              data-reveal
+              className="reveal-up mb-7 inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3.5 py-1.5 text-[13px] font-medium text-ink-soft shadow-sm"
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-mint" />
+              {t.hero.eyebrow}
             </p>
 
-            <h1 className="reveal text-balance font-display text-5xl leading-[1.04] tracking-tight text-paper [animation-delay:80ms] sm:text-6xl md:text-7xl">
-              The Complete AI
-              <br className="hidden sm:block" /> Publishing{" "}
-              <span className="glow-text italic text-signal">Machine.</span>
+            <h1
+              data-reveal
+              style={{ transitionDelay: "80ms" }}
+              className="reveal-up text-balance font-display text-[2.6rem] font-medium leading-[1.05] tracking-[-0.02em] text-ink sm:text-6xl"
+            >
+              {t.hero.h1main}{" "}
+              <em className="italic text-mint">{t.hero.h1accent}</em>
             </h1>
 
-            <p className="reveal mx-auto mt-7 max-w-2xl text-balance text-lg leading-relaxed text-muted [animation-delay:160ms] sm:text-xl">
-              Don&apos;t just write a book. Generate the entire product. From front cover to back
-              cover, manuscript, and optimized title. Build your publishing empire with{" "}
-              <span className="font-medium text-paper">6 ready-to-publish books a week.</span>
+            <p
+              data-reveal
+              style={{ transitionDelay: "160ms" }}
+              className="reveal-up mx-auto mt-6 max-w-xl text-balance text-lg leading-relaxed text-muted"
+            >
+              {t.hero.sub}{" "}
+              <span className="font-medium text-ink">{t.hero.subHighlight}</span>
             </p>
 
-            <div className="reveal mx-auto mt-9 max-w-xl [animation-delay:240ms]">
-              <WaitlistForm onSuccess={handleSuccess} />
+            <div
+              data-reveal
+              style={{ transitionDelay: "240ms" }}
+              className="reveal-up mx-auto mt-9 max-w-lg"
+            >
+              <WaitlistForm t={t.form} onSuccess={handleSuccess} id="waitlist" />
               <p className="mt-3 flex items-center justify-center gap-1.5 text-sm text-faint">
                 <Lock className="h-3.5 w-3.5" />
-                Limited spots for early beta access.
+                {t.hero.microcopy}
               </p>
             </div>
 
-            <div className="reveal mt-10 flex flex-wrap items-center justify-center gap-2 [animation-delay:320ms]">
-              {chips.map((c) => (
+            <div
+              data-reveal
+              style={{ transitionDelay: "320ms" }}
+              className="reveal-up mt-9 flex flex-wrap items-center justify-center gap-2"
+            >
+              {t.hero.chips.map((c) => (
                 <span
                   key={c}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface/30 px-3 py-1 font-mono text-[11px] tracking-wide text-muted"
+                  className="inline-flex items-center gap-1.5 rounded-full border border-line bg-paper-2 px-3 py-1 text-[12px] font-medium text-muted"
                 >
-                  <CheckCircle2 className="h-3 w-3 text-signal" />
+                  <Check className="h-3 w-3 text-mint" strokeWidth={3} />
                   {c}
                 </span>
               ))}
             </div>
+
+            <BookFan caption={t.hero.caption} />
           </div>
         </section>
 
         {/* -------------------------------------------------------------- */}
         {/* Origin story                                                   */}
         {/* -------------------------------------------------------------- */}
-        <section className="relative border-t border-line/50">
+        <section className="relative border-t border-line/70 bg-paper-2">
           <div className="mx-auto max-w-3xl px-5 py-24 sm:px-6">
-            <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.25em] text-signal/80">
-              The origin story
+            <p
+              data-reveal
+              className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep"
+            >
+              {t.origin.eyebrow}
             </p>
-            <h2 className="font-display text-4xl tracking-tight text-paper sm:text-5xl">
-              Why I&apos;m building this.
+            <h2
+              data-reveal
+              style={{ transitionDelay: "60ms" }}
+              className="reveal-up font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
+            >
+              {t.origin.h2}
             </h2>
 
-            <div className="relative mt-9 border-l-2 border-signal/40 pl-6 sm:pl-8">
+            <div
+              data-reveal
+              style={{ transitionDelay: "120ms" }}
+              className="reveal-up relative mt-9 border-l-2 border-mint/50 pl-6 sm:pl-8"
+            >
               <span
                 aria-hidden
-                className="absolute -left-3 -top-8 select-none font-display text-7xl leading-none text-signal/15"
+                className="absolute -left-2.5 -top-9 select-none font-display text-7xl leading-none text-mint/25"
               >
                 &ldquo;
               </span>
-              <p className="text-balance text-lg leading-relaxed text-muted sm:text-xl">
-                I used to make <span className="font-semibold text-paper">€400/month</span> on
-                Amazon KDP until a bad pun for a pen name got me{" "}
-                <span className="text-signal-bright">permanently banned overnight.</span> Now,
-                I&apos;m taking the private algorithm I used to automate my entire publishing
-                process and turning it into a SaaS. Follow my journey to{" "}
-                <span className="font-semibold text-paper">recover my lost MRR.</span>
+              <p className="text-balance text-xl leading-relaxed text-ink-soft sm:text-2xl">
+                {t.origin.pre}{" "}
+                <span className="font-semibold text-ink">{t.origin.money}</span>{" "}
+                {t.origin.mid}{" "}
+                <span className="text-mint-deep">{t.origin.ban}</span> {t.origin.post}{" "}
+                <span className="font-semibold text-ink">{t.origin.mrr}</span>
               </p>
               <div className="mt-7 flex items-center gap-3">
-                <span className="grid h-9 w-9 place-items-center rounded-full bg-gradient-to-br from-signal to-violet text-ink">
-                  <Sparkles className="h-4 w-4" strokeWidth={2.5} />
+                <span className="grid h-9 w-9 place-items-center rounded-full bg-ink text-mint-soft">
+                  <Sparkles className="h-4 w-4" strokeWidth={2.25} />
                 </span>
-                <span className="font-mono text-xs uppercase tracking-widest text-faint">
-                  Building in public
+                <span className="text-sm font-medium uppercase tracking-wider text-faint">
+                  {t.origin.sign}
                 </span>
               </div>
             </div>
@@ -312,34 +670,42 @@ export default function Home() {
         {/* -------------------------------------------------------------- */}
         {/* Features                                                       */}
         {/* -------------------------------------------------------------- */}
-        <section id="features" className="relative border-t border-line/50">
+        <section id="features" className="relative border-t border-line/70">
           <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
             <div className="mx-auto max-w-2xl text-center">
-              <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.25em] text-signal/80">
-                The engine
+              <p
+                data-reveal
+                className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep"
+              >
+                {t.features.eyebrow}
               </p>
-              <h2 className="text-balance font-display text-4xl tracking-tight text-paper sm:text-5xl">
-                From blank page to published.
+              <h2
+                data-reveal
+                style={{ transitionDelay: "60ms" }}
+                className="reveal-up text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
+              >
+                {t.features.h2}
               </h2>
-              <p className="mx-auto mt-5 max-w-xl text-balance text-lg text-muted">
-                Three systems. One pipeline. Every asset a marketplace demands — generated,
-                formatted, and ready to upload.
+              <p
+                data-reveal
+                style={{ transitionDelay: "120ms" }}
+                className="reveal-up mx-auto mt-5 max-w-xl text-balance text-lg text-muted"
+              >
+                {t.features.sub}
               </p>
             </div>
 
             <div className="mt-14 grid gap-5 md:grid-cols-3">
-              <FeatureCard index="01" icon={BookOpen} title="Full Manuscript Generation">
-                The AI determines the ideal length and writes the entire book autonomously based on
-                your niche.
-              </FeatureCard>
-              <FeatureCard index="02" icon={ImageIcon} title="Complete Cover Design">
-                Generates the front cover, spine, and back cover layout with AI imagery, ready for
-                print.
-              </FeatureCard>
-              <FeatureCard index="03" icon={Settings} title="Optimized Metadata">
-                Generates SEO-optimized titles, descriptions, and verified pen names to avoid
-                copyright strikes.
-              </FeatureCard>
+              {t.features.items.map((f, i) => (
+                <FeatureCard
+                  key={f.title}
+                  index={`0${i + 1}`}
+                  icon={featureIcons[i]}
+                  title={f.title}
+                  text={f.text}
+                  delay={i * 90}
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -347,27 +713,24 @@ export default function Home() {
         {/* -------------------------------------------------------------- */}
         {/* Bottom CTA                                                     */}
         {/* -------------------------------------------------------------- */}
-        <section className="relative border-t border-line/50">
+        <section className="relative border-t border-line/70">
           <div className="mx-auto max-w-5xl px-5 py-24 sm:px-6">
-            <div className="relative isolate overflow-hidden rounded-3xl border border-line bg-surface/40 px-6 py-16 text-center sm:px-12">
-              <div
-                aria-hidden
-                className="pointer-events-none absolute left-1/2 top-0 h-72 w-[min(700px,90%)] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(94,139,255,0.25),transparent)] blur-[20px]"
-              />
-              <div className="relative">
-                <h2 className="text-balance font-display text-4xl tracking-tight text-paper sm:text-5xl">
-                  Ready to scale your publishing business?
-                </h2>
-                <p className="mx-auto mt-5 max-w-lg text-balance text-lg text-muted">
-                  Join the founders building their catalog on autopilot. Early access opens soon.
+            <div
+              data-reveal
+              className="reveal-up relative overflow-hidden rounded-[28px] border border-line bg-gradient-to-b from-mint-soft/45 to-paper-2 px-6 py-16 text-center sm:px-12"
+            >
+              <h2 className="text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl">
+                {t.cta.h2}
+              </h2>
+              <p className="mx-auto mt-5 max-w-lg text-balance text-lg text-muted">
+                {t.cta.sub}
+              </p>
+              <div className="mx-auto mt-9 max-w-lg">
+                <WaitlistForm t={t.form} onSuccess={handleSuccess} />
+                <p className="mt-3 flex items-center justify-center gap-1.5 text-sm text-faint">
+                  <Lock className="h-3.5 w-3.5" />
+                  {t.hero.microcopy}
                 </p>
-                <div className="mx-auto mt-9 max-w-xl">
-                  <WaitlistForm onSuccess={handleSuccess} />
-                  <p className="mt-3 flex items-center justify-center gap-1.5 text-sm text-faint">
-                    <Lock className="h-3.5 w-3.5" />
-                    Limited spots for early beta access.
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -377,15 +740,15 @@ export default function Home() {
       {/* ---------------------------------------------------------------- */}
       {/* Footer                                                           */}
       {/* ---------------------------------------------------------------- */}
-      <footer className="border-t border-line/60">
+      <footer className="border-t border-line/70">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-10 text-sm sm:flex-row sm:px-6">
           <Logo />
-          <p className="text-faint">© 2026 DraftToCover.io. Built in public.</p>
+          <p className="text-faint">{t.footer}</p>
           <a
             href="#"
-            className="group inline-flex items-center gap-1.5 text-muted transition-colors hover:text-paper"
+            className="group inline-flex items-center gap-1 text-muted transition-colors hover:text-ink"
           >
-            Follow the journey on <span className="font-semibold text-paper">X</span>
+            {t.nav.followX}
             <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </a>
         </div>
