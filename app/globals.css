@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+  /* Typography — literary display × technical body × machine labels */
+  --font-display: var(--font-fraunces), ui-serif, Georgia, "Times New Roman", serif;
+  --font-body: var(--font-hanken), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Palette — "Ink & Signal" */
+  --color-ink: #07070b;
+  --color-ink-2: #0a0a11;
+  --color-surface: #101019;
+  --color-surface-2: #16161f;
+  --color-line: #22222f;
+  --color-paper: #f4f1ea;
+  --color-muted: #9b99ab;
+  --color-faint: #5d5c6c;
+  --color-signal: #5e8bff;
+  --color-signal-bright: #8fadff;
+  --color-violet: #9a7bff;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-signal) 30%, transparent);
+    color: #fff;
+  }
+}
+
+/* ---- Film grain overlay ---- */
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---- Glows ---- */
+.glow-text {
+  text-shadow: 0 0 42px rgba(94, 139, 255, 0.45);
+}
+
+.glow-btn {
+  box-shadow:
+    0 12px 40px -12px rgba(94, 139, 255, 0.75),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.glow-btn:hover {
+  box-shadow:
+    0 16px 55px -10px rgba(94, 139, 255, 0.95),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+
+/* ---- Load reveal (longhands so [animation-delay:*] utilities still apply) ---- */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation-name: reveal;
+  animation-duration: 0.9s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: both;
+}
+
+@keyframes dotPulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(94, 139, 255, 0.6);
+  }
+  50% {
+    opacity: 0.45;
+    box-shadow: 0 0 0 5px rgba(94, 139, 255, 0);
+  }
+}
+
+.live-dot {
+  animation: dotPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.float-slow {
+  animation: floatY 9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
