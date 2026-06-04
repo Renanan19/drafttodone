@@ -60,6 +60,22 @@
   transform: none;
 }
 
+/* CSS-only load reveal (above the fold) — runs without JS, never gets stuck */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reveal-load {
+  animation: revealUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 /* ---- Soft float (hero book fan) ---- */
 @keyframes floatY {
   0%,
@@ -116,8 +132,10 @@
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-  .reveal-up {
+  .reveal-up,
+  .reveal-load {
     opacity: 1;
     transform: none;
+    animation: none;
   }
 }

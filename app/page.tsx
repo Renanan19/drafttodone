@@ -425,7 +425,7 @@ function BookCover({
 
 function BookFan({ caption }: { caption: string }) {
   return (
-    <div data-reveal className="reveal-up relative mt-16" style={{ transitionDelay: "420ms" }}>
+    <div className="reveal-load relative mt-16" style={{ animationDelay: "420ms" }}>
       {/* pedestal glow */}
       <div
         aria-hidden
@@ -508,7 +508,14 @@ export default function Home() {
       { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
     );
     els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    // Failsafe: if the observer never fires (edge cases), reveal everything.
+    const failsafe = window.setTimeout(() => {
+      els.forEach((el) => el.classList.add("in"));
+    }, 2200);
+    return () => {
+      io.disconnect();
+      window.clearTimeout(failsafe);
+    };
   }, []);
 
   function handleSuccess(email: string) {
@@ -561,35 +568,31 @@ export default function Home() {
           />
           <div className="relative mx-auto max-w-3xl px-5 pb-8 pt-16 text-center sm:px-6 sm:pt-24">
             <p
-              data-reveal
-              className="reveal-up mb-7 inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3.5 py-1.5 text-[13px] font-medium text-ink-soft shadow-sm"
+              className="reveal-load mb-7 inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3.5 py-1.5 text-[13px] font-medium text-ink-soft shadow-sm"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-mint" />
               {t.hero.eyebrow}
             </p>
 
             <h1
-              data-reveal
-              style={{ transitionDelay: "80ms" }}
-              className="reveal-up text-balance font-display text-[2.6rem] font-medium leading-[1.05] tracking-[-0.02em] text-ink sm:text-6xl"
+              style={{ animationDelay: "80ms" }}
+              className="reveal-load text-balance font-display text-[2.6rem] font-medium leading-[1.05] tracking-[-0.02em] text-ink sm:text-6xl"
             >
               {t.hero.h1main}{" "}
               <em className="italic text-mint">{t.hero.h1accent}</em>
             </h1>
 
             <p
-              data-reveal
-              style={{ transitionDelay: "160ms" }}
-              className="reveal-up mx-auto mt-6 max-w-xl text-balance text-lg leading-relaxed text-muted"
+              style={{ animationDelay: "160ms" }}
+              className="reveal-load mx-auto mt-6 max-w-xl text-balance text-lg leading-relaxed text-muted"
             >
               {t.hero.sub}{" "}
               <span className="font-medium text-ink">{t.hero.subHighlight}</span>
             </p>
 
             <div
-              data-reveal
-              style={{ transitionDelay: "240ms" }}
-              className="reveal-up mx-auto mt-9 max-w-lg"
+              style={{ animationDelay: "240ms" }}
+              className="reveal-load mx-auto mt-9 max-w-lg"
             >
               <WaitlistForm t={t.form} onSuccess={handleSuccess} id="waitlist" />
               <p className="mt-3 flex items-center justify-center gap-1.5 text-sm text-faint">
@@ -599,9 +602,8 @@ export default function Home() {
             </div>
 
             <div
-              data-reveal
-              style={{ transitionDelay: "320ms" }}
-              className="reveal-up mt-9 flex flex-wrap items-center justify-center gap-2"
+              style={{ animationDelay: "320ms" }}
+              className="reveal-load mt-9 flex flex-wrap items-center justify-center gap-2"
             >
               {t.hero.chips.map((c) => (
                 <span
