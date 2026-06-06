@@ -91,6 +91,18 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
   const t = blogCopy[locale];
   const article = post.translations[locale];
   const relatedPosts = getPostsForLocale(locale).filter((item) => item.key !== post.key);
+  const wordCount = [
+    article.title,
+    article.description,
+    ...article.intro,
+    ...article.sections.flatMap((section) => [
+      section.title,
+      ...section.body,
+      ...(section.bullets ?? []),
+    ]),
+    ...article.checklist,
+    ...article.faq.flatMap((item) => [item.question, item.answer]),
+  ].join(" ").split(/\s+/).filter(Boolean).length;
   const languagePaths = Object.fromEntries(
     locales.map((item) => [item, postPath(item, post)]),
   ) as Record<Locale, string>;
@@ -114,7 +126,14 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
       dateModified: post.updated,
       inLanguage: locale,
       mainEntityOfPage: postUrl(locale, post),
+      articleSection: article.category,
       keywords: article.keywords.join(", "),
+      wordCount,
+      timeRequired: `PT${post.readingTime}M`,
+      about: article.keywords.map((keyword) => ({
+        "@type": "Thing",
+        name: keyword,
+      })),
     },
     {
       "@context": "https://schema.org",

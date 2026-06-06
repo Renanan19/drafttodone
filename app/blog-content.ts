@@ -93,6 +93,10 @@ export const blogCopy: Record<Locale, BlogCopy> = {
       "KDP metadata",
       "AI book cover",
       "publishing automation",
+      "KDP keyword research",
+      "AI manuscript editing",
+      "KDP launch checklist",
+      "pen name strategy",
     ],
     eyebrow: "AI publishing knowledge base",
     h1: "A complete SEO blog for building a modern publishing catalog.",
@@ -127,6 +131,10 @@ export const blogCopy: Record<Locale, BlogCopy> = {
       "métadonnées KDP",
       "couverture livre IA",
       "automatisation édition",
+      "recherche mots-clés KDP",
+      "édition manuscrit IA",
+      "checklist lancement KDP",
+      "stratégie nom de plume",
     ],
     eyebrow: "Base de connaissance édition IA",
     h1: "Un blog SEO complet pour bâtir un catalogue éditorial moderne.",
@@ -161,6 +169,10 @@ export const blogCopy: Record<Locale, BlogCopy> = {
       "metadati KDP",
       "copertina libro IA",
       "automazione editoriale",
+      "ricerca keyword KDP",
+      "editing manoscritto IA",
+      "checklist lancio KDP",
+      "strategia pseudonimo",
     ],
     eyebrow: "Knowledge base per editoria IA",
     h1: "Un blog SEO completo per costruire un catalogo editoriale moderno.",
@@ -195,6 +207,10 @@ export const blogCopy: Record<Locale, BlogCopy> = {
       "KDP Metadaten",
       "KI Buchcover",
       "Publishing Automatisierung",
+      "KDP Keyword Recherche",
+      "KI Manuskript Lektorat",
+      "KDP Launch Checkliste",
+      "Pseudonym Strategie",
     ],
     eyebrow: "Wissensbasis für KI-Publishing",
     h1: "Ein vollständiger SEO-Blog für den Aufbau eines modernen Publishing-Katalogs.",
@@ -1848,6 +1864,1338 @@ export const posts: BlogPost[] = [
             question: "Was sollte ein Publishing-Katalog tracken?",
             answer:
               "Nische, Versprechen, Zielgruppe, Metadaten, Coverrichtung, Produktionsnotizen, Qualitätsprobleme, Launchdatum und künftige Optimierungsideen.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    key: "kdp-niche-keyword-research",
+    date: "2026-06-07",
+    updated: "2026-06-07",
+    readingTime: 12,
+    accent: {
+      start: "#e9fff7",
+      middle: "#bfe9ff",
+      end: "#ffd9c2",
+    },
+    translations: {
+      en: {
+        slug: "kdp-niche-keyword-research",
+        title: "KDP niche and keyword research: find book ideas readers already want",
+        description:
+          "A practical SEO guide to finding profitable KDP niches, reader demand, keyword clusters, category fit and book angles before writing.",
+        keywords: [
+          "KDP niche research",
+          "KDP keyword research",
+          "book niche ideas",
+          "Amazon book keywords",
+        ],
+        category: "Research",
+        intro: [
+          "Niche research is the difference between publishing into demand and publishing into silence. The best book ideas are not random inspirations; they sit where reader problems, search language, category expectations and your production advantage overlap.",
+          "A strong keyword process helps you choose books that can be discovered, positioned and improved over time.",
+        ],
+        sections: [
+          {
+            id: "demand",
+            title: "Measure demand before choosing the book idea",
+            body: [
+              "Start by listing phrases readers already use: problem words, genre labels, outcomes, audience descriptors and format terms. Demand is visible when those phrases repeat across search suggestions, competing titles, reviews and community questions.",
+              "Do not chase a niche only because it looks empty. Empty can mean underserved, but it can also mean nobody is searching.",
+            ],
+            bullets: [
+              "Collect search suggestions around the core topic.",
+              "Read reviews to understand what readers praise and complain about.",
+              "Check whether competing books have clear, recent buyer activity.",
+              "Separate evergreen demand from trend-driven spikes.",
+            ],
+          },
+          {
+            id: "clusters",
+            title: "Build keyword clusters instead of isolated terms",
+            body: [
+              "One keyword rarely defines a book. Group related phrases into clusters: beginner intent, advanced intent, problem-solving intent, genre trope, gift intent and format intent.",
+              "Clusters make metadata, outlines and cover direction more coherent because every asset points toward the same reader job.",
+            ],
+            bullets: [
+              "Choose one primary cluster per book.",
+              "Use secondary clusters for chapters, subtitles and description angles.",
+              "Avoid targeting two unrelated audiences in one title.",
+              "Keep a keyword map for the whole catalog.",
+            ],
+          },
+          {
+            id: "angle",
+            title: "Turn research into a sharper angle",
+            body: [
+              "Research only matters if it changes the book. A strong angle can be narrower, faster, more visual, more practical, more beginner-friendly or more premium than what already exists.",
+              "The goal is to enter a recognizable market with a promise that feels specific enough to choose.",
+            ],
+            bullets: [
+              "Write the reader promise before the outline.",
+              "Name the competing books your title must beat.",
+              "Define what your book deliberately excludes.",
+              "Reject angles that sound like every other listing.",
+            ],
+          },
+        ],
+        checklist: [
+          "Primary reader intent is supported by repeated search language.",
+          "The niche has active competitors but visible gaps.",
+          "Keywords are grouped into clusters, not dumped into one list.",
+          "The book angle is specific enough to guide outline, cover and metadata.",
+          "The catalog map prevents two books from targeting the same exact intent.",
+        ],
+        faq: [
+          {
+            question: "Is a low-competition KDP niche always better?",
+            answer:
+              "No. Low competition is useful only when demand exists. A niche with no buyers can look easy while producing no discovery.",
+          },
+          {
+            question: "How many keywords should a book target?",
+            answer:
+              "One primary intent cluster is best. Secondary keywords can support the description and chapters, but the book should not feel split between audiences.",
+          },
+        ],
+      },
+      fr: {
+        slug: "recherche-niche-mots-cles-kdp",
+        title: "Recherche de niche et mots-clés KDP : trouver des livres que les lecteurs veulent déjà",
+        description:
+          "Guide SEO pratique pour trouver des niches KDP rentables, la demande lecteur, les clusters de mots-clés, le fit catégorie et les angles avant rédaction.",
+        keywords: [
+          "recherche niche KDP",
+          "mots-clés KDP",
+          "idées niche livre",
+          "mots-clés livre Amazon",
+        ],
+        category: "Recherche",
+        intro: [
+          "La recherche de niche fait la différence entre publier dans la demande et publier dans le vide. Les meilleures idées de livres se trouvent à l'intersection des problèmes lecteurs, du langage de recherche, des attentes de catégorie et de votre avantage de production.",
+          "Un bon process de mots-clés aide à choisir des livres découvrables, positionnables et optimisables dans le temps.",
+        ],
+        sections: [
+          {
+            id: "demande",
+            title: "Mesurer la demande avant de choisir l'idée",
+            body: [
+              "Commencez par lister les expressions que les lecteurs utilisent déjà : problèmes, genres, résultats attendus, audience et formats. La demande devient visible quand ces expressions reviennent dans les suggestions, titres concurrents, avis et questions de communautés.",
+              "Ne poursuivez pas une niche seulement parce qu'elle paraît vide. Vide peut vouloir dire sous-servie, mais aussi personne ne cherche.",
+            ],
+            bullets: [
+              "Collecter les suggestions autour du sujet principal.",
+              "Lire les avis pour comprendre éloges et frustrations.",
+              "Vérifier une activité d'achat récente chez les concurrents.",
+              "Séparer demande evergreen et pics de tendance.",
+            ],
+          },
+          {
+            id: "clusters",
+            title: "Construire des clusters plutôt que des mots isolés",
+            body: [
+              "Un seul mot-clé définit rarement un livre. Regroupez les phrases par intention : débutant, avancé, résolution de problème, trope de genre, cadeau ou format.",
+              "Les clusters rendent les métadonnées, le plan et la couverture plus cohérents parce que chaque asset sert le même job lecteur.",
+            ],
+            bullets: [
+              "Choisir un cluster principal par livre.",
+              "Utiliser les clusters secondaires pour chapitres, sous-titre et description.",
+              "Éviter deux audiences sans lien dans un même titre.",
+              "Maintenir une carte de mots-clés pour tout le catalogue.",
+            ],
+          },
+          {
+            id: "angle",
+            title: "Transformer la recherche en angle plus net",
+            body: [
+              "La recherche compte seulement si elle change le livre. Un bon angle peut être plus étroit, plus rapide, plus visuel, plus pratique, plus débutant ou plus premium que l'existant.",
+              "L'objectif est d'entrer dans un marché reconnaissable avec une promesse assez spécifique pour être choisie.",
+            ],
+            bullets: [
+              "Écrire la promesse lecteur avant le plan.",
+              "Nommer les livres concurrents à dépasser.",
+              "Définir ce que le livre exclut volontairement.",
+              "Rejeter les angles qui ressemblent à toutes les fiches produit.",
+            ],
+          },
+        ],
+        checklist: [
+          "L'intention principale est soutenue par un langage de recherche répété.",
+          "La niche a des concurrents actifs et des gaps visibles.",
+          "Les mots-clés sont groupés en clusters.",
+          "L'angle guide clairement plan, couverture et métadonnées.",
+          "La carte catalogue évite de cibler deux fois la même intention.",
+        ],
+        faq: [
+          {
+            question: "Une niche KDP peu concurrentielle est-elle toujours meilleure ?",
+            answer:
+              "Non. La faible concurrence n'aide que s'il existe une demande. Une niche sans acheteurs peut paraître facile et rester invisible.",
+          },
+          {
+            question: "Combien de mots-clés viser pour un livre ?",
+            answer:
+              "Un cluster d'intention principal suffit. Les mots-clés secondaires soutiennent la description et les chapitres sans diviser l'audience.",
+          },
+        ],
+      },
+      it: {
+        slug: "ricerca-nicchia-keyword-kdp",
+        title: "Ricerca nicchia e keyword KDP: trovare libri che i lettori vogliono già",
+        description:
+          "Guida SEO pratica per trovare nicchie KDP, domanda lettore, cluster keyword, fit di categoria e angoli editoriali prima di scrivere.",
+        keywords: [
+          "ricerca nicchia KDP",
+          "keyword KDP",
+          "idee nicchia libri",
+          "keyword libri Amazon",
+        ],
+        category: "Ricerca",
+        intro: [
+          "La ricerca di nicchia distingue la pubblicazione dentro la domanda dalla pubblicazione nel vuoto. Le idee migliori vivono dove problemi dei lettori, linguaggio di ricerca, aspettative di categoria e vantaggio produttivo si sovrappongono.",
+          "Un buon processo keyword aiuta a scegliere libri trovabili, posizionabili e migliorabili nel tempo.",
+        ],
+        sections: [
+          {
+            id: "domanda",
+            title: "Misura la domanda prima dell'idea",
+            body: [
+              "Elenca le frasi che i lettori usano già: problemi, generi, risultati, audience e formati. La domanda appare quando quelle frasi tornano in suggerimenti, titoli concorrenti, recensioni e community.",
+              "Non scegliere una nicchia solo perché sembra vuota. Vuota può voler dire sottoservita, ma anche non cercata.",
+            ],
+            bullets: [
+              "Raccogli suggerimenti intorno al tema principale.",
+              "Leggi recensioni per capire elogi e lamentele.",
+              "Verifica attività recente nei libri concorrenti.",
+              "Distingui domanda evergreen da picchi di trend.",
+            ],
+          },
+          {
+            id: "cluster",
+            title: "Costruisci cluster keyword, non termini isolati",
+            body: [
+              "Una keyword sola raramente definisce un libro. Raggruppa frasi per intento: principiante, avanzato, problema, trope di genere, regalo o formato.",
+              "I cluster rendono metadati, outline e copertina più coerenti perché ogni asset parla allo stesso lettore.",
+            ],
+            bullets: [
+              "Scegli un cluster primario per libro.",
+              "Usa cluster secondari per capitoli, sottotitolo e descrizione.",
+              "Evita due audience scollegate nello stesso titolo.",
+              "Mantieni una mappa keyword del catalogo.",
+            ],
+          },
+          {
+            id: "angolo",
+            title: "Trasforma la ricerca in un angolo più forte",
+            body: [
+              "La ricerca conta se cambia il libro. Un angolo può essere più stretto, rapido, visuale, pratico, beginner-friendly o premium dell'esistente.",
+              "L'obiettivo è entrare in un mercato riconoscibile con una promessa abbastanza specifica da essere scelta.",
+            ],
+            bullets: [
+              "Scrivi la promessa lettore prima dell'outline.",
+              "Nomina i concorrenti che devi superare.",
+              "Definisci cosa il libro esclude.",
+              "Scarta angoli che sembrano tutte le altre schede.",
+            ],
+          },
+        ],
+        checklist: [
+          "L'intento primario è supportato da linguaggio di ricerca ripetuto.",
+          "La nicchia ha concorrenti attivi e gap visibili.",
+          "Le keyword sono raggruppate in cluster.",
+          "L'angolo guida outline, copertina e metadati.",
+          "La mappa catalogo evita intenti duplicati.",
+        ],
+        faq: [
+          {
+            question: "Una nicchia KDP con poca concorrenza è sempre migliore?",
+            answer:
+              "No. Serve domanda. Una nicchia senza acquirenti può sembrare facile ma non generare discovery.",
+          },
+          {
+            question: "Quante keyword deve targetizzare un libro?",
+            answer:
+              "Meglio un cluster primario. Le keyword secondarie supportano descrizione e capitoli senza dividere il pubblico.",
+          },
+        ],
+      },
+      de: {
+        slug: "kdp-nische-keyword-recherche",
+        title: "KDP-Nischen- und Keyword-Recherche: Buchideen finden, die Leser bereits wollen",
+        description:
+          "Praxisguide für KDP-Nischen, Suchnachfrage, Keyword-Cluster, Kategorie-Fit und Buchwinkel vor dem Schreiben.",
+        keywords: [
+          "KDP Nischenrecherche",
+          "KDP Keyword Recherche",
+          "Buchnische finden",
+          "Amazon Buch Keywords",
+        ],
+        category: "Recherche",
+        intro: [
+          "Nischenrecherche entscheidet, ob du in Nachfrage hinein veröffentlichst oder ins Leere. Gute Buchideen liegen dort, wo Leserprobleme, Suchsprache, Kategorieerwartungen und Produktionsvorteil zusammenkommen.",
+          "Ein starker Keyword-Prozess hilft, Bücher zu wählen, die gefunden, positioniert und später verbessert werden können.",
+        ],
+        sections: [
+          {
+            id: "nachfrage",
+            title: "Miss Nachfrage, bevor du die Buchidee wählst",
+            body: [
+              "Liste zuerst Phrasen, die Leser bereits nutzen: Probleme, Genres, Ergebnisse, Zielgruppen und Formate. Nachfrage wird sichtbar, wenn diese Sprache in Vorschlägen, Konkurrenz, Rezensionen und Community-Fragen wiederkehrt.",
+              "Verfolge eine Nische nicht nur, weil sie leer wirkt. Leer kann unterschätzt bedeuten, aber auch: niemand sucht.",
+            ],
+            bullets: [
+              "Sammle Suchvorschläge rund um das Kernthema.",
+              "Lies Rezensionen für Lob und Beschwerden.",
+              "Prüfe aktuelle Käuferaktivität bei Konkurrenzbüchern.",
+              "Trenne Evergreen-Nachfrage von Trendspitzen.",
+            ],
+          },
+          {
+            id: "cluster",
+            title: "Baue Keyword-Cluster statt Einzellisten",
+            body: [
+              "Ein Keyword definiert selten ein Buch. Gruppiere Phrasen nach Intention: Anfänger, Fortgeschrittene, Problem, Genre-Trope, Geschenk oder Format.",
+              "Cluster machen Metadaten, Outline und Cover konsistenter, weil jedes Asset denselben Leserjob unterstützt.",
+            ],
+            bullets: [
+              "Wähle einen primären Cluster pro Buch.",
+              "Nutze sekundäre Cluster für Kapitel, Untertitel und Beschreibung.",
+              "Vermeide zwei unverbundene Zielgruppen in einem Titel.",
+              "Pflege eine Keyword-Karte für den Katalog.",
+            ],
+          },
+          {
+            id: "winkel",
+            title: "Mach aus Recherche einen schärferen Winkel",
+            body: [
+              "Recherche zählt, wenn sie das Buch verändert. Ein starker Winkel kann enger, schneller, visueller, praktischer, anfängerfreundlicher oder hochwertiger sein als das Bestehende.",
+              "Ziel ist ein erkennbarer Markt mit einem Versprechen, das spezifisch genug ist, um gewählt zu werden.",
+            ],
+            bullets: [
+              "Schreibe das Leserversprechen vor der Outline.",
+              "Benenne die Konkurrenzbücher, die du schlagen musst.",
+              "Definiere, was dein Buch bewusst ausschließt.",
+              "Verwirf Winkel, die wie jede andere Produktseite klingen.",
+            ],
+          },
+        ],
+        checklist: [
+          "Die Hauptintention wird durch wiederholte Suchsprache gestützt.",
+          "Die Nische hat aktive Konkurrenz und sichtbare Lücken.",
+          "Keywords sind in Cluster gruppiert.",
+          "Der Buchwinkel steuert Outline, Cover und Metadaten.",
+          "Die Katalogkarte verhindert doppelte Suchintentionen.",
+        ],
+        faq: [
+          {
+            question: "Ist eine KDP-Nische mit wenig Konkurrenz immer besser?",
+            answer:
+              "Nein. Wenig Konkurrenz hilft nur bei vorhandener Nachfrage. Ohne Käufer bleibt auch eine leichte Nische unsichtbar.",
+          },
+          {
+            question: "Wie viele Keywords sollte ein Buch targeten?",
+            answer:
+              "Ein primärer Intent-Cluster ist ideal. Sekundäre Keywords unterstützen Beschreibung und Kapitel, ohne die Zielgruppe zu spalten.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    key: "ai-manuscript-editing",
+    date: "2026-06-07",
+    updated: "2026-06-07",
+    readingTime: 11,
+    accent: {
+      start: "#fff3e6",
+      middle: "#f3f0ff",
+      end: "#a9f0d6",
+    },
+    translations: {
+      en: {
+        slug: "ai-manuscript-editing-quality-control",
+        title: "AI manuscript editing: quality control for books that should not feel generated",
+        description:
+          "How to edit AI-assisted manuscripts for voice, structure, originality, repetition, factual caution and reader trust.",
+        keywords: [
+          "AI manuscript editing",
+          "AI book editing",
+          "manuscript quality control",
+          "AI writing revision",
+        ],
+        category: "Editing",
+        intro: [
+          "AI can draft quickly, but readers judge the final book, not the production method. Editing is where a generated manuscript becomes coherent, useful and worth trusting.",
+          "A good editing pass looks for structure, repetition, specificity, factual caution, voice and whether every chapter actually serves the promise.",
+        ],
+        sections: [
+          {
+            id: "diagnosis",
+            title: "Diagnose the manuscript before rewriting",
+            body: [
+              "Do not start by polishing sentences. First identify structural weaknesses: repeated ideas, missing transitions, shallow examples, unsupported claims and chapters that drift away from the reader promise.",
+              "A diagnostic pass saves time because it tells you whether the manuscript needs a line edit, a section rewrite or a deeper outline repair.",
+            ],
+            bullets: [
+              "Score each chapter against its original objective.",
+              "Mark repeated concepts and generic filler.",
+              "Flag claims that need verification or softer framing.",
+              "Identify missing examples, exercises or scenes.",
+            ],
+          },
+          {
+            id: "voice",
+            title: "Make the voice consistent and specific",
+            body: [
+              "Generated prose often sounds smooth but interchangeable. Strong voice comes from concrete examples, sharper verbs, consistent perspective and a defined level of expertise.",
+              "Create a voice sheet with preferred terms, banned phrases, sentence rhythm and examples of how the book should sound.",
+            ],
+            bullets: [
+              "Replace generic motivational language with specific guidance.",
+              "Use examples that match the target reader's world.",
+              "Remove phrases that appear across many chapters.",
+              "Keep tone consistent from introduction to conclusion.",
+            ],
+          },
+          {
+            id: "trust",
+            title: "Protect reader trust with final QA",
+            body: [
+              "Trust breaks when a book overclaims, contradicts itself or feels padded. The final QA pass should inspect facts, terminology, formatting, cross-references and the relationship between title promise and actual content.",
+              "For sensitive topics, avoid presenting generated text as professional advice. Be clear, cautious and useful.",
+            ],
+            bullets: [
+              "Verify names, dates, tools and factual statements.",
+              "Check headings for logical progression.",
+              "Remove padding that does not teach or move the story.",
+              "Read the first chapter aloud to catch rhythm problems.",
+            ],
+          },
+        ],
+        checklist: [
+          "Every chapter is checked against a chapter objective.",
+          "Repeated phrases, generic transitions and filler are removed.",
+          "Examples are specific to the reader and category.",
+          "Claims are verified, softened or removed.",
+          "The final manuscript matches the promise made by title and description.",
+        ],
+        faq: [
+          {
+            question: "Can AI edit its own manuscript?",
+            answer:
+              "It can help find issues and propose revisions, but the final acceptance criteria should come from a human editor or operator.",
+          },
+          {
+            question: "What is the fastest way to improve an AI draft?",
+            answer:
+              "Remove repetition, add concrete examples and check every chapter against one clear objective.",
+          },
+        ],
+      },
+      fr: {
+        slug: "edition-manuscrit-ia-controle-qualite",
+        title: "Édition de manuscrit IA : contrôler la qualité d'un livre qui ne doit pas sembler généré",
+        description:
+          "Comment éditer un manuscrit assisté par IA : voix, structure, originalité, répétition, prudence factuelle et confiance lecteur.",
+        keywords: [
+          "édition manuscrit IA",
+          "correction livre IA",
+          "contrôle qualité manuscrit",
+          "révision écriture IA",
+        ],
+        category: "Édition",
+        intro: [
+          "L'IA rédige vite, mais les lecteurs jugent le livre final, pas la méthode de production. L'édition transforme un manuscrit généré en texte cohérent, utile et digne de confiance.",
+          "Une bonne passe d'édition cherche structure, répétition, précision, prudence factuelle, voix et utilité réelle de chaque chapitre.",
+        ],
+        sections: [
+          {
+            id: "diagnostic",
+            title: "Diagnostiquer le manuscrit avant de réécrire",
+            body: [
+              "Ne commencez pas par polir les phrases. Repérez d'abord les faiblesses structurelles : idées répétées, transitions manquantes, exemples faibles, affirmations non soutenues et chapitres hors promesse.",
+              "Le diagnostic indique s'il faut une correction de style, une réécriture de section ou une réparation du plan.",
+            ],
+            bullets: [
+              "Noter chaque chapitre face à son objectif.",
+              "Marquer concepts répétés et remplissage générique.",
+              "Signaler les affirmations à vérifier ou adoucir.",
+              "Identifier exemples, exercices ou scènes manquants.",
+            ],
+          },
+          {
+            id: "voix",
+            title: "Rendre la voix cohérente et spécifique",
+            body: [
+              "La prose générée est souvent fluide mais interchangeable. Une voix forte vient d'exemples concrets, de verbes plus nets, d'une perspective stable et d'un niveau d'expertise défini.",
+              "Créez une fiche de voix avec termes préférés, phrases interdites, rythme et exemples du rendu attendu.",
+            ],
+            bullets: [
+              "Remplacer le langage motivationnel générique par des conseils précis.",
+              "Utiliser des exemples proches du monde du lecteur.",
+              "Supprimer les phrases qui reviennent dans plusieurs chapitres.",
+              "Maintenir le ton de l'introduction à la conclusion.",
+            ],
+          },
+          {
+            id: "confiance",
+            title: "Protéger la confiance lecteur avec une QA finale",
+            body: [
+              "La confiance casse quand un livre surpromet, se contredit ou paraît gonflé. La QA finale inspecte faits, terminologie, formatage, renvois et cohérence entre promesse marketing et contenu.",
+              "Sur les sujets sensibles, évitez de présenter du texte généré comme conseil professionnel. Soyez clair, prudent et utile.",
+            ],
+            bullets: [
+              "Vérifier noms, dates, outils et affirmations factuelles.",
+              "Contrôler la progression logique des titres.",
+              "Retirer ce qui ne transmet rien ou ne fait pas avancer l'histoire.",
+              "Lire le premier chapitre à voix haute pour repérer le rythme.",
+            ],
+          },
+        ],
+        checklist: [
+          "Chaque chapitre est comparé à son objectif.",
+          "Répétitions, transitions génériques et remplissage sont retirés.",
+          "Les exemples sont spécifiques à l'audience et à la catégorie.",
+          "Les affirmations sont vérifiées, adoucies ou supprimées.",
+          "Le manuscrit final tient la promesse du titre et de la description.",
+        ],
+        faq: [
+          {
+            question: "L'IA peut-elle éditer son propre manuscrit ?",
+            answer:
+              "Elle peut aider à trouver des problèmes et proposer des révisions, mais les critères d'acceptation doivent rester humains.",
+          },
+          {
+            question: "Quel est le moyen le plus rapide d'améliorer une ébauche IA ?",
+            answer:
+              "Supprimer les répétitions, ajouter des exemples concrets et vérifier chaque chapitre face à un objectif clair.",
+          },
+        ],
+      },
+      it: {
+        slug: "editing-manoscritto-ia-controllo-qualita",
+        title: "Editing manoscritto IA: controllo qualità per libri che non sembrano generati",
+        description:
+          "Come editare manoscritti assistiti dall'IA per voce, struttura, originalità, ripetizioni, cautela fattuale e fiducia del lettore.",
+        keywords: [
+          "editing manoscritto IA",
+          "editing libro IA",
+          "controllo qualità manoscritto",
+          "revisione scrittura IA",
+        ],
+        category: "Editing",
+        intro: [
+          "L'IA può scrivere velocemente, ma i lettori giudicano il libro finale. L'editing è il punto in cui un manoscritto generato diventa coerente, utile e affidabile.",
+          "Una buona revisione cerca struttura, ripetizione, specificità, cautela sui fatti, voce e utilità reale di ogni capitolo.",
+        ],
+        sections: [
+          {
+            id: "diagnosi",
+            title: "Diagnostica il manoscritto prima di riscrivere",
+            body: [
+              "Non iniziare lucidando le frasi. Prima identifica problemi strutturali: idee ripetute, transizioni mancanti, esempi superficiali, claim non supportati e capitoli fuori promessa.",
+              "La diagnosi ti dice se serve line editing, riscrittura di sezioni o riparazione dell'outline.",
+            ],
+            bullets: [
+              "Valuta ogni capitolo rispetto al suo obiettivo.",
+              "Segna concetti ripetuti e filler generico.",
+              "Evidenzia claim da verificare o ammorbidire.",
+              "Trova esempi, esercizi o scene mancanti.",
+            ],
+          },
+          {
+            id: "voce",
+            title: "Rendi la voce coerente e specifica",
+            body: [
+              "La prosa generata può essere scorrevole ma intercambiabile. Una voce forte nasce da esempi concreti, verbi più precisi, prospettiva stabile e livello di competenza definito.",
+              "Crea una voice sheet con termini preferiti, frasi vietate, ritmo e campioni del tono desiderato.",
+            ],
+            bullets: [
+              "Sostituisci motivazione generica con guida specifica.",
+              "Usa esempi del mondo reale del lettore.",
+              "Rimuovi frasi ripetute in molti capitoli.",
+              "Mantieni il tono dalla prima all'ultima pagina.",
+            ],
+          },
+          {
+            id: "fiducia",
+            title: "Proteggi la fiducia con una QA finale",
+            body: [
+              "La fiducia si rompe quando un libro promette troppo, si contraddice o sembra gonfiato. La QA controlla fatti, terminologia, formattazione e coerenza tra promessa e contenuto.",
+              "Per temi sensibili, evita di presentare testo generato come consulenza professionale. Sii chiaro, cauto e utile.",
+            ],
+            bullets: [
+              "Verifica nomi, date, strumenti e affermazioni.",
+              "Controlla la progressione logica dei titoli.",
+              "Rimuovi padding che non insegna o non muove la storia.",
+              "Leggi il primo capitolo ad alta voce.",
+            ],
+          },
+        ],
+        checklist: [
+          "Ogni capitolo è controllato rispetto al suo obiettivo.",
+          "Ripetizioni, transizioni generiche e filler sono rimossi.",
+          "Gli esempi sono specifici per lettore e categoria.",
+          "I claim sono verificati, ammorbiditi o rimossi.",
+          "Il manoscritto finale rispetta titolo e descrizione.",
+        ],
+        faq: [
+          {
+            question: "L'IA può editare il proprio manoscritto?",
+            answer:
+              "Può aiutare a trovare problemi e proporre revisioni, ma i criteri finali devono restare umani.",
+          },
+          {
+            question: "Come migliorare velocemente una bozza IA?",
+            answer:
+              "Rimuovi ripetizioni, aggiungi esempi concreti e controlla ogni capitolo contro un obiettivo chiaro.",
+          },
+        ],
+      },
+      de: {
+        slug: "ki-manuskript-lektorat-qualitaetskontrolle",
+        title: "KI-Manuskript-Lektorat: Qualitätskontrolle für Bücher, die nicht generiert wirken sollen",
+        description:
+          "So editierst du KI-gestützte Manuskripte für Stimme, Struktur, Originalität, Wiederholungen, Faktensorgfalt und Vertrauen.",
+        keywords: [
+          "KI Manuskript Lektorat",
+          "KI Buch lektorieren",
+          "Manuskript Qualitätskontrolle",
+          "KI Text Revision",
+        ],
+        category: "Lektorat",
+        intro: [
+          "KI kann schnell entwerfen, aber Leser bewerten das fertige Buch. Im Lektorat wird ein generiertes Manuskript kohärent, nützlich und vertrauenswürdig.",
+          "Ein guter Edit prüft Struktur, Wiederholung, Spezifität, Faktensorgfalt, Stimme und ob jedes Kapitel dem Versprechen dient.",
+        ],
+        sections: [
+          {
+            id: "diagnose",
+            title: "Diagnostiziere das Manuskript vor der Überarbeitung",
+            body: [
+              "Beginne nicht mit Satzpolitur. Finde zuerst strukturelle Schwächen: wiederholte Ideen, fehlende Übergänge, flache Beispiele, unbelegte Claims und Kapitel, die vom Versprechen abdriften.",
+              "Die Diagnose zeigt, ob ein Line-Edit, eine Abschnittsüberarbeitung oder eine tiefere Outline-Reparatur nötig ist.",
+            ],
+            bullets: [
+              "Bewerte jedes Kapitel gegen sein ursprüngliches Ziel.",
+              "Markiere wiederholte Konzepte und generischen Fülltext.",
+              "Kennzeichne Aussagen, die Prüfung oder weichere Formulierung brauchen.",
+              "Finde fehlende Beispiele, Übungen oder Szenen.",
+            ],
+          },
+          {
+            id: "stimme",
+            title: "Mach die Stimme konsistent und konkret",
+            body: [
+              "Generierte Prosa klingt oft glatt, aber austauschbar. Starke Stimme entsteht durch konkrete Beispiele, präzisere Verben, stabile Perspektive und ein definiertes Kompetenzniveau.",
+              "Erstelle ein Voice Sheet mit bevorzugten Begriffen, verbotenen Phrasen, Rhythmus und Beispielen für den gewünschten Klang.",
+            ],
+            bullets: [
+              "Ersetze generische Motivation durch konkrete Anleitung.",
+              "Nutze Beispiele aus der Welt der Zielgruppe.",
+              "Entferne Phrasen, die in vielen Kapiteln wiederkehren.",
+              "Halte den Ton von Einleitung bis Schluss konsistent.",
+            ],
+          },
+          {
+            id: "vertrauen",
+            title: "Schütze Vertrauen mit finaler QA",
+            body: [
+              "Vertrauen bricht, wenn ein Buch übertreibt, sich widerspricht oder aufgebläht wirkt. Die finale QA prüft Fakten, Terminologie, Formatierung und die Verbindung zwischen Titelversprechen und Inhalt.",
+              "Bei sensiblen Themen sollte generierter Text nicht als professionelle Beratung auftreten. Klar, vorsichtig und nützlich ist stärker.",
+            ],
+            bullets: [
+              "Prüfe Namen, Daten, Tools und Aussagen.",
+              "Kontrolliere die logische Abfolge der Überschriften.",
+              "Entferne Fülltext, der nichts lehrt oder bewegt.",
+              "Lies das erste Kapitel laut, um Rhythmusprobleme zu finden.",
+            ],
+          },
+        ],
+        checklist: [
+          "Jedes Kapitel wird gegen sein Ziel geprüft.",
+          "Wiederholungen, generische Übergänge und Fülltext sind entfernt.",
+          "Beispiele passen zur Zielgruppe und Kategorie.",
+          "Claims sind geprüft, abgeschwächt oder entfernt.",
+          "Das finale Manuskript erfüllt Titel- und Beschreibungversprechen.",
+        ],
+        faq: [
+          {
+            question: "Kann KI ihr eigenes Manuskript lektorieren?",
+            answer:
+              "Sie kann Probleme finden und Revisionen vorschlagen, aber die finalen Akzeptanzkriterien sollten menschlich bleiben.",
+          },
+          {
+            question: "Wie verbessert man einen KI-Entwurf am schnellsten?",
+            answer:
+              "Wiederholungen entfernen, konkrete Beispiele ergänzen und jedes Kapitel gegen ein klares Ziel prüfen.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    key: "kdp-launch-checklist",
+    date: "2026-06-07",
+    updated: "2026-06-07",
+    readingTime: 10,
+    accent: {
+      start: "#f4f4ef",
+      middle: "#ffd9c2",
+      end: "#bfe9ff",
+    },
+    translations: {
+      en: {
+        slug: "kdp-book-launch-checklist",
+        title: "KDP book launch checklist: metadata, files, pricing and first optimization pass",
+        description:
+          "A launch checklist for Amazon KDP books covering final files, metadata, cover checks, pricing, categories, reviews and post-launch improvements.",
+        keywords: [
+          "KDP launch checklist",
+          "publish book on Amazon KDP",
+          "book launch SEO",
+          "KDP upload checklist",
+        ],
+        category: "Launch",
+        intro: [
+          "A strong launch is less about drama and more about removing avoidable mistakes. KDP rewards clean files, clear metadata, appropriate categories and a product page that matches reader expectation.",
+          "This checklist is designed for operators who want every title to leave production with the same level of control.",
+        ],
+        sections: [
+          {
+            id: "files",
+            title: "Check files before upload",
+            body: [
+              "Most launch problems start with files: wrong trim size, missing bleed, broken table of contents, low-resolution assets or inconsistent formatting.",
+              "Run the book through preview tools and inspect the exact formats readers will buy.",
+            ],
+            bullets: [
+              "Confirm trim size, margins, bleed and page count.",
+              "Check ebook navigation and clickable table of contents.",
+              "Inspect cover thumbnail and print wrap preview.",
+              "Keep final source files and export files in one folder.",
+            ],
+          },
+          {
+            id: "metadata",
+            title: "Lock metadata before pressing publish",
+            body: [
+              "Title, subtitle, description, author name, categories and keywords should all communicate the same reader promise.",
+              "Last-minute metadata improvisation creates mismatched listings. Use the research brief and make every field earn its place.",
+            ],
+            bullets: [
+              "Compare title and description against the final manuscript.",
+              "Use categories that match buyer expectation.",
+              "Avoid keyword stuffing in public-facing copy.",
+              "Save a snapshot of launch metadata for future comparison.",
+            ],
+          },
+          {
+            id: "after",
+            title: "Plan the first optimization pass",
+            body: [
+              "The launch is the beginning of measurement. After the first signal window, review impressions, clicks, conversion, reviews and page quality before changing the wrong thing.",
+              "Optimize one major variable at a time so you can learn what actually moved performance.",
+            ],
+            bullets: [
+              "Review performance after enough traffic exists.",
+              "Improve description before assuming the book needs a new cover.",
+              "Track every change with a date and reason.",
+              "Feed launch lessons into the next title brief.",
+            ],
+          },
+        ],
+        checklist: [
+          "Interior and cover files pass preview checks.",
+          "Metadata is aligned with the manuscript and cover promise.",
+          "Categories and keywords match real reader search behavior.",
+          "Pricing is set intentionally for launch and catalog strategy.",
+          "A post-launch review date is scheduled before publication.",
+        ],
+        faq: [
+          {
+            question: "Should metadata be changed immediately after launch?",
+            answer:
+              "Not without signal. Wait until you can distinguish low visibility, low click-through and low conversion.",
+          },
+          {
+            question: "What is the most common KDP launch mistake?",
+            answer:
+              "Publishing with mismatched assets: a title, cover, description and manuscript that each promise something slightly different.",
+          },
+        ],
+      },
+      fr: {
+        slug: "checklist-lancement-livre-kdp",
+        title: "Checklist lancement KDP : métadonnées, fichiers, prix et première optimisation",
+        description:
+          "Checklist pour publier un livre Amazon KDP : fichiers finaux, métadonnées, couverture, prix, catégories, avis et optimisations post-lancement.",
+        keywords: [
+          "checklist lancement KDP",
+          "publier livre Amazon KDP",
+          "SEO lancement livre",
+          "checklist upload KDP",
+        ],
+        category: "Lancement",
+        intro: [
+          "Un bon lancement tient moins au bruit qu'à l'élimination des erreurs évitables. KDP récompense des fichiers propres, des métadonnées claires, des catégories pertinentes et une page produit alignée avec l'attente lecteur.",
+          "Cette checklist vise les opérateurs qui veulent sortir chaque titre avec le même niveau de contrôle.",
+        ],
+        sections: [
+          {
+            id: "fichiers",
+            title: "Vérifier les fichiers avant l'upload",
+            body: [
+              "La plupart des problèmes viennent des fichiers : mauvais format, fonds perdus manquants, table des matières cassée, visuels basse résolution ou formatage incohérent.",
+              "Passez le livre dans les outils d'aperçu et inspectez les formats exacts que les lecteurs achèteront.",
+            ],
+            bullets: [
+              "Confirmer format, marges, fonds perdus et nombre de pages.",
+              "Tester navigation ebook et table des matières cliquable.",
+              "Inspecter miniature de couverture et aperçu print complet.",
+              "Garder sources et exports finaux dans un même dossier.",
+            ],
+          },
+          {
+            id: "metadonnees",
+            title: "Verrouiller les métadonnées avant publication",
+            body: [
+              "Titre, sous-titre, description, nom d'auteur, catégories et mots-clés doivent communiquer la même promesse lecteur.",
+              "L'improvisation de dernière minute crée des fiches incohérentes. Utilisez le brief de recherche et donnez un rôle à chaque champ.",
+            ],
+            bullets: [
+              "Comparer titre et description au manuscrit final.",
+              "Choisir des catégories conformes à l'attente acheteur.",
+              "Éviter le bourrage de mots-clés dans le copy public.",
+              "Sauvegarder les métadonnées de lancement.",
+            ],
+          },
+          {
+            id: "apres",
+            title: "Prévoir la première passe d'optimisation",
+            body: [
+              "Le lancement démarre la mesure. Après une première fenêtre de signal, analysez impressions, clics, conversion, avis et qualité de page avant de changer le mauvais élément.",
+              "Optimisez une grande variable à la fois pour apprendre ce qui déplace réellement la performance.",
+            ],
+            bullets: [
+              "Analyser seulement après assez de trafic.",
+              "Améliorer la description avant de conclure que la couverture est en cause.",
+              "Tracer chaque changement avec date et raison.",
+              "Réinjecter les leçons dans le brief du titre suivant.",
+            ],
+          },
+        ],
+        checklist: [
+          "Intérieur et couverture passent les aperçus.",
+          "Les métadonnées sont alignées avec manuscrit et couverture.",
+          "Catégories et mots-clés correspondent aux recherches réelles.",
+          "Le prix sert une stratégie de lancement et de catalogue.",
+          "Une date de revue post-lancement est planifiée avant publication.",
+        ],
+        faq: [
+          {
+            question: "Faut-il modifier les métadonnées juste après le lancement ?",
+            answer:
+              "Pas sans signal. Attendez de distinguer faible visibilité, faible clic et faible conversion.",
+          },
+          {
+            question: "Quelle est l'erreur de lancement KDP la plus fréquente ?",
+            answer:
+              "Publier des assets désalignés : titre, couverture, description et manuscrit promettent chacun une chose un peu différente.",
+          },
+        ],
+      },
+      it: {
+        slug: "checklist-lancio-libro-kdp",
+        title: "Checklist lancio KDP: metadati, file, prezzo e prima ottimizzazione",
+        description:
+          "Checklist per libri Amazon KDP: file finali, metadati, copertina, prezzo, categorie, recensioni e miglioramenti post-lancio.",
+        keywords: [
+          "checklist lancio KDP",
+          "pubblicare libro Amazon KDP",
+          "SEO lancio libro",
+          "checklist upload KDP",
+        ],
+        category: "Lancio",
+        intro: [
+          "Un buon lancio riguarda meno il rumore e più la rimozione di errori evitabili. KDP premia file puliti, metadati chiari, categorie corrette e pagina prodotto coerente.",
+          "Questa checklist è per operatori che vogliono portare ogni titolo fuori produzione con lo stesso controllo.",
+        ],
+        sections: [
+          {
+            id: "file",
+            title: "Controlla i file prima dell'upload",
+            body: [
+              "Molti problemi nascono dai file: formato sbagliato, abbondanza mancante, indice rotto, asset a bassa risoluzione o formattazione incoerente.",
+              "Usa gli strumenti di preview e ispeziona i formati che i lettori compreranno davvero.",
+            ],
+            bullets: [
+              "Conferma formato, margini, abbondanza e numero pagine.",
+              "Controlla navigazione ebook e indice cliccabile.",
+              "Ispeziona thumbnail e anteprima wrap print.",
+              "Tieni sorgenti ed export finali nella stessa cartella.",
+            ],
+          },
+          {
+            id: "metadati",
+            title: "Blocca i metadati prima di pubblicare",
+            body: [
+              "Titolo, sottotitolo, descrizione, autore, categorie e keyword devono comunicare la stessa promessa.",
+              "L'improvvisazione finale crea listing incoerenti. Usa il brief di ricerca e assegna uno scopo a ogni campo.",
+            ],
+            bullets: [
+              "Confronta titolo e descrizione con il manoscritto finale.",
+              "Usa categorie coerenti con l'aspettativa d'acquisto.",
+              "Evita keyword stuffing nel copy pubblico.",
+              "Salva uno snapshot dei metadati di lancio.",
+            ],
+          },
+          {
+            id: "dopo",
+            title: "Pianifica la prima ottimizzazione",
+            body: [
+              "Il lancio è l'inizio della misurazione. Dopo una finestra di segnale, rivedi impression, clic, conversione, recensioni e pagina prima di cambiare l'elemento sbagliato.",
+              "Ottimizza una variabile importante alla volta per capire cosa muove davvero la performance.",
+            ],
+            bullets: [
+              "Analizza dopo abbastanza traffico.",
+              "Migliora la descrizione prima di rifare la copertina.",
+              "Traccia ogni modifica con data e motivo.",
+              "Porta le lezioni nel brief del titolo successivo.",
+            ],
+          },
+        ],
+        checklist: [
+          "File interni e copertina passano le preview.",
+          "I metadati sono coerenti con manoscritto e promessa visiva.",
+          "Categorie e keyword corrispondono a ricerche reali.",
+          "Il prezzo segue strategia di lancio e catalogo.",
+          "La review post-lancio è pianificata prima della pubblicazione.",
+        ],
+        faq: [
+          {
+            question: "Cambiare subito i metadati dopo il lancio?",
+            answer:
+              "Non senza segnale. Prima distingui bassa visibilità, basso click-through e bassa conversione.",
+          },
+          {
+            question: "Qual è l'errore KDP più comune?",
+            answer:
+              "Asset disallineati: titolo, copertina, descrizione e manoscritto promettono cose leggermente diverse.",
+          },
+        ],
+      },
+      de: {
+        slug: "kdp-buchlaunch-checkliste",
+        title: "KDP-Buchlaunch-Checkliste: Metadaten, Dateien, Preis und erste Optimierung",
+        description:
+          "Checkliste für Amazon-KDP-Bücher: finale Dateien, Metadaten, Cover, Preis, Kategorien, Reviews und Post-Launch-Verbesserungen.",
+        keywords: [
+          "KDP Launch Checkliste",
+          "Buch auf Amazon KDP veröffentlichen",
+          "Buchlaunch SEO",
+          "KDP Upload Checkliste",
+        ],
+        category: "Launch",
+        intro: [
+          "Ein starker Launch besteht weniger aus Drama als aus dem Entfernen vermeidbarer Fehler. KDP belohnt saubere Dateien, klare Metadaten, passende Kategorien und eine Produktseite, die Erwartungen erfüllt.",
+          "Diese Checkliste ist für Operatoren, die jeden Titel mit demselben Kontrollniveau veröffentlichen wollen.",
+        ],
+        sections: [
+          {
+            id: "dateien",
+            title: "Prüfe Dateien vor dem Upload",
+            body: [
+              "Viele Launchprobleme beginnen mit Dateien: falsches Format, fehlender Beschnitt, kaputtes Inhaltsverzeichnis, niedrige Auflösung oder inkonsistentes Layout.",
+              "Nutze Preview-Tools und prüfe die exakten Formate, die Leser kaufen werden.",
+            ],
+            bullets: [
+              "Bestätige Format, Ränder, Beschnitt und Seitenzahl.",
+              "Prüfe Ebook-Navigation und klickbares Inhaltsverzeichnis.",
+              "Kontrolliere Cover-Thumbnail und Print-Wrap-Vorschau.",
+              "Bewahre Quellen und finale Exporte in einem Ordner auf.",
+            ],
+          },
+          {
+            id: "metadaten",
+            title: "Sperre Metadaten vor dem Veröffentlichen",
+            body: [
+              "Titel, Untertitel, Beschreibung, Autorenname, Kategorien und Keywords sollten dasselbe Leserversprechen kommunizieren.",
+              "Spontane Metadaten im letzten Moment erzeugen unpassende Listings. Nutze den Recherchebrief und gib jedem Feld eine Aufgabe.",
+            ],
+            bullets: [
+              "Vergleiche Titel und Beschreibung mit dem finalen Manuskript.",
+              "Nutze Kategorien, die Käufererwartungen entsprechen.",
+              "Vermeide Keyword-Stuffing im öffentlichen Text.",
+              "Speichere einen Snapshot der Launch-Metadaten.",
+            ],
+          },
+          {
+            id: "danach",
+            title: "Plane die erste Optimierung",
+            body: [
+              "Der Launch ist der Beginn der Messung. Nach einer ersten Signalphase prüfst du Impressionen, Klicks, Conversion, Reviews und Seitenqualität, bevor du das falsche Element änderst.",
+              "Optimiere eine große Variable nach der anderen, damit du lernst, was die Performance wirklich bewegt.",
+            ],
+            bullets: [
+              "Analysiere erst nach ausreichendem Traffic.",
+              "Verbessere die Beschreibung, bevor du vom Coverproblem ausgehst.",
+              "Tracke jede Änderung mit Datum und Grund.",
+              "Übertrage Learnings in den nächsten Titelbrief.",
+            ],
+          },
+        ],
+        checklist: [
+          "Innenlayout und Cover bestehen die Vorschau.",
+          "Metadaten passen zu Manuskript und Coverversprechen.",
+          "Kategorien und Keywords entsprechen realem Suchverhalten.",
+          "Der Preis folgt Launch- und Katalogstrategie.",
+          "Ein Post-Launch-Review ist vor Veröffentlichung geplant.",
+        ],
+        faq: [
+          {
+            question: "Sollten Metadaten direkt nach dem Launch geändert werden?",
+            answer:
+              "Nicht ohne Signal. Warte, bis Sichtbarkeit, Klickrate und Conversion unterscheidbar sind.",
+          },
+          {
+            question: "Was ist der häufigste KDP-Launchfehler?",
+            answer:
+              "Nicht abgestimmte Assets: Titel, Cover, Beschreibung und Manuskript versprechen leicht unterschiedliche Dinge.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    key: "pen-name-author-brand",
+    date: "2026-06-07",
+    updated: "2026-06-07",
+    readingTime: 9,
+    accent: {
+      start: "#f3f0ff",
+      middle: "#a9f0d6",
+      end: "#f4f4ef",
+    },
+    translations: {
+      en: {
+        slug: "pen-name-author-brand-strategy",
+        title: "Pen name strategy: build author brands that make publishing catalogs easier to trust",
+        description:
+          "How to choose and manage pen names, author positioning, catalog consistency and trust signals for multi-title publishing.",
+        keywords: [
+          "pen name strategy",
+          "author brand",
+          "KDP pen name",
+          "publishing catalog branding",
+        ],
+        category: "Brand",
+        intro: [
+          "A pen name is not a disguise for weak books. It is a positioning asset that helps readers understand what kind of promise they can expect across titles.",
+          "When a catalog grows, author branding becomes a navigation system: genre, tone, quality bar and reader relationship.",
+        ],
+        sections: [
+          {
+            id: "positioning",
+            title: "Choose a pen name around reader expectation",
+            body: [
+              "The best pen name fits the category, sounds credible to the target reader and leaves room for future titles. It should feel natural on the cover, product page and author bio.",
+              "Avoid names that create copyright, impersonation or trust issues. Distinctive and simple beats clever and confusing.",
+            ],
+            bullets: [
+              "Check category fit before choosing a name.",
+              "Avoid similarity to famous authors or protected brands.",
+              "Keep pronunciation and spelling simple.",
+              "Document which niches belong under each author identity.",
+            ],
+          },
+          {
+            id: "bio",
+            title: "Make the author bio a trust signal",
+            body: [
+              "A useful bio tells readers why this author publishes in this space and what standard the catalog follows. It does not need fake credentials.",
+              "Use the bio to set tone, audience, topics and editorial promise. Trust comes from clarity and consistency.",
+            ],
+            bullets: [
+              "State the author focus in one sentence.",
+              "Avoid unverifiable claims.",
+              "Match bio tone to book tone.",
+              "Update the bio as the catalog matures.",
+            ],
+          },
+          {
+            id: "catalog",
+            title: "Keep author brands clean as the catalog expands",
+            body: [
+              "One author name should not carry unrelated promises. If two niches attract different readers, split them before reviews, recommendations and expectations become mixed.",
+              "Create a simple author map with genres, promises, tone rules, cover style and metadata conventions.",
+            ],
+            bullets: [
+              "Group titles by reader expectation.",
+              "Keep cover and description style consistent within one author.",
+              "Use separate pen names for conflicting genres or promises.",
+              "Review brand coherence before every launch.",
+            ],
+          },
+        ],
+        checklist: [
+          "The pen name matches the category and target reader.",
+          "The name avoids confusion with real brands or famous authors.",
+          "The author bio is clear without fake authority.",
+          "Catalog boundaries are documented.",
+          "Each new title strengthens rather than dilutes the author promise.",
+        ],
+        faq: [
+          {
+            question: "Can one pen name cover many niches?",
+            answer:
+              "Only if the reader expectation stays coherent. Conflicting genres or promises usually need separate author brands.",
+          },
+          {
+            question: "Should a pen name pretend to have credentials?",
+            answer:
+              "No. Credibility should come from clarity, quality, useful positioning and truthful presentation.",
+          },
+        ],
+      },
+      fr: {
+        slug: "strategie-nom-de-plume-marque-auteur",
+        title: "Stratégie de nom de plume : créer des marques auteur qui inspirent confiance",
+        description:
+          "Comment choisir et gérer noms de plume, positionnement auteur, cohérence catalogue et signaux de confiance en édition multi-titres.",
+        keywords: [
+          "stratégie nom de plume",
+          "marque auteur",
+          "nom de plume KDP",
+          "branding catalogue éditorial",
+        ],
+        category: "Marque",
+        intro: [
+          "Un nom de plume n'est pas un masque pour des livres faibles. C'est un asset de positionnement qui aide le lecteur à comprendre la promesse attendue d'un titre à l'autre.",
+          "Quand le catalogue grandit, la marque auteur devient un système de navigation : genre, ton, niveau qualité et relation lecteur.",
+        ],
+        sections: [
+          {
+            id: "positionnement",
+            title: "Choisir un nom de plume autour de l'attente lecteur",
+            body: [
+              "Le meilleur nom de plume correspond à la catégorie, paraît crédible pour l'audience et laisse de la place aux prochains titres. Il doit fonctionner sur couverture, fiche produit et bio.",
+              "Évitez les noms qui créent des problèmes de droits, d'usurpation ou de confiance. Simple et distinct vaut mieux que malin et confus.",
+            ],
+            bullets: [
+              "Vérifier le fit catégorie avant le choix.",
+              "Éviter la proximité avec auteurs connus ou marques protégées.",
+              "Garder orthographe et prononciation simples.",
+              "Documenter les niches liées à chaque identité.",
+            ],
+          },
+          {
+            id: "bio",
+            title: "Faire de la bio auteur un signal de confiance",
+            body: [
+              "Une bio utile explique pourquoi cet auteur publie dans cet univers et quel standard suit le catalogue. Elle n'a pas besoin de faux diplômes.",
+              "Utilisez la bio pour poser ton, audience, thèmes et promesse éditoriale. La confiance vient de la clarté et de la cohérence.",
+            ],
+            bullets: [
+              "Résumer le focus auteur en une phrase.",
+              "Éviter les affirmations invérifiables.",
+              "Aligner ton de la bio et ton des livres.",
+              "Mettre à jour la bio avec la maturité du catalogue.",
+            ],
+          },
+          {
+            id: "catalogue",
+            title: "Garder des marques auteur propres quand le catalogue s'étend",
+            body: [
+              "Un même nom ne doit pas porter des promesses sans lien. Si deux niches attirent des lecteurs différents, séparez-les avant que recommandations et avis ne se mélangent.",
+              "Créez une carte auteur avec genres, promesses, règles de ton, style couverture et conventions de métadonnées.",
+            ],
+            bullets: [
+              "Grouper les titres par attente lecteur.",
+              "Maintenir style couverture et description dans une même identité.",
+              "Séparer les noms pour genres ou promesses contradictoires.",
+              "Revoir la cohérence de marque avant chaque lancement.",
+            ],
+          },
+        ],
+        checklist: [
+          "Le nom de plume correspond à la catégorie et au lecteur cible.",
+          "Le nom évite la confusion avec marques ou auteurs connus.",
+          "La bio est claire sans fausse autorité.",
+          "Les frontières du catalogue sont documentées.",
+          "Chaque nouveau titre renforce la promesse auteur.",
+        ],
+        faq: [
+          {
+            question: "Un nom de plume peut-il couvrir beaucoup de niches ?",
+            answer:
+              "Seulement si l'attente lecteur reste cohérente. Des genres ou promesses contradictoires demandent souvent des marques séparées.",
+          },
+          {
+            question: "Faut-il inventer des références dans une bio ?",
+            answer:
+              "Non. La crédibilité doit venir de la clarté, de la qualité, du positionnement utile et d'une présentation honnête.",
+          },
+        ],
+      },
+      it: {
+        slug: "strategia-pseudonimo-brand-autore",
+        title: "Strategia pseudonimo: creare brand autore che rendono il catalogo affidabile",
+        description:
+          "Come scegliere e gestire pseudonimi, posizionamento autore, coerenza di catalogo e segnali di fiducia per pubblicare più titoli.",
+        keywords: [
+          "strategia pseudonimo",
+          "brand autore",
+          "pseudonimo KDP",
+          "branding catalogo editoriale",
+        ],
+        category: "Brand",
+        intro: [
+          "Uno pseudonimo non è una maschera per libri deboli. È un asset di posizionamento che aiuta i lettori a capire quale promessa aspettarsi.",
+          "Quando il catalogo cresce, il brand autore diventa un sistema di navigazione: genere, tono, standard qualità e relazione col lettore.",
+        ],
+        sections: [
+          {
+            id: "posizionamento",
+            title: "Scegli lo pseudonimo intorno all'aspettativa del lettore",
+            body: [
+              "Il miglior pseudonimo si adatta alla categoria, suona credibile e lascia spazio a titoli futuri. Deve funzionare in copertina, pagina prodotto e bio.",
+              "Evita nomi che creano problemi di copyright, impersonificazione o fiducia. Distintivo e semplice batte brillante ma confuso.",
+            ],
+            bullets: [
+              "Controlla il fit di categoria prima del nome.",
+              "Evita somiglianze con autori famosi o brand protetti.",
+              "Mantieni spelling e pronuncia semplici.",
+              "Documenta quali nicchie appartengono a ogni identità.",
+            ],
+          },
+          {
+            id: "bio",
+            title: "Trasforma la bio autore in segnale di fiducia",
+            body: [
+              "Una bio utile spiega perché l'autore pubblica in quello spazio e quale standard segue il catalogo. Non servono credenziali inventate.",
+              "Usa la bio per definire tono, audience, temi e promessa editoriale. La fiducia nasce da chiarezza e coerenza.",
+            ],
+            bullets: [
+              "Dichiara il focus autore in una frase.",
+              "Evita claim non verificabili.",
+              "Allinea tono della bio e tono del libro.",
+              "Aggiorna la bio con la maturità del catalogo.",
+            ],
+          },
+          {
+            id: "catalogo",
+            title: "Mantieni puliti i brand autore mentre il catalogo cresce",
+            body: [
+              "Un nome autore non dovrebbe portare promesse scollegate. Se due nicchie attirano lettori diversi, separale prima che recensioni e aspettative si mescolino.",
+              "Crea una mappa autore con generi, promesse, regole di tono, stile copertina e convenzioni metadati.",
+            ],
+            bullets: [
+              "Raggruppa titoli per aspettativa del lettore.",
+              "Mantieni stile coerente dentro un'identità.",
+              "Usa nomi separati per generi o promesse conflittuali.",
+              "Rivedi coerenza brand prima di ogni lancio.",
+            ],
+          },
+        ],
+        checklist: [
+          "Lo pseudonimo si adatta a categoria e lettore target.",
+          "Il nome evita confusione con brand o autori noti.",
+          "La bio è chiara senza autorità finta.",
+          "I confini del catalogo sono documentati.",
+          "Ogni nuovo titolo rafforza la promessa autore.",
+        ],
+        faq: [
+          {
+            question: "Uno pseudonimo può coprire molte nicchie?",
+            answer:
+              "Solo se l'aspettativa del lettore resta coerente. Generi o promesse contrastanti richiedono spesso brand separati.",
+          },
+          {
+            question: "Uno pseudonimo deve fingere credenziali?",
+            answer:
+              "No. La credibilità viene da chiarezza, qualità, posizionamento utile e presentazione onesta.",
+          },
+        ],
+      },
+      de: {
+        slug: "pseudonym-autorenmarke-strategie",
+        title: "Pseudonym-Strategie: Autorenmarken aufbauen, denen Leser leichter vertrauen",
+        description:
+          "So wählst und verwaltest du Pseudonyme, Autorenpositionierung, Katalogkonsistenz und Vertrauenssignale für Multi-Titel-Publishing.",
+        keywords: [
+          "Pseudonym Strategie",
+          "Autorenmarke",
+          "KDP Pseudonym",
+          "Publishing Katalog Branding",
+        ],
+        category: "Marke",
+        intro: [
+          "Ein Pseudonym ist keine Tarnung für schwache Bücher. Es ist ein Positionierungsasset, das Lesern zeigt, welches Versprechen sie über mehrere Titel erwarten können.",
+          "Wenn der Katalog wächst, wird Autorenbranding zum Navigationssystem: Genre, Ton, Qualitätsniveau und Leserbeziehung.",
+        ],
+        sections: [
+          {
+            id: "positionierung",
+            title: "Wähle das Pseudonym rund um Leserwartung",
+            body: [
+              "Das beste Pseudonym passt zur Kategorie, wirkt für die Zielgruppe glaubwürdig und lässt Raum für künftige Titel. Es muss auf Cover, Produktseite und Bio natürlich funktionieren.",
+              "Vermeide Namen, die Urheberrechts-, Verwechslungs- oder Vertrauensprobleme schaffen. Klar und unterscheidbar schlägt clever und verwirrend.",
+            ],
+            bullets: [
+              "Prüfe Kategorie-Fit vor der Namenswahl.",
+              "Vermeide Nähe zu berühmten Autoren oder geschützten Marken.",
+              "Halte Aussprache und Schreibweise einfach.",
+              "Dokumentiere, welche Nischen zu welcher Identität gehören.",
+            ],
+          },
+          {
+            id: "bio",
+            title: "Mach die Autorenbio zum Vertrauenssignal",
+            body: [
+              "Eine gute Bio erklärt, warum diese Autorenmarke in diesem Bereich publiziert und welchem Standard der Katalog folgt. Falsche Referenzen sind nicht nötig.",
+              "Nutze die Bio für Ton, Zielgruppe, Themen und redaktionelles Versprechen. Vertrauen entsteht durch Klarheit und Konsistenz.",
+            ],
+            bullets: [
+              "Formuliere den Autorenfokus in einem Satz.",
+              "Vermeide nicht überprüfbare Claims.",
+              "Passe Bio-Ton und Buchton an.",
+              "Aktualisiere die Bio mit wachsendem Katalog.",
+            ],
+          },
+          {
+            id: "katalog",
+            title: "Halte Autorenmarken sauber, wenn der Katalog wächst",
+            body: [
+              "Ein Autorenname sollte keine unverbundenen Versprechen tragen. Wenn zwei Nischen andere Leser anziehen, trenne sie, bevor Reviews, Empfehlungen und Erwartungen vermischt werden.",
+              "Erstelle eine Autorenkarte mit Genres, Versprechen, Tonregeln, Coverstil und Metadatenkonventionen.",
+            ],
+            bullets: [
+              "Gruppiere Titel nach Leserwartung.",
+              "Halte Cover- und Beschreibungsstil innerhalb einer Marke konsistent.",
+              "Nutze separate Pseudonyme für widersprüchliche Genres.",
+              "Prüfe Markenkohärenz vor jedem Launch.",
+            ],
+          },
+        ],
+        checklist: [
+          "Das Pseudonym passt zu Kategorie und Zielgruppe.",
+          "Der Name vermeidet Verwechslung mit Marken oder bekannten Autoren.",
+          "Die Bio ist klar und ohne falsche Autorität.",
+          "Kataloggrenzen sind dokumentiert.",
+          "Jeder neue Titel stärkt statt verwässert das Autorenversprechen.",
+        ],
+        faq: [
+          {
+            question: "Kann ein Pseudonym viele Nischen abdecken?",
+            answer:
+              "Nur wenn die Leserwartung konsistent bleibt. Widersprüchliche Genres oder Versprechen brauchen meist getrennte Marken.",
+          },
+          {
+            question: "Sollte ein Pseudonym Referenzen vortäuschen?",
+            answer:
+              "Nein. Glaubwürdigkeit entsteht durch Klarheit, Qualität, hilfreiche Positionierung und ehrliche Darstellung.",
           },
         ],
       },

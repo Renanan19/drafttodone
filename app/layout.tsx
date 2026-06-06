@@ -20,6 +20,22 @@ export const metadata: Metadata = {
   title: "DraftToDone.io — The Complete AI Publishing Machine",
   description:
     "Generate the entire product — front cover to back cover, manuscript, and optimized title. Build your publishing empire with 6 ready-to-publish books a week.",
+  alternates: {
+    types: {
+      "application/rss+xml": "/feed.xml",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     title: "DraftToDone.io — The Complete AI Publishing Machine",
     description:
