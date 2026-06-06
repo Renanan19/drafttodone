@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Newsreader, Hanken_Grotesk } from "next/font/google";
+import { SITE_NAME, SITE_URL } from "./blog-content";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -16,13 +17,19 @@ const hanken = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://drafttodone.io"),
+  metadataBase: new URL(SITE_URL),
   title: "DraftToDone.io — The Complete AI Publishing Machine",
   description:
     "Generate the entire product — front cover to back cover, manuscript, and optimized title. Build your publishing empire with 6 ready-to-publish books a week.",
+  applicationName: SITE_NAME,
+  category: "AI publishing software",
+  classification:
+    "AI publishing software, KDP automation, book SEO, AI book cover generation, manuscript generation",
+  manifest: "/manifest.webmanifest",
   alternates: {
     types: {
       "application/rss+xml": "/feed.xml",
+      "application/json": "/content-index.json",
     },
   },
   robots: {
@@ -41,9 +48,54 @@ export const metadata: Metadata = {
     description:
       "Don't just write a book. Generate the entire product. Join the waitlist for early beta access.",
     type: "website",
-    url: "https://drafttodone.io",
+    url: SITE_URL,
   },
 };
+
+const siteJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/icon.svg`,
+    description:
+      "AI publishing software for creating manuscripts, book covers, KDP metadata and repeatable publishing catalog workflows.",
+    foundingDate: "2026",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_URL,
+    inLanguage: ["en", "fr", "it", "de"],
+    potentialAction: {
+      "@type": "ReadAction",
+      target: [
+        `${SITE_URL}/en/blog`,
+        `${SITE_URL}/fr/blog`,
+        `${SITE_URL}/it/blog`,
+        `${SITE_URL}/de/blog`,
+      ],
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: SITE_NAME,
+    applicationCategory: "PublishingApplication",
+    operatingSystem: "Web",
+    url: SITE_URL,
+    description:
+      "AI publishing software for manuscripts, covers, titles, descriptions, KDP keywords and catalog quality control.",
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/PreOrder",
+      price: "0",
+      priceCurrency: "USD",
+    },
+  },
+];
 
 export default function RootLayout({
   children,
@@ -57,6 +109,10 @@ export default function RootLayout({
         <noscript>
           <style>{`.reveal-up{opacity:1 !important;transform:none !important}`}</style>
         </noscript>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        />
         {children}
       </body>
     </html>
