@@ -28,7 +28,7 @@ const WEB3FORMS_ACCESS_KEY =
 /* -------------------------------------------------------------------------- */
 const COPY = {
   en: {
-    nav: { followX: "Follow on X", join: "Join the waitlist" },
+    nav: { blog: "Blog", followX: "Follow on X", join: "Join the waitlist" },
     hero: {
       eyebrow: "Now in private beta",
       h1main: "The complete AI publishing",
@@ -91,7 +91,7 @@ const COPY = {
     footer: "© 2026 DraftToDone.io. Built in public.",
   },
   fr: {
-    nav: { followX: "Suivre sur X", join: "Rejoindre la liste" },
+    nav: { blog: "Blog", followX: "Suivre sur X", join: "Rejoindre la liste" },
     hero: {
       eyebrow: "En bêta privée",
       h1main: "Toute la chaîne d'édition,",
@@ -537,6 +537,12 @@ export default function Home() {
           <Logo />
           <div className="flex items-center gap-3 sm:gap-4">
             <LangToggle lang={lang} setLang={setLang} />
+            <a
+              href={`/${lang}/blog`}
+              className="hidden text-sm text-muted transition-colors hover:text-ink sm:inline-flex"
+            >
+              {t.nav.blog}
+            </a>
             <a
               href="#"
               className="group hidden items-center gap-1 text-sm text-muted transition-colors hover:text-ink sm:inline-flex"
