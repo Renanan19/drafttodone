@@ -11,6 +11,7 @@ import {
   type Locale,
 } from "@/app/blog-content";
 import { BlogFooter, BlogHeader } from "@/app/blog-ui";
+import { KdpRoyaltyCalculator } from "@/app/kdp-royalty-calculator";
 import {
   getSolutionAlternates,
   getSolutionBySlug,
@@ -188,6 +189,8 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
             </a>
           </div>
         </section>
+
+        {page.tool === "kdpRoyaltyCalculator" && <KdpRoyaltyCalculator locale={locale} />}
 
         <section className="mx-auto max-w-6xl px-5 py-20 sm:px-6">
           <div className="grid gap-5 md:grid-cols-3">

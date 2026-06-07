@@ -1,3 +1,6 @@
+import { kdpAccountPaymentsPost } from "./kdp-account-post";
+import { kdpSeoPosts } from "./kdp-seo-posts";
+
 export const SITE_URL = "https://drafttodone.io";
 export const SITE_NAME = "DraftToDone.io";
 export const BLOG_AUTHOR = "DraftToDone editorial team";
@@ -233,6 +236,8 @@ export const blogCopy: Record<Locale, BlogCopy> = {
 };
 
 export const posts: BlogPost[] = [
+  kdpAccountPaymentsPost,
+  ...kdpSeoPosts,
   {
     key: "ai-publishing-workflow",
     date: "2026-06-06",
