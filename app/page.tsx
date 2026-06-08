@@ -23,12 +23,21 @@ import {
 const WEB3FORMS_ACCESS_KEY =
   process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "YOUR_ACCESS_KEY_HERE";
 
+/* The live app (sign up, subscribe, generate). */
+const APP_URL = "https://app.drafttodone.io";
+
 /* -------------------------------------------------------------------------- */
 /*  Bilingual copy (EN / FR)                                                  */
 /* -------------------------------------------------------------------------- */
 const COPY = {
   en: {
-    nav: { blog: "Blog", followX: "Follow on X", join: "Join the waitlist" },
+    nav: {
+      blog: "Blog",
+      followX: "Follow on X",
+      join: "Join the waitlist",
+      pricing: "Pricing",
+      openApp: "Open app",
+    },
     hero: {
       eyebrow: "Now in private beta",
       h1main: "The complete AI publishing",
@@ -38,6 +47,7 @@ const COPY = {
       microcopy: "Limited spots for early beta access.",
       chips: ["Manuscript", "Front cover", "Back cover", "Verified pen name"],
       caption: "Six ready-to-publish books. Every week.",
+      openApp: "Open the app",
     },
     form: {
       placeholder: "Enter your email",
@@ -84,6 +94,38 @@ const COPY = {
         },
       ],
     },
+    pricing: {
+      eyebrow: "Pricing",
+      h2: "Simple plans. Real books.",
+      sub: "Every plan is a book-credit subscription — one credit makes one complete, ready-to-publish book. Subscribe and manage everything in the app.",
+      cta: "Start now",
+      best: "Best value",
+      includes: [
+        "Full manuscript",
+        "Front & back cover",
+        "KDP-ready PDF",
+        "Verified pen name",
+      ],
+      note: "Cancel anytime from the app.",
+      plans: [
+        {
+          name: "Weekly",
+          price: "€14.99",
+          period: "/ week",
+          credits: "6 books every week",
+          perBook: "≈ €2.50 per book",
+          highlight: false,
+        },
+        {
+          name: "Yearly",
+          price: "€390",
+          period: "/ year",
+          credits: "312 books a year",
+          perBook: "≈ €1.25 per book",
+          highlight: true,
+        },
+      ],
+    },
     cta: {
       h2: "Ready to scale your publishing business?",
       sub: "Join the founders building their catalog on autopilot. Early access opens soon.",
@@ -91,7 +133,13 @@ const COPY = {
     footer: "© 2026 DraftToDone.io. Built in public.",
   },
   fr: {
-    nav: { blog: "Blog", followX: "Suivre sur X", join: "Rejoindre la liste" },
+    nav: {
+      blog: "Blog",
+      followX: "Suivre sur X",
+      join: "Rejoindre la liste",
+      pricing: "Tarifs",
+      openApp: "Ouvrir l'app",
+    },
     hero: {
       eyebrow: "En bêta privée",
       h1main: "Toute la chaîne d'édition,",
@@ -101,6 +149,7 @@ const COPY = {
       microcopy: "Places limitées pour l'accès bêta anticipé.",
       chips: ["Manuscrit", "Couverture", "Quatrième", "Nom de plume vérifié"],
       caption: "Six livres prêts à publier. Chaque semaine.",
+      openApp: "Ouvrir l'application",
     },
     form: {
       placeholder: "Votre adresse e-mail",
@@ -144,6 +193,38 @@ const COPY = {
         {
           title: "Métadonnées optimisées",
           text: "Génère des titres et descriptions optimisés pour le SEO et des noms de plume vérifiés pour éviter les litiges de droits.",
+        },
+      ],
+    },
+    pricing: {
+      eyebrow: "Tarifs",
+      h2: "Des offres simples. De vrais livres.",
+      sub: "Chaque offre est un abonnement à crédits livres — 1 crédit = 1 livre complet, prêt à publier. Abonnement et gestion dans l'app.",
+      cta: "Commencer",
+      best: "Meilleur rapport",
+      includes: [
+        "Manuscrit complet",
+        "Couverture recto-verso",
+        "PDF prêt pour KDP",
+        "Nom de plume vérifié",
+      ],
+      note: "Annulable à tout moment depuis l'app.",
+      plans: [
+        {
+          name: "Hebdomadaire",
+          price: "14,99 €",
+          period: "/ semaine",
+          credits: "6 livres chaque semaine",
+          perBook: "≈ 2,50 € par livre",
+          highlight: false,
+        },
+        {
+          name: "Annuel",
+          price: "390 €",
+          period: "/ an",
+          credits: "312 livres par an",
+          perBook: "≈ 1,25 € par livre",
+          highlight: true,
         },
       ],
     },
@@ -551,10 +632,16 @@ export default function Home() {
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
             <a
-              href="#waitlist"
+              href="#pricing"
+              className="hidden text-sm text-muted transition-colors hover:text-ink sm:inline-flex"
+            >
+              {t.nav.pricing}
+            </a>
+            <a
+              href={APP_URL}
               className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
             >
-              {t.nav.join}
+              {t.nav.openApp}
             </a>
           </div>
         </div>
@@ -603,6 +690,18 @@ export default function Home() {
                 <Lock className="h-3.5 w-3.5" />
                 {t.hero.microcopy}
               </p>
+              <div className="mt-5 flex items-center justify-center">
+                <a
+                  href={APP_URL}
+                  className="group inline-flex items-center gap-2 rounded-xl border border-line bg-paper px-5 py-3 text-[15px] font-medium text-ink shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-ink/25"
+                >
+                  {t.hero.openApp}
+                  <ArrowRight
+                    className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+                    strokeWidth={2.25}
+                  />
+                </a>
+              </div>
             </div>
 
             <div
@@ -717,6 +816,99 @@ export default function Home() {
         </section>
 
         {/* -------------------------------------------------------------- */}
+        {/* Pricing                                                        */}
+        {/* -------------------------------------------------------------- */}
+        <section id="pricing" className="relative border-t border-line/70 bg-paper-2">
+          <div className="mx-auto max-w-5xl px-5 py-24 sm:px-6">
+            <div className="mx-auto max-w-2xl text-center">
+              <p
+                data-reveal
+                className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep"
+              >
+                {t.pricing.eyebrow}
+              </p>
+              <h2
+                data-reveal
+                style={{ transitionDelay: "60ms" }}
+                className="reveal-up text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
+              >
+                {t.pricing.h2}
+              </h2>
+              <p
+                data-reveal
+                style={{ transitionDelay: "120ms" }}
+                className="reveal-up mx-auto mt-5 max-w-xl text-balance text-lg text-muted"
+              >
+                {t.pricing.sub}
+              </p>
+            </div>
+
+            <div className="mx-auto mt-14 grid max-w-3xl gap-5 sm:grid-cols-2">
+              {t.pricing.plans.map((p, i) => (
+                <article
+                  key={p.name}
+                  data-reveal
+                  style={{ transitionDelay: `${i * 90}ms` }}
+                  className={`reveal-up relative flex flex-col rounded-2xl border p-7 ${
+                    p.highlight
+                      ? "border-mint/40 bg-gradient-to-b from-mint-soft/40 to-paper shadow-[0_24px_60px_-30px_rgba(16,24,40,0.45)]"
+                      : "border-line bg-paper"
+                  }`}
+                >
+                  {p.highlight && (
+                    <span className="absolute right-5 top-5 rounded-full bg-mint-soft px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-mint-deep">
+                      {t.pricing.best}
+                    </span>
+                  )}
+                  <h3 className="font-display text-xl font-medium text-ink">
+                    {p.name}
+                  </h3>
+                  <div className="mt-3 flex items-baseline gap-1.5">
+                    <span className="font-display text-[40px] font-medium leading-none text-ink">
+                      {p.price}
+                    </span>
+                    <span className="text-[14px] text-muted">{p.period}</span>
+                  </div>
+                  <p className="mt-2 text-[15px] text-ink-soft">{p.credits}</p>
+                  <p className="mt-0.5 text-[13px] text-faint">{p.perBook}</p>
+
+                  <ul className="mt-6 grid gap-2.5">
+                    {t.pricing.includes.map((inc) => (
+                      <li
+                        key={inc}
+                        className="flex items-center gap-2.5 text-[14px] text-muted"
+                      >
+                        <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-mint-soft text-mint-deep">
+                          <Check className="h-3 w-3" strokeWidth={3} />
+                        </span>
+                        {inc}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a
+                    href={APP_URL}
+                    className={`group mt-7 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-[15px] font-medium shadow-sm transition-all duration-200 hover:-translate-y-0.5 ${
+                      p.highlight
+                        ? "bg-ink text-paper hover:bg-ink-soft"
+                        : "border border-line bg-paper text-ink hover:border-ink/25"
+                    }`}
+                  >
+                    {t.pricing.cta}
+                    <ArrowRight
+                      className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+                      strokeWidth={2.25}
+                    />
+                  </a>
+                </article>
+              ))}
+            </div>
+
+            <p className="mt-8 text-center text-sm text-faint">{t.pricing.note}</p>
+          </div>
+        </section>
+
+        {/* -------------------------------------------------------------- */}
         {/* Bottom CTA                                                     */}
         {/* -------------------------------------------------------------- */}
         <section className="relative border-t border-line/70">
@@ -737,6 +929,18 @@ export default function Home() {
                   <Lock className="h-3.5 w-3.5" />
                   {t.hero.microcopy}
                 </p>
+                <div className="mt-5 flex items-center justify-center">
+                  <a
+                    href={APP_URL}
+                    className="group inline-flex items-center gap-2 rounded-xl bg-ink px-6 py-3.5 text-[15px] font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft"
+                  >
+                    {t.hero.openApp}
+                    <ArrowRight
+                      className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+                      strokeWidth={2.25}
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
