@@ -284,6 +284,278 @@ export const bookMarketingSeoPosts: BlogPost[] = [
           },
         ],
       },
+      it: {
+        slug: "pubblicita-amazon-ads-libri-kdp-guida",
+        title: "Amazon Ads per i libri KDP: un sistema per principianti che non brucia le royalty",
+        description:
+          "Lanciare pubblicità Amazon redditizie per libri autopubblicati: quando un libro è pronto, il calcolo dell'ACOS di pareggio, i tre tipi di campagne, una struttura di partenza con budget reali e il ciclo di ottimizzazione settimanale.",
+        keywords: [
+          "pubblicità Amazon libri",
+          "Amazon Ads KDP",
+          "sponsored products libri",
+          "ACOS pubblicità libro",
+          "guida pubblicità KDP",
+          "marketing libro Amazon",
+          "budget pubblicità libro",
+          "Amazon PPC autori",
+        ],
+        category: "Pubblicità",
+        intro: [
+          "Amazon Ads è l'unica piattaforma pubblicitaria in cui l'acquirente di libri si trova già in libreria, carta in mano. Quella prossimità ne fa il canale a più alta intenzione di cui dispone un editore indipendente — e anche il posto più facile per sminuzzare in silenzio royalty sottili, perché l'asta non si cura che il vostro cartaceo renda solo 3,70 €.",
+          "Gli editori per cui la pubblicità funziona la trattano come aritmetica con un ciclo di feedback: conoscere il proprio ACOS di pareggio prima della prima campagna, strutturare le campagne perché i dati insegnino qualcosa, e raccogliere ciò che converte. Chi perde la tratta come un pulsante della speranza.",
+          "Questa guida vi dà la checklist di preparazione, i conti, una struttura di campagna di partenza con budget reali, e il ciclo settimanale — dimensionati per libri indipendenti che rendono 2-7 € a vendita, non per marchi finanziati.",
+        ],
+        sections: [
+          {
+            id: "preparazione",
+            title: "Quando un libro è pronto per la pubblicità (e quando essa sovvenziona una scheda debole)",
+            body: [
+              "La pubblicità moltiplica il tasso di conversione della scheda. Una pagina che converte il 10 % dei visitatori ricava dieci vendite da cento clic pagati; una pagina che converte l'1 % ne ricava una. Stessa spesa, scarto di uno a dieci — ecco perché promuovere un libro non pronto equivale a donare denaro ad Amazon.",
+              "Essere pronti significa: una copertina competitiva contro la top 20 della categoria in formato miniatura, una descrizione strutturata come testo di vendita, almeno 5-10 recensioni oneste, e un prezzo nella fascia normale della categoria. Ogni elemento debole tassa ogni clic acquistato.",
+              "La buona notizia: la pubblicità su un libro pronto produce un secondo dividendo. Le vendite pagate migliorano il posizionamento organico, che produce vendite organiche mai pagate dalla pubblicità. Quell'alone organico è ciò che rende globalmente redditizie campagne medie.",
+            ],
+            bullets: [
+              "La pubblicità moltiplica la conversione; non può crearla.",
+              "Pronto = copertina da miniatura, descrizione che vende, 5-10 recensioni, prezzo normale.",
+              "Le vendite pagate sollevano il posizionamento organico — l'alone spesso decide la redditività.",
+              "Sistemate prima la scheda; è l'ottimizzazione meno costosa.",
+            ],
+          },
+          {
+            id: "conti-acos",
+            title: "I conti dell'ACOS: conoscere il pareggio prima di spendere un centesimo",
+            body: [
+              "L'ACOS (Advertising Cost of Sales) è la spesa pubblicitaria divisa per i ricavi attribuiti alle pubblicità. Il vostro ACOS di pareggio è la royalty divisa per il prezzo: un ebook a 4,99 che rende 3,40 è in pareggio al 68 %; un cartaceo a 12,99 che rende 4,10 lo è al 32 %. Sotto il pareggio, la pubblicità stampa denaro; sopra, consuma la royalty.",
+              "Due correzioni rendono onesto questo conto semplice. Le pagine lette Kindle Unlimited attribuite ai clic aggiungono ricavi invisibili — i libri molto letti in KU possono girare con profitto sopra il loro pareggio visibile. E l'alone organico fa sì che una campagna leggermente sopra il pareggio possa comunque accrescere il profitto totale. Partite rigidi, allentate con le prove.",
+              "Il dimensionamento delle offerte ne discende: con 3,40 di royalty e 10 % di conversione, un clic vale 0,34. Offerte iniziali di 0,30-0,45 per gli ebook e 0,40-0,60 per i cartacei a royalty più alta sono default sani, da regolare con dati, non a sensazione.",
+            ],
+            bullets: [
+              "ACOS di pareggio = royalty ÷ prezzo. Calcolatelo per formato.",
+              "Letture KU e alone organico giustificano un lieve sforamento — con le prove.",
+              "Valore del clic = royalty × tasso di conversione; offrite al di sotto.",
+              "Offerte iniziali: 0,30-0,45 ebook, 0,40-0,60 cartacei.",
+            ],
+          },
+          {
+            id: "tipi-campagne",
+            title: "I tre tipi di campagne e l'unico che serve a un principiante",
+            body: [
+              "Sponsored Products — gli annunci nei risultati di ricerca e sulle pagine prodotto — è dove i libri vincono. Porta l'intenzione di ricerca dell'acquirente, offre il targeting per parole chiave e per prodotti, e propone le modalità automatica e manuale. È il 90 % della pubblicità del libro indipendente.",
+              "Sponsored Brands (il banner multi-libro) esige almeno tre titoli e premia serie e cataloghi; tornateci quando li avrete. Gli annunci sulla schermata di blocco Kindle sono economici ma a bassa intenzione — un esperimento occasionale, mai l'ossatura.",
+              "Dentro Sponsored Products, le due modalità di targeting si dividono il lavoro: le campagne automatiche lasciano che Amazon estragga termini di ricerca dai vostri metadati (ricerca), e le manuali puntano sulle parole chiave e sugli ASIN concorrenti che scegliete voi (precisione). La struttura di partenza le usa entrambe deliberatamente.",
+            ],
+            bullets: [
+              "Sponsored Products = il cavallo da tiro indipendente; partite e restate lì.",
+              "Sponsored Brands esige 3+ titoli; la schermata di blocco resta un esperimento.",
+              "Le campagne auto fanno la ricerca; le manuali la precisione.",
+              "Il targeting prodotto (ASIN concorrenti) è la seconda arma della modalità manuale.",
+            ],
+          },
+          {
+            id: "struttura-partenza",
+            title: "Una struttura di partenza: tre campagne, 7 € al giorno",
+            body: [
+              "Campagna uno — scoperta automatica, 2 €/giorno: offerte di default leggermente basse, gira in continuo come motore di ricerca di parole chiave. Campagna due — parole chiave manuali, 3 €/giorno: 15-25 espressioni dal vostro lavoro di parole chiave KDP e dal vocabolario della categoria, in corrispondenza esatta e a frase. Campagna tre — targeting prodotto manuale, 2 €/giorno: 10-20 ASIN di libri comparabili i cui acquirenti sono i vostri.",
+              "Resistete alla tentazione di lanciare dieci campagne: piccoli budget sparpagliati non producono dati significativi da nessuna parte. Tre campagne a 7 €/giorno totali generano numeri interpretabili in due-tre settimane sulla maggior parte dei libri.",
+              "Le parole chiave negative sono lo strumento misconosciuto: dal primo giorno, aggiungete le incongruenze ovvie (gratis, usato, generi estranei) e, ogni settimana, spostate in negativo i termini che spendono senza convertire. La maggior parte del budget sprecato nelle campagne di libri esce da termini che nessuno ha negato.",
+            ],
+            bullets: [
+              "Auto 2 € + parole chiave manuali 3 € + targeting prodotto 2 € = 7 €/giorno di partenza.",
+              "Poche campagne, budget sufficiente ciascuna — qualità dei dati prima della copertura.",
+              "Negate aggressivamente: « gratis », generi sbagliati, spenditori che non convertono.",
+              "Due-tre settimane prima di ogni giudizio strutturale.",
+            ],
+          },
+          {
+            id: "ciclo-ottimizzazione",
+            title: "Il ciclo settimanale: raccogliere, negare, regolare",
+            body: [
+              "Una volta a settimana, quindici minuti: aprite il rapporto dei termini di ricerca. Raccogliete — i termini con vendite passano nella campagna manuale in corrispondenza esatta con offerta leggermente alzata. Negate — i termini con 15+ clic e zero vendite diventano negativi. Regolate — le parole chiave sopra l'ACOS di pareggio perdono il 20 % di offerta; quelle nettamente sotto guadagnano il 10 % per comprare più volume.",
+              "Giudicate lentamente. L'attribuzione ritarda di giorni, le letture KU si accumulano per settimane, e le vendite di libri sono eventi rari: una parola chiave con 8 clic senza vendita non è ancora un'informazione. Decidete su finestre di più settimane, mai su ieri.",
+              "Fate crescere ciò che funziona e affamate il resto: il budget scorre verso la campagna con la migliore economia dopo alone. E ricordate l'effetto catalogo — la pubblicità sul primo volume di una serie collegata o su un catalogo di pseudonimo visibile rende ricavi a catena che nessun ACOS di libro isolato cattura. La pubblicità premia esattamente la struttura di catalogo che l'editoria premia.",
+            ],
+            bullets: [
+              "Settimanale: raccogliere i convertitori, negare gli spenditori, regolare ±10-20 %.",
+              "Finestre di giudizio multi-settimana; i dati a basso volume mentono ogni giorno.",
+              "Il budget scorre verso i vincenti dopo alone.",
+              "Serie e cataloghi rendono lo stesso ACOS più redditizio.",
+            ],
+          },
+        ],
+        checklist: [
+          "Scheda pronta: copertina competitiva, descrizione che vende, 5-10 recensioni, prezzo normale.",
+          "ACOS di pareggio calcolato per formato prima del lancio.",
+          "Tre campagne di partenza attive: auto, parole chiave manuali, targeting prodotto.",
+          "Offerte iniziali sotto il valore di clic calcolato.",
+          "Parole chiave negative ovvie aggiunte dal primo giorno.",
+          "Ciclo settimanale di quindici minuti pianificato: raccogliere, negare, regolare.",
+          "Giudizi su finestre di 2-3 settimane, in royalty e non in unità.",
+          "Ricavi delle pagine KU e alone organico inclusi nella revisione di redditività.",
+        ],
+        faq: [
+          {
+            question: "Quanto spendere in Amazon Ads quando si inizia?",
+            answer:
+              "5-10 € al giorno su due o tre campagne bastano per generare dati veri in qualche settimana senza rischio materiale. Aumentate solo ciò che il rapporto dei termini di ricerca dimostra; la spesa totale segue le prove, non l'ambizione.",
+          },
+          {
+            question: "Qual è un buon ACOS per un libro?",
+            answer:
+              "Relativo al vostro pareggio, che vale royalty ÷ prezzo: circa il 68 % per un ebook a 4,99 al piano 70 %, vicino al 30 % per un cartaceo tipico. Sotto il pareggio, la campagna è subito redditizia; leggermente sopra può ancora vincere una volta contati letture KU e alone organico.",
+          },
+          {
+            question: "Perché i miei annunci hanno impressioni ma niente clic?",
+            answer:
+              "L'annuncio appare ma perde contro i vicini — quasi sempre un problema di miniatura o di pertinenza. Confrontate la copertina con i libri mostrati accanto nei risultati, e restringete il targeting verso le ricerche dove il vostro libro ha un posto plausibile sulla pagina.",
+          },
+          {
+            question: "Clic ma niente vendite?",
+            answer:
+              "L'annuncio funziona e la pagina prodotto no. Descrizione, recensioni, prezzo ed estratto portano la conversione; sistemateli prima di aumentare la spesa. Verificate anche che i termini cliccati corrispondano davvero al libro — una pertinenza ingannevole produce curiosi, non acquirenti.",
+          },
+          {
+            question: "La pubblicità Amazon funziona per i libri Kindle Unlimited?",
+            answer:
+              "Spesso meglio che per i libri solo all'acquisto: un clic diventato prestito rende ricavi di pagine lette che l'ACOS non mostra, quindi un libro iscritto a KU può girare durevolmente a un ACOS visibile più alto. Stimate i ricavi KU per prestito nelle vostre revisioni di redditività.",
+          },
+        ],
+      },
+      de: {
+        slug: "amazon-ads-fuer-kdp-buecher-leitfaden",
+        title: "Amazon Ads für KDP-Bücher: ein Einsteigersystem, das die Tantieme nicht verbrennt",
+        description:
+          "Profitable Amazon-Anzeigen für selbstveröffentlichte Bücher: wann ein Buch bereit ist, die Break-even-ACOS-Rechnung, die drei Kampagnentypen, eine Startstruktur mit echten Budgets und die wöchentliche Optimierungsschleife.",
+        keywords: [
+          "Amazon Ads für Bücher",
+          "Amazon Werbung KDP",
+          "Sponsored Products Bücher",
+          "ACOS Buchwerbung",
+          "KDP Werbung Leitfaden",
+          "Amazon Buchmarketing",
+          "Buch Werbebudget",
+          "Amazon PPC Autoren",
+        ],
+        category: "Werbung",
+        intro: [
+          "Amazon Ads ist die einzige Werbeplattform, auf der Buchkäufer bereits mit der Karte in der Hand im Buchladen stehen. Diese Nähe macht sie zum Kanal mit der höchsten Kaufabsicht, den ein Indie-Verleger hat — und zugleich zum leichtesten Ort, dünne Tantiemen leise zu schreddern, denn die Auktion kümmert es nicht, dass Ihr Taschenbuch nur 3,70 € netto bringt.",
+          "Verleger, bei denen Anzeigen funktionieren, behandeln sie als Arithmetik mit Feedback-Schleife: den Break-even-ACOS vor der ersten Kampagne kennen, Kampagnen so strukturieren, dass die Daten etwas lehren, und ernten, was konvertiert. Wer verliert, behandelt Anzeigen als Hoffnungsknopf.",
+          "Dieser Leitfaden liefert die Bereitschafts-Checkliste, die Rechnung, eine Startkampagnenstruktur mit echten Budgets und die Wochenschleife — dimensioniert für Indie-Bücher mit 2-7 € pro Verkauf, nicht für finanzierte Marken.",
+        ],
+        sections: [
+          {
+            id: "bereitschaft",
+            title: "Wann ein Buch anzeigenreif ist (und wann Anzeigen nur eine schwache Seite subventionieren)",
+            body: [
+              "Anzeigen multiplizieren die Konversionsrate der Produktseite. Eine Seite, die 10 % der Besucher konvertiert, holt zehn Verkäufe aus hundert bezahlten Klicks; eine mit 1 % holt einen. Gleiche Ausgabe, zehnfacher Unterschied — deshalb ist Werbung für ein unfertiges Buch eine Spende an Amazon.",
+              "Bereitschaft heißt: ein Cover, das gegen die Top 20 der Kategorie in Thumbnail-Größe besteht, eine als Verkaufstext strukturierte Beschreibung, mindestens 5-10 ehrliche Rezensionen und ein Preis im Normalbereich der Kategorie. Jedes schwache Element besteuert jeden gekauften Klick.",
+              "Die gute Nachricht: Anzeigen auf einem bereiten Buch zahlen eine zweite Dividende. Bezahlte Verkäufe verbessern das organische Ranking, das organische Verkäufe produziert, die die Anzeigen nie bezahlt haben. Dieser organische Halo macht mittelmäßig laufende Kampagnen insgesamt lohnend.",
+            ],
+            bullets: [
+              "Anzeigen multiplizieren Konversion; sie können sie nicht erschaffen.",
+              "Bereit = Thumbnail-taugliches Cover, Verkaufstext-Beschreibung, 5-10 Rezensionen, normaler Preis.",
+              "Bezahlte Verkäufe heben das organische Ranking — der Halo entscheidet oft die Gesamtprofitabilität.",
+              "Erst die Produktseite reparieren; das ist die günstigste Optimierung.",
+            ],
+          },
+          {
+            id: "acos-rechnung",
+            title: "Die ACOS-Rechnung: den Break-even kennen, bevor ein Cent fließt",
+            body: [
+              "ACOS (Advertising Cost of Sales) ist Werbeausgabe geteilt durch anzeigenzugeordneten Umsatz. Ihr Break-even-ACOS ist Tantieme geteilt durch Listenpreis: Ein 4,99-Ebook mit 3,40 Tantieme liegt bei 68 %; ein 12,99-Taschenbuch mit 4,10 bei 32 %. Unter dem Break-even drucken Anzeigen Geld; darüber fressen sie die Tantieme.",
+              "Zwei Korrekturen machen die einfache Rechnung ehrlich. Kindle-Unlimited-Seitenlektüren aus Anzeigenklicks bringen unsichtbaren Umsatz — KU-starke Bücher können profitabel über ihrem sichtbaren Break-even laufen. Und der organische Halo bedeutet, dass eine Kampagne knapp über dem Break-even den Gesamtgewinn trotzdem steigern kann. Streng starten, mit Belegen lockern.",
+              "Daraus folgt die Gebotsgröße: Bei 3,40 Tantieme und 10 % Konversionsrate ist ein Klick 0,34 wert. Startgebote von 0,30-0,45 für Ebooks und 0,40-0,60 für tantiemenstärkere Taschenbücher sind vernünftige Defaults — anzupassen mit Daten, nicht nach Gefühl.",
+            ],
+            bullets: [
+              "Break-even-ACOS = Tantieme ÷ Listenpreis. Pro Format berechnen.",
+              "KU-Lektüren und organischer Halo rechtfertigen moderates Überschießen — mit Belegen.",
+              "Klickwert = Tantieme × Konversionsrate; darunter bieten.",
+              "Startgebote: 0,30-0,45 Ebooks, 0,40-0,60 Taschenbücher.",
+            ],
+          },
+          {
+            id: "kampagnentypen",
+            title: "Die drei Kampagnentypen und der einzige, den Einsteiger brauchen",
+            body: [
+              "Sponsored Products — Anzeigen in Suchergebnissen und auf Produktseiten — ist der Ort, an dem Bücher gewinnen. Es trägt die Suchabsicht des Käufers, bietet Keyword- und Produkt-Targeting und unterstützt automatische wie manuelle Modi. Das sind 90 % der Indie-Buchwerbung.",
+              "Sponsored Brands (das Banner mit mehreren Büchern) erfordert drei oder mehr Titel und belohnt Serien und Kataloge; kommen Sie darauf zurück, wenn Sie sie haben. Sperrbildschirm-Anzeigen (Kindle-Geräte) sind billig, aber absichtsarm — ein gelegentliches Experiment, nie das Rückgrat.",
+              "Innerhalb von Sponsored Products teilen sich die zwei Targeting-Modi die Arbeit: Automatische Kampagnen lassen Amazon Suchbegriffe aus Ihren Metadaten schürfen (Recherche), manuelle Kampagnen bieten auf die Keywords und Konkurrenz-ASINs, die Sie wählen (Präzision). Die Startstruktur nutzt beide gezielt.",
+            ],
+            bullets: [
+              "Sponsored Products = das Indie-Arbeitspferd; hier starten und bleiben.",
+              "Sponsored Brands braucht 3+ Titel; Sperrbildschirm bleibt ein Nebenexperiment.",
+              "Auto-Kampagnen recherchieren; manuelle Kampagnen präzisieren.",
+              "Produkt-Targeting (Konkurrenz-ASINs) ist die zweite Waffe des manuellen Modus.",
+            ],
+          },
+          {
+            id: "startstruktur",
+            title: "Eine Startstruktur: drei Kampagnen, 7 € am Tag",
+            body: [
+              "Kampagne eins — Auto-Discovery, 2 €/Tag: Standardgebote leicht niedrig, läuft dauerhaft als Ihr Keyword-Recherche-Motor. Kampagne zwei — manuelle Keywords, 3 €/Tag: 15-25 Phrasen aus Ihrer KDP-Keyword-Arbeit und dem Vokabular der Kategorie, exakt und Phrase. Kampagne drei — manuelles Produkt-Targeting, 2 €/Tag: 10-20 ASINs vergleichbarer Bücher, deren Käufer Ihre Käufer sind.",
+              "Widerstehen Sie dem Drang, zehn Kampagnen zu starten: Dünn verteilte Kleinbudgets produzieren nirgendwo statistisch belastbare Daten. Drei Kampagnen mit insgesamt 7 €/Tag erzeugen bei den meisten Büchern in zwei bis drei Wochen interpretierbare Zahlen.",
+              "Negative Keywords sind das unterschätzte Werkzeug: Fügen Sie ab Tag eins offensichtliche Fehlgriffe hinzu (gratis, gebraucht, fremde Genres) und verschieben Sie wöchentlich Begriffe, die Geld ausgeben ohne zu konvertieren, in die Negativliste. Das meiste verschwendete Budget in Buchkampagnen entweicht durch Begriffe, die niemand negiert hat.",
+            ],
+            bullets: [
+              "Auto 2 € + manuelle Keywords 3 € + Produkt-Targeting 2 € = 7 €/Tag Startpaket.",
+              "Wenige Kampagnen, genug Budget pro Kampagne — Datenqualität vor Abdeckung.",
+              "Aggressiv negieren: « gratis », falsche Genres, ausgebende Nichtkonvertierer.",
+              "Zwei bis drei Wochen vor strukturellen Urteilen.",
+            ],
+          },
+          {
+            id: "optimierungsschleife",
+            title: "Die Wochenschleife: ernten, negieren, justieren",
+            body: [
+              "Einmal pro Woche, fünfzehn Minuten: den Suchbegriffsbericht öffnen. Ernten — Suchbegriffe mit Verkäufen wandern als Exact Match mit leicht erhöhtem Gebot in die manuelle Kampagne. Negieren — Begriffe mit 15+ Klicks und null Verkäufen werden negativ. Justieren — Keywords über dem Break-even-ACOS bekommen 20 % weniger Gebot; Keywords deutlich darunter 10 % mehr, um Volumen zu kaufen.",
+              "Urteilen Sie langsam. Die Attribution hinkt Tage hinterher, KU-Lektüren laufen Wochen auf, und Buchverkäufe sind seltene Ereignisse: Ein Keyword mit 8 Klicks ohne Verkauf ist noch keine Information. Entscheiden Sie über Mehrwochenfenster, nie über gestern.",
+              "Skalieren Sie, was funktioniert, und hungern Sie den Rest aus: Das Budget fließt zur Kampagne mit der besten Nach-Halo-Ökonomie. Und denken Sie an den Katalogeffekt — Anzeigen auf Band eins einer verknüpften Serie oder einem sichtbaren Pseudonym-Katalog verdienen Durchlese-Umsatz, den kein Einzelbuch-ACOS erfasst. Werbung belohnt exakt die Katalogstruktur, die das Verlegen belohnt.",
+            ],
+            bullets: [
+              "Wöchentlich: Konvertierer ernten, Ausgeber negieren, Gebote ±10-20 % justieren.",
+              "Mehrwochenfenster fürs Urteil; Niedrigvolumen-Daten lügen täglich.",
+              "Budget fließt zu den Nach-Halo-Gewinnern.",
+              "Serien und Kataloge machen denselben ACOS wertvoller.",
+            ],
+          },
+        ],
+        checklist: [
+          "Produktseite bereit: konkurrenzfähiges Cover, Verkaufstext-Beschreibung, 5-10 Rezensionen, normaler Preis.",
+          "Break-even-ACOS pro Format vor dem Start berechnet.",
+          "Drei Startkampagnen live: Auto, manuelle Keywords, Produkt-Targeting.",
+          "Startgebote unter dem berechneten Klickwert.",
+          "Offensichtliche negative Keywords ab Tag eins gesetzt.",
+          "Wöchentliche Fünfzehn-Minuten-Schleife geplant: ernten, negieren, justieren.",
+          "Urteile über 2-3-Wochen-Fenster, tantiemenbasiert statt stückbasiert.",
+          "KU-Seitenumsatz und organischer Halo in der Profitabilitätsprüfung enthalten.",
+        ],
+        faq: [
+          {
+            question: "Wie viel sollte ich als neuer Autor für Amazon Ads ausgeben?",
+            answer:
+              "5-10 € pro Tag über zwei oder drei Kampagnen reichen, um binnen Wochen echte Daten ohne materielles Risiko zu erzeugen. Skalieren Sie nur, was der Suchbegriffsbericht beweist; die Gesamtausgabe folgt Belegen, nicht Ambition.",
+          },
+          {
+            question: "Was ist ein guter ACOS für Bücher?",
+            answer:
+              "Relativ zu Ihrem Break-even, der Tantieme ÷ Preis beträgt: rund 68 % für ein 4,99-Ebook im 70-%-Plan, nahe 30 % für typische Taschenbücher. Kampagnen unter dem Break-even sind sofort profitabel; knapp darüber können sie noch gewinnen, sobald KU-Lektüren und organischer Halo eingerechnet sind.",
+          },
+          {
+            question: "Warum bekommen meine Anzeigen Impressionen, aber keine Klicks?",
+            answer:
+              "Die Anzeige erscheint, verliert aber gegen die Nachbarn — fast immer ein Thumbnail- oder Relevanzproblem. Vergleichen Sie das Cover mit den Büchern daneben in den Suchergebnissen und schärfen Sie das Targeting auf Suchanfragen, bei denen Ihr Buch plausibel auf die Seite gehört.",
+          },
+          {
+            question: "Warum Klicks, aber keine Verkäufe?",
+            answer:
+              "Die Anzeige funktioniert, die Produktseite nicht. Beschreibung, Rezensionen, Preis und Blick ins Buch tragen die Konversion; reparieren Sie sie, bevor Sie die Ausgaben erhöhen. Prüfen Sie auch, ob die geklickten Begriffe wirklich zum Buch passen — irreführende Relevanz produziert Neugierige, keine Käufer.",
+          },
+          {
+            question: "Funktionieren Amazon Ads für Kindle-Unlimited-Bücher?",
+            answer:
+              "Oft besser als für reine Kaufbücher: Ein Klick, der zur Ausleihe wird, verdient Seitenumsatz, den der ACOS nicht anzeigt — KU-Bücher können daher nachhaltig mit höherem sichtbarem ACOS laufen. Schätzen Sie den KU-Umsatz pro Ausleihe bei der Profitabilitätsprüfung.",
+          },
+        ],
+      },
     },
   },
   {
@@ -566,6 +838,278 @@ export const bookMarketingSeoPosts: BlogPost[] = [
             question: "Peut-on modifier la description après publication ?",
             answer:
               "Oui, à tout moment, avec effet en quelques heures. C'est l'élément à fort impact le plus facile à itérer : un élément par changement, fenêtres d'observation de deux semaines, conservation des gagnants.",
+          },
+        ],
+      },
+      it: {
+        slug: "descrizione-libro-amazon-che-vende",
+        title: "Scrivere una descrizione Amazon che vende: struttura, aggancio iniziale e la formattazione che KDP permette davvero",
+        description:
+          "Trasformare il campo descrizione da 4.000 caratteri nel miglior venditore del libro: l'aggancio prima del « Leggi di più », strutture collaudate per narrativa e saggistica, l'HTML permesso, la verità sulle parole chiave e un ciclo di iterazione.",
+        keywords: [
+          "descrizione libro Amazon",
+          "descrizione che vende",
+          "scrivere quarta di copertina",
+          "HTML descrizione KDP",
+          "modello descrizione libro",
+          "vendere più libri Amazon",
+          "copywriting scheda libro",
+          "consigli descrizione ebook",
+        ],
+        category: "Copywriting",
+        intro: [
+          "Il visitatore che raggiunge la vostra pagina prodotto è già stato convinto a cliccare dalla copertina e dal titolo. Il compito della descrizione è più stretto e più duro: convertire la curiosità in acquisto in circa otto secondi di scorrimento.",
+          "La maggior parte delle descrizioni indipendenti fallisce allo stesso modo — riassume il libro come un compito scolastico invece di vendere l'esperienza o il risultato. Gli editori scrivono quarte di copertina; i principianti scrivono schede di lettura.",
+          "Questa guida tratta la descrizione come una pagina di vendita dal formato rigoroso: aggancio prima della piega, persuasione al centro, istruzione alla fine — più l'HTML che KDP visualizza davvero e un ciclo di iterazione, dato che la descrizione resta modificabile a vita.",
+        ],
+        sections: [
+          {
+            id: "prima-della-piega",
+            title: "Le prime due righe decidono tutto",
+            body: [
+              "Amazon tronca la descrizione dietro un link « Leggi di più » — su mobile, dopo circa due-tre righe. Ciò che ogni visitatore deve leggere deve stare nei primi 150-200 caratteri; tutto ciò che segue la piega è letto solo da chi l'apertura ha già agganciato.",
+              "Aprite sull'affermazione più forte che il libro può onestamente fare: la trasformazione per la saggistica (« Smettete di perdere le serate a pianificare i pasti — un sistema completo in 30 minuti a settimana »), la situazione impossibile per la narrativa (« Ha 24 ore per tradire suo fratello o seppellire suo figlio »). Non aprite mai con « Questo libro parla di… » né, peggio, « In questo libro imparerete… ».",
+              "Scrivete dieci prime righe candidate e tenete quella che vi fermerebbe in pieno scorrimento. Questa singola frase ripaga più iterazioni di tutto il resto della descrizione messo insieme.",
+            ],
+            bullets: [
+              "~150-200 caratteri visibili prima del « Leggi di più » su mobile.",
+              "Aprite sulla trasformazione (saggistica) o sulla posta in gioco (narrativa), mai sul riassunto.",
+              "Aperture vietate: « Questo libro parla di », « In questo libro imparerete ».",
+              "Dieci agganci in bozza; tenete quello che ferma il pollice.",
+            ],
+          },
+          {
+            id: "struttura-saggistica",
+            title: "Una struttura per la saggistica che converte",
+            body: [
+              "Dopo l'aggancio, agitate brevemente il problema: nominate la situazione del lettore con le sue stesse parole — due o tre righe che gli diano la sensazione di una diagnosi. È il riconoscimento, non la persuasione, a costruire la fiducia che regge il resto della pagina.",
+              "Poi la promessa e la prova: cosa consegna il libro, e come. Una breve lista puntata di risultati concreti (« il protocollo in 5 fasi per… », « il modello esatto che… ») fa il lavoro pesante; la precisione vende ciò che gli aggettivi non possono. Dite per chi è il libro — e, in una riga onesta, per chi non lo è, il che aumenta paradossalmente la conversione rendendo la promessa credibile.",
+              "Chiudete con una chiamata all'azione diretta. « Risalite e cliccate su Acquista per cominciare stasera » sembra ridondante e misurabilmente non lo è: una descrizione è una pagina di vendita, e una pagina di vendita finisce con un'istruzione.",
+            ],
+            bullets: [
+              "Aggancio → problema → promessa → risultati a punti → per chi → chiamata all'azione.",
+              "I punti portano consegne concrete, non titoli di capitoli.",
+              "Una riga onesta « non per voi se » costruisce credibilità.",
+              "Finite con un'istruzione d'acquisto esplicita.",
+            ],
+          },
+          {
+            id: "struttura-narrativa",
+            title: "Il riassunto di narrativa: posta in gioco, non sinossi",
+            body: [
+              "Un riassunto di narrativa vende tensione, non trama. La struttura che funziona: situazione (il protagonista e il suo mondo in una-due righe), rottura (l'evento che spezza tutto), posta in gioco (cosa si perde in caso di fallimento) — e stop. La risoluzione appartiene al libro; un riassunto che risolve la propria tensione non ha più nulla da vendere.",
+              "Il segnale di genere conta quanto la storia: vocabolario, ritmo e codici dicono al lettore « ecco il genere di libro che ami ». Il riassunto di un cosy mystery e quello di un thriller cupo che descrivono la stessa trama non dovrebbero condividere quasi nessuna parola.",
+              "Restate in 150-250 parole, finite sulla domanda o sulla minaccia più acuta, e leggete l'ultima riga ad alta voce — deve fare l'effetto di un respiro trattenuto.",
+            ],
+            bullets: [
+              "Situazione → rottura → posta in gioco → stop. Non risolvete mai.",
+              "Segnalate il genere con vocabolario e ritmo, non con etichette.",
+              "150-250 parole; un riassunto di narrativa è uno sprint.",
+              "Ultima riga = il respiro trattenuto.",
+            ],
+          },
+          {
+            id: "formattazione",
+            title: "Formattazione: l'HTML che KDP permette e come usarlo",
+            body: [
+              "Le descrizioni KDP accettano un piccolo set HTML: grassetto, corsivo, interruzioni di riga, tag di titolo e liste ordinate o puntate. Ben usata, la formattazione crea il percorso di scorrimento — un lettore frettoloso deve ricevere l'argomentazione dalle sole frasi in grassetto.",
+              "Regole pratiche: mettete in grassetto l'aggancio e le righe di promessa chiave, scrivete paragrafi corti (due-tre righe) separati da veri salti, usate una lista puntata per i risultati nella saggistica, e non mettete mai paragrafi interi in grassetto — l'enfasi ovunque è enfasi da nessuna parte. Inserite l'HTML nel campo KDP (o tramite un formattatore gratuito) e verificate sempre la resa sulla vera pagina, su telefono.",
+              "Evitate l'estetica da spam che Amazon e i lettori puniscono insieme: frasi IN MAIUSCOLO, muri di emoji, false citazioni di recensioni e superlativi non verificabili (« il miglior libro mai scritto su… »). Il ritegno si legge come fiducia.",
+            ],
+            bullets: [
+              "Permessi: <b>, <i>, <br>, <h4>-<h6>, liste <ul>/<ol>.",
+              "Il grassetto = percorso di scorrimento; l'argomentazione deve stare nel solo grassetto.",
+              "Paragrafi corti, veri salti, una lista al massimo.",
+              "Niente maiuscolo urlato, emoji, false citazioni o superlativi non verificabili.",
+            ],
+          },
+          {
+            id: "parole-chiave-iterazione",
+            title: "Parole chiave, onestà e ciclo di iterazione",
+            body: [
+              "Scrivete per gli acquirenti, non per l'indice. Una descrizione che nomina naturalmente argomento, pubblico e genere copre il vocabolario ricercabile senza imbottitura — e una descrizione imbottita di parole chiave si legge per quello che è: converte meno rischiando l'attenzione delle politiche sui metadati ingannevoli.",
+              "L'onestà è strategia di conversione, non solo conformità: ogni promessa eccessiva si prepaga in resi e recensioni a una stella, e il sistema di recensioni di Amazon fa delle promesse della descrizione un contratto. La descrizione deve far comprare i lettori giusti e far passare oltre quelli sbagliati — entrambi gli esiti sono vittorie.",
+              "La descrizione è modificabile a vita: trattate la vostra come un test vivo — cambiate un elemento (l'aggancio, la lista, la chiamata all'azione), osservate due settimane di conversione a traffico stabile, tenete il vincente. La scrittura IA aiuta a generare varianti — DraftToDone produce una descrizione strutturata con ogni libro generato proprio perché questo ciclo parta da una base di pagina di vendita invece che da un campo vuoto — ma è la disciplina del test a variabile unica a comporre i guadagni.",
+            ],
+            bullets: [
+              "Il vocabolario naturale argomento/pubblico/genere batte l'imbottitura di parole chiave.",
+              "Promettere troppo = rimborsi e recensioni a una stella prepagati.",
+              "Iterate: un elemento, due settimane, tenete il vincente.",
+              "L'IA dà varianti; il test dà la verità.",
+            ],
+          },
+        ],
+        checklist: [
+          "L'aggancio sta nei primi 150-200 caratteri e fermerebbe uno scorrimento.",
+          "Struttura seguita: saggistica (aggancio-problema-promessa-punti-CTA) o narrativa (situazione-rottura-posta in gioco).",
+          "Il riassunto di narrativa non risolve nulla; i punti di saggistica nominano risultati concreti.",
+          "Formattazione HTML applicata: percorso di scorrimento in grassetto, paragrafi corti, una lista.",
+          "Resa verificata sulla vera pagina mobile.",
+          "Niente maiuscolo urlato, emoji, false citazioni o superlativi non verificabili.",
+          "Ogni promessa della descrizione è mantenuta dal libro.",
+          "Ciclo di iterazione pianificato: una variabile, finestre di due settimane.",
+        ],
+        faq: [
+          {
+            question: "Quanto deve essere lunga una descrizione di libro su Amazon?",
+            answer:
+              "Narrativa: 150-250 parole. Saggistica: 200-350 parole con una lista puntata di risultati. Il campo accetta 4.000 caratteri, ma la conversione vive nelle prime due righe e nel percorso di scorrimento — la lunghezza oltre il persuasivo è diluizione.",
+          },
+          {
+            question: "Si può usare HTML nella descrizione KDP?",
+            answer:
+              "Sì — un set limitato: grassetto, corsivo, interruzioni di riga, piccoli titoli e liste. Inseritelo nel campo descrizione KDP e verificate poi la pagina resa; i tag non supportati vengono rimossi e possono lasciare artefatti.",
+          },
+          {
+            question: "Bisogna mettere parole chiave nella descrizione?",
+            answer:
+              "Scrivete naturalmente per gli acquirenti; il vocabolario di argomento, pubblico e genere che appartiene a un buon testo di vendita copre il valore di ricerca. I sette slot di parole chiave KDP sono la superficie di indicizzazione dedicata — imbottire la descrizione scambia conversione contro nulla.",
+          },
+          {
+            question: "Perché il mio libro ha visite ma niente vendite?",
+            answer:
+              "Traffico senza conversione punta agli elementi della pagina: aggancio della descrizione, recensioni, prezzo ed estratto. Riscrivete prima le prime due righe — la maggior parte delle descrizioni deboli perde la vendita prima della piega.",
+          },
+          {
+            question: "Si può modificare la descrizione dopo la pubblicazione?",
+            answer:
+              "Sì, in qualsiasi momento, con effetto in poche ore. È l'elemento ad alto impatto più facile da iterare: un elemento per modifica, finestre di osservazione di due settimane, conservazione dei vincenti.",
+          },
+        ],
+      },
+      de: {
+        slug: "amazon-buchbeschreibung-die-verkauft",
+        title: "Eine Amazon-Buchbeschreibung schreiben, die verkauft: Struktur, erste Zeilen und die Formatierung, die Amazon wirklich erlaubt",
+        description:
+          "Das 4.000-Zeichen-Beschreibungsfeld zum besten Verkäufer machen: der Haken vor dem « Mehr lesen », bewährte Strukturen für Belletristik und Sachbuch, erlaubtes HTML, die Keyword-Realität und eine Iterationsschleife.",
+        keywords: [
+          "Amazon Buchbeschreibung",
+          "Buchbeschreibung die verkauft",
+          "Klappentext schreiben",
+          "KDP Beschreibung HTML",
+          "Buchbeschreibung Vorlage",
+          "mehr Bücher verkaufen Amazon",
+          "Buchseite Copywriting",
+          "Ebook Beschreibung Tipps",
+        ],
+        category: "Copywriting",
+        intro: [
+          "Wer Ihre Produktseite erreicht, wurde vom Cover und Titel bereits zum Klick überzeugt. Die Aufgabe der Beschreibung ist enger und härter: Neugier in etwa acht Sekunden Überfliegen in einen Kauf verwandeln.",
+          "Die meisten Indie-Beschreibungen scheitern auf dieselbe Weise — sie fassen das Buch zusammen wie eine Hausaufgabe, statt das Erlebnis oder das Ergebnis zu verkaufen. Verlage schreiben Klappentexte; Erstverleger schreiben Buchreferate.",
+          "Dieser Leitfaden behandelt die Beschreibung als Verkaufsseite mit striktem Format: Haken über dem Falz, Überzeugung in der Mitte, Anweisung am Ende — plus das HTML, das KDP wirklich rendert, und eine Iterationsschleife, denn Beschreibungen bleiben ewig editierbar.",
+        ],
+        sections: [
+          {
+            id: "ueber-dem-falz",
+            title: "Die ersten zwei Zeilen entscheiden alles",
+            body: [
+              "Amazon kürzt Beschreibungen hinter einem « Mehr lesen »-Link — auf Mobilgeräten nach etwa zwei bis drei Zeilen. Was jeder Besucher lesen soll, muss in den ersten 150-200 Zeichen stehen; alles unter dem Falz lesen nur Menschen, die der Anfang bereits gefangen hat.",
+              "Beginnen Sie mit der stärksten Behauptung, die das Buch ehrlich machen kann: der Transformation beim Sachbuch (« Schluss mit verlorenen Abenden für die Essensplanung — ein komplettes System in 30 Minuten pro Woche »), der unmöglichen Lage bei Belletristik (« Sie hat 24 Stunden, um ihren Bruder zu verraten oder ihren Sohn zu begraben »). Nie mit « Dieses Buch handelt von… » beginnen — oder schlimmer: « In diesem Buch lernen Sie… ».",
+              "Schreiben Sie zehn Kandidaten für die erste Zeile und behalten Sie die, die Sie selbst mitten im Scrollen stoppen würde. Dieser eine Satz lohnt mehr Iteration als der ganze Rest der Beschreibung zusammen.",
+            ],
+            bullets: [
+              "~150-200 Zeichen sichtbar vor « Mehr lesen » auf Mobilgeräten.",
+              "Mit Transformation (Sachbuch) oder Einsatz (Belletristik) beginnen, nie mit Zusammenfassung.",
+              "Verbotene Anfänge: « Dieses Buch handelt von », « In diesem Buch lernen Sie ».",
+              "Zehn Haken entwerfen; den Scroll-Stopper behalten.",
+            ],
+          },
+          {
+            id: "sachbuch-struktur",
+            title: "Eine Sachbuch-Struktur, die konvertiert",
+            body: [
+              "Nach dem Haken kurz das Problem schüren: Benennen Sie die Lage des Lesers in seinen eigenen Worten — zwei, drei Zeilen, die sich wie eine Diagnose anfühlen. Wiedererkennung, nicht Überredung, baut das Vertrauen auf, das den Rest der Seite trägt.",
+              "Dann Versprechen und Beweis: was das Buch liefert und wie. Eine kurze Aufzählung konkreter Ergebnisse (« das 5-Schritte-Protokoll für… », « die exakte Vorlage, die… ») leistet die Schwerarbeit; Präzision verkauft, was Adjektive nicht können. Sagen Sie, für wen das Buch ist — und in einer ehrlichen Zeile, für wen nicht, was die Konversion paradoxerweise erhöht, weil es das Versprechen glaubwürdig macht.",
+              "Schließen Sie mit einer direkten Handlungsaufforderung. « Scrollen Sie hoch und klicken Sie auf Jetzt kaufen, um heute Abend zu starten » wirkt redundant und ist es messbar nicht: Beschreibungen sind Verkaufsseiten, und Verkaufsseiten enden mit Anweisungen.",
+            ],
+            bullets: [
+              "Haken → Problem → Versprechen → Ergebnis-Aufzählung → für wen → Handlungsaufforderung.",
+              "Aufzählungen tragen konkrete Liefergegenstände, keine Kapiteltitel.",
+              "Eine ehrliche « nichts für Sie, wenn »-Zeile schafft Glaubwürdigkeit.",
+              "Mit expliziter Kaufanweisung enden.",
+            ],
+          },
+          {
+            id: "belletristik-struktur",
+            title: "Der Belletristik-Klappentext: Einsatz, nicht Inhaltsangabe",
+            body: [
+              "Belletristik-Klappentexte verkaufen Spannung, keinen Plot. Die funktionierende Struktur: Situation (Protagonist und seine Welt in ein, zwei Zeilen), Bruch (das Ereignis, das alles zerbricht), Einsatz (was bei Scheitern verloren geht) — und Schluss. Die Auflösung gehört ins Buch; ein Klappentext, der seine eigene Spannung auflöst, hat nichts mehr zu verkaufen.",
+              "Das Genre-Signal zählt so viel wie die Geschichte: Vokabular, Rhythmus und Tropen sagen dem Leser « das ist die Art Buch, die du liebst ». Der Klappentext eines Cosy-Krimis und der eines düsteren Thrillers über denselben Plot sollten fast kein Wort teilen.",
+              "Bleiben Sie bei 150-250 Wörtern, enden Sie auf der schärfsten Frage oder Drohung, und lesen Sie die letzte Zeile laut — sie soll sich wie angehaltener Atem anfühlen.",
+            ],
+            bullets: [
+              "Situation → Bruch → Einsatz → Schluss. Nie auflösen.",
+              "Genre über Vokabular und Rhythmus signalisieren, nicht über Etiketten.",
+              "150-250 Wörter; Belletristik-Klappentexte sind Sprints.",
+              "Letzte Zeile = der angehaltene Atem.",
+            ],
+          },
+          {
+            id: "formatierung",
+            title: "Formatierung: das HTML, das KDP erlaubt, und wie man es nutzt",
+            body: [
+              "KDP-Beschreibungen unterstützen ein kleines HTML-Set: fett, kursiv, Zeilenumbrüche, Überschriften-Tags und geordnete oder ungeordnete Listen. Gut eingesetzt, erzeugt Formatierung den Überflug-Pfad — ein Überflieger soll den Pitch allein aus den fetten Phrasen bekommen.",
+              "Praktische Regeln: den Haken und die Schlüsselversprechen fetten, kurze Absätze (zwei bis drei Zeilen) mit echten Umbrüchen, eine Aufzählung für Sachbuch-Ergebnisse, und nie ganze Absätze fetten — Betonung überall ist Betonung nirgends. Geben Sie das HTML im KDP-Beschreibungsfeld ein (oder über einen kostenlosen Formatter) und prüfen Sie das gerenderte Ergebnis immer auf der Live-Seite, am Telefon.",
+              "Vermeiden Sie die Spam-Ästhetik, die Amazon und Leser gemeinsam bestrafen: GROSSBUCHSTABEN-Sätze, Emoji-Wände, erfundene Rezensionszitate und unbeweisbare Superlative (« das beste Buch, das je geschrieben wurde über… »). Zurückhaltung liest sich als Selbstvertrauen.",
+            ],
+            bullets: [
+              "Erlaubt: <b>, <i>, <br>, <h4>-<h6>, <ul>/<ol>-Listen.",
+              "Fett = Überflug-Pfad; der Pitch muss im Fettdruck allein stehen.",
+              "Kurze Absätze, echte Umbrüche, maximal eine Liste.",
+              "Keine Großbuchstaben-Schreie, Emoji-Wände oder erfundenes Lob.",
+            ],
+          },
+          {
+            id: "keywords-iteration",
+            title: "Keywords, Ehrlichkeit und die Iterationsschleife",
+            body: [
+              "Schreiben Sie für Käufer, nicht für den Suchindex. Eine Beschreibung, die Thema, Zielgruppe und Genre natürlich benennt, deckt das durchsuchbare Vokabular ohne Stuffing ab — und mit Keywords vollgestopfte Beschreibungen lesen sich als genau das, konvertieren schlechter und riskieren Richtlinienaufmerksamkeit für irreführende Metadaten.",
+              "Ehrlichkeit ist Konversionsstrategie, nicht nur Compliance: Jedes Überversprechen wird in Retouren und Ein-Stern-Rezensionen vorausbezahlt, und Amazons Rezensionssystem macht die Versprechen der Beschreibung zum Vertrag. Die Beschreibung soll die richtigen Leser kaufen lassen und die falschen weiterziehen lassen — beide Ausgänge sind Gewinne.",
+              "Beschreibungen sind ewig editierbar — behandeln Sie Ihre als lebenden Test: ein Element ändern (den Haken, die Liste, die Handlungsaufforderung), zwei Wochen Konversion bei stabilem Traffic beobachten, den Gewinner behalten. KI-Entwürfe helfen bei Varianten — DraftToDone erzeugt mit jedem generierten Buch eine strukturierte Beschreibung, genau damit diese Schleife von einer Verkaufsseiten-Basis startet statt von einem leeren Feld — aber die Disziplin des Einvariablen-Tests ist es, die sich verzinst.",
+            ],
+            bullets: [
+              "Natürliches Thema/Zielgruppe/Genre-Vokabular schlägt Keyword-Stuffing.",
+              "Überversprechen = vorausbezahlte Erstattungen und Ein-Stern-Rezensionen.",
+              "Iterieren: ein Element, zwei Wochen, den Gewinner behalten.",
+              "KI liefert Variantenentwürfe; Tests liefern Wahrheit.",
+            ],
+          },
+        ],
+        checklist: [
+          "Der Haken steht in den ersten 150-200 Zeichen und würde ein Scrollen stoppen.",
+          "Struktur befolgt: Sachbuch (Haken-Problem-Versprechen-Aufzählung-CTA) oder Belletristik (Situation-Bruch-Einsatz).",
+          "Belletristik-Klappentext löst nichts auf; Sachbuch-Punkte benennen konkrete Ergebnisse.",
+          "HTML-Formatierung angewendet: gefetteter Überflug-Pfad, kurze Absätze, eine Liste.",
+          "Gerendertes Ergebnis auf der Live-Mobilseite geprüft.",
+          "Keine Großbuchstaben-Schreie, Emoji-Wände, falschen Zitate oder unbeweisbaren Superlative.",
+          "Jedes Versprechen der Beschreibung wird vom Buch gehalten.",
+          "Iterationsschleife geplant: eine Variable, Zwei-Wochen-Fenster.",
+        ],
+        faq: [
+          {
+            question: "Wie lang sollte eine Amazon-Buchbeschreibung sein?",
+            answer:
+              "Belletristik: 150-250 Wörter. Sachbuch: 200-350 Wörter mit einer Ergebnis-Aufzählung. Das Feld erlaubt 4.000 Zeichen, aber die Konversion lebt in den ersten zwei Zeilen und dem Überflug-Pfad — Länge jenseits des Überzeugenden ist Verdünnung.",
+          },
+          {
+            question: "Kann ich HTML in meiner KDP-Beschreibung verwenden?",
+            answer:
+              "Ja — ein begrenztes Set: fett, kursiv, Zeilenumbrüche, kleine Überschriften und Listen. Im KDP-Beschreibungsfeld eingeben und danach die gerenderte Seite prüfen; nicht unterstützte Tags werden entfernt und können Artefakte hinterlassen.",
+          },
+          {
+            question: "Sollte ich Keywords in die Buchbeschreibung packen?",
+            answer:
+              "Schreiben Sie natürlich für Käufer; das Thema-, Zielgruppen- und Genre-Vokabular, das in guten Verkaufstext gehört, deckt den Suchwert ab. Die sieben KDP-Keyword-Felder sind die dedizierte Indexierungsfläche — die Beschreibung vollzustopfen tauscht Konversion gegen nichts.",
+          },
+          {
+            question: "Warum bekommt mein Buch Besuche, aber keine Verkäufe?",
+            answer:
+              "Seitenverkehr ohne Konversion zeigt auf die Seitenelemente: Beschreibungshaken, Rezensionen, Preis und Blick ins Buch. Schreiben Sie zuerst die ersten zwei Zeilen neu — die meisten schwachen Beschreibungen verlieren den Verkauf über dem Falz.",
+          },
+          {
+            question: "Kann ich meine Beschreibung nach der Veröffentlichung ändern?",
+            answer:
+              "Ja, jederzeit, mit Wirkung binnen Stunden. Das macht die Beschreibung zum am leichtesten iterierbaren Hochwirkungs-Element: ein Element pro Änderung, Zwei-Wochen-Beobachtungsfenster, Gewinner behalten.",
           },
         ],
       },
@@ -854,6 +1398,278 @@ export const bookMarketingSeoPosts: BlogPost[] = [
           },
         ],
       },
+      it: {
+        slug: "categorie-kdp-classifica-bestseller-amazon",
+        title: "Categorie KDP e classifica delle vendite Amazon spiegate: scegliere categorie che vendono libri",
+        description:
+          "Come funzionano davvero il sistema di categorie di Amazon e la classifica bestseller: leggere la velocità di vendita nel rango, scegliere le tre categorie che massimizzano la visibilità, i conti del badge bestseller e i cambi di categoria.",
+        keywords: [
+          "categorie KDP",
+          "classifica vendite Amazon spiegata",
+          "BSR libro significato",
+          "scegliere categorie KDP",
+          "categorie libri Amazon",
+          "badge bestseller Amazon",
+          "ricerca categorie KDP",
+          "rango vendite Amazon libri",
+        ],
+        category: "Categorie",
+        intro: [
+          "Due sistemi decidono in silenzio quanto il vostro libro sia visibile agli acquirenti che curiosano: l'albero di categorie in cui è riposto, e la classifica delle vendite che lo ordina contro i vicini. Entrambi sono ampiamente fraintesi, ed entrambi sono in parte sotto il vostro controllo.",
+          "Le categorie sono la collocazione a scaffale — decidono quali lettori in navigazione incontrano mai il libro e su quale lista di bestseller concorre. Il rango (BSR) è la misura del polso del libro — un punteggio relativo di velocità di vendita che serve anche da dato gratuito di ricerca di mercato per chi sa leggerlo.",
+          "Questa guida spiega la meccanica di entrambi, poi li trasforma in due flussi pratici: leggere domanda e concorrenza attraverso il BSR prima di pubblicare, e scegliere dopo le tre categorie che massimizzano la visibilità di un libro reale.",
+        ],
+        sections: [
+          {
+            id: "meccanica-bsr",
+            title: "Cosa misura davvero il BSR (e cosa no)",
+            body: [
+              "La classifica bestseller ordina ogni libro dello store per velocità di vendita recente — le vendite recenti pesano molto, le vecchie decadono, e il risultato si aggiorna circa ogni ora. Il rango n°1.000 significa che 999 libri si vendono attualmente più in fretta; non dice nulla sulle copie cumulate né sui ricavi.",
+              "Ogni formato è classificato separatamente: un cartaceo e la sua edizione Kindle portano BSR indipendenti, e le letture complete Kindle Unlimited contano nel rango dell'ebook. Ecco perché confrontare un BSR cartaceo con uno ebook inganna — le popolazioni differiscono.",
+              "Conversioni approssimative utili per lo store Kindle americano: un BSR verso 100.000 corrisponde grosso modo a una vendita al giorno; verso 10.000, a una decina o più; sotto 1.000, a parecchie decine quotidiane. Questi riferimenti derivano con la stagionalità, ma l'ordine di grandezza regge — e l'ordine di grandezza basta alla ricerca di nicchia.",
+            ],
+            bullets: [
+              "BSR = velocità di vendita recente, oraria, con decadimento — non le vendite cumulate.",
+              "Ogni formato classificato a parte; le letture KU contano per l'ebook.",
+              "Riferimenti: 100k ≈ 1/giorno, 10k ≈ 10/giorno, <1k ≈ decine/giorno.",
+              "Una sola vendita può spostare un libro dormiente di centinaia di migliaia di ranghi — diffidate dei picchi.",
+            ],
+          },
+          {
+            id: "bsr-ricerca",
+            title: "Il BSR come ricerca di mercato gratuita",
+            body: [
+              "Prima di scrivere qualsiasi cosa, il BSR risponde alle uniche due domande che contano su una nicchia: ci sono soldi, e c'è posto? Rilevate i primi 20 libri della categoria o del risultato di ricerca mirato e annotate i loro BSR.",
+              "I soldi: se il n°5 gira verso 50.000 e il n°20 verso 300.000, la nicchia sostiene una manciata di titoli modesti — bene per un gioco di catalogo, magro per un'ammiraglia. Se l'intera top 10 è sotto 20.000, i ricavi esistono davvero. Il posto: se ogni libro in alto ha migliaia di recensioni e una casa editrice, lo scaffale è fortificato; se la pagina uno mescola BSR forti e deboli, copertine diseguali e poche recensioni, un ingresso di qualità può prendersi un posto.",
+              "Questo controllo richiede trenta minuti per nicchia, e il guadagno si compone alla scala del catalogo: nicchie scelte su prove BSR fanno la differenza tra le distribuzioni di reddito descritte nella nostra guida ai guadagni.",
+            ],
+            bullets: [
+              "La scansione BSR della top 20 risponde: soldi? posto?",
+              "Top 10 sotto 20k di BSR = ricavi reali nella nicchia.",
+              "Copertine deboli + poche recensioni + BSR misti in pagina uno = scaffale apribile.",
+              "Trenta minuti per nicchia, prima di qualsiasi scrittura.",
+            ],
+          },
+          {
+            id: "sistema-categorie",
+            title: "Come funziona il sistema di categorie nel 2026",
+            body: [
+              "KDP permette di selezionare fino a tre categorie alla pubblicazione, da un albero di navigazione che riflette quello dello store (il vecchio trucco della « mail al supporto per 10 categorie » è sparito). Il vostro libro concorre per la lista bestseller di ogni categoria in cui si trova, a ogni livello del percorso.",
+              "Le categorie hanno traffici e concorrenze radicalmente diversi. « Self-help » al vertice contiene centinaia di migliaia di titoli; « Self-help > Gestione dello stress > Burnout » può contenerne qualche centinaio. I conti del badge seguono: la bandierina arancione n°1 va al primo libro di ogni categoria, ogni ora — un libro che vende 10 copie al giorno è invisibile nella categoria madre e n°1 nella giusta sottocategoria.",
+              "Il badge non è vanità: aumenta il tasso di clic ovunque il libro appaia, risultati di ricerca e righe di consigliati compresi. Un accesso realistico al badge è un criterio legittimo di scelta della categoria.",
+            ],
+            bullets: [
+              "Tre categorie alla creazione, nel vero albero di navigazione.",
+              "Sottocategorie profonde: meno traffico, molta meno concorrenza, accesso al badge.",
+              "Il badge n°1 si calcola ogni ora per categoria e spinge il tasso di clic.",
+              "Le liste bestseller per categoria sono sfogliate da veri acquirenti.",
+            ],
+          },
+          {
+            id: "scegliere-categorie",
+            title: "Scegliere le tre categorie: il triangolo pertinenza-concorrenza-traffico",
+            body: [
+              "Costruite una lista di candidate percorrendo lo store: trovate cinque libri comparabili, scendete alle loro categorie in fondo alla scheda, e mappate ogni percorso che usano. Aggiungete i percorsi scoperti esplorando l'albero attorno al vostro tema. Puntate a dieci candidate.",
+              "Valutate ciascuna su tre assi: la pertinenza (chi curiosa in questo scaffale vorrebbe sinceramente questo libro? — un libro mal riposto viene segnalato, retrocesso, e comunque converte malissimo), la concorrenza (quale BSR tiene il n°1 della categoria — è l'asticella del badge), e il traffico (quanto sono forti i BSR della top 20 — una categoria il cui n°20 langue a 800.000 non ha curiosi da offrire).",
+              "Poi componete un portafoglio, non tre copie della stessa scommessa: una categoria per il traffico (più grande, più dura), una per il badge (profonda, vincibile), una per un angolo di pubblico distinto (lo scaffale regalo, lo scaffale professione, lo scaffale regionale). Tre categorie che puntano a tre popolazioni di lettori triplicano la superficie di scoperta.",
+            ],
+            bullets: [
+              "Raccogliete i percorsi candidati da cinque comparabili più l'albero.",
+              "Valutate pertinenza, asticella del badge (BSR del n°1) e traffico dello scaffale (BSR della top 20).",
+              "Strategia di portafoglio: una scommessa traffico, una badge, una angolo.",
+              "La cattiva collocazione converte male e rischia la retrocessione — la pertinenza è un vincolo.",
+            ],
+          },
+          {
+            id: "iterazione",
+            title: "Cambiare categorie e leggere i risultati",
+            body: [
+              "Le categorie si modificano: cambiatele dalla libreria KDP, con effetto in uno-due giorni. Come ogni modifica di metadati, trattatela da esperimento — una categoria alla volta, poi due-tre settimane di osservazione di impressioni, vendite e stato del badge.",
+              "Segnali per agire: un libro bloccato in fondo alla classifica di una grande categoria (provate una sottocategoria più profonda per l'accesso al badge), un badge tenuto banalmente in una categoria morta (scambiatelo con del traffico), impressioni in pagina uno senza conversione (un difetto di pertinenza — i curiosi vedono il libro e passano).",
+              "Tenete un piccolo diario dei cambi di categoria e dei loro risultati per titolo. Alla scala di un catalogo, quel diario diventa una mappa privata degli scaffali che muovono davvero libri nelle vostre nicchie — un sapere che nessuno strumento vende e nessun concorrente copia.",
+            ],
+            bullets: [
+              "Categorie modificabili in ogni momento; effetto in 1-2 giorni.",
+              "Un cambio alla volta, finestre di 2-3 settimane.",
+              "Bloccato in fondo → più profondo; badge banale → salite di traffico; impressioni senza vendite → pertinenza.",
+              "Il diario dei cambi diventa sapere di scaffale proprietario.",
+            ],
+          },
+        ],
+        checklist: [
+          "Scansione BSR della top 20 fatta per la nicchia prima di scrivere (soldi + posto).",
+          "Dieci percorsi di categorie candidati raccolti dai comparabili e dall'albero.",
+          "Candidate valutate su pertinenza, asticella del badge e traffico dello scaffale.",
+          "Tre categorie scelte in portafoglio: traffico, badge, angolo.",
+          "Ogni categoria scelta supera il test di pertinenza onesta.",
+          "BSR del n°1 della categoria badge confrontato con la vostra velocità realistica.",
+          "Finestre di osservazione di due-tre settimane dopo ogni cambio.",
+          "Diario dei cambi di categoria tenuto a scala di catalogo.",
+        ],
+        faq: [
+          {
+            question: "Cos'è un buon BSR per un libro?",
+            answer:
+              "Dipende dall'obiettivo: sotto 100.000 (circa una vendita al giorno) un titolo di catalogo si giustifica; sotto 10.000 è un buon guadagnatore; sotto 1.000 è un successo. Per la ricerca di nicchia, ciò che conta è il profilo BSR della top 20 di una categoria, non un numero isolato.",
+          },
+          {
+            question: "Quante categorie può avere un libro KDP?",
+            answer:
+              "Tre, scelte nell'albero di navigazione di Amazon alla creazione e modificabili poi dalla libreria. Il vecchio trucco della mail al supporto per dieci collocazioni non esiste più.",
+          },
+          {
+            question: "Come si ottiene il badge n°1 bestseller?",
+            answer:
+              "Superando ogni libro di una delle vostre categorie durante una finestra di aggiornamento oraria. La via pratica: una sottocategoria profonda e pertinente il cui n°1 attuale tiene un BSR che la vostra velocità della settimana di lancio può battere — esattamente il motivo per cui la ricerca di categorie si fa prima del lancio.",
+          },
+          {
+            question: "Cambiare categorie influenza il mio rango di vendita?",
+            answer:
+              "No — il BSR si calcola sulla velocità di vendita a scala dello store, indipendentemente dalle categorie. Cambiare categorie cambia gli scaffali e le liste che mostrano il libro, il che può cambiare le vendite future, che muovono poi il rango.",
+          },
+          {
+            question: "Perché il mio libro appare in una categoria mai scelta?",
+            answer:
+              "Amazon colloca a volte i libri automaticamente in base a parole chiave e segnali di contenuto. Se la collocazione deforma il libro, contattate il supporto KDP per correggerla — una cattiva collocazione soffoca la conversione e attira le segnalazioni dei lettori.",
+          },
+        ],
+      },
+      de: {
+        slug: "kdp-kategorien-amazon-bestseller-rang-erklaert",
+        title: "KDP-Kategorien und Amazon-Bestseller-Rang erklärt: Kategorien wählen, die Bücher verkaufen",
+        description:
+          "Wie Amazons Kategoriesystem und der BSR wirklich funktionieren: Verkaufsgeschwindigkeit aus dem Rang lesen, die drei Kategorien wählen, die die Sichtbarkeit maximieren, die Bestseller-Abzeichen-Rechnung und Kategoriewechsel ohne Strafen.",
+        keywords: [
+          "KDP Kategorien",
+          "Amazon Bestseller Rang erklärt",
+          "BSR Bücher Bedeutung",
+          "KDP Kategorien wählen",
+          "Amazon Buchkategorien",
+          "Bestseller Abzeichen Amazon",
+          "KDP Kategorie Recherche",
+          "Amazon Verkaufsrang Bücher",
+        ],
+        category: "Kategorien",
+        intro: [
+          "Zwei Systeme entscheiden still, wie sichtbar Ihr Buch für stöbernde Käufer ist: der Kategoriebaum, in dem es steht, und der Bestseller-Rang, der es gegen seine Nachbarn ordnet. Beide werden weithin missverstanden, und beide stehen teilweise unter Ihrer Kontrolle.",
+          "Kategorien sind die Regalplatzierung — sie entscheiden, welche stöbernden Leser dem Buch je begegnen und auf welcher Bestsellerliste es konkurriert. Der BSR ist die Pulsmessung des Buchs — ein relativer Verkaufsgeschwindigkeits-Score, der zugleich kostenlose Marktforschungsdaten liefert für jeden, der ihn lesen kann.",
+          "Dieser Leitfaden erklärt die Mechanik beider Systeme und macht daraus zwei praktische Workflows: Nachfrage und Konkurrenz vor der Veröffentlichung über den BSR lesen, und danach die drei Kategorien wählen, die die Sichtbarkeit eines echten Buchs maximieren.",
+        ],
+        sections: [
+          {
+            id: "bsr-mechanik",
+            title: "Was der BSR wirklich misst (und was nicht)",
+            body: [
+              "Der Bestseller-Rang ordnet jedes Buch des Stores nach jüngster Verkaufsgeschwindigkeit — jüngste Verkäufe wiegen schwer, ältere verfallen, und das Ergebnis aktualisiert sich etwa stündlich. Rang Nr. 1.000 bedeutet, dass sich 999 Bücher gerade schneller verkaufen; über Lebenszeitexemplare oder Umsatz sagt er nichts.",
+              "Jedes Format rangiert separat: Ein Taschenbuch und seine Kindle-Ausgabe tragen unabhängige BSRs, und vollständige Kindle-Unlimited-Lektüren zählen in den Ebook-Rang. Deshalb täuscht der Vergleich eines Print-BSR mit einem Ebook-BSR — die Populationen unterscheiden sich.",
+              "Nützliche Faustregeln für den US-Kindle-Store: BSR ~100.000 entspricht grob einem Verkauf pro Tag; ~10.000 etwa zehn oder mehr täglich; unter 1.000 vielen Dutzend täglich. Diese Werte driften mit der Saison, aber die Größenordnung hält — und Größenordnung ist alles, was Nischenrecherche braucht.",
+            ],
+            bullets: [
+              "BSR = jüngste Verkaufsgeschwindigkeit, stündlich, mit Verfall — keine Lebenszeitverkäufe.",
+              "Jedes Format rangiert separat; KU-Lektüren zählen zum Ebook-Rang.",
+              "Faustregeln: 100k ≈ 1/Tag, 10k ≈ 10/Tag, <1k ≈ Dutzende/Tag.",
+              "Ein einziger Verkauf kann ein ruhendes Buch um Hunderttausende Ränge bewegen — Spitzen täuschen.",
+            ],
+          },
+          {
+            id: "bsr-recherche",
+            title: "Der BSR als kostenlose Marktforschung",
+            body: [
+              "Bevor Sie irgendetwas schreiben, beantwortet der BSR die einzigen zwei Fragen, die über eine Nische zählen: Gibt es Geld, und gibt es Platz? Ziehen Sie die Top 20 der Kandidatenkategorie oder des Suchergebnisses und notieren Sie ihre BSRs.",
+              "Geld: Rangiert die Nr. 5 bei ~50.000 und die Nr. 20 bei ~300.000, trägt die Nische eine Handvoll bescheidener Verdiener — gut fürs Katalogspiel, dünn für ein Flaggschiff. Liegen alle Top 10 unter 20.000, existiert echter Umsatz. Platz: Hat jedes Top-Buch Tausende Rezensionen und ein Verlagsimprint, ist das Regal befestigt; mischt Seite eins starke und schwache BSRs mit fleckigen Covern und wenigen Rezensionen, kann ein Qualitätseinstieg einen Platz nehmen.",
+              "Dieser Check dauert dreißig Minuten pro Nische, und der Gewinn verzinst sich auf Katalogebene: Mit BSR-Belegen gewählte Nischen machen den Unterschied zwischen den Einkommensverteilungen aus unserem Verdienst-Leitfaden.",
+            ],
+            bullets: [
+              "Der Top-20-BSR-Scan beantwortet: Geld? Platz?",
+              "Top 10 unter 20k BSR = echter Umsatz in der Nische.",
+              "Schwache Cover + wenige Rezensionen + gemischte BSRs auf Seite eins = öffenbares Regal.",
+              "Dreißig Minuten pro Nische, vor jedem Schreiben.",
+            ],
+          },
+          {
+            id: "kategoriesystem",
+            title: "Wie das Kategoriesystem 2026 funktioniert",
+            body: [
+              "KDP lässt Sie bei der Veröffentlichung bis zu drei Kategorien wählen, aus einem Browse-Baum, der die Store-Navigation spiegelt (das alte Schlupfloch « E-Mail an den Support für 10 Kategorien » ist weg). Ihr Buch konkurriert um die Bestsellerliste jeder Kategorie, in der es steht, auf jeder Ebene des Pfads.",
+              "Kategorien haben wild unterschiedlichen Traffic und Wettbewerb. « Selbsthilfe » als Top-Ebene enthält Hunderttausende Titel; « Selbsthilfe > Stressbewältigung > Burnout » vielleicht ein paar Hundert. Die Abzeichen-Rechnung folgt: Die orangefarbene Nr.-1-Flagge geht stündlich an das Top-Buch jeder Kategorie — ein Buch mit 10 Verkäufen am Tag ist in der Elternkategorie unsichtbar und in der richtigen Unterkategorie Nr. 1.",
+              "Das Abzeichen ist keine Eitelkeit: Es hebt die Klickrate überall, wo das Buch erscheint, einschließlich Suchergebnissen und Empfehlungszeilen. Realistischer Abzeichen-Zugang ist ein legitimes Kriterium der Kategoriewahl.",
+            ],
+            bullets: [
+              "Drei Kategorien bei der Einrichtung, aus dem echten Browse-Baum.",
+              "Tiefe Unterkategorien: weniger Traffic, viel weniger Wettbewerb, Abzeichen-Zugang.",
+              "Das Nr.-1-Abzeichen wird stündlich pro Kategorie berechnet und hebt die Klickrate storeweit.",
+              "Kategorie-Bestsellerlisten werden von echten Käufern durchstöbert — Regalplatz zählt.",
+            ],
+          },
+          {
+            id: "kategorien-waehlen",
+            title: "Ihre drei wählen: das Dreieck aus Relevanz, Wettbewerb und Traffic",
+            body: [
+              "Bauen Sie eine Kandidatenliste, indem Sie den Store ablaufen: Finden Sie fünf vergleichbare Bücher, scrollen Sie zu deren Kategorien auf der Produktseite und kartieren Sie jeden genutzten Pfad. Ergänzen Sie Pfade aus dem Baum rund um Ihr Thema. Zielen Sie auf zehn Kandidaten.",
+              "Bewerten Sie jeden auf drei Achsen: Relevanz (würde ein Stöberer dieses Regals dieses Buch wirklich wollen? — falsch einsortierte Bücher werden gemeldet, herabgestuft und konvertieren ohnehin miserabel), Wettbewerb (welchen BSR hält die Nr. 1 dieser Kategorie — das ist die Abzeichen-Latte) und Traffic (wie stark sind die BSRs der Top 20 — eine Kategorie, deren Nr. 20 bei 800.000 dümpelt, hat keine Stöberer zu bieten).",
+              "Wählen Sie dann ein Portfolio, nicht drei Kopien derselben Wette: eine Kategorie für Traffic (größer, härter), eine fürs Abzeichen (tief, gewinnbar), eine für einen eigenen Publikumswinkel (das Geschenkregal, das Berufsregal, das Regionalregal). Drei Kategorien auf drei Leserpopulationen verdreifachen die Entdeckungsfläche.",
+            ],
+            bullets: [
+              "Kandidatenpfade von fünf Vergleichsbüchern plus Baum-Browsing ernten.",
+              "Nach Relevanz, Abzeichen-Latte (BSR der Nr. 1) und Regal-Traffic (Top-20-BSRs) bewerten.",
+              "Portfolio-Strategie: eine Traffic-Wette, eine Abzeichen-Wette, eine Winkel-Wette.",
+              "Fehleinsortierung konvertiert schlecht und riskiert Herabstufung — Relevanz ist eine Bedingung.",
+            ],
+          },
+          {
+            id: "iteration",
+            title: "Kategorien wechseln und die Ergebnisse lesen",
+            body: [
+              "Kategorien sind editierbar: Ändern Sie sie im KDP-Bücherregal, mit Wirkung binnen ein bis zwei Tagen. Behandeln Sie es wie jede Metadatenänderung als Experiment — eine Kategorie pro Wechsel, dann zwei bis drei Wochen Impressionen, Verkäufe und Abzeichen-Status beobachten.",
+              "Handlungssignale: ein Buch tief feststeckend im Ranking einer Traffic-Kategorie (eine tiefere Unterkategorie für Abzeichen-Zugang versuchen), ein trivial gehaltenes Abzeichen in einer toten Kategorie (gegen Traffic eintauschen), Seite-eins-Impressionen ohne Konversion (ein Relevanzproblem — Stöberer sehen das Buch und springen ab).",
+              "Führen Sie ein kleines Protokoll der Kategoriewechsel und Ergebnisse pro Titel. Über einen Katalog hinweg wird das Protokoll zur privaten Karte, welche Regale in Ihren Nischen wirklich Bücher bewegen — Wissen, das kein Tool verkauft und kein Konkurrent kopieren kann.",
+            ],
+            bullets: [
+              "Kategorien jederzeit im Bücherregal änderbar; Wirkung in 1-2 Tagen.",
+              "Ein Wechsel pro Test, 2-3-Wochen-Fenster.",
+              "Tief feststeckend → tiefer gehen; triviales Abzeichen → hochtauschen; Impressionen ohne Verkäufe → Relevanzproblem.",
+              "Ein Wechselprotokoll über den Katalog wird zu proprietärem Regalwissen.",
+            ],
+          },
+        ],
+        checklist: [
+          "Top-20-BSR-Scan für die Nische vor dem Schreiben erledigt (Geld + Platz).",
+          "Zehn Kategorie-Kandidatenpfade aus Vergleichsbüchern und Baum geerntet.",
+          "Kandidaten nach Relevanz, Abzeichen-Latte und Regal-Traffic bewertet.",
+          "Drei Kategorien als Portfolio gewählt: Traffic, Abzeichen, Winkel.",
+          "Jede gewählte Kategorie besteht den Ehrlichkeits-Relevanztest.",
+          "BSR der Nr. 1 der Abzeichen-Kategorie mit Ihrer realistischen Geschwindigkeit verglichen.",
+          "Zwei-bis-drei-Wochen-Beobachtungsfenster nach jedem Kategoriewechsel.",
+          "Kategoriewechsel-Protokoll über den Katalog geführt.",
+        ],
+        faq: [
+          {
+            question: "Was ist ein guter BSR für ein Buch?",
+            answer:
+              "Kommt aufs Ziel an: unter 100.000 (etwa ein Verkauf pro Tag) lohnt ein Katalogtitel; unter 10.000 ist ein solider Verdiener; unter 1.000 ein Hit. Für die Nischenrecherche zählt das BSR-Profil der Top 20 einer Kategorie, nicht eine Einzelzahl.",
+          },
+          {
+            question: "Wie viele Kategorien kann ein KDP-Buch haben?",
+            answer:
+              "Drei, gewählt aus Amazons Browse-Baum bei der Einrichtung und später im Bücherregal editierbar. Der historische Trick, den Support für zehn Platzierungen anzuschreiben, gilt nicht mehr.",
+          },
+          {
+            question: "Wie bekomme ich das Nr.-1-Bestseller-Abzeichen?",
+            answer:
+              "Indem Sie jedes Buch in einer Ihrer Kategorien für ein stündliches Aktualisierungsfenster überholen. Der praktische Weg: eine tiefe, relevante Unterkategorie, deren aktuelle Nr. 1 einen BSR hält, den Ihre Launch-Wochen-Geschwindigkeit schlagen kann — genau deshalb gehört Kategorierecherche vor den Launch.",
+          },
+          {
+            question: "Beeinflusst ein Kategoriewechsel meinen Verkaufsrang?",
+            answer:
+              "Nein — der BSR wird storeweit aus der Verkaufsgeschwindigkeit berechnet, unabhängig von Kategorien. Kategorien zu wechseln ändert, welche Regale und Bestsellerlisten das Buch zeigen, was künftige Verkäufe ändern kann, die dann den Rang bewegen.",
+          },
+          {
+            question: "Warum steht mein Buch in einer Kategorie, die ich nie gewählt habe?",
+            answer:
+              "Amazon platziert Bücher manchmal automatisch anhand von Keywords und Inhaltssignalen. Verzerrt die Platzierung das Buch, kontaktieren Sie den KDP-Support zur Korrektur — Fehleinsortierung erstickt die Konversion und zieht Lesermeldungen an.",
+          },
+        ],
+      },
     },
   },
   {
@@ -1136,6 +1952,278 @@ export const bookMarketingSeoPosts: BlogPost[] = [
             question: "Les avis Goodreads aident-ils les ventes Amazon ?",
             answer:
               "Indirectement : les notes Goodreads apparaissent sur certaines surfaces Kindle et beaucoup de lecteurs recoupent avant d'acheter. Les équipes ARC acceptent généralement volontiers de publier sur les deux plateformes — demandez les deux liens dans votre message de lancement.",
+          },
+        ],
+      },
+      it: {
+        slug: "ottenere-recensioni-libro-autopubblicato",
+        title: "Come ottenere recensioni per un libro autopubblicato — legittimamente, senza rischiare l'account KDP",
+        description:
+          "Un sistema pulito per costruire recensioni: perché le prime 10 contano di più, le regole rigide di Amazon e le pratiche che chiudono account, le squadre di lettura anticipata, la richiesta a fine libro e un piano su 90 giorni.",
+        keywords: [
+          "ottenere recensioni libro",
+          "recensioni libro autopubblicato",
+          "regole recensioni Amazon autori",
+          "squadra ARC lancio libro",
+          "avere recensioni KDP",
+          "contattare recensori libri",
+          "recensioni verificate Amazon libri",
+          "strategia recensioni autori",
+        ],
+        category: "Recensioni",
+        intro: [
+          "Le recensioni sono la moneta di conversione di Amazon: gli acquirenti filtrano in base ad esse, l'algoritmo le pesa, i clic pubblicitari convertono in proporzione. E sono l'unico asset che non potete comprare, scambiare o fabbricare senza rischiare l'account da cui tutto il resto dipende.",
+          "Il vincolo è più stretto di quanto la maggior parte degli autori creda — e lo è anche l'opportunità, perché il metodo legittimo è semplice e la maggior parte dei concorrenti non lo esegue mai. Un libro che raggiunge 10-15 recensioni oneste nel primo trimestre ha superato la soglia di credibilità che la maggior parte dei libri indipendenti non supera mai.",
+          "Questa guida copre con precisione le regole (ciò che Amazon vieta davvero), poi il sistema: la meccanica della squadra di lancio, la richiesta a fine libro, il contatto dei recensori, e il ciclo a regime che si compone alla scala di un catalogo.",
+        ],
+        sections: [
+          {
+            id: "prime-dieci",
+            title: "Perché le prime dieci recensioni valgono più delle cento successive",
+            body: [
+              "Il numero di recensioni funziona a soglie, non linearmente. Zero recensioni si legge come « non testato » e soffoca la conversione qualunque sia la qualità della scheda; una manciata stabilisce che lettori reali hanno finito il libro; verso 10-15, la questione della prova sociale sparisce dalla decisione d'acquisto e altri fattori prendono il sopravvento.",
+              "Le prime recensioni sbloccano anche tutto il resto: la maggior parte delle newsletter promozionali esige minimi di recensioni, la pubblicità converte misurabilmente meglio con stelle visibili, e le superfici di raccomandazione dell'algoritmo favoriscono i libri con segnali di coinvolgimento.",
+              "Ecco perché la costruzione delle recensioni appartiene al piano di lancio, con date e responsabili — non alla colonna « si vedrà ». Il sistema qui sotto punta alla soglia entro 60-90 giorni dal lancio.",
+            ],
+            bullets: [
+              "Soglie, non linearità: 0 soffoca, ~10-15 normalizza.",
+              "Le recensioni condizionano newsletter promo, efficienza pubblicitaria e raccomandazioni.",
+              "Pianificate le recensioni come un cantiere di lancio con date.",
+              "Obiettivo: 10-15 recensioni oneste nei primi 60-90 giorni.",
+            ],
+          },
+          {
+            id: "regole",
+            title: "Le regole: ciò che Amazon vieta davvero",
+            body: [
+              "Vietati, con sanzioni che vanno dalla rimozione delle recensioni alla chiusura dell'account: pagare recensioni in denaro o regali, scambiare recensioni tra autori, le recensioni di famiglia e amici stretti (il grafo di Amazon è migliore di quanto si creda), condizionare un vantaggio a una recensione (« libro gratis per 5 stelle »), e indirizzare verso la recensione solo i lettori contenti deviando gli scontenti — manipolazione del voto nel linguaggio di Amazon.",
+              "Permessi, esplicitamente: distribuire copie anticipate gratuite in cambio della possibilità di una recensione onesta (il modello ARC), chiedere una recensione dentro il libro, sollecitare la propria lista email, e sottoporre il libro a critici e blogger le cui recensioni appaiono fuori da Amazon o nella sezione editoriale.",
+              "La linea è la contropartita e il controllo: potete offrire una copia e chiedere onestà; non potete mai condizionare un valore all'esistenza o alla positività di una recensione. Tutti i trucchi di zona grigia convergono verso lo stesso rischio a livello di account — e l'account è l'impresa.",
+            ],
+            bullets: [
+              "Vietati: recensioni pagate, scambi, famiglia, contropartite, selezione dei contenti.",
+              "Permessi: copie ARC, richiesta a fine libro, lista email, critici editoriali.",
+              "Test: un valore dipende dalla recensione? Allora è vietato.",
+              "Le sanzioni arrivano alla chiusura dell'account — mai redditizio.",
+            ],
+          },
+          {
+            id: "squadra-arc",
+            title: "La squadra ARC: il motore della settimana di lancio",
+            body: [
+              "Una squadra ARC (copie anticipate) è una lista di lettori che ricevono il libro gratis prima o durante il lancio, con un inquadramento chiaro e conforme: « una recensione onesta aiuterebbe enormemente — onesta nel senso di ciò che pensate davvero ». Per un primo libro, reclutate nelle comunità pertinenti, sui social e nei gruppi di nicchia dove vive il tema; 20-40 iscritti producono tipicamente 8-15 recensioni.",
+              "La logistica che alza il rendimento: consegnate il libro nel formato preferito del lettore (i servizi tipo BookFunnel lo automatizzano), inviate un messaggio il giorno del lancio con il link diretto alla pagina delle recensioni, e un promemoria dieci giorni dopo. Oltre, lasciate andare — l'insistenza si legge come pressione.",
+              "Dal secondo libro in poi, la squadra si compone: un invito in fondo al libro (« volete ricevere il prossimo in anteprima? ») trasforma i lettori di questo libro nella squadra ARC del prossimo — una delle meccaniche silenziose dietro l'effetto catalogo.",
+            ],
+            bullets: [
+              "20-40 lettori ARC ≈ 8-15 recensioni nella finestra di lancio.",
+              "Inquadramento onestà prima di tutto; la copia è gratis comunque.",
+              "Un messaggio al lancio + un promemoria; poi stop.",
+              "L'invito a fine libro fa rotolare la squadra verso il titolo successivo.",
+            ],
+          },
+          {
+            id: "richiesta-fine-libro",
+            title: "La richiesta a fine libro: la macchina per recensioni meno costosa che controllate",
+            body: [
+              "Il lettore più propenso a recensire è quello che ha appena finito e apprezzato il libro — e l'ultima pagina è il vostro unico contatto garantito con lui. Una nota corta e umana funziona: cosa sperava di fare il libro, perché le recensioni decidono la visibilità dei libri indipendenti, e che una frase o due bastano davvero.",
+              "Restate conformi e senza attrito: nessuna condizione, niente selezione « se vi è piaciuto », solo la richiesta. L'ebook può linkare direttamente la pagina delle recensioni; il lettore cartaceo cercherà il titolo, quindi la richiesta lì conta ancora di più.",
+              "Integrate la richiesta nel modello di manoscritto perché ogni libro parta con essa — libri da pipeline compresi; le pagine finali di un manoscritto DraftToDone sono esattamente il posto di questa pagina. Alla scala di un catalogo, un punto percentuale di tasso di recensione per libro è un vantaggio strutturale.",
+            ],
+            bullets: [
+              "L'ultima pagina è il momento di massima intenzione che possedete.",
+              "Nota umana, senza condizioni, un link (ebook) o una frase di guida (cartaceo).",
+              "Fatene un modello: ogni titolo parte con la sua pagina di richiesta.",
+              "Piccoli tassi per libro si compongono forte alla scala del catalogo.",
+            ],
+          },
+          {
+            id: "regime-permanente",
+            title: "Critici, newsletter promo e il ciclo a regime",
+            body: [
+              "Oltre il lancio: blogger letterari di nicchia, BookTuber e curatori di newsletter recensiscono libri indipendenti e influenzano gli acquirenti fuori da Amazon. Proponete l'abbinamento preciso (« ai vostri lettori è piaciuto X, questo gli sta accanto »), accettate tassi di risposta bassi, e considerate ogni collocazione marketing durevole più che un incremento di contatore.",
+              "Le newsletter promozionali gratuite e a pagamento (il livello BookBub e i suoi tanti fratelli minori) concentrano download durante le promozioni di prezzo — e il volume produce recensioni al tasso di base naturale. Un picco promo che muove qualche centinaio di copie semina tipicamente una manciata di recensioni spontanee.",
+              "A regime: ogni nuova vendita è un biglietto della lotteria al tasso di base (circa una recensione ogni 100-200 vendite senza sollecito; diverse volte tanto con una buona richiesta a fine libro). Il ciclo — le vendite producono recensioni, le recensioni migliorano la conversione, la conversione produce vendite — parte lento e diventa potente una volta avviato. Proteggetelo non toccando mai la lista dei divieti, e pubblicando libri che meritano recensioni: la velocità delle recensioni è, in fondo, un segnale di qualità infalsificabile.",
+            ],
+            bullets: [
+              "Blogger e curatori: proponete l'abbinamento, aspettatevi poco, valorizzate la durabilità.",
+              "I picchi di download promo seminano recensioni al tasso di base.",
+              "Tasso di base ~1/100-200 vendite; la richiesta a fine libro lo moltiplica.",
+              "Il volano: vendite → recensioni → conversione → vendite. Proteggetelo.",
+            ],
+          },
+        ],
+        checklist: [
+          "Obiettivo fissato: 10-15 recensioni oneste entro 60-90 giorni.",
+          "Lista delle pratiche vietate riletta; nulla nel piano la viola.",
+          "Squadra ARC reclutata (20-40 lettori) con inquadramento onestà prima di tutto.",
+          "Messaggio di lancio e promemoria a +10 giorni programmati con link diretti.",
+          "Pagina di richiesta recensione integrata nel modello di manoscritto, ogni titolo.",
+          "Cinque-dieci critici/blogger di nicchia contattati con abbinamento preciso.",
+          "Invii alle newsletter promo pianificati una volta raggiunti i minimi di recensioni.",
+          "Invito ARC a fine libro che fa rotolare i lettori verso il titolo successivo.",
+        ],
+        faq: [
+          {
+            question: "Posso chiedere ad amici e famiglia di recensire il mio libro?",
+            answer:
+              "No — le regole di Amazon vietano le recensioni di persone con una relazione personale con l'autore, e la sua capacità di rilevare quei legami è buona. Orientate piuttosto i vicini verso la condivisione del libro con le loro reti; i loro amici, quelli sì, sono recensori legittimi.",
+          },
+          {
+            question: "Le copie ARC sono permesse dalle regole di Amazon?",
+            answer:
+              "Sì. Distribuire copie anticipate gratuite con una richiesta di recensione onesta è la pratica standard e conforme — gli editori lo fanno da un secolo. La copia deve restare gratuita che la recensione appaia o no, e qualunque sia il suo contenuto.",
+          },
+          {
+            question: "Quante vendite servono per ottenere una recensione naturalmente?",
+            answer:
+              "Senza sollecito, circa una recensione ogni 100-200 vendite. Una richiesta ben posta a fine libro moltiplica quel tasso — ecco perché l'ultima pagina del manoscritto è l'asset per recensioni a miglior leva che controllate.",
+          },
+          {
+            question: "Bisogna rispondere alle recensioni negative?",
+            answer:
+              "No. Una risposta d'autore a una recensione negativa appare nel migliore dei casi difensiva. Estraete ciò che è azionabile (un difetto di impaginazione, un'aspettativa mal regolata dalla descrizione), correggetelo, e lasciate che le altre recensioni rispondano per il libro.",
+          },
+          {
+            question: "Le recensioni Goodreads aiutano le vendite Amazon?",
+            answer:
+              "Indirettamente: i voti Goodreads appaiono su certe superfici Kindle e molti lettori incrociano prima di comprare. Le squadre ARC accettano generalmente volentieri di pubblicare su entrambe le piattaforme — chiedete i due link nel vostro messaggio di lancio.",
+          },
+        ],
+      },
+      de: {
+        slug: "buchrezensionen-bekommen-selfpublishing",
+        title: "Rezensionen für ein selbstveröffentlichtes Buch bekommen — legitim und ohne das KDP-Konto zu verlieren",
+        description:
+          "Ein sauberes Rezensions-System: warum die ersten 10 am meisten zählen, Amazons strenge Regeln und die Praktiken, die Konten kosten, ARC-Teams, die Bitte im Buch, Rezensenten-Outreach und ein 90-Tage-Plan.",
+        keywords: [
+          "Buchrezensionen bekommen",
+          "Rezensionen selbstveröffentlichtes Buch",
+          "Amazon Rezensionsregeln Autoren",
+          "ARC Team Buchlaunch",
+          "Rezensionen KDP",
+          "Buchblogger anschreiben",
+          "Amazon verifizierte Rezensionen Bücher",
+          "Rezensionsstrategie Autoren",
+        ],
+        category: "Rezensionen",
+        intro: [
+          "Rezensionen sind die Konversionswährung von Amazon: Käufer filtern nach ihnen, der Algorithmus gewichtet sie, Anzeigenklicks konvertieren proportional zu ihnen. Und sie sind der eine Vermögenswert, den Sie nicht kaufen, tauschen oder fabrizieren können, ohne das Konto zu riskieren, von dem alles andere abhängt.",
+          "Die Beschränkung ist enger, als die meisten Autoren ahnen — und die Chance ebenso, denn das legitime Playbook ist geradlinig, und die meisten Konkurrenten führen es nie aus. Ein Buch, das im ersten Quartal 10-15 ehrliche Rezensionen erreicht, hat die Glaubwürdigkeitsschwelle überschritten, die die meisten Indie-Bücher nie überqueren.",
+          "Dieser Leitfaden behandelt die Regeln präzise (was Amazon wirklich verbietet), dann das System: Launch-Team-Mechanik, die Bitte im Buch, Rezensenten-Outreach und die Dauerschleife, die sich über einen Katalog verzinst.",
+        ],
+        sections: [
+          {
+            id: "erste-zehn",
+            title: "Warum die ersten zehn Rezensionen mehr wert sind als die nächsten hundert",
+            body: [
+              "Die Rezensionszahl wirkt über Schwellen, nicht linear. Null Rezensionen liest sich als ungetestet und drückt die Konversion unabhängig von der Qualität der Seite; eine Handvoll belegt, dass echte Leser das Buch beendet haben; um 10-15 verschwindet die Frage des sozialen Beweises aus der Kaufentscheidung, und andere Faktoren übernehmen.",
+              "Die frühen Rezensionen schalten auch alles andere frei: Die meisten Promo-Newsletter verlangen Mindestrezensionszahlen, Anzeigen konvertieren messbar besser mit sichtbaren Sternen, und die Empfehlungsflächen des Algorithmus bevorzugen Bücher mit Engagement-Signalen.",
+              "Deshalb gehört der Rezensionsaufbau in den Launch-Plan, mit Daten und Verantwortlichen — nicht in die Spalte « wird sich hoffentlich ergeben ». Das folgende System ist darauf ausgelegt, die Schwelle binnen 60-90 Tagen nach dem Launch zu erreichen.",
+            ],
+            bullets: [
+              "Schwellen, nicht linear: 0 erstickt, ~10-15 normalisiert.",
+              "Rezensionen schalten Promo-Newsletter, Anzeigeneffizienz und Empfehlungen frei.",
+              "Rezensionen wie einen Launch-Arbeitsstrang mit Terminen planen.",
+              "Ziel: 10-15 ehrliche Rezensionen in den ersten 60-90 Tagen.",
+            ],
+          },
+          {
+            id: "regeln",
+            title: "Die Regeln: was Amazon wirklich verbietet",
+            body: [
+              "Verboten, mit Durchsetzung von Rezensionslöschung über Buchsperre bis Kontokündigung: Rezensionen mit Geld oder Geschenken bezahlen, Rezensionstausch mit anderen Autoren, Rezensionen von Familie und engen Freunden (Amazons Beziehungsgraph ist besser, als man annimmt), Rezensionen incentivieren (« Gratisbuch für 5 Sterne ») und nur zufriedene Leser zur Rezension lenken, während unzufriedene umgeleitet werden — in Amazons Sprache Bewertungsmanipulation.",
+              "Erlaubt, ausdrücklich: kostenlose Vorabexemplare gegen die Möglichkeit einer ehrlichen Rezension verteilen (das ARC-Modell), Leser im Buch um eine Rezension bitten, die eigene Mailingliste fragen und das Buch redaktionellen Rezensenten und Buchbloggern vorlegen, deren Besprechungen außerhalb von Amazon oder im redaktionellen Bereich erscheinen.",
+              "Die Grenze sind Gegenleistung und Kontrolle: Sie dürfen ein Exemplar geben und um Ehrlichkeit bitten; Sie dürfen nie einen Wert davon abhängig machen, dass eine Rezension existiert oder positiv ausfällt. Jeder Grauzonen-Trick mündet im selben Kontorisiko — und das Konto ist das Geschäft.",
+            ],
+            bullets: [
+              "Verboten: bezahlte Rezensionen, Tausch, Familie, Anreize, Zufriedenen-Filter.",
+              "Erlaubt: ARC-Exemplare, Bitte im Buch, Listen-Anfragen, redaktionelle Rezensenten.",
+              "Test: Hängt etwas von Wert an der Rezension? Dann ist es verboten.",
+              "Strafen reichen bis zur Kontokündigung — nie den Preis wert.",
+            ],
+          },
+          {
+            id: "arc-team",
+            title: "Das ARC-Team: Ihr Motor für die Launch-Woche",
+            body: [
+              "Ein ARC-Team (Advance Reader Copies) ist eine Liste von Lesern, die das Buch vor oder zum Launch kostenlos erhalten, mit klarer, konformer Rahmung: « eine ehrliche Rezension würde enorm helfen — ehrlich heißt: was Sie wirklich denken ». Für ein erstes Buch rekrutieren Sie in relevanten Communities, sozialen Netzwerken und Nischengruppen, wo das Thema lebt; 20-40 Anmeldungen ergeben typischerweise 8-15 Rezensionen.",
+              "Logistik, die die Ausbeute hebt: das Buch im bevorzugten Format des Lesers liefern (BookFunnel-artige Dienste automatisieren das), eine Launch-Tags-Nachricht mit dem direkten Rezensionslink senden und eine Erinnerung zehn Tage später. Darüber hinaus: loslassen — Nachhaken liest sich als Druck.",
+              "Ab Buch zwei verzinst sich das Team: Eine Einladung am Buchende (« möchten Sie das nächste vorab lesen? ») verwandelt die Leser dieses Buchs in das ARC-Team des nächsten — eine der stillen Mechaniken hinter dem Katalogeffekt.",
+            ],
+            bullets: [
+              "20-40 ARC-Leser ≈ 8-15 Rezensionen im Launch-Fenster.",
+              "Ehrlichkeit-zuerst-Rahmung; das Exemplar ist in jedem Fall gratis.",
+              "Eine Launch-Nachricht + eine Erinnerung; dann Schluss.",
+              "Einladungen am Buchende rollen das Team zum nächsten Titel weiter.",
+            ],
+          },
+          {
+            id: "bitte-im-buch",
+            title: "Die Bitte im Buch: die günstigste Rezensionsmaschine, die Sie kontrollieren",
+            body: [
+              "Der Leser, der am ehesten rezensiert, ist der, der das Buch gerade beendet und gemocht hat — und die letzte Seite ist Ihr einziger garantierter Kontakt mit ihm. Eine kurze, menschliche Notiz funktioniert: was das Buch erreichen wollte, warum Rezensionen über die Sichtbarkeit unabhängiger Bücher entscheiden, und dass ein, zwei Sätze wirklich genügen.",
+              "Bleiben Sie konform und reibungsfrei: keine Bedingungen, kein « falls es Ihnen gefallen hat »-Filter, nur die Bitte. Ebooks können direkt zur Rezensionsseite verlinken; Print-Leser suchen den Titel, dort zählt die Bitte also noch mehr.",
+              "Machen Sie die Bitte zum Teil der Manuskriptvorlage, damit jedes Buch mit ihr erscheint — Pipeline-Bücher eingeschlossen; die Schlussseiten eines DraftToDone-Manuskripts sind genau der Ort dieser Seite. Über einen Katalog ist ein Prozentpunkt mehr Rezensionsrate pro Buch ein struktureller Vorteil.",
+            ],
+            bullets: [
+              "Die letzte Seite ist der absichtsstärkste Rezensionsmoment, den Sie besitzen.",
+              "Menschliche Notiz, keine Bedingungen, ein Link (Ebook) oder ein Satz Anleitung (Print).",
+              "Als Vorlage: Jeder Titel erscheint mit der Bitte-Seite.",
+              "Kleine Raten pro Buch verzinsen sich stark über Kataloge.",
+            ],
+          },
+          {
+            id: "dauerbetrieb",
+            title: "Outreach, Promo-Listen und die Dauerschleife",
+            body: [
+              "Jenseits des Launches: Nischen-Buchblogger, BookTuber und Newsletter-Kuratoren rezensieren Indie-Bücher und beeinflussen Käufer außerhalb von Amazon. Pitchen Sie die konkrete Passung (« Ihre Leser mochten X, dieses steht daneben »), akzeptieren Sie niedrige Antwortquoten und werten Sie jede Platzierung als dauerhaftes Marketing statt als Zählerstand.",
+              "Kostenlose und bezahlte Promo-Newsletter (die BookBub-Featured-Deal-Liga und ihre vielen kleineren Geschwister) treiben konzentrierte Downloads während Preisaktionen — und Downloads in Menge erzeugen Rezensionen zur natürlichen Grundrate. Eine Promo-Spitze, die einige hundert Exemplare bewegt, sät typischerweise eine Handvoll spontaner Rezensionen.",
+              "Dauerbetrieb: Jeder neue Verkauf ist ein Los zur Grundrate (etwa eine Rezension pro 100-200 Verkäufe unaufgefordert; ein Mehrfaches mit guter Bitte im Buch). Die Schleife — Verkäufe erzeugen Rezensionen, Rezensionen verbessern die Konversion, Konversion erzeugt Verkäufe — startet langsam und wird mächtig, sobald sie läuft. Schützen Sie sie, indem Sie die Verbotsliste nie berühren und Bücher veröffentlichen, die Rezensionen verdienen: Rezensionsgeschwindigkeit ist am Ende ein Qualitätssignal, das man nicht fälschen kann.",
+            ],
+            bullets: [
+              "Blogger und Kuratoren: Passung pitchen, wenig erwarten, Dauerhaftigkeit schätzen.",
+              "Promo-getriebene Download-Spitzen säen Rezensionen zur Grundrate.",
+              "Grundrate ~1/100-200 Verkäufe; Bitten im Buch vervielfachen sie.",
+              "Das Schwungrad: Verkäufe → Rezensionen → Konversion → Verkäufe. Schützen Sie es.",
+            ],
+          },
+        ],
+        checklist: [
+          "Rezensionsziele gesetzt: 10-15 ehrliche Rezensionen binnen 60-90 Tagen.",
+          "Verbotsliste geprüft; nichts im Plan verletzt sie.",
+          "ARC-Team rekrutiert (20-40 Leser) mit Ehrlichkeit-zuerst-Rahmung.",
+          "Launch-Nachricht und Tag-10-Erinnerung mit direkten Rezensionslinks geplant.",
+          "Bitte-Seite in der Manuskriptvorlage enthalten, bei jedem Titel.",
+          "Fünf bis zehn Nischen-Rezensenten/Blogger mit konkreter Passung angeschrieben.",
+          "Promo-Newsletter-Einreichungen geplant, sobald Rezensionsminima erfüllt sind.",
+          "ARC-Einladung am Buchende, die Leser zum nächsten Titel weiterrollt.",
+        ],
+        faq: [
+          {
+            question: "Kann ich Freunde und Familie bitten, mein Buch zu rezensieren?",
+            answer:
+              "Nein — Amazons Richtlinien verbieten Rezensionen von Personen mit persönlicher Beziehung zum Autor, und die Erkennung dieser Verbindungen ist gut. Lenken Sie Freunde und Familie stattdessen darauf, das Buch in ihren Netzwerken zu teilen; deren Freunde sind legitime Rezensenten.",
+          },
+          {
+            question: "Sind ARC-Exemplare nach Amazons Regeln erlaubt?",
+            answer:
+              "Ja. Kostenlose Vorabexemplare mit der Bitte um eine ehrliche Rezension zu verteilen ist die standardisierte, konforme Praxis — Verlage tun es seit einem Jahrhundert. Das Exemplar muss gratis bleiben, unabhängig davon, ob eine Rezension erscheint und was sie sagt.",
+          },
+          {
+            question: "Wie viele Verkäufe braucht es für eine natürliche Rezension?",
+            answer:
+              "Unaufgefordert etwa eine Rezension pro 100-200 Verkäufe. Eine gut platzierte Bitte im Buch vervielfacht diese Rate — deshalb ist die letzte Manuskriptseite der hebelstärkste Rezensions-Vermögenswert, den Sie kontrollieren.",
+          },
+          {
+            question: "Sollte ich auf negative Rezensionen antworten?",
+            answer:
+              "Nein. Autorenantworten auf negative Rezensionen wirken bestenfalls defensiv. Ziehen Sie das Verwertbare heraus (eine Formatierungsklage, eine von der Beschreibung falsch gesetzte Erwartung), beheben Sie es, und lassen Sie Ihre übrigen Rezensionen für das Buch antworten.",
+          },
+          {
+            question: "Helfen Goodreads-Rezensionen den Amazon-Verkäufen?",
+            answer:
+              "Indirekt: Goodreads-Bewertungen erscheinen auf manchen Kindle-Flächen, und viele Leser prüfen vor dem Kauf quer. ARC-Teams posten meist gern auf beiden Plattformen — bitten Sie in Ihrer Launch-Nachricht um beide Links.",
           },
         ],
       },

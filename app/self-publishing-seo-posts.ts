@@ -316,6 +316,310 @@ export const selfPublishingSeoPosts: BlogPost[] = [
           },
         ],
       },
+      it: {
+        slug: "come-autopubblicare-un-libro-su-amazon-kdp",
+        title: "Come autopubblicare un libro su Amazon: il percorso KDP completo per il primo libro",
+        description:
+          "Tutti i passaggi dal manoscritto finito alla scheda Amazon online: creazione dell'account KDP, metadati, parole chiave e categorie, caricamento dei file ebook e cartaceo, prezzo, royalty e il dopo-pubblicazione.",
+        keywords: [
+          "come autopubblicare un libro su Amazon",
+          "tutorial Amazon KDP",
+          "pubblicare un libro su KDP",
+          "self-publishing per principianti",
+          "KDP passo dopo passo",
+          "pubblicare su Kindle",
+          "guida self-publishing Amazon",
+          "processo pubblicazione KDP",
+        ],
+        category: "Self-publishing",
+        intro: [
+          "Pubblicare un libro su Amazon richiede circa un'ora di clic effettivi una volta pronti i file. Se i principianti ci passano settimane, è perché quell'ora nasconde una dozzina di piccole decisioni — parole chiave, categorie, opzioni di royalty, territori — ognuna formulata in gergo KDP e ognuna che influenza le vendite per tutta la vita del libro.",
+          "Questa guida percorre l'intero flusso nell'ordine di pubblicazione: creazione dell'account, le tre schermate di creazione del titolo, il caricamento dei file ebook e cartaceo, il prezzo e il processo di revisione. Per ogni decisione ricevete l'impostazione predefinita che funziona e la ragione per discostarsene.",
+          "Presuppone che manoscritto e copertina siano finiti. Altrimenti, partite dalle nostre guide sulla scrittura di un libro con l'IA e sul design della copertina, poi tornate — la fase di pubblicazione premia gli input finiti.",
+        ],
+        sections: [
+          {
+            id: "creazione-account",
+            title: "Creare l'account KDP correttamente al primo colpo",
+            body: [
+              "Create l'account su kdp.amazon.com con le credenziali Amazon che intendete tenere — fondere account KDP in seguito è penoso e Amazon ammette un solo account per persona. Completate subito i tre blocchi di configurazione: informazioni di autore/editore, dati di pagamento (bonifico sul vostro conto) e l'intervista fiscale.",
+              "L'intervista fiscale conta più di quanto sembri. Gli editori fuori dagli Stati Uniti compilano il modulo W-8BEN durante l'intervista; se il vostro paese ha una convenzione fiscale con gli USA — è il caso dell'Italia — inserire il vostro codice fiscale riduce la ritenuta americana predefinita del 30 % sulle royalty, in genere allo 0 %. Cinque minuti qui valgono punti di reddito per sempre.",
+              "L'approvazione dell'account è di solito istantanea, ma la convalida di pagamento e fiscale può richiedere giorni. Fate la configurazione prima della settimana di lancio, non durante.",
+            ],
+            bullets: [
+              "Un account KDP per persona, legato alle credenziali Amazon che terrete.",
+              "Pagamento e fiscale completati subito — la convalida può tardare.",
+              "Fuori dagli USA: richiedete l'aliquota convenzionale nell'intervista fiscale (W-8BEN).",
+              "Le royalty sono versate ~60 giorni dopo la fine del mese in cui sono maturate.",
+            ],
+          },
+          {
+            id: "dettagli-libro",
+            title: "Dettagli del libro: titolo, descrizione, parole chiave, categorie",
+            body: [
+              "La prima delle tre schermate di pubblicazione porta i metadati che decidono la trovabilità. Lingua, titolo e sottotitolo devono corrispondere esattamente alla copertina. Il nome dell'autore può essere uno pseudonimo — vedi la nostra guida dedicata — ma sceglietelo definitivamente: non è modificabile dopo la pubblicazione.",
+              "La descrizione (fino a 4.000 caratteri) è una pagina di vendita, non un riassunto: aprite sulla promessa, strutturate in paragrafi brevi, chiudete su ciò che il lettore saprà fare. I sette slot di parole chiave devono portare espressioni che gli acquirenti digitano davvero — non parole isolate, non ripetizioni del titolo, già indicizzato.",
+              "Scegliete fino a tre categorie. Prendete le sottocategorie più specifiche che corrispondono onestamente: la specificità abbassa l'asticella del badge arancione di bestseller e presenta il libro agli acquirenti più propensi a comprare. Le nostre guide sulla ricerca di parole chiave e sulle categorie dettagliano il metodo.",
+            ],
+            bullets: [
+              "Titolo, sottotitolo e autore rigorosamente identici alla copertina; il nome dell'autore è definitivo.",
+              "Descrizione = testo di vendita: prima la promessa, paragrafi brevi, risultato concreto.",
+              "Sette parole chiave: espressioni di acquirenti, senza ripetere il titolo, senza termini generici isolati.",
+              "Tre categorie, le più precise possibile in modo onesto.",
+            ],
+          },
+          {
+            id: "pubblicazione-ebook",
+            title: "Pubblicare l'ebook: file, DRM, anteprima",
+            body: [
+              "Il formato ebook preferito di KDP è l'EPUB; un DOCX pulito si converte bene per i libri essenzialmente testuali. Caricate il manoscritto, poi un'immagine di copertina separata — 2.560 x 1.600 px in JPEG, rapporto 1,6:1, è l'ideale — o usate il creatore di copertine di base in mancanza d'altro.",
+              "La domanda sul DRM viene posta una volta e bloccata: la maggior parte degli autoeditori sceglie senza DRM, perché infastidisce i lettori legittimi senza fermare la pirateria, ma entrambe le risposte si difendono. Nessun ISBN è necessario per l'ebook Kindle — Amazon assegna il proprio identificativo ASIN.",
+              "Passate l'anteprima online prima di continuare. Verificate che l'indice navighi correttamente, che le immagini si vedano e che gli inizi di capitolo siano puliti in formato telefono e tablet. Un artefatto di conversione preso qui costa minuti; preso nelle recensioni, costa stelle.",
+            ],
+            bullets: [
+              "EPUB di preferenza; DOCX pulito accettabile per il solo testo.",
+              "Copertina ebook: 2.560 x 1.600 px JPEG, rapporto 1,6:1.",
+              "Nessun ISBN per l'edizione Kindle; Amazon assegna un ASIN.",
+              "Anteprima in formato telefono e tablet prima della convalida.",
+            ],
+          },
+          {
+            id: "pubblicazione-cartaceo",
+            title: "Pubblicare il cartaceo: ISBN, interno, copertina, bozza",
+            body: [
+              "Il percorso cartaceo aggiunge decisioni fisiche: accettate l'ISBN gratuito di Amazon a meno che non vogliate il vostro nome di casa editrice sulla scheda (portate allora un ISBN acquistato), scegliete formato, carta e inchiostro — 6 x 9 pollici, inchiostro nero su carta crema è lo standard dei libri di testo — e caricate un PDF interno pronto per la stampa con font incorporati.",
+              "La copertina è un PDF avvolgente unico: quarta di copertina, dorso e piatto anteriore in un solo file, dimensionato per formato e numero di pagine. Il testo sul dorso esige almeno 100 pagine. La nostra guida all'impaginazione del cartaceo dà i calcoli esatti di margini e dorso; le pipeline automatizzate come DraftToDone generano questo file con le dimensioni già calcolate.",
+              "Usate l'anteprima, poi ordinate una bozza cartacea prima di attivare la distribuzione. Una bozza costa le spese di stampa più la consegna ed è l'unico modo per cogliere i problemi del mondo reale: copertina troppo scura, margini stretti, corpo del testo che sembrava giusto a schermo.",
+            ],
+            bullets: [
+              "L'ISBN gratuito di Amazon basta; il vostro solo per un marchio editoriale.",
+              "6 x 9 pollici, nero su crema: il default per romanzi e saggi.",
+              "Copertina = un PDF avvolgente dimensionato sul numero di pagine; testo sul dorso ≥100 pagine.",
+              "Ordinate una bozza stampata prima del lancio — gli schermi mentono sulla carta.",
+            ],
+          },
+          {
+            id: "prezzo-royalty",
+            title: "Prezzo, royalty e territori",
+            body: [
+              "Gli ebook hanno due piani di royalty: 70 % per i prezzi tra 2,99 e 9,99 (meno piccole spese di consegna), 35 % al di fuori di quella fascia. Conseguenza pratica: 2,99-9,99 è la zona naturale degli ebook, salvo ragione strategica — una settimana di lancio a 0,99, un primo volume di serie gratuito.",
+              "La royalty del cartaceo è il 60 % del prezzo di listino meno il costo di stampa sugli store Amazon (50 % ai prezzi bassi su certi mercati): il numero di pagine fissa quindi direttamente il vostro prezzo minimo. Un libro di 250 pagine stampato a ~4 € esige un prezzo vicino ai 10 € per ricavare 2 € a copia.",
+              "Pubblicate su tutti i territori salvo vincoli di diritti, e lasciate che Amazon converta i prezzi — poi arrotondate i prezzi convertiti a punti naturali per mercato (7,99 €, non 7,43 €). L'iscrizione a KDP Select (90 giorni di esclusiva Amazon per l'ebook in cambio dell'inclusione in Kindle Unlimited) è una scelta strategica distinta, trattata nella nostra guida dedicata.",
+            ],
+            bullets: [
+              "Ebook: la fascia al 70 % va da 2,99 a 9,99 — posizionatevi lì di default.",
+              "Cartaceo: 60 % del prezzo meno la stampa; il numero di pagine fissa il minimo.",
+              "Arrotondate i prezzi convertiti a punti naturali per mercato.",
+              "Decidete KDP Select separatamente; vincola l'ebook in esclusiva per 90 giorni.",
+            ],
+          },
+          {
+            id: "dopo-pubblicazione",
+            title: "Revisione, messa online e il primo mese",
+            body: [
+              "Premere Pubblica invia il libro alla revisione di Amazon — tipicamente meno di 24 ore per l'ebook, fino a 72 per il cartaceo. Riceverete un'email all'approvazione o con i problemi di file da correggere; un rifiuto nomina il problema e il reinvio è la norma, non un dramma.",
+              "Una volta online, rivendicate il libro sul vostro profilo Author Central, verificate la scheda sulla vera pagina dello store (formattazione della descrizione, resa della miniatura di copertina in formato ricerca) e confermate che le edizioni ebook e cartaceo siano collegate su un'unica pagina.",
+              "Il primo mese forgia l'impressione dell'algoritmo. Concentratevi su tre leve controllabili: prime recensioni oneste da lettori reali, un prezzo di lancio che abbassa la barriera di prova, e l'iterazione di parole chiave o categorie se le impressioni esistono ma non i clic. La pubblicazione è un ciclo di iterazione, non un evento unico — e gli editori che vincono fanno girare questo ciclo su più libri.",
+            ],
+            bullets: [
+              "Revisione: <24 h ebook, fino a 72 h cartaceo; correggere e reinviare è routine.",
+              "Dopo la messa online: Author Central, verifica della scheda, collegamento delle edizioni.",
+              "Primo mese: prime recensioni, prezzo di lancio accessibile, iterazione dei metadati.",
+              "Trattate ogni libro come un ciclo di un sistema ripetibile.",
+            ],
+          },
+        ],
+        checklist: [
+          "Account KDP completo: informazioni autore, coordinate bancarie, intervista fiscale con aliquota convenzionale.",
+          "Titolo, sottotitolo e nome autore definitivi e conformi alla copertina.",
+          "Descrizione scritta come testo di vendita; 7 parole chiave in espressioni di acquirenti.",
+          "Tre categorie precise selezionate.",
+          "Ebook visualizzato in anteprima su telefono e tablet; indice verificato.",
+          "PDF interno del cartaceo convalidato dall'anteprima; avvolgente dimensionato sul numero di pagine finale.",
+          "Bozza stampata ordinata e ispezionata prima dell'attivazione della distribuzione.",
+          "Ebook nella fascia al 70 %; cartaceo sopra il minimo del costo di stampa.",
+          "Edizioni collegate, Author Central rivendicato, piano di iterazione del primo mese scritto.",
+        ],
+        faq: [
+          {
+            question: "Quanto costa pubblicare su Amazon KDP?",
+            answer:
+              "Zero in anticipo. KDP non fa pagare nulla per pubblicare; Amazon prende la sua parte a ogni vendita tramite la struttura delle royalty, e il costo di stampa del cartaceo è dedotto da ogni vendita anziché pagato in anticipo. Costi reali opzionali: un ISBN acquistato, una bozza, e l'eventuale outsourcing di editing o copertina.",
+          },
+          {
+            question: "Quanto impiega Amazon ad approvare un libro?",
+            answer:
+              "Gli ebook sono generalmente online entro 24 ore, i cartacei entro 72. Un rifiuto per problema di file arriva con una spiegazione; correggere e reinviare aggiunge tipicamente una giornata. Pianificate il lancio almeno una settimana dopo il caricamento per assorbire le sorprese.",
+          },
+          {
+            question: "Serve un ISBN per autopubblicarsi su Amazon?",
+            answer:
+              "Non per l'ebook — Amazon assegna un ASIN. Per il cartaceo serve un ISBN, ma Amazon ne fornisce uno gratuitamente; acquistate il vostro solo per mostrare la vostra casa editrice o per distribuire oltre Amazon.",
+          },
+          {
+            question: "Si possono pubblicare ebook e cartaceo insieme?",
+            answer:
+              "Sì, e va fatto: KDP crea entrambi dalla stessa pagina progetto, collega le edizioni su un'unica scheda, e il prezzo più alto del cartaceo fa sembrare l'ebook conveniente — un effetto ben documentato sulla conversione.",
+          },
+          {
+            question: "Si può modificare il libro dopo la pubblicazione?",
+            answer:
+              "Sì. Manoscritto, copertina, descrizione, parole chiave, categorie e prezzo restano modificabili dopo la pubblicazione (non il nome dell'autore). Le modifiche ai metadati sono effettive in poche ore; le modifiche ai file ripassano la revisione. Iterare su un libro online è prassi standard.",
+          },
+        ],
+      },
+      de: {
+        slug: "buch-bei-amazon-kdp-veroeffentlichen-anleitung",
+        title: "Ein Buch bei Amazon veröffentlichen: der komplette KDP-Durchgang für Erstverleger",
+        description:
+          "Jeder Schritt vom fertigen Manuskript zur Live-Amazon-Seite: KDP-Konto einrichten, Metadaten, Keywords und Kategorien, Ebook- und Taschenbuch-Dateien hochladen, Preise, Tantiemen und was nach dem Veröffentlichen passiert.",
+        keywords: [
+          "Buch bei Amazon veröffentlichen",
+          "Amazon KDP Anleitung",
+          "Buch auf KDP veröffentlichen",
+          "Self-Publishing für Anfänger",
+          "KDP Schritt für Schritt",
+          "auf Kindle veröffentlichen",
+          "Amazon Self-Publishing Leitfaden",
+          "KDP Veröffentlichungsprozess",
+        ],
+        category: "Self-Publishing",
+        intro: [
+          "Ein Buch bei Amazon zu veröffentlichen dauert etwa eine Stunde tatsächlichen Klickens, sobald die Dateien fertig sind. Dass Erstverleger Wochen brauchen, liegt daran, dass diese Stunde ein Dutzend kleiner Entscheidungen versteckt — Keywords, Kategorien, Tantiemen-Optionen, Territorien — jede in KDP-Jargon formuliert und jede mit Wirkung auf die Verkäufe über die gesamte Lebensdauer des Buchs.",
+          "Dieser Durchgang folgt dem gesamten Ablauf in Veröffentlichungsreihenfolge: Kontoeinrichtung, die drei Abschnitte der Titelerstellung, Datei-Uploads für Ebook und Taschenbuch, Preisgestaltung und der Prüfprozess. Für jede Entscheidung erhalten Sie den funktionierenden Standard und den Grund, davon abzuweichen.",
+          "Er setzt voraus, dass Manuskript und Cover fertig sind. Falls nicht, beginnen Sie mit unseren Leitfäden zum Buchschreiben mit KI und zum Coverdesign und kommen Sie zurück — der Veröffentlichungsschritt belohnt fertige Eingaben.",
+        ],
+        sections: [
+          {
+            id: "konto-einrichten",
+            title: "Das KDP-Konto gleich beim ersten Mal richtig einrichten",
+            body: [
+              "Erstellen Sie das Konto auf kdp.amazon.com mit dem Amazon-Login, den Sie behalten wollen — KDP-Konten später zusammenzuführen ist mühsam, und Amazon erlaubt ein Konto pro Person. Vervollständigen Sie sofort die drei Einrichtungsblöcke: Autoren-/Verlegerinformationen, Zahlungsdaten (Überweisung auf Ihr Bankkonto) und das Steuerinterview.",
+              "Das Steuerinterview zählt mehr, als es aussieht. Verleger außerhalb der USA füllen dabei das W-8BEN-Formular aus; hat Ihr Land ein Doppelbesteuerungsabkommen mit den USA — wie Deutschland — reduziert die Eingabe Ihrer lokalen Steuernummer den US-Standardabzug von 30 % auf Tantiemen, meist auf 0 %. Fünf Minuten hier sind dauerhaft Prozentpunkte Einkommen wert.",
+              "Die Kontofreigabe ist meist sofort da, aber Zahlungs- und Steuervalidierung können Tage dauern. Erledigen Sie die Einrichtung vor der Launch-Woche, nicht währenddessen.",
+            ],
+            bullets: [
+              "Ein KDP-Konto pro Person, gebunden an den Amazon-Login, den Sie behalten.",
+              "Zahlung und Steuern sofort einrichten — die Validierung kann sich hinziehen.",
+              "Außerhalb der USA: den Abkommenssatz im Steuerinterview geltend machen (W-8BEN).",
+              "Tantiemen werden ~60 Tage nach Ende des Verdienstmonats ausgezahlt.",
+            ],
+          },
+          {
+            id: "buchdetails",
+            title: "Buchdetails: Titel, Beschreibung, Keywords, Kategorien",
+            body: [
+              "Der erste der drei Veröffentlichungsbildschirme trägt die Metadaten, die über die Auffindbarkeit entscheiden. Sprache, Titel und Untertitel müssen exakt dem Cover entsprechen. Der Autorname kann ein Pseudonym sein — siehe unseren Pseudonym-Leitfaden — aber wählen Sie ihn endgültig: Er ist nach der Veröffentlichung nicht änderbar.",
+              "Die Beschreibung (bis 4.000 Zeichen) ist eine Verkaufsseite, kein Inhaltsreferat: Beginnen Sie mit dem Versprechen, strukturieren Sie mit kurzen Absätzen, schließen Sie mit dem, was der Leser können wird. Die sieben Keyword-Felder sollten Suchphrasen tragen, die Käufer tatsächlich tippen — keine Einzelwörter, keine Titelwiederholungen, denn der Titel zählt bereits als durchsuchbarer Text.",
+              "Sie wählen bis zu drei Kategorien. Nehmen Sie die spezifischsten Unterkategorien, die ehrlich passen: Spezifik senkt die Latte für das orangefarbene Bestseller-Abzeichen und führt das Buch den kaufbereitesten Stöberern zu. Unsere Leitfäden zu Keyword-Recherche und Kategorien vertiefen die Methode.",
+            ],
+            bullets: [
+              "Titel, Untertitel und Autor exakt wie auf dem Cover; der Autorname ist endgültig.",
+              "Beschreibung = Verkaufstext: Versprechen zuerst, kurze Absätze, konkretes Ergebnis.",
+              "Sieben Keyword-Felder: Käuferphrasen, keine Titelwiederholungen, keine generischen Einzelwörter.",
+              "Drei Kategorien, so spezifisch wie ehrlich möglich.",
+            ],
+          },
+          {
+            id: "ebook-upload",
+            title: "Das Ebook veröffentlichen: Dateien, DRM, Vorschau",
+            body: [
+              "KDPs bevorzugtes Ebook-Format ist EPUB; ein sauberes DOCX konvertiert bei textlastigen Büchern ebenfalls gut. Laden Sie das Manuskript hoch, dann ein separates Coverbild — 2.560 x 1.600 px JPEG im Verhältnis 1,6:1 ist optimal — oder nutzen Sie zur Not den einfachen Cover-Ersteller.",
+              "Die DRM-Frage wird einmal gestellt und fixiert: Die meisten Indie-Verleger wählen kein DRM, da es legitime Leser stört, ohne Piraterie zu stoppen — aber beide Antworten sind vertretbar. ISBNs sind für Kindle-Ebooks unnötig; Amazon vergibt seine eigene ASIN.",
+              "Nutzen Sie die Online-Vorschau, bevor Sie fortfahren. Prüfen Sie, dass das Inhaltsverzeichnis korrekt springt, Bilder gerendert werden und Kapitelanfänge auf Telefon- und Tabletgröße sauber aussehen. Hier entdeckte Konvertierungsfehler kosten Minuten; in Rezensionen entdeckt kosten sie Sterne.",
+            ],
+            bullets: [
+              "EPUB bevorzugt; sauberes DOCX für reine Textbücher akzeptabel.",
+              "Ebook-Cover: 2.560 x 1.600 px JPEG, Verhältnis 1,6:1.",
+              "Keine ISBN für die Kindle-Ausgabe nötig; Amazon vergibt eine ASIN.",
+              "Vorschau auf Telefon- und Tabletgröße vor der Freigabe.",
+            ],
+          },
+          {
+            id: "taschenbuch-upload",
+            title: "Das Taschenbuch veröffentlichen: ISBN, Innenteil, Cover, Probeexemplar",
+            body: [
+              "Der Taschenbuch-Ablauf bringt physische Entscheidungen: Nehmen Sie Amazons kostenlose ISBN, außer Sie wollen Ihren eigenen Verlagsnamen auf der Seite (dann eine gekaufte ISBN mitbringen), wählen Sie Format, Papier und Tinte — 6 x 9 Zoll, schwarz auf Creme ist der Standard für Textbücher — und laden Sie ein druckfertiges Innen-PDF mit eingebetteten Schriften hoch.",
+              "Das Cover ist ein einzelnes Umschlag-PDF: Rückseite, Buchrücken und Vorderseite in einer Datei, dimensioniert nach Format und Seitenzahl. Rückentext braucht mindestens 100 Seiten. Unser Formatierungsleitfaden enthält die exakte Rand- und Rücken-Mathematik; automatisierte Pipelines wie DraftToDone generieren diese Datei mit bereits berechneten Maßen.",
+              "Nutzen Sie die Vorschau und bestellen Sie dann ein physisches Probeexemplar, bevor Sie den Vertrieb aktivieren. Ein Proof kostet Druck plus Versand und ist der einzige Weg, Realweltprobleme zu finden: zu dunkles Cover, enge Ränder, eine Schriftgröße, die am Bildschirm gut wirkte.",
+            ],
+            bullets: [
+              "Amazons Gratis-ISBN reicht; eigene nur fürs Verlagsbranding.",
+              "6 x 9 Zoll, schwarz auf Creme: der Standard für Roman und Sachbuch.",
+              "Cover = ein Umschlag-PDF nach Seitenzahl dimensioniert; Rückentext ≥100 Seiten.",
+              "Vor dem Launch ein gedrucktes Probeexemplar bestellen — Bildschirme lügen über Druck.",
+            ],
+          },
+          {
+            id: "preise-tantiemen",
+            title: "Preise, Tantiemen und Territorien",
+            body: [
+              "Ebooks haben zwei Tantiemenpläne: 70 % für Preise zwischen 2,99 und 9,99 (abzüglich kleiner Liefergebühr), 35 % außerhalb dieses Bandes. Die praktische Konsequenz: 2,99-9,99 ist das Zuhause der Ebooks, außer bei strategischen Gründen — eine Launch-Woche zu 0,99, ein kostenloser Serienauftakt.",
+              "Die Taschenbuch-Tantieme beträgt 60 % des Listenpreises minus Druckkosten in Amazons eigenen Stores (50 % bei niedrigen Preisen auf manchen Marktplätzen) — die Seitenzahl setzt also direkt Ihren Mindestpreis. Ein 250-Seiten-Buch mit ~4 € Druckkosten braucht einen Listenpreis nahe 10 €, um 2 € pro Exemplar zu erlösen.",
+              "Veröffentlichen Sie in allen Territorien, sofern keine Rechtebeschränkungen bestehen, und lassen Sie Amazon die Preise konvertieren — runden Sie die konvertierten Preise dann auf natürliche Preispunkte pro Marktplatz (7,99 €, nicht 7,43 €). Die KDP-Select-Anmeldung (90 Tage Amazon-Exklusivität fürs Ebook gegen Kindle-Unlimited-Aufnahme) ist eine separate strategische Wahl, die unser eigener Leitfaden behandelt.",
+            ],
+            bullets: [
+              "Ebook: das 70-%-Band reicht von 2,99 bis 9,99 — standardmäßig darin bleiben.",
+              "Taschenbuch: 60 % des Listenpreises minus Druck; die Seitenzahl setzt den Boden.",
+              "Auto-konvertierte Preise pro Marktplatz auf natürliche Punkte runden.",
+              "KDP Select separat entscheiden; es bindet das Ebook 90 Tage exklusiv.",
+            ],
+          },
+          {
+            id: "nach-veroeffentlichung",
+            title: "Prüfung, Live-Gang und der erste Monat",
+            body: [
+              "Auf Veröffentlichen zu drücken schickt das Buch in Amazons Prüfung — typischerweise unter 24 Stunden für Ebooks, bis 72 für Taschenbücher. Sie erhalten eine E-Mail bei Freigabe oder mit zu behebenden Dateiproblemen; Ablehnungen benennen das Problem, und Neueinreichen ist normal, nicht fatal.",
+              "Sobald live, beanspruchen Sie das Buch in Ihrem Author-Central-Profil, prüfen Sie die Seite im echten Store (Formatierung der Beschreibung, Wirkung des Cover-Thumbnails in Suchgröße) und verifizieren Sie, dass Ebook- und Taschenbuch-Ausgaben auf einer Seite verknüpft sind.",
+              "Der erste Monat prägt den Eindruck des Algorithmus. Konzentrieren Sie sich auf drei steuerbare Hebel: ehrliche frühe Rezensionen von echten Lesern, einen Launch-Preis, der die Probierhürde senkt, und das Nachjustieren von Keywords oder Kategorien, falls Impressionen ohne Klicks bleiben. Veröffentlichen ist eine Iterationsschleife, kein Einzelereignis — und die Verleger, die gewinnen, lassen diese Schleife über viele Bücher laufen.",
+            ],
+            bullets: [
+              "Prüfung: <24 h Ebooks, bis 72 h Taschenbücher; korrigieren und neu einreichen ist Routine.",
+              "Nach dem Launch: Author Central, Seitencheck, Ausgaben-Verknüpfung.",
+              "Erster Monat: frühe Rezensionen, zugänglicher Launch-Preis, Metadaten-Iteration.",
+              "Jedes Buch als einen Zyklus eines wiederholbaren Systems behandeln.",
+            ],
+          },
+        ],
+        checklist: [
+          "KDP-Konto vollständig: Autorendaten, Bankverbindung, Steuerinterview mit Abkommenssatz.",
+          "Titel, Untertitel und Autorname final und deckungsgleich mit dem Cover.",
+          "Beschreibung als Verkaufstext geschrieben; 7 Keyword-Felder mit Käuferphrasen gefüllt.",
+          "Drei spezifische Kategorien gewählt.",
+          "Ebook auf Telefon- und Tabletgröße geprüft; Inhaltsverzeichnis verifiziert.",
+          "Taschenbuch-Innen-PDF besteht die Vorschau; Umschlag auf finale Seitenzahl dimensioniert.",
+          "Gedrucktes Probeexemplar bestellt und geprüft vor Vertriebsfreigabe.",
+          "Ebook im 70-%-Band; Taschenbuch über dem Druckkosten-Boden bepreist.",
+          "Ausgaben verknüpft, Author Central beansprucht, Iterationsplan für Monat eins geschrieben.",
+        ],
+        faq: [
+          {
+            question: "Was kostet das Veröffentlichen bei Amazon KDP?",
+            answer:
+              "Null im Voraus. KDP berechnet nichts fürs Veröffentlichen; Amazon nimmt seinen Anteil pro Verkauf über die Tantiemenstruktur, und die Taschenbuch-Druckkosten werden von jedem Verkauf abgezogen statt vorausbezahlt. Optionale reale Kosten: eine gekaufte ISBN, ein Probeexemplar und externes Lektorat oder Coverarbeit.",
+          },
+          {
+            question: "Wie lange braucht Amazon für die Buchfreigabe?",
+            answer:
+              "Ebooks gehen meist binnen 24 Stunden live, Taschenbücher binnen 72. Datei-Ablehnungen kommen mit Erklärung; korrigieren und neu einreichen kostet typischerweise einen Tag. Planen Sie den Launch mindestens eine Woche nach dem Upload, um Überraschungen abzufedern.",
+          },
+          {
+            question: "Brauche ich eine ISBN fürs Self-Publishing bei Amazon?",
+            answer:
+              "Nicht für Ebooks — Amazon vergibt eine ASIN. Für Taschenbücher brauchen Sie eine ISBN, aber Amazon stellt sie kostenlos; kaufen Sie nur eine eigene, wenn Ihr Verlagsname als Herausgeber erscheinen oder der Vertrieb über Amazon hinausgehen soll.",
+          },
+          {
+            question: "Kann ich Ebook und Taschenbuch gleichzeitig veröffentlichen?",
+            answer:
+              "Ja, und Sie sollten: KDP erstellt beide aus derselben Projektseite, verknüpft die Ausgaben auf einer Produktseite, und der höhere Taschenbuchpreis lässt das Ebook wie ein Schnäppchen wirken — ein gut dokumentierter Konversionseffekt.",
+          },
+          {
+            question: "Kann ich mein Buch nach der Veröffentlichung aktualisieren?",
+            answer:
+              "Ja. Manuskript, Cover, Beschreibung, Keywords, Kategorien und Preis bleiben nach der Veröffentlichung änderbar (der Autorname nicht). Metadaten-Änderungen sind in Stunden live; Dateiänderungen durchlaufen die Prüfung erneut. An einem Live-Buch zu iterieren ist Standardpraxis.",
+          },
+        ],
+      },
     },
   },
   {
@@ -598,6 +902,278 @@ export const selfPublishingSeoPosts: BlogPost[] = [
             question: "Les redevances KDP sont-elles imposables ?",
             answer:
               "Oui — les redevances sont un revenu imposable ordinaire dans votre pays. Complétez l'entretien fiscal KDP pour appliquer le taux conventionnel (souvent 0 % de retenue américaine pour les éditeurs européens) et déclarez sous votre régime local, micro-entreprise comprise.",
+          },
+        ],
+      },
+      it: {
+        slug: "quanto-guadagna-un-autore-autopubblicato",
+        title: "Quanto guadagna davvero un autore autopubblicato? Numeri reali, effetto catalogo e un modello di reddito che regge",
+        description:
+          "I conti onesti del reddito da self-publishing: cosa rende davvero un libro singolo, perché la distribuzione è così asimmetrica, l'effetto catalogo che cambia l'economia, e un modello mese per mese per testare il vostro piano.",
+        keywords: [
+          "quanto guadagna un autore autopubblicato",
+          "reddito self-publishing",
+          "reddito passivo KDP",
+          "guadagnare con KDP",
+          "guadagni KDP realtà",
+          "guadagni autore indipendente",
+          "royalty libri reddito",
+          "reddito extra editoria",
+        ],
+        category: "Guadagni",
+        intro: [
+          "Due narrazioni dominano questo tema ed entrambe ingannano. Quella dell'influencer: sei cifre con libri scritti in un weekend. Quella del cinico: nessuno guadagna nulla. I dati stanno nel mezzo e sono più interessanti — la maggior parte dei libri singoli rende pochissimo, mentre cataloghi disciplinati di più titoli in nicchie studiate producono un reddito reale e duraturo.",
+          "Questa guida vi dà i conti onesti: quanto rende un libro tipico, perché le medie mentono, le royalty unitarie dietro ogni proiezione, e il modello di catalogo che spiega come lo stesso sforzo produca cinquanta volte il risultato quando è orientato bene.",
+          "Nessuna promessa di reddito qui — input, distribuzioni e un modello. È ciò che vi serve davvero per decidere se e come giocare.",
+        ],
+        sections: [
+          {
+            id: "distribuzione",
+            title: "La distribuzione: perché « il reddito medio di un autore » non significa nulla",
+            body: [
+              "Il reddito da self-publishing segue una legge di potenza. Gran parte dei milioni di titoli KDP vende quasi zero copie al mese; un lungo centro rende il prezzo di un caffè; una piccola frazione guadagna migliaia di euro mensili. Citare una media su quella distribuzione non descrive nessuno.",
+              "La domanda utile è cosa separa i livelli, e la risposta manca di glamour: una domanda di nicchia validata prima della scrittura, metadati allineati alle ricerche reali, una copertina competitiva in formato miniatura, e — sopra ogni cosa — il numero di titoli di qualità nel catalogo. La fortuna esiste, ma si compone sul volume.",
+              "Trattate un libro singolo come un biglietto della lotteria con probabilità migliorabili, e un catalogo come un portafoglio in cui i conti finalmente si stabilizzano.",
+            ],
+            bullets: [
+              "Reddito a legge di potenza: mediane minuscole, code spesse.",
+              "Separatori di livello: nicchia validata, metadati allineati, copertina leggibile in miniatura, dimensione del catalogo.",
+              "Un libro singolo = varianza; un catalogo = statistica.",
+              "Ignorate gli screenshot dei mesi migliori — chiedete dimensione del catalogo e media.",
+            ],
+          },
+          {
+            id: "unitario",
+            title: "I conti unitari da cui discende ogni proiezione",
+            body: [
+              "Un ebook a 4,99 € al piano 70 % rende circa 3,40 € dopo le spese di consegna. Un cartaceo di 200 pagine a 11,99 € rende circa 3,70 € dopo il costo di stampa al 60 %. Kindle Unlimited paga a pagina letta — circa 0,004 € a pagina, quindi un libro di 250 pagine letto per intero rende circa 1,10 €.",
+              "Un libro di nicchia modesto che vende 60 copie al mese tra i formati a quei prezzi genera circa 200 € mensili. La cifra delude finché non se ne notano le proprietà: si ripete ogni mese senza lavoro nuovo, non dipende da alcun datore di lavoro, e si somma a ogni titolo aggiuntivo.",
+              "Ancorate ogni pianificazione a royalty unitaria × copie mensili realistiche. « Realistico » per un titolo di nicchia studiato senza pubblicità significa decine di copie al mese, non centinaia — le centinaia arrivano quando nicchia forte, recensioni e pubblicità lavorano insieme.",
+            ],
+            bullets: [
+              "Ebook 4,99 € → ~3,40 €; cartaceo 11,99 €/200 p. → ~3,70 €; lettura KU completa ~1,10 €/250 p.",
+              "60 copie/mese ≈ 200 €/mese per un titolo modestamente riuscito.",
+              "Pianificate in unità: royalty × copie mensili × titoli.",
+              "Decine di copie mensili: l'ipotesi onesta di default per titolo.",
+            ],
+          },
+          {
+            id: "effetto-catalogo",
+            title: "L'effetto catalogo: perché il titolo n°10 rende più del n°1",
+            body: [
+              "Dieci libri non rendono dieci volte un libro — rendono di più. Ogni titolo è una superficie di scoperta distinta nella ricerca e nei consigliati; i lettori che finiscono un libro comprano i vicini; le pagine di pseudonimo fanno vendita incrociata; e la vostra stessa competenza si compone, quindi i titoli tardivi sono semplicemente prodotti migliori.",
+              "Modellate un catalogo con prudenza: se un titolo medio si stabilizza a 150 €/mese e pubblicate due titoli al mese per un anno, uscite dall'anno intorno a 3.600 €/mese di regime — con titoli che continuano a rendere. È tutto l'argomento strategico dei sistemi di produzione: il collo di bottiglia è il numero di titoli di qualità finiti al mese.",
+              "È anche il motivo per cui gli strumenti contano economicamente, non solo praticamente. Ridurre la produzione di un libro da 30 ore a poche — la differenza chatbot/pipeline trattata nella nostra guida agli strumenti, e il problema che DraftToDone esiste per risolvere — si converte direttamente in velocità di crescita del catalogo, la variabile a cui tutto il modello è più sensibile.",
+            ],
+            bullets: [
+              "Il catalogo si compone: superfici di scoperta, vendite incrociate, competenza, consigliati.",
+              "Modello prudente: €/titolo/mese medio × titoli, in crescita mensile.",
+              "Il flusso di titoli di qualità è la variabile dominante.",
+              "Gli strumenti convertono le ore risparmiate in velocità di crescita del catalogo.",
+            ],
+          },
+          {
+            id: "costi",
+            title: "Costi, tasse e la vera linea di profitto",
+            body: [
+              "Il fatturato non è il profitto. Costi per titolo in un flusso manuale: copertina (50-300 €), editing (200-1.000 € in outsourcing), impaginazione (30-100 €), più le vostre ore. Le pipeline automatizzate comprimono tutto in una tariffa per libro; in entrambi i casi, mettete numeri veri su ogni titolo e calcolate mesi di rientro, non solo ricavi.",
+              "Le royalty sono reddito imponibile ovunque. Completate l'intervista fiscale KDP per evitare una ritenuta americana inutile (la maggior parte dei paesi convenzionati, Italia compresa: 0 %) e dichiarate secondo il vostro regime locale — molti piccoli editori operano benissimo in regime forfettario; consultate un commercialista una volta e fatene un modello.",
+              "Un titolo che rende 150 €/mese con 150 € di costo di produzione si ripaga al primo mese. Questa velocità di rientro — rara tra i piccoli modelli di business — è la proprietà davvero attraente dell'economia editoriale, e regge solo se i costi restano disciplinati.",
+            ],
+            bullets: [
+              "Contate il costo per titolo: copertina, editing, impaginazione, ore o tariffa pipeline.",
+              "Calcolate i mesi di rientro per titolo; puntate a meno di tre.",
+              "Intervista fiscale fatta seriamente; dichiarazione locale (commercialista una volta, modello poi).",
+              "La disciplina dei costi è ciò che mantiene attraente la matematica del rientro.",
+            ],
+          },
+          {
+            id: "piano-dodici-mesi",
+            title: "Un piano sobrio su 12 mesi",
+            body: [
+              "Mesi 1-2: imparate la macchina da cima a fondo su un libro — ricerca di nicchia, produzione, metadati, lancio. Aspettatevi vendite modeste; state comprando competenza, non reddito. Mesi 3-6: installate un ritmo di produzione da uno a quattro titoli di qualità al mese secondo gli strumenti, eliminando le nicchie senza trazione e raddoppiando quelle che ne mostrano.",
+              "Mesi 7-12: il catalogo comincia a sostenervi. Reinvestite in ciò che funziona — più titoli nelle nicchie provate, traduzioni dei vincenti (l'edizione inglese di un successo italiano è un nuovo asset per una frazione della ricerca) e pubblicità modesta sui titoli con recensioni.",
+              "I risultati di fine anno variano enormemente, ma le forchette oneste somigliano a: qualche centinaio di euro mensile per un piccolo catalogo curato, qualche migliaio per 15-25 titoli ben studiati con qualche vincente. Il modo di fallire è altrettanto prevedibile: dieci libri in dieci nicchie non validate con metadati fotocopia, che non rendono nulla. La differenza non è mai stata la velocità di scrittura — erano la ricerca e l'iterazione.",
+            ],
+            bullets: [
+              "Mesi 1-2: un libro, ciclo completo, acquisizione di competenza.",
+              "Mesi 3-6: ritmo di produzione; eliminate i perdenti, raddoppiate i vincenti.",
+              "Mesi 7-12: reinvestite — nicchie provate, traduzioni, pubblicità sui titoli con recensioni.",
+              "Uscita realistica dal primo anno: centinaia o poche migliaia di euro mensili, secondo il catalogo.",
+            ],
+          },
+        ],
+        checklist: [
+          "Aspettative di reddito fondate su distribuzioni, non su screenshot.",
+          "Royalty unitarie calcolate per i vostri prezzi reali.",
+          "Piano scritto come royalty × unità × titoli, con ipotesi oneste.",
+          "Costo di produzione e mesi di rientro calcolati per titolo.",
+          "Intervista fiscale completata; regime di dichiarazione locale confermato.",
+          "Ritmo di produzione allineato agli strumenti (manuale o pipeline).",
+          "Fase di validazione della nicchia obbligatoria prima di ogni nuovo titolo.",
+          "Revisione mensile: eliminare i non performanti, reinvestire nei vincenti, valutare le traduzioni.",
+        ],
+        faq: [
+          {
+            question: "Si può davvero generare un reddito passivo con KDP?",
+            answer:
+              "Semi-passivo è il termine onesto. Un titolo pubblicato rende senza lavoro aggiuntivo, ma arrivare a titoli che rendono esige ricerca, produzione e iterazione a monte. La passività è reale dopo la pubblicazione; il lavoro è concentrato prima.",
+          },
+          {
+            question: "Quanto rende di solito un primo libro autopubblicato?",
+            answer:
+              "La maggior parte dei primi libri rende meno di 100 € in totale, perché il primo libro serve a imparare la scelta della nicchia e i metadati. Consideratelo una retta scolastica; l'economia è fatta per emergere alla scala del catalogo in nicchie validate.",
+          },
+          {
+            question: "Quanti libri servono per guadagnare 1.000 € al mese?",
+            answer:
+              "A 100-200 € per titolo al mese per titoli di nicchia modestamente riusciti, circa 5-10 titoli performanti. Poiché non tutti i titoli performano, prevedete di pubblicarne 10-20 di qualità per ottenere quel numero di performanti.",
+          },
+          {
+            question: "KDP vale ancora la pena nel 2026 con l'ondata di libri IA?",
+            answer:
+              "Il volume è cresciuto, ma l'esigenza di qualità di Amazon e il limite di tre titoli al giorno puniscono le strategie di inondazione. Ciò che funziona non è cambiato: domanda validata, libri passati al controllo qualità, metadati onesti. L'IA ha cambiato chi può eseguire quel piano — non il piano.",
+          },
+          {
+            question: "Le royalty KDP sono tassabili?",
+            answer:
+              "Sì — le royalty sono reddito imponibile ordinario nel vostro paese. Completate l'intervista fiscale KDP per applicare l'aliquota convenzionale (spesso 0 % di ritenuta americana per gli editori europei) e dichiarate secondo il vostro regime locale, forfettario compreso.",
+          },
+        ],
+      },
+      de: {
+        slug: "wie-viel-verdienen-selfpublisher-wirklich",
+        title: "Wie viel verdienen Selfpublisher wirklich? Echte Zahlen, der Katalogeffekt und ein belastbares Einkommensmodell",
+        description:
+          "Ehrliche Rechnungen zum Self-Publishing-Einkommen: was einzelne Bücher wirklich einbringen, warum die Verteilung so schief ist, der Katalogeffekt, der die Ökonomie verändert, und ein Monatsmodell zum Gegenprüfen Ihres Plans.",
+        keywords: [
+          "wie viel verdienen Selfpublisher",
+          "Self-Publishing Einkommen",
+          "KDP passives Einkommen",
+          "Geld verdienen mit KDP",
+          "KDP Verdienst Realität",
+          "Autoreneinkommen Self-Publishing",
+          "Buchtantiemen Einkommen",
+          "Nebeneinkommen Publishing",
+        ],
+        category: "Einnahmen",
+        intro: [
+          "Zwei Geschichten dominieren dieses Thema, und beide führen in die Irre. Die Influencer-Geschichte: sechsstellige Beträge mit Wochenend-Büchern. Die Zyniker-Geschichte: niemand verdient etwas. Die Daten liegen dazwischen und sind interessanter — die meisten Einzelbücher verdienen sehr wenig, während disziplinierte Mehrbuch-Kataloge in recherchierten Nischen echtes, dauerhaftes Einkommen erwirtschaften.",
+          "Dieser Leitfaden liefert die ehrliche Rechnung: was ein typisches Buch einbringt, warum Durchschnitte täuschen, die Stücktantiemen hinter jeder Projektion, und das Katalogmodell, das erklärt, wie derselbe Aufwand das Fünfzigfache produziert, wenn er richtig ausgerichtet ist.",
+          "Keine Einkommensversprechen hier — Eingaben, Verteilungen und ein Modell. Genau das brauchen Sie, um zu entscheiden, ob und wie Sie spielen.",
+        ],
+        sections: [
+          {
+            id: "verteilung",
+            title: "Die Verteilung: warum « durchschnittliches Autoreneinkommen » eine nutzlose Zahl ist",
+            body: [
+              "Self-Publishing-Einkommen folgt einem Potenzgesetz. Ein großer Teil der Millionen KDP-Titel verkauft nahezu null Exemplare pro Monat; eine lange Mitte verdient Kaffeegeld; ein kleiner Bruchteil verdient monatlich Tausende. Ein Durchschnitt über diese Verteilung beschreibt niemanden.",
+              "Die nützliche Frage ist, was die Stufen trennt, und die Antwort ist unglamourös: vor dem Schreiben validierte Nischennachfrage, Metadaten, die echte Suchen treffen, ein in Thumbnail-Größe konkurrenzfähiges Cover und — über allem — die Zahl der Qualitätstitel im Katalog. Glück existiert, aber es verzinst sich auf Volumen.",
+              "Behandeln Sie ein einzelnes Buch als Lotterielos mit beeinflussbaren Quoten und einen Katalog als Portfolio, in dem die Mathematik sich endlich stabilisiert.",
+            ],
+            bullets: [
+              "Einkommen ist potenzgesetzlich verteilt: winzige Mediane, dicke Enden.",
+              "Stufentrenner: validierte Nische, suchkonforme Metadaten, Thumbnail-taugliches Cover, Kataloggröße.",
+              "Einzelbücher sind Varianz; Kataloge sind Statistik.",
+              "Ignorieren Sie Screenshots der besten Monate — fragen Sie nach Kataloggröße und Durchschnitt.",
+            ],
+          },
+          {
+            id: "stueckrechnung",
+            title: "Die Stückrechnung, auf der jede Projektion aufbaut",
+            body: [
+              "Ein Ebook zu 4,99 € im 70-%-Plan bringt nach Liefergebühren etwa 3,40 €. Ein 200-Seiten-Taschenbuch zu 11,99 € bringt nach Druckkosten bei 60 % etwa 3,70 €. Kindle Unlimited zahlt pro gelesener Seite — etwa 0,004 € pro Seite, ein vollständig gelesenes 250-Seiten-Buch bringt also rund 1,10 €.",
+              "Ein bescheidenes Nischen-Sachbuch mit 60 verkauften Exemplaren monatlich über alle Formate erzeugt zu diesen Preisen rund 200 € im Monat. Die Zahl enttäuscht, bis man ihre Eigenschaften bemerkt: Sie wiederholt sich jeden Monat ohne neue Arbeit, hängt von keinem Arbeitgeber ab und stapelt sich mit jedem weiteren Titel.",
+              "Verankern Sie jede Planung in Stücktantieme mal realistischen Monatsstückzahlen. « Realistisch » für einen recherchierten Nischentitel ohne Werbung sind Dutzende Exemplare pro Monat, nicht Hunderte — Hunderte entstehen, wenn starke Nische, Rezensionen und Anzeigen zusammenarbeiten.",
+            ],
+            bullets: [
+              "Ebook 4,99 € → ~3,40 €; Taschenbuch 11,99 €/200 S. → ~3,70 €; KU-Komplettlektüre ~1,10 €/250 S.",
+              "60 Stück/Monat ≈ 200 €/Monat pro bescheiden erfolgreichem Titel.",
+              "In Einheiten planen: Tantieme × Monatsstückzahl × Titel.",
+              "Dutzende Monatsexemplare sind die ehrliche Standardannahme pro Titel.",
+            ],
+          },
+          {
+            id: "katalogeffekt",
+            title: "Der Katalogeffekt: warum Titel Nr. 10 mehr verdient als Titel Nr. 1",
+            body: [
+              "Zehn Bücher verdienen nicht das Zehnfache eines Buchs — sie verdienen mehr. Jeder Titel ist eine eigene Entdeckungsfläche in Suche und Empfehlungen; Leser, die ein Buch beenden, kaufen die Nachbarn; Pseudonym-Seiten verkaufen quer; und Ihre eigene Kompetenz verzinst sich, sodass spätere Titel schlicht bessere Produkte sind.",
+              "Modellieren Sie einen Katalog konservativ: Stabilisiert sich ein Durchschnittstitel bei 150 €/Monat und Sie veröffentlichen ein Jahr lang zwei pro Monat, verlassen Sie das Jahr mit rund 3.600 €/Monat Laufrate — aus Titeln, die weiterverdienen. Das ist das ganze strategische Argument für Produktionssysteme: Der Engpass sind fertige Qualitätstitel pro Monat.",
+              "Deshalb zählen Werkzeuge auch ökonomisch, nicht nur praktisch. Die Produktion pro Buch von 30 Stunden auf wenige zu drücken — der Chatbot-versus-Pipeline-Unterschied aus unserem Tool-Leitfaden, und das Problem, für das DraftToDone existiert — übersetzt sich direkt in Katalogwachstumsrate, die Variable, auf die das ganze Modell am empfindlichsten reagiert.",
+            ],
+            bullets: [
+              "Kataloge verzinsen sich: Entdeckungsflächen, Querverkäufe, Kompetenz, Empfehlungen.",
+              "Konservatives Modell: Ø €/Titel/Monat × Titel, monatlich wachsend.",
+              "Der Durchsatz an Qualitätstiteln ist die dominante Variable.",
+              "Produktionswerkzeuge wandeln gesparte Stunden in Katalogwachstum um.",
+            ],
+          },
+          {
+            id: "kosten",
+            title: "Kosten, Steuern und die echte Gewinnlinie",
+            body: [
+              "Umsatz ist nicht Gewinn. Kosten pro Titel im manuellen Workflow: Cover (50-300 €), Lektorat (200-1.000 € extern), Formatierung (30-100 €), plus Ihre Stunden. Automatisierte Pipelines komprimieren das in eine Gebühr pro Buch; so oder so: echte Zahlen pro Titel ansetzen und Amortisationsmonate berechnen, nicht nur Umsatz.",
+              "Tantiemen sind überall steuerpflichtiges Einkommen. Absolvieren Sie das KDP-Steuerinterview, um unnötigen US-Quellenabzug zu vermeiden (die meisten Abkommensländer, Deutschland eingeschlossen: 0 %), und deklarieren Sie nach Ihrem lokalen Regime — viele kleine Verleger fahren gut mit einfacher Selbstständigkeit oder Kleinunternehmerregelung; einmal den Steuerberater fragen, dann als Vorlage nutzen.",
+              "Ein Titel mit 150 €/Monat bei 150 € Produktionskosten amortisiert sich im ersten Monat. Diese Amortisationsgeschwindigkeit — ungewöhnlich unter kleinen Geschäftsmodellen — ist die wirklich attraktive Eigenschaft der Publishing-Ökonomie, und sie hält nur bei disziplinierten Kosten.",
+            ],
+            bullets: [
+              "Kosten pro Titel zählen: Cover, Lektorat, Formatierung, Stunden oder Pipeline-Gebühr.",
+              "Amortisationsmonate pro Titel berechnen; unter drei anstreben.",
+              "Steuerinterview sorgfältig erledigen; lokal deklarieren (einmal Steuerberater, dann Vorlage).",
+              "Kostendisziplin hält die Amortisationsrechnung attraktiv.",
+            ],
+          },
+          {
+            id: "zwoelf-monats-plan",
+            title: "Ein nüchterner 12-Monats-Plan",
+            body: [
+              "Monate 1-2: Lernen Sie die Maschine an einem Buch von Anfang bis Ende — Nischenrecherche, Produktion, Metadaten, Launch. Erwarten Sie bescheidene Verkäufe; Sie kaufen Kompetenz, kein Einkommen. Monate 3-6: Finden Sie einen Produktionsrhythmus von ein bis vier Qualitätstiteln monatlich je nach Werkzeug, beenden Sie Nischen ohne Traktion und verdoppeln Sie die mit Zugkraft.",
+              "Monate 7-12: Der Katalog beginnt zu tragen. Reinvestieren Sie in das, was funktioniert — mehr Titel in bewährten Nischen, Übersetzungen der Gewinner (die englische Ausgabe eines deutschen Erfolgs ist ein neuer Vermögenswert für einen Bruchteil der Recherche) und moderate Anzeigen auf Titeln mit Rezensionen.",
+              "Die Jahresergebnisse variieren enorm, aber die ehrlichen Spannen sehen so aus: niedrige Hunderte monatlich für einen kleinen sorgfältigen Katalog, niedrige Tausende für 15-25 gut recherchierte Titel mit einigen Gewinnern. Der Fehlermodus ist genauso vorhersehbar: zehn Bücher in zehn unvalidierten Nischen mit Schablonen-Metadaten, die nichts verdienen. Der Unterschied war nie die Schreibgeschwindigkeit — es waren Recherche und Iteration.",
+            ],
+            bullets: [
+              "Monate 1-2: ein Buch, kompletter Zyklus, Kompetenzerwerb.",
+              "Monate 3-6: Produktionsrhythmus; Verlierer beenden, Gewinner verdoppeln.",
+              "Monate 7-12: reinvestieren — bewährte Nischen, Übersetzungen, Anzeigen auf rezensierten Titeln.",
+              "Realistischer Jahresausgang: Hunderte bis niedrige Tausende monatlich, katalogabhängig.",
+            ],
+          },
+        ],
+        checklist: [
+          "Einkommenserwartungen auf Verteilungen gestützt, nicht auf Screenshots.",
+          "Stücktantiemen für Ihre tatsächlichen Preispunkte berechnet.",
+          "Plan als Tantieme × Stückzahl × Titel geschrieben, mit ehrlichen Annahmen.",
+          "Produktionskosten und Amortisationsmonate pro Titel kalkuliert.",
+          "Steuerinterview abgeschlossen; lokales Deklarationsregime geklärt.",
+          "Produktionsrhythmus passend zum Werkzeug gewählt (manuell vs. Pipeline).",
+          "Nischenvalidierung als Pflichtschritt vor jedem neuen Titel.",
+          "Monatlicher Review: Nichtperformer beenden, Gewinner reinvestieren, Übersetzungen erwägen.",
+        ],
+        faq: [
+          {
+            question: "Kann man mit KDP wirklich passives Einkommen erzielen?",
+            answer:
+              "Semi-passiv ist der ehrliche Begriff. Ein veröffentlichter Titel verdient ohne weitere Arbeit, aber zu verdienenden Titeln zu kommen erfordert Recherche, Produktion und Iteration im Vorfeld. Die Passivität ist nach der Veröffentlichung real; die Arbeit liegt vorn.",
+          },
+          {
+            question: "Wie viel verdient ein erstes selbstveröffentlichtes Buch üblicherweise?",
+            answer:
+              "Die meisten Erstlinge verdienen insgesamt unter 100 €, weil man am ersten Buch Nischenwahl und Metadaten lernt. Betrachten Sie Buch eins als Lehrgeld; die Ökonomie ist darauf ausgelegt, auf Katalogebene in validierten Nischen zu entstehen.",
+          },
+          {
+            question: "Wie viele Bücher braucht man für 1.000 € im Monat?",
+            answer:
+              "Bei konservativen 100-200 € pro Titel und Monat für bescheiden erfolgreiche Nischentitel etwa 5-10 performende Titel. Da nicht jeder Titel performt, planen Sie 10-20 Qualitätstitel, um auf diese Zahl an Performern zu kommen.",
+          },
+          {
+            question: "Lohnt sich KDP 2026 noch, wo KI den Markt flutet?",
+            answer:
+              "Das Volumen stieg, aber Amazons Qualitätsdurchsetzung und die Drei-Titel-Tagesgrenze bestrafen Flutstrategien. Was funktioniert, ist unverändert: validierte Nachfrage, qualitätsgeprüfte Bücher, ehrliche Metadaten. KI hat geändert, wer dieses Playbook ausführen kann — nicht das Playbook.",
+          },
+          {
+            question: "Muss ich KDP-Tantiemen versteuern?",
+            answer:
+              "Ja — Tantiemen sind gewöhnliches steuerpflichtiges Einkommen in Ihrem Land. Absolvieren Sie KDPs Steuerinterview, um Ihren Abkommenssatz anzuwenden (für europäische Verleger oft 0 % US-Quellensteuer), und deklarieren Sie nach Ihrem lokalen Selbstständigen- oder Unternehmensregime.",
           },
         ],
       },
@@ -886,6 +1462,278 @@ export const selfPublishingSeoPosts: BlogPost[] = [
           },
         ],
       },
+      it: {
+        slug: "prezzo-libro-autopubblicato-strategia",
+        title: "Che prezzo dare a un libro autopubblicato? Fasce di royalty, psicologia e metodo di prezzo per formato",
+        description:
+          "Un metodo di prezzo pratico per i libri KDP: la fascia di royalty al 70 %, i minimi del costo di stampa, l'ancoraggio tra formati, il prezzo di lancio, i punti di prezzo internazionali e i veri usi dello 0,99.",
+        keywords: [
+          "prezzo libro autopubblicato",
+          "strategia di prezzo KDP",
+          "prezzo ebook",
+          "prezzo cartaceo KDP",
+          "prezzo lancio libro",
+          "prezzo libro Kindle",
+          "royalty self-publishing prezzo",
+          "strategia ebook 0,99",
+        ],
+        category: "Prezzi",
+        intro: [
+          "Il prezzo è l'unica leva di marketing che agisce in pochi minuti e non costa nulla da cambiare; eppure la maggior parte degli autoeditori lo fissa una volta copiando un vicino e non lo tocca più. Quel vicino probabilmente aveva copiato qualcun altro.",
+          "Un buon prezzo è meccanico prima di essere psicologico: le fasce di royalty di KDP e i costi di stampa pongono limiti rigidi, e al loro interno l'ancoraggio tra formati e una manciata di effetti di punto di prezzo fanno un lavoro prevedibile.",
+          "Questa guida costruisce il metodo a strati — vincoli, psicologia, gioco tra formati, dinamica di lancio e punti internazionali — e chiude con valori predefiniti concreti, applicabili oggi e testabili poi.",
+        ],
+        sections: [
+          {
+            id: "struttura-royalty",
+            title: "Strato 1 — Conoscere i propri limiti rigidi",
+            body: [
+              "Ebook: la royalty del 70 % si applica solo tra 2,99 e 9,99; fuori da quella fascia si scende al 35 %. Il dirupo è brutale ai bordi — un ebook a 12,99 rende 4,55 al 35 %, mentre 9,99 rende circa 6,90 al 70 %. Un prezzo sopra 9,99 deve colmare quel divario prima di avere senso, cosa che quasi mai accade per la saggistica indipendente.",
+              "Cartacei: la royalty è il 60 % del prezzo di listino meno il costo di stampa (circa 0,85 di base più 0,012 per pagina a inchiostro nero). Un libro di 250 pagine costa circa 3,85 da stampare: il prezzo deve superare ~6,40 solo per guadagnare un centesimo. Il vostro vero minimo è più alto: puntate ad almeno 2,50-3 di royalty per copia per lasciare spazio a pubblicità e promozioni.",
+              "Calcolate entrambi i numeri per il vostro libro reale prima di qualsiasi psicologia: la fascia ebook in cui vivrete, e il minimo cartaceo che la stampa impone.",
+            ],
+            bullets: [
+              "Fascia ebook al 70 %: 2,99-9,99 — la casa di default degli ebook indipendenti.",
+              "Minimo cartaceo: costo di stampa ÷ 0,6, più margine per le promozioni.",
+              "250 pagine ≈ 3,85 di stampa ≈ 6,42 di prezzo di pareggio.",
+              "Rifate questo calcolo per ogni libro; il numero di pagine cambia tutto.",
+            ],
+          },
+          {
+            id: "psicologia",
+            title: "Strato 2 — La psicologia dei prezzi che si replica davvero",
+            body: [
+              "Le terminazioni in 9 dominano la vendita di libri: 4,99 supera 5,00 in modo affidabile, e il 9 finale è la convenzione attesa. Nella fascia al 70 %, la scala standard è 2,99 / 4,99 / 6,99 / 9,99 — i punti intermedi come 3,49 aggiungono soprattutto attrito decisionale senza ricavi.",
+              "Il prezzo segnala la qualità quando l'acquirente non può valutare prima dell'acquisto. La saggistica professionale e tecnica sostiene — e spesso esige — prezzi più alti per essere presa sul serio: una guida a 2,99 su un tema d'affari serio sembra magra. La narrativa tollera punti più bassi perché l'economia di serie e la lettura a catena portano i ricavi.",
+              "Il punto 0,99 è uno strumento, non un prezzo: converte i curiosi in lettori a royalty quasi nulla (0,35). Usatelo per lanci a tempo, primi volumi di serie e picchi promozionali che nutrono l'algoritmo — mai come casa permanente di un libro in cui credete.",
+            ],
+            bullets: [
+              "Terminazioni in 9; la scala è 2,99 / 4,99 / 6,99 / 9,99.",
+              "Prezzo alto = segnale di qualità nelle nicchie di competenza; prezzo magro = segnale di contenuto magro.",
+              "0,99 è uno strumento promozionale a 0,35 di royalty — limitatelo nel tempo.",
+              "Testate un cambio di prezzo alla volta, due settimane per test.",
+            ],
+          },
+          {
+            id: "ancoraggio-formati",
+            title: "Strato 3 — Lasciare che i formati si ancorino a vicenda",
+            body: [
+              "Su una scheda che mostra un cartaceo a 14,99 accanto a un ebook a 5,99, l'ebook sembra un affare — il prezzo del cartaceo fa un lavoro di vendita anche se nessuno lo compra. Questo ancoraggio è conversione gratuita e una ragione centrale per pubblicare sempre entrambi i formati.",
+              "Mantenete uno scarto sensato: un cartaceo a 2-3 volte il prezzo dell'ebook sembra normale; un cartaceo sotto 1,5 volte l'ebook fa sembrare l'ebook troppo caro. La copertina rigida, dove esiste, estende l'ancora verso l'alto.",
+              "Kindle Unlimited complica il quadro: i lettori KU « pagano » a pagina letta indipendentemente dal prezzo di listino. Per i libri iscritti a KU, il prezzo serve soprattutto da ancora e da prezzo per l'acquirente fuori KU — un'altra ragione per cui l'esistenza del cartaceo conta, anche con vendite cartacee modeste.",
+            ],
+            bullets: [
+              "Pubblicate sempre ebook + cartaceo; l'ancoraggio da solo lo giustifica.",
+              "Cartaceo a 2-3 volte il prezzo dell'ebook: lo scarto che sembra naturale.",
+              "Le pagine KU pagano indipendentemente dal prezzo; il listino ancora comunque.",
+              "Il formato caro vende quello economico.",
+            ],
+          },
+          {
+            id: "prezzo-lancio",
+            title: "Strato 4 — Prezzo di lancio e finestra di visibilità",
+            body: [
+              "Le novità godono di una luna di miele algoritmica. Un prezzo di lancio un gradino sotto l'obiettivo (2,99 per un libro che vivrà a 4,99) abbassa la barriera di prova esattamente quando le prime vendite e le prime recensioni pesano di più sul posizionamento.",
+              "Tenete il prezzo di lancio una-due settimane, annunciate onestamente l'aumento al pubblico che avete (« il prezzo di lancio finisce venerdì » è urgenza onesta), poi salite di un gradino. L'aumento stesso è un secondo momento promozionale.",
+              "Dopo, cambiate i prezzi deliberatamente, non nervosamente: una variabile alla volta, due settimane di dati, giudicate sulla royalty al giorno anziché sulle copie al giorno — un taglio di prezzo che aumenta le unità del 20 % ma riduce i ricavi del 15 % è una perdita travestita.",
+            ],
+            bullets: [
+              "Lanciate un gradino di scala sotto il prezzo obiettivo, per 1-2 settimane.",
+              "Annunciate l'aumento; crea un secondo momento promozionale.",
+              "Giudicate i test sulla royalty al giorno, non sulle unità.",
+              "Evitate i ritocchi continui; algoritmo e lettori preferiscono la stabilità.",
+            ],
+          },
+          {
+            id: "internazionale",
+            title: "Strato 5 — I punti di prezzo internazionali",
+            body: [
+              "I prezzi auto-convertiti cadono su numeri brutti (4,63 €, 3,87 £). Fissate prezzi per mercato su punti locali naturali: 4,99 €, 3,99 £, 550 ¥. I minuti che richiede segnalano cura e aiutano misurabilmente la conversione fuori dagli Stati Uniti.",
+              "Attenzione ai bordi di fascia: la finestra al 70 % ha equivalenti locali per mercato, e l'IVA (inclusa nei prezzi europei) fa sì che un ebook a 2,99 € renda diversamente secondo i paesi. Verificate l'anteprima di royalty per ogni grande mercato invece di supporre che il calcolo americano viaggi.",
+              "Se pubblicate in più lingue — un'edizione italiana accanto all'inglese, come DraftToDone le genera nativamente — date a ogni edizione un prezzo secondo le convenzioni del suo mercato, non come conversione del prezzo americano; le aspettative di prezzo ebook in Italia differiscono dagli USA, e aderire alle norme locali batte la conversione di valuta.",
+            ],
+            bullets: [
+              "Arrotondate ogni mercato a punti locali naturali (4,99 €, 3,99 £).",
+              "I prezzi europei includono l'IVA; verificate la royalty netta per mercato.",
+              "La fascia al 70 % ha confini locali — verificateli per store.",
+              "Un'edizione localizzata riceve un prezzo localizzato, non un prezzo convertito.",
+            ],
+          },
+        ],
+        checklist: [
+          "Costo di stampa e prezzo di pareggio calcolati per il cartaceo.",
+          "Ebook posizionato nella fascia 2,99-9,99 su un punto in 9.",
+          "Cartaceo a 2-3 volte il prezzo dell'ebook; entrambi i formati pubblicati per l'ancoraggio.",
+          "Prezzo di lancio un gradino sotto l'obiettivo, a tempo, aumento annunciato.",
+          "Test di prezzo: una variabile, due settimane, giudicati sulla royalty al giorno.",
+          "0,99 usato solo in promozione a tempo, mai come casa permanente.",
+          "Prezzi per mercato arrotondati ai punti locali naturali; effetti IVA verificati.",
+          "Edizioni localizzate prezzate secondo le norme locali.",
+        ],
+        faq: [
+          {
+            question: "Qual è il prezzo migliore per un ebook autopubblicato?",
+            answer:
+              "Per la maggior parte della saggistica indipendente, 4,99-6,99 bilancia royalty e conversione nella fascia al 70 %; i temi professionali specialistici sostengono 7,99-9,99. La narrativa vive comunemente a 2,99-4,99 con i primi volumi più bassi. Partite dal punto di scala dei bestseller della vostra categoria e testate.",
+          },
+          {
+            question: "Perché la mia royalty sul cartaceo è così bassa?",
+            answer:
+              "Il costo di stampa è dedotto prima della vostra royalty del 60 %: un libro di 300 pagine costa circa 4,45 da stampare; a 9,99 di listino guadagnate circa 1,54. Alzate il prezzo, riducete le pagine con un'impaginazione più densa, o accettate il cartaceo come ancora che vende ebook.",
+          },
+          {
+            question: "Devo mettere il mio primo libro a 0,99?",
+            answer:
+              "Solo come tattica di lancio deliberata, per una-due settimane. A 0,35 di royalty, 0,99 è un acquisto di visibilità, non una strategia di reddito — e un libro permanentemente svenduto segnala contenuto magro nelle categorie di saggistica.",
+          },
+          {
+            question: "Posso cambiare il prezzo del mio libro quando voglio?",
+            answer:
+              "Sì — i cambi di prezzo KDP hanno effetto in poche ore e sono illimitati. La disciplina che conta è il metodo di test: cambi isolati, finestre di due settimane, royalty al giorno come metrica.",
+          },
+          {
+            question: "Come influisce Kindle Unlimited sul prezzo?",
+            answer:
+              "I pagamenti KU dipendono dalle pagine lette, non dal prezzo di listino: l'iscrizione scollega parte del reddito dal prezzo. Il listino resta decisivo per gli acquirenti fuori KU e come ancora accanto al cartaceo — ecco perché un libro iscritto a KU merita comunque un prezzo ragionato.",
+          },
+        ],
+      },
+      de: {
+        slug: "buchpreis-selfpublishing-strategie",
+        title: "Wie bepreist man ein selbstveröffentlichtes Buch? Tantiemenbänder, Psychologie und ein Preis-Playbook pro Format",
+        description:
+          "Eine praktische Preismethode für KDP-Bücher: das 70-%-Tantiemenband, Druckkosten-Böden, Preisanker zwischen Formaten, Launch-Preise, internationale Preispunkte und wann 0,99 wirklich Sinn ergibt.",
+        keywords: [
+          "Buchpreis Self-Publishing",
+          "KDP Preisstrategie",
+          "Ebook Preis",
+          "Taschenbuch Preis KDP",
+          "Buch Launch Preis",
+          "Kindle Buch Preis",
+          "Self-Publishing Tantiemen Preis",
+          "99 Cent Ebook Strategie",
+        ],
+        category: "Preisgestaltung",
+        intro: [
+          "Der Preis ist der einzige Marketinghebel, der in Minuten wirkt und nichts kostet zu ändern — und doch setzen ihn die meisten Selfpublisher einmal, indem sie einen Nachbarn kopieren, und fassen ihn nie wieder an. Dieser Nachbar hat vermutlich auch nur kopiert.",
+          "Gute Preisgestaltung ist mechanisch, bevor sie psychologisch ist: KDPs Tantiemenbänder und Druckkosten definieren harte Grenzen, und innerhalb davon leisten Anker zwischen Formaten und eine Handvoll Preispunkt-Effekte vorhersagbare Arbeit.",
+          "Dieser Leitfaden baut die Methode in Schichten auf — Beschränkungen, Psychologie, Formatzusammenspiel, Launch-Dynamik und internationale Punkte — und endet mit konkreten Standardwerten, die Sie heute anwenden und ab morgen testen können.",
+        ],
+        sections: [
+          {
+            id: "tantiemen-struktur",
+            title: "Schicht 1 — Die harten Grenzen kennen",
+            body: [
+              "Ebooks: 70 % Tantieme gilt nur zwischen 2,99 und 9,99; außerhalb fallen Sie auf 35 %. Die Klippe an den Rändern ist brutal — ein Ebook zu 12,99 bringt 4,55 bei 35 %, während 9,99 etwa 6,90 bei 70 % bringt. Ein Preis über 9,99 muss diese Lücke erst schließen, bevor er Sinn ergibt — was bei Indie-Sachbüchern fast nie passiert.",
+              "Taschenbücher: Die Tantieme beträgt 60 % des Listenpreises minus Druckkosten (etwa 0,85 Basis plus 0,012 pro Schwarzweiß-Seite). Ein 250-Seiten-Buch kostet rund 3,85 im Druck, der Listenpreis muss also ~6,40 übersteigen, um überhaupt einen Cent zu verdienen. Ihr echter Boden liegt höher: Zielen Sie auf mindestens 2,50-3 Tantieme pro Exemplar, um Raum für Anzeigen und Preisaktionen zu lassen.",
+              "Berechnen Sie beide Zahlen für Ihr konkretes Buch vor jeder Psychologie: das Ebook-Band, in dem Sie leben werden, und den Taschenbuch-Boden, den der Druck erzwingt.",
+            ],
+            bullets: [
+              "Ebook-70-%-Band: 2,99-9,99 — das Standard-Zuhause für Indie-Ebooks.",
+              "Taschenbuch-Boden: Druckkosten ÷ 0,6, plus Marge für Aktionen.",
+              "250 Seiten ≈ 3,85 Druck ≈ 6,42 Break-even-Listenpreis.",
+              "Diese Rechnung pro Buch machen; die Seitenzahl ändert alles.",
+            ],
+          },
+          {
+            id: "psychologie",
+            title: "Schicht 2 — Preispsychologie, die sich wirklich repliziert",
+            body: [
+              "Schwellenpreise dominieren den Buchhandel: 4,99 verkauft zuverlässig besser als 5,00, und 9er-Endungen sind die erwartete Konvention. Im 70-%-Band lautet die Standardleiter 2,99 / 4,99 / 6,99 / 9,99 — Zwischenpunkte wie 3,49 erzeugen vor allem Entscheidungsreibung ohne Umsatz.",
+              "Der Preis signalisiert Qualität in Kategorien, in denen der Käufer vor dem Kauf nicht prüfen kann. Professionelle und technische Sachbücher tragen — und verlangen oft — höhere Preise, um ernst genommen zu werden: Ein 2,99-Ratgeber zu einem ernsten Geschäftsthema wirkt dünn. Belletristik verträgt niedrigere Punkte, weil Serienökonomie und Durchlese-Effekte den Umsatz tragen.",
+              "Der 0,99-Punkt ist ein Werkzeug, kein Preis: Er verwandelt Stöberer in Leser bei nahezu null Tantieme (0,35). Nutzen Sie ihn für zeitlich begrenzte Launches, Serienauftakte und Promo-Spitzen, die den Algorithmus füttern — nie als Dauerheimat eines Buchs, an das Sie glauben.",
+            ],
+            bullets: [
+              "9er-Endungen nutzen; die Leiter ist 2,99 / 4,99 / 6,99 / 9,99.",
+              "Höherer Preis = Qualitätssignal in Expertise-Nischen; Billigpreis = Dünninhalt-Signal.",
+              "0,99 ist ein Promo-Instrument bei 0,35 Tantieme — zeitlich begrenzen.",
+              "Eine Preisänderung pro Test, zwei Wochen pro Test.",
+            ],
+          },
+          {
+            id: "format-anker",
+            title: "Schicht 3 — Formate einander verankern lassen",
+            body: [
+              "Auf einer Seite mit einem 14,99-Taschenbuch neben einem 5,99-Ebook wirkt das Ebook wie ein Schnäppchen — der Taschenbuchpreis leistet Verkaufsarbeit, selbst wenn ihn niemand kauft. Dieser Anker ist kostenlose Konversion und ein Kerngrund, immer beide Formate zu veröffentlichen.",
+              "Halten Sie einen sinnvollen Abstand: Ein Taschenbuch beim 2-3-Fachen des Ebook-Preises wirkt normal; ein Taschenbuch unter dem 1,5-Fachen lässt das Ebook überteuert erscheinen. Hardcover, wo angeboten, verlängern den Anker nach oben.",
+              "Kindle Unlimited verkompliziert das Bild: KU-Leser « zahlen » pro gelesener Seite unabhängig vom Listenpreis. Bei KU-Büchern treibt der Listenpreis vor allem den Anker und den Nicht-KU-Käufer — ein weiterer Grund, warum die Existenz des Taschenbuchs zählt, auch bei bescheidenen Printverkäufen.",
+            ],
+            bullets: [
+              "Immer Ebook + Taschenbuch veröffentlichen; der Anker allein rechtfertigt es.",
+              "Taschenbuch beim 2-3-Fachen des Ebook-Preises: der natürlich wirkende Abstand.",
+              "KU-Seiten zahlen preisunabhängig; der Listenpreis ankert trotzdem.",
+              "Das teure Format verkauft das günstige.",
+            ],
+          },
+          {
+            id: "launch-preis",
+            title: "Schicht 4 — Launch-Preis und das Sichtbarkeitsfenster",
+            body: [
+              "Neuerscheinungen genießen algorithmische Flitterwochen. Ein Launch-Preis eine Stufe unter dem Zielpreis (2,99 für ein Buch, das bei 4,99 leben wird) senkt die Probierhürde genau dann, wenn frühe Verkäufe und Rezensionen fürs Ranking am meisten zählen.",
+              "Halten Sie den Launch-Preis ein bis zwei Wochen, kündigen Sie die Erhöhung ehrlich an (« der Einführungspreis endet Freitag » ist ehrliche Dringlichkeit), dann eine Stufe hoch. Die Erhöhung selbst ist ein zweiter Promo-Moment.",
+              "Danach ändern Sie Preise bewusst, nicht nervös: eine Variable pro Test, zwei Wochen Daten, entschieden nach Tantieme pro Tag statt Stückzahl pro Tag — eine Preissenkung, die die Einheiten um 20 % hebt, aber den Umsatz um 15 % senkt, ist ein verkleideter Verlust.",
+            ],
+            bullets: [
+              "Eine Leiterstufe unter dem Zielpreis launchen, für 1-2 Wochen.",
+              "Die Erhöhung ankündigen; sie schafft einen zweiten Promo-Moment.",
+              "Tests nach Tantieme pro Tag beurteilen, nicht nach Einheiten.",
+              "Ständiges Herumdrehen vermeiden; Algorithmus wie Leser bevorzugen Stabilität.",
+            ],
+          },
+          {
+            id: "international",
+            title: "Schicht 5 — Internationale Preispunkte",
+            body: [
+              "Automatisch konvertierte Preise landen auf hässlichen Zahlen (4,63 €, 3,87 £). Setzen Sie Preise pro Marktplatz auf natürliche lokale Punkte: 4,99 €, 3,99 £, 550 ¥. Die wenigen Minuten signalisieren Sorgfalt und helfen der Konversion außerhalb der USA messbar.",
+              "Achten Sie auf die Bandränder: Das 70-%-Fenster hat lokale Entsprechungen pro Marktplatz, und die Mehrwertsteuer (in EU-Listenpreisen enthalten) lässt ein 2,99-€-Ebook je nach Land unterschiedlich netto abwerfen. Prüfen Sie die Tantiemenvorschau pro Hauptmarkt, statt anzunehmen, dass die US-Rechnung reist.",
+              "Wenn Sie mehrsprachig veröffentlichen — eine deutsche Ausgabe neben der englischen, wie DraftToDone sie nativ generiert — bepreisen Sie jede Ausgabe nach den Konventionen ihres Markts, nicht als Umrechnung des US-Preises; die Ebook-Preiserwartungen in Deutschland unterscheiden sich von den USA, und lokale Normen schlagen Währungsumrechnung.",
+            ],
+            bullets: [
+              "Jeden Marktplatz auf natürliche lokale Punkte runden (4,99 €, 3,99 £).",
+              "EU-Preise enthalten Mehrwertsteuer; Netto-Tantieme pro Markt prüfen.",
+              "Das 70-%-Band hat lokale Grenzen — pro Store prüfen.",
+              "Lokalisierte Ausgaben erhalten lokalisierte Preise, keine umgerechneten.",
+            ],
+          },
+        ],
+        checklist: [
+          "Druckkosten und Break-even-Listenpreis fürs Taschenbuch berechnet.",
+          "Ebook im 2,99-9,99-Band auf einem 9er-Punkt platziert.",
+          "Taschenbuch beim 2-3-Fachen des Ebook-Preises; beide Formate für den Anker veröffentlicht.",
+          "Launch-Preis eine Stufe unter dem Ziel, befristet, Erhöhung angekündigt.",
+          "Preistests: eine Variable, zwei Wochen, nach Tantieme pro Tag beurteilt.",
+          "0,99 nur als befristete Aktion, nie als Dauerzustand.",
+          "Preise pro Marktplatz auf natürliche lokale Punkte gerundet; Mehrwertsteuereffekte geprüft.",
+          "Lokalisierte Ausgaben nach lokalen Normen bepreist.",
+        ],
+        faq: [
+          {
+            question: "Was ist der beste Preis für ein selbstveröffentlichtes Ebook?",
+            answer:
+              "Für die meisten Indie-Sachbücher balanciert 4,99-6,99 Tantieme und Konversion im 70-%-Band; spezialisierte Profithemen tragen 7,99-9,99. Belletristik lebt üblicherweise bei 2,99-4,99 mit günstigeren Serienauftakten. Starten Sie am Leiterpunkt der Bestseller Ihrer Kategorie und testen Sie von dort.",
+          },
+          {
+            question: "Warum ist meine Taschenbuch-Tantieme so klein?",
+            answer:
+              "Die Druckkosten werden vor Ihren 60 % abgezogen: Ein 300-Seiten-Buch kostet etwa 4,45 im Druck; bei 9,99 Listenpreis verdienen Sie rund 1,54. Erhöhen Sie den Preis, reduzieren Sie die Seitenzahl durch engeren Satz, oder akzeptieren Sie das Taschenbuch als Anker, der Ebooks verkauft.",
+          },
+          {
+            question: "Soll ich mein erstes Buch für 0,99 anbieten?",
+            answer:
+              "Nur als bewusste Launch-Taktik für ein bis zwei Wochen. Bei 0,35 Tantieme ist 0,99 ein Sichtbarkeitskauf, keine Einkommensstrategie — und ein dauerhaft verramschtes Buch signalisiert in Sachbuch-Kategorien dünnen Inhalt.",
+          },
+          {
+            question: "Kann ich den Preis meines Buchs jederzeit ändern?",
+            answer:
+              "Ja — KDP-Preisänderungen greifen binnen Stunden und sind unbegrenzt. Die Disziplin, die zählt, ist die Testmethodik: einzelne Änderungen, Zwei-Wochen-Fenster, Tantieme pro Tag als Metrik.",
+          },
+          {
+            question: "Wie beeinflusst Kindle Unlimited die Preisgestaltung?",
+            answer:
+              "KU-Auszahlungen hängen von gelesenen Seiten ab, nicht vom Listenpreis — die Anmeldung entkoppelt einen Teil des Einkommens vom Preis. Der Listenpreis bleibt entscheidend für Nicht-KU-Käufer und als Anker neben dem Taschenbuch — weshalb auch KU-Bücher einen durchdachten Preis verdienen.",
+          },
+        ],
+      },
     },
   },
   {
@@ -1168,6 +2016,278 @@ export const selfPublishingSeoPosts: BlogPost[] = [
             question: "La déclaration low-content de KDP nuit-elle aux ventes ?",
             answer:
               "Elle retire l'aperçu « feuilleter » et certaines options de catégorie, ce qui affecte légèrement la découvrabilité — mais elle est obligatoire pour les livres concernés. Les medium-content avec de vraies sections rédigées ne se déclarent pas low-content et gardent toutes les fonctionnalités.",
+          },
+        ],
+      },
+      it: {
+        slug: "libri-low-content-kdp-guida-completa",
+        title: "Libri low-content su KDP: cosa funziona ancora, cosa è saturo e come differenziarsi nel 2026",
+        description:
+          "Guida realistica per pubblicare quaderni, agende, registri e quaderni di esercizi su Amazon KDP: il panorama post-saturazione, le nicchie che vendono ancora, gli standard di interno e copertina, le regole sulle parole chiave e il salto verso il medium-content.",
+        keywords: [
+          "libri low content KDP",
+          "vendere quaderni su Amazon",
+          "agende KDP",
+          "libri senza contenuto",
+          "registro KDP",
+          "business quaderni Amazon",
+          "libri medium content",
+          "nicchia low content KDP",
+        ],
+        category: "Low-content",
+        intro: [
+          "I libri low-content — quaderni, agende, registri, taccuini — sono stati la corsa all'oro di KDP: nessuna scrittura richiesta, modelli ovunque, venditori di corsi che promettevano fortune. La corsa è finita come finiscono tutte: i quaderni a righe con copertine carine affrontano ora centinaia di migliaia di schede quasi identiche.",
+          "Ciò che il panorama post-corsa premia davvero è più interessante. Gli interni a uso specifico per pubblici specifici si vendono ancora con regolarità, perché un registro di ispezione degli alveari o un diario di monitoraggio della dialisi risolve un problema che nessun quaderno generico sfiora — e la maggior parte dei cercatori d'oro non ha mai imparato a progettare per risolvere problemi.",
+          "Questa guida mappa ciò che funziona ancora, gli standard di design e metadati che la categoria ormai esige, e il salto verso il medium-content che moltiplica valore e difendibilità di ogni titolo.",
+        ],
+        sections: [
+          {
+            id: "panorama",
+            title: "Il panorama 2026: una saturazione disomogenea",
+            body: [
+              "La saturazione del low-content è reale ma concentrata esattamente dove puntavano i corsi: quaderni a righe generici, diari della gratitudine, agende generiche, quaderni delle password. Su quei segmenti, migliaia di venditori si distinguono solo per la copertina, e l'economia è morta per i nuovi entranti.",
+              "Un piano più in basso, il quadro si rovescia. I registri di attività specifiche (manutenzione di attrezzature, monitoraggio dei farmaci, sessioni di bagno freddo), le agende per professione e i quaderni per hobby affrontano decine di concorrenti invece di centinaia di migliaia — e chi digita « registro lievito madre » converte forte, perché la ricerca è il bisogno.",
+              "Il test per ogni idea low-content: l'interno richiede di conoscere l'uso? Se qualsiasi banca di modelli lo riempie, lasciate perdere. Se progettarlo bene richiede venti minuti per capire come un apicoltore ispeziona davvero gli alveari, avete un fossato esattamente di quella profondità — che è più di zero.",
+            ],
+            bullets: [
+              "Morto: righe generiche, gratitudine, agende generiche, quaderni password.",
+              "Vivo: registri di attività, agende di professione, quaderni di hobby.",
+              "Le ricerche precise convertono: la frase cercata è il bisogno.",
+              "Test del fossato: l'interno richiede conoscenza dell'uso?",
+            ],
+          },
+          {
+            id: "metodo-nicchia",
+            title: "Trovare le nicchie: segnali di domanda per libri senza testo",
+            body: [
+              "La ricerca di nicchia low-content è ricerca di parole chiave incrociata con la specificità dell'interno. Sfruttate l'autocompletamento Amazon sui pattern « registro di [attività] », « agenda [professione] », « diario di [pratica] »; un suggerimento che esiste significa che la gente lo digita. Verificate poi i primi risultati: se la pagina uno mostra quaderni generici con la parola chiave appiccicata sopra, l'interno specifico vince; se mostra interni specifici ben progettati con centinaia di recensioni, arrivate tardi.",
+              "Validate l'intenzione d'acquisto più del traffico. Qualche centinaio di ricerche mensili molto specifiche batte diecimila generiche — chi compra un « diario alimentare e sintomi per colon irritabile » non sta curiosando, sta comprando.",
+              "Sommate gli angoli stagionali e regalo: molti acquisti low-content sono regali (pensione, nuovo hobby, nuovo animale), e l'inquadratura regalo nei metadati cattura ricerche che l'inquadratura uso manca.",
+            ],
+            bullets: [
+              "Sfruttate l'autocompletamento: registro di [attività], agenda [professione], monitoraggio [condizione].",
+              "Controllo della pagina uno: risultati generici = opportunità; specifici con recensioni = troppo tardi.",
+              "Una piccola domanda precisa batte una grande domanda generica.",
+              "Le parole chiave regalo (« regalo pensione infermiera ») sono una seconda superficie.",
+            ],
+          },
+          {
+            id: "design-interno",
+            title: "Progettare l'interno: il prodotto è la mise en page",
+            body: [
+              "Un interno a uso specifico merita il suo prezzo codificando la conoscenza del flusso di lavoro: il registro apistico ha campi per gli avvistamenti della regina e i conteggi di varroa; il quaderno del piccolo locatore ha checklist di ispezione per tipo di visita. Studiate il vero flusso — forum, tutorial, un'intervista a un praticante — e i campi si disegnano da soli.",
+              "Rispettate la meccanica di stampa: la maggior parte dei low-content funziona in 6 x 9 o 8,5 x 11, senza abbondanza, con 100-150 pagine (il costo di stampa sale con le pagine mentre i prezzi low-content si fermano verso 6,99-12,99). I margini seguono le stesse regole KDP di qualsiasi cartaceo — la nostra guida all'impaginazione si applica per intero.",
+              "Testate l'interno fisicamente prima di pubblicare: stampate qualche pagina a casa, riempitela a mano. I campi richiedono sempre più spazio di quanto suggerisca lo schermo, e una pagina di registro che frustra la penna uccide il riacquisto — il motore silenzioso del business dei registri.",
+            ],
+            bullets: [
+              "Codificate la vera pratica nei campi; studiate l'uso.",
+              "100-150 pagine, senza abbondanza, 6 x 9 o 8,5 x 11 — disciplina del costo di stampa.",
+              "Stampate e testate a mano; la penna chiede più spazio dello schermo.",
+              "Il riacquisto premia gli interni davvero utilizzabili.",
+            ],
+          },
+          {
+            id: "copertine-metadati",
+            title: "Copertine, parole chiave e le regole che KDP fa rispettare",
+            body: [
+              "Le copertine low-content si battono in formato miniatura contro decine di cugine: la chiarezza batte la decorazione — l'uso leggibile nel titolo, un visual che dice l'attività all'istante, una tipografia professionale. Il test della miniatura della nostra guida copertine si applica doppiamente qui.",
+              "Le regole sui metadati si sono indurite dopo la corsa: KDP esige onestà rigorosa sulle schede low-content — niente falsi conteggi di pagine, niente titoli « diario » su semplici taccuini, e la casella dedicata low-content alla creazione (toglie l'anteprima « sfoglia » e alcune opzioni di categoria, ma dichiararla male è una violazione delle politiche).",
+              "Mettete la specificità nelle parole chiave: ogni campo d'interno che avete progettato è una frase che qualcuno digita. Il campo « conteggio varroa » giustifica « monitoraggio varroa »; l'angolo regalo giustifica « regalo apicoltore ». Gli interni specifici generano la propria coda lunga — i quaderni generici non possono.",
+            ],
+            bullets: [
+              "Chiarezza in miniatura prima della decorazione; l'uso deve leggersi a 100 px.",
+              "Dichiarate onestamente la casella low-content; dichiararla male mette a rischio l'account.",
+              "I campi d'interno sono fonti di parole chiave: ogni campo è una ricerca.",
+              "Le parole chiave regalo catturano una seconda popolazione di acquirenti.",
+            ],
+          },
+          {
+            id: "medium-content",
+            title: "Il salto di gamma: il medium-content moltiplica la difendibilità",
+            body: [
+              "I libri medium-content aggiungono valore scritto agli interni funzionali: un tracker di abitudini che apre con 20 pagine di scienza delle abitudini, un registro apistico con una guida ai lavori stagionali per sezione, un quaderno di budget con spiegazioni di metodo tra i fogli. Lo scritto eleva il valore percepito, giustifica prezzi da 9,99 a 14,99 e — decisivo — non può essere replicato dai venditori di modelli.",
+              "È qui che la generazione con l'IA cambia l'economia della categoria: produrre 30 pagine di contenuto pedagogico ben documentato per libro era il collo di bottiglia che impediva ai venditori low-content di salire di gamma; una pipeline di scrittura con controlli qualità lo elimina. Un flusso tipo DraftToDone può produrre lo strato pedagogico mentre voi progettate l'interno funzionale — la combinazione è un prodotto che né i concorrenti solo-testo né quelli solo-modello consegnano.",
+              "Il medium-content sblocca anche categorie migliori, l'anteprima « sfoglia » e una sostanza degna di recensioni — i vantaggi strutturali a cui il low-content rinuncia. Per ogni nicchia validata, chiedetevi: come sarebbe la versione medium-content? Quella versione è di solito il vero business.",
+            ],
+            bullets: [
+              "Medium-content = interno funzionale + scritto pedagogico.",
+              "Giustifica 9,99-14,99 e resiste alla concorrenza dei modelli.",
+              "La scrittura IA elimina il collo di bottiglia che proteggeva il salto di gamma.",
+              "Domanda di default per ogni nicchia: come sarebbe la sua versione medium-content?",
+            ],
+          },
+        ],
+        checklist: [
+          "La nicchia supera il test del fossato: l'interno richiede conoscenza dell'uso.",
+          "Domanda verificata con l'autocompletamento; concorrenza della pagina uno valutata.",
+          "Flusso di lavoro studiato; i campi codificano la vera pratica.",
+          "100-150 pagine, senza abbondanza, formato standard; pagine testate a mano su carta.",
+          "Copertina convalidata al test della miniatura; uso leggibile all'istante.",
+          "Casella low-content dichiarata onestamente alla creazione KDP.",
+          "Parole chiave estratte dai campi d'interno e dagli angoli regalo.",
+          "Salto al medium-content valutato per ogni nicchia validata.",
+        ],
+        faq: [
+          {
+            question: "I libri low-content sono ancora redditizi su KDP?",
+            answer:
+              "Quelli generici, no — quei segmenti sono saturi senza ritorno. Gli interni a uso specifico per pubblici specifici (registri di attività, agende di professione, monitoraggi di condizione) si vendono ancora con regolarità, e le loro versioni medium-content sono davvero difendibili.",
+          },
+          {
+            question: "Quanto rende un libro low-content per vendita?",
+            answer:
+              "Un cartaceo low-content tipico a 7,99 e 120 pagine rende circa 2,50 dopo la stampa, al 60 % di royalty. Le versioni medium-content a 11,99-14,99 raddoppiano all'incirca quella cifra — il migliore argomento del salto di gamma.",
+          },
+          {
+            question: "Servono competenze di design per il low-content?",
+            answer:
+              "Serve competenza di impaginazione più che talento artistico: tabelle pulite, tipografia leggibile, campi di dimensione utilizzabile. Da Canva ai modelli InDesign, gli strumenti gestiscono la meccanica; il differenziatore è capire l'uso abbastanza bene da progettare i campi giusti.",
+          },
+          {
+            question: "Che differenza c'è tra low-content e medium-content?",
+            answer:
+              "Il low-content ha un interno funzionale con testo minimo (righe, griglie, campi). Il medium-content aggiunge uno scritto sostanziale — guide, istruzioni, sezioni pedagogiche — che alza i tetti di prezzo, sblocca l'anteprima « sfoglia » e crea una differenziazione che i modelli non copiano.",
+          },
+          {
+            question: "La dichiarazione low-content di KDP danneggia le vendite?",
+            answer:
+              "Toglie l'anteprima « sfoglia » e alcune opzioni di categoria, con un lieve effetto sulla trovabilità — ma è obbligatoria per i libri interessati. I medium-content con vere sezioni scritte non si dichiarano low-content e mantengono tutte le funzionalità.",
+          },
+        ],
+      },
+      de: {
+        slug: "low-content-buecher-kdp-kompletter-leitfaden",
+        title: "Low-Content-Bücher auf KDP: was noch funktioniert, was gesättigt ist und wie man sich 2026 differenziert",
+        description:
+          "Ein realistischer Leitfaden zum Veröffentlichen von Journalen, Planern, Logbüchern und Arbeitsbüchern auf Amazon KDP: die Lage nach der Sättigung, Nischen mit Verkäufen, Innenteil- und Coverstandards, Keyword-Regeln und der Aufstieg zu Medium-Content.",
+        keywords: [
+          "Low Content Bücher KDP",
+          "Notizbücher auf Amazon verkaufen",
+          "KDP Planer",
+          "No Content Bücher",
+          "Logbuch KDP veröffentlichen",
+          "Notizbuch Business Amazon",
+          "Medium Content Bücher",
+          "KDP Low Content Nische",
+        ],
+        category: "Low-Content",
+        intro: [
+          "Low-Content-Bücher — Journale, Planer, Logbücher, Notizbücher — waren KDPs Goldrausch-Kategorie: kein Schreiben nötig, Vorlagen überall, Kursverkäufer mit Reichtumsversprechen. Der Rausch endete wie alle: Linierte Notizbücher mit hübschen Covern konkurrieren jetzt gegen Hunderttausende fast identischer Angebote.",
+          "Was die Landschaft nach dem Rausch tatsächlich belohnt, ist interessanter. Zweckspezifische Innenteile für spezifische Zielgruppen verkaufen sich weiterhin stetig, weil ein Bienenstock-Inspektionslog oder ein Dialyse-Tagebuch ein Problem löst, das kein generisches Notizbuch berührt — und die meisten Goldgräber haben nie gelernt, problemlösend zu gestalten.",
+          "Dieser Leitfaden kartiert, was noch funktioniert, die Design- und Metadatenstandards, die die Kategorie inzwischen verlangt, und den Medium-Content-Aufstieg, der Wert und Verteidigungsfähigkeit jedes Titels vervielfacht.",
+        ],
+        sections: [
+          {
+            id: "landschaft",
+            title: "Die Landschaft 2026: die Sättigung ist ungleich verteilt",
+            body: [
+              "Die Sättigung im Low-Content ist real, aber genau dort konzentriert, wohin die Kurse zeigten: generische linierte Journale, Dankbarkeitstagebücher, generische Tagesplaner, Passwortbücher. In diesen Segmenten konkurrieren Tausende Verkäufer allein über Cover, und die Ökonomie ist für Neueinsteiger tot.",
+              "Eine Ebene tiefer kehrt sich das Bild um. Aktivitätsspezifische Logs (Gerätewartung, Medikamenten-Tracking, Eisbad-Sessions), berufsspezifische Planer und Hobby-Arbeitsbücher haben Dutzende Konkurrenten statt Hunderttausender — und wer « Sauerteig Logbuch » sucht, konvertiert stark, weil die Suchanfrage selbst das Bedürfnis ist.",
+              "Der Test für jede Low-Content-Idee: Erfordert der Innenteil Wissen über den Anwendungsfall? Wenn jede Vorlagenbörse ihn füllt, weiterziehen. Wenn gutes Design zwanzig Minuten Verständnis erfordert, wie Imker ihre Stöcke wirklich inspizieren, haben Sie einen Graben genau dieser Tiefe — und das ist mehr als null.",
+            ],
+            bullets: [
+              "Tot: generisch liniert, Dankbarkeit, generische Planer, Passwortbücher.",
+              "Lebendig: Aktivitäts-Logs, Berufsplaner, Hobby-Arbeitsbücher.",
+              "Spezifische Suchen konvertieren: die Suchphrase ist das Bedürfnis.",
+              "Grabentest: erfordert der Innenteil Anwendungswissen?",
+            ],
+          },
+          {
+            id: "nischen-methode",
+            title: "Nischen finden: Nachfragesignale für Bücher ohne Text",
+            body: [
+              "Low-Content-Nischenrecherche ist Keyword-Recherche gekreuzt mit Innenteil-Spezifik. Durchforsten Sie Amazons Autovervollständigung nach Mustern wie « [Aktivität] Logbuch », « [Beruf] Planer », « [Hobby] Tagebuch »; ein existierender Vorschlag heißt, dass Menschen ihn tippen. Prüfen Sie dann die Top-Ergebnisse: Zeigt Seite eins generische Notizbücher mit aufgeklebtem Keyword, gewinnt der spezifische Innenteil; zeigt sie gut gestaltete spezifische Innenteile mit Hunderten Rezensionen, sind Sie spät dran.",
+              "Validieren Sie Kaufabsicht über Traffic. Einige hundert hochspezifische Monatssuchen schlagen zehntausend generische — der Käufer eines « Ernährungs- und Symptomtagebuchs bei Reizdarm » stöbert nicht, er kauft.",
+              "Stapeln Sie Saison- und Geschenkwinkel: Viele Low-Content-Käufe sind Geschenke (Ruhestand, neues Hobby, neues Haustier), und Geschenk-Framing in den Metadaten fängt Suchen ein, die das Anwendungs-Framing verpasst.",
+            ],
+            bullets: [
+              "Autovervollständigung abbauen: [Aktivität] Log, [Beruf] Planer, [Zustand] Tracker.",
+              "Seite-eins-Check: generische Ergebnisse = Chance; rezensierte spezifische = zu spät.",
+              "Kleine spezifische Nachfrage schlägt große generische.",
+              "Geschenk-Framing (« Ruhestandsgeschenk Krankenschwester ») ist eine zweite Keyword-Fläche.",
+            ],
+          },
+          {
+            id: "innenteil-design",
+            title: "Innenteil gestalten: das Produkt ist das Seitenlayout",
+            body: [
+              "Ein zweckspezifischer Innenteil verdient seinen Preis, indem er Workflow-Wissen kodiert: Das Imker-Log hat Felder für Königinnen-Sichtungen und Milbenzählungen; das Buch des kleinen Vermieters hat Inspektions-Checklisten pro Besuchstyp. Recherchieren Sie den echten Workflow — Foren, YouTube-Anleitungen, ein Praktiker-Gespräch — und die Felder entwerfen sich selbst.",
+              "Respektieren Sie die Druckmechanik: Die meisten Low-Content-Bücher funktionieren bei 6 x 9 oder 8,5 x 11, ohne Beschnitt, mit 100-150 Seiten (Druckkosten steigen mit den Seiten, während Low-Content-Preise um 6,99-12,99 deckeln). Die Ränder folgen denselben KDP-Regeln wie jedes Taschenbuch — unser Formatierungsleitfaden gilt vollständig.",
+              "Testen Sie den Innenteil physisch vor der Veröffentlichung: Drucken Sie einige Seiten zu Hause, füllen Sie sie von Hand aus. Felder brauchen immer mehr Platz, als Bildschirme suggerieren, und eine Logseite, die den Stift frustriert, tötet Wiederholungskäufe — den stillen Motor des Logbuch-Geschäfts.",
+            ],
+            bullets: [
+              "Echtes Praxiswissen in Felder kodieren; den Anwendungsfall recherchieren.",
+              "100-150 Seiten, ohne Beschnitt, 6 x 9 oder 8,5 x 11 — Druckkosten-Disziplin.",
+              "Seiten drucken und handschriftlich testen; Stifte brauchen mehr Raum als Bildschirme zeigen.",
+              "Wiederholungskäufe belohnen wirklich nutzbare Innenteile.",
+            ],
+          },
+          {
+            id: "cover-metadaten",
+            title: "Cover, Keywords und die Regeln, die KDP durchsetzt",
+            body: [
+              "Low-Content-Cover konkurrieren in Thumbnail-Größe gegen viele Geschwister, also schlägt Klarheit Dekoration: der Anwendungsfall lesbar im Titel, ein Visual, das die Aktivität sofort sagt, professionelle Typografie. Der Thumbnail-Test aus unserem Cover-Leitfaden gilt hier doppelt.",
+              "Die Metadatenregeln wurden nach dem Goldrausch verschärft: KDP verlangt strikte Ehrlichkeit bei Low-Content-Angeboten — keine falschen Seitenzahlen, keine « Tagebuch »-Titel auf bloßen Notizbüchern, und das dedizierte Low-Content-Häkchen bei der Einrichtung (es entfernt die Blick-ins-Buch-Funktion und manche Kategorieoptionen, aber Falschdeklaration ist ein Richtlinienverstoß).",
+              "Verschlagworten Sie die Spezifik: Jedes Innenteil-Feld, das Sie entworfen haben, ist eine Suchphrase, die jemand tippt. Das Feld « Milbenzählung » rechtfertigt « Varroa Tracking »; der Geschenkwinkel rechtfertigt « Imker Geschenk ». Spezifische Innenteile erzeugen ihren eigenen Longtail — generische Notizbücher können das nicht.",
+            ],
+            bullets: [
+              "Thumbnail-Klarheit vor Dekoration; der Anwendungsfall muss bei 100 px lesbar sein.",
+              "Low-Content ehrlich per KDP-Häkchen deklarieren; Falschdeklaration riskiert das Konto.",
+              "Innenteil-Felder sind Keyword-Quellen: jedes Feld ist eine Suchphrase.",
+              "Geschenk-Keywords erschließen eine zweite Käufergruppe.",
+            ],
+          },
+          {
+            id: "medium-content",
+            title: "Der Aufstiegspfad: Medium-Content vervielfacht die Verteidigungsfähigkeit",
+            body: [
+              "Medium-Content-Bücher fügen funktionalen Innenteilen geschriebenen Wert hinzu: ein Gewohnheitstracker, der mit 20 Seiten Gewohnheitsforschung beginnt, ein Imker-Log mit saisonalem Aufgabenleitfaden pro Abschnitt, ein Budget-Arbeitsbuch mit Methodenerklärungen zwischen den Blättern. Das Geschriebene hebt den wahrgenommenen Wert, rechtfertigt Preise von 9,99-14,99 und kann — entscheidend — von Vorlagenverkäufern nicht repliziert werden.",
+              "Hier verändert KI-Generierung die Ökonomie der Kategorie: 30 Seiten gut recherchierten Lehrinhalts pro Buch zu produzieren war der Engpass, der Low-Content-Verkäufer vom Aufstieg abhielt; eine qualitätsgeprüfte Schreibpipeline beseitigt ihn. Ein Workflow wie DraftToDone kann die Lehrschicht produzieren, während Sie den funktionalen Innenteil gestalten — die Kombination ist ein Produkt, das weder Nur-Text- noch Nur-Vorlagen-Konkurrenten liefern.",
+              "Medium-Content erschließt zudem bessere Kategorien, die Blick-ins-Buch-Funktion und rezensionswürdige Substanz — die strukturellen Vorteile, auf die Low-Content verzichtet. Fragen Sie bei jeder validierten Nische: Wie sähe die Medium-Content-Version aus? Diese Version ist meist das eigentliche Geschäft.",
+            ],
+            bullets: [
+              "Medium-Content = funktionaler Innenteil + Lehrtext.",
+              "Rechtfertigt 9,99-14,99 und widersteht der Vorlagen-Konkurrenz.",
+              "KI-Entwurf beseitigt den Schreibengpass, der den Aufstiegspfad schützte.",
+              "Standardfrage pro Nische: Wie sieht die Medium-Content-Version aus?",
+            ],
+          },
+        ],
+        checklist: [
+          "Nische besteht den Grabentest: der Innenteil erfordert Anwendungswissen.",
+          "Nachfrage per Autovervollständigung verifiziert; Seite-eins-Konkurrenz bewertet.",
+          "Workflow recherchiert; Felder kodieren echte Praxis.",
+          "100-150 Seiten, ohne Beschnitt, Standardformat; Seiten handschriftlich im Druck getestet.",
+          "Cover besteht den Thumbnail-Test; Anwendungsfall sofort lesbar.",
+          "Low-Content-Häkchen bei der KDP-Einrichtung ehrlich gesetzt.",
+          "Keywords aus Innenteil-Feldern und Geschenkwinkeln gewonnen.",
+          "Medium-Content-Aufstieg für jede validierte Nische geprüft.",
+        ],
+        faq: [
+          {
+            question: "Sind Low-Content-Bücher auf KDP noch profitabel?",
+            answer:
+              "Generische nicht — diese Segmente sind endgültig gesättigt. Zweckspezifische Innenteile für spezifische Zielgruppen (Aktivitäts-Logs, Berufsplaner, Zustands-Tracker) verkaufen sich weiterhin stetig, und Medium-Content-Aufwertungen dieser Nischen sind wirklich verteidigbar.",
+          },
+          {
+            question: "Wie viel verdienen Low-Content-Bücher pro Verkauf?",
+            answer:
+              "Ein typisches 7,99-Low-Content-Taschenbuch mit 120 Seiten bringt nach Druck bei 60 % Tantieme rund 2,50. Medium-Content-Versionen zu 11,99-14,99 verdoppeln das ungefähr — das stärkste Argument für den Aufstiegspfad.",
+          },
+          {
+            question: "Brauche ich Designkenntnisse fürs Low-Content-Publishing?",
+            answer:
+              "Sie brauchen Layoutkompetenz mehr als künstlerisches Talent: saubere Tabellen, lesbare Typografie, nutzbare Feldgrößen. Von Canva bis InDesign-Vorlagen erledigen Tools die Mechanik; der Differenzierer ist, den Anwendungsfall gut genug zu verstehen, um die richtigen Felder zu entwerfen.",
+          },
+          {
+            question: "Was unterscheidet Low-Content- von Medium-Content-Büchern?",
+            answer:
+              "Low-Content-Innenteile sind funktional mit minimalem Text (Linien, Raster, Felder). Medium-Content fügt substanzielles Geschriebenes hinzu — Leitfäden, Anleitungen, Lehrabschnitte — was Preisdecken hebt, die Blick-ins-Buch-Funktion freischaltet und eine Differenzierung schafft, die Vorlagen nicht kopieren können.",
+          },
+          {
+            question: "Schadet die KDP-Low-Content-Deklaration den Verkäufen?",
+            answer:
+              "Sie entfernt die Blick-ins-Buch-Vorschau und manche Kategorieoptionen, was die Auffindbarkeit leicht beeinflusst — aber sie ist Pflicht für qualifizierende Bücher. Medium-Content-Bücher mit echten Textabschnitten deklarieren sich nicht als Low-Content und behalten den vollen Funktionsumfang.",
           },
         ],
       },

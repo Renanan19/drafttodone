@@ -346,6 +346,340 @@ export const aiWritingSeoPosts: BlogPost[] = [
           },
         ],
       },
+      it: {
+        slug: "scrivere-un-libro-con-ia-guida-completa",
+        title: "Scrivere un libro con l'IA: il metodo completo 2026, dall'idea al manoscritto finito",
+        description:
+          "Un metodo pratico, passo dopo passo, per scrivere un vero libro con l'IA: scelta della nicchia, piano dettagliato, stesura capitolo per capitolo, passate di revisione, controllo qualità e gli errori che rendono illeggibili i libri IA.",
+        keywords: [
+          "scrivere un libro con l'IA",
+          "IA per scrivere un libro",
+          "scrivere un libro con ChatGPT",
+          "generatore di libri IA",
+          "manoscritto IA",
+          "libro scritto da intelligenza artificiale",
+          "pubblicare un libro IA",
+          "scrittura assistita da IA",
+        ],
+        category: "Scrittura IA",
+        intro: [
+          "Scrivere un libro con l'IA non è più un esperimento. Nel 2026 è una questione di metodo: chi ottiene buoni risultati usa l'IA come motore di stesura dentro un processo strutturato; chi ottiene testi illeggibili incolla un solo prompt in un chatbot e spera.",
+          "La differenza non è il modello, è il metodo. Un libro è un argomento lungo e coerente, e i modelli linguistici eccellono a livello di paragrafo ma restano deboli in memoria, struttura e autocritica. Il processo qui sotto compensa esattamente queste debolezze.",
+          "Questa guida copre l'intera pipeline — idea, piano dettagliato, stesura dei capitoli, revisione, controlli qualità e preparazione alla pubblicazione — e funziona con un chatbot generalista, uno script API o una pipeline dedicata come DraftToDone che esegue ogni passaggio per voi.",
+        ],
+        sections: [
+          {
+            id: "perche-un-prompt-fallisce",
+            title: "Perché « scrivimi un libro » fallisce sempre",
+            body: [
+              "Un prompt unico non può produrre un libro degno di lettura, perché il modello non ha alcun piano a cui restare fedele. Ripete le idee, si contraddice tra i capitoli, deriva nel tono e riempie le sezioni deboli di generalità. Il lettore se ne accorge in due pagine, e le recensioni Amazon non perdonano.",
+              "La qualità sul formato lungo nasce dalla scomposizione: decidere cosa promette il libro, dividere quella promessa in capitoli con una missione ciascuno, poi scrivere ogni capitolo con il piano e i riassunti dei capitoli precedenti nel contesto. Ogni pipeline professionale — compresa la nostra — è una variazione di questo ciclo.",
+              "Trattate il modello come un redattore junior veloce e instancabile. Ha bisogno di un brief, di una scaletta, di note di riferimento e di un editor. Dategli questi quattro elementi e il risultato cambia categoria.",
+            ],
+            bullets: [
+              "Il prompt unico produce ripetizioni, contraddizioni e riempitivo.",
+              "La scomposizione (piano → capitoli → revisione) rende leggibili i libri IA.",
+              "Il modello scrive; struttura e controlli qualità sono il vero prodotto.",
+              "Prevedete da 3 a 5 passate distinte, non una generazione unica.",
+            ],
+          },
+          {
+            id: "scegliere-argomento",
+            title: "Passo 1 — Scegliere un argomento che i lettori già cercano",
+            body: [
+              "L'IA elimina il collo di bottiglia della scrittura: la scelta dell'argomento diventa quindi la decisione con la leva più alta. Un libro perfettamente scritto su un tema che nessuno cerca non vende nulla. Prima di scrivere, verificate che lettori reali comprino libri in quella nicchia.",
+              "Per la saggistica, lo schema affidabile è un problema preciso per un pubblico preciso: « meal prep per infermiere del turno di notte » batte « mangiare sano ». Controllate i suggerimenti di ricerca Amazon, la classifica di vendita dei primi 10 libri della categoria candidata e la presenza di ricavi visibili (una classifica sotto ~100.000 nello store è un buon primo filtro).",
+              "Scrivete prima una promessa in una frase: « Dopo questo libro, un [lettore preciso] saprà [risultato preciso]. » Ogni capitolo deve servire quella frase. Se non riuscite a scriverla, il libro non è pronto per la stesura.",
+            ],
+            bullets: [
+              "Validate la domanda prima di scrivere: suggerimenti Amazon, bestseller di categoria, classifica.",
+              "Problema preciso + pubblico preciso battono i temi ampi.",
+              "La promessa in una frase diventa la spina dorsale del piano.",
+              "Evitate le nicchie dominate da forti brand d'autore senza una chiara differenziazione.",
+            ],
+          },
+          {
+            id: "piano-dettagliato",
+            title: "Passo 2 — Costruire un piano dettagliato prima di generare un solo capitolo",
+            body: [
+              "Il piano dettagliato è il contratto che l'IA deve rispettare: titolo di lavoro, sottotitolo, profilo del lettore, guida al tono e un piano capitolo per capitolo dove ognuno riceve un obiettivo, 3-6 punti chiave e una transizione verso il successivo. Dieci minuti di piano risparmiano ore di revisione.",
+              "Generate il piano con l'IA, ma correggetelo a mano. È qui che il vostro giudizio è insostituibile: eliminate i capitoli che si ripetono, riordinate per una progressione logica e assicuratevi che il libro avanzi verso la promessa invece di girarci attorno.",
+              "Decidete la lunghezza onestamente. Una guida pratica utile conta tipicamente 25.000-45.000 parole (10-14 capitoli). Gonfiare a 70.000 parole non aiuta nessuno e si vede subito nelle recensioni. Il numero di pagine conta per il prezzo del cartaceo, ma mantenere la promessa conta di più.",
+            ],
+            bullets: [
+              "Piano dettagliato = titolo, sottotitolo, profilo lettore, tono, capitoli con obiettivi e punti chiave.",
+              "Generato dall'IA, corretto a mano — è qui che il libro viene davvero progettato.",
+              "Un capitolo, una missione; unite o tagliate ciò che si sovrappone.",
+              "Puntate a 25.000-45.000 parole per la saggistica pratica; mai gonfiare.",
+            ],
+          },
+          {
+            id: "stesura",
+            title: "Passo 3 — Scrivere capitolo per capitolo con un contesto scorrevole",
+            body: [
+              "Scrivete un capitolo alla volta. Ogni generazione deve ricevere: il piano dettagliato, un breve riassunto di ogni capitolo già scritto, e l'obiettivo del capitolo in corso con i suoi punti chiave. Questo « contesto scorrevole » mantiene coerenti terminologia, esempi e tono su 200 pagine.",
+              "Esigete esplicitamente materiale concreto: esempi, numeri, procedure passo passo, mini casi di studio, errori comuni. La prosa IA generica nasce da prompt generici. L'istruzione « includi due esempi realistici con numeri e un errore frequente » trasforma un capitolo.",
+              "Tenete un foglio di stile — termini preferiti, espressioni vietate, persona e tempo verbale, convenzioni di formattazione — e inseritelo in ogni prompt. Un modello segue un foglio di stile molto più fedelmente di un vago « mantieni lo stesso tono ».",
+            ],
+            bullets: [
+              "Un capitolo per generazione, con piano + riassunti dei capitoli precedenti nel contesto.",
+              "Esigete concretezza: esempi, numeri, procedure, errori tipici.",
+              "Mantenete un foglio di stile inserito in ogni prompt.",
+              "Salvate ogni capitolo subito; la cronologia della chat non è un archivio.",
+            ],
+          },
+          {
+            id: "revisione",
+            title: "Passo 4 — Revisionare con passate dedicate, non con una riscrittura globale",
+            body: [
+              "La revisione è dove i libri IA si vincono. Eseguite passate separate con obiettivi separati: una passata di struttura (ogni capitolo fa il suo lavoro, nell'ordine giusto?), una di ridondanza (l'IA adora rispiegare), una fattuale (verificate voi stessi ogni affermazione, statistica e nome proprio) e una di voce (eliminate le cautele inutili, variate il ritmo, cacciate le formule che tutti i modelli abusano).",
+              "L'IA può assistere ogni passata — « elenca tutte le idee ripetute tra questi due capitoli » è un prompt eccellente — ma la decisione di accettare o rifiutare resta umana. Il flusso più rapido: correzioni proposte dall'IA, validate a lotti.",
+              "Leggete ad alta voce almeno l'introduzione, un capitolo centrale e la conclusione. Una cadenza IA goffa che sopravvive alla lettura silenziosa raramente sopravvive alla lettura ad alta voce.",
+            ],
+            bullets: [
+              "Passate separate: struttura, ridondanza, fatti, voce.",
+              "Verificate ogni affermazione fattuale voi stessi — i modelli affermano i loro errori con sicurezza.",
+              "Cacciate le formule tipiche e la ripetizione di idee.",
+              "Leggete i capitoli chiave ad alta voce prima di dichiarare finito il manoscritto.",
+            ],
+          },
+          {
+            id: "controlli-qualita",
+            title: "Passo 5 — Applicare controlli qualità bloccanti prima di pubblicare",
+            body: [
+              "Definite soglie misurabili che il manoscritto deve superare: numero di parole effettivamente consegnate, numero minimo di capitoli, zero statistiche non verificate, zero testo segnaposto, una rilettura umana completa. Una soglia mancata blocca la pubblicazione — non è una semplice nota.",
+              "È esattamente come funzionano le pipeline di produzione. DraftToDone, per esempio, rifiuta di considerare finito un libro se il manoscritto scende sotto le sue soglie di parole e capitoli — la generazione riparte invece di far pagare un libro difettoso. Adottate la stessa disciplina manualmente: una checklist impossibile da aggirare.",
+              "Preparate poi il pacchetto di pubblicazione: titolo e sottotitolo con parole chiave ricercate, una descrizione che vende la promessa, 7 parole chiave KDP, 2-3 categorie e una copertina leggibile in formato miniatura. Il manoscritto è metà del prodotto; metadati e copertina sono l'altra metà.",
+            ],
+            bullets: [
+              "Soglie bloccanti: parole, capitoli, zero riempitivo, zero affermazioni non verificate, rilettura completa.",
+              "Un controllo fallito blocca la pubblicazione — senza eccezioni.",
+              "Preparate i metadati (titolo, descrizione, parole chiave, categorie) con la stessa cura del testo.",
+              "Dichiarate il contenuto generato dall'IA a KDP quando richiesto — vedi la nostra guida dedicata.",
+            ],
+          },
+          {
+            id: "strumenti",
+            title: "Chatbot, script API o pipeline completa: scegliere gli strumenti",
+            body: [
+              "Un chatbot va bene per un primo libro: economico, completamente manuale e formativo. Il prezzo: ore di copia-incolla, contesto perso tra le sessioni, nessuna durabilità — chiudete la scheda a metà capitolo e tutto sparisce.",
+              "Uno script API automatizza il ciclo ed è la scelta giusta se vi piace mantenere codice: contesto scorrevole, ripartenze su errore e scrittura di file stanno in qualche centinaio di righe di Python. Pagate in tempo di installazione e in debug a ogni aggiornamento di modello.",
+              "Una pipeline dedicata esegue tutto il metodo — ricerca, piano, stesura con contesto scorrevole, revisione, controlli qualità, più copertina e PDF pronto per la stampa — lato server: un computer chiuso non fa mai perdere un libro. È la categoria di prodotto di DraftToDone: voi portate la nicchia, la pipeline porta la disciplina. Qualunque livello scegliate, il metodo di questa guida resta identico; cambia solo il grado di automazione.",
+            ],
+            bullets: [
+              "Chatbot: il più economico, completamente manuale, contesto fragile — ideale per imparare.",
+              "Script API: automatizzato, ma il codice e la sua manutenzione sono vostri.",
+              "Pipeline (DraftToDone): il metodo completo automatizzato lato server, con controlli qualità e file pronti per KDP.",
+              "Stesso metodo a ogni livello — l'automazione cambia le ore, non i passaggi.",
+            ],
+          },
+        ],
+        checklist: [
+          "Promessa in una frase scritta e validata contro la domanda reale su Amazon.",
+          "Piano dettagliato approvato da un umano: capitoli, obiettivi, punti chiave, guida al tono.",
+          "Ogni capitolo scritto con piano + riassunti dei capitoli precedenti nel contesto.",
+          "Foglio di stile applicato a tutte le generazioni.",
+          "Quattro passate di revisione completate: struttura, ridondanza, fatti, voce.",
+          "Tutte le statistiche e le affermazioni verificate manualmente.",
+          "Controlli qualità bloccanti superati: lunghezza, capitoli, zero riempitivo, rilettura completa.",
+          "Pacchetto metadati pronto: titolo, sottotitolo, descrizione, 7 parole chiave, categorie.",
+          "Decisione sulla dichiarazione IA presa secondo la politica KDP.",
+        ],
+        faq: [
+          {
+            question: "L'IA può davvero scrivere un libro intero?",
+            answer:
+              "L'IA può scrivere la bozza di un libro intero, ma non può progettarlo né garantirne la qualità. Con un piano dettagliato, un contesto scorrevole e passate di revisione umane, il risultato è un vero libro utile. Senza, è riempitivo. Il contributo umano si sposta dalla digitazione all'architettura e all'editing.",
+          },
+          {
+            question: "Quanto tempo serve per scrivere un libro con l'IA?",
+            answer:
+              "Con un flusso manuale in chatbot, contate 20-40 ore per una saggistica di 30.000 parole, in gran parte di revisione. Una pipeline automatizzata comprime la stesura in poche ore; revisione e verifica umane meritano comunque diverse sessioni concentrate.",
+          },
+          {
+            question: "È legale vendere libri scritti dall'IA su Amazon?",
+            answer:
+              "Sì. Amazon KDP accetta il contenuto generato dall'IA ma richiede di dichiararlo al momento della pubblicazione, e voi restate pienamente responsabili di qualità, accuratezza e rispetto della proprietà intellettuale. Un contenuto ingannevole o scadente può comunque essere rimosso.",
+          },
+          {
+            question: "Quale modello di IA è il migliore per scrivere libri?",
+            answer:
+              "Qualsiasi modello di frontiera attuale può scrivere buoni capitoli se riceve un piano e un contesto scorrevole. La scelta del modello conta meno del metodo: un processo disciplinato con un modello medio batte sistematicamente un prompt unico sul modello migliore.",
+          },
+          {
+            question: "I lettori capiranno che il libro è stato scritto con l'IA?",
+            answer:
+              "Lo capiranno se il testo somiglia a IA non editata: idee ripetute, affermazioni caute, nessun esempio concreto. Dopo vere passate di revisione e una verifica dei fatti, il lettore giudica una cosa sola: la promessa è mantenuta — esattamente come per un libro scritto a mano.",
+          },
+        ],
+      },
+      de: {
+        slug: "buch-schreiben-mit-ki-komplette-anleitung",
+        title: "Ein Buch mit KI schreiben: die komplette Methode 2026, von der Idee zum fertigen Manuskript",
+        description:
+          "Eine praktische Schritt-für-Schritt-Methode, um ein echtes Buch mit KI zu schreiben: Nischenwahl, Blueprint, Kapitelentwurf, Überarbeitungsdurchgänge, Qualitätskontrolle und die Fehler, die KI-Bücher unlesbar machen.",
+        keywords: [
+          "Buch schreiben mit KI",
+          "KI Buch schreiben",
+          "Buch mit ChatGPT schreiben",
+          "KI Buchgenerator",
+          "KI Manuskript",
+          "Buch von künstlicher Intelligenz geschrieben",
+          "KI Buch veröffentlichen",
+          "KI-gestütztes Schreiben",
+        ],
+        category: "KI-Schreiben",
+        intro: [
+          "Ein Buch mit KI zu schreiben ist kein Experiment mehr. 2026 ist es eine Methodenfrage: Wer gute Ergebnisse erzielt, nutzt KI als Schreibmaschine innerhalb eines strukturierten Prozesses; wer unlesbare Texte erhält, fügt einen einzigen Prompt in einen Chatbot ein und hofft.",
+          "Der Unterschied liegt nicht im Modell, sondern in der Methode. Ein Buch ist ein langes, in sich kohärentes Argument, und Sprachmodelle sind hervorragend auf Absatzebene, aber schwach in Gedächtnis, Struktur und Selbstkritik. Der folgende Prozess gleicht genau diese Schwächen aus.",
+          "Dieser Leitfaden deckt die gesamte Pipeline ab — Idee, Blueprint, Kapitelentwurf, Überarbeitung, Qualitätskontrollen und Veröffentlichungsvorbereitung — und funktioniert mit einem allgemeinen Chatbot, einem API-Skript oder einer dedizierten Pipeline wie DraftToDone, die jeden Schritt für Sie ausführt.",
+        ],
+        sections: [
+          {
+            id: "warum-ein-prompt-scheitert",
+            title: "Warum « schreib mir ein Buch » immer scheitert",
+            body: [
+              "Ein einzelner Prompt kann kein lesenswertes Buch erzeugen, weil das Modell keinen Plan hat, dem es treu bleiben kann. Es wiederholt Ideen, widerspricht sich zwischen Kapiteln, driftet im Ton und füllt schwache Abschnitte mit Allgemeinplätzen. Leser merken es nach zwei Seiten, und Amazon-Rezensionen sind gnadenlos.",
+              "Qualität im Langformat entsteht durch Zerlegung: entscheiden, was das Buch verspricht, dieses Versprechen in Kapitel mit je einer Aufgabe aufteilen, dann jedes Kapitel mit dem Plan und den Zusammenfassungen der vorherigen Kapitel im Kontext schreiben. Jede professionelle Pipeline — unsere eingeschlossen — ist eine Variation dieser Schleife.",
+              "Behandeln Sie das Modell wie einen schnellen, unermüdlichen Junior-Autor. Es braucht ein Briefing, eine Gliederung, Referenznotizen und einen Lektor. Geben Sie ihm diese vier Dinge, und das Ergebnis wechselt die Kategorie.",
+            ],
+            bullets: [
+              "Einzelprompts erzeugen Wiederholung, Widerspruch und Füllmaterial.",
+              "Zerlegung (Blueprint → Kapitel → Überarbeitung) macht KI-Bücher lesbar.",
+              "Das Modell entwirft; Struktur und Qualitätskontrollen sind das eigentliche Produkt.",
+              "Planen Sie 3-5 separate Durchgänge, nicht eine einzige Generierung.",
+            ],
+          },
+          {
+            id: "thema-waehlen",
+            title: "Schritt 1 — Ein Thema wählen, das Leser bereits suchen",
+            body: [
+              "KI beseitigt den Engpass des Schreibens — die Themenwahl wird damit zur Entscheidung mit dem größten Hebel. Ein perfekt geschriebenes Buch über ein Thema, das niemand sucht, verkauft nichts. Prüfen Sie vor dem Schreiben, ob echte Leser Bücher in der Nische kaufen.",
+              "Für Sachbücher ist das verlässliche Muster ein konkretes Problem für ein konkretes Publikum: « Meal Prep für Nachtschicht-Pflegekräfte » schlägt « gesunde Ernährung ». Prüfen Sie Amazons Suchvorschläge, den Verkaufsrang der Top 10 der Kandidatenkategorie und sichtbare Umsätze (ein Rang unter ~100.000 im Store ist ein guter erster Filter).",
+              "Schreiben Sie zuerst ein Versprechen in einem Satz: « Nach diesem Buch kann ein [konkreter Leser] [konkretes Ergebnis]. » Jedes Kapitel muss diesem Satz dienen. Wenn Sie ihn nicht schreiben können, ist das Buch nicht reif für den Entwurf.",
+            ],
+            bullets: [
+              "Nachfrage vor dem Schreiben validieren: Amazon-Vorschläge, Kategorie-Bestseller, Verkaufsrang.",
+              "Konkretes Problem + konkretes Publikum schlägt breite Themen.",
+              "Das Ein-Satz-Versprechen wird zum Rückgrat des Blueprints.",
+              "Nischen mit starken Autorenmarken ohne klare Differenzierung meiden.",
+            ],
+          },
+          {
+            id: "blueprint",
+            title: "Schritt 2 — Einen Blueprint bauen, bevor ein einziges Kapitel entsteht",
+            body: [
+              "Der Blueprint ist der Vertrag, den die KI einhalten muss: Arbeitstitel, Untertitel, Leserprofil, Tonleitfaden und ein Kapitelplan, in dem jedes Kapitel ein Ziel, 3-6 Kernpunkte und einen Übergang zum nächsten erhält. Zehn Minuten Blueprint sparen Stunden Überarbeitung.",
+              "Generieren Sie den Blueprint mit KI, aber redigieren Sie ihn von Hand. Hier ist Ihr Urteil unersetzlich: Streichen Sie Kapitel, die sich wiederholen, ordnen Sie für eine logische Progression und stellen Sie sicher, dass das Buch auf das Versprechen zusteuert, statt es zu umkreisen.",
+              "Entscheiden Sie die Länge ehrlich. Ein nützlicher Praxisratgeber hat typischerweise 25.000-45.000 Wörter (10-14 Kapitel). Auf 70.000 Wörter aufzublähen hilft niemandem und zeigt sich sofort in den Rezensionen. Die Seitenzahl zählt für den Taschenbuchpreis, aber das Einlösen des Versprechens zählt mehr.",
+            ],
+            bullets: [
+              "Blueprint = Titel, Untertitel, Leserprofil, Ton, Kapitelplan mit Zielen und Kernpunkten.",
+              "Mit KI generiert, von Hand redigiert — hier wird das Buch wirklich entworfen.",
+              "Ein Kapitel, eine Aufgabe; Überlappendes zusammenführen oder streichen.",
+              "25.000-45.000 Wörter für praktische Sachbücher anpeilen; nie aufblähen.",
+            ],
+          },
+          {
+            id: "entwurf",
+            title: "Schritt 3 — Kapitel für Kapitel mit rollendem Kontext schreiben",
+            body: [
+              "Schreiben Sie ein Kapitel pro Durchgang. Jede Generierung erhält: den Blueprint, eine kurze Zusammenfassung jedes bereits geschriebenen Kapitels und das Ziel des aktuellen Kapitels mit seinen Kernpunkten. Dieser « rollende Kontext » hält Terminologie, Beispiele und Ton über 200 Seiten konsistent.",
+              "Fordern Sie konkretes Material explizit an: Beispiele, Zahlen, Schritt-für-Schritt-Verfahren, kurze Fallstudien, häufige Fehler. Generische KI-Prosa entsteht aus generischen Prompts. Die Anweisung « füge zwei realistische Rechenbeispiele und einen häufigen Fehler ein » verwandelt ein Kapitel.",
+              "Führen Sie ein Styleguide-Blatt — bevorzugte Begriffe, verbotene Floskeln, Person und Tempus, Formatierungskonventionen — und fügen Sie es in jeden Prompt ein. Ein Modell folgt einem Styleguide weit zuverlässiger als einem vagen « behalte den Ton bei ».",
+            ],
+            bullets: [
+              "Ein Kapitel pro Generierung, mit Blueprint + Zusammenfassungen der vorherigen Kapitel im Kontext.",
+              "Konkretes einfordern: Beispiele, Zahlen, Verfahren, typische Fehler.",
+              "Styleguide pflegen und in jeden Prompt einfügen.",
+              "Jedes Kapitel sofort speichern; der Chatverlauf ist kein Speicher.",
+            ],
+          },
+          {
+            id: "ueberarbeitung",
+            title: "Schritt 4 — In dedizierten Durchgängen überarbeiten, nicht in einem großen Rewrite",
+            body: [
+              "Die Überarbeitung entscheidet über KI-Bücher. Führen Sie getrennte Durchgänge mit getrennten Zielen: einen Strukturdurchgang (erfüllt jedes Kapitel seine Aufgabe, in der richtigen Reihenfolge?), einen Redundanzdurchgang (KI liebt es, neu zu erklären), einen Faktendurchgang (prüfen Sie jede Behauptung, Statistik und jeden Namen selbst) und einen Stimmdurchgang (Absicherungen streichen, Satzrhythmus variieren, die Floskeln jagen, die jedes Modell überstrapaziert).",
+              "KI kann jeden Durchgang unterstützen — « liste jede wiederholte Idee in diesen zwei Kapiteln » ist ein hervorragender Prompt — aber die Annehmen/Ablehnen-Entscheidung bleibt menschlich. Der schnellste Workflow: KI-vorgeschlagene Korrekturen, in Stapeln geprüft.",
+              "Lesen Sie mindestens die Einleitung, ein mittleres Kapitel und den Schluss laut. Ein holpriger KI-Rhythmus, der das stille Lesen übersteht, übersteht selten das laute Lesen.",
+            ],
+            bullets: [
+              "Getrennte Durchgänge: Struktur, Redundanz, Fakten, Stimme.",
+              "Jede Tatsachenbehauptung selbst prüfen — Modelle behaupten Fehler mit Überzeugung.",
+              "Typische KI-Floskeln und Ideenwiederholungen jagen.",
+              "Schlüsselkapitel laut lesen, bevor das Manuskript für fertig erklärt wird.",
+            ],
+          },
+          {
+            id: "qualitaetskontrollen",
+            title: "Schritt 5 — Harte Qualitätskontrollen vor der Veröffentlichung anwenden",
+            body: [
+              "Definieren Sie messbare Schwellen, die das Manuskript überschreiten muss: tatsächlich gelieferte Wortzahl, Mindestkapitelzahl, null ungeprüfte Statistiken, null Platzhaltertext, eine vollständige menschliche Durchsicht. Eine verfehlte Schwelle blockiert die Veröffentlichung — sie ist keine bloße Anmerkung.",
+              "Genau so arbeiten Produktionspipelines. DraftToDone etwa weigert sich, ein Buch als fertig zu zählen, wenn das Manuskript unter seine Wort- und Kapitelschwellen fällt — die Generierung wiederholt sich, statt ein defektes Buch zu berechnen. Übernehmen Sie dieselbe Disziplin manuell: eine Checkliste, die man nicht überspringen kann.",
+              "Bereiten Sie dann das Veröffentlichungspaket vor: Titel und Untertitel mit gesuchten Keywords, eine Beschreibung, die das Versprechen verkauft, 7 KDP-Keyword-Felder, 2-3 Kategorien und ein Cover, das in Thumbnail-Größe klar lesbar ist. Das Manuskript ist die halbe Ware; Metadaten und Cover sind die andere Hälfte.",
+            ],
+            bullets: [
+              "Harte Schwellen: Wortzahl, Kapitelzahl, null Platzhalter, null ungeprüfte Behauptungen, vollständige Durchsicht.",
+              "Eine gescheiterte Kontrolle blockiert die Veröffentlichung — ohne Ausnahme.",
+              "Metadaten (Titel, Beschreibung, Keywords, Kategorien) mit derselben Sorgfalt wie den Text vorbereiten.",
+              "KI-generierte Inhalte bei KDP offenlegen, wo erforderlich — siehe unseren Richtlinien-Leitfaden.",
+            ],
+          },
+          {
+            id: "werkzeuge",
+            title: "Chatbot, API-Skript oder vollständige Pipeline: das Werkzeug wählen",
+            body: [
+              "Ein Chatbot reicht für ein erstes Buch: günstig, vollständig manuell, lehrreich. Der Preis: Stunden von Copy-Paste, verlorener Kontext zwischen Sitzungen, keine Dauerhaftigkeit — Tab mitten im Kapitel geschlossen, und alles ist weg.",
+              "Ein API-Skript automatisiert die Schleife und ist die richtige Wahl, wenn Sie gern Code pflegen: rollender Kontext, Wiederholungen bei Fehlern und Dateiausgabe passen in ein paar hundert Zeilen Python. Sie zahlen mit Einrichtungszeit und Debugging bei jedem Modell-Update.",
+              "Eine dedizierte Pipeline führt die ganze Methode aus — Recherche, Blueprint, Kapitelentwurf mit rollendem Kontext, Überarbeitung, Qualitätskontrollen, dazu Cover und druckfertiges PDF — serverseitig: Ein zugeklappter Laptop verliert nie ein Buch. Das ist die Produktkategorie von DraftToDone: Sie bringen die Nische, die Pipeline bringt die Disziplin. Welche Stufe Sie auch wählen, die Methode dieses Leitfadens bleibt dieselbe; nur der Automatisierungsgrad ändert sich.",
+            ],
+            bullets: [
+              "Chatbot: am günstigsten, vollständig manuell, fragiler Kontext — ideal zum Lernen.",
+              "API-Skript: automatisiert, aber Code und Wartung gehören Ihnen.",
+              "Pipeline (DraftToDone): die komplette Methode serverseitig automatisiert, mit Qualitätskontrollen und KDP-fertigen Dateien.",
+              "Dieselbe Methode auf jeder Stufe — Automatisierung ändert die Stunden, nicht die Schritte.",
+            ],
+          },
+        ],
+        checklist: [
+          "Ein-Satz-Versprechen geschrieben und gegen reale Amazon-Nachfrage validiert.",
+          "Blueprint von einem Menschen freigegeben: Kapitel, Ziele, Kernpunkte, Tonleitfaden.",
+          "Jedes Kapitel mit Blueprint + Zusammenfassungen der vorherigen Kapitel im Kontext entworfen.",
+          "Styleguide auf alle Generierungen angewendet.",
+          "Vier Überarbeitungsdurchgänge abgeschlossen: Struktur, Redundanz, Fakten, Stimme.",
+          "Alle Statistiken und Behauptungen manuell geprüft.",
+          "Harte Qualitätskontrollen bestanden: Länge, Kapitel, keine Platzhalter, vollständige Durchsicht.",
+          "Metadatenpaket bereit: Titel, Untertitel, Beschreibung, 7 Keywords, Kategorien.",
+          "KI-Offenlegungsentscheidung gemäß KDP-Richtlinie getroffen.",
+        ],
+        faq: [
+          {
+            question: "Kann KI wirklich ein ganzes Buch schreiben?",
+            answer:
+              "KI kann ein ganzes Buch entwerfen, aber sie kann es weder konzipieren noch für seine Qualität bürgen. Mit Blueprint, rollendem Kontext und menschlichen Überarbeitungsdurchgängen entsteht ein echtes, nützliches Buch. Ohne sie entsteht Füllmaterial. Der menschliche Beitrag verlagert sich vom Tippen zu Architektur und Lektorat.",
+          },
+          {
+            question: "Wie lange dauert es, ein Buch mit KI zu schreiben?",
+            answer:
+              "Mit einem manuellen Chatbot-Workflow rechnen Sie mit 20-40 Stunden für ein Sachbuch mit 30.000 Wörtern, überwiegend Überarbeitung. Eine automatisierte Pipeline komprimiert den Entwurf auf Stunden; menschliche Überarbeitung und Prüfung verdienen weiterhin mehrere konzentrierte Sitzungen.",
+          },
+          {
+            question: "Ist es legal, KI-geschriebene Bücher auf Amazon zu verkaufen?",
+            answer:
+              "Ja. Amazon KDP akzeptiert KI-generierte Inhalte, verlangt aber die Offenlegung beim Veröffentlichen, und Sie bleiben voll verantwortlich für Qualität, Richtigkeit und die Einhaltung des geistigen Eigentums. Irreführende oder minderwertige Inhalte können dennoch entfernt werden.",
+          },
+          {
+            question: "Welches KI-Modell ist das beste zum Bücherschreiben?",
+            answer:
+              "Jedes aktuelle Spitzenmodell kann gute Kapitel entwerfen, wenn es einen Blueprint und rollenden Kontext erhält. Die Modellwahl zählt weniger als die Methode: Ein disziplinierter Prozess mit einem mittleren Modell schlägt jedes Mal einen Einzelprompt auf dem besten Modell.",
+          },
+          {
+            question: "Werden Leser merken, dass das Buch mit KI geschrieben wurde?",
+            answer:
+              "Sie merken es, wenn der Text wie unbearbeitete KI liest: wiederholte Ideen, vorsichtige Behauptungen, keine konkreten Beispiele. Nach echten Überarbeitungsdurchgängen und Faktenprüfung beurteilen Leser nur eines: ob das Buch sein Versprechen hält — genau wie bei handgeschriebenen Büchern.",
+          },
+        ],
+      },
     },
   },
   {
@@ -661,6 +995,308 @@ export const aiWritingSeoPosts: BlogPost[] = [
           },
         ],
       },
+      it: {
+        slug: "migliori-strumenti-ia-per-scrivere-libri",
+        title: "I migliori strumenti IA per scrivere un libro nel 2026: chatbot, app di scrittura e pipeline complete a confronto",
+        description:
+          "Un confronto onesto tra le tre categorie di strumenti IA per scrivere libri — chatbot generalisti, app di scrittura IA e pipeline complete — con costi, punti di forza, limiti e criteri di scelta.",
+        keywords: [
+          "miglior software IA per scrivere un libro",
+          "strumenti IA scrittura libri",
+          "generatore di libri IA",
+          "app di scrittura IA",
+          "ChatGPT o software di scrittura",
+          "IA self-publishing",
+          "software scrittura libri 2026",
+          "strumenti pubblicazione IA",
+        ],
+        category: "Strumenti",
+        intro: [
+          "Cercate « software IA per scrivere un libro » e ottenete un muro di classifiche affiliate che allineano venti applicazioni quasi identiche. La risposta onesta è più semplice: esistono solo tre categorie di strumenti, e quella giusta dipende da quanti libri intendete pubblicare e da quanta parte del lavoro volete tenere per voi.",
+          "Questa guida confronta le categorie — chatbot generalisti, app di scrittura IA dedicate e pipeline di libro end-to-end — su ciò che conta davvero: qualità del testo, coerenza su un intero manoscritto, costo totale per libro finito, robustezza dei lavori lunghi e ciò che resta sulla vostra scrivania dopo.",
+          "Noi sviluppiamo DraftToDone, che appartiene alla terza categoria. Lo segnaliamo dove rilevante e manteniamo il confronto fattuale: ogni categoria vince davvero per un certo profilo di autore.",
+        ],
+        sections: [
+          {
+            id: "tre-categorie",
+            title: "Le tre categorie — e perché « lo strumento migliore » è la domanda sbagliata",
+            body: [
+              "Categoria uno: i chatbot generalisti (ChatGPT, Claude, Gemini). Pilotate ogni passaggio a mano in una conversazione. Categoria due: le app di scrittura IA (editor a formato lungo con assistenza IA). L'app conosce il vostro progetto, co-scrivete scena per scena. Categoria tre: le pipeline di libro (DraftToDone e simili), dove fornite la nicchia e i vincoli, e un flusso automatizzato produce manoscritto, copertina e file pronti per la stampa.",
+              "La domanda che determina la vostra categoria non è « quale IA scrive meglio » — i modelli di fondo si sovrappongono ampiamente tra le tre. È: quante ore volete passare per libro, e su quali passaggi volete mantenere il controllo creativo?",
+              "Un libro all'anno come progetto personale punta alle categorie uno o due. Una strategia di catalogo — diversi titoli al mese su più nicchie — è praticabile solo nella categoria tre, perché il collo di bottiglia smette di essere la scrittura e diventa l'operatività.",
+            ],
+            bullets: [
+              "Chatbot: manuali, conversazionali, ingresso più economico.",
+              "App di scrittura: co-scrittura con memoria di progetto, ideali per la narrativa.",
+              "Pipeline: una nicchia in ingresso, un libro pronto per KDP in uscita.",
+              "I modelli si sovrappongono; la vera differenza sono flusso di lavoro e ore.",
+            ],
+          },
+          {
+            id: "chatbot",
+            title: "Chatbot generalisti: massimo controllo, massimo lavoro",
+            body: [
+              "Un abbonamento chatbot da 20 €/mese può assolutamente produrre un libro — la nostra guida al metodo completo mostra il ciclo esatto. Mantenete il controllo creativo totale e imparate cos'è un buon prompt, il che vi rende migliori nel valutare ogni altro strumento.",
+              "I costi si nascondono nel lavoro e nella fragilità. Il contesto scorrevole si gestisce a mano: incollare i riassunti, ristabilire le regole di stile, ricaricare il materiale a ogni sessione. Le conversazioni lunghe degradano; le schede si bloccano; i capitoli si disperdono. Contate 20-40 ore di lavoro per libro, dominate dalla logistica del copia-incolla e dalla revisione.",
+              "Il chatbot è la scelta giusta per un primo libro, per i progetti molto personali in cui riscrivete comunque la maggior parte delle frasi, e per imparare il metodo prima di automatizzarlo.",
+            ],
+            bullets: [
+              "~20 €/mese, più le vostre ore — il costo reale è 20-40 ore per libro.",
+              "Controllo creativo totale e apprendimento del metodo.",
+              "Nessuna durabilità: contesto, file e avanzamento restano a vostro carico.",
+              "Ideale per: primo libro, progetti personali, apprendimento.",
+            ],
+          },
+          {
+            id: "app-scrittura",
+            title: "App di scrittura IA: co-scrivere con una memoria di progetto",
+            body: [
+              "Le app dedicate avvolgono il modello in un editor a formato lungo: memorizzano personaggi, scaletta e stile, e generano scena per scena o sezione per sezione. Per la narrativa in particolare, le schede personaggi coerenti e la generazione a livello di beat narrativo sono davvero utili.",
+              "Il rovescio: restate voi l'operatore. L'app ricorda il progetto, ma prendete centinaia di decisioni di generazione per libro, e tutto il lavoro extra-scrittura — copertina, impaginazione, metadati, file di pubblicazione — resta fuori dallo strumento. Gli abbonamenti vanno da 10 a 50 €/mese secondo i crediti di parole.",
+              "Le app di scrittura sono la scelta giusta per i romanzieri che vogliono l'IA come collaboratrice piuttosto che come fabbrica, e per chiunque la cui voce sia il prodotto.",
+            ],
+            bullets: [
+              "Memoria di progetto: scaletta, personaggi e stile conservati tra le sessioni.",
+              "Molto forti per l'artigianato narrativo; controllo creativo per sezione.",
+              "10-50 €/mese; copertina, impaginazione e metadati restano a voi.",
+              "Ideale per: romanzieri, saggistica con voce forte, IA-collaboratrice.",
+            ],
+          },
+          {
+            id: "pipeline",
+            title: "Pipeline di libro: entra la nicchia, esce un libro pubblicabile",
+            body: [
+              "Le pipeline automatizzano l'intero metodo: ricerca di nicchia, piano dettagliato, stesura capitolo per capitolo con contesto scorrevole, passate di revisione, controlli qualità, poi creazione della copertina e file pronti per KDP. L'unità di interazione è il libro, non il paragrafo. DraftToDone è la nostra implementazione: indicate una nicchia (o chiedete una sorpresa), scegliete la lingua, e ritirate manoscritto, copertina e PDF avvolgente pronto per la stampa a fine generazione.",
+              "Due proprietà separano le pipeline serie dai semplici involucri di prompt. Primo, la durabilità: la generazione gira lato server con punti di ripresa — un computer chiuso, un browser bloccato o un worker riavviato riprendono il lavoro invece di perderlo, e un libro fallito non deve mai essere addebitato. Secondo, i controlli qualità bloccanti: soglie minime di parole e capitoli che impediscono la consegna di un manoscritto magro.",
+              "I limiti onesti: rinunciate al controllo creativo a livello di paragrafo, e la scelta della nicchia come la rilettura umana finale restano compito vostro. Una pipeline disciplina la produzione; non sostituisce il giudizio su cosa pubblicare.",
+            ],
+            bullets: [
+              "Metodo completo automatizzato: ricerca → piano → capitoli → QA → copertina → PDF.",
+              "La durabilità conta: generazione server con riprese, nessun libro perso, fallimento non addebitato.",
+              "Controlli bloccanti impediscono la consegna di manoscritti magri.",
+              "Ideale per: editori di catalogo, multi-nicchia, economia per libro.",
+            ],
+          },
+          {
+            id: "costo-per-libro",
+            title: "Confrontate il costo per libro finito, non il prezzo dell'abbonamento",
+            body: [
+              "I prezzi degli abbonamenti ingannano perché i denominatori differiscono. Un piano chatbot da 20 € più 30 ore del vostro tempo costa caro appena il vostro tempo vale qualcosa: a 20 €/ora, quel primo libro costa 620 €. Un'app da 30 € più 15 ore dà circa 480 € con lo stesso calcolo. Una pipeline fatturata al libro finito rende il costo unitario esplicito invece di nasconderlo nelle vostre serate.",
+              "Integrate anche il tasso di abbandono. La verità brutale dei flussi manuali: la maggior parte dei progetti di libro IA muore a metà — il contesto si degrada, la montagna di revisione cresce, e il mezzo libro raggiunge la cartella delle bozze. Un flusso che finisce i libri in modo affidabile ha un valore economico oltre le ore risparmiate.",
+              "Contate infine i deliverable. Un manoscritto non è un libro pubblicabile. La copertina (50-300 € in outsourcing), l'impaginazione interna (30-100 € o altre ore) e il lavoro sui metadati sono costi reali che solo gli strumenti di categoria pipeline includono.",
+            ],
+            bullets: [
+              "Valorizzate le vostre ore a una tariffa reale; il flusso manuale è raramente l'opzione economica.",
+              "L'abbandono è il costo nascosto — un libro incompiuto costa tutto e non rende nulla.",
+              "Manoscritto ≠ libro: aggiungete copertina, impaginazione e metadati a ogni confronto.",
+              "Il prezzo al libro rende visibile l'economia unitaria; l'abbonamento la maschera.",
+            ],
+          },
+          {
+            id: "come-scegliere",
+            title: "Un albero decisionale semplice",
+            body: [
+              "Pubblicare un libro che porta la vostra voce personale? Chatbot o app di scrittura, più la guida al metodo, più pazienza. Le ore fanno parte del progetto.",
+              "Scrivere narrativa con l'IA come partner creativo? App di scrittura. La memoria di progetto e il controllo per scena sono fatti esattamente per questo.",
+              "Costruire un catalogo — più titoli di saggistica o di nicchia, eventualmente in più lingue, dove economia unitaria e affidabilità decidono se l'attività funziona? Pipeline. Valutate qualsiasi pipeline (la nostra compresa) su quattro domande: sopravvive alle interruzioni senza perdere il lavoro? Rifiuta di consegnare libri magri? Produce file davvero pronti per KDP? Il suo prezzo rende il margine per libro calcolabile in anticipo?",
+            ],
+            bullets: [
+              "Un libro personale → chatbot o app di scrittura.",
+              "Narrativa con controllo creativo → app di scrittura.",
+              "Economia di catalogo → pipeline.",
+              "Checklist pipeline: durabilità, controlli qualità, file pronti per KDP, costo per libro calcolabile.",
+            ],
+          },
+        ],
+        checklist: [
+          "Numero di libri all'anno realmente richiesto dal progetto deciso.",
+          "Le vostre ore contate a una tariffa realistica in ogni confronto.",
+          "Costo per libro finito confrontato, non il prezzo dell'abbonamento.",
+          "Durabilità verificata: cosa succede a un libro a metà generazione in caso di crash?",
+          "Controlli qualità verificati: lo strumento può consegnare un manoscritto magro?",
+          "Lista di ciò che resta dopo lo strumento: copertina, impaginazione, metadati, rilettura.",
+          "Conformità KDP dei file di output verificata prima di contarli come deliverable.",
+          "Rilettura umana finale mantenuta nel flusso, qualunque sia lo strumento.",
+        ],
+        faq: [
+          {
+            question: "ChatGPT basta per scrivere un libro?",
+            answer:
+              "Sì, con un metodo disciplinato: piano dettagliato prima, stesura capitolo per capitolo con riassunti scorrevoli, poi passate di revisione separate. Il modello basta; è il formato conversazione a limitare, al prezzo di 20-40 ore di orchestrazione manuale per libro.",
+          },
+          {
+            question: "Che differenza c'è tra un'app di scrittura IA e una pipeline di libro?",
+            answer:
+              "Un'app vi aiuta a scrivere — memorizza il progetto e genera i passaggi che dirigete. Una pipeline produce il libro — manoscritto, copertina e file di stampa — da un brief di nicchia, con controlli qualità invece di decisioni paragrafo per paragrafo. Le app ottimizzano l'artigianato; le pipeline ottimizzano la produttività e l'economia unitaria.",
+          },
+          {
+            question: "Quanto costa produrre un libro con l'IA?",
+            answer:
+              "Via chatbot: ~20 €/mese più 20-40 ore di lavoro, più 80-400 € di outsourcing per copertina e impaginazione. App di scrittura: simile con qualche ora in meno. Pipeline: un prezzo fisso per libro che include copertina e file di stampa. L'opzione più economica dipende interamente dal valore del vostro tempo.",
+          },
+          {
+            question: "Questi strumenti funzionano in italiano?",
+            answer:
+              "I modelli di frontiera scrivono bene nelle grandi lingue, ma la maggior parte delle app ottimizza interfaccia e prompt per l'inglese. Se pubblicate in italiano, verificate che lo strumento generi l'intero libro — testo di copertina e metadati compresi — nativamente nella lingua di destinazione.",
+          },
+          {
+            question: "Amazon rifiuterà i libri prodotti con questi strumenti?",
+            answer:
+              "Amazon accetta i libri generati dall'IA con dichiarazione al momento della pubblicazione. Rifiuti e rimozioni colpiscono la qualità e le violazioni delle politiche — contenuto magro, metadati ingannevoli, problemi di proprietà intellettuale — qualunque sia lo strumento usato. Controlli qualità e rilettura umana sono la vostra protezione.",
+          },
+        ],
+      },
+      de: {
+        slug: "beste-ki-tools-buch-schreiben-vergleich",
+        title: "Die besten KI-Tools zum Buchschreiben 2026: Chatbots, Schreib-Apps und komplette Pipelines im Vergleich",
+        description:
+          "Ein ehrlicher Vergleich der drei Kategorien von KI-Tools zum Buchschreiben — allgemeine Chatbots, KI-Schreib-Apps und End-to-End-Buchpipelines — mit Kosten, Stärken, Schwächen und Auswahlkriterien.",
+        keywords: [
+          "beste KI Software Buch schreiben",
+          "KI Tools Buch schreiben",
+          "KI Buchgenerator",
+          "KI Schreib-App",
+          "ChatGPT oder Schreibsoftware",
+          "KI Self-Publishing",
+          "Buchschreibsoftware 2026",
+          "KI Publishing Tools",
+        ],
+        category: "Tools",
+        intro: [
+          "Suchen Sie nach « KI-Software zum Buchschreiben », erhalten Sie eine Wand aus Affiliate-Listen mit zwanzig fast identischen Apps. Die ehrliche Antwort ist einfacher: Es gibt nur drei Kategorien von Werkzeugen, und die richtige hängt davon ab, wie viele Bücher Sie veröffentlichen wollen und wie viel des Workflows Sie selbst besitzen möchten.",
+          "Dieser Leitfaden vergleicht die Kategorien — allgemeine Chatbots, dedizierte KI-Schreib-Apps und End-to-End-Buchpipelines — anhand dessen, was wirklich zählt: Textqualität, Konsistenz über ein ganzes Manuskript, Gesamtkosten pro fertigem Buch, Robustheit langer Jobs und was danach auf Ihrem Schreibtisch landet.",
+          "Wir entwickeln DraftToDone, das zur dritten Kategorie gehört. Wir sagen es, wo relevant, und halten den Vergleich faktisch: Jede Kategorie gewinnt tatsächlich für einen bestimmten Autorentyp.",
+        ],
+        sections: [
+          {
+            id: "drei-kategorien",
+            title: "Die drei Kategorien — und warum « das beste Tool » die falsche Frage ist",
+            body: [
+              "Kategorie eins: allgemeine Chatbots (ChatGPT, Claude, Gemini). Sie steuern jeden Schritt von Hand in einer Konversation. Kategorie zwei: KI-Schreib-Apps (Langform-Editoren mit KI-Unterstützung). Die App kennt Ihr Projekt, Sie schreiben Szene für Szene gemeinsam. Kategorie drei: Buchpipelines (DraftToDone und ähnliche), bei denen Sie Nische und Vorgaben liefern und ein automatisierter Workflow Manuskript, Cover und druckfertige Dateien produziert.",
+              "Die Frage, die Ihre Kategorie bestimmt, ist nicht « welche KI schreibt am besten » — die zugrunde liegenden Spitzenmodelle überlappen sich stark über alle drei. Sie lautet: Wie viele Stunden wollen Sie pro Buch aufwenden, und über welche Schritte wollen Sie die kreative Kontrolle behalten?",
+              "Ein Buch pro Jahr als persönliches Projekt zeigt auf Kategorie eins oder zwei. Eine Katalogstrategie — mehrere Titel pro Monat über mehrere Nischen — ist nur in Kategorie drei tragfähig, weil der Engpass nicht mehr das Schreiben ist, sondern der Betrieb.",
+            ],
+            bullets: [
+              "Chatbots: manuell, konversationell, günstigster Einstieg.",
+              "Schreib-Apps: Co-Writing mit Projektgedächtnis, am besten für Belletristik.",
+              "Pipelines: Nische rein, KDP-fertiges Buch raus.",
+              "Die Modelle überlappen; der echte Unterschied sind Workflow und Stunden.",
+            ],
+          },
+          {
+            id: "chatbots",
+            title: "Allgemeine Chatbots: maximale Kontrolle, maximale Arbeit",
+            body: [
+              "Ein Chatbot-Abo für 20 €/Monat kann absolut ein Buch produzieren — unser Methodenleitfaden zeigt die exakte Schleife. Sie behalten die volle kreative Kontrolle und lernen, was gutes Prompting ist, was Sie besser darin macht, jedes andere Tool zu bewerten.",
+              "Die Kosten verstecken sich in Arbeit und Fragilität. Der rollende Kontext muss von Hand verwaltet werden: Zusammenfassungen einfügen, Stilregeln neu etablieren, Material in jeder Sitzung neu hochladen. Lange Chats degradieren; Browser-Tabs stürzen ab; Kapitel verstreuen sich über Konversationen. Rechnen Sie mit 20-40 Arbeitsstunden pro Buch, dominiert von Copy-Paste-Logistik und Überarbeitung.",
+              "Chatbots sind die richtige Wahl für ein erstes Buch, für sehr persönliche Projekte, bei denen Sie ohnehin die meisten Sätze umschreiben, und um die Methode zu lernen, bevor man sie automatisiert.",
+            ],
+            bullets: [
+              "~20 €/Monat plus Ihre Stunden — die echten Kosten sind 20-40 Stunden pro Buch.",
+              "Volle kreative Kontrolle und Methodenlernen.",
+              "Keine Dauerhaftigkeit: Kontext, Dateien und Fortschritt sind Ihre Aufgabe.",
+              "Am besten für: erstes Buch, persönliche Projekte, Methodenlernen.",
+            ],
+          },
+          {
+            id: "schreib-apps",
+            title: "KI-Schreib-Apps: Co-Writing mit Projektgedächtnis",
+            body: [
+              "Dedizierte Schreib-Apps legen einen Langform-Editor um das Modell: Sie speichern Figuren, Gliederung und Stil und generieren Szene für Szene oder Abschnitt für Abschnitt. Besonders für Belletristik sind konsistente Figurenblätter und Beat-genaue Generierung wirklich nützlich.",
+              "Der Kompromiss: Sie bleiben der Operator. Die App merkt sich das Projekt, aber Sie treffen Hunderte Generierungsentscheidungen pro Buch, und die Arbeit jenseits des Schreibens — Cover, Formatierung, Metadaten, Veröffentlichungsdateien — bleibt komplett außerhalb des Tools. Abos liegen je nach Wortkontingent bei 10-50 €/Monat.",
+              "Schreib-Apps sind die richtige Wahl für Romanautoren, die KI als Kollaborateurin statt als Fabrik wollen, und für alle, deren Stimme das Produkt ist.",
+            ],
+            bullets: [
+              "Projektgedächtnis: Gliederung, Figuren und Stil über Sitzungen hinweg gespeichert.",
+              "Stark fürs Belletristik-Handwerk; kreative Kontrolle pro Abschnitt.",
+              "10-50 €/Monat; Cover, Formatierung und Metadaten bleiben bei Ihnen.",
+              "Am besten für: Romanautoren, stimmgetriebene Sachbücher, KI-als-Kollaborateur.",
+            ],
+          },
+          {
+            id: "pipelines",
+            title: "Buchpipelines: die Nische geht rein, ein veröffentlichbares Buch kommt raus",
+            body: [
+              "Pipelines automatisieren die ganze Methode: Nischenrecherche, Blueprint, Kapitelentwurf mit rollendem Kontext, Überarbeitungsdurchgänge, Qualitätskontrollen, dann Coverdesign und KDP-fertige Dateien. Die Interaktionseinheit ist das Buch, nicht der Absatz. DraftToDone ist unsere Implementierung: Sie geben eine Nische an (oder lassen sich überraschen), wählen die Sprache und holen am Ende Manuskript, Cover und druckfertiges Umschlag-PDF ab.",
+              "Zwei Eigenschaften trennen ernsthafte Pipelines von Prompt-Hüllen. Erstens die Dauerhaftigkeit: Die Generierung läuft serverseitig mit Checkpoints — ein zugeklappter Laptop, ein abgestürzter Browser oder ein neu gestarteter Worker setzen den Job fort, statt ihn zu verlieren, und ein gescheitertes Buch darf nie berechnet werden. Zweitens harte Qualitätskontrollen: Mindestschwellen für Wörter und Kapitel, die die Lieferung eines dünnen Manuskripts blockieren.",
+              "Die ehrlichen Grenzen: Sie geben die kreative Kontrolle auf Absatzebene auf, und Nischenwahl plus finale menschliche Durchsicht bleiben Ihre Aufgabe. Eine Pipeline diszipliniert die Produktion; sie ersetzt nicht das Urteil darüber, was veröffentlicht werden soll.",
+            ],
+            bullets: [
+              "Komplette Methode automatisiert: Recherche → Blueprint → Kapitel → QA → Cover → Druck-PDF.",
+              "Dauerhaftigkeit zählt: serverseitige Jobs mit Checkpoints, keine verlorenen Bücher, Fehlschläge nicht berechnet.",
+              "Harte Qualitätskontrollen blockieren dünne Manuskripte, statt sie zu liefern.",
+              "Am besten für: Katalogverleger, mehrere Nischen, Pro-Buch-Ökonomie.",
+            ],
+          },
+          {
+            id: "kosten-pro-buch",
+            title: "Vergleichen Sie Kosten pro fertigem Buch, nicht Abopreise",
+            body: [
+              "Abopreise täuschen, weil die Nenner verschieden sind. Ein 20-€-Chatbot-Plan plus 30 Stunden Ihrer Zeit ist teuer, sobald Ihre Zeit etwas wert ist: Selbst bei 20 €/Stunde kostet das erste Buch 620 €. Eine 30-€-App plus 15 Stunden ergibt nach derselben Rechnung etwa 480 €. Eine Pipeline mit Preis pro fertigem Buch macht die Stückkosten explizit, statt sie in Ihren Abenden zu verstecken.",
+              "Rechnen Sie auch die Abbruchquote ein. Die brutale Wahrheit manueller Workflows: Die meisten KI-Buchprojekte sterben in der Mitte — der Kontext wird chaotisch, der Überarbeitungsberg wächst, und das halbe Buch landet im Entwurfsordner. Ein Workflow, der Bücher zuverlässig fertigstellt, hat einen ökonomischen Wert über die gesparten Stunden hinaus.",
+              "Zählen Sie schließlich die Liefergegenstände. Ein Manuskript ist kein veröffentlichbares Buch. Coverdesign (50-300 € extern), Innenlayout (30-100 € oder weitere Stunden) und Metadatenarbeit sind reale Kosten, die nur Tools der Pipeline-Kategorie einschließen.",
+            ],
+            bullets: [
+              "Ihre Stunden zu einem realen Satz bewerten; manuelle Workflows sind selten die günstige Option.",
+              "Abbruch ist der versteckte Kostenfaktor — unfertige Bücher kosten alles und bringen nichts.",
+              "Manuskript ≠ Buch: Cover, Formatierung und Metadaten in jeden Vergleich einrechnen.",
+              "Pro-Buch-Preise machen die Stückökonomie sichtbar; Abos verstecken sie.",
+            ],
+          },
+          {
+            id: "wie-waehlen",
+            title: "Ein einfacher Entscheidungsbaum",
+            body: [
+              "Ein Buch veröffentlichen, das Ihre persönliche Stimme trägt? Chatbot oder Schreib-App, plus Methodenleitfaden, plus Geduld. Die Stunden gehören zum Projekt.",
+              "Belletristik mit KI als kreativem Partner schreiben? Schreib-App. Projektgedächtnis und Szenenkontrolle sind genau dafür gebaut.",
+              "Einen Katalog aufbauen — mehrere Sach- oder Nischentitel, eventuell in mehreren Sprachen, wo Stückökonomie und Zuverlässigkeit entscheiden, ob das Geschäft funktioniert? Pipeline. Bewerten Sie jede Pipeline (unsere eingeschlossen) anhand von vier Fragen: Übersteht sie Unterbrechungen ohne Arbeitsverlust? Verweigert sie die Lieferung dünner Bücher? Produziert sie wirklich KDP-fertige Dateien? Macht ihr Preis Ihre Marge pro Buch im Voraus kalkulierbar?",
+            ],
+            bullets: [
+              "Ein persönliches Buch → Chatbot oder Schreib-App.",
+              "Belletristik mit kreativer Kontrolle → Schreib-App.",
+              "Katalogökonomie → Pipeline.",
+              "Pipeline-Checkliste: Dauerhaftigkeit, Qualitätskontrollen, KDP-fertige Dateien, kalkulierbare Kosten pro Buch.",
+            ],
+          },
+        ],
+        checklist: [
+          "Entschieden, wie viele Bücher pro Jahr der Plan wirklich erfordert.",
+          "Eigene Stunden in jedem Vergleich zu einem realistischen Satz gezählt.",
+          "Kosten pro fertigem Buch verglichen, nicht Abopreise.",
+          "Dauerhaftigkeit geprüft: Was passiert mit einem halb generierten Buch bei einem Absturz?",
+          "Qualitätskontrollen geprüft: Kann das Tool ein dünnes Manuskript liefern?",
+          "Liste dessen, was nach dem Tool übrig bleibt: Cover, Formatierung, Metadaten, Durchsicht.",
+          "KDP-Tauglichkeit der Ausgabedateien geprüft, bevor sie als Liefergegenstand zählen.",
+          "Finale menschliche Durchsicht im Workflow behalten, egal welches Tool.",
+        ],
+        faq: [
+          {
+            question: "Reicht ChatGPT, um ein Buch zu schreiben?",
+            answer:
+              "Ja, mit disziplinierter Methode: erst Blueprint, dann Kapitel für Kapitel mit rollenden Zusammenfassungen, dann getrennte Überarbeitungsdurchgänge. Das Modell reicht; das Konversationsformat ist die Grenze — zum Preis von 20-40 Stunden manueller Orchestrierung pro Buch.",
+          },
+          {
+            question: "Was ist der Unterschied zwischen einer KI-Schreib-App und einer Buchpipeline?",
+            answer:
+              "Eine App hilft Ihnen beim Schreiben — sie speichert das Projekt und generiert Passagen, die Sie dirigieren. Eine Pipeline produziert das Buch — Manuskript, Cover und Druckdateien — aus einem Nischen-Briefing, mit Qualitätskontrollen statt Absatz-für-Absatz-Entscheidungen. Apps optimieren das Handwerk; Pipelines optimieren Durchsatz und Stückökonomie.",
+          },
+          {
+            question: "Was kostet die Produktion eines Buchs mit KI?",
+            answer:
+              "Chatbot-Weg: ~20 €/Monat plus 20-40 Arbeitsstunden, plus 80-400 € extern für Cover und Formatierung. Schreib-App: ähnlich mit etwas weniger Stunden. Pipeline: ein fester Preis pro Buch inklusive Cover und Druckdateien. Die günstigste Option hängt vollständig vom Wert Ihrer Zeit ab.",
+          },
+          {
+            question: "Funktionieren diese Tools auf Deutsch?",
+            answer:
+              "Spitzenmodelle schreiben gut in den großen Sprachen, aber die meisten Schreib-Apps optimieren Oberfläche und Prompts für Englisch. Wenn Sie auf Deutsch veröffentlichen, prüfen Sie, ob das Tool das ganze Buch — einschließlich Covertext und Metadaten — nativ in der Zielsprache generiert.",
+          },
+          {
+            question: "Wird Amazon Bücher aus diesen Tools ablehnen?",
+            answer:
+              "Amazon akzeptiert KI-generierte Bücher mit Offenlegung bei der Veröffentlichung. Ablehnungen und Entfernungen zielen auf Qualität und Richtlinienverstöße — dünner Inhalt, irreführende Metadaten, IP-Probleme — unabhängig vom Tool. Qualitätskontrollen und menschliche Durchsicht sind Ihr Schutz.",
+          },
+        ],
+      },
     },
   },
   {
@@ -943,6 +1579,278 @@ export const aiWritingSeoPosts: BlogPost[] = [
             question: "Combien de livres IA puis-je publier par jour ?",
             answer:
               "KDP limite actuellement tous les comptes à trois nouveaux titres par jour, plafond introduit face à la montée du volume généré par IA. Un catalogue durable publie bien en dessous de ce rythme, avec des titres différenciés et passés au contrôle qualité.",
+          },
+        ],
+      },
+      it: {
+        slug: "politica-contenuti-ia-amazon-kdp-dichiarazione",
+        title: "La politica di Amazon KDP sui contenuti IA spiegata: cosa dichiarare, cosa è permesso e cosa fa rimuovere un libro",
+        description:
+          "Una guida chiara alle regole di Amazon KDP per i libri generati o assistiti dall'IA: la questione della dichiarazione, la distinzione che decide tutto, i limiti di volume, i veri motivi di rimozione e un flusso di pubblicazione conforme.",
+        keywords: [
+          "politica IA Amazon KDP",
+          "dichiarazione contenuti IA KDP",
+          "libri generati da IA regole Amazon",
+          "IA generata o assistita KDP",
+          "pubblicare libro IA su Amazon",
+          "linee guida contenuti KDP intelligenza artificiale",
+          "rimozione libro IA Amazon",
+        ],
+        category: "Conformità",
+        intro: [
+          "Amazon ha deciso la questione dei libri IA anni fa: il contenuto generato dall'IA è permesso su KDP. Ciò che inciampa gli editori non è un divieto — sono le regole di dichiarazione, l'asticella di qualità e una manciata di comportamenti che fanno chiudere account, non solo libri.",
+          "La politica ruota attorno a una sola distinzione — generato dall'IA contro assistito dall'IA — e sbagliarla in entrambe le direzioni crea rischio: non dichiarare un contenuto generato viola le regole che avete accettato, mentre il resto della politica si applica tramite le regole ordinarie di Amazon su qualità e contenuto ingannevole.",
+          "Questa guida percorre la distinzione, le domande del flusso di pubblicazione, i limiti di volume, ciò che innesca davvero le rimozioni, e una checklist di conformità da eseguire prima di ogni caricamento. Riflette la politica a metà 2026; verificate sempre le linee guida KDP in vigore, che Amazon aggiorna senza grandi annunci.",
+        ],
+        sections: [
+          {
+            id: "generato-o-assistito",
+            title: "La distinzione che decide tutto: generato dall'IA o assistito dall'IA",
+            body: [
+              "Le definizioni di Amazon sono funzionali. Un contenuto è generato dall'IA quando uno strumento di IA ha effettivamente creato il testo, le immagini o le traduzioni — anche se le avete poi rielaborate in modo sostanziale. Un contenuto è assistito dall'IA quando lo avete creato voi e avete usato l'IA per correggerlo, rifinirlo o migliorarlo.",
+              "La linea riguarda l'origine, non lo sforzo. Un capitolo scritto da un modello e poi profondamente riscritto da voi resta generato dall'IA secondo Amazon, perché lo strumento ha prodotto la creazione iniziale. Un capitolo che avete scritto voi e fatto stringere da un modello è assistito dall'IA.",
+              "Conseguenza: un libro prodotto con qualsiasi pipeline di stesura — cicli di chatbot, script, o un servizio come DraftToDone — contiene contenuto generato dall'IA e va dichiarato come tale. I libri in cui l'IA ha solo ritoccato la vostra prosa non richiedono alcuna dichiarazione.",
+            ],
+            bullets: [
+              "Generato dall'IA: lo strumento l'ha creato — testo, immagini o traduzioni — anche se molto editato dopo.",
+              "Assistito dall'IA: l'avete creato voi; l'IA l'ha rifinito. Nessuna dichiarazione richiesta.",
+              "Decide l'origine, non la quantità di rilavorazione.",
+              "I libri da pipeline sono per definizione generati dall'IA: dichiarateli.",
+            ],
+          },
+          {
+            id: "flusso-dichiarazione",
+            title: "Come funziona concretamente la dichiarazione",
+            body: [
+              "Alla creazione del titolo, KDP chiede se il libro contiene contenuto generato dall'IA. Se sì, precisate quali elementi — testo, immagini e/o traduzioni — tramite brevi domande sull'estensione dell'uso dell'IA e del vostro editing.",
+              "La dichiarazione è rivolta ad Amazon, non ai lettori: a metà 2026, Amazon non mostra alcuna etichetta IA sulla scheda prodotto. La paura di un badge visibile non è una ragione per rispondere in modo disonesto.",
+              "Rispondete con esattezza e andate avanti. La dichiarazione in sé non riduce la visibilità del libro in alcun modo documentato da Amazon; è il contenuto IA non dichiarato scoperto in seguito a creare problemi a livello di account, perché aggiunge una questione di onestà a una questione di qualità.",
+            ],
+            bullets: [
+              "Dichiarazione per titolo, alla pubblicazione: testo, immagini, traduzioni.",
+              "Informa Amazon; nessun badge IA pubblico sulla scheda (a metà 2026).",
+              "Nessuna penalità di posizionamento documentata per una dichiarazione esatta.",
+              "Il contenuto IA non dichiarato scoperto dopo è trattato come violazione delle regole.",
+            ],
+          },
+          {
+            id: "motivi-rimozione",
+            title: "Cosa fa davvero rimuovere i libri IA",
+            body: [
+              "Le rimozioni colpiscono in massa qualità e inganno, non l'IA in sé. Gli schemi ricorrenti: contenuto magro o ripetitivo che non mantiene la promessa della scheda, titoli e metadati ingannevoli (titoli imbottiti di parole chiave, false serie), riassunti o « companion » di libri altrui presentati in modo confuso, spam di cataloghi quasi-duplicati, e libri che violano marchi o copiano l'immagine di autori viventi.",
+              "Amazon applica anche un limite di volume — attualmente tre nuovi titoli al giorno per account — introdotto esplicitamente in risposta all'ondata di contenuti IA. Le strategie di catalogo basate su decine di titoli quasi identici erano già morte prima di quel limite; non ha fatto che ufficializzarne la sepoltura.",
+              "La sospensione dell'account è il vero rischio da rispettare. Un blocco di libro si recupera; un account KDP chiuso perde tutti i titoli e il flusso di royalty accumulato. Sono i comportamenti sopra, ripetuti, a far salire la sanzione dal livello del titolo al livello dell'account.",
+            ],
+            bullets: [
+              "La sanzione colpisce contenuto magro, metadati ingannevoli, duplicati e proprietà intellettuale — non l'IA in sé.",
+              "Limite di volume: tre nuovi titoli al giorno per account.",
+              "Un blocco di libro si recupera; la chiusura dell'account è il rischio esistenziale.",
+              "Le violazioni ripetute salgono dal titolo all'account.",
+            ],
+          },
+          {
+            id: "responsabilita-pi",
+            title: "La conformità è vostra, compreso ciò che ha fatto il modello",
+            body: [
+              "Le regole KDP vi rendono responsabili di verificare che tutto il contenuto — generato dall'IA compreso — rispetti la politica dei contenuti, proprietà intellettuale inclusa. « L'ha prodotto il modello » non è una difesa riconosciuta da Amazon.",
+              "Punti di esposizione concreti: testo IA che riproduce passaggi riconoscibili, copertine IA che imitano la veste di un bestseller, pseudonimi confondibili con autori reali, ed errori fattuali in salute, finanza o diritto dove un contenuto sbagliato causa danni reali. Ognuno si verifica in pochi minuti prima del caricamento.",
+              "Fate della verifica una fase di pubblicazione, non un ripensamento: cercate frasi distintive del testo, fate una ricerca inversa d'immagine sulla copertina, controllate lo pseudonimo contro gli autori esistenti, e verificate ogni affermazione pratica nelle nicchie sensibili.",
+            ],
+            bullets: [
+              "Siete pienamente responsabili di proprietà intellettuale ed esattezza del contenuto IA.",
+              "Controllate passaggi di testo, somiglianza di copertina, collisioni di pseudonimo e fatti sensibili.",
+              "Salute, finanza e diritto meritano una passata di verifica rafforzata.",
+              "Pochi minuti di controllo prima del caricamento evitano gli scenari costosi.",
+            ],
+          },
+          {
+            id: "flusso-conforme",
+            title: "Un flusso di pubblicazione IA conforme",
+            body: [
+              "Integrate la dichiarazione nella pipeline invece di ricordarvene al momento del caricamento. Etichettate ogni libro alla creazione: quali elementi sono generati dall'IA, quali assistiti, quali umani. Le domande KDP richiedono allora dieci secondi, senza alcun arbitrato.",
+              "Abbinate dichiarazione e controlli qualità. Conformità ed esigenza di qualità convergono in pratica: un libro che supera soglie rigorose — vero numero di parole, vera struttura, fatti verificati, metadati onesti — è anche quello che sopravvive all'esame qualità di Amazon. DraftToDone integra entrambi: la generazione rifiuta di consegnare un manoscritto sotto le soglie, e l'app ricorda il passaggio di dichiarazione KDP per ogni libro generato.",
+              "Documentate il vostro processo. Se Amazon un giorno mette in discussione un titolo, un breve dossier — strumenti usati, editing svolto, verifiche fatte — trasforma uno scambio stressante in una formalità.",
+            ],
+            bullets: [
+              "Etichettate generato/assistito alla creazione, elemento per elemento.",
+              "I controlli qualità servono anche da protezione di conformità.",
+              "Conservate una traccia di un paragrafo per titolo.",
+              "Rispondete alle domande KDP dalle vostre note, non a memoria.",
+            ],
+          },
+        ],
+        checklist: [
+          "Libro classificato onestamente: generato o assistito dall'IA, per elemento (testo, immagini, traduzione).",
+          "Domande di dichiarazione KDP compilate con esattezza alla creazione del titolo.",
+          "Passaggi distintivi verificati contro contenuto riprodotto.",
+          "Ricerca inversa d'immagine effettuata sulla copertina.",
+          "Pseudonimo verificato contro autori reali e marchi registrati.",
+          "Affermazioni delle nicchie sensibili (salute, finanza, diritto) verificate.",
+          "Metadati onesti: niente imbottitura di parole chiave, niente false serie, niente promesse ingannevoli.",
+          "Limite dei tre titoli al giorno rispettato.",
+          "Traccia scritta del processo conservata per il titolo.",
+        ],
+        faq: [
+          {
+            question: "Amazon vieta i libri scritti dall'IA?",
+            answer:
+              "No. Il contenuto generato dall'IA è esplicitamente permesso su KDP. Amazon richiede una dichiarazione alla pubblicazione e applica al libro le stesse regole di qualità, proprietà intellettuale e contenuto di qualsiasi altro titolo.",
+          },
+          {
+            question: "I lettori vedranno che ho dichiarato contenuto IA?",
+            answer:
+              "A metà 2026, no. La dichiarazione informa Amazon; la scheda prodotto non porta alcuna etichetta IA. Le politiche evolvono: verificate le regole KDP in vigore al momento della pubblicazione.",
+          },
+          {
+            question: "Se riscrivo a fondo un testo redatto dall'IA, diventa « assistito dall'IA »?",
+            answer:
+              "No. La definizione di Amazon si basa sull'origine: un contenuto creato dallo strumento resta generato dall'IA, qualunque sia il vostro lavoro di editing successivo. « Assistito dall'IA » copre solo il contenuto che avete creato voi e che l'IA ha rifinito.",
+          },
+          {
+            question: "Dichiarare contenuto IA danneggia vendite o posizionamento?",
+            answer:
+              "Amazon non ha documentato alcun effetto di posizionamento legato alla dichiarazione, e nessun badge appare agli acquirenti. Ciò che danneggia i libri IA sono i fattori di qualità — contenuto magro e recensioni negative — non la casella di dichiarazione.",
+          },
+          {
+            question: "Quanti libri IA posso pubblicare al giorno?",
+            answer:
+              "KDP limita attualmente tutti gli account a tre nuovi titoli al giorno, tetto introdotto di fronte alla crescita del volume generato dall'IA. Un catalogo sostenibile pubblica ben al di sotto di quel ritmo, con titoli differenziati e passati al controllo qualità.",
+          },
+        ],
+      },
+      de: {
+        slug: "amazon-kdp-ki-richtlinie-offenlegung",
+        title: "Amazons KDP-Richtlinie für KI-Inhalte erklärt: was offenzulegen ist, was erlaubt ist und was Bücher entfernen lässt",
+        description:
+          "Ein klarer Leitfaden zu Amazons KDP-Regeln für KI-generierte und KI-gestützte Bücher: die Offenlegungsfrage, die entscheidende Unterscheidung, Volumengrenzen, echte Entfernungsgründe und ein konformer Veröffentlichungsworkflow.",
+        keywords: [
+          "Amazon KDP KI Richtlinie",
+          "KDP KI Offenlegung",
+          "KI generierte Bücher Amazon Regeln",
+          "KI-generiert oder KI-gestützt KDP",
+          "KI Buch auf Amazon veröffentlichen",
+          "KDP Inhaltsrichtlinien künstliche Intelligenz",
+          "Amazon KI Buch Entfernung",
+        ],
+        category: "Compliance",
+        intro: [
+          "Amazon hat die KI-Bücher-Frage vor Jahren entschieden: KI-generierte Inhalte sind auf KDP erlaubt. Was Verleger stolpern lässt, ist kein Verbot — es sind die Offenlegungsregeln, die Qualitätslatte und eine Handvoll Verhaltensweisen, die Konten entfernen lassen, nicht nur Bücher.",
+          "Die Richtlinie hängt an einer einzigen Unterscheidung — KI-generiert versus KI-gestützt — und sie in beide Richtungen falsch zu beantworten schafft Risiko: Generierte Inhalte nicht offenzulegen verletzt die Regeln, denen Sie zugestimmt haben, während der Rest der Richtlinie über Amazons gewöhnliche Qualitäts- und Irreführungsregeln durchgesetzt wird.",
+          "Dieser Leitfaden geht die Unterscheidung durch, die Fragen im Veröffentlichungsablauf, die Volumengrenzen, was Entfernungen wirklich auslöst, und eine Compliance-Checkliste für jeden Upload. Er spiegelt die Richtlinie Mitte 2026; prüfen Sie immer die aktuellen KDP-Inhaltsrichtlinien, die Amazon ohne große Ankündigung aktualisiert.",
+        ],
+        sections: [
+          {
+            id: "generiert-oder-gestuetzt",
+            title: "Die Unterscheidung, die alles entscheidet: KI-generiert vs. KI-gestützt",
+            body: [
+              "Amazons Definitionen sind funktional. Inhalt ist KI-generiert, wenn ein KI-Tool den Text, die Bilder oder die Übersetzungen tatsächlich erstellt hat — auch wenn Sie sie danach substanziell bearbeitet haben. Inhalt ist KI-gestützt, wenn Sie ihn selbst erstellt und KI zum Redigieren, Verfeinern oder Verbessern genutzt haben.",
+              "Die Grenze betrifft den Ursprung, nicht den Aufwand. Ein von einem Modell entworfenes und dann von Ihnen stark umgeschriebenes Kapitel bleibt nach Amazons Definition KI-generiert, weil das Tool die ursprüngliche Schöpfung produziert hat. Ein Kapitel, das Sie geschrieben und vom Modell straffen ließen, ist KI-gestützt.",
+              "Konsequenz: Ein Buch aus jeder Entwurfs-Pipeline — Chatbot-Schleifen, Skripte oder ein Dienst wie DraftToDone — enthält KI-generierte Inhalte und muss als solches deklariert werden. Bücher, in denen KI nur Ihre eigene Prosa überarbeitet hat, erfordern keine Offenlegung.",
+            ],
+            bullets: [
+              "KI-generiert: das Tool hat es erstellt — Text, Bilder oder Übersetzungen — auch bei starker Nachbearbeitung.",
+              "KI-gestützt: Sie haben es erstellt; KI hat verfeinert. Keine Offenlegung nötig.",
+              "Der Ursprung entscheidet, nicht der Umfang der Nachbearbeitung.",
+              "Pipeline-Bücher sind per Definition KI-generiert: offenlegen.",
+            ],
+          },
+          {
+            id: "offenlegungsablauf",
+            title: "Wie die Offenlegung im Veröffentlichungsablauf konkret funktioniert",
+            body: [
+              "Bei der Titelerstellung fragt KDP, ob Ihr Buch KI-generierte Inhalte enthält. Wenn ja, geben Sie an, welche Elemente — Text, Bilder und/oder Übersetzungen — über kurze Folgefragen zum Umfang der KI-Nutzung und Ihrer Bearbeitung.",
+              "Die Offenlegung richtet sich an Amazon, nicht an Leser: Mitte 2026 zeigt Amazon kein KI-Label auf der Produktseite. Die Angst vor einem sichtbaren Abzeichen ist kein Grund für unehrliche Antworten.",
+              "Antworten Sie korrekt und gehen Sie weiter. Die Offenlegung selbst drosselt die Sichtbarkeit Ihres Buchs in keiner von Amazon dokumentierten Weise; nicht deklarierte KI-Inhalte, die Amazon später erkennt, sind das Szenario, das Probleme auf Kontoebene schafft — weil es eine Ehrlichkeitsfrage zu einer Qualitätsfrage addiert.",
+            ],
+            bullets: [
+              "Offenlegung pro Titel bei der Einrichtung: Text, Bilder, Übersetzungen.",
+              "Sie informiert Amazon; kein öffentliches KI-Abzeichen auf der Seite (Stand Mitte 2026).",
+              "Keine dokumentierte Ranking-Strafe für korrekte Offenlegung.",
+              "Später entdeckte, nicht deklarierte KI-Inhalte gelten als Richtlinienverstoß.",
+            ],
+          },
+          {
+            id: "entfernungsgruende",
+            title: "Was KI-Bücher tatsächlich entfernen lässt",
+            body: [
+              "Entfernungen zielen überwiegend auf Qualität und Täuschung, nicht auf KI selbst. Die wiederkehrenden Muster: dünner oder repetitiver Inhalt, der das Versprechen der Produktseite nicht einlöst, irreführende Titel und Metadaten (mit Keywords vollgestopfte Titel, falsche Serien), verwirrend präsentierte Zusammenfassungen fremder Bücher, Katalog-Spam mit Fast-Duplikaten und Bücher, die Marken verletzen oder das Branding lebender Autoren kopieren.",
+              "Amazon setzt außerdem eine Volumengrenze durch — derzeit drei neue Titel pro Tag und Konto — die ausdrücklich als Reaktion auf die KI-getriebene Flut eingeführt wurde. Katalogstrategien aus Dutzenden fast identischer Titel waren schon vor dieser Grenze tot; sie hat das Grab nur formalisiert.",
+              "Die Kontosperrung ist das eigentliche Risiko. Einzelne Buchblockaden sind behebbar; ein gekündigtes KDP-Konto verliert jeden Titel und die aufgebaute Tantiemen-Pipeline. Die obigen Verhaltensweisen, wiederholt, eskalieren von der Titel- zur Kontoebene.",
+            ],
+            bullets: [
+              "Durchsetzung zielt auf dünnen Inhalt, irreführende Metadaten, Duplikate und IP — nicht auf KI an sich.",
+              "Volumengrenze: drei neue Titel pro Tag und Konto.",
+              "Buchblockaden sind behebbar; Kontokündigung ist das existenzielle Risiko.",
+              "Wiederholte Verstöße eskalieren vom Titel zum Konto.",
+            ],
+          },
+          {
+            id: "ip-verantwortung",
+            title: "Die Compliance gehört Ihnen — auch das, was das Modell getan hat",
+            body: [
+              "Die KDP-Richtlinien machen Sie dafür verantwortlich, dass alle Inhalte — KI-generierte eingeschlossen — der Inhaltsrichtlinie entsprechen, geistiges Eigentum inklusive. « Das Modell hat es produziert » ist keine Verteidigung, die Amazon anerkennt.",
+              "Praktische Risikopunkte: KI-Text, der erkennbare Passagen reproduziert, KI-Cover, die die Aufmachung eines Bestsellers imitieren, Pseudonyme, die mit realen Autoren verwechselbar sind, und Faktenfehler in Gesundheits-, Finanz- oder Rechtsthemen, wo falscher Inhalt echten Schaden anrichtet. Jeder Punkt ist in Minuten vor dem Upload prüfbar.",
+              "Machen Sie die Prüfung zu einem Veröffentlichungsschritt, nicht zu einem Nachgedanken: markante Sätze auf Treffer durchsuchen, das Cover rückwärtssuchen, das Pseudonym gegen existierende Autoren prüfen und jede handlungsrelevante Behauptung in sensiblen Nischen verifizieren.",
+            ],
+            bullets: [
+              "Sie sind voll verantwortlich für IP und Richtigkeit der KI-Ausgabe.",
+              "Textpassagen, Cover-Ähnlichkeit, Pseudonym-Kollisionen und sensible Fakten prüfen.",
+              "Gesundheit, Finanzen und Recht verdienen eine strengere Prüfrunde.",
+              "Minuten der Prüfung vor dem Upload verhindern die teuren Szenarien.",
+            ],
+          },
+          {
+            id: "konformer-workflow",
+            title: "Ein konformer KI-Veröffentlichungsworkflow",
+            body: [
+              "Bauen Sie die Offenlegung in die Pipeline ein, statt sich beim Upload daran zu erinnern. Markieren Sie jedes Buch bei der Erstellung: welche Elemente KI-generiert, welche KI-gestützt, welche menschlich sind. Die KDP-Fragen dauern dann zehn Sekunden und erfordern null Ermessensentscheidungen.",
+              "Koppeln Sie Offenlegung mit Qualitätskontrollen. Compliance und Qualitätsdurchsetzung konvergieren in der Praxis: Ein Buch, das harte Schwellen besteht — echte Wortzahl, echte Struktur, geprüfte Fakten, ehrliche Metadaten — ist zugleich das Buch, das Amazons Qualitätsprüfung übersteht. DraftToDone integriert beides: Die Generierung weigert sich, Manuskripte unter den Schwellen zu liefern, und die App erinnert bei jedem generierten Buch an den KDP-Offenlegungsschritt.",
+              "Dokumentieren Sie Ihren Prozess. Falls Amazon je einen Titel hinterfragt, verwandelt eine kurze Notiz — genutzte Tools, durchgeführtes Lektorat, erfolgte Prüfungen — einen stressigen Austausch in eine Formalität.",
+            ],
+            bullets: [
+              "KI-generiert vs. KI-gestützt bei der Erstellung markieren, pro Element.",
+              "Qualitätskontrollen dienen zugleich als Compliance-Schutz.",
+              "Eine Absatz-Notiz pro Titel führen.",
+              "KDP-Fragen aus Ihren Aufzeichnungen beantworten, nicht aus dem Gedächtnis.",
+            ],
+          },
+        ],
+        checklist: [
+          "Buch ehrlich klassifiziert: KI-generiert vs. KI-gestützt, pro Element (Text, Bilder, Übersetzung).",
+          "KDP-Offenlegungsfragen bei der Titelerstellung korrekt beantwortet.",
+          "Markante Passagen stichprobenartig auf reproduzierte Inhalte geprüft.",
+          "Cover per Rückwärtssuche gegen bestehende Bücher geprüft.",
+          "Pseudonym gegen reale Autoren und Marken geprüft.",
+          "Behauptungen in sensiblen Nischen (Gesundheit, Finanzen, Recht) faktengeprüft.",
+          "Ehrliche Metadaten: kein Keyword-Stuffing, keine falschen Serien, keine irreführenden Versprechen.",
+          "Innerhalb der Drei-Titel-pro-Tag-Grenze.",
+          "Prozessnotiz für den Titel aufbewahrt.",
+        ],
+        faq: [
+          {
+            question: "Verbietet Amazon KI-geschriebene Bücher?",
+            answer:
+              "Nein. KI-generierte Inhalte sind auf KDP ausdrücklich erlaubt. Amazon verlangt die Offenlegung bei der Veröffentlichung und hält Sie an dieselben Qualitäts-, IP- und Inhaltsregeln wie jedes andere Buch.",
+          },
+          {
+            question: "Sehen Leser, dass ich KI-Inhalte offengelegt habe?",
+            answer:
+              "Stand Mitte 2026: nein. Die Offenlegung informiert Amazon; Produktseiten tragen kein KI-Label. Richtlinien entwickeln sich — prüfen Sie die aktuellen KDP-Regeln, wenn Sie veröffentlichen.",
+          },
+          {
+            question: "Wird KI-entworfener Text durch starkes Redigieren zu KI-gestützt?",
+            answer:
+              "Nein. Amazons Definition hängt am Ursprung: Vom Tool erstellter Inhalt bleibt KI-generiert, egal wie stark Sie ihn danach bearbeiten. KI-gestützt umfasst nur Inhalte, die Sie erstellt und die KI verfeinert hat.",
+          },
+          {
+            question: "Schadet die KI-Offenlegung Verkäufen oder Ranking?",
+            answer:
+              "Amazon hat keinen Ranking-Effekt der Offenlegung dokumentiert, und Käufer sehen kein Abzeichen. Was KI-Büchern schadet, sind Qualitätsfaktoren — dünner Inhalt und schlechte Rezensionen — nicht das Offenlegungs-Häkchen.",
+          },
+          {
+            question: "Wie viele KI-Bücher kann ich pro Tag veröffentlichen?",
+            answer:
+              "KDP begrenzt derzeit alle Konten auf drei neue Titel pro Tag — eine Obergrenze, die angesichts des KI-generierten Volumens eingeführt wurde. Nachhaltige Kataloge veröffentlichen deutlich unter diesem Tempo, mit differenzierten, qualitätsgeprüften Titeln.",
           },
         ],
       },
@@ -1262,6 +2170,312 @@ export const aiWritingSeoPosts: BlogPost[] = [
             question: "Peut-on mettre en page un broché KDP dans Word ?",
             answer:
               "Oui — réglez la taille de page sur le format, configurez des marges en miroir avec la bonne reliure, incorporez les polices à l'export PDF, et vérifiez le résultat dans l'aperçu. Les outils de maquette dédiés et les pipelines automatisés produisent un rendu plus soigné, mais une sortie Word passe l'examen quand les chiffres sont justes.",
+          },
+        ],
+      },
+      it: {
+        slug: "impaginazione-libro-cartaceo-kdp",
+        title: "Impaginare un libro cartaceo per KDP: formato, margini, abbondanza e un PDF interno approvato al primo colpo",
+        description:
+          "Tutto ciò che KDP verifica nell'interno di un cartaceo: scelta del formato, calcolo del margine di rilegatura in base alle pagine, regole di abbondanza, font e incorporazione, calcolo del dorso e gli errori dietro la maggior parte dei rifiuti.",
+        keywords: [
+          "impaginazione libro KDP",
+          "formato libro cartaceo KDP",
+          "formato 6x9 libro",
+          "margini KDP rilegatura",
+          "abbondanza KDP",
+          "PDF pronto stampa KDP",
+          "file interno KDP",
+          "calcolo dorso libro KDP",
+          "impaginazione libro Amazon",
+        ],
+        category: "Impaginazione",
+        intro: [
+          "L'impaginazione del cartaceo è il punto in cui la maggior parte dei nuovi editori KDP riceve la prima email di rifiuto. Le regole sono meccaniche — formato, margini, abbondanza, font incorporati — ma interagiscono: il numero di pagine cambia il margine di rilegatura, il margine cambia il layout, e il layout cambia il numero di pagine.",
+          "La buona notizia: tutto il sistema si riduce a una manciata di numeri che potete fissare prima di impaginare una sola pagina. Questa guida vi dà quei numeri, l'ordine in cui applicarli, e gli errori precisi che generano la maggioranza dei rifiuti per « problema di file ».",
+          "Si applica ai cartacei standard a inchiostro nero, narrativa e saggistica. I libri per bambini, i formati ricchi di immagini e le copertine rigide aggiungono regole, ma la meccanica di base resta la stessa.",
+        ],
+        sections: [
+          {
+            id: "formato",
+            title: "Scegliere prima il formato — tutto il resto ne dipende",
+            body: [
+              "Il formato (trim size) è la dimensione fisica della pagina, e il 6 x 9 pollici (15,24 x 22,86 cm) è lo standard per una buona ragione: va bene per la maggior parte dei libri, tutti gli strumenti hanno modelli per lui, e il suo costo di stampa per pagina è identico ai formati più piccoli pur ospitando più parole per pagina — il che riduce il costo di stampa totale dello stesso manoscritto.",
+              "Usate il 5 x 8 o il 5,25 x 8 per la narrativa breve dove un dorso più spesso migliora il valore percepito; l'8,5 x 11 per i quaderni di esercizi; i formati quadrati per i libri per bambini. Una volta scelto, il formato è bloccato: cambiarlo dopo rifà scorrere tutto il libro e invalida la copertina.",
+              "Decidete inchiostro e carta insieme — inchiostro nero su carta crema per narrativa e saggistica classiche; carta bianca per il contenuto tecnico; l'inchiostro a colori moltiplica il costo di stampa e si giustifica raramente per un libro di testo.",
+            ],
+            bullets: [
+              "6 x 9 pollici: la scelta sicura — meno pagine e modelli universali.",
+              "Il numero di pagine guida il costo di stampa: ~0,012 $ per pagina più una base fissa; 250 pagine ≈ 4 $.",
+              "Formato, inchiostro e carta si bloccano insieme — decidete prima dell'impaginazione.",
+              "Cambiare formato dopo obbliga a rifare interno e copertina.",
+            ],
+          },
+          {
+            id: "margini",
+            title: "Margini e rilegatura: la tabella per numero di pagine che conta",
+            body: [
+              "KDP impone margini minimi, e il margine interno (rilegatura o « gutter ») cresce con il numero di pagine, perché un libro spesso si curva di più alla rilegatura. I minimi: esterno, alto e basso ad almeno 0,25 pollici senza abbondanza (0,375 con); rilegatura ad almeno 0,375 pollici fino a 150 pagine, 0,5 da 151 a 300, 0,625 da 301 a 500, 0,75 da 501 a 700, e 0,875 oltre.",
+              "I minimi non sono raccomandazioni. Un testo a 0,25 pollici dal bordo sembra soffocato e dozzinale; un cartaceo confortevole usa 0,5-0,75 pollici di margine esterno e una rilegatura un gradino sopra il minimo legale. La generosità qui è il miglioramento più economico della qualità percepita.",
+              "Poiché la rilegatura dipende dal numero di pagine e il numero di pagine dipende dal layout, lavorate in due passate: impaginate con la vostra migliore stima, verificate il conteggio finale contro la tabella delle rilegature, e correggete se avete superato una soglia.",
+            ],
+            bullets: [
+              "Rilegatura minima: 0,375 pollici (≤150 p.), 0,5 (151-300), 0,625 (301-500), 0,75 (501-700).",
+              "Esterno/alto/basso: ≥0,25 pollici (senza abbondanza) o ≥0,375 (con).",
+              "Impostate i margini sopra i minimi per un risultato professionale.",
+              "Due passate: layout → verifica del conteggio pagine → correzione.",
+            ],
+          },
+          {
+            id: "abbondanza",
+            title: "Abbondanza: quando serve e il calcolo esatto",
+            body: [
+              "L'abbondanza (bleed) permette alle immagini di arrivare fino al bordo rifilato della pagina. Un libro di solo testo va pubblicato senza abbondanza — tutto diventa più semplice. Vi serve solo se immagini, fondi di colore o aperture di capitolo devono toccare il bordo.",
+              "Con abbondanza, la dimensione di pagina del PDF aumenta di 0,125 pollici in alto, in basso e sul bordo esterno (non sul lato rilegatura): un 6 x 9 diventa 6,125 x 9,25. Gli elementi al vivo devono estendersi completamente fino a quel bordo allargato; gli altri rispettano i margini normali.",
+              "Il rifiuto classico: un file dichiarato « con abbondanza » la cui dimensione di pagina non è mai stata allargata, o immagini che si fermano a 1 mm dal bordo — entrambi producono filetti bianchi al taglio e una segnalazione automatica.",
+            ],
+            bullets: [
+              "Nessuna immagine al bordo pagina → pubblicate senza abbondanza.",
+              "Dimensione con abbondanza = formato + 0,125 pollici su tre lati: 6 x 9 → 6,125 x 9,25.",
+              "Gli elementi al vivo devono raggiungere completamente il bordo allargato.",
+              "Dichiarate l'abbondanza in KDP coerentemente con la costruzione del PDF.",
+            ],
+          },
+          {
+            id: "tipografia",
+            title: "Tipografia e PDF interno: font, corpi, incorporazione",
+            body: [
+              "Un corpo del testo in font con grazie da 10,5 a 12 pt con interlinea da 1,2 a 1,5 è lo standard del libro da libreria — Garamond, Palatino e simili si leggono senza sforzo in stampa. Riservate i bastoni a titoli e didascalie. Giustificate il testo con la sillabazione attiva, oppure assumete deliberatamente la bandiera a destra.",
+              "L'ordine delle pagine preliminari è convenzionale e i lettori notano gli scarti: occhietto, frontespizio, pagina del copyright, dedica, indice, poi il corpo che inizia su una pagina destra (dispari). Testatine e numeri di pagina spariscono dalle pagine di presentazione.",
+              "Esportate in PDF con tutti i font incorporati — i font non incorporati sono una causa principale di rifiuto — immagini a 300 DPI, senza crocini di taglio, senza protezione con password, e alla dimensione di pagina esatta vista sopra. L'anteprima KDP mostra allora precisamente ciò che la stampante produrrà: esaminate ogni pagina segnalata prima di approvare.",
+            ],
+            bullets: [
+              "Corpo con grazie 10,5-12 pt, interlinea 1,2-1,5; bastoni per i titoli.",
+              "Il corpo inizia su pagina destra; niente testatine sulle pagine di presentazione.",
+              "PDF: font incorporati, immagini 300 DPI, né crocini né sicurezza.",
+              "Passate sempre l'anteprima KDP e risolvete ogni avviso prima di pubblicare.",
+            ],
+          },
+          {
+            id: "dorso-copertina",
+            title: "Calcolo del dorso e come l'interno vincola la copertina",
+            body: [
+              "La copertina è un file separato, ma l'interno ne detta le dimensioni. Larghezza del dorso = numero di pagine × 0,002252 pollici per la carta bianca, o × 0,0025 per la crema. Un libro di 300 pagine su crema ha un dorso di 0,75 pollici; la copertina avvolgente completa vale allora larghezza della quarta + dorso + larghezza del piatto anteriore, più 0,125 pollici di abbondanza sui quattro lati.",
+              "Il testo sul dorso è permesso solo da 100 pagine in su, con almeno 0,0625 pollici di guardia per lato — i libri sottili lasciano semplicemente il dorso vuoto. Bloccate il numero di pagine prima di costruire la copertina: dieci pagine di correzioni tardive spostano il dorso abbastanza da disallineare il testo stampato.",
+              "Questo incastro spiega l'ordine di finitura: bloccare l'interno, calcolare il dorso, poi produrre la copertina. Le pipeline automatizzate fanno questo calcolo per voi — DraftToDone calcola le dimensioni dell'avvolgente dal numero di pagine finale reale quando genera il PDF di copertina — ma la dipendenza esiste qualunque sia lo strumento.",
+            ],
+            bullets: [
+              "Dorso = pagine × 0,002252 pollici (bianca) o 0,0025 (crema).",
+              "Testo sul dorso: ≥100 pagine, con guardia su entrambi i lati.",
+              "Le dimensioni della copertina derivano dall'interno finale — bloccate prima il conteggio pagine.",
+              "Correzioni tardive dell'interno invalidano silenziosamente una copertina già costruita.",
+            ],
+          },
+          {
+            id: "cause-rifiuto",
+            title: "La breve lista dietro la maggior parte dei rifiuti",
+            body: [
+              "Quasi tutti i rifiuti dell'interno risalgono a una manciata di cause: testo o numeri di pagina nelle zone di margine, font non incorporati, dimensione di pagina diversa dal formato dichiarato (o incoerenza di abbondanza), immagini sotto i 300 DPI segnalate come sfocate, e rilegatura troppo piccola per il numero di pagine.",
+              "Due problemi fuori dal file completano la lista: un indice i cui numeri di pagina non corrispondono più dopo le ultime correzioni, e uno scarto tra i metadati inseriti in KDP (formato, numero di pagine) e il file caricato.",
+              "Pianificate una sessione di anteprima rigorosa come fase di pubblicazione, non come reazione al rifiuto. Correggere prima del primo invio evita il ciclo esame-reinvio che può aggiungere giorni a un lancio.",
+            ],
+            bullets: [
+              "Cause principali: margini violati, font non incorporati, dimensione pagina errata, immagini a bassa risoluzione, rilegatura sottodimensionata.",
+              "Verificate i numeri dell'indice dopo l'ultima correzione, non prima.",
+              "Fate corrispondere esattamente metadati KDP e file: formato, abbondanza, pagine.",
+              "Una sessione di anteprima prima dell'invio vale più di giorni di reinvio.",
+            ],
+          },
+        ],
+        checklist: [
+          "Formato, inchiostro e carta scelti prima dell'inizio dell'impaginazione.",
+          "Margini impostati sopra i minimi KDP; rilegatura verificata contro il numero di pagine finale.",
+          "Decisione sull'abbondanza presa; pagina allargata a 6,125 x 9,25 (per un 6 x 9) se al vivo.",
+          "Corpo con grazie 10,5-12 pt, ordine dei preliminari corretto, corpo che inizia su pagina dispari.",
+          "PDF esportato con font incorporati, immagini 300 DPI, senza crocini né sicurezza.",
+          "Larghezza del dorso calcolata dal conteggio pagine finale; testo sul dorso solo se ≥100 pagine.",
+          "Dimensioni della copertina avvolgente derivate dall'interno bloccato.",
+          "Anteprima KDP eseguita; ogni avviso risolto prima dell'approvazione.",
+          "Metadati KDP (formato, abbondanza, pagine) rigorosamente conformi al file caricato.",
+        ],
+        faq: [
+          {
+            question: "Qual è il formato migliore per un cartaceo KDP?",
+            answer:
+              "Il 6 x 9 pollici per la maggior parte di romanzi e saggi: modelli universali e più parole per pagina, quindi meno pagine e un costo di stampa più basso per lo stesso manoscritto. Cambiate solo per una ragione di layout — quaderni di esercizi (8,5 x 11), narrativa breve (5 x 8), libri per bambini (formati quadrati).",
+          },
+          {
+            question: "KDP fa pagare la stampa, e l'impaginazione incide?",
+            answer:
+              "Il costo di stampa è dedotto dalla royalty di ogni vendita e cresce con il numero di pagine (circa una base fissa più ~0,012 $ per pagina a inchiostro nero). Una tipografia più densa e un formato 6 x 9 riducono il numero di pagine e aumentano direttamente la royalty per copia.",
+          },
+          {
+            question: "Serve l'abbondanza per un libro di solo testo?",
+            answer:
+              "No. L'abbondanza serve a immagini e colori che toccano il bordo pagina. Un interno di solo testo va costruito e dichiarato senza abbondanza — è più semplice ed elimina un'intera famiglia di errori di rifiuto.",
+          },
+          {
+            question: "Perché il mio file interno è stato rifiutato?",
+            answer:
+              "Le cause più frequenti: contenuto nei margini obbligatori, font non incorporati nel PDF, dimensione di pagina diversa dal formato o dall'impostazione di abbondanza dichiarati, immagini sotto i 300 DPI, o rilegatura troppo piccola per il numero di pagine. L'anteprima KDP segnala ciascuno di questi punti prima dell'invio, se la lasciate fare.",
+          },
+          {
+            question: "Si può impaginare un cartaceo KDP in Word?",
+            answer:
+              "Sì — impostate la dimensione di pagina sul formato, configurate margini speculari con la giusta rilegatura, incorporate i font all'esportazione PDF e verificate il risultato nell'anteprima. Gli strumenti di impaginazione dedicati e le pipeline automatizzate producono un risultato più curato, ma un'uscita Word supera l'esame quando i numeri sono giusti.",
+          },
+        ],
+      },
+      de: {
+        slug: "kdp-taschenbuch-formatierung-anleitung",
+        title: "KDP-Taschenbuch formatieren: Format, Ränder, Beschnitt und ein druckfertiger Buchblock, der die Prüfung beim ersten Mal besteht",
+        description:
+          "Alles, was KDP an einem Taschenbuch-Innenteil prüft: Formatwahl, Bundsteg-Berechnung nach Seitenzahl, Beschnittregeln, Schriften und Einbettung, Buchrücken-Berechnung und die Fehler hinter den meisten Ablehnungen.",
+        keywords: [
+          "KDP Taschenbuch Formatierung",
+          "KDP Buchformat",
+          "6x9 Buch formatieren",
+          "KDP Ränder Bundsteg",
+          "KDP Beschnitt",
+          "druckfertiges PDF KDP",
+          "KDP Innenteil Datei",
+          "KDP Buchrücken berechnen",
+          "Buchsatz für Amazon",
+        ],
+        category: "Formatierung",
+        intro: [
+          "Die Taschenbuch-Formatierung ist der Ort, an dem die meisten KDP-Neulinge ihre erste Ablehnungsmail erhalten. Die Regeln sind mechanisch — Format, Ränder, Beschnitt, eingebettete Schriften — aber sie wirken zusammen: Die Seitenzahl ändert den Bundsteg, der Bundsteg ändert das Layout, und das Layout ändert die Seitenzahl.",
+          "Die gute Nachricht: Das ganze System reduziert sich auf eine Handvoll Zahlen, die Sie festlegen können, bevor Sie eine einzige Seite setzen. Dieser Leitfaden gibt Ihnen diese Zahlen, die Reihenfolge ihrer Anwendung und die konkreten Fehler, die die Mehrheit der « Dateiproblem »-Ablehnungen erzeugen.",
+          "Er gilt für Standard-Taschenbücher mit schwarzer Tinte, Belletristik und Sachbuch. Kinderbücher, bildlastige Formate und Hardcover bringen Zusatzregeln, aber die Grundmechanik bleibt gleich.",
+        ],
+        sections: [
+          {
+            id: "format",
+            title: "Zuerst das Format wählen — alles andere hängt davon ab",
+            body: [
+              "Das Format (Trim Size) ist die physische Seitengröße, und 6 x 9 Zoll (15,24 x 22,86 cm) ist aus gutem Grund der Standard: Es passt für die meisten Bücher, jedes Tool hat Vorlagen dafür, und seine Druckkosten pro Seite sind identisch mit kleineren Formaten — bei mehr Wörtern pro Seite, was die Gesamtdruckkosten desselben Manuskripts senkt.",
+              "Nutzen Sie 5 x 8 oder 5,25 x 8 für kürzere Belletristik, wo ein dickerer Rücken den wahrgenommenen Wert hebt; 8,5 x 11 für Arbeitsbücher; quadratische Formate für Kinderbücher. Einmal gewählt, ist das Format fixiert: Ein späterer Wechsel lässt das ganze Buch neu umbrechen und macht das Cover ungültig.",
+              "Entscheiden Sie Tinte und Papier gleichzeitig — schwarze Tinte auf Cremepapier ist der Klassiker für Belletristik und Sachbuch; weißes Papier passt zu technischem Inhalt; Farbtinte vervielfacht die Druckkosten und lohnt sich für Textbücher selten.",
+            ],
+            bullets: [
+              "6 x 9 Zoll ist der sichere Standard: weniger Seiten und universelle Vorlagen.",
+              "Die Seitenzahl treibt die Druckkosten: ~0,012 $ pro Seite plus Festbetrag; 250 Seiten ≈ 4 $.",
+              "Format, Tinte und Papier sind aneinander gekoppelt — vor dem Satz entscheiden.",
+              "Späterer Formatwechsel bedeutet: Innenteil und Cover neu machen.",
+            ],
+          },
+          {
+            id: "raender",
+            title: "Ränder und Bundsteg: die Seitenzahl-Tabelle, die zählt",
+            body: [
+              "KDP erzwingt Mindestränder, und der Innenrand (Bundsteg) wächst mit der Seitenzahl, weil dickere Bücher sich an der Bindung stärker wölben. Die Minima: außen, oben und unten mindestens 0,25 Zoll ohne Beschnitt (0,375 mit); Bundsteg mindestens 0,375 Zoll bis 150 Seiten, 0,5 bei 151-300, 0,625 bei 301-500, 0,75 bei 501-700 und 0,875 darüber.",
+              "Minima sind keine Empfehlungen. Text 0,25 Zoll vom Rand wirkt gedrängt und billig; komfortable Taschenbücher nutzen 0,5-0,75 Zoll Außenrand und einen Bundsteg eine Stufe über dem rechtlichen Minimum. Großzügigkeit hier ist das günstigste Upgrade der wahrgenommenen Qualität.",
+              "Weil der Bundsteg von der Seitenzahl abhängt und die Seitenzahl vom Layout, arbeiten Sie in zwei Durchgängen: Setzen Sie das Buch mit Ihrer besten Schätzung, prüfen Sie die finale Zahl gegen die Bundsteg-Tabelle und korrigieren Sie, falls Sie eine Schwelle überschritten haben.",
+            ],
+            bullets: [
+              "Bundsteg-Minima: 0,375 Zoll (≤150 S.), 0,5 (151-300), 0,625 (301-500), 0,75 (501-700).",
+              "Außen/oben/unten: ≥0,25 Zoll (ohne Beschnitt) oder ≥0,375 (mit).",
+              "Ränder über den Minima ansetzen für professionelle Anmutung.",
+              "Zwei Durchgänge: Layout → Seitenzahl gegen Tabelle prüfen → anpassen.",
+            ],
+          },
+          {
+            id: "beschnitt",
+            title: "Beschnitt: wann er nötig ist und die exakte Rechnung",
+            body: [
+              "Beschnitt (Bleed) lässt Bilder bis zur beschnittenen Seitenkante laufen. Reine Textbücher sollten ohne Beschnitt erscheinen — das vereinfacht alles. Sie brauchen Beschnitt nur, wenn Bilder, Farbflächen oder Kapitelauftakte die Seitenkante berühren müssen.",
+              "Mit Beschnitt wächst die PDF-Seitengröße um 0,125 Zoll an Ober-, Unter- und Außenkante (nicht an der Bundseite): Ein 6 x 9-Buch wird 6,125 x 9,25. Angeschnittene Elemente müssen vollständig bis zu dieser vergrößerten Kante reichen; nicht angeschnittene respektieren die normalen Ränder.",
+              "Die klassische Ablehnung: eine als « mit Beschnitt » deklarierte Datei, deren Seitengröße nie vergrößert wurde, oder Bilder, die 1 mm vor der Kante enden — beides erzeugt weiße Streifen an der Schnittlinie und eine automatische Beanstandung.",
+            ],
+            bullets: [
+              "Keine Bilder an der Seitenkante → ohne Beschnitt veröffentlichen.",
+              "Seitengröße mit Beschnitt = Format + 0,125 Zoll an drei Seiten: 6 x 9 → 6,125 x 9,25.",
+              "Angeschnittene Elemente müssen die vergrößerte Kante vollständig erreichen.",
+              "Beschnitt in KDP konsistent mit dem PDF-Aufbau deklarieren.",
+            ],
+          },
+          {
+            id: "typografie",
+            title: "Typografie und das Innen-PDF: Schriften, Größen, Einbettung",
+            body: [
+              "Fließtext in einer Serifenschrift mit 10,5-12 pt und 1,2-1,5 Zeilenabstand ist der Buchhandelsstandard — Garamond, Palatino und Verwandte lesen sich gedruckt mühelos. Serifenlose Schriften gehören zu Überschriften und Bildunterschriften. Blocksatz mit aktivierter Silbentrennung, oder bewusst Flattersatz.",
+              "Die Reihenfolge der Titelei ist konventionell, und Leser bemerken Abweichungen: Schmutztitel, Titelseite, Impressum, Widmung, Inhaltsverzeichnis, dann der Hauptteil auf einer rechten (ungeraden) Seite. Kolumnentitel und Seitenzahlen entfallen auf Schauseiten.",
+              "Als PDF exportieren mit allen Schriften eingebettet — nicht eingebettete Schriften sind ein Hauptablehnungsgrund — Bilder mit 300 DPI, ohne Schnittmarken, ohne Passwortschutz, und in exakt der oben besprochenen Seitengröße. KDPs Vorschau zeigt dann genau, was die Druckerei produziert; prüfen Sie jede markierte Seite vor der Freigabe.",
+            ],
+            bullets: [
+              "Serifen-Fließtext 10,5-12 pt, Zeilenabstand 1,2-1,5; serifenlos für Überschriften.",
+              "Hauptteil beginnt auf rechter Seite; Schauseiten ohne Kolumnentitel und Seitenzahlen.",
+              "PDF: Schriften eingebettet, Bilder 300 DPI, keine Schnittmarken, keine Sicherung.",
+              "Immer KDPs Vorschau durchlaufen und jede Warnung vor der Veröffentlichung lösen.",
+            ],
+          },
+          {
+            id: "ruecken-cover",
+            title: "Rücken-Mathematik und wie der Innenteil das Cover bestimmt",
+            body: [
+              "Das Cover ist eine separate Datei, aber der Innenteil diktiert seine Maße. Rückenbreite = Seitenzahl × 0,002252 Zoll bei weißem Papier oder × 0,0025 bei Creme. Ein 300-Seiten-Buch auf Creme hat einen 0,75-Zoll-Rücken; der komplette Umschlag ist dann Rückseitenbreite + Rücken + Vorderseitenbreite, plus 0,125 Zoll Beschnitt an allen vier Seiten.",
+              "Rückentext ist erst ab 100 Seiten erlaubt und braucht mindestens 0,0625 Zoll Abstand auf jeder Seite — dünne Bücher lassen den Rücken einfach leer. Fixieren Sie die Seitenzahl, bevor das Cover gebaut wird; zehn Seiten später Korrekturen verschieben den Rücken genug, um gedruckten Text zu verschieben.",
+              "Diese Verzahnung erklärt die Fertigstellungsreihenfolge: Innenteil fixieren, Rücken berechnen, dann Cover produzieren. Automatisierte Pipelines übernehmen diese Arithmetik — DraftToDone berechnet die Umschlagmaße aus der tatsächlichen finalen Seitenzahl, wenn es das Druckcover-PDF generiert — aber die Abhängigkeit existiert unabhängig vom Werkzeug.",
+            ],
+            bullets: [
+              "Rücken = Seiten × 0,002252 Zoll (weiß) oder 0,0025 (Creme).",
+              "Rückentext: ≥100 Seiten, mit Abstand auf beiden Seiten.",
+              "Covermaße leiten sich vom finalen Innenteil ab — zuerst die Seitenzahl fixieren.",
+              "Späte Innenteil-Korrekturen machen ein fertiges Cover stillschweigend ungültig.",
+            ],
+          },
+          {
+            id: "ablehnungsgruende",
+            title: "Die kurze Liste hinter den meisten Ablehnungen",
+            body: [
+              "Fast jede Innenteil-Ablehnung geht auf eine Handvoll Ursachen zurück: Text oder Seitenzahlen in den Randzonen, nicht eingebettete Schriften, Seitengröße passt nicht zum deklarierten Format (oder Beschnitt-Inkonsistenz), Bilder unter 300 DPI als unscharf markiert, und Bundsteg zu klein für die Seitenzahl.",
+              "Zwei Nicht-Datei-Probleme runden die Liste ab: ein Inhaltsverzeichnis, dessen Seitenzahlen nach den letzten Korrekturen nicht mehr stimmen, und eine Diskrepanz zwischen den in KDP eingegebenen Metadaten (Format, Seitenzahl) und der hochgeladenen Datei.",
+              "Planen Sie eine sorgfältige Vorschau-Sitzung als Teil der Veröffentlichung, nicht als Reaktion auf die Ablehnung. Vor der ersten Einreichung zu korrigieren hält den Titel aus der Prüf-und-neu-einreichen-Schleife heraus, die einen Launch um Tage verzögern kann.",
+            ],
+            bullets: [
+              "Top-Ursachen: Randverletzungen, nicht eingebettete Schriften, falsche Seitengröße, niedrige Bildauflösung, zu kleiner Bundsteg.",
+              "Inhaltsverzeichnis-Seitenzahlen nach der letzten Korrektur prüfen, nicht davor.",
+              "KDP-Metadaten exakt an die Datei anpassen: Format, Beschnitt, Seitenzahl.",
+              "Eine Vorschau-Sitzung vor der Einreichung schlägt Tage des Neueinreichens.",
+            ],
+          },
+        ],
+        checklist: [
+          "Format, Tinte und Papier vor Beginn des Satzes gewählt.",
+          "Ränder über den KDP-Minima; Bundsteg gegen die finale Seitenzahl geprüft.",
+          "Beschnitt-Entscheidung getroffen; Seite auf 6,125 x 9,25 vergrößert (bei 6 x 9), falls angeschnitten.",
+          "Serifen-Fließtext 10,5-12 pt, korrekte Titelei-Reihenfolge, Hauptteil beginnt auf ungerader Seite.",
+          "PDF mit eingebetteten Schriften, 300-DPI-Bildern, ohne Schnittmarken oder Sicherung exportiert.",
+          "Rückenbreite aus finaler Seitenzahl berechnet; Rückentext nur bei ≥100 Seiten.",
+          "Umschlagmaße aus dem fixierten Innenteil abgeleitet.",
+          "KDP-Vorschau durchlaufen; jede Warnung vor der Freigabe gelöst.",
+          "KDP-Metadaten (Format, Beschnitt, Seitenzahl) exakt passend zur hochgeladenen Datei.",
+        ],
+        faq: [
+          {
+            question: "Was ist das beste Format für ein KDP-Taschenbuch?",
+            answer:
+              "6 x 9 Zoll für die meiste Belletristik und Sachbücher: universelle Vorlagen und mehr Wörter pro Seite, also weniger Seiten und niedrigere Druckkosten für dasselbe Manuskript. Weichen Sie nur aus Layout-Gründen ab — Arbeitsbücher (8,5 x 11), kurze Belletristik (5 x 8), Kinderbücher (quadratische Formate).",
+          },
+          {
+            question: "Berechnet KDP Druckkosten, und wie wirkt die Formatierung darauf?",
+            answer:
+              "Die Druckkosten werden von der Tantieme jedes Verkaufs abgezogen und wachsen mit der Seitenzahl (etwa ein Festbetrag plus ~0,012 $ pro Schwarzweiß-Seite). Engere Typografie und ein 6 x 9-Format reduzieren die Seitenzahl und erhöhen direkt Ihre Tantieme pro Exemplar.",
+          },
+          {
+            question: "Brauche ich Beschnitt für ein reines Textbuch?",
+            answer:
+              "Nein. Beschnitt existiert für Bilder und Farben, die die Seitenkante berühren. Ein reiner Text-Innenteil sollte ohne Beschnitt gebaut und deklariert werden — das ist einfacher und beseitigt eine ganze Klasse von Ablehnungsfehlern.",
+          },
+          {
+            question: "Warum wurde meine Innenteil-Datei abgelehnt?",
+            answer:
+              "Die häufigsten Ursachen: Inhalt innerhalb der Pflichtränder, nicht ins PDF eingebettete Schriften, Seitengröße passt nicht zu deklariertem Format oder Beschnitt, Bilder unter 300 DPI oder ein für die Seitenzahl zu kleiner Bundsteg. KDPs Vorschau markiert jeden dieser Punkte vor der Einreichung, wenn Sie sie nutzen.",
+          },
+          {
+            question: "Kann man ein KDP-Taschenbuch in Word setzen?",
+            answer:
+              "Ja — Seitengröße auf das Format stellen, gespiegelte Ränder mit korrektem Bundsteg konfigurieren, Schriften beim PDF-Export einbetten und das Ergebnis in der Vorschau prüfen. Dedizierte Satzwerkzeuge und automatisierte Pipelines liefern ein feineres Ergebnis, aber Word-Ausgaben bestehen die Prüfung, wenn die Zahlen stimmen.",
           },
         ],
       },
