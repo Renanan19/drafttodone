@@ -1,5 +1,8 @@
+import { aiWritingSeoPosts } from "./ai-writing-seo-posts";
+import { bookMarketingSeoPosts } from "./book-marketing-seo-posts";
 import { kdpAccountPaymentsPost } from "./kdp-account-post";
 import { kdpSeoPosts } from "./kdp-seo-posts";
+import { selfPublishingSeoPosts } from "./self-publishing-seo-posts";
 
 export const SITE_URL = "https://drafttodone.io";
 export const SITE_NAME = "DraftToDone.io";
@@ -77,7 +80,9 @@ export type BlogPost = {
     middle: string;
     end: string;
   };
-  translations: Record<Locale, BlogTranslation>;
+  // English is mandatory; other locales are optional so a post can ship
+  // in a subset of languages without phantom URLs in the other locales.
+  translations: { en: BlogTranslation } & Partial<Record<Locale, BlogTranslation>>;
 };
 
 export const blogCopy: Record<Locale, BlogCopy> = {
@@ -236,6 +241,9 @@ export const blogCopy: Record<Locale, BlogCopy> = {
 };
 
 export const posts: BlogPost[] = [
+  ...aiWritingSeoPosts,
+  ...selfPublishingSeoPosts,
+  ...bookMarketingSeoPosts,
   kdpAccountPaymentsPost,
   ...kdpSeoPosts,
   {
@@ -3212,15 +3220,32 @@ export function isLocale(value: string): value is Locale {
   return locales.includes(value as Locale);
 }
 
-export function getPostsForLocale(locale: Locale) {
-  return posts.map((post) => ({
-    ...post,
-    translation: post.translations[locale],
+export function postLocales(post: BlogPost): Locale[] {
+  return locales.filter((locale) => Boolean(post.translations[locale]));
+}
+
+export function getPostTranslation(post: BlogPost, locale: Locale): BlogTranslation {
+  return post.translations[locale] ?? post.translations.en;
+}
+
+export function postEntries(post: BlogPost) {
+  return postLocales(post).map((locale) => ({
+    locale,
+    article: getPostTranslation(post, locale),
   }));
 }
 
+export function getPostsForLocale(locale: Locale) {
+  return posts
+    .filter((post) => Boolean(post.translations[locale]))
+    .map((post) => ({
+      ...post,
+      translation: getPostTranslation(post, locale),
+    }));
+}
+
 export function getPostBySlug(locale: Locale, slug: string) {
-  return posts.find((post) => post.translations[locale].slug === slug);
+  return posts.find((post) => post.translations[locale]?.slug === slug);
 }
 
 export function blogIndexPath(locale: Locale) {
@@ -3232,7 +3257,7 @@ export function blogIndexUrl(locale: Locale) {
 }
 
 export function postPath(locale: Locale, post: BlogPost) {
-  return `${blogIndexPath(locale)}/${post.translations[locale].slug}`;
+  return `${blogIndexPath(locale)}/${getPostTranslation(post, locale).slug}`;
 }
 
 export function postUrl(locale: Locale, post: BlogPost) {
@@ -3251,19 +3276,18 @@ export function getBlogIndexAlternates() {
 
 export function getPostAlternates(post: BlogPost) {
   return {
-    en: postPath("en", post),
-    fr: postPath("fr", post),
-    it: postPath("it", post),
-    de: postPath("de", post),
+    ...Object.fromEntries(
+      postLocales(post).map((locale) => [locale, postPath(locale, post)]),
+    ),
     "x-default": postPath(defaultLocale, post),
   };
 }
 
 export function getArticleStaticParams() {
   return posts.flatMap((post) =>
-    locales.map((locale) => ({
+    postLocales(post).map((locale) => ({
       locale,
-      slug: post.translations[locale].slug,
+      slug: getPostTranslation(post, locale).slug,
     })),
   );
 }

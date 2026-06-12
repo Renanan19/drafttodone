@@ -2,6 +2,7 @@ import {
   blogCopy,
   blogIndexUrl,
   locales,
+  postEntries,
   posts,
   postUrl,
   SITE_NAME,
@@ -24,7 +25,9 @@ export function GET() {
 
   const articleLinks = posts
     .flatMap((post) =>
-      locales.map((locale) => `- ${post.translations[locale].title}: ${postUrl(locale, post)}`),
+      postEntries(post).map(
+        ({ locale, article }) => `- ${article.title}: ${postUrl(locale, post)}`,
+      ),
     )
     .join("\n");
 

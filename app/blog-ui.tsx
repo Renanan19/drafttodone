@@ -10,7 +10,8 @@ import {
   type Locale,
 } from "./blog-content";
 
-type LanguagePaths = Record<Locale, string>;
+// A post may not exist in every locale; missing locales fall back to the blog index.
+type LanguagePaths = Partial<Record<Locale, string>>;
 
 function Logo() {
   return (

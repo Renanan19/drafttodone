@@ -1,7 +1,7 @@
 import {
   BLOG_AUTHOR,
   blogIndexUrl,
-  locales,
+  postEntries,
   posts,
   postUrl,
   SITE_NAME,
@@ -22,8 +22,7 @@ function xml(value: string) {
 export function GET() {
   const items = posts
     .flatMap((post) =>
-      locales.map((locale) => {
-        const article = post.translations[locale];
+      postEntries(post).map(({ locale, article }) => {
         const url = postUrl(locale, post);
 
         return `<item>
@@ -46,7 +45,7 @@ export function GET() {
   <link>${xml(blogIndexUrl("en"))}</link>
   <description>${xml("Multilingual guides about AI publishing, KDP SEO, book covers, manuscripts, metadata and catalog operations.")}</description>
   <language>en</language>
-  <lastBuildDate>${new Date("2026-06-07").toUTCString()}</lastBuildDate>
+  <lastBuildDate>${new Date("2026-06-12").toUTCString()}</lastBuildDate>
   <managingEditor>${xml(BLOG_AUTHOR)}</managingEditor>
   <webMaster>${xml(SITE_URL)}</webMaster>
 ${items}

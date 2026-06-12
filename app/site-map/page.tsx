@@ -3,6 +3,7 @@ import {
   blogCopy,
   blogIndexPath,
   locales,
+  postEntries,
   posts,
   postPath,
   SITE_NAME,
@@ -45,9 +46,9 @@ export default function HtmlSitemapPage() {
         })),
       ),
       ...posts.flatMap((post) =>
-        locales.map((locale) => ({
+        postEntries(post).map(({ locale, article }) => ({
           "@type": "Article",
-          name: post.translations[locale].title,
+          name: article.title,
           url: `${SITE_URL}${postPath(locale, post)}`,
         })),
       ),
@@ -131,13 +132,13 @@ export default function HtmlSitemapPage() {
               <h2 className="font-display text-3xl font-medium text-ink">Articles</h2>
               <div className="mt-5 grid gap-3 text-sm sm:grid-cols-2">
                 {posts.flatMap((post) =>
-                  locales.map((locale) => (
+                  postEntries(post).map(({ locale, article }) => (
                     <a
                       key={`${post.key}-${locale}`}
                       className="text-muted transition-colors hover:text-ink"
                       href={postPath(locale, post)}
                     >
-                      [{locale}] {post.translations[locale].title}
+                      [{locale}] {article.title}
                     </a>
                   )),
                 )}

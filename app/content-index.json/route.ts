@@ -2,6 +2,7 @@ import {
   blogCopy,
   blogIndexUrl,
   locales,
+  postEntries,
   posts,
   postUrl,
   SITE_NAME,
@@ -47,13 +48,13 @@ export function GET() {
       url: blogIndexUrl(locale),
     })),
     articles: posts.flatMap((post) =>
-      locales.map((locale) => ({
+      postEntries(post).map(({ locale, article }) => ({
         type: "article",
         locale,
-        title: post.translations[locale].title,
-        description: post.translations[locale].description,
-        category: post.translations[locale].category,
-        keywords: post.translations[locale].keywords,
+        title: article.title,
+        description: article.description,
+        category: article.category,
+        keywords: article.keywords,
         url: postUrl(locale, post),
         published: post.date,
         updated: post.updated,

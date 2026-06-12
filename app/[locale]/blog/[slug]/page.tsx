@@ -9,8 +9,9 @@ import {
   getPostAlternates,
   getPostBySlug,
   getPostsForLocale,
+  getPostTranslation,
   isLocale,
-  locales,
+  postLocales,
   postPath,
   postUrl,
   SITE_NAME,
@@ -47,7 +48,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     };
   }
 
-  const article = post.translations[locale];
+  const article = getPostTranslation(post, locale);
 
   return {
     title: `${article.title} | ${SITE_NAME}`,
@@ -68,7 +69,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       modifiedTime: post.updated,
       authors: [BLOG_AUTHOR],
       locale: openGraphLocales[locale],
-      alternateLocale: locales
+      alternateLocale: postLocales(post)
         .filter((item) => item !== locale)
         .map((item) => openGraphLocales[item]),
     },
@@ -89,8 +90,10 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
   if (!post) notFound();
 
   const t = blogCopy[locale];
-  const article = post.translations[locale];
-  const relatedPosts = getPostsForLocale(locale).filter((item) => item.key !== post.key);
+  const article = getPostTranslation(post, locale);
+  const relatedPosts = getPostsForLocale(locale)
+    .filter((item) => item.key !== post.key)
+    .slice(0, 6);
   const wordCount = [
     article.title,
     article.description,
@@ -104,8 +107,8 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
     ...article.faq.flatMap((item) => [item.question, item.answer]),
   ].join(" ").split(/\s+/).filter(Boolean).length;
   const languagePaths = Object.fromEntries(
-    locales.map((item) => [item, postPath(item, post)]),
-  ) as Record<Locale, string>;
+    postLocales(post).map((item) => [item, postPath(item, post)]),
+  ) as Partial<Record<Locale, string>>;
 
   const jsonLd = [
     {
