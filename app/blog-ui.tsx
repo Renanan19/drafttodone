@@ -10,13 +10,14 @@ import {
   type Locale,
 } from "./blog-content";
 import { solutionPages, solutionPath } from "./seo-pages";
+import { homePath } from "./home-content";
 
 // A post may not exist in every locale; missing locales fall back to the blog index.
 type LanguagePaths = Partial<Record<Locale, string>>;
 
-function Logo() {
+function Logo({ locale }: { locale: Locale }) {
   return (
-    <a href="/" className="flex items-center gap-2.5" aria-label={`${SITE_NAME} home`}>
+    <a href={homePath(locale)} className="flex items-center gap-2.5" aria-label={`${SITE_NAME} home`}>
       <span className="grid h-8 w-8 place-items-center rounded-[9px] bg-ink">
         <Check className="h-4 w-4 text-mint-soft" strokeWidth={3} />
       </span>
@@ -69,11 +70,11 @@ export function BlogHeader({
   return (
     <header className="sticky top-0 z-40 border-b border-line/70 bg-paper/85 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-6">
-        <Logo />
+        <Logo locale={locale} />
         <div className="flex items-center gap-3 sm:gap-4">
           <LanguageLinks locale={locale} paths={paths} />
           <a
-            href="/"
+            href={homePath(locale)}
             className="hidden text-sm text-muted transition-colors hover:text-ink md:inline-flex"
           >
             {t.home}
@@ -85,7 +86,7 @@ export function BlogHeader({
             {t.blog}
           </a>
           <a
-            href="/#waitlist"
+            href={`${homePath(locale)}#waitlist`}
             className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
           >
             {t.waitlist}
@@ -120,7 +121,7 @@ export function BlogFooter({ locale }: { locale: Locale }) {
           ))}
         </nav>
         <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-line/70 pt-8 text-sm sm:flex-row">
-          <Logo />
+          <Logo locale={locale} />
           <p className="text-center text-faint sm:text-left">{t.footer}</p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
@@ -129,7 +130,7 @@ export function BlogFooter({ locale }: { locale: Locale }) {
             >
               {t.blog}
             </a>
-            <a href="/" className="text-muted transition-colors hover:text-ink">
+            <a href={homePath(locale)} className="text-muted transition-colors hover:text-ink">
               {t.home}
             </a>
             <a
@@ -229,7 +230,7 @@ export function CtaBand({ locale }: { locale: Locale }) {
             <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">{t.ctaText}</p>
           </div>
           <a
-            href="/#waitlist"
+            href={`${homePath(locale)}#waitlist`}
             className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-ink px-6 py-3.5 text-[15px] font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft active:translate-y-0"
           >
             {t.ctaButton}

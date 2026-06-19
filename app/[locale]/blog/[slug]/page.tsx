@@ -19,6 +19,7 @@ import {
   type Locale,
 } from "@/app/blog-content";
 import { BlogFooter, BlogHeader, BlogVisual, CtaBand } from "@/app/blog-ui";
+import { homePath, homeUrl } from "@/app/home-content";
 
 export const dynamicParams = false;
 
@@ -158,7 +159,7 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
           "@type": "ListItem",
           position: 1,
           name: SITE_NAME,
-          item: SITE_URL,
+          item: homeUrl(locale),
         },
         {
           "@type": "ListItem",
@@ -189,7 +190,7 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
             <div className="relative mx-auto grid max-w-6xl gap-12 px-5 py-14 sm:px-6 sm:py-20 lg:grid-cols-[1.04fr_0.96fr] lg:items-center">
               <div>
                 <nav className="mb-7 flex flex-wrap items-center gap-2 text-sm text-muted">
-                  <a href="/" className="transition-colors hover:text-ink">
+                  <a href={homePath(locale)} className="transition-colors hover:text-ink">
                     {SITE_NAME}
                   </a>
                   <span>/</span>

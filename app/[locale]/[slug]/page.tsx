@@ -20,6 +20,7 @@ import {
   solutionPath,
   solutionUrl,
 } from "@/app/seo-pages";
+import { homePath } from "@/app/home-content";
 
 export const dynamicParams = false;
 
@@ -183,7 +184,7 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
               ))}
             </div>
             <a
-              href="/#waitlist"
+              href={`${homePath(locale)}#waitlist`}
               className="mt-10 inline-flex items-center justify-center gap-2 rounded-xl bg-ink px-6 py-3.5 text-[15px] font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft active:translate-y-0"
             >
               {solution.cta}
@@ -247,7 +248,7 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href="/#waitlist"
+                href={`${homePath(locale)}#waitlist`}
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-ink px-5 py-3 text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
               >
                 {solution.cta}
