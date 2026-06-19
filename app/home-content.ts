@@ -5,7 +5,7 @@ export const APP_URL = "https://app.drafttodone.io";
 
 export type HomeCopy = {
   meta: { title: string; description: string };
-  nav: { blog: string; followX: string; join: string; pricing: string; openApp: string };
+  nav: { blog: string; followX: string; pricing: string; openApp: string };
   hero: {
     eyebrow: string;
     h1main: string;
@@ -17,8 +17,6 @@ export type HomeCopy = {
     caption: string;
     openApp: string;
   };
-  form: { placeholder: string; cta: string; loading: string; done: string; retry: string; error: string };
-  toast: { title: string; withEmail: string; noEmail: string; dismiss: string };
   origin: {
     eyebrow: string;
     h2: string;
@@ -62,22 +60,20 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     meta: {
       title: `${SITE_NAME} — The Complete AI Publishing Machine`,
       description:
-        "Generate the entire product — front cover to back cover, manuscript, and optimized title. Build your publishing empire with 6 ready-to-publish books a week.",
+        "Generate the entire product — front cover to back cover, manuscript, and optimized title. Build your publishing empire with 6 ready-to-publish books a week. Live now.",
     },
-    nav: { blog: "Blog", followX: "Follow on X", join: "Join the waitlist", pricing: "Pricing", openApp: "Open app" },
+    nav: { blog: "Blog", followX: "Follow on X", pricing: "Pricing", openApp: "Open app" },
     hero: {
-      eyebrow: "Now in private beta",
+      eyebrow: "Now live",
       h1main: "The complete AI publishing",
       h1accent: "machine.",
       sub: "Don't just write a book. Generate the entire product — front cover to back cover, manuscript, and optimized title. Build your publishing empire with",
       subHighlight: "6 ready-to-publish books a week.",
-      microcopy: "Limited spots for early beta access.",
+      microcopy: "The app is live — start publishing in minutes.",
       chips: ["Manuscript", "Front cover", "Back cover", "Verified pen name"],
       caption: "Six ready-to-publish books. Every week.",
       openApp: "Open the app",
     },
-    form: { placeholder: "Enter your email", cta: "Join the Waitlist", loading: "Joining…", done: "Added", retry: "Try again", error: "Something went wrong. Please try again." },
-    toast: { title: "Thanks for subscribing!", withEmail: "You're on the list —", noEmail: "You're on the early access list.", dismiss: "Dismiss notification" },
     origin: {
       eyebrow: "The origin story",
       h2: "Why I'm building this.",
@@ -85,7 +81,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       money: "€400/month",
       mid: "on Amazon KDP until a bad pun for a pen name got me",
       ban: "permanently banned overnight.",
-      post: "Now, I'm taking the private algorithm I used to automate my entire publishing process and turning it into a SaaS. Follow my journey to",
+      post: "So I rebuilt the private algorithm I used to automate my entire publishing process into a SaaS — and now it's live. Follow my journey to",
       mrr: "recover my lost MRR.",
       sign: "Building in public",
     },
@@ -102,7 +98,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     tools: {
       eyebrow: "Free tools & guides",
       h2: "Plan your next book before you write a word.",
-      sub: "Free calculators and in-depth guides you can use today — while early access opens up.",
+      sub: "Free calculators and in-depth guides — then open the app to generate the whole book.",
       items: [
         { title: "KDP royalty calculator", text: "Model ebook and paperback payouts before you set a price.", href: "/en/kdp-royalty-calculator" },
         { title: "AI book cover generator", text: "Front cover, spine and back — print-ready for KDP.", href: "/en/ai-book-cover-generator" },
@@ -119,7 +115,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       { q: "Does it write the entire book?", a: "Yes. The AI determines the ideal length and writes the full manuscript from your niche brief, then builds the cover package and metadata around it." },
       { q: "Is the content allowed on Amazon KDP?", a: "DraftToDone is built around KDP content and AI-disclosure rules, with verified pen names to reduce copyright-strike risk. You stay responsible for reviewing each book and disclosing AI use as KDP requires." },
       { q: "How many books can I publish?", a: "Plans are book-credit subscriptions — one credit makes one complete, ready-to-publish book. The weekly plan is built around six ready-to-publish books a week." },
-      { q: "When does it launch?", a: "DraftToDone is in private beta. Join the waitlist for early access, or open the app to get started now." },
+      { q: "Is it available now?", a: "Yes — DraftToDone is live. Open the app at app.drafttodone.io and start publishing today." },
     ],
     pricing: {
       eyebrow: "Pricing",
@@ -134,29 +130,27 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { name: "Yearly", price: "€390", period: "/ year", credits: "312 books a year", perBook: "≈ €1.25 per book", highlight: true },
       ],
     },
-    cta: { h2: "Ready to scale your publishing business?", sub: "Join the founders building their catalog on autopilot. Early access opens soon." },
+    cta: { h2: "Ready to scale your publishing business?", sub: "Join the founders building their catalog on autopilot. The app is live — start today." },
     footer: "© 2026 DraftToDone.io. Built in public.",
   },
   fr: {
     meta: {
       title: `${SITE_NAME} — La machine d'édition IA complète`,
       description:
-        "Ne vous contentez pas d'écrire un livre. Générez le produit complet — couverture, manuscrit et titre optimisé. Bâtissez votre catalogue avec 6 livres prêts à publier par semaine.",
+        "Ne vous contentez pas d'écrire un livre. Générez le produit complet — couverture, manuscrit et titre optimisé. Bâtissez votre catalogue avec 6 livres prêts à publier par semaine. Disponible maintenant.",
     },
-    nav: { blog: "Blog", followX: "Suivre sur X", join: "Rejoindre la liste", pricing: "Tarifs", openApp: "Ouvrir l'app" },
+    nav: { blog: "Blog", followX: "Suivre sur X", pricing: "Tarifs", openApp: "Ouvrir l'app" },
     hero: {
-      eyebrow: "En bêta privée",
+      eyebrow: "Désormais en ligne",
       h1main: "Toute la chaîne d'édition,",
       h1accent: "automatisée par l'IA.",
       sub: "N'écrivez pas seulement un livre. Générez le produit complet — de la première à la quatrième de couverture, le manuscrit et le titre optimisé. Bâtissez votre empire éditorial avec",
       subHighlight: "6 livres prêts à publier par semaine.",
-      microcopy: "Places limitées pour l'accès bêta anticipé.",
+      microcopy: "L'app est en ligne — commencez à publier en quelques minutes.",
       chips: ["Manuscrit", "Couverture", "Quatrième", "Nom de plume vérifié"],
       caption: "Six livres prêts à publier. Chaque semaine.",
       openApp: "Ouvrir l'application",
     },
-    form: { placeholder: "Votre adresse e-mail", cta: "Rejoindre la liste", loading: "Inscription…", done: "Inscrit", retry: "Réessayer", error: "Une erreur est survenue. Veuillez réessayer." },
-    toast: { title: "Merci de votre inscription !", withEmail: "Vous êtes sur la liste —", noEmail: "Vous êtes sur la liste d'accès anticipé.", dismiss: "Fermer la notification" },
     origin: {
       eyebrow: "L'histoire",
       h2: "Pourquoi je construis ça.",
@@ -164,7 +158,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       money: "400 €/mois",
       mid: "sur Amazon KDP jusqu'à ce qu'un mauvais jeu de mots comme nom de plume me fasse",
       ban: "bannir définitivement, du jour au lendemain.",
-      post: "Aujourd'hui, je transforme en SaaS l'algorithme privé qui automatisait toute ma chaîne de publication. Suivez mon parcours pour",
+      post: "J'ai donc transformé en SaaS l'algorithme privé qui automatisait toute ma chaîne de publication — et il est maintenant en ligne. Suivez mon parcours pour",
       mrr: "récupérer mon MRR perdu.",
       sign: "Construit en public",
     },
@@ -181,7 +175,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     tools: {
       eyebrow: "Outils & guides gratuits",
       h2: "Préparez votre prochain livre avant d'écrire un mot.",
-      sub: "Des calculateurs gratuits et des guides détaillés à utiliser dès aujourd'hui — en attendant l'accès anticipé.",
+      sub: "Des calculateurs gratuits et des guides détaillés — puis ouvrez l'app pour générer le livre entier.",
       items: [
         { title: "Calculateur de redevances KDP", text: "Modélisez les gains ebook et broché avant de fixer un prix.", href: "/fr/calculateur-redevances-kdp" },
         { title: "Générateur de couverture IA", text: "Première, dos et quatrième — prêts à imprimer pour KDP.", href: "/fr/generateur-couverture-livre-ia" },
@@ -198,7 +192,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       { q: "Écrit-il le livre entier ?", a: "Oui. L'IA détermine la longueur idéale et rédige le manuscrit complet à partir de votre brief de niche, puis construit la couverture et les métadonnées autour." },
       { q: "Le contenu est-il autorisé sur Amazon KDP ?", a: "DraftToDone est conçu autour des règles KDP de contenu et de divulgation IA, avec des noms de plume vérifiés pour réduire le risque de litige. Vous restez responsable de relire chaque livre et de déclarer l'usage de l'IA comme l'exige KDP." },
       { q: "Combien de livres puis-je publier ?", a: "Les offres sont des abonnements à crédits livres — 1 crédit = 1 livre complet prêt à publier. L'offre hebdomadaire est pensée pour six livres prêts à publier par semaine." },
-      { q: "Quand est le lancement ?", a: "DraftToDone est en bêta privée. Rejoignez la liste d'attente pour l'accès anticipé, ou ouvrez l'application pour commencer dès maintenant." },
+      { q: "Est-ce disponible maintenant ?", a: "Oui — DraftToDone est en ligne. Ouvrez l'app sur app.drafttodone.io et commencez à publier dès aujourd'hui." },
     ],
     pricing: {
       eyebrow: "Tarifs",
@@ -213,29 +207,27 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { name: "Annuel", price: "390 €", period: "/ an", credits: "312 livres par an", perBook: "≈ 1,25 € par livre", highlight: true },
       ],
     },
-    cta: { h2: "Prêt à faire passer votre activité d'édition à l'échelle ?", sub: "Rejoignez les fondateurs qui bâtissent leur catalogue en pilote automatique. L'accès anticipé ouvre bientôt." },
+    cta: { h2: "Prêt à faire passer votre activité d'édition à l'échelle ?", sub: "Rejoignez les fondateurs qui bâtissent leur catalogue en pilote automatique. L'app est en ligne — commencez aujourd'hui." },
     footer: "© 2026 DraftToDone.io. Construit en public.",
   },
   it: {
     meta: {
       title: `${SITE_NAME} — La macchina di editoria IA completa`,
       description:
-        "Non scrivere solo un libro. Genera il prodotto completo — copertina, manoscritto e titolo ottimizzato. Costruisci il tuo catalogo con 6 libri pronti da pubblicare a settimana.",
+        "Non scrivere solo un libro. Genera il prodotto completo — copertina, manoscritto e titolo ottimizzato. Costruisci il tuo catalogo con 6 libri pronti da pubblicare a settimana. Disponibile ora.",
     },
-    nav: { blog: "Blog", followX: "Segui su X", join: "Unisciti alla lista", pricing: "Prezzi", openApp: "Apri l'app" },
+    nav: { blog: "Blog", followX: "Segui su X", pricing: "Prezzi", openApp: "Apri l'app" },
     hero: {
-      eyebrow: "Ora in beta privata",
+      eyebrow: "Ora online",
       h1main: "La macchina di editoria IA",
       h1accent: "completa.",
       sub: "Non scrivere solo un libro. Genera il prodotto completo — dalla copertina alla quarta, il manoscritto e il titolo ottimizzato. Costruisci il tuo impero editoriale con",
       subHighlight: "6 libri pronti da pubblicare a settimana.",
-      microcopy: "Posti limitati per l'accesso beta anticipato.",
+      microcopy: "L'app è online — inizia a pubblicare in pochi minuti.",
       chips: ["Manoscritto", "Copertina", "Quarta di copertina", "Nome d'autore verificato"],
       caption: "Sei libri pronti da pubblicare. Ogni settimana.",
       openApp: "Apri l'applicazione",
     },
-    form: { placeholder: "Inserisci la tua email", cta: "Unisciti alla lista", loading: "Iscrizione…", done: "Aggiunto", retry: "Riprova", error: "Qualcosa è andato storto. Riprova." },
-    toast: { title: "Grazie per l'iscrizione!", withEmail: "Sei nella lista —", noEmail: "Sei nella lista per l'accesso anticipato.", dismiss: "Chiudi notifica" },
     origin: {
       eyebrow: "La storia",
       h2: "Perché lo sto costruendo.",
@@ -243,7 +235,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       money: "400 €/mese",
       mid: "su Amazon KDP finché un brutto gioco di parole come nome d'autore mi è costato",
       ban: "il ban permanente, da un giorno all'altro.",
-      post: "Ora sto trasformando in SaaS l'algoritmo privato che automatizzava tutta la mia pubblicazione. Segui il mio percorso per",
+      post: "Così ho trasformato in SaaS l'algoritmo privato che automatizzava tutta la mia pubblicazione — e ora è online. Segui il mio percorso per",
       mrr: "recuperare l'MRR perduto.",
       sign: "Costruito in pubblico",
     },
@@ -260,7 +252,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     tools: {
       eyebrow: "Strumenti e guide gratuiti",
       h2: "Pianifica il tuo prossimo libro prima di scrivere una parola.",
-      sub: "Calcolatori gratuiti e guide approfondite da usare oggi — mentre apre l'accesso anticipato.",
+      sub: "Calcolatori gratuiti e guide approfondite — poi apri l'app per generare l'intero libro.",
       items: [
         { title: "Calcolatore royalty KDP", text: "Modella i guadagni ebook e cartaceo prima di fissare un prezzo.", href: "/it/calcolatore-royalty-kdp" },
         { title: "Generatore di copertine IA", text: "Fronte, dorso e retro — pronti per la stampa su KDP.", href: "/it/generatore-copertine-libri-ia" },
@@ -277,7 +269,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       { q: "Scrive l'intero libro?", a: "Sì. L'IA determina la lunghezza ideale e scrive il manoscritto completo dal tuo brief di nicchia, poi costruisce intorno copertina e metadati." },
       { q: "Il contenuto è ammesso su Amazon KDP?", a: "DraftToDone è costruito attorno alle regole KDP su contenuti e divulgazione dell'IA, con nomi d'autore verificati per ridurre il rischio di violazioni. Resti responsabile di rivedere ogni libro e dichiarare l'uso dell'IA come richiede KDP." },
       { q: "Quanti libri posso pubblicare?", a: "I piani sono abbonamenti a crediti libri — 1 credito = 1 libro completo pronto da pubblicare. Il piano settimanale è pensato per sei libri pronti a settimana." },
-      { q: "Quando esce?", a: "DraftToDone è in beta privata. Unisciti alla lista d'attesa per l'accesso anticipato, o apri l'app per iniziare ora." },
+      { q: "È disponibile ora?", a: "Sì — DraftToDone è online. Apri l'app su app.drafttodone.io e inizia a pubblicare oggi." },
     ],
     pricing: {
       eyebrow: "Prezzi",
@@ -292,29 +284,27 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { name: "Annuale", price: "390 €", period: "/ anno", credits: "312 libri all'anno", perBook: "≈ 1,25 € a libro", highlight: true },
       ],
     },
-    cta: { h2: "Pronto a far crescere la tua attività editoriale?", sub: "Unisciti ai fondatori che costruiscono il loro catalogo in automatico. L'accesso anticipato apre presto." },
+    cta: { h2: "Pronto a far crescere la tua attività editoriale?", sub: "Unisciti ai fondatori che costruiscono il loro catalogo in automatico. L'app è online — inizia oggi." },
     footer: "© 2026 DraftToDone.io. Costruito in pubblico.",
   },
   de: {
     meta: {
       title: `${SITE_NAME} — Die komplette KI-Publishing-Maschine`,
       description:
-        "Schreib nicht nur ein Buch. Erzeuge das ganze Produkt — Cover, Manuskript und optimierten Titel. Bau deinen Katalog mit sechs veröffentlichungsfertigen Büchern pro Woche.",
+        "Schreib nicht nur ein Buch. Erzeuge das ganze Produkt — Cover, Manuskript und optimierten Titel. Bau deinen Katalog mit sechs veröffentlichungsfertigen Büchern pro Woche. Jetzt verfügbar.",
     },
-    nav: { blog: "Blog", followX: "Auf X folgen", join: "Warteliste beitreten", pricing: "Preise", openApp: "App öffnen" },
+    nav: { blog: "Blog", followX: "Auf X folgen", pricing: "Preise", openApp: "App öffnen" },
     hero: {
-      eyebrow: "Jetzt in privater Beta",
+      eyebrow: "Jetzt live",
       h1main: "Die komplette KI-Publishing-",
       h1accent: "Maschine.",
       sub: "Schreib nicht nur ein Buch. Erzeuge das ganze Produkt — von der Vorder- bis zur Rückseite, das Manuskript und den optimierten Titel. Bau dein Publishing-Imperium mit",
       subHighlight: "sechs veröffentlichungsfertigen Büchern pro Woche.",
-      microcopy: "Begrenzte Plätze für frühen Beta-Zugang.",
+      microcopy: "Die App ist live — starte in wenigen Minuten.",
       chips: ["Manuskript", "Cover", "Rückseite", "Verifizierter Autorname"],
       caption: "Sechs veröffentlichungsfertige Bücher. Jede Woche.",
       openApp: "App öffnen",
     },
-    form: { placeholder: "Deine E-Mail eingeben", cta: "Warteliste beitreten", loading: "Eintragen…", done: "Hinzugefügt", retry: "Erneut versuchen", error: "Etwas ist schiefgelaufen. Bitte erneut versuchen." },
-    toast: { title: "Danke für die Anmeldung!", withEmail: "Du bist auf der Liste —", noEmail: "Du bist auf der Early-Access-Liste.", dismiss: "Benachrichtigung schließen" },
     origin: {
       eyebrow: "Die Geschichte",
       h2: "Warum ich das baue.",
@@ -322,7 +312,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       money: "400 €/Monat",
       mid: "auf Amazon KDP, bis mir ein schlechtes Wortspiel als Autorname",
       ban: "über Nacht ein dauerhaftes Verbot einbrachte.",
-      post: "Jetzt mache ich aus dem privaten Algorithmus, der mein ganzes Publishing automatisierte, ein SaaS. Folge meinem Weg, um",
+      post: "Also habe ich aus dem privaten Algorithmus, der mein ganzes Publishing automatisierte, ein SaaS gebaut — und jetzt ist es live. Folge meinem Weg, um",
       mrr: "mein verlorenes MRR zurückzuholen.",
       sign: "Öffentlich gebaut",
     },
@@ -339,7 +329,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     tools: {
       eyebrow: "Kostenlose Tools und Guides",
       h2: "Plane dein nächstes Buch, bevor du ein Wort schreibst.",
-      sub: "Kostenlose Rechner und ausführliche Guides für heute — während der frühe Zugang öffnet.",
+      sub: "Kostenlose Rechner und ausführliche Guides — dann öffne die App, um das ganze Buch zu erzeugen.",
       items: [
         { title: "KDP-Tantiemen-Rechner", text: "Modelliere Ebook- und Taschenbuch-Erlöse, bevor du einen Preis festlegst.", href: "/de/kdp-tantiemen-rechner" },
         { title: "KI-Buchcover-Generator", text: "Vorderseite, Rücken und Rückseite — druckfertig für KDP.", href: "/de/ki-buchcover-generator" },
@@ -356,7 +346,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       { q: "Schreibt es das ganze Buch?", a: "Ja. Die KI bestimmt die ideale Länge und schreibt das komplette Manuskript aus deinem Nischen-Brief, dann baut sie Cover und Metadaten darum herum." },
       { q: "Ist der Inhalt auf Amazon KDP erlaubt?", a: "DraftToDone ist um die KDP-Regeln zu Inhalten und KI-Offenlegung herum gebaut, mit verifizierten Autornamen, um das Risiko von Verstößen zu senken. Du bleibst verantwortlich, jedes Buch zu prüfen und die KI-Nutzung wie von KDP verlangt offenzulegen." },
       { q: "Wie viele Bücher kann ich veröffentlichen?", a: "Die Pläne sind Buch-Kredit-Abos — 1 Kredit = 1 komplettes, veröffentlichungsfertiges Buch. Der Wochenplan ist auf sechs fertige Bücher pro Woche ausgelegt." },
-      { q: "Wann ist der Launch?", a: "DraftToDone ist in privater Beta. Tritt der Warteliste für frühen Zugang bei, oder öffne die App, um jetzt zu starten." },
+      { q: "Ist es jetzt verfügbar?", a: "Ja — DraftToDone ist live. Öffne die App unter app.drafttodone.io und starte noch heute." },
     ],
     pricing: {
       eyebrow: "Preise",
@@ -371,7 +361,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { name: "Jährlich", price: "390 €", period: "/ Jahr", credits: "312 Bücher pro Jahr", perBook: "≈ 1,25 € pro Buch", highlight: true },
       ],
     },
-    cta: { h2: "Bereit, dein Publishing-Geschäft zu skalieren?", sub: "Schließ dich den Gründern an, die ihren Katalog automatisch aufbauen. Der frühe Zugang öffnet bald." },
+    cta: { h2: "Bereit, dein Publishing-Geschäft zu skalieren?", sub: "Schließ dich den Gründern an, die ihren Katalog automatisch aufbauen. Die App ist live — starte heute." },
     footer: "© 2026 DraftToDone.io. Öffentlich gebaut.",
   },
 };

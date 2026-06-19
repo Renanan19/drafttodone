@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DraftToDone.io — The Complete AI Publishing Machine",
     description:
-      "Don't just write a book. Generate the entire product. Join the waitlist for early beta access.",
+      "Don't just write a book. Generate the entire product. The app is live — open it to start publishing.",
     type: "website",
     url: SITE_URL,
   },
@@ -90,7 +90,7 @@ const siteJsonLd = [
       "AI publishing software for manuscripts, covers, titles, descriptions, KDP keywords and catalog quality control.",
     offers: {
       "@type": "Offer",
-      availability: "https://schema.org/PreOrder",
+      availability: "https://schema.org/OnlineOnly",
       price: "0",
       priceCurrency: "USD",
     },

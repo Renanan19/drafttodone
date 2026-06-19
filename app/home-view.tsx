@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -8,26 +8,13 @@ import {
   Calculator,
   Check,
   Image as ImageIcon,
-  Loader2,
-  Lock,
   Settings,
   Sparkles,
   Wand2,
-  X,
   type LucideIcon,
 } from "lucide-react";
 import { locales, type Locale } from "./blog-content";
 import { APP_URL, homePath, type HomeCopy } from "./home-content";
-
-/* -------------------------------------------------------------------------- */
-/*  Web3Forms — paste your access key (free at https://web3forms.com).        */
-/*  Public by design: the key only allows submitting to YOUR form.            */
-/*  Until set, the form runs in demo mode (shows success, sends nothing).     */
-/* -------------------------------------------------------------------------- */
-const WEB3FORMS_ACCESS_KEY =
-  process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "YOUR_ACCESS_KEY_HERE";
-
-type FormCopy = HomeCopy["form"];
 
 /* -------------------------------------------------------------------------- */
 /*  Logo                                                                      */
@@ -68,148 +55,21 @@ function LanguageLinks({ locale }: { locale: Locale }) {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Waitlist form (hero + bottom CTA)                                         */
+/*  Primary CTA → the live app                                                */
 /* -------------------------------------------------------------------------- */
-type Status = "idle" | "loading" | "done" | "error";
-
-function WaitlistForm({
-  t,
-  onSuccess,
-  id,
-}: {
-  t: FormCopy;
-  onSuccess: (email: string) => void;
-  id?: string;
-}) {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<Status>("idle");
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const value = email.trim();
-    if (!value || status === "loading") return;
-    setStatus("loading");
-
-    try {
-      if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
-        // Demo mode — no key configured yet.
-        await new Promise((r) => setTimeout(r, 650));
-      } else {
-        // FormData (multipart) is a CORS-safelisted content type → no preflight,
-        // so Web3Forms' ACAO:* applies and the browser submission succeeds.
-        const formData = new FormData();
-        formData.append("access_key", WEB3FORMS_ACCESS_KEY);
-        formData.append("email", value);
-        formData.append("subject", "New DraftToDone waitlist signup");
-        formData.append("from_name", "DraftToDone Waitlist");
-        formData.append("botcheck", "");
-        const res = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          body: formData,
-        });
-        const data = await res.json();
-        if (!data.success) throw new Error(data.message ?? "Submission failed");
-      }
-
-      onSuccess(value);
-      setEmail("");
-      setStatus("done");
-      window.setTimeout(() => setStatus("idle"), 2600);
-    } catch {
-      setStatus("error");
-      window.setTimeout(() => setStatus("idle"), 4500);
-    }
-  }
-
+function OpenAppButton({ label, size = "lg" }: { label: string; size?: "lg" | "md" }) {
+  const pad = size === "lg" ? "px-7 py-4 text-base" : "px-6 py-3.5 text-[15px]";
   return (
-    <div>
-      <form
-        id={id}
-        onSubmit={handleSubmit}
-        className="flex w-full scroll-mt-28 flex-col gap-2.5 sm:flex-row"
-      >
-        {/* honeypot */}
-        <input type="checkbox" name="botcheck" tabIndex={-1} aria-hidden className="hidden" />
-        <input
-          type="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder={t.placeholder}
-          aria-label={t.placeholder}
-          className="w-full flex-1 rounded-xl border border-line bg-paper px-4 py-3.5 text-[15px] text-ink outline-none transition-all placeholder:text-faint focus:border-ink/25 focus:ring-4 focus:ring-mint/15"
-        />
-        <button
-          type="submit"
-          disabled={status === "loading"}
-          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-ink px-6 py-3.5 text-[15px] font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft active:translate-y-0 disabled:cursor-wait disabled:opacity-80"
-        >
-          {status === "loading" && <Loader2 className="h-4 w-4 animate-spin" />}
-          {status === "done" && <Check className="h-4 w-4" strokeWidth={2.5} />}
-          {status === "loading"
-            ? t.loading
-            : status === "done"
-              ? t.done
-              : status === "error"
-                ? t.retry
-                : t.cta}
-          {(status === "idle" || status === "error") && (
-            <ArrowRight className="h-4 w-4" strokeWidth={2.25} />
-          )}
-        </button>
-      </form>
-      {status === "error" && <p className="mt-2 text-sm text-red-500">{t.error}</p>}
-    </div>
-  );
-}
-
-/* -------------------------------------------------------------------------- */
-/*  Toast                                                                     */
-/* -------------------------------------------------------------------------- */
-function Toast({
-  show,
-  email,
-  t,
-  onClose,
-}: {
-  show: boolean;
-  email: string;
-  t: HomeCopy["toast"];
-  onClose: () => void;
-}) {
-  return (
-    <div
-      aria-live="polite"
-      role="status"
-      className={`pointer-events-none fixed right-4 top-4 z-[120] transition-all duration-500 sm:right-6 sm:top-6 ${
-        show ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
-      }`}
+    <a
+      href={APP_URL}
+      className={`group inline-flex items-center justify-center gap-2 rounded-xl bg-ink ${pad} font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft active:translate-y-0`}
     >
-      <div className="pointer-events-auto flex max-w-[22rem] items-start gap-3 rounded-2xl border border-line bg-paper px-4 py-3.5 shadow-[0_24px_70px_-24px_rgba(16,24,40,0.45)]">
-        <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-mint-soft text-mint-deep">
-          <Check className="h-4 w-4" strokeWidth={3} />
-        </span>
-        <div className="min-w-0">
-          <p className="text-sm font-semibold text-ink">{t.title}</p>
-          <p className="mt-0.5 text-[13px] text-muted">
-            {email ? (
-              <>
-                {t.withEmail} <span className="break-all font-medium text-ink">{email}</span>
-              </>
-            ) : (
-              t.noEmail
-            )}
-          </p>
-        </div>
-        <button
-          onClick={onClose}
-          aria-label={t.dismiss}
-          className="shrink-0 text-faint transition-colors hover:text-ink"
-        >
-          <X className="h-4 w-4" />
-        </button>
-      </div>
-    </div>
+      {label}
+      <ArrowRight
+        className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+        strokeWidth={2.25}
+      />
+    </a>
   );
 }
 
@@ -324,7 +184,6 @@ function BookFan({ caption }: { caption: string }) {
 /*  Home view (locale-driven)                                                 */
 /* -------------------------------------------------------------------------- */
 export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
-  const [toast, setToast] = useState({ show: false, email: "" });
   const t = copy;
 
   const faqJsonLd = {
@@ -366,13 +225,6 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
     };
   }, []);
 
-  function handleSuccess(email: string) {
-    setToast({ show: true, email });
-    window.setTimeout(() => setToast((s) => ({ ...s, show: false })), 4200);
-  }
-
-  const closeToast = () => setToast((s) => ({ ...s, show: false }));
-
   const featureIcons: LucideIcon[] = [BookOpen, ImageIcon, Settings];
   const toolIcons: LucideIcon[] = [Calculator, Wand2, Settings];
   const blogPath = `/${locale}/blog`;
@@ -383,7 +235,6 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Toast show={toast.show} email={toast.email} t={t.toast} onClose={closeToast} />
 
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-line/70 bg-paper/80 backdrop-blur-xl">
@@ -447,24 +298,12 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
               {t.hero.sub} <span className="font-medium text-ink">{t.hero.subHighlight}</span>
             </p>
 
-            <div style={{ animationDelay: "240ms" }} className="reveal-load mx-auto mt-9 max-w-lg">
-              <WaitlistForm t={t.form} onSuccess={handleSuccess} id="waitlist" />
-              <p className="mt-3 flex items-center justify-center gap-1.5 text-sm text-faint">
-                <Lock className="h-3.5 w-3.5" />
-                {t.hero.microcopy}
-              </p>
-              <div className="mt-5 flex items-center justify-center">
-                <a
-                  href={APP_URL}
-                  className="group inline-flex items-center gap-2 rounded-xl border border-line bg-paper px-5 py-3 text-[15px] font-medium text-ink shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-ink/25"
-                >
-                  {t.hero.openApp}
-                  <ArrowRight
-                    className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
-                    strokeWidth={2.25}
-                  />
-                </a>
-              </div>
+            <div
+              style={{ animationDelay: "240ms" }}
+              className="reveal-load mx-auto mt-9 flex max-w-lg flex-col items-center gap-3"
+            >
+              <OpenAppButton label={t.hero.openApp} size="lg" />
+              <p className="text-sm text-faint">{t.hero.microcopy}</p>
             </div>
 
             <div
@@ -757,24 +596,9 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
                 {t.cta.h2}
               </h2>
               <p className="mx-auto mt-5 max-w-lg text-balance text-lg text-muted">{t.cta.sub}</p>
-              <div className="mx-auto mt-9 max-w-lg">
-                <WaitlistForm t={t.form} onSuccess={handleSuccess} />
-                <p className="mt-3 flex items-center justify-center gap-1.5 text-sm text-faint">
-                  <Lock className="h-3.5 w-3.5" />
-                  {t.hero.microcopy}
-                </p>
-                <div className="mt-5 flex items-center justify-center">
-                  <a
-                    href={APP_URL}
-                    className="group inline-flex items-center gap-2 rounded-xl bg-ink px-6 py-3.5 text-[15px] font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft"
-                  >
-                    {t.hero.openApp}
-                    <ArrowRight
-                      className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
-                      strokeWidth={2.25}
-                    />
-                  </a>
-                </div>
+              <div className="mt-9 flex flex-col items-center gap-3">
+                <OpenAppButton label={t.hero.openApp} size="lg" />
+                <p className="text-sm text-faint">{t.hero.microcopy}</p>
               </div>
             </div>
           </div>

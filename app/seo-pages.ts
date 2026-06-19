@@ -101,7 +101,7 @@ export const solutionPages: SolutionPage[] = [
               "KDP subtracts printing cost from print royalties, so page count, ink type and marketplace can change your margin.",
           },
         ],
-        cta: "Join the waitlist",
+        cta: "Open the app",
       },
       fr: {
         slug: "calculateur-redevances-kdp",
@@ -170,7 +170,7 @@ export const solutionPages: SolutionPage[] = [
               "KDP retire le coût d'impression. Le nombre de pages, l'encre et le marketplace peuvent donc changer fortement la marge.",
           },
         ],
-        cta: "Rejoindre la liste",
+        cta: "Ouvrir l'app",
       },
       it: {
         slug: "calcolatore-royalty-kdp",
@@ -239,7 +239,7 @@ export const solutionPages: SolutionPage[] = [
               "KDP sottrae il costo di stampa. Pagine, inchiostro e marketplace possono cambiare molto il margine.",
           },
         ],
-        cta: "Unisciti alla lista",
+        cta: "Apri l'app",
       },
       de: {
         slug: "kdp-tantiemen-rechner",
@@ -308,7 +308,7 @@ export const solutionPages: SolutionPage[] = [
               "KDP zieht Druckkosten ab. Seitenzahl, Tinte und Marketplace können die Marge stark verändern.",
           },
         ],
-        cta: "Warteliste beitreten",
+        cta: "App öffnen",
       },
     },
   },
@@ -383,7 +383,7 @@ export const solutionPages: SolutionPage[] = [
               "No software can guarantee rankings or sales. It can improve the quality, consistency and discoverability signals of the publishing process.",
           },
         ],
-        cta: "Join the waitlist",
+        cta: "Open the app",
       },
       fr: {
         slug: "logiciel-edition-ia",
@@ -452,7 +452,7 @@ export const solutionPages: SolutionPage[] = [
               "Non. Aucun logiciel ne garantit classement ou ventes. Il peut améliorer la qualité, la cohérence et les signaux de découvrabilité.",
           },
         ],
-        cta: "Rejoindre la liste",
+        cta: "Ouvrir l'app",
       },
       it: {
         slug: "software-editoria-ia",
@@ -521,7 +521,7 @@ export const solutionPages: SolutionPage[] = [
               "No. Nessun software garantisce ranking o vendite. Può migliorare qualità, coerenza e segnali di discoverability.",
           },
         ],
-        cta: "Unisciti alla lista",
+        cta: "Apri l'app",
       },
       de: {
         slug: "ki-publishing-software",
@@ -590,7 +590,7 @@ export const solutionPages: SolutionPage[] = [
               "Nein. Keine Software garantiert Rankings oder Verkäufe. Sie kann Qualität, Konsistenz und Auffindbarkeitssignale verbessern.",
           },
         ],
-        cta: "Warteliste beitreten",
+        cta: "App öffnen",
       },
     },
   },
@@ -665,7 +665,7 @@ export const solutionPages: SolutionPage[] = [
               "Yes. Author and series branding can stay consistent across books so a catalog reads as one shelf, which helps repeat readers and discovery.",
           },
         ],
-        cta: "Join the waitlist",
+        cta: "Open the app",
       },
       fr: {
         slug: "generateur-couverture-livre-ia",
@@ -734,7 +734,7 @@ export const solutionPages: SolutionPage[] = [
               "Oui. Le branding auteur et série peut rester cohérent d'un livre à l'autre, pour qu'un catalogue se lise comme une même étagère — utile pour les lecteurs fidèles et la découverte.",
           },
         ],
-        cta: "Rejoindre la liste",
+        cta: "Ouvrir l'app",
       },
       it: {
         slug: "generatore-copertine-libri-ia",
@@ -803,7 +803,7 @@ export const solutionPages: SolutionPage[] = [
               "Sì. Il branding di autore e serie può restare coerente tra i libri, così un catalogo si legge come un unico scaffale — utile per lettori abituali e scoperta.",
           },
         ],
-        cta: "Unisciti alla lista",
+        cta: "Apri l'app",
       },
       de: {
         slug: "ki-buchcover-generator",
@@ -872,7 +872,7 @@ export const solutionPages: SolutionPage[] = [
               "Ja. Autoren- und Serien-Branding kann über Bücher hinweg konsistent bleiben, sodass ein Katalog wie ein Regal wirkt — gut für Stammleser und Auffindbarkeit.",
           },
         ],
-        cta: "Warteliste beitreten",
+        cta: "App öffnen",
       },
     },
   },
@@ -899,7 +899,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Does it fit the Amazon KDP description field?", answer: "Yes. The draft is front-loaded for the truncated preview and stays within the 4000-character limit, using only the light formatting the KDP editor accepts." },
           { question: "Can I edit the blurb before publishing?", answer: "Yes. Every draft is a starting point. You can rewrite any line, mix variants and adjust the tone, then paste the final version into KDP yourself." }
         ],
-        cta: "Join the waitlist",
+        cta: "Open the app",
       },
       fr: {
         slug: "generateur-description-livre",
@@ -920,7 +920,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Le texte tient-il dans le champ description de KDP ?", answer: "Oui. Le brouillon place l'accroche avant la troncature et respecte la limite de 4000 caractères, avec uniquement la mise en forme légère acceptée par l'éditeur KDP." },
           { question: "Puis-je modifier le résumé avant publication ?", answer: "Oui. Chaque brouillon est un point de départ. Vous pouvez réécrire chaque ligne, mélanger les variantes et ajuster le ton, puis coller la version finale dans KDP vous-même." }
         ],
-        cta: "Rejoindre la liste",
+        cta: "Ouvrir l'app",
       },
       it: {
         slug: "generatore-descrizione-libro",
@@ -941,7 +941,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Il testo rientra nel campo descrizione di KDP?", answer: "Sì. La bozza colloca il gancio prima del taglio e rispetta il limite di 4000 caratteri, usando solo la formattazione leggera accettata dall'editor KDP." },
           { question: "Posso modificare la sinossi prima di pubblicare?", answer: "Sì. Ogni bozza è un punto di partenza. Puoi riscrivere ogni riga, combinare le varianti e regolare il tono, poi incollare la versione finale in KDP da solo." }
         ],
-        cta: "Unisciti alla lista",
+        cta: "Apri l'app",
       },
       de: {
         slug: "buchbeschreibung-generator",
@@ -962,7 +962,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Passt der Text in das Amazon-KDP-Beschreibungsfeld?", answer: "Ja. Der Entwurf stellt den Aufhänger vor den Abschnitt und bleibt im 4000-Zeichen-Limit, mit nur der leichten Formatierung, die der KDP-Editor akzeptiert." },
           { question: "Kann ich den Klappentext vor dem Veröffentlichen bearbeiten?", answer: "Ja. Jeder Entwurf ist ein Ausgangspunkt. Du kannst jede Zeile umschreiben, Varianten mischen und den Ton anpassen und die finale Fassung selbst in KDP einfügen." }
         ],
-        cta: "Warteliste beitreten",
+        cta: "App öffnen",
       },
     },
   },
@@ -989,7 +989,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Can I edit the suggested titles?", answer: "Yes. Every title and subtitle is a starting point you can refine, rewrite or replace before you publish on KDP." },
           { question: "Are the titles safe to use on Amazon?", answer: "They are written as original suggestions, but you stay responsible for checking trademark and KDP title rules. Avoid claiming another book series or a protected brand name." }
         ],
-        cta: "Join the waitlist",
+        cta: "Open the app",
       },
       fr: {
         slug: "generateur-titre-livre",
@@ -1010,7 +1010,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Puis-je modifier les titres proposés ?", answer: "Oui. Chaque titre et sous-titre est un point de départ que vous pouvez affiner, réécrire ou remplacer avant de publier sur KDP." },
           { question: "Les titres sont-ils sûrs à utiliser sur Amazon ?", answer: "Ils sont rédigés comme des suggestions originales, mais vous restez responsable du respect des marques et des règles de titre KDP. Évitez de reprendre une autre série ou une marque protégée." }
         ],
-        cta: "Rejoindre la liste",
+        cta: "Ouvrir l'app",
       },
       it: {
         slug: "generatore-titolo-libro",
@@ -1031,7 +1031,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Posso modificare i titoli proposti?", answer: "Sì. Ogni titolo e sottotitolo è un punto di partenza che puoi affinare, riscrivere o sostituire prima di pubblicare su KDP." },
           { question: "I titoli sono sicuri da usare su Amazon?", answer: "Sono scritti come suggerimenti originali, ma resti responsabile del controllo dei marchi e delle regole KDP sui titoli. Evita di riprendere un'altra serie o un marchio protetto." }
         ],
-        cta: "Unisciti alla lista",
+        cta: "Apri l'app",
       },
       de: {
         slug: "buchtitel-generator",
@@ -1052,7 +1052,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Kann ich die vorgeschlagenen Titel bearbeiten?", answer: "Ja. Jeder Titel und Untertitel ist ein Ausgangspunkt, den du vor der Veröffentlichung bei KDP verfeinern, umschreiben oder ersetzen kannst." },
           { question: "Sind die Titel sicher für Amazon?", answer: "Sie sind als eigenständige Vorschläge formuliert, aber du bleibst für die Prüfung von Marken und KDP-Titelregeln verantwortlich. Übernimm keine fremde Reihe und keinen geschützten Markennamen." }
         ],
-        cta: "Warteliste beitreten",
+        cta: "App öffnen",
       },
     },
   },
@@ -1079,7 +1079,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Can I publish the AI output as-is on Amazon KDP?", answer: "No. You should read and edit the manuscript yourself, and disclose AI use where KDP requires it. The generator gives you a strong draft, not a final book." },
           { question: "How is this different from the full publishing workflow?", answer: "This page is the manuscript stage, focused on outline, chapters and voice. The broader workflow then adds the cover, metadata and quality gates on top of that book." }
         ],
-        cta: "Join the waitlist",
+        cta: "Open the app",
       },
       fr: {
         slug: "generateur-livre-ia",
@@ -1100,7 +1100,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Puis-je publier la sortie IA telle quelle sur Amazon KDP ?", answer: "Non. Vous devez relire et corriger le manuscrit vous-même, et déclarer l'usage de l'IA là où KDP l'exige. Le générateur fournit un bon brouillon, pas un livre final." },
           { question: "En quoi est-ce différent du workflow de publication complet ?", answer: "Cette page est l'étape manuscrit, centrée sur plan, chapitres et voix. Le workflow plus large ajoute ensuite couverture, métadonnées et portes qualité sur ce livre." }
         ],
-        cta: "Rejoindre la liste",
+        cta: "Ouvrir l'app",
       },
       it: {
         slug: "generatore-libro-ia",
@@ -1121,7 +1121,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Posso pubblicare l'output IA così com'è su Amazon KDP?", answer: "No. Devi leggere e correggere il manoscritto, e dichiarare l'uso dell'IA dove KDP lo richiede. Il generatore offre una buona bozza, non un libro finale." },
           { question: "In cosa differisce dal workflow di pubblicazione completo?", answer: "Questa pagina è la fase manoscritto, centrata su outline, capitoli e voce. Il workflow più ampio aggiunge poi copertina, metadati e gate qualità su quel libro." }
         ],
-        cta: "Unisciti alla lista",
+        cta: "Apri l'app",
       },
       de: {
         slug: "ki-buch-generator",
@@ -1142,7 +1142,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Kann ich die KI-Ausgabe unverändert auf Amazon KDP veröffentlichen?", answer: "Nein. Du solltest das Manuskript selbst lesen und überarbeiten und KI-Nutzung dort offenlegen, wo KDP es verlangt. Der Generator liefert einen starken Entwurf, kein fertiges Buch." },
           { question: "Wie unterscheidet sich das vom kompletten Publishing-Workflow?", answer: "Diese Seite ist die Manuskript-Phase, fokussiert auf Outline, Kapitel und Stimme. Der breitere Workflow ergänzt danach Cover, Metadaten und Qualitätsgates auf diesem Buch." }
         ],
-        cta: "Warteliste beitreten",
+        cta: "App öffnen",
       },
     },
   },
@@ -1169,7 +1169,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Will the right keywords guarantee sales or a top ranking?", answer: "No. Good keyword choice helps the right readers discover your book, but it does not guarantee sales or rankings. Cover, writing, pricing, reviews, and demand all play a part." },
           { question: "How is this different from your keyword how-to guides?", answer: "The guides explain how to choose KDP keywords by hand. This is the tool that does the research and drafts the slots inside the publishing pipeline, ready for your review." }
         ],
-        cta: "Join the waitlist",
+        cta: "Open the app",
       },
       fr: {
         slug: "outil-mots-cles-kdp",
@@ -1190,7 +1190,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Les bons mots-clés garantissent-ils des ventes ou un classement ?", answer: "Non. Un bon choix de mots-clés aide les bons lecteurs à vous trouver, mais ne garantit ni ventes ni classement. Couverture, texte, prix, avis et demande comptent aussi." },
           { question: "Quelle différence avec vos guides pratiques sur les mots-clés ?", answer: "Les guides expliquent comment choisir les mots-clés KDP à la main. Ceci est l'outil qui fait la recherche et prépare les champs dans le pipeline, prêts à valider." }
         ],
-        cta: "Rejoindre la liste",
+        cta: "Ouvrir l'app",
       },
       it: {
         slug: "strumento-keyword-kdp",
@@ -1211,7 +1211,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Le keyword giuste garantiscono vendite o un posizionamento?", answer: "No. Una buona scelta di keyword aiuta i lettori giusti a trovarti, ma non garantisce vendite né posizionamento. Contano anche copertina, testo, prezzo, recensioni e domanda." },
           { question: "In cosa differisce dalle vostre guide pratiche sulle keyword?", answer: "Le guide spiegano come scegliere le keyword KDP a mano. Questo è lo strumento che fa la ricerca e prepara i campi dentro la pipeline, pronti da rivedere." }
         ],
-        cta: "Unisciti alla lista",
+        cta: "Apri l'app",
       },
       de: {
         slug: "kdp-keyword-tool",
@@ -1232,7 +1232,7 @@ export const solutionPages: SolutionPage[] = [
           { question: "Garantieren die richtigen Keywords Verkäufe oder ein Ranking?", answer: "Nein. Eine gute Keyword-Wahl hilft den richtigen Lesern, dich zu finden, garantiert aber weder Verkäufe noch Rankings. Auch Cover, Text, Preis, Rezensionen und Nachfrage zählen." },
           { question: "Worin unterscheidet es sich von euren Keyword-Anleitungen?", answer: "Die Anleitungen erklären, wie man KDP-Keywords von Hand wählt. Dies ist das Tool, das die Recherche macht und die Felder in der Pipeline vorbereitet, bereit zur Prüfung." }
         ],
-        cta: "Warteliste beitreten",
+        cta: "App öffnen",
       },
     },
   },
@@ -1255,11 +1255,11 @@ export const solutionPages: SolutionPage[] = [
           { id: "who-each-is-for", title: "Which one fits you", body: "The two solve different problems, and some authors use both: write with one, package and publish with the other.", points: ["Sudowrite: novelists refining prose", "DraftToDone: publishers shipping catalogs", "Single literary novel vs repeatable output", "Craft assistance vs publish-ready product"] }
         ],
         faq: [
-          { question: "Is DraftToDone available now?", answer: "DraftToDone is in private beta. You can join the waitlist for early access; the tools and pages here describe what the product does." },
+          { question: "Is DraftToDone available now?", answer: "Yes — DraftToDone is live. Open the app at app.drafttodone.io to start publishing today." },
           { question: "Is DraftToDone better than Sudowrite?", answer: "They do different jobs. Sudowrite helps you write better fiction; DraftToDone turns a brief into a publish-ready KDP product. Plenty of authors could use both." },
           { question: "Does DraftToDone write fiction too?", answer: "Yes, it generates full manuscripts, but its focus is the complete publishable product for KDP rather than line-by-line literary craft." }
         ],
-        cta: "Join the waitlist",
+        cta: "Open the app",
       },
       fr: {
         slug: "alternative-sudowrite",
@@ -1276,11 +1276,11 @@ export const solutionPages: SolutionPage[] = [
           { id: "who-each-is-for", title: "Lequel vous convient", body: "Les deux résolvent des problèmes différents, et certains auteurs utilisent les deux : écrire avec l'un, packager et publier avec l'autre.", points: ["Sudowrite : romanciers qui peaufinent la prose", "DraftToDone : éditeurs qui publient des catalogues", "Roman littéraire unique vs production répétable", "Aide à l'écriture vs produit prêt à publier"] }
         ],
         faq: [
-          { question: "DraftToDone est-il disponible maintenant ?", answer: "DraftToDone est en bêta privée. Vous pouvez rejoindre la liste d'attente pour un accès anticipé ; ces pages décrivent ce que fait le produit." },
+          { question: "DraftToDone est-il disponible maintenant ?", answer: "Oui — DraftToDone est en ligne. Ouvrez l'app sur app.drafttodone.io pour commencer à publier dès aujourd'hui." },
           { question: "DraftToDone est-il meilleur que Sudowrite ?", answer: "Ils font des choses différentes. Sudowrite aide à mieux écrire la fiction ; DraftToDone transforme un brief en produit KDP prêt à publier. Beaucoup d'auteurs pourraient utiliser les deux." },
           { question: "DraftToDone écrit-il aussi de la fiction ?", answer: "Oui, il génère des manuscrits complets, mais son objectif est le produit publiable complet pour KDP plutôt que le travail littéraire ligne à ligne." }
         ],
-        cta: "Rejoindre la liste",
+        cta: "Ouvrir l'app",
       },
       it: {
         slug: "alternativa-sudowrite",
@@ -1297,11 +1297,11 @@ export const solutionPages: SolutionPage[] = [
           { id: "who-each-is-for", title: "Quale fa per te", body: "I due risolvono problemi diversi, e alcuni autori usano entrambi: scrivere con uno, impacchettare e pubblicare con l'altro.", points: ["Sudowrite: romanzieri che rifiniscono la prosa", "DraftToDone: editori che pubblicano cataloghi", "Romanzo singolo vs produzione ripetibile", "Aiuto alla scrittura vs prodotto pronto"] }
         ],
         faq: [
-          { question: "DraftToDone è disponibile ora?", answer: "DraftToDone è in beta privata. Puoi unirti alla lista d'attesa per l'accesso anticipato; queste pagine descrivono cosa fa il prodotto." },
+          { question: "DraftToDone è disponibile ora?", answer: "Sì — DraftToDone è online. Apri l'app su app.drafttodone.io e inizia a pubblicare oggi." },
           { question: "DraftToDone è migliore di Sudowrite?", answer: "Fanno cose diverse. Sudowrite aiuta a scrivere meglio la narrativa; DraftToDone trasforma un brief in un prodotto KDP pronto da pubblicare. Molti autori potrebbero usare entrambi." },
           { question: "DraftToDone scrive anche narrativa?", answer: "Sì, genera manoscritti completi, ma il suo obiettivo è il prodotto pubblicabile completo per KDP più che il lavoro letterario riga per riga." }
         ],
-        cta: "Unisciti alla lista",
+        cta: "Apri l'app",
       },
       de: {
         slug: "sudowrite-alternative",
@@ -1318,11 +1318,11 @@ export const solutionPages: SolutionPage[] = [
           { id: "who-each-is-for", title: "Was zu dir passt", body: "Beide lösen verschiedene Probleme, und manche Autoren nutzen beide: mit dem einen schreiben, mit dem anderen verpacken und veröffentlichen.", points: ["Sudowrite: Romanautoren, die Prosa verfeinern", "DraftToDone: Verlage, die Kataloge veröffentlichen", "Einzelner Roman vs wiederholbare Produktion", "Schreibhilfe vs fertiges Produkt"] }
         ],
         faq: [
-          { question: "Ist DraftToDone jetzt verfügbar?", answer: "DraftToDone ist in privater Beta. Du kannst der Warteliste für frühen Zugang beitreten; diese Seiten beschreiben, was das Produkt leistet." },
+          { question: "Ist DraftToDone jetzt verfügbar?", answer: "Ja — DraftToDone ist live. Öffne die App unter app.drafttodone.io und starte noch heute." },
           { question: "Ist DraftToDone besser als Sudowrite?", answer: "Sie machen Verschiedenes. Sudowrite hilft, bessere Belletristik zu schreiben; DraftToDone macht aus einem Brief ein veröffentlichungsfertiges KDP-Produkt. Viele Autoren könnten beide nutzen." },
           { question: "Schreibt DraftToDone auch Belletristik?", answer: "Ja, es erzeugt vollständige Manuskripte, aber der Fokus liegt auf dem kompletten veröffentlichungsfertigen KDP-Produkt statt auf literarischer Feinarbeit Zeile für Zeile." }
         ],
-        cta: "Warteliste beitreten",
+        cta: "App öffnen",
       },
     },
   },
@@ -1345,11 +1345,11 @@ export const solutionPages: SolutionPage[] = [
           { id: "who-each-is-for", title: "Which one fits you", body: "If you write your own books and want beautiful files, Atticus is excellent. If you want to produce publish-ready products at catalog scale, DraftToDone targets that.", points: ["Atticus: format what you wrote", "DraftToDone: generate the whole product", "Single polished title vs repeatable catalog", "Formatting craft vs end-to-end pipeline"] }
         ],
         faq: [
-          { question: "Is DraftToDone available now?", answer: "DraftToDone is in private beta. Join the waitlist for early access; these pages describe what the product is built to do." },
+          { question: "Is DraftToDone available now?", answer: "Yes — DraftToDone is live. Open the app at app.drafttodone.io to start publishing today." },
           { question: "Does DraftToDone format print and ebook files like Atticus?", answer: "Formatting is one stage of the pipeline. The focus is producing the whole product — manuscript, cover and metadata — ready for KDP, rather than being a standalone formatting editor." },
           { question: "Atticus is one-time; what about DraftToDone?", answer: "DraftToDone is a book-credit subscription (one credit makes one complete book). Atticus is a one-time purchase for its editor and formatter. Different models for different jobs." }
         ],
-        cta: "Join the waitlist",
+        cta: "Open the app",
       },
       fr: {
         slug: "alternative-atticus",
@@ -1366,11 +1366,11 @@ export const solutionPages: SolutionPage[] = [
           { id: "who-each-is-for", title: "Lequel vous convient", body: "Si vous écrivez vos livres et voulez de beaux fichiers, Atticus est excellent. Si vous voulez produire des produits prêts à publier à l'échelle d'un catalogue, DraftToDone vise cela.", points: ["Atticus : mettre en page ce que vous avez écrit", "DraftToDone : générer tout le produit", "Titre unique soigné vs catalogue répétable", "Métier de mise en page vs pipeline complet"] }
         ],
         faq: [
-          { question: "DraftToDone est-il disponible maintenant ?", answer: "DraftToDone est en bêta privée. Rejoignez la liste d'attente pour un accès anticipé ; ces pages décrivent ce que le produit est conçu pour faire." },
+          { question: "DraftToDone est-il disponible maintenant ?", answer: "Oui — DraftToDone est en ligne. Ouvrez l'app sur app.drafttodone.io pour commencer à publier dès aujourd'hui." },
           { question: "DraftToDone met-il en page les fichiers print et ebook comme Atticus ?", answer: "La mise en page est une étape du pipeline. L'objectif est de produire tout le produit — manuscrit, couverture et métadonnées — prêt pour KDP, plutôt que d'être un éditeur de mise en page autonome." },
           { question: "Atticus est en achat unique ; et DraftToDone ?", answer: "DraftToDone est un abonnement à crédits livres (1 crédit = 1 livre complet). Atticus est un achat unique pour son éditeur et son outil de mise en page. Des modèles différents pour des besoins différents." }
         ],
-        cta: "Rejoindre la liste",
+        cta: "Ouvrir l'app",
       },
       it: {
         slug: "alternativa-atticus",
@@ -1387,11 +1387,11 @@ export const solutionPages: SolutionPage[] = [
           { id: "who-each-is-for", title: "Quale fa per te", body: "Se scrivi i tuoi libri e vuoi file belli, Atticus è eccellente. Se vuoi produrre prodotti pronti da pubblicare su scala di catalogo, DraftToDone punta a quello.", points: ["Atticus: impaginare ciò che hai scritto", "DraftToDone: generare tutto il prodotto", "Titolo singolo curato vs catalogo ripetibile", "Mestiere di impaginazione vs pipeline completo"] }
         ],
         faq: [
-          { question: "DraftToDone è disponibile ora?", answer: "DraftToDone è in beta privata. Unisciti alla lista d'attesa per l'accesso anticipato; queste pagine descrivono cosa il prodotto è progettato per fare." },
+          { question: "DraftToDone è disponibile ora?", answer: "Sì — DraftToDone è online. Apri l'app su app.drafttodone.io e inizia a pubblicare oggi." },
           { question: "DraftToDone impagina i file print ed ebook come Atticus?", answer: "L'impaginazione è una tappa del pipeline. L'obiettivo è produrre tutto il prodotto — manoscritto, copertina e metadati — pronto per KDP, più che essere un editor di impaginazione autonomo." },
           { question: "Atticus è acquisto unico; e DraftToDone?", answer: "DraftToDone è un abbonamento a crediti libri (1 credito = 1 libro completo). Atticus è un acquisto unico per il suo editor e impaginatore. Modelli diversi per esigenze diverse." }
         ],
-        cta: "Unisciti alla lista",
+        cta: "Apri l'app",
       },
       de: {
         slug: "atticus-alternative",
@@ -1408,11 +1408,11 @@ export const solutionPages: SolutionPage[] = [
           { id: "who-each-is-for", title: "Was zu dir passt", body: "Wenn du deine Bücher selbst schreibst und schöne Dateien willst, ist Atticus ausgezeichnet. Wenn du veröffentlichungsfertige Produkte im Katalogmaßstab willst, zielt DraftToDone darauf.", points: ["Atticus: formatieren, was du geschrieben hast", "DraftToDone: das ganze Produkt erzeugen", "Einzelner Titel vs wiederholbarer Katalog", "Formatierungshandwerk vs End-to-End-Pipeline"] }
         ],
         faq: [
-          { question: "Ist DraftToDone jetzt verfügbar?", answer: "DraftToDone ist in privater Beta. Tritt der Warteliste für frühen Zugang bei; diese Seiten beschreiben, wofür das Produkt gebaut ist." },
+          { question: "Ist DraftToDone jetzt verfügbar?", answer: "Ja — DraftToDone ist live. Öffne die App unter app.drafttodone.io und starte noch heute." },
           { question: "Formatiert DraftToDone Print- und Ebook-Dateien wie Atticus?", answer: "Formatierung ist eine Stufe der Pipeline. Der Fokus liegt darauf, das ganze Produkt — Manuskript, Cover und Metadaten — fertig für KDP zu erzeugen, statt ein eigenständiger Formatierungseditor zu sein." },
           { question: "Atticus ist Einmalkauf; und DraftToDone?", answer: "DraftToDone ist ein Buch-Kredit-Abo (1 Kredit = 1 komplettes Buch). Atticus ist ein Einmalkauf für Editor und Formatierer. Verschiedene Modelle für verschiedene Aufgaben." }
         ],
-        cta: "Warteliste beitreten",
+        cta: "App öffnen",
       },
     },
   },

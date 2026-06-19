@@ -10,7 +10,7 @@ import {
   type Locale,
 } from "./blog-content";
 import { solutionPages, solutionPath } from "./seo-pages";
-import { homePath } from "./home-content";
+import { APP_URL, homePath } from "./home-content";
 
 // A post may not exist in every locale; missing locales fall back to the blog index.
 type LanguagePaths = Partial<Record<Locale, string>>;
@@ -86,7 +86,7 @@ export function BlogHeader({
             {t.blog}
           </a>
           <a
-            href={`${homePath(locale)}#waitlist`}
+            href={APP_URL}
             className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
           >
             {t.waitlist}
@@ -230,7 +230,7 @@ export function CtaBand({ locale }: { locale: Locale }) {
             <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">{t.ctaText}</p>
           </div>
           <a
-            href={`${homePath(locale)}#waitlist`}
+            href={APP_URL}
             className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-ink px-6 py-3.5 text-[15px] font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft active:translate-y-0"
           >
             {t.ctaButton}

@@ -91,7 +91,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     home: "Home",
     blog: "Blog",
     followX: "Follow on X",
-    waitlist: "Join the waitlist",
+    waitlist: "Open the app",
     languageLabel: "Choose language",
     metaTitle: "AI Publishing Blog: SEO, KDP, Covers and Book Automation",
     metaDescription:
@@ -123,14 +123,14 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     ctaTitle: "Turn your publishing workflow into a system.",
     ctaText:
       "DraftToDone helps transform ideas into manuscript, cover assets and optimized metadata from one controlled pipeline.",
-    ctaButton: "Join the waitlist",
+    ctaButton: "Open the app",
     footer: "Built in public for publishers who care about quality and leverage.",
   },
   fr: {
     home: "Accueil",
     blog: "Blog",
     followX: "Suivre sur X",
-    waitlist: "Rejoindre la liste",
+    waitlist: "Ouvrir l'app",
     languageLabel: "Choisir la langue",
     metaTitle: "Blog édition IA : SEO, KDP, couvertures et automatisation",
     metaDescription:
@@ -162,14 +162,14 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     ctaTitle: "Transformez votre workflow éditorial en système.",
     ctaText:
       "DraftToDone aide à transformer une idée en manuscrit, assets de couverture et métadonnées optimisées depuis un pipeline contrôlé.",
-    ctaButton: "Rejoindre la liste",
+    ctaButton: "Ouvrir l'app",
     footer: "Construit en public pour les éditeurs qui veulent qualité et levier.",
   },
   it: {
     home: "Home",
     blog: "Blog",
     followX: "Segui su X",
-    waitlist: "Unisciti alla lista",
+    waitlist: "Apri l'app",
     languageLabel: "Scegli lingua",
     metaTitle: "Blog editoria IA: SEO, KDP, copertine e automazione",
     metaDescription:
@@ -201,14 +201,14 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     ctaTitle: "Trasforma il workflow editoriale in un sistema.",
     ctaText:
       "DraftToDone aiuta a trasformare un'idea in manoscritto, asset di copertina e metadati ottimizzati da un unico pipeline controllato.",
-    ctaButton: "Unisciti alla lista",
+    ctaButton: "Apri l'app",
     footer: "Costruito in pubblico per editori che vogliono qualità e leva.",
   },
   de: {
     home: "Startseite",
     blog: "Blog",
     followX: "Auf X folgen",
-    waitlist: "Warteliste beitreten",
+    waitlist: "App öffnen",
     languageLabel: "Sprache wählen",
     metaTitle: "KI-Publishing-Blog: SEO, KDP, Cover und Automatisierung",
     metaDescription:
@@ -240,7 +240,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     ctaTitle: "Mach aus deinem Publishing-Workflow ein System.",
     ctaText:
       "DraftToDone hilft, Ideen in Manuskript, Cover-Assets und optimierte Metadaten aus einer kontrollierten Pipeline zu verwandeln.",
-    ctaButton: "Warteliste beitreten",
+    ctaButton: "App öffnen",
     footer: "Öffentlich aufgebaut für Publisher, die Qualität und Hebelwirkung wollen.",
   },
 };

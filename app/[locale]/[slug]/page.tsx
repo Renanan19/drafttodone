@@ -20,7 +20,7 @@ import {
   solutionPath,
   solutionUrl,
 } from "@/app/seo-pages";
-import { homePath } from "@/app/home-content";
+import { APP_URL } from "@/app/home-content";
 
 export const dynamicParams = false;
 
@@ -106,7 +106,7 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
       inLanguage: locale,
       offers: {
         "@type": "Offer",
-        availability: "https://schema.org/PreOrder",
+        availability: "https://schema.org/OnlineOnly",
         price: "0",
         priceCurrency: "USD",
       },
@@ -184,7 +184,7 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
               ))}
             </div>
             <a
-              href={`${homePath(locale)}#waitlist`}
+              href={APP_URL}
               className="mt-10 inline-flex items-center justify-center gap-2 rounded-xl bg-ink px-6 py-3.5 text-[15px] font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft active:translate-y-0"
             >
               {solution.cta}
@@ -248,7 +248,7 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href={`${homePath(locale)}#waitlist`}
+                href={APP_URL}
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-ink px-5 py-3 text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
               >
                 {solution.cta}
@@ -279,7 +279,6 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
                         {target.h1}
                       </h3>
                       <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors group-hover:text-ink">
-                        {solution.cta}
                         <ArrowRight className="h-4 w-4" />
                       </span>
                     </a>
