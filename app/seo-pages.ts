@@ -1236,6 +1236,186 @@ export const solutionPages: SolutionPage[] = [
       },
     },
   },
+  {
+    key: "sudowrite-alternative",
+    updated: "2026-06-19",
+    translations: {
+      en: {
+        slug: "sudowrite-alternative",
+        title: "Sudowrite alternative for the whole publishable book, not just prose",
+        description:
+          "Looking for a Sudowrite alternative? DraftToDone generates the full KDP product — manuscript, cover and metadata — while Sudowrite focuses on AI fiction craft.",
+        eyebrow: "Sudowrite alternative",
+        h1: "A Sudowrite alternative built around the whole book, not just the writing.",
+        lead: "Sudowrite is a strong AI writing partner for fiction. DraftToDone aims one step wider: turning a brief into a publish-ready KDP product — manuscript, cover and metadata — for indie publishers and catalog operators.",
+        keywords: ["Sudowrite alternative", "AI book writing software", "AI fiction writing tool", "write a book with AI", "AI publishing software"],
+        sections: [
+          { id: "what-sudowrite-does", title: "What Sudowrite is great at", body: "Sudowrite is built for fiction craft: a non-judgemental AI writing partner that helps you draft, rewrite and brainstorm scenes with a model tuned for stories.", points: ["Story-focused AI writing", "Scene and prose rewriting", "Brainstorming and continuity help", "Subscription, craft-first"] },
+          { id: "where-drafttodone-differs", title: "Where DraftToDone is different", body: "DraftToDone is not a writing-craft tool. It produces the whole product a marketplace needs, from one controlled pipeline, then runs quality gates before upload.", points: ["Full manuscript generation", "Front, spine and back cover", "KDP title, description and keywords", "Verified pen name and catalog QA"] },
+          { id: "who-each-is-for", title: "Which one fits you", body: "The two solve different problems, and some authors use both: write with one, package and publish with the other.", points: ["Sudowrite: novelists refining prose", "DraftToDone: publishers shipping catalogs", "Single literary novel vs repeatable output", "Craft assistance vs publish-ready product"] }
+        ],
+        faq: [
+          { question: "Is DraftToDone available now?", answer: "DraftToDone is in private beta. You can join the waitlist for early access; the tools and pages here describe what the product does." },
+          { question: "Is DraftToDone better than Sudowrite?", answer: "They do different jobs. Sudowrite helps you write better fiction; DraftToDone turns a brief into a publish-ready KDP product. Plenty of authors could use both." },
+          { question: "Does DraftToDone write fiction too?", answer: "Yes, it generates full manuscripts, but its focus is the complete publishable product for KDP rather than line-by-line literary craft." }
+        ],
+        cta: "Join the waitlist",
+      },
+      fr: {
+        slug: "alternative-sudowrite",
+        title: "Alternative à Sudowrite pour tout le livre publiable, pas que le texte",
+        description:
+          "Vous cherchez une alternative à Sudowrite ? DraftToDone génère le produit KDP complet — manuscrit, couverture, métadonnées — quand Sudowrite vise la fiction.",
+        eyebrow: "Alternative à Sudowrite",
+        h1: "Une alternative à Sudowrite pensée pour tout le livre, pas seulement l'écriture.",
+        lead: "Sudowrite est un bon partenaire d'écriture IA pour la fiction. DraftToDone vise un cran plus large : transformer un brief en produit KDP prêt à publier — manuscrit, couverture et métadonnées — pour éditeurs indépendants et opérateurs de catalogue.",
+        keywords: ["alternative Sudowrite", "logiciel d'écriture de livre IA", "outil d'écriture de fiction IA", "écrire un livre avec IA", "logiciel d'édition IA"],
+        sections: [
+          { id: "what-sudowrite-does", title: "Ce que Sudowrite réussit", body: "Sudowrite est conçu pour la fiction : un partenaire d'écriture IA sans jugement qui aide à rédiger, réécrire et explorer des scènes avec un modèle pensé pour les histoires.", points: ["Écriture IA centrée sur l'histoire", "Réécriture de scènes et de prose", "Aide au brainstorming et à la continuité", "Abonnement, axé sur le métier d'écrire"] },
+          { id: "where-drafttodone-differs", title: "Ce qui distingue DraftToDone", body: "DraftToDone n'est pas un outil de métier d'écriture. Il produit tout ce qu'une marketplace exige, depuis un pipeline contrôlé, puis applique des contrôles qualité avant l'upload.", points: ["Génération complète du manuscrit", "Première, dos et quatrième de couverture", "Titre, description et mots-clés KDP", "Nom de plume vérifié et QA catalogue"] },
+          { id: "who-each-is-for", title: "Lequel vous convient", body: "Les deux résolvent des problèmes différents, et certains auteurs utilisent les deux : écrire avec l'un, packager et publier avec l'autre.", points: ["Sudowrite : romanciers qui peaufinent la prose", "DraftToDone : éditeurs qui publient des catalogues", "Roman littéraire unique vs production répétable", "Aide à l'écriture vs produit prêt à publier"] }
+        ],
+        faq: [
+          { question: "DraftToDone est-il disponible maintenant ?", answer: "DraftToDone est en bêta privée. Vous pouvez rejoindre la liste d'attente pour un accès anticipé ; ces pages décrivent ce que fait le produit." },
+          { question: "DraftToDone est-il meilleur que Sudowrite ?", answer: "Ils font des choses différentes. Sudowrite aide à mieux écrire la fiction ; DraftToDone transforme un brief en produit KDP prêt à publier. Beaucoup d'auteurs pourraient utiliser les deux." },
+          { question: "DraftToDone écrit-il aussi de la fiction ?", answer: "Oui, il génère des manuscrits complets, mais son objectif est le produit publiable complet pour KDP plutôt que le travail littéraire ligne à ligne." }
+        ],
+        cta: "Rejoindre la liste",
+      },
+      it: {
+        slug: "alternativa-sudowrite",
+        title: "Alternativa a Sudowrite per tutto il libro pubblicabile, non solo il testo",
+        description:
+          "Cerchi un'alternativa a Sudowrite? DraftToDone genera il prodotto KDP completo — manoscritto, copertina, metadati — mentre Sudowrite punta sulla narrativa.",
+        eyebrow: "Alternativa a Sudowrite",
+        h1: "Un'alternativa a Sudowrite pensata per tutto il libro, non solo la scrittura.",
+        lead: "Sudowrite è un buon partner di scrittura IA per la narrativa. DraftToDone punta un passo più in là: trasformare un brief in un prodotto KDP pronto da pubblicare — manoscritto, copertina e metadati — per editori indipendenti e operatori di catalogo.",
+        keywords: ["alternativa Sudowrite", "software di scrittura libri IA", "strumento di scrittura narrativa IA", "scrivere un libro con IA", "software di editoria IA"],
+        sections: [
+          { id: "what-sudowrite-does", title: "Cosa fa bene Sudowrite", body: "Sudowrite è costruito per la narrativa: un partner di scrittura IA senza giudizio che aiuta a scrivere, riscrivere ed esplorare scene con un modello pensato per le storie.", points: ["Scrittura IA centrata sulla storia", "Riscrittura di scene e prosa", "Aiuto a brainstorming e continuità", "Abbonamento, incentrato sul mestiere"] },
+          { id: "where-drafttodone-differs", title: "Cosa distingue DraftToDone", body: "DraftToDone non è uno strumento di mestiere della scrittura. Produce tutto ciò che un marketplace richiede, da un pipeline controllato, poi applica controlli di qualità prima dell'upload.", points: ["Generazione completa del manoscritto", "Copertina anteriore, dorso e retro", "Titolo, descrizione e keyword KDP", "Nome d'autore verificato e QA catalogo"] },
+          { id: "who-each-is-for", title: "Quale fa per te", body: "I due risolvono problemi diversi, e alcuni autori usano entrambi: scrivere con uno, impacchettare e pubblicare con l'altro.", points: ["Sudowrite: romanzieri che rifiniscono la prosa", "DraftToDone: editori che pubblicano cataloghi", "Romanzo singolo vs produzione ripetibile", "Aiuto alla scrittura vs prodotto pronto"] }
+        ],
+        faq: [
+          { question: "DraftToDone è disponibile ora?", answer: "DraftToDone è in beta privata. Puoi unirti alla lista d'attesa per l'accesso anticipato; queste pagine descrivono cosa fa il prodotto." },
+          { question: "DraftToDone è migliore di Sudowrite?", answer: "Fanno cose diverse. Sudowrite aiuta a scrivere meglio la narrativa; DraftToDone trasforma un brief in un prodotto KDP pronto da pubblicare. Molti autori potrebbero usare entrambi." },
+          { question: "DraftToDone scrive anche narrativa?", answer: "Sì, genera manoscritti completi, ma il suo obiettivo è il prodotto pubblicabile completo per KDP più che il lavoro letterario riga per riga." }
+        ],
+        cta: "Unisciti alla lista",
+      },
+      de: {
+        slug: "sudowrite-alternative",
+        title: "Sudowrite-Alternative für das ganze Buch, nicht nur den Text",
+        description:
+          "Du suchst eine Sudowrite-Alternative? DraftToDone erzeugt das komplette KDP-Produkt — Manuskript, Cover, Metadaten — während Sudowrite auf Belletristik zielt.",
+        eyebrow: "Sudowrite-Alternative",
+        h1: "Eine Sudowrite-Alternative rund um das ganze Buch, nicht nur das Schreiben.",
+        lead: "Sudowrite ist ein starker KI-Schreibpartner für Belletristik. DraftToDone zielt einen Schritt weiter: aus einem Brief ein veröffentlichungsfertiges KDP-Produkt machen — Manuskript, Cover und Metadaten — für Indie-Publisher und Katalog-Operatoren.",
+        keywords: ["Sudowrite Alternative", "KI Buch Schreibsoftware", "KI Belletristik Schreibtool", "Buch mit KI schreiben", "KI Publishing Software"],
+        sections: [
+          { id: "what-sudowrite-does", title: "Worin Sudowrite stark ist", body: "Sudowrite ist für Belletristik gebaut: ein wertfreier KI-Schreibpartner, der beim Entwerfen, Umschreiben und Ausdenken von Szenen mit einem auf Geschichten getrimmten Modell hilft.", points: ["Story-fokussiertes KI-Schreiben", "Umschreiben von Szenen und Prosa", "Hilfe bei Brainstorming und Kontinuität", "Abo, handwerksorientiert"] },
+          { id: "where-drafttodone-differs", title: "Was DraftToDone unterscheidet", body: "DraftToDone ist kein Schreibhandwerk-Tool. Es produziert alles, was ein Marktplatz verlangt, aus einer kontrollierten Pipeline, und prüft die Qualität vor dem Upload.", points: ["Vollständige Manuskriptgenerierung", "Vorderseite, Rücken und Rückseite", "KDP-Titel, -Beschreibung und -Keywords", "Verifizierter Autorname und Katalog-QA"] },
+          { id: "who-each-is-for", title: "Was zu dir passt", body: "Beide lösen verschiedene Probleme, und manche Autoren nutzen beide: mit dem einen schreiben, mit dem anderen verpacken und veröffentlichen.", points: ["Sudowrite: Romanautoren, die Prosa verfeinern", "DraftToDone: Verlage, die Kataloge veröffentlichen", "Einzelner Roman vs wiederholbare Produktion", "Schreibhilfe vs fertiges Produkt"] }
+        ],
+        faq: [
+          { question: "Ist DraftToDone jetzt verfügbar?", answer: "DraftToDone ist in privater Beta. Du kannst der Warteliste für frühen Zugang beitreten; diese Seiten beschreiben, was das Produkt leistet." },
+          { question: "Ist DraftToDone besser als Sudowrite?", answer: "Sie machen Verschiedenes. Sudowrite hilft, bessere Belletristik zu schreiben; DraftToDone macht aus einem Brief ein veröffentlichungsfertiges KDP-Produkt. Viele Autoren könnten beide nutzen." },
+          { question: "Schreibt DraftToDone auch Belletristik?", answer: "Ja, es erzeugt vollständige Manuskripte, aber der Fokus liegt auf dem kompletten veröffentlichungsfertigen KDP-Produkt statt auf literarischer Feinarbeit Zeile für Zeile." }
+        ],
+        cta: "Warteliste beitreten",
+      },
+    },
+  },
+  {
+    key: "atticus-alternative",
+    updated: "2026-06-19",
+    translations: {
+      en: {
+        slug: "atticus-alternative",
+        title: "Atticus alternative that generates the book, not only formats it",
+        description:
+          "Looking for an Atticus alternative? Atticus formats books you have written; DraftToDone generates the manuscript, cover and KDP metadata as one pipeline.",
+        eyebrow: "Atticus alternative",
+        h1: "An Atticus alternative that builds the book, not only formats it.",
+        lead: "Atticus is a polished writing and formatting tool. DraftToDone starts earlier and ends later: it generates the manuscript, the full cover and the KDP metadata, then checks quality before upload.",
+        keywords: ["Atticus alternative", "book formatting software", "AI publishing software", "KDP book formatting", "all-in-one book tool"],
+        sections: [
+          { id: "what-atticus-does", title: "What Atticus is great at", body: "Atticus is an all-in-one writing and formatting tool: import your manuscript and produce clean print and ebook files with customizable templates, on any platform, for a one-time price.", points: ["Writing editor for authors", "Print and ebook formatting", "Customizable templates", "One-time purchase, cross-platform"] },
+          { id: "where-drafttodone-differs", title: "Where DraftToDone is different", body: "Atticus assumes you already wrote the book. DraftToDone generates it — and the cover and metadata — so formatting is one step inside a wider pipeline, not the whole job.", points: ["Generates the manuscript itself", "Front, spine and back cover", "KDP title, description and keywords", "Catalog quality gates before upload"] },
+          { id: "who-each-is-for", title: "Which one fits you", body: "If you write your own books and want beautiful files, Atticus is excellent. If you want to produce publish-ready products at catalog scale, DraftToDone targets that.", points: ["Atticus: format what you wrote", "DraftToDone: generate the whole product", "Single polished title vs repeatable catalog", "Formatting craft vs end-to-end pipeline"] }
+        ],
+        faq: [
+          { question: "Is DraftToDone available now?", answer: "DraftToDone is in private beta. Join the waitlist for early access; these pages describe what the product is built to do." },
+          { question: "Does DraftToDone format print and ebook files like Atticus?", answer: "Formatting is one stage of the pipeline. The focus is producing the whole product — manuscript, cover and metadata — ready for KDP, rather than being a standalone formatting editor." },
+          { question: "Atticus is one-time; what about DraftToDone?", answer: "DraftToDone is a book-credit subscription (one credit makes one complete book). Atticus is a one-time purchase for its editor and formatter. Different models for different jobs." }
+        ],
+        cta: "Join the waitlist",
+      },
+      fr: {
+        slug: "alternative-atticus",
+        title: "Alternative à Atticus pour générer le livre, pas seulement le formater",
+        description:
+          "Vous cherchez une alternative à Atticus ? Atticus formate les livres que vous avez écrits ; DraftToDone génère le manuscrit, la couverture et les métadonnées KDP.",
+        eyebrow: "Alternative à Atticus",
+        h1: "Une alternative à Atticus qui construit le livre, pas seulement le met en page.",
+        lead: "Atticus est un outil d'écriture et de mise en page soigné. DraftToDone commence plus tôt et finit plus tard : il génère le manuscrit, la couverture complète et les métadonnées KDP, puis vérifie la qualité avant l'upload.",
+        keywords: ["alternative Atticus", "logiciel de mise en page livre", "logiciel d'édition IA", "mise en page livre KDP", "outil livre tout-en-un"],
+        sections: [
+          { id: "what-atticus-does", title: "Ce qu'Atticus réussit", body: "Atticus est un outil d'écriture et de mise en page tout-en-un : importez votre manuscrit et produisez des fichiers print et ebook propres avec des modèles personnalisables, sur toutes les plateformes, pour un achat unique.", points: ["Éditeur d'écriture pour auteurs", "Mise en page print et ebook", "Modèles personnalisables", "Achat unique, multiplateforme"] },
+          { id: "where-drafttodone-differs", title: "Ce qui distingue DraftToDone", body: "Atticus suppose que vous avez déjà écrit le livre. DraftToDone le génère — avec la couverture et les métadonnées — de sorte que la mise en page n'est qu'une étape d'un pipeline plus large.", points: ["Génère le manuscrit lui-même", "Première, dos et quatrième", "Titre, description et mots-clés KDP", "Contrôles qualité catalogue avant l'upload"] },
+          { id: "who-each-is-for", title: "Lequel vous convient", body: "Si vous écrivez vos livres et voulez de beaux fichiers, Atticus est excellent. Si vous voulez produire des produits prêts à publier à l'échelle d'un catalogue, DraftToDone vise cela.", points: ["Atticus : mettre en page ce que vous avez écrit", "DraftToDone : générer tout le produit", "Titre unique soigné vs catalogue répétable", "Métier de mise en page vs pipeline complet"] }
+        ],
+        faq: [
+          { question: "DraftToDone est-il disponible maintenant ?", answer: "DraftToDone est en bêta privée. Rejoignez la liste d'attente pour un accès anticipé ; ces pages décrivent ce que le produit est conçu pour faire." },
+          { question: "DraftToDone met-il en page les fichiers print et ebook comme Atticus ?", answer: "La mise en page est une étape du pipeline. L'objectif est de produire tout le produit — manuscrit, couverture et métadonnées — prêt pour KDP, plutôt que d'être un éditeur de mise en page autonome." },
+          { question: "Atticus est en achat unique ; et DraftToDone ?", answer: "DraftToDone est un abonnement à crédits livres (1 crédit = 1 livre complet). Atticus est un achat unique pour son éditeur et son outil de mise en page. Des modèles différents pour des besoins différents." }
+        ],
+        cta: "Rejoindre la liste",
+      },
+      it: {
+        slug: "alternativa-atticus",
+        title: "Alternativa ad Atticus per generare il libro, non solo formattarlo",
+        description:
+          "Cerchi un'alternativa ad Atticus? Atticus formatta i libri che hai scritto; DraftToDone genera il manoscritto, la copertina e i metadati KDP in un pipeline.",
+        eyebrow: "Alternativa ad Atticus",
+        h1: "Un'alternativa ad Atticus che costruisce il libro, non solo lo impagina.",
+        lead: "Atticus è un curato strumento di scrittura e impaginazione. DraftToDone inizia prima e finisce dopo: genera il manoscritto, la copertina completa e i metadati KDP, poi verifica la qualità prima dell'upload.",
+        keywords: ["alternativa Atticus", "software di impaginazione libri", "software di editoria IA", "impaginazione libro KDP", "strumento libro tutto-in-uno"],
+        sections: [
+          { id: "what-atticus-does", title: "Cosa fa bene Atticus", body: "Atticus è uno strumento tutto-in-uno di scrittura e impaginazione: importi il manoscritto e produci file print ed ebook puliti con modelli personalizzabili, su ogni piattaforma, con un acquisto unico.", points: ["Editor di scrittura per autori", "Impaginazione print ed ebook", "Modelli personalizzabili", "Acquisto unico, multipiattaforma"] },
+          { id: "where-drafttodone-differs", title: "Cosa distingue DraftToDone", body: "Atticus presuppone che tu abbia già scritto il libro. DraftToDone lo genera — con copertina e metadati — così l'impaginazione è solo una tappa di un pipeline più ampio.", points: ["Genera il manoscritto stesso", "Fronte, dorso e retro", "Titolo, descrizione e keyword KDP", "Controlli qualità catalogo prima dell'upload"] },
+          { id: "who-each-is-for", title: "Quale fa per te", body: "Se scrivi i tuoi libri e vuoi file belli, Atticus è eccellente. Se vuoi produrre prodotti pronti da pubblicare su scala di catalogo, DraftToDone punta a quello.", points: ["Atticus: impaginare ciò che hai scritto", "DraftToDone: generare tutto il prodotto", "Titolo singolo curato vs catalogo ripetibile", "Mestiere di impaginazione vs pipeline completo"] }
+        ],
+        faq: [
+          { question: "DraftToDone è disponibile ora?", answer: "DraftToDone è in beta privata. Unisciti alla lista d'attesa per l'accesso anticipato; queste pagine descrivono cosa il prodotto è progettato per fare." },
+          { question: "DraftToDone impagina i file print ed ebook come Atticus?", answer: "L'impaginazione è una tappa del pipeline. L'obiettivo è produrre tutto il prodotto — manoscritto, copertina e metadati — pronto per KDP, più che essere un editor di impaginazione autonomo." },
+          { question: "Atticus è acquisto unico; e DraftToDone?", answer: "DraftToDone è un abbonamento a crediti libri (1 credito = 1 libro completo). Atticus è un acquisto unico per il suo editor e impaginatore. Modelli diversi per esigenze diverse." }
+        ],
+        cta: "Unisciti alla lista",
+      },
+      de: {
+        slug: "atticus-alternative",
+        title: "Atticus-Alternative, die das Buch erzeugt, nicht nur formatiert",
+        description:
+          "Du suchst eine Atticus-Alternative? Atticus formatiert Bücher, die du geschrieben hast; DraftToDone erzeugt Manuskript, Cover und KDP-Metadaten als eine Pipeline.",
+        eyebrow: "Atticus-Alternative",
+        h1: "Eine Atticus-Alternative, die das Buch baut, nicht nur formatiert.",
+        lead: "Atticus ist ein ausgereiftes Schreib- und Formatierungstool. DraftToDone beginnt früher und endet später: es erzeugt Manuskript, das komplette Cover und die KDP-Metadaten und prüft die Qualität vor dem Upload.",
+        keywords: ["Atticus Alternative", "Buch Formatierungssoftware", "KI Publishing Software", "KDP Buchformatierung", "All-in-One Buch Tool"],
+        sections: [
+          { id: "what-atticus-does", title: "Worin Atticus stark ist", body: "Atticus ist ein All-in-One-Schreib- und Formatierungstool: importiere dein Manuskript und erzeuge saubere Print- und Ebook-Dateien mit anpassbaren Vorlagen, auf jeder Plattform, zum Einmalpreis.", points: ["Schreibeditor für Autoren", "Print- und Ebook-Formatierung", "Anpassbare Vorlagen", "Einmalkauf, plattformübergreifend"] },
+          { id: "where-drafttodone-differs", title: "Was DraftToDone unterscheidet", body: "Atticus setzt voraus, dass du das Buch schon geschrieben hast. DraftToDone erzeugt es — mit Cover und Metadaten — sodass Formatierung nur ein Schritt in einer breiteren Pipeline ist.", points: ["Erzeugt das Manuskript selbst", "Vorderseite, Rücken und Rückseite", "KDP-Titel, -Beschreibung und -Keywords", "Katalog-Qualitätsgates vor dem Upload"] },
+          { id: "who-each-is-for", title: "Was zu dir passt", body: "Wenn du deine Bücher selbst schreibst und schöne Dateien willst, ist Atticus ausgezeichnet. Wenn du veröffentlichungsfertige Produkte im Katalogmaßstab willst, zielt DraftToDone darauf.", points: ["Atticus: formatieren, was du geschrieben hast", "DraftToDone: das ganze Produkt erzeugen", "Einzelner Titel vs wiederholbarer Katalog", "Formatierungshandwerk vs End-to-End-Pipeline"] }
+        ],
+        faq: [
+          { question: "Ist DraftToDone jetzt verfügbar?", answer: "DraftToDone ist in privater Beta. Tritt der Warteliste für frühen Zugang bei; diese Seiten beschreiben, wofür das Produkt gebaut ist." },
+          { question: "Formatiert DraftToDone Print- und Ebook-Dateien wie Atticus?", answer: "Formatierung ist eine Stufe der Pipeline. Der Fokus liegt darauf, das ganze Produkt — Manuskript, Cover und Metadaten — fertig für KDP zu erzeugen, statt ein eigenständiger Formatierungseditor zu sein." },
+          { question: "Atticus ist Einmalkauf; und DraftToDone?", answer: "DraftToDone ist ein Buch-Kredit-Abo (1 Kredit = 1 komplettes Buch). Atticus ist ein Einmalkauf für Editor und Formatierer. Verschiedene Modelle für verschiedene Aufgaben." }
+        ],
+        cta: "Warteliste beitreten",
+      },
+    },
+  },
 ];
 
 export function getSolutionBySlug(locale: Locale, slug: string) {
