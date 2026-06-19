@@ -9,6 +9,7 @@ import {
   type BlogPost,
   type Locale,
 } from "./blog-content";
+import { solutionPages, solutionPath } from "./seo-pages";
 
 // A post may not exist in every locale; missing locales fall back to the blog index.
 type LanguagePaths = Partial<Record<Locale, string>>;
@@ -100,29 +101,51 @@ export function BlogFooter({ locale }: { locale: Locale }) {
 
   return (
     <footer className="border-t border-line/70">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-10 text-sm sm:flex-row sm:px-6">
-        <Logo />
-        <p className="text-center text-faint sm:text-left">{t.footer}</p>
-        <div className="flex flex-wrap items-center justify-center gap-4">
-          <a
-            href={blogIndexPath(locale)}
-            className="text-muted transition-colors hover:text-ink"
-          >
-            {t.blog}
-          </a>
-          <a
-            href="/site-map"
-            className="text-muted transition-colors hover:text-ink"
-          >
-            Sitemap
-          </a>
-          <a
-            href="#"
-            className="group inline-flex items-center gap-1 text-muted transition-colors hover:text-ink"
-          >
-            {t.followX}
-            <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-          </a>
+      <div className="mx-auto max-w-6xl px-5 py-12 sm:px-6">
+        <nav
+          aria-label={t.tools}
+          className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm sm:justify-start"
+        >
+          <span className="text-[12px] font-semibold uppercase tracking-[0.18em] text-mint-deep">
+            {t.tools}
+          </span>
+          {solutionPages.map((page) => (
+            <a
+              key={page.key}
+              href={solutionPath(locale, page)}
+              className="text-muted transition-colors hover:text-ink"
+            >
+              {page.translations[locale].eyebrow}
+            </a>
+          ))}
+        </nav>
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-line/70 pt-8 text-sm sm:flex-row">
+          <Logo />
+          <p className="text-center text-faint sm:text-left">{t.footer}</p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href={blogIndexPath(locale)}
+              className="text-muted transition-colors hover:text-ink"
+            >
+              {t.blog}
+            </a>
+            <a href="/" className="text-muted transition-colors hover:text-ink">
+              {t.home}
+            </a>
+            <a
+              href="/site-map"
+              className="text-muted transition-colors hover:text-ink"
+            >
+              Sitemap
+            </a>
+            <a
+              href="#"
+              className="group inline-flex items-center gap-1 text-muted transition-colors hover:text-ink"
+            >
+              {t.followX}
+              <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

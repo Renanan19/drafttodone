@@ -40,6 +40,7 @@ export type BlogCopy = {
   checklist: string;
   faq: string;
   related: string;
+  tools: string;
   ctaTitle: string;
   ctaText: string;
   ctaButton: string;
@@ -118,6 +119,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     checklist: "Operational checklist",
     faq: "FAQ",
     related: "Related guides",
+    tools: "Tools",
     ctaTitle: "Turn your publishing workflow into a system.",
     ctaText:
       "DraftToDone helps transform ideas into manuscript, cover assets and optimized metadata from one controlled pipeline.",
@@ -156,6 +158,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     checklist: "Checklist opérationnelle",
     faq: "FAQ",
     related: "Guides liés",
+    tools: "Outils",
     ctaTitle: "Transformez votre workflow éditorial en système.",
     ctaText:
       "DraftToDone aide à transformer une idée en manuscrit, assets de couverture et métadonnées optimisées depuis un pipeline contrôlé.",
@@ -194,6 +197,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     checklist: "Checklist operativa",
     faq: "FAQ",
     related: "Guide correlate",
+    tools: "Strumenti",
     ctaTitle: "Trasforma il workflow editoriale in un sistema.",
     ctaText:
       "DraftToDone aiuta a trasformare un'idea in manoscritto, asset di copertina e metadati ottimizzati da un unico pipeline controllato.",
@@ -232,6 +236,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     checklist: "Operative Checkliste",
     faq: "FAQ",
     related: "Verwandte Guides",
+    tools: "Tools",
     ctaTitle: "Mach aus deinem Publishing-Workflow ein System.",
     ctaText:
       "DraftToDone hilft, Ideen in Manuskript, Cover-Assets und optimierte Metadaten aus einer kontrollierten Pipeline zu verwandeln.",

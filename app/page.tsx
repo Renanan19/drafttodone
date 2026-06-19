@@ -5,12 +5,14 @@ import {
   ArrowRight,
   ArrowUpRight,
   BookOpen,
+  Calculator,
   Check,
   Image as ImageIcon,
   Loader2,
   Lock,
   Settings,
   Sparkles,
+  Wand2,
   X,
   type LucideIcon,
 } from "lucide-react";
@@ -94,6 +96,54 @@ const COPY = {
         },
       ],
     },
+    tools: {
+      eyebrow: "Free tools & guides",
+      h2: "Plan your next book before you write a word.",
+      sub: "Free calculators and in-depth guides you can use today — while early access opens up.",
+      items: [
+        {
+          title: "KDP royalty calculator",
+          text: "Model ebook and paperback payouts before you set a price.",
+          href: "/en/kdp-royalty-calculator",
+        },
+        {
+          title: "AI book cover generator",
+          text: "Front cover, spine and back — print-ready for KDP.",
+          href: "/en/ai-book-cover-generator",
+        },
+        {
+          title: "AI publishing software",
+          text: "One controlled workflow from idea to upload.",
+          href: "/en/ai-publishing-software",
+        },
+      ],
+      blogTitle: "The publishing blog",
+      blogText: "25 in-depth guides on KDP, book SEO, covers and catalog operations.",
+      blogCta: "Read the blog",
+    },
+    faqHeading: "Questions, answered.",
+    faq: [
+      {
+        q: "What is DraftToDone?",
+        a: "DraftToDone is AI publishing software that generates the whole book product — manuscript, front and back cover, and an SEO-optimized title and description — ready to upload to Amazon KDP.",
+      },
+      {
+        q: "Does it write the entire book?",
+        a: "Yes. The AI determines the ideal length and writes the full manuscript from your niche brief, then builds the cover package and metadata around it.",
+      },
+      {
+        q: "Is the content allowed on Amazon KDP?",
+        a: "DraftToDone is built around KDP content and AI-disclosure rules, with verified pen names to reduce copyright-strike risk. You stay responsible for reviewing each book and disclosing AI use as KDP requires.",
+      },
+      {
+        q: "How many books can I publish?",
+        a: "Plans are book-credit subscriptions — one credit makes one complete, ready-to-publish book. The weekly plan is built around six ready-to-publish books a week.",
+      },
+      {
+        q: "When does it launch?",
+        a: "DraftToDone is in private beta. Join the waitlist for early access, or open the app to get started now.",
+      },
+    ],
     pricing: {
       eyebrow: "Pricing",
       h2: "Simple plans. Real books.",
@@ -196,6 +246,54 @@ const COPY = {
         },
       ],
     },
+    tools: {
+      eyebrow: "Outils & guides gratuits",
+      h2: "Préparez votre prochain livre avant d'écrire un mot.",
+      sub: "Des calculateurs gratuits et des guides détaillés à utiliser dès aujourd'hui — en attendant l'accès anticipé.",
+      items: [
+        {
+          title: "Calculateur de redevances KDP",
+          text: "Modélisez les gains ebook et broché avant de fixer un prix.",
+          href: "/fr/calculateur-redevances-kdp",
+        },
+        {
+          title: "Générateur de couverture IA",
+          text: "Première, dos et quatrième — prêts à imprimer pour KDP.",
+          href: "/fr/generateur-couverture-livre-ia",
+        },
+        {
+          title: "Logiciel d'édition IA",
+          text: "Un workflow contrôlé, de l'idée à la mise en ligne.",
+          href: "/fr/logiciel-edition-ia",
+        },
+      ],
+      blogTitle: "Le blog édition",
+      blogText: "25 guides détaillés sur KDP, le SEO livre, les couvertures et le catalogue.",
+      blogCta: "Lire le blog",
+    },
+    faqHeading: "Vos questions, nos réponses.",
+    faq: [
+      {
+        q: "Qu'est-ce que DraftToDone ?",
+        a: "DraftToDone est un logiciel d'édition IA qui génère tout le produit livre — manuscrit, première et quatrième de couverture, titre et description optimisés SEO — prêt à publier sur Amazon KDP.",
+      },
+      {
+        q: "Écrit-il le livre entier ?",
+        a: "Oui. L'IA détermine la longueur idéale et rédige le manuscrit complet à partir de votre brief de niche, puis construit la couverture et les métadonnées autour.",
+      },
+      {
+        q: "Le contenu est-il autorisé sur Amazon KDP ?",
+        a: "DraftToDone est conçu autour des règles KDP de contenu et de divulgation IA, avec des noms de plume vérifiés pour réduire le risque de litige. Vous restez responsable de relire chaque livre et de déclarer l'usage de l'IA comme l'exige KDP.",
+      },
+      {
+        q: "Combien de livres puis-je publier ?",
+        a: "Les offres sont des abonnements à crédits livres — 1 crédit = 1 livre complet prêt à publier. L'offre hebdomadaire est pensée pour six livres prêts à publier par semaine.",
+      },
+      {
+        q: "Quand est le lancement ?",
+        a: "DraftToDone est en bêta privée. Rejoignez la liste d'attente pour l'accès anticipé, ou ouvrez l'application pour commencer dès maintenant.",
+      },
+    ],
     pricing: {
       eyebrow: "Tarifs",
       h2: "Des offres simples. De vrais livres.",
@@ -550,6 +648,16 @@ export default function Home() {
   const [toast, setToast] = useState({ show: false, email: "" });
   const t = COPY[lang];
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: t.faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   /* language: detect + persist */
   useEffect(() => {
     let initial: Lang = "en";
@@ -605,9 +713,14 @@ export default function Home() {
   const closeToast = () => setToast((s) => ({ ...s, show: false }));
 
   const featureIcons: LucideIcon[] = [BookOpen, ImageIcon, Settings];
+  const toolIcons: LucideIcon[] = [Calculator, Wand2, Settings];
 
   return (
     <div className="relative min-h-screen bg-paper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <Toast show={toast.show} email={toast.email} t={t.toast} onClose={closeToast} />
 
       {/* ---------------------------------------------------------------- */}
@@ -816,9 +929,91 @@ export default function Home() {
         </section>
 
         {/* -------------------------------------------------------------- */}
+        {/* Tools & guides (internal links to money pages)                 */}
+        {/* -------------------------------------------------------------- */}
+        <section id="tools" className="relative border-t border-line/70 bg-paper-2">
+          <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
+            <div className="mx-auto max-w-2xl text-center">
+              <p
+                data-reveal
+                className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep"
+              >
+                {t.tools.eyebrow}
+              </p>
+              <h2
+                data-reveal
+                style={{ transitionDelay: "60ms" }}
+                className="reveal-up text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
+              >
+                {t.tools.h2}
+              </h2>
+              <p
+                data-reveal
+                style={{ transitionDelay: "120ms" }}
+                className="reveal-up mx-auto mt-5 max-w-xl text-balance text-lg text-muted"
+              >
+                {t.tools.sub}
+              </p>
+            </div>
+
+            <div className="mt-14 grid gap-5 md:grid-cols-3">
+              {t.tools.items.map((item, i) => {
+                const Icon = toolIcons[i] ?? Wand2;
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    data-reveal
+                    style={{ transitionDelay: `${i * 90}ms` }}
+                    className="reveal-up group relative rounded-2xl border border-line bg-paper p-7 transition-shadow duration-300 hover:shadow-[0_24px_60px_-30px_rgba(16,24,40,0.45)]"
+                  >
+                    <span className="grid h-12 w-12 place-items-center rounded-xl bg-paper-3 text-ink transition-colors duration-300 group-hover:bg-mint-soft group-hover:text-mint-deep">
+                      <Icon className="h-5 w-5" strokeWidth={1.75} />
+                    </span>
+                    <h3 className="mt-6 font-display text-xl font-medium text-ink">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 text-[15px] leading-relaxed text-muted">{item.text}</p>
+                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors group-hover:text-ink">
+                      {lang === "fr" ? "Découvrir" : "Explore"}
+                      <ArrowRight
+                        className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+                        strokeWidth={2.25}
+                      />
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
+
+            <a
+              href={`/${lang}/blog`}
+              data-reveal
+              className="reveal-up group mt-5 flex flex-col items-start justify-between gap-5 rounded-2xl border border-line bg-paper p-7 transition-shadow duration-300 hover:shadow-[0_24px_60px_-30px_rgba(16,24,40,0.45)] sm:flex-row sm:items-center"
+            >
+              <div className="flex items-start gap-4">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-paper-3 text-ink transition-colors duration-300 group-hover:bg-mint-soft group-hover:text-mint-deep">
+                  <BookOpen className="h-5 w-5" strokeWidth={1.75} />
+                </span>
+                <div>
+                  <h3 className="font-display text-xl font-medium text-ink">
+                    {t.tools.blogTitle}
+                  </h3>
+                  <p className="mt-2 text-[15px] leading-relaxed text-muted">{t.tools.blogText}</p>
+                </div>
+              </div>
+              <span className="inline-flex shrink-0 items-center gap-2 rounded-xl border border-line bg-paper px-5 py-3 text-sm font-medium text-ink transition-colors group-hover:border-ink/25">
+                {t.tools.blogCta}
+                <ArrowRight className="h-4 w-4" strokeWidth={2.25} />
+              </span>
+            </a>
+          </div>
+        </section>
+
+        {/* -------------------------------------------------------------- */}
         {/* Pricing                                                        */}
         {/* -------------------------------------------------------------- */}
-        <section id="pricing" className="relative border-t border-line/70 bg-paper-2">
+        <section id="pricing" className="relative border-t border-line/70">
           <div className="mx-auto max-w-5xl px-5 py-24 sm:px-6">
             <div className="mx-auto max-w-2xl text-center">
               <p
@@ -905,6 +1100,32 @@ export default function Home() {
             </div>
 
             <p className="mt-8 text-center text-sm text-faint">{t.pricing.note}</p>
+          </div>
+        </section>
+
+        {/* -------------------------------------------------------------- */}
+        {/* FAQ                                                            */}
+        {/* -------------------------------------------------------------- */}
+        <section id="faq" className="relative border-t border-line/70 bg-paper-2">
+          <div className="mx-auto max-w-3xl px-5 py-24 sm:px-6">
+            <h2
+              data-reveal
+              className="reveal-up text-balance text-center font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
+            >
+              {t.faqHeading}
+            </h2>
+            <div
+              data-reveal
+              style={{ transitionDelay: "80ms" }}
+              className="reveal-up mt-10 divide-y divide-line rounded-[18px] border border-line bg-paper"
+            >
+              {t.faq.map((f) => (
+                <div key={f.q} className="p-6 sm:p-7">
+                  <h3 className="text-lg font-semibold text-ink">{f.q}</h3>
+                  <p className="mt-3 text-[15px] leading-relaxed text-muted">{f.a}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

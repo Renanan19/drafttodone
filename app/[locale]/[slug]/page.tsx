@@ -16,6 +16,7 @@ import {
   getSolutionAlternates,
   getSolutionBySlug,
   getSolutionStaticParams,
+  solutionPages,
   solutionPath,
   solutionUrl,
 } from "@/app/seo-pages";
@@ -90,6 +91,7 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
   const languagePaths = Object.fromEntries(
     locales.map((item) => [item, solutionPath(item, page)]),
   ) as Record<Locale, string>;
+  const moreTools = solutionPages.filter((item) => item.key !== page.key);
 
   const jsonLd = [
     {
@@ -254,6 +256,38 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
             </div>
           </div>
         </section>
+        {moreTools.length > 0 && (
+          <section className="border-t border-line/70">
+            <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6">
+              <h2 className="font-display text-3xl font-medium tracking-[-0.01em] text-ink">
+                {t.tools}
+              </h2>
+              <div className="mt-8 grid gap-5 md:grid-cols-2">
+                {moreTools.map((item) => {
+                  const target = item.translations[locale];
+                  return (
+                    <a
+                      key={item.key}
+                      href={solutionPath(locale, item)}
+                      className="group rounded-[18px] border border-line bg-paper p-6 transition-shadow duration-300 hover:shadow-[0_24px_60px_-34px_rgba(16,24,40,0.38)]"
+                    >
+                      <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-mint-deep">
+                        {target.eyebrow}
+                      </p>
+                      <h3 className="mt-3 font-display text-2xl font-medium leading-tight text-ink">
+                        {target.h1}
+                      </h3>
+                      <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors group-hover:text-ink">
+                        {solution.cta}
+                        <ArrowRight className="h-4 w-4" />
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        )}
       </main>
       <BlogFooter locale={locale} />
       <script
