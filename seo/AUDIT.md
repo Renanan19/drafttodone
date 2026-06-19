@@ -129,7 +129,7 @@ including new IT and DE), and the routes split:
   each with its own metadata, canonical and hreflang cluster.
 - All four added to `sitemap.xml` with hreflang alternates.
 
-Venice design and the Web3Forms flow are preserved (verified by screenshot of
+The Venice design is preserved (verified by screenshot of
 `/fr`). Known minor: the shared root layout emits `<html lang="en">` statically and
 the client effect updates it per route; content uses `<div lang={locale}>` +
 hreflang, matching the existing blog/solution pattern. A per-locale `<html lang>`
@@ -151,7 +151,7 @@ DraftToDone SEO — <month>
 Organic clicks:        ____ ( +/-__% MoM )
 Impressions:           ____ ( +/-__% )
 Avg position:          ____ ( +/-__ )
-Waitlist signups (organic): ____   <- the number that matters
+Clicks to the app (organic): ____   <- the number that matters
 Top rising queries:    1.____ 2.____ 3.____
 Top falling queries:   1.____ 2.____ 3.____
 3 wins:                1.____ 2.____ 3.____

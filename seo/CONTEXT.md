@@ -18,11 +18,11 @@
 | Product | DraftToDone.io — AI publishing software (SaaS) |
 | Marketing site | https://drafttodone.io (this repo) |
 | App | https://app.drafttodone.io |
-| Stage | Private beta, 2026. Waitlist + open-the-app CTAs. |
+| Stage | Launched, 2026. Every CTA sends visitors to the live app. |
 | Positioning | "The complete AI publishing machine" — generate the whole book *product*, not just text |
 | Origin story | Founder ran an Amazon KDP catalog (~€400/mo), got permanently banned over a pen-name issue, is rebuilding the private automation as a SaaS and building in public to recover lost MRR. |
 | Business model | Book-credit subscription: 1 credit = 1 ready-to-publish book. Weekly €14.99 (6 books/wk) · Yearly €390 (312 books/yr). |
-| Email capture | Web3Forms (client-side, static hosting) |
+| Conversion | CTAs to app.drafttodone.io (no on-site signup) |
 
 ## Product (what we actually generate)
 

@@ -24,7 +24,7 @@ export type BlogCopy = {
   home: string;
   blog: string;
   followX: string;
-  waitlist: string;
+  appCta: string;
   languageLabel: string;
   metaTitle: string;
   metaDescription: string;
@@ -91,7 +91,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     home: "Home",
     blog: "Blog",
     followX: "Follow on X",
-    waitlist: "Open the app",
+    appCta: "Open the app",
     languageLabel: "Choose language",
     metaTitle: "AI Publishing Blog: SEO, KDP, Covers and Book Automation",
     metaDescription:
@@ -130,7 +130,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     home: "Accueil",
     blog: "Blog",
     followX: "Suivre sur X",
-    waitlist: "Ouvrir l'app",
+    appCta: "Ouvrir l'app",
     languageLabel: "Choisir la langue",
     metaTitle: "Blog édition IA : SEO, KDP, couvertures et automatisation",
     metaDescription:
@@ -169,7 +169,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     home: "Home",
     blog: "Blog",
     followX: "Segui su X",
-    waitlist: "Apri l'app",
+    appCta: "Apri l'app",
     languageLabel: "Scegli lingua",
     metaTitle: "Blog editoria IA: SEO, KDP, copertine e automazione",
     metaDescription:
@@ -208,7 +208,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     home: "Startseite",
     blog: "Blog",
     followX: "Auf X folgen",
-    waitlist: "App öffnen",
+    appCta: "App öffnen",
     languageLabel: "Sprache wählen",
     metaTitle: "KI-Publishing-Blog: SEO, KDP, Cover und Automatisierung",
     metaDescription:

@@ -1,61 +1,105 @@
-# DraftToDone.io — Waitlist Landing Page
+# DraftToDone.io — AI Publishing Software for Amazon KDP
 
-A high-converting, bilingual (EN/FR) waitlist landing page for an AI-powered
-publishing engine. Light, airy, premium **Venice Inc.** aesthetic — see
-[`DESIGN.md`](./DESIGN.md).
+> Turn an idea into a complete, publish-ready book — **manuscript, cover, and KDP
+> metadata** — from one AI pipeline. Built for indie authors and self-publishers.
 
-## Stack
+[**🚀 Open the app**](https://app.drafttodone.io) · [**🌐 drafttodone.io**](https://drafttodone.io) · [**📚 Blog & guides**](https://drafttodone.io/en/blog)
 
-- **Next.js 15** (App Router, **static export** → GitHub Pages ready)
-- **Tailwind CSS v4** (CSS-first config, no `tailwind.config.js`)
-- **lucide-react** icons
-- **next/font**: Newsreader (serif display) · Hanken Grotesk (body)
-- **Web3Forms** for email capture (client-side, no backend)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fdrafttodone.io&label=drafttodone.io)](https://drafttodone.io)
+[![App](https://img.shields.io/badge/app-live-10b58a)](https://app.drafttodone.io)
+[![Languages](https://img.shields.io/badge/i18n-EN%20%C2%B7%20FR%20%C2%B7%20IT%20%C2%B7%20DE-blue)](https://drafttodone.io)
 
-## Run
+**DraftToDone** is AI publishing software that generates the whole book *product*
+for **Amazon Kindle Direct Publishing (KDP)** — not just text. From a single niche
+brief it writes a full **manuscript**, designs a print-ready **book cover** (front,
+spine and back), and produces **SEO-optimized metadata** (title, subtitle,
+description, keywords) with **verified pen names** to reduce copyright-strike risk.
+The focus is repeatable **catalog quality**, not content spam.
+
+This repository is the public **marketing site and SEO content hub**
+([drafttodone.io](https://drafttodone.io)). The product itself runs at
+[app.drafttodone.io](https://app.drafttodone.io).
+
+## What it does
+
+- **AI book generator** — writes a complete manuscript (outline → chapters) at your target length.
+- **AI book cover generator** — full wrap: front cover, spine sized to page count, and back cover, print-ready for KDP.
+- **KDP metadata** — SEO title, subtitle, description and the 7 backend keywords, with category fit.
+- **Verified pen names** — author/series branding that lowers copyright-strike risk.
+- **Catalog quality gates** — chapter, cover and metadata QA before you upload.
+
+## Free tools (no signup)
+
+| Tool | What it does |
+|------|--------------|
+| [KDP royalty calculator](https://drafttodone.io/en/kdp-royalty-calculator) | Model ebook & paperback royalties before pricing |
+| [AI book cover generator](https://drafttodone.io/en/ai-book-cover-generator) | Front, spine & back cover for KDP |
+| [AI book generator](https://drafttodone.io/en/ai-book-generator) | Generate a full manuscript with AI |
+| [Book description generator](https://drafttodone.io/en/book-description-generator) | Amazon blurb that sells |
+| [Book title generator](https://drafttodone.io/en/book-title-generator) | Clickable, keyword-aware titles |
+| [KDP keyword tool](https://drafttodone.io/en/kdp-keyword-tool) | Research the 7 backend keyword slots |
+| [AI publishing software](https://drafttodone.io/en/ai-publishing-software) | The full idea-to-upload workflow |
+
+## Guides (free)
+
+A growing knowledge base on AI publishing, self-publishing and KDP SEO:
+
+- [How to write a book with AI — complete guide](https://drafttodone.io/en/blog/how-to-write-a-book-with-ai-complete-guide)
+- [How to self-publish a book on Amazon (step by step)](https://drafttodone.io/en/blog/how-to-self-publish-a-book-on-amazon-step-by-step)
+- [How to choose KDP keywords](https://drafttodone.io/en/blog/how-to-choose-kdp-keywords-beginner-guide)
+- [Best AI book writing tools, compared](https://drafttodone.io/en/blog/best-ai-book-writing-tools-compared)
+- [Pen name & author brand strategy](https://drafttodone.io/en/blog/pen-name-author-brand-strategy)
+- [How much can you earn with KDP?](https://drafttodone.io/en/blog/how-much-can-you-earn-with-kdp-royalty-examples)
+- [All 25 guides →](https://drafttodone.io/en/blog)
+
+## How DraftToDone compares
+
+- [DraftToDone vs Sudowrite](https://drafttodone.io/en/sudowrite-alternative) — whole publishable product vs AI fiction craft.
+- [DraftToDone vs Atticus](https://drafttodone.io/en/atticus-alternative) — generate the book vs format one you wrote.
+
+## Who it's for
+
+Indie authors, self-publishers and KDP catalog operators who want to ship more
+publish-ready books — faster, and without quality or compliance blowups.
+
+## Languages
+
+English, French, Italian and German — fully localized with hreflang:
+[EN](https://drafttodone.io) · [FR](https://drafttodone.io/fr) · [IT](https://drafttodone.io/it) · [DE](https://drafttodone.io/de).
+
+---
+
+## Development
+
+This repo is the **marketing site** (static, no backend). The app is a separate codebase.
+
+**Stack:** Next.js 15 (App Router, static export) · Tailwind CSS v4 · lucide-react ·
+next/font (Newsreader + Hanken Grotesk) · `next/og` for build-time share images.
+Aesthetic: see [`DESIGN.md`](./DESIGN.md).
 
 ```bash
 npm install
 npm run dev      # http://localhost:3000
+npm run build    # static export → ./out
 ```
 
-## Build (static export)
+**Content** lives in TypeScript (not a CMS):
 
-```bash
-npm run build    # outputs ./out (static HTML/CSS/JS)
-```
+- `app/home-content.ts` — landing copy (en/fr/it/de) + `APP_URL`; `app/home-view.tsx` — landing UI.
+- `app/blog-content.ts` + `app/*-seo-posts.ts` — the blog.
+- `app/seo-pages.ts` — solution / tool / comparison pages.
 
-`output: "export"` in `next.config.mjs` produces a fully static `out/` folder.
+`sitemap.xml`, `robots.txt`, `feed.xml`, `manifest.webmanifest`, `llms.txt`,
+`ai.txt`, `content-index.json` and OG images are generated from that data. The SEO
+playbook, prompt library and audit live in [`seo/`](./seo).
 
-## Email capture — Web3Forms
+**i18n:** four locales, URL-based — landing at `/`, `/fr`, `/it`, `/de`; blog at
+`/[locale]/blog`; solution pages at `/[locale]/[slug]`.
 
-The form posts directly to Web3Forms from the browser (works on static hosting).
+**Deploy:** push to `main` → `.github/workflows/deploy.yml` builds and publishes
+`out/` to GitHub Pages. Custom domain via `public/CNAME` (drafttodone.io).
 
-1. Get a free access key at <https://web3forms.com> (enter your email, key is mailed).
-2. Provide it as a build-time env var: `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`.
-   - Local: create `.env.local` with `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your-key`.
-   - GitHub Actions: add repo secret `WEB3FORMS_ACCESS_KEY` (already wired in the workflow).
-3. Until set, the form runs in **demo mode** (shows success, sends nothing).
+## Topics
 
-Each signup is emailed to the inbox tied to your access key. The key is public by
-design — it only allows submitting to *your* form.
-
-## Deploy to GitHub Pages
-
-1. Push to `main`. `.github/workflows/deploy.yml` builds and deploys `out/` to Pages.
-2. Repo → Settings → Pages → Source: **GitHub Actions**.
-3. Custom domain: `public/CNAME` is set to `drafttodone.io`. Point your domain's DNS
-   at GitHub Pages, then set the same domain under Settings → Pages.
-4. **Project page instead of a domain?** (`username.github.io/REPO`) — uncomment
-   `basePath` / `assetPrefix` in `next.config.mjs` and set them to `/REPO`.
-
-## i18n
-
-Bilingual EN/FR. All copy lives in the `COPY` object in `app/page.tsx`. Language
-auto-detects from the browser, persists to `localStorage`, and toggles via the
-EN/FR switch in the header.
-
-## Notes
-
-- Fully responsive (mobile-first). Respects `prefers-reduced-motion`.
-- Scroll-reveal animations + a hover-spreading book-cover fan in the hero.
+`ai-publishing` · `amazon-kdp` · `self-publishing` · `ai-book-generator` ·
+`book-cover-generator` · `kdp-keywords` · `nextjs` · `seo`
