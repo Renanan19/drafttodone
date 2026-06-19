@@ -53,7 +53,7 @@ images**, (2) the homepage linked to **no money pages**, and (3) too few
 | **Social share images** | **F** | **A** | was none; now branded 1200x630 on every page |
 | **Internal links to money pages** | **D** | **B+** | home + every blog/solution footer now link the tools |
 | Transactional landing pages | C | A- | 2 -> 7 solution pages (x4 langs = 28); cross-linked |
-| Localized landing page | C | C | home still EN/FR client toggle only — see Opportunity #1 |
+| Localized landing page | C | A | home now `/`, `/fr`, `/it`, `/de` server-rendered + hreflang |
 | Off-page / backlinks | ? | ? | needs Ahrefs login (#12) |
 
 ## What shipped this pass (changelog)
@@ -115,19 +115,25 @@ build stays green (`npm run build`, 0 errors).
 | Backlink + directory campaign | High | L | prompts #12, #13 |
 | Voice-of-customer rewrite of hero/descriptions | Med | M | prompt #11 |
 
-## Opportunity #1 — localize the landing page (biggest structural lever)
+## Opportunity #1 — localize the landing page — DONE (2026-06-19)
 
-The home page (`app/page.tsx`) is a **client component with an EN/FR toggle**, so
-only an English `/` is server-rendered and indexable. The blog and solution pages
-are fully localized (`/fr/...`, `/it/...`, `/de/...`) but the **money page itself
-is not** — IT and DE visitors get no localized landing, and FR landing content
-isn't a distinct indexable URL with hreflang.
+Previously the home page was a **client component with an EN/FR toggle**, so only
+an English `/` was server-rendered and indexable; IT/DE visitors got no localized
+landing and FR had no distinct indexable URL.
 
-**Fix:** move the landing into `app/[locale]/page.tsx` (or `/[locale]/(home)`),
-render copy server-side per locale, add canonical + hreflang like the other
-routes, and keep `/` as a redirect/default. This unlocks indexable FR/IT/DE
-landing pages and consistent hreflang across the whole site. Medium-large refactor
-— do it deliberately, preserving Venice and the Web3Forms flow.
+**Shipped:** the landing UI was extracted into a locale-driven client component
+(`app/home-view.tsx`), copy moved to `app/home-content.ts` (now full en/fr/it/de,
+including new IT and DE), and the routes split:
+- `/` — English, server component (`app/page.tsx`), canonical `/` + hreflang.
+- `/fr`, `/it`, `/de` — server-rendered localized landings (`app/[locale]/page.tsx`),
+  each with its own metadata, canonical and hreflang cluster.
+- All four added to `sitemap.xml` with hreflang alternates.
+
+Venice design and the Web3Forms flow are preserved (verified by screenshot of
+`/fr`). Known minor: the shared root layout emits `<html lang="en">` statically and
+the client effect updates it per route; content uses `<div lang={locale}>` +
+hreflang, matching the existing blog/solution pattern. A per-locale `<html lang>`
+would need a `[locale]` layout (future).
 
 ## Notes / smaller items
 - **Homepage canonical**: not emitted. Can't be set in the shared `layout.tsx`

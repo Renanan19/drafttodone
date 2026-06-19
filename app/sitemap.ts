@@ -14,6 +14,7 @@ import {
   solutionPages,
   solutionUrl,
 } from "./seo-pages";
+import { getHomeAlternates, homeUrl } from "./home-content";
 
 export const dynamic = "force-static";
 
@@ -26,13 +27,16 @@ function absoluteAlternates(alternates: Record<string, string>) {
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogAlternates = absoluteAlternates(getBlogIndexAlternates());
 
+  const homeAlternates = absoluteAlternates(getHomeAlternates());
+
   return [
-    {
-      url: SITE_URL,
+    ...locales.map((locale) => ({
+      url: homeUrl(locale),
       lastModified: new Date("2026-06-12"),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
+      changeFrequency: "monthly" as const,
+      priority: locale === "en" ? 1 : 0.9,
+      alternates: { languages: homeAlternates },
+    })),
     {
       url: `${SITE_URL}/site-map`,
       lastModified: new Date("2026-06-12"),
