@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Newsreader, Hanken_Grotesk } from "next/font/google";
+import { answerEngineResources } from "./answer-engine-content";
 import { SITE_NAME, SITE_URL } from "./blog-content";
 import "./globals.css";
 
@@ -29,7 +30,15 @@ export const metadata: Metadata = {
   alternates: {
     types: {
       "application/rss+xml": "/feed.xml",
-      "application/json": "/content-index.json",
+      "application/json": [
+        { title: "Content index", url: "/content-index.json" },
+        { title: "Answer-engine JSON", url: "/answer-engine.json" },
+      ],
+      "text/plain": [
+        { title: "LLMs text", url: "/llms.txt" },
+        { title: "Full LLM context", url: "/llms-full.txt" },
+        { title: "AI crawl guide", url: "/ai.txt" },
+      ],
     },
   },
   robots: {
@@ -62,6 +71,18 @@ const siteJsonLd = [
     description:
       "AI publishing software for creating manuscripts, book covers, KDP metadata and repeatable publishing catalog workflows.",
     foundingDate: "2026",
+    subjectOf: [
+      {
+        "@type": "DigitalDocument",
+        name: "DraftToDone answer-engine JSON",
+        url: answerEngineResources.answerEngine,
+      },
+      {
+        "@type": "DigitalDocument",
+        name: "DraftToDone LLMs text",
+        url: answerEngineResources.llms,
+      },
+    ],
   },
   {
     "@context": "https://schema.org",
@@ -76,6 +97,9 @@ const siteJsonLd = [
         `${SITE_URL}/fr/blog`,
         `${SITE_URL}/it/blog`,
         `${SITE_URL}/de/blog`,
+        answerEngineResources.llms,
+        answerEngineResources.llmsFull,
+        answerEngineResources.answerEngine,
       ],
     },
   },

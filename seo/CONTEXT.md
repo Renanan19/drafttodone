@@ -46,7 +46,7 @@ One controlled pipeline from idea to KDP upload:
 1. Own **transactional tool/generator intent**: "AI book cover generator", "AI book generator", "KDP royalty calculator", "book description generator", "KDP keyword tool".
 2. Own **commercial-investigation intent**: "best AI book writing tools", "[competitor] alternative", "AI publishing software".
 3. Keep the **informational moat**: 25 pillar guides on KDP, self-publishing, book SEO, covers, catalog ops (already strong — protect & interlink).
-4. Be the **cited source in AI answers** (ChatGPT/Claude/Perplexity/Google AI) via clean schema + `llms.txt` + `content-index.json`.
+4. Be the **cited source in AI answers** (ChatGPT/Claude/Perplexity/Google AI) via clean schema + `llms.txt` + `llms-full.txt` + `ai.txt` + `content-index.json` + `answer-engine.json`.
 
 ## Keywords we already target
 
@@ -73,7 +73,7 @@ When a prompt says "competitors", default to the relevant bucket above unless to
   - `app/ai-writing-seo-posts.ts`, `book-marketing-seo-posts.ts`, `kdp-seo-posts.ts`, `self-publishing-seo-posts.ts`, `kdp-account-post.ts` — the other 17 posts.
   - `app/seo-pages.ts` — solution/tool landing pages.
 - **Routes:** `/` (home, client EN/FR toggle), `/[locale]/blog`, `/[locale]/blog/[slug]`, `/[locale]/[slug]` (solution pages), `/site-map`.
-- **Auto-generated SEO surfaces** (driven by the data files — add a post/page and these update for free): `sitemap.xml`, `robots.txt`, `feed.xml`, `manifest.webmanifest`, `llms.txt`, `ai.txt`, `content-index.json`, OG images (`opengraph-image.tsx`).
+- **Auto-generated SEO surfaces** (driven by the data files — add a post/page and these update for free): `sitemap.xml`, `robots.txt`, `feed.xml`, `manifest.webmanifest`, `llms.txt`, `llms-full.txt`, `ai.txt`, `content-index.json`, `answer-engine.json`, OG images (`opengraph-image.tsx`).
 - **Design system is sacred:** Venice Inc. "California Light" aesthetic — see [`../DESIGN.md`](../DESIGN.md). White canvas, editorial serif (Newsreader) headlines, mint accent, generous space, `reveal-up` motion. Any new page/section must reuse the existing tokens and component patterns.
 
 ## How to work (rules for every SEO task)

@@ -91,7 +91,8 @@ npm run build    # static export → ./out
 - `app/seo-pages.ts` — solution / tool / comparison pages.
 
 `sitemap.xml`, `robots.txt`, `feed.xml`, `manifest.webmanifest`, `llms.txt`,
-`ai.txt`, `content-index.json` and OG images are generated from that data. The SEO
+`llms-full.txt`, `ai.txt`, `content-index.json`, `answer-engine.json` and OG images
+are generated from that data. The SEO
 playbook, prompt library and audit live in [`seo/`](./seo).
 
 **i18n:** four locales, URL-based — landing at `/`, `/fr`, `/it`, `/de`; blog at

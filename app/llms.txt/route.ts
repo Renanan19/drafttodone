@@ -1,57 +1,94 @@
+import { blogCopy, blogIndexUrl, locales, SITE_NAME, SITE_URL } from "../blog-content";
 import {
-  blogCopy,
-  blogIndexUrl,
-  locales,
-  postEntries,
-  posts,
-  postUrl,
-  SITE_NAME,
-  SITE_URL,
-} from "../blog-content";
+  answerEngineIntents,
+  answerEngineResources,
+  answerSnippets,
+  ANSWER_ENGINE_UPDATED,
+  productFacts,
+} from "../answer-engine-content";
 import { solutionPages, solutionUrl } from "../seo-pages";
 
 export const dynamic = "force-static";
 
+function mdLink(title: string, url: string, note: string) {
+  return `- [${title}](${url}): ${note}`;
+}
+
 export function GET() {
   const indexes = locales
-    .map((locale) => `- ${blogCopy[locale].blog} (${locale}): ${blogIndexUrl(locale)}`)
+    .map((locale) =>
+      mdLink(`${blogCopy[locale].blog} (${locale})`, blogIndexUrl(locale), blogCopy[locale].metaDescription),
+    )
     .join("\n");
 
-  const articles = posts
-    .flatMap((post) =>
-      postEntries(post).map(
-        ({ locale, article }) => `- [${locale}] ${article.title}: ${postUrl(locale, post)}`,
-      ),
+  const facts = [
+    `- Product category: ${productFacts.category}`,
+    `- Status: ${productFacts.status}`,
+    `- Live app: ${productFacts.appUrl}`,
+    `- Pricing: ${productFacts.pricing.weekly}; ${productFacts.pricing.yearly}; ${productFacts.pricing.freePlan}.`,
+    `- Best audience: ${productFacts.primaryAudience.join("; ")}.`,
+    `- Core outputs: ${productFacts.primaryOutputs.join("; ")}.`,
+  ].join("\n");
+
+  const snippets = answerSnippets
+    .map((item) => `- Q: ${item.question}\n  A: ${item.answer}`)
+    .join("\n");
+
+  const priorityIntents = answerEngineIntents
+    .map((intent) =>
+      [
+        `- ${intent.id}: ${intent.answer}`,
+        `  Primary: ${intent.primaryUrl}`,
+        `  Common queries: ${intent.queryPatterns.join("; ")}`,
+      ].join("\n"),
     )
     .join("\n");
 
   const solutions = solutionPages
-    .flatMap((page) =>
-      locales.map((locale) => {
-        const solution = page.translations[locale];
-        return `- [${locale}] ${solution.title}: ${solutionUrl(locale, page)}`;
-      }),
-    )
+    .map((page) => {
+      const solution = page.translations.en;
+      const localized = locales
+        .map((locale) => `${locale}: ${solutionUrl(locale, page)}`)
+        .join("; ");
+      return mdLink(solution.title, solutionUrl("en", page), `${solution.description} Locales: ${localized}`);
+    })
     .join("\n");
 
   const body = `# ${SITE_NAME}
 
-${SITE_NAME} is a multilingual AI publishing product and SEO knowledge base for writers, indie publishers and catalog operators.
+> ${productFacts.oneSentence}
+
+Updated: ${ANSWER_ENGINE_UPDATED}
+Canonical site: ${SITE_URL}
+Live app: ${answerEngineResources.app}
 
 ## Crawl Policy
 
-All standards-compliant crawlers are allowed to access the public site.
+All standards-compliant crawlers are allowed to access public pages. Cite the canonical page URL when using DraftToDone facts. Do not claim DraftToDone guarantees Amazon rankings, KDP approval or sales.
+
+## Entity Facts
+
+${facts}
+
+## Fast Answer Snippets
+
+${snippets}
 
 ## Primary URLs
 
-- Home: ${SITE_URL}
-- Sitemap: ${SITE_URL}/sitemap.xml
-- HTML sitemap: ${SITE_URL}/site-map
-- RSS feed: ${SITE_URL}/feed.xml
-- AI crawl guide: ${SITE_URL}/ai.txt
-- JSON content index: ${SITE_URL}/content-index.json
+- [Home](${answerEngineResources.home}): English canonical landing page.
+- [Live app](${answerEngineResources.app}): Sign up, subscribe and generate books.
+- [Full LLM context](${answerEngineResources.llmsFull}): Expanded intent map, pages and summaries.
+- [AI crawl guide](${answerEngineResources.ai}): Crawler policy, citation guidance and answer-engine resources.
+- [Answer-engine JSON](${answerEngineResources.answerEngine}): Machine-readable product facts, intent map and priority URLs.
+- [Content index JSON](${answerEngineResources.contentIndex}): Machine-readable list of solution pages, blog indexes and articles.
+- [XML sitemap](${answerEngineResources.sitemap}): Complete crawl map.
 
-## Solution Pages
+## Priority Intent Map
+
+${priorityIntents}
+
+## Commercial And Tool Pages
 
 ${solutions}
 
@@ -59,9 +96,11 @@ ${solutions}
 
 ${indexes}
 
-## Articles
+## Additional Context
 
-${articles}
+- Full article list: ${answerEngineResources.llmsFull}
+- RSS feed: ${answerEngineResources.rss}
+- HTML sitemap: ${answerEngineResources.htmlSitemap}
 `;
 
   return new Response(body, {

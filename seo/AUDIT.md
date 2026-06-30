@@ -8,8 +8,9 @@ static-export SaaS. See [`CONTEXT.md`](./CONTEXT.md) and
 
 The site was already in the **top few percent** of SaaS landing sites for
 technical SEO: full 4-language i18n with hreflang, rich JSON-LD on every page
-type, auto-generated sitemap/robots/feed/manifest, and AI-crawler surfaces
-(`llms.txt`, `ai.txt`, `content-index.json`). The content moat is real — **25
+type, auto-generated sitemap/robots/feed/manifest, and answer-engine surfaces
+(`llms.txt`, `llms-full.txt`, `ai.txt`, `content-index.json`, `answer-engine.json`).
+The content moat is real — **25
 pillar guides x 4 locales = 100 article pages**.
 
 The gaps were **not** informational content. They were: (1) **zero social share
@@ -49,7 +50,7 @@ images**, (2) the homepage linked to **no money pages**, and (3) too few
 | i18n + hreflang | A | A | en/fr/it/de + x-default on posts/solutions/blog |
 | Structured data | A | A | Org/WebSite/SoftwareApp + Article/FAQ/Breadcrumb/Collection; **+FAQPage on home** |
 | Sitemap/robots/feed/manifest | A | A | auto-generated from data files |
-| AI-crawler surfaces | A | A | llms.txt, ai.txt, content-index.json; AI bots allowed |
+| AI-crawler surfaces | A | A+ | llms.txt, llms-full.txt, ai.txt, content-index.json, answer-engine.json; AI bots allowed |
 | **Social share images** | **F** | **A** | was none; now branded 1200x630 on every page |
 | **Internal links to money pages** | **D** | **B+** | home + every blog/solution footer now link the tools |
 | Transactional landing pages | C | A- | 2 -> 7 solution pages (x4 langs = 28); cross-linked |

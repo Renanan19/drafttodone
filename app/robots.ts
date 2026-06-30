@@ -1,32 +1,16 @@
 import type { MetadataRoute } from "next";
+import { allowedAiCrawlerAgents, answerEngineResources } from "./answer-engine-content";
 import { SITE_URL } from "./blog-content";
 
 export const dynamic = "force-static";
 
-const allowedAgents = [
-  "*",
-  "Googlebot",
-  "Bingbot",
-  "DuckDuckBot",
-  "Applebot",
-  "YandexBot",
-  "GPTBot",
-  "ChatGPT-User",
-  "OAI-SearchBot",
-  "ClaudeBot",
-  "Claude-User",
-  "PerplexityBot",
-  "CCBot",
-  "Google-Extended",
-];
-
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: allowedAgents.map((userAgent) => ({
+    rules: allowedAiCrawlerAgents.map((userAgent) => ({
       userAgent,
       allow: "/",
     })),
-    sitemap: `${SITE_URL}/sitemap.xml`,
+    sitemap: answerEngineResources.sitemap,
     host: SITE_URL,
   };
 }

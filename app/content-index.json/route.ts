@@ -8,6 +8,12 @@ import {
   SITE_NAME,
   SITE_URL,
 } from "../blog-content";
+import {
+  answerEngineResources,
+  answerSnippets,
+  getAnswerEngineData,
+  productFacts,
+} from "../answer-engine-content";
 import { solutionPages, solutionUrl } from "../seo-pages";
 
 export const dynamic = "force-static";
@@ -20,20 +26,30 @@ export function GET() {
       description:
         "AI publishing software and multilingual SEO knowledge base for KDP books, manuscripts, covers, metadata and catalog operations.",
       resources: {
-        sitemap: `${SITE_URL}/sitemap.xml`,
-        htmlSitemap: `${SITE_URL}/site-map`,
-        robots: `${SITE_URL}/robots.txt`,
-        rss: `${SITE_URL}/feed.xml`,
-        llms: `${SITE_URL}/llms.txt`,
-        ai: `${SITE_URL}/ai.txt`,
+        sitemap: answerEngineResources.sitemap,
+        htmlSitemap: answerEngineResources.htmlSitemap,
+        robots: answerEngineResources.robots,
+        rss: answerEngineResources.rss,
+        llms: answerEngineResources.llms,
+        llmsFull: answerEngineResources.llmsFull,
+        ai: answerEngineResources.ai,
+        answerEngine: answerEngineResources.answerEngine,
       },
+    },
+    answerEngine: {
+      product: productFacts,
+      snippets: answerSnippets,
+      map: getAnswerEngineData(),
     },
     solutionPages: solutionPages.flatMap((page) =>
       locales.map((locale) => ({
         type: "solution",
+        key: page.key,
         locale,
         title: page.translations[locale].title,
         description: page.translations[locale].description,
+        h1: page.translations[locale].h1,
+        lead: page.translations[locale].lead,
         keywords: page.translations[locale].keywords,
         url: solutionUrl(locale, page),
         updated: page.updated,
@@ -50,6 +66,7 @@ export function GET() {
     articles: posts.flatMap((post) =>
       postEntries(post).map(({ locale, article }) => ({
         type: "article",
+        key: post.key,
         locale,
         title: article.title,
         description: article.description,

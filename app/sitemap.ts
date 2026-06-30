@@ -14,6 +14,7 @@ import {
   solutionPages,
   solutionUrl,
 } from "./seo-pages";
+import { ANSWER_ENGINE_UPDATED, answerEngineResources } from "./answer-engine-content";
 import { getHomeAlternates, homeUrl } from "./home-content";
 
 export const dynamic = "force-static";
@@ -44,20 +45,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${SITE_URL}/llms.txt`,
-      lastModified: new Date("2026-06-12"),
+      url: answerEngineResources.llms,
+      lastModified: new Date(ANSWER_ENGINE_UPDATED),
       changeFrequency: "weekly",
       priority: 0.4,
     },
     {
-      url: `${SITE_URL}/ai.txt`,
-      lastModified: new Date("2026-06-12"),
+      url: answerEngineResources.llmsFull,
+      lastModified: new Date(ANSWER_ENGINE_UPDATED),
       changeFrequency: "weekly",
       priority: 0.4,
     },
     {
-      url: `${SITE_URL}/content-index.json`,
-      lastModified: new Date("2026-06-12"),
+      url: answerEngineResources.ai,
+      lastModified: new Date(ANSWER_ENGINE_UPDATED),
+      changeFrequency: "weekly",
+      priority: 0.4,
+    },
+    {
+      url: answerEngineResources.contentIndex,
+      lastModified: new Date(ANSWER_ENGINE_UPDATED),
+      changeFrequency: "weekly",
+      priority: 0.4,
+    },
+    {
+      url: answerEngineResources.answerEngine,
+      lastModified: new Date(ANSWER_ENGINE_UPDATED),
       changeFrequency: "weekly",
       priority: 0.4,
     },

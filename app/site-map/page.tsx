@@ -9,6 +9,7 @@ import {
   SITE_NAME,
   SITE_URL,
 } from "../blog-content";
+import { answerEngineResources } from "../answer-engine-content";
 import { BlogFooter, BlogHeader } from "../blog-ui";
 import { solutionPages, solutionPath } from "../seo-pages";
 
@@ -32,6 +33,21 @@ export default function HtmlSitemapPage() {
         "@type": "WebPage",
         name: "Home",
         url: SITE_URL,
+      },
+      {
+        "@type": "DigitalDocument",
+        name: "LLMs text",
+        url: answerEngineResources.llms,
+      },
+      {
+        "@type": "DigitalDocument",
+        name: "Full LLM context",
+        url: answerEngineResources.llmsFull,
+      },
+      {
+        "@type": "DigitalDocument",
+        name: "Answer-engine JSON",
+        url: answerEngineResources.answerEngine,
       },
       ...locales.map((locale) => ({
         "@type": "CollectionPage",
@@ -84,7 +100,10 @@ export default function HtmlSitemapPage() {
                 ["Robots", "/robots.txt"],
                 ["RSS feed", "/feed.xml"],
                 ["LLMs text", "/llms.txt"],
+                ["Full LLM context", "/llms-full.txt"],
                 ["AI text", "/ai.txt"],
+                ["Answer-engine JSON", "/answer-engine.json"],
+                ["Content index JSON", "/content-index.json"],
               ].map(([label, href]) => (
                 <li key={href}>
                   <a className="text-muted transition-colors hover:text-ink" href={href}>
