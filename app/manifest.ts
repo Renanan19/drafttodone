@@ -8,7 +8,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: `${SITE_NAME} AI Publishing Software`,
     short_name: "DraftToDone",
     description:
-      "AI publishing software for manuscripts, book covers, KDP metadata and catalog workflows.",
+      "Turn one niche brief into a manuscript, full cover, KDP metadata and catalog workflow.",
     start_url: SITE_URL,
     scope: SITE_URL,
     display: "standalone",

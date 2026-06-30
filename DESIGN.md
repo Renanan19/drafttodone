@@ -70,9 +70,10 @@ because mint = *done* (the ✓). The name's promise (draft → done) lives in th
 - All motion respects `prefers-reduced-motion`.
 
 ### Signature element
-- A fan of AI-generated **book covers** on a soft **mint pedestal** = the product,
-  shown the Venice way (object floating on a pastel gradient). Mirrors venice.inc's
-  app-icon-on-mint hero.
+- A live-looking **KDP package demo**: one niche brief on the left, generated
+  manuscript/cover/metadata output on the right, sitting on a soft mint pedestal.
+  The old fan of covers now lives inside the product output instead of carrying
+  the hero alone.
 
 ### Rules
 - Keep white space generous. When unsure, add space, not elements.

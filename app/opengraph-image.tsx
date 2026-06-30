@@ -6,15 +6,16 @@ import { OG_CONTENT_TYPE, OG_SIZE, OgCard } from "./og-card";
 export const dynamic = "force-static";
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
-export const alt = "DraftToDone.io — The complete AI publishing machine";
+export const alt = "DraftToDone.io — one idea becomes a complete KDP book";
 
 export default function OpengraphImage() {
   return new ImageResponse(
     (
       <OgCard
-        eyebrow="AI publishing software"
-        title="Don't just write a book. Generate the entire product."
-        footer="Manuscript · Front & back cover · KDP metadata — 6 ready-to-publish books a week."
+        eyebrow="1 brief -> 1 complete KDP book"
+        title="One idea becomes the whole book."
+        footer="Manuscript + full cover + KDP metadata — 6 ready-to-publish books a week."
+        titleFontSize={88}
       />
     ),
     size,

@@ -1,7 +1,8 @@
-# DraftToDone.io — AI Publishing Software for Amazon KDP
+# DraftToDone.io — Turn One Idea Into a Complete KDP Book
 
-> Turn an idea into a complete, publish-ready book — **manuscript, cover, and KDP
-> metadata** — from one AI pipeline. Built for indie authors and self-publishers.
+> Turn one niche brief into a complete, publish-ready KDP product —
+> **manuscript, full cover, KDP metadata, and pen name** — from one AI pipeline.
+> Built for indie authors and catalog operators.
 
 [**🚀 Open the app**](https://app.drafttodone.io) · [**🌐 drafttodone.io**](https://drafttodone.io) · [**📚 Blog & guides**](https://drafttodone.io/en/blog)
 

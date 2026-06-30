@@ -105,10 +105,12 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
       description: solution.description,
       inLanguage: locale,
       offers: {
-        "@type": "Offer",
+        "@type": "AggregateOffer",
         availability: "https://schema.org/OnlineOnly",
-        price: "0",
-        priceCurrency: "USD",
+        lowPrice: "14.99",
+        highPrice: "390",
+        offerCount: "2",
+        priceCurrency: "EUR",
       },
       featureList: solution.sections.flatMap((section) => section.points),
       publisher: {

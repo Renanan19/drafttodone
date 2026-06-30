@@ -18,9 +18,9 @@ const hanken = Hanken_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "DraftToDone.io — The Complete AI Publishing Machine",
+  title: "DraftToDone.io — Turn One Idea Into a Complete KDP Book",
   description:
-    "Generate the entire product — front cover to back cover, manuscript, and optimized title. Build your publishing empire with 6 ready-to-publish books a week.",
+    "Generate a manuscript, full wrap cover, KDP metadata, and a verified pen name from one niche brief. Build 6 ready-to-publish books a week.",
   applicationName: SITE_NAME,
   category: "AI publishing software",
   classification:
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "DraftToDone.io — The Complete AI Publishing Machine",
+    title: "DraftToDone.io — Turn One Idea Into a Complete KDP Book",
     description:
-      "Don't just write a book. Generate the entire product. The app is live — open it to start publishing.",
+      "One brief becomes manuscript, cover, KDP metadata, and pen name. The app is live.",
     type: "website",
     url: SITE_URL,
   },
@@ -87,12 +87,14 @@ const siteJsonLd = [
     operatingSystem: "Web",
     url: SITE_URL,
     description:
-      "AI publishing software for manuscripts, covers, titles, descriptions, KDP keywords and catalog quality control.",
+      "AI publishing software for turning one niche brief into a manuscript, full cover, KDP metadata and catalog quality workflow.",
     offers: {
-      "@type": "Offer",
+      "@type": "AggregateOffer",
       availability: "https://schema.org/OnlineOnly",
-      price: "0",
-      priceCurrency: "USD",
+      lowPrice: "14.99",
+      highPrice: "390",
+      offerCount: "2",
+      priceCurrency: "EUR",
     },
   },
 ];

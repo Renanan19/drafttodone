@@ -3,18 +3,22 @@
 import { useEffect } from "react";
 import {
   ArrowRight,
-  ArrowUpRight,
   BookOpen,
   Calculator,
   Check,
+  FileText,
   Image as ImageIcon,
+  Layers,
+  Search,
   Settings,
+  Share2,
+  ShieldCheck,
   Sparkles,
   Wand2,
   type LucideIcon,
 } from "lucide-react";
 import { locales, type Locale } from "./blog-content";
-import { APP_URL, homePath, type HomeCopy } from "./home-content";
+import { APP_URL, homePath, homeUrl, type HomeCopy } from "./home-content";
 
 /* -------------------------------------------------------------------------- */
 /*  Logo                                                                      */
@@ -140,43 +144,202 @@ function BookCover({
   );
 }
 
-function BookFan({ caption }: { caption: string }) {
+function ProductDemo({ demo }: { demo: HomeCopy["demo"] }) {
+  const artifactIcons: LucideIcon[] = [FileText, ImageIcon, Search, ShieldCheck];
+  const coverTitle = demo.outputTitle.split(" ").slice(-2).join(" ");
+
   return (
-    <div className="reveal-load relative mt-16" style={{ animationDelay: "420ms" }}>
-      {/* pedestal glow */}
+    <div className="reveal-load relative mx-auto mt-14 max-w-full text-left sm:max-w-5xl" style={{ animationDelay: "420ms" }}>
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-[min(720px,92vw)] -translate-x-1/2 -translate-y-1/2 rounded-[100%] bg-[radial-gradient(closest-side,rgba(126,224,203,0.55),rgba(191,233,255,0.25),transparent)] blur-2xl"
-      />
-      {/* ground shadow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute bottom-2 left-1/2 h-7 w-64 -translate-x-1/2 rounded-[100%] bg-ink/10 blur-xl"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-[min(820px,94vw)] -translate-x-1/2 -translate-y-1/2 rounded-[100%] bg-[radial-gradient(closest-side,rgba(126,224,203,0.45),rgba(191,233,255,0.2),transparent)] blur-2xl"
       />
 
-      <div className="float-slow group relative flex items-end justify-center">
-        <BookCover
-          cls="cover-peach"
-          title="Morning Light"
-          label="A Novel"
-          className="z-10 -mr-7 -rotate-[9deg] translate-y-3 group-hover:-translate-x-5 group-hover:-rotate-[15deg]"
-        />
-        <BookCover
-          cls="cover-mint"
-          title="The Quiet Coast"
-          label="Fiction"
-          className="z-20 scale-110 group-hover:-translate-y-2"
-        />
-        <BookCover
-          cls="cover-lilac"
-          title="After the Rain"
-          label="Stories"
-          className="z-10 -ml-7 rotate-[9deg] translate-y-3 group-hover:translate-x-5 group-hover:rotate-[15deg]"
-        />
+      <div className="relative grid min-w-0 gap-4 lg:grid-cols-[0.82fr_1.18fr]">
+        <div className="min-w-0 rounded-[22px] border border-line bg-paper p-5 shadow-[0_24px_70px_-42px_rgba(16,24,40,0.45)] sm:p-6">
+          <div className="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-mint-deep">
+            <Layers className="h-4 w-4" strokeWidth={2} />
+            {demo.inputLabel}
+          </div>
+          <p className="mt-5 text-balance font-display text-2xl font-medium leading-tight text-ink sm:text-3xl">
+            {demo.input}
+          </p>
+          <div className="mt-6 grid gap-2.5">
+            {demo.inputFacts.map((fact) => (
+              <p key={fact} className="flex items-center gap-2.5 text-sm text-muted">
+                <Check className="h-4 w-4 shrink-0 text-mint" strokeWidth={3} />
+                {fact}
+              </p>
+            ))}
+          </div>
+        </div>
+
+        <div className="min-w-0 overflow-hidden rounded-[22px] border border-ink bg-ink text-paper shadow-[0_26px_80px_-42px_rgba(16,24,40,0.65)]">
+          <div className="flex items-center justify-between border-b border-white/10 px-5 py-3 text-[12px] text-paper/55">
+            <div className="flex gap-1.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-peach" />
+              <span className="h-2.5 w-2.5 rounded-full bg-mint-soft" />
+              <span className="h-2.5 w-2.5 rounded-full bg-aqua" />
+            </div>
+            <span>{demo.outputLabel}</span>
+          </div>
+
+          <div className="grid gap-6 p-5 sm:grid-cols-[auto_1fr] sm:p-6">
+            <div className="flex justify-center sm:block">
+              <BookCover cls="cover-mint" title={coverTitle} label="KDP" className="w-32 sm:w-36" />
+            </div>
+            <div className="min-w-0">
+              <h3 className="font-display text-3xl font-medium leading-tight text-paper">
+                {demo.outputTitle}
+              </h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-paper/68">{demo.outputSubtitle}</p>
+              <div className="mt-6 grid gap-2 sm:grid-cols-2">
+                {demo.artifacts.map((artifact, index) => {
+                  const Icon = artifactIcons[index] ?? Check;
+                  return (
+                    <div
+                      key={artifact}
+                      className="flex min-h-16 items-start gap-3 rounded-xl border border-white/10 bg-white/[0.06] p-3"
+                    >
+                      <Icon className="mt-0.5 h-4 w-4 shrink-0 text-mint-soft" strokeWidth={2.2} />
+                      <span className="text-sm leading-snug text-paper/78">{artifact}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <p className="relative mt-10 text-center text-sm text-muted">{caption}</p>
+      <div className="relative mt-4 grid min-w-0 gap-3 sm:grid-cols-3">
+        {demo.metrics.map((metric) => (
+          <div key={metric.label} className="rounded-2xl border border-line bg-paper/90 px-5 py-4 text-center shadow-sm backdrop-blur">
+            <p className="font-display text-3xl font-medium leading-none text-ink">{metric.value}</p>
+            <p className="mt-1 text-[12px] font-medium uppercase tracking-[0.16em] text-faint">
+              {metric.label}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
+  );
+}
+
+function ProofSection({ proof }: { proof: HomeCopy["proof"] }) {
+  return (
+    <section className="relative border-t border-line/70 bg-paper-2">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-24 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div>
+          <p data-reveal className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep">
+            {proof.eyebrow}
+          </p>
+          <h2
+            data-reveal
+            style={{ transitionDelay: "60ms" }}
+            className="reveal-up text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
+          >
+            {proof.h2}
+          </h2>
+          <p
+            data-reveal
+            style={{ transitionDelay: "120ms" }}
+            className="reveal-up mt-5 max-w-xl text-balance text-lg leading-relaxed text-muted"
+          >
+            {proof.sub}
+          </p>
+        </div>
+
+        <div
+          data-reveal
+          style={{ transitionDelay: "160ms" }}
+          className="reveal-up rounded-[24px] border border-line bg-paper p-7 shadow-[0_24px_70px_-42px_rgba(16,24,40,0.48)] sm:p-8"
+        >
+          <p className="text-balance font-display text-2xl font-medium leading-snug text-ink-soft">
+            “{proof.quote}”
+          </p>
+          <p className="mt-5 text-sm font-semibold uppercase tracking-[0.16em] text-faint">
+            {proof.byline}
+          </p>
+          <div className="mt-7 grid gap-3">
+            {proof.points.map((point) => (
+              <p key={point} className="flex gap-3 text-[15px] leading-relaxed text-muted">
+                <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-mint" strokeWidth={2.4} />
+                {point}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ComparisonSection({ comparison }: { comparison: HomeCopy["comparison"] }) {
+  return (
+    <section className="relative border-t border-line/70">
+      <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
+        <div className="mx-auto max-w-2xl text-center">
+          <p data-reveal className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep">
+            {comparison.eyebrow}
+          </p>
+          <h2
+            data-reveal
+            style={{ transitionDelay: "60ms" }}
+            className="reveal-up text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
+          >
+            {comparison.h2}
+          </h2>
+          <p
+            data-reveal
+            style={{ transitionDelay: "120ms" }}
+            className="reveal-up mx-auto mt-5 max-w-xl text-balance text-lg text-muted"
+          >
+            {comparison.sub}
+          </p>
+        </div>
+
+        <div
+          data-reveal
+          style={{ transitionDelay: "160ms" }}
+          className="reveal-up mx-auto mt-12 max-w-4xl divide-y divide-line rounded-[22px] border border-line bg-paper shadow-[0_24px_70px_-44px_rgba(16,24,40,0.42)]"
+        >
+          {comparison.rows.map((row) => (
+            <div key={row.label} className="grid gap-4 p-5 sm:grid-cols-[0.7fr_1fr_1fr] sm:items-center sm:p-6">
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-faint">{row.label}</p>
+              <p className="text-[15px] leading-relaxed text-muted">{row.manual}</p>
+              <p className="flex gap-2.5 rounded-xl bg-mint-soft/45 p-4 text-[15px] font-medium leading-relaxed text-ink">
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-mint-deep" strokeWidth={3} />
+                {row.drafttodone}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ShareFooter({ locale, share }: { locale: Locale; share: HomeCopy["share"] }) {
+  const shareHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(share.text)}&url=${encodeURIComponent(homeUrl(locale))}`;
+
+  return (
+    <section className="border-t border-line/70 bg-ink text-paper">
+      <div className="mx-auto flex max-w-6xl flex-col gap-5 px-5 py-9 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <p className="text-balance font-display text-2xl font-medium leading-tight sm:text-3xl">
+          {share.line}
+        </p>
+        <a
+          href={shareHref}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-paper px-5 py-3 text-sm font-medium text-ink transition-colors hover:bg-mint-soft"
+        >
+          <Share2 className="h-4 w-4" strokeWidth={2.2} />
+          {share.cta}
+        </a>
+      </div>
+    </section>
   );
 }
 
@@ -241,19 +404,14 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-6">
           <Logo locale={locale} />
           <div className="flex items-center gap-3 sm:gap-4">
-            <LanguageLinks locale={locale} />
+            <div className="hidden sm:block">
+              <LanguageLinks locale={locale} />
+            </div>
             <a
               href={blogPath}
               className="hidden text-sm text-muted transition-colors hover:text-ink sm:inline-flex"
             >
               {t.nav.blog}
-            </a>
-            <a
-              href="#"
-              className="group hidden items-center gap-1 text-sm text-muted transition-colors hover:text-ink sm:inline-flex"
-            >
-              {t.nav.followX}
-              <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
             <a
               href="#pricing"
@@ -263,7 +421,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
             </a>
             <a
               href={APP_URL}
-              className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
+              className="hidden whitespace-nowrap rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-ink-soft sm:inline-flex"
             >
               {t.nav.openApp}
             </a>
@@ -278,7 +436,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
             aria-hidden
             className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(60%_100%_at_50%_0%,rgba(169,240,214,0.28),transparent)]"
           />
-          <div className="relative mx-auto max-w-3xl px-5 pb-8 pt-16 text-center sm:px-6 sm:pt-24">
+          <div className="relative mx-auto max-w-6xl px-5 pb-8 pt-16 text-center sm:px-6 sm:pt-24">
             <p className="reveal-load mb-7 inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3.5 py-1.5 text-[13px] font-medium text-ink-soft shadow-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-mint" />
               {t.hero.eyebrow}
@@ -286,14 +444,14 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
 
             <h1
               style={{ animationDelay: "80ms" }}
-              className="reveal-load text-balance font-display text-[2.6rem] font-medium leading-[1.05] tracking-[-0.02em] text-ink sm:text-6xl"
+              className="reveal-load mx-auto max-w-[20rem] text-balance font-display text-[2.05rem] font-medium leading-[1.05] tracking-[-0.005em] text-ink sm:max-w-4xl sm:text-6xl sm:tracking-[-0.02em]"
             >
               {t.hero.h1main} <em className="italic text-mint">{t.hero.h1accent}</em>
             </h1>
 
             <p
               style={{ animationDelay: "160ms" }}
-              className="reveal-load mx-auto mt-6 max-w-xl text-balance text-lg leading-relaxed text-muted"
+              className="reveal-load mx-auto mt-6 max-w-[20rem] text-balance text-base leading-relaxed text-muted sm:max-w-xl sm:text-lg"
             >
               {t.hero.sub} <span className="font-medium text-ink">{t.hero.subHighlight}</span>
             </p>
@@ -321,7 +479,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
               ))}
             </div>
 
-            <BookFan caption={t.hero.caption} />
+            <ProductDemo demo={t.demo} />
           </div>
         </section>
 
@@ -367,6 +525,8 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
           </div>
         </section>
 
+        <ProofSection proof={t.proof} />
+
         {/* Features */}
         <section id="features" className="relative border-t border-line/70">
           <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
@@ -404,6 +564,8 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
             </div>
           </div>
         </section>
+
+        <ComparisonSection comparison={t.comparison} />
 
         {/* Tools & guides (internal links to money pages) */}
         <section id="tools" className="relative border-t border-line/70 bg-paper-2">
@@ -605,6 +767,8 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
         </section>
       </main>
 
+      <ShareFooter locale={locale} share={t.share} />
+
       {/* Footer */}
       <footer className="border-t border-line/70">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-10 text-sm sm:flex-row sm:px-6">
@@ -616,13 +780,6 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
             </a>
             <a href="/site-map" className="text-muted transition-colors hover:text-ink">
               Sitemap
-            </a>
-            <a
-              href="#"
-              className="group inline-flex items-center gap-1 text-muted transition-colors hover:text-ink"
-            >
-              {t.nav.followX}
-              <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
           </div>
         </div>
