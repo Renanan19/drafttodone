@@ -135,6 +135,16 @@ build stays green (`npm run build`, 0 errors).
     targets commercial-investigation and exact KDP generator queries without
     inventing competitor facts or ranking guarantees. -> **Impact: high, 4-12
     weeks** for qualified organic demand.
+14. **Entity graph deepened without fake ratings** (`app/site-layout.tsx`,
+    `app/[locale]/[slug]/page.tsx`): added audience, available languages,
+    commercial page `hasPart` links, app/site relationships, stable page-level
+    software IDs and detailed subscription offers. `aggregateRating` remains
+    intentionally absent until real public reviews exist. -> **Impact: medium,
+    2-8 weeks** for entity clarity and rich-result quality.
+15. **Legal domination runbook added** (`seo/DOMINATION-PLAN.md`): defines the
+    weekly GSC/Bing loop, legal link-earning targets, proof assets, content
+    expansion and monthly scorecard. -> **Impact: high, compounding** because
+    authority and proof are now the limiting factors, not technical SEO.
 
 ## Prioritized backlog
 

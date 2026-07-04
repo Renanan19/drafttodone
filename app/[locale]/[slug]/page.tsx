@@ -99,6 +99,7 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
 
   const t = blogCopy[locale];
   const solution = page.translations[locale];
+  const canonicalUrl = solutionUrl(locale, page);
   const languagePaths = Object.fromEntries(
     locales.map((item) => [item, solutionPath(item, page)]),
   ) as Record<Locale, string>;
@@ -108,12 +109,19 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
+      "@id": `${canonicalUrl}#software`,
       name: SITE_NAME,
       applicationCategory: "PublishingApplication",
+      applicationSubCategory: "AI publishing software",
       operatingSystem: "Web",
-      url: solutionUrl(locale, page),
+      url: APP_URL,
+      mainEntityOfPage: canonicalUrl,
+      isPartOf: {
+        "@id": `${SITE_URL}/#software`,
+      },
       description: solution.description,
       inLanguage: locale,
+      availableLanguage: ["English", "French", "Italian", "German"],
       offers: {
         "@type": "AggregateOffer",
         availability: "https://schema.org/OnlineOnly",
@@ -121,12 +129,14 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
         highPrice: "390",
         offerCount: "2",
         priceCurrency: "EUR",
+        url: APP_URL,
       },
       featureList: solution.sections.flatMap((section) => section.points),
       publisher: {
-        "@type": "Organization",
-        name: SITE_NAME,
-        url: SITE_URL,
+        "@id": `${SITE_URL}/#organization`,
+      },
+      brand: {
+        "@id": `${SITE_URL}/#organization`,
       },
       keywords: solution.keywords.join(", "),
     },

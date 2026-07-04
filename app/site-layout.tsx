@@ -22,6 +22,32 @@ const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
 const SOFTWARE_ID = `${SITE_URL}/#software`;
 const FOUNDER_ID = `${SITE_URL}/#founder`;
+const COMMERCIAL_PAGES = [
+  {
+    name: "AI publishing software",
+    url: `${SITE_URL}/en/ai-publishing-software`,
+  },
+  {
+    name: "AI book generator",
+    url: `${SITE_URL}/en/ai-book-generator`,
+  },
+  {
+    name: "Best AI book generator",
+    url: `${SITE_URL}/en/best-ai-book-generator`,
+  },
+  {
+    name: "KDP book generator",
+    url: `${SITE_URL}/en/kdp-book-generator`,
+  },
+  {
+    name: "KDP keyword tool",
+    url: `${SITE_URL}/en/kdp-keyword-tool`,
+  },
+  {
+    name: "AI book cover generator",
+    url: `${SITE_URL}/en/ai-book-cover-generator`,
+  },
+];
 
 export const siteMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -91,6 +117,17 @@ const siteJsonLd = [
       ],
     },
     sameAs: [GITHUB_REPO_URL],
+    knowsAbout: [
+      "Amazon Kindle Direct Publishing",
+      "AI book generation",
+      "Book cover generation",
+      "Book SEO metadata",
+      "Self-publishing catalog operations",
+    ],
+    areaServed: "Worldwide",
+    owns: {
+      "@id": SOFTWARE_ID,
+    },
     subjectOf: [
       {
         "@type": "DigitalDocument",
@@ -117,6 +154,14 @@ const siteJsonLd = [
     about: {
       "@id": SOFTWARE_ID,
     },
+    hasPart: COMMERCIAL_PAGES.map((page) => ({
+      "@type": "WebPage",
+      name: page.name,
+      url: page.url,
+      about: {
+        "@id": SOFTWARE_ID,
+      },
+    })),
     potentialAction: {
       "@type": "ReadAction",
       target: [
@@ -140,8 +185,24 @@ const siteJsonLd = [
     applicationSubCategory: "AI publishing software",
     operatingSystem: "Web",
     url: APP_URL,
+    sameAs: [SITE_URL, GITHUB_REPO_URL],
+    isPartOf: {
+      "@id": WEBSITE_ID,
+    },
     mainEntityOfPage: SITE_URL,
     isAccessibleForFree: false,
+    inLanguage: ["en", "fr", "it", "de"],
+    availableLanguage: ["English", "French", "Italian", "German"],
+    applicationSuite: "DraftToDone",
+    softwareRequirements: "Modern web browser",
+    audience: {
+      "@type": "Audience",
+      audienceType: [
+        "Indie publishers",
+        "Self-published authors",
+        "Amazon KDP catalog operators",
+      ],
+    },
     description:
       "AI publishing software for turning one niche brief into a manuscript, full cover, KDP metadata and catalog quality workflow.",
     brand: {
@@ -168,6 +229,36 @@ const siteJsonLd = [
       offerCount: "2",
       priceCurrency: "EUR",
       url: APP_URL,
+      offers: [
+        {
+          "@type": "Offer",
+          name: "Weekly book-credit subscription",
+          price: "14.99",
+          priceCurrency: "EUR",
+          availability: "https://schema.org/OnlineOnly",
+          url: APP_URL,
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: "14.99",
+            priceCurrency: "EUR",
+            unitText: "week",
+          },
+        },
+        {
+          "@type": "Offer",
+          name: "Yearly book-credit subscription",
+          price: "390",
+          priceCurrency: "EUR",
+          availability: "https://schema.org/OnlineOnly",
+          url: APP_URL,
+          priceSpecification: {
+            "@type": "UnitPriceSpecification",
+            price: "390",
+            priceCurrency: "EUR",
+            unitText: "year",
+          },
+        },
+      ],
     },
   },
 ];
