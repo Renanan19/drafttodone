@@ -173,6 +173,40 @@ export const answerEngineIntents = [
       "Use the AI book generator page for users who want a complete manuscript, then support with the how-to and comparison guides.",
   },
   {
+    id: "best-ai-book-generator",
+    stage: "comparison",
+    queryPatterns: [
+      "best AI book generator",
+      "best AI book generator for KDP",
+      "which AI book generator should I use",
+    ],
+    primaryUrl: solutionUrlByKey("best-ai-book-generator"),
+    supportingUrls: [
+      solutionUrlByKey("ai-book-generator"),
+      solutionUrlByKey("ai-publishing-software"),
+      articleUrlByKey("best-ai-book-writing-tools"),
+    ],
+    answer:
+      "Use the best AI book generator page when the user is comparing buying criteria and wants a tool that covers manuscript, cover, metadata and KDP review workflow.",
+  },
+  {
+    id: "kdp-book-generator",
+    stage: "commercial",
+    queryPatterns: [
+      "KDP book generator",
+      "Amazon KDP book generator",
+      "AI KDP book generator",
+    ],
+    primaryUrl: solutionUrlByKey("kdp-book-generator"),
+    supportingUrls: [
+      solutionUrlByKey("ai-book-generator"),
+      solutionUrlByKey("kdp-keyword-tool"),
+      articleUrlByKey("kdp-ai-content-policy"),
+    ],
+    answer:
+      "Use the KDP book generator page for users who want the complete Amazon KDP package: manuscript, cover, title, description, keywords and pre-upload review checks.",
+  },
+  {
     id: "ai-book-cover-generator",
     stage: "commercial",
     queryPatterns: [

@@ -123,6 +123,18 @@ build stays green (`npm run build`, 0 errors).
     Results test on one page per type. Logged-in checks are: GSC page-2 sprint,
     Ahrefs/SEMrush keyword gaps and backlink gaps. -> **Impact: low, immediate**
     for execution clarity.
+12. **IndexNow post-deploy notification** (`ops/submit-indexnow.mjs`,
+    `.github/workflows/deploy.yml`): every successful GitHub Pages deploy now
+    submits the live sitemap URLs to Bing/IndexNow after publication. The key is
+    hosted at the site root and the workflow is non-blocking if the endpoint is
+    temporarily unavailable. -> **Impact: medium, immediate** for faster discovery
+    by IndexNow search partners.
+13. **Buyer-intent pages expanded** (`app/seo-pages.ts`,
+    `app/answer-engine-content.ts`): added localized pages for `best AI book
+    generator` and `KDP book generator`, plus answer-engine intent routing. This
+    targets commercial-investigation and exact KDP generator queries without
+    inventing competitor facts or ranking guarantees. -> **Impact: high, 4-12
+    weeks** for qualified organic demand.
 
 ## Prioritized backlog
 
@@ -149,10 +161,10 @@ build stays green (`npm run build`, 0 errors).
 | Action | Impact | Effort | How |
 |--------|:------:|:------:|-----|
 | ~~Ship book description / title / AI book generator / KDP keyword tool pages~~ DONE this pass | — | — | shipped |
-| **Comparison pages** ("[competitor] alternative", "best AI book generator") — needs verified competitor facts first | High | M | prompt #7/#12 then #5 |
+| ~~Ship `best AI book generator` + `KDP book generator` buyer-intent pages~~ DONE 2026-07-04 | — | — | shipped |
+| **More competitor comparison pages** ("[competitor] alternative") — needs verified competitor facts first | High | M | prompt #7/#12 then #5 |
 | **GSC page-2 sprint** once data exists | High | M | prompt #10 |
 | **Keyword + content gap** vs competitor buckets | High | M | prompts #7, #8 |
-| **Comparison pages** ("[competitor] alternative", "best AI book generator") | High | M | prompt #5/#8 |
 
 ### Long (compounding)
 | Action | Impact | Effort | How |

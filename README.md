@@ -40,6 +40,8 @@ This repository is the public **marketing site and SEO content hub**
 | [Book title generator](https://drafttodone.io/en/book-title-generator) | Clickable, keyword-aware titles |
 | [KDP keyword tool](https://drafttodone.io/en/kdp-keyword-tool) | Research the 7 backend keyword slots |
 | [AI publishing software](https://drafttodone.io/en/ai-publishing-software) | The full idea-to-upload workflow |
+| [Best AI book generator](https://drafttodone.io/en/best-ai-book-generator) | Buyer checklist for complete KDP book pipelines |
+| [KDP book generator](https://drafttodone.io/en/kdp-book-generator) | Manuscript, cover and Amazon metadata package |
 
 ## Guides (free)
 
@@ -57,6 +59,7 @@ A growing knowledge base on AI publishing, self-publishing and KDP SEO:
 
 - [DraftToDone vs Sudowrite](https://drafttodone.io/en/sudowrite-alternative) — whole publishable product vs AI fiction craft.
 - [DraftToDone vs Atticus](https://drafttodone.io/en/atticus-alternative) — generate the book vs format one you wrote.
+- [Best AI book generator](https://drafttodone.io/en/best-ai-book-generator) — how to choose a full KDP pipeline, not just a text tool.
 
 ## Who it's for
 

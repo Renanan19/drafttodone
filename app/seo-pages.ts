@@ -1237,6 +1237,186 @@ export const solutionPages: SolutionPage[] = [
     },
   },
   {
+    key: "best-ai-book-generator",
+    updated: "2026-07-04",
+    translations: {
+      en: {
+        slug: "best-ai-book-generator",
+        title: "Best AI book generator for KDP publishers who need the whole package",
+        description:
+          "Choosing the best AI book generator? Compare what matters for KDP: manuscript quality, cover workflow, metadata, pricing, review gates and export readiness.",
+        eyebrow: "Best AI book generator",
+        h1: "The best AI book generator is the one that ships the whole KDP package.",
+        lead: "Most AI writing tools stop at text. KDP publishers need more: a coherent manuscript, cover direction, title, description, keywords and quality checks before upload. This page shows the buying criteria and where DraftToDone fits.",
+        keywords: ["best AI book generator", "AI book generator for KDP", "AI book writing software", "AI publishing software", "publish a book with AI"],
+        sections: [
+          { id: "criteria", title: "Judge the full publishing job", body: "A book generator should be judged by the finished product, not by how impressive one chapter looks in isolation.", points: ["Complete manuscript, not only a draft sample", "Cover and metadata included in the same workflow", "Export path for KDP decisions", "Clear limits: no sales or ranking guarantees"] },
+          { id: "workflow", title: "Look for repeatable quality gates", body: "The strongest tool is the one that makes every book easier to inspect, revise and package before it reaches Amazon.", points: ["Structure checks before generation", "Metadata aligned with the actual book", "Cover readiness before upload", "Catalog notes for future refreshes"] },
+          { id: "fit", title: "Where DraftToDone fits", body: "DraftToDone is built for publishers who want a controlled pipeline from niche brief to publishable KDP package, not a blank chat window.", points: ["Manuscript, cover and KDP metadata as one package", "Book-credit pricing tied to finished output", "Works for repeatable catalog operations", "Human review stays part of the workflow"] }
+        ],
+        faq: [
+          { question: "What makes an AI book generator good for KDP?", answer: "It should produce a coherent manuscript, support cover and metadata decisions, keep claims honest and leave a clear human review step before publication." },
+          { question: "Is DraftToDone only an AI writer?", answer: "No. DraftToDone covers the broader publishing package: manuscript, cover direction, title, description, keywords, pen-name notes and catalog quality gates." },
+          { question: "Can any AI book generator guarantee sales?", answer: "No. No responsible tool can guarantee Amazon rankings, approval or sales. Packaging and metadata help, but demand, quality, price, reviews and promotion still matter." }
+        ],
+        cta: "Open the app",
+      },
+      fr: {
+        slug: "meilleur-generateur-livre-ia",
+        title: "Meilleur générateur de livre IA pour publier sur KDP avec un package complet",
+        description:
+          "Vous cherchez le meilleur générateur de livre IA ? Comparez les vrais critères KDP : manuscrit, couverture, métadonnées, prix, contrôle qualité et export.",
+        eyebrow: "Meilleur générateur livre IA",
+        h1: "Le meilleur générateur de livre IA est celui qui livre tout le package KDP.",
+        lead: "La plupart des outils d'écriture IA s'arrêtent au texte. Un éditeur KDP a besoin de plus : manuscrit cohérent, couverture, titre, description, mots-clés et contrôles avant upload.",
+        keywords: ["meilleur générateur livre IA", "générateur livre IA KDP", "logiciel écriture livre IA", "logiciel édition IA", "publier un livre avec IA"],
+        sections: [
+          { id: "criteres", title: "Juger le vrai travail d'édition", body: "Un générateur de livre doit être jugé sur le produit fini, pas sur un chapitre isolé qui impressionne en démo.", points: ["Manuscrit complet, pas seulement un extrait", "Couverture et métadonnées dans le même flux", "Chemin clair vers les décisions KDP", "Limites honnêtes : aucune garantie de ventes ou de classement"] },
+          { id: "workflow", title: "Chercher des contrôles qualité répétables", body: "Le meilleur outil rend chaque livre plus facile à inspecter, corriger et empaqueter avant Amazon.", points: ["Structure vérifiée avant génération", "Métadonnées alignées avec le vrai livre", "Couverture contrôlée avant upload", "Notes catalogue pour les futures mises à jour"] },
+          { id: "fit", title: "Où DraftToDone se place", body: "DraftToDone vise les éditeurs qui veulent un pipeline contrôlé du brief de niche au package KDP publiable, pas une conversation vide à piloter.", points: ["Manuscrit, couverture et métadonnées KDP ensemble", "Prix par crédits de livres liés au résultat", "Adapté aux opérations catalogue répétables", "La revue humaine reste dans le workflow"] }
+        ],
+        faq: [
+          { question: "Qu'est-ce qui rend un générateur IA adapté à KDP ?", answer: "Il doit produire un manuscrit cohérent, aider la couverture et les métadonnées, rester honnête dans ses promesses et garder une revue humaine avant publication." },
+          { question: "DraftToDone est-il seulement un outil d'écriture ?", answer: "Non. DraftToDone couvre le package d'édition : manuscrit, couverture, titre, description, mots-clés, notes de plume et contrôles qualité catalogue." },
+          { question: "Un générateur IA peut-il garantir des ventes ?", answer: "Non. Aucun outil sérieux ne garantit classement, validation KDP ou ventes. Qualité, demande, prix, avis et promotion comptent toujours." }
+        ],
+        cta: "Ouvrir l'app",
+      },
+      it: {
+        slug: "miglior-generatore-libro-ia",
+        title: "Miglior generatore di libri IA per publisher KDP che vogliono il pacchetto completo",
+        description:
+          "Cerchi il miglior generatore di libri IA? Confronta i criteri KDP reali: manoscritto, copertina, metadati, prezzo, controlli qualità ed export.",
+        eyebrow: "Miglior generatore libro IA",
+        h1: "Il miglior generatore di libri IA è quello che consegna tutto il pacchetto KDP.",
+        lead: "Molti strumenti di scrittura IA si fermano al testo. Un publisher KDP ha bisogno di manoscritto coerente, copertina, titolo, descrizione, keyword e controlli prima dell'upload.",
+        keywords: ["miglior generatore libro IA", "generatore libro IA KDP", "software scrittura libro IA", "software editoriale IA", "pubblicare un libro con IA"],
+        sections: [
+          { id: "criteri", title: "Valuta il lavoro editoriale completo", body: "Un generatore di libri va giudicato dal prodotto finito, non da un singolo capitolo impressionante.", points: ["Manoscritto completo, non solo un esempio", "Copertina e metadati nello stesso flusso", "Percorso chiaro verso le decisioni KDP", "Limiti chiari: nessuna garanzia di vendite o ranking"] },
+          { id: "workflow", title: "Cerca controlli qualità ripetibili", body: "Lo strumento più forte rende ogni libro più facile da ispezionare, correggere e confezionare prima di Amazon.", points: ["Struttura verificata prima della generazione", "Metadati allineati al libro reale", "Copertina controllata prima dell'upload", "Note catalogo per aggiornamenti futuri"] },
+          { id: "fit", title: "Dove si colloca DraftToDone", body: "DraftToDone è pensato per publisher che vogliono una pipeline controllata dal brief di nicchia al pacchetto KDP pubblicabile.", points: ["Manoscritto, copertina e metadati KDP insieme", "Prezzo a crediti libro legato all'output", "Adatto a operazioni catalogo ripetibili", "La revisione umana resta nel workflow"] }
+        ],
+        faq: [
+          { question: "Cosa rende un generatore IA adatto a KDP?", answer: "Deve produrre un manoscritto coerente, supportare copertina e metadati, restare onesto nelle promesse e lasciare una revisione umana prima della pubblicazione." },
+          { question: "DraftToDone è solo uno strumento di scrittura?", answer: "No. DraftToDone copre il pacchetto editoriale: manoscritto, copertina, titolo, descrizione, keyword, note sul pen name e controlli qualità catalogo." },
+          { question: "Un generatore IA può garantire vendite?", answer: "No. Nessuno strumento serio garantisce ranking, approvazione KDP o vendite. Contano anche qualità, domanda, prezzo, recensioni e promozione." }
+        ],
+        cta: "Apri l'app",
+      },
+      de: {
+        slug: "bester-ki-buchgenerator",
+        title: "Bester KI-Buchgenerator für KDP-Publisher, die das ganze Paket brauchen",
+        description:
+          "Suchst du den besten KI-Buchgenerator? Vergleiche die KDP-Kriterien: Manuskript, Cover, Metadaten, Preis, Qualitätschecks und Exportbereitschaft.",
+        eyebrow: "Bester KI-Buchgenerator",
+        h1: "Der beste KI-Buchgenerator liefert das ganze KDP-Paket.",
+        lead: "Viele KI-Schreibtools enden beim Text. KDP-Publisher brauchen mehr: ein stimmiges Manuskript, Cover, Titel, Beschreibung, Keywords und Prüfungen vor dem Upload.",
+        keywords: ["bester KI Buchgenerator", "KI Buchgenerator KDP", "KI Buch Schreibsoftware", "KI Publishing Software", "Buch mit KI veröffentlichen"],
+        sections: [
+          { id: "kriterien", title: "Bewerte den ganzen Publishing-Job", body: "Ein Buchgenerator sollte am fertigen Produkt gemessen werden, nicht an einem einzelnen beeindruckenden Kapitel.", points: ["Vollständiges Manuskript statt nur Probe", "Cover und Metadaten im selben Workflow", "Klarer Weg zu KDP-Entscheidungen", "Ehrliche Grenzen: keine Verkaufs- oder Ranking-Garantien"] },
+          { id: "workflow", title: "Achte auf wiederholbare Qualitätschecks", body: "Das stärkste Tool macht jedes Buch leichter prüfbar, korrigierbar und verpackbar, bevor es zu Amazon geht.", points: ["Strukturprüfung vor der Generierung", "Metadaten passend zum echten Buch", "Cover-Check vor dem Upload", "Katalognotizen für spätere Updates"] },
+          { id: "fit", title: "Wo DraftToDone passt", body: "DraftToDone ist für Publisher gebaut, die eine kontrollierte Pipeline vom Nischenbriefing bis zum veröffentlichbaren KDP-Paket wollen.", points: ["Manuskript, Cover und KDP-Metadaten zusammen", "Book-Credit-Preis an fertigen Output gekoppelt", "Geeignet für wiederholbare Katalogarbeit", "Menschliche Prüfung bleibt Teil des Workflows"] }
+        ],
+        faq: [
+          { question: "Was macht einen KI-Buchgenerator gut für KDP?", answer: "Er sollte ein stimmiges Manuskript erzeugen, Cover- und Metadatenentscheidungen unterstützen, ehrlich bleiben und eine menschliche Prüfung vor Veröffentlichung einplanen." },
+          { question: "Ist DraftToDone nur ein Schreibtool?", answer: "Nein. DraftToDone deckt das breitere Publishing-Paket ab: Manuskript, Cover, Titel, Beschreibung, Keywords, Pen-Name-Notizen und Katalog-Qualitätschecks." },
+          { question: "Kann ein KI-Buchgenerator Verkäufe garantieren?", answer: "Nein. Kein seriöses Tool garantiert Amazon-Rankings, KDP-Freigabe oder Verkäufe. Qualität, Nachfrage, Preis, Rezensionen und Promotion zählen weiter." }
+        ],
+        cta: "App öffnen",
+      },
+    },
+  },
+  {
+    key: "kdp-book-generator",
+    updated: "2026-07-04",
+    translations: {
+      en: {
+        slug: "kdp-book-generator",
+        title: "KDP book generator for manuscript, cover and Amazon metadata",
+        description:
+          "Generate a KDP-ready book package with AI: manuscript, cover direction, title, description, keywords and quality checks before Amazon upload.",
+        eyebrow: "KDP book generator",
+        h1: "Generate the KDP book package, not just the manuscript.",
+        lead: "Amazon KDP publishing is more than writing chapters. DraftToDone turns a niche brief into the assets a publisher actually needs before upload: manuscript, cover, title, description, keyword set and review checklist.",
+        keywords: ["KDP book generator", "Amazon KDP book generator", "AI KDP book generator", "generate KDP book", "KDP publishing software"],
+        sections: [
+          { id: "package", title: "Built around KDP inputs", body: "The workflow mirrors the decisions a publisher makes before opening KDP, so the output is easier to review and package.", points: ["Manuscript shaped from the niche brief", "Title and subtitle drafted with reader intent", "Description and seven keyword slots prepared", "Cover direction kept consistent with the book promise"] },
+          { id: "quality", title: "Quality before upload", body: "AI speed only matters if the book can survive human review. DraftToDone keeps the publisher in the loop before anything reaches Amazon.", points: ["Review checklist for content and metadata", "No promise of account safety or guaranteed approval", "Human rights and policy checks remain required", "Catalog notes for improvements after launch"] },
+          { id: "catalog", title: "Designed for catalog operators", body: "The point is not one random book. The point is a repeatable system for producing, checking and improving many titles over time.", points: ["Book-credit subscription", "Repeatable briefs and packaging", "Metadata snapshots for future refreshes", "Useful for multi-title publishing operations"] }
+        ],
+        faq: [
+          { question: "Can I upload the output directly to KDP?", answer: "DraftToDone prepares the book package for review, but you should inspect the manuscript, cover and metadata yourself before uploading anything to Amazon." },
+          { question: "Does this replace KDP's publishing dashboard?", answer: "No. DraftToDone prepares the assets and metadata; Amazon KDP remains where you upload, price and publish the book." },
+          { question: "Is this safe under KDP AI rules?", answer: "Amazon allows AI-assisted books with the required disclosure and quality standards. You remain responsible for rights checks, disclosure and final review." }
+        ],
+        cta: "Open the app",
+      },
+      fr: {
+        slug: "generateur-livre-kdp",
+        title: "Générateur de livre KDP pour manuscrit, couverture et métadonnées Amazon",
+        description:
+          "Générez un package de livre prêt à relire pour KDP : manuscrit, couverture, titre, description, mots-clés et contrôles avant upload Amazon.",
+        eyebrow: "Générateur livre KDP",
+        h1: "Générez le package KDP, pas seulement le manuscrit.",
+        lead: "Publier sur Amazon KDP ne se limite pas aux chapitres. DraftToDone transforme un brief de niche en actifs utiles avant upload : manuscrit, couverture, titre, description, mots-clés et checklist.",
+        keywords: ["générateur livre KDP", "générateur livre Amazon KDP", "générateur livre IA KDP", "générer livre KDP", "logiciel publication KDP"],
+        sections: [
+          { id: "package", title: "Pensé autour des champs KDP", body: "Le workflow suit les décisions qu'un éditeur prend avant d'ouvrir KDP, pour un résultat plus facile à relire et empaqueter.", points: ["Manuscrit construit depuis le brief de niche", "Titre et sous-titre orientés lecteur", "Description et sept champs mots-clés préparés", "Direction de couverture cohérente avec la promesse"] },
+          { id: "qualite", title: "Qualité avant upload", body: "La vitesse de l'IA compte seulement si le livre tient la revue humaine. DraftToDone garde l'éditeur dans la boucle avant Amazon.", points: ["Checklist de revue contenu et métadonnées", "Aucune promesse de sécurité de compte ou validation garantie", "Contrôles droits et politique toujours requis", "Notes catalogue pour améliorer après lancement"] },
+          { id: "catalogue", title: "Conçu pour les opérateurs de catalogue", body: "L'objectif n'est pas un livre isolé au hasard. L'objectif est un système répétable pour produire, contrôler et améliorer plusieurs titres.", points: ["Abonnement par crédits de livres", "Briefs et packaging répétables", "Snapshots de métadonnées pour refresh futur", "Utile pour opérations multi-titres"] }
+        ],
+        faq: [
+          { question: "Puis-je uploader directement le résultat sur KDP ?", answer: "DraftToDone prépare un package à relire, mais vous devez inspecter manuscrit, couverture et métadonnées avant tout upload sur Amazon." },
+          { question: "Cela remplace-t-il le tableau de bord KDP ?", answer: "Non. DraftToDone prépare les fichiers et métadonnées ; Amazon KDP reste l'endroit où uploader, fixer le prix et publier." },
+          { question: "Est-ce compatible avec les règles IA de KDP ?", answer: "Amazon accepte les livres assistés par IA avec déclaration requise et standards qualité. Vous restez responsable des droits, de la déclaration et de la revue finale." }
+        ],
+        cta: "Ouvrir l'app",
+      },
+      it: {
+        slug: "generatore-libro-kdp",
+        title: "Generatore di libri KDP per manoscritto, copertina e metadati Amazon",
+        description:
+          "Genera un pacchetto libro pronto da rivedere per KDP: manoscritto, copertina, titolo, descrizione, keyword e controlli prima dell'upload.",
+        eyebrow: "Generatore libro KDP",
+        h1: "Genera il pacchetto KDP, non solo il manoscritto.",
+        lead: "Pubblicare su Amazon KDP non significa solo scrivere capitoli. DraftToDone trasforma un brief di nicchia negli asset utili prima dell'upload: manoscritto, copertina, titolo, descrizione, keyword e checklist.",
+        keywords: ["generatore libro KDP", "generatore libro Amazon KDP", "generatore libro IA KDP", "generare libro KDP", "software pubblicazione KDP"],
+        sections: [
+          { id: "pacchetto", title: "Costruito intorno agli input KDP", body: "Il workflow segue le decisioni che un publisher prende prima di aprire KDP, così l'output è più facile da rivedere e confezionare.", points: ["Manoscritto modellato dal brief di nicchia", "Titolo e sottotitolo orientati al lettore", "Descrizione e sette campi keyword preparati", "Direzione copertina coerente con la promessa"] },
+          { id: "qualita", title: "Qualità prima dell'upload", body: "La velocità dell'IA conta solo se il libro supera una revisione umana. DraftToDone tiene il publisher nel flusso prima di Amazon.", points: ["Checklist per contenuto e metadati", "Nessuna promessa di sicurezza account o approvazione garantita", "Controlli diritti e policy sempre necessari", "Note catalogo per miglioramenti post-lancio"] },
+          { id: "catalogo", title: "Pensato per operatori di catalogo", body: "Il punto non è un libro casuale. Il punto è un sistema ripetibile per produrre, controllare e migliorare molti titoli nel tempo.", points: ["Abbonamento a crediti libro", "Brief e packaging ripetibili", "Snapshot metadati per refresh futuri", "Utile per operazioni multi-titolo"] }
+        ],
+        faq: [
+          { question: "Posso caricare direttamente l'output su KDP?", answer: "DraftToDone prepara un pacchetto da rivedere, ma devi controllare manoscritto, copertina e metadati prima di caricare su Amazon." },
+          { question: "Sostituisce la dashboard KDP?", answer: "No. DraftToDone prepara asset e metadati; Amazon KDP resta il luogo in cui carichi, imposti il prezzo e pubblichi." },
+          { question: "È compatibile con le regole IA di KDP?", answer: "Amazon accetta libri assistiti da IA con dichiarazione richiesta e standard qualità. Resti responsabile di diritti, disclosure e revisione finale." }
+        ],
+        cta: "Apri l'app",
+      },
+      de: {
+        slug: "kdp-buchgenerator",
+        title: "KDP-Buchgenerator für Manuskript, Cover und Amazon-Metadaten",
+        description:
+          "Erzeuge ein KDP-Buchpaket zur Prüfung: Manuskript, Cover-Richtung, Titel, Beschreibung, Keywords und Qualitätschecks vor dem Amazon-Upload.",
+        eyebrow: "KDP-Buchgenerator",
+        h1: "Erzeuge das KDP-Buchpaket, nicht nur das Manuskript.",
+        lead: "Amazon-KDP-Publishing ist mehr als Kapitel schreiben. DraftToDone verwandelt ein Nischenbriefing in die Assets vor dem Upload: Manuskript, Cover, Titel, Beschreibung, Keywords und Prüfliste.",
+        keywords: ["KDP Buchgenerator", "Amazon KDP Buchgenerator", "KI KDP Buchgenerator", "KDP Buch generieren", "KDP Publishing Software"],
+        sections: [
+          { id: "paket", title: "An KDP-Eingaben ausgerichtet", body: "Der Workflow folgt den Entscheidungen, die ein Publisher vor KDP trifft, damit der Output leichter prüfbar und verpackbar ist.", points: ["Manuskript aus dem Nischenbriefing geformt", "Titel und Untertitel nach Leserintention", "Beschreibung und sieben Keyword-Felder vorbereitet", "Cover-Richtung passend zum Buchversprechen"] },
+          { id: "qualitaet", title: "Qualität vor dem Upload", body: "KI-Geschwindigkeit zählt nur, wenn das Buch menschliche Prüfung übersteht. DraftToDone hält den Publisher vor Amazon im Prozess.", points: ["Checkliste für Inhalt und Metadaten", "Keine Garantie für Kontosicherheit oder Freigabe", "Rechte- und Policy-Prüfungen bleiben Pflicht", "Katalognotizen für Verbesserungen nach Launch"] },
+          { id: "katalog", title: "Für Katalogbetreiber gedacht", body: "Es geht nicht um ein zufälliges einzelnes Buch. Es geht um ein wiederholbares System für viele Titel.", points: ["Book-Credit-Abonnement", "Wiederholbare Briefings und Verpackung", "Metadaten-Snapshots für spätere Refreshes", "Nützlich für Multi-Titel-Operationen"] }
+        ],
+        faq: [
+          { question: "Kann ich den Output direkt bei KDP hochladen?", answer: "DraftToDone bereitet das Buchpaket zur Prüfung vor, aber du solltest Manuskript, Cover und Metadaten selbst prüfen, bevor du etwas bei Amazon hochlädst." },
+          { question: "Ersetzt es das KDP-Dashboard?", answer: "Nein. DraftToDone bereitet Assets und Metadaten vor; Amazon KDP bleibt der Ort zum Hochladen, Bepreisen und Veröffentlichen." },
+          { question: "Ist das mit den KDP-KI-Regeln vereinbar?", answer: "Amazon erlaubt KI-unterstützte Bücher mit der erforderlichen Offenlegung und Qualitätsstandards. Du bleibst verantwortlich für Rechteprüfung, Offenlegung und finale Prüfung." }
+        ],
+        cta: "App öffnen",
+      },
+    },
+  },
+  {
     key: "sudowrite-alternative",
     updated: "2026-06-19",
     translations: {
