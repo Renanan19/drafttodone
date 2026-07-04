@@ -66,11 +66,11 @@ images**, (2) the homepage linked to **no money pages**, and (3) too few
    page title baked in. Venice palette; CSS-drawn check mark (no font fetch).
    -> **Impact: high.** Every link shared on X/LinkedIn/Slack/Discord/iMessage now
    renders a card instead of a blank rectangle. Visible immediately on next share.
-2. **Homepage internal links to money pages** (`app/page.tsx`): new "Free tools &
+2. **Homepage internal links to money pages** (`app/(root)/page.tsx`): new "Free tools &
    guides" section linking the KDP royalty calculator, AI book cover generator, AI
    publishing software and the blog (EN/FR). The highest-authority page previously
    linked **zero** money pages. -> **Impact: high, 2–8 weeks.**
-3. **Homepage FAQ + FAQPage schema** (`app/page.tsx`): 5 Q&A (EN/FR) + JSON-LD.
+3. **Homepage FAQ + FAQPage schema** (`app/(root)/page.tsx`): 5 Q&A (EN/FR) + JSON-LD.
    -> captures question queries / AI answers; **medium, 2–6 weeks.**
 4. **Sitewide footer money-page links** (`app/blog-ui.tsx`): every blog post and
    solution page now links all solution pages. -> distributes authority; **medium.**
@@ -116,6 +116,13 @@ build stays green (`npm run build`, 0 errors).
    `npm run build`, full `out/` scan for `http://localhost:3000`, and JSON-LD
    parsing on home, localized home, blog index, solution page and article. ->
    **Impact: medium, immediate** for share-card reliability.
+11. **External-validation runbook tightened** (`seo/AUDIT.md`): split no-login
+    checks from paid/logged-in checks so the next SEO sprint can move without
+    guessing unavailable metrics. Public checks are: GitHub Pages deploy status,
+    live HTML smoke tests, localhost leak scan, JSON-LD parse and Google's Rich
+    Results test on one page per type. Logged-in checks are: GSC page-2 sprint,
+    Ahrefs/SEMrush keyword gaps and backlink gaps. -> **Impact: low, immediate**
+    for execution clarity.
 
 ## Prioritized backlog
 
@@ -126,6 +133,17 @@ build stays green (`npm run build`, 0 errors).
 | Run **title/meta audit** + rewrite outliers | High | S | prompt #1 |
 | Run **Rich Results** validation on 1 page per type | Med | XS | prompt #2 |
 | ~~Add `Organization.sameAs` + `founder` to layout JSON-LD~~ DONE 2026-07-04 | Med | S | prompt #14 |
+
+### External validation gates
+| Check | Access | Status |
+|-------|--------|--------|
+| `npm run build` static export | none | passing locally and in GitHub Actions |
+| Export scan for `http://localhost:3000` | none | clean locally after the 2026-07-04 layout split |
+| JSON-LD parse on representative page types | none | passing locally |
+| Live custom-domain smoke test after deploy | none | run after GitHub Pages reports success |
+| Google Rich Results test on one page per type | public tool | run against live URLs after deploy |
+| GSC money-page / page-2 sprint | Search Console login | blocked until property access |
+| Ahrefs/SEMrush keyword and backlink gaps | paid tool login | blocked until account access |
 
 ### Medium (high impact, medium effort)
 | Action | Impact | Effort | How |
@@ -152,21 +170,18 @@ landing and FR had no distinct indexable URL.
 **Shipped:** the landing UI was extracted into a locale-driven client component
 (`app/home-view.tsx`), copy moved to `app/home-content.ts` (now full en/fr/it/de,
 including new IT and DE), and the routes split:
-- `/` — English, server component (`app/page.tsx`), canonical `/` + hreflang.
+- `/` — English, server component (`app/(root)/page.tsx`), canonical `/` + hreflang.
 - `/fr`, `/it`, `/de` — server-rendered localized landings (`app/[locale]/page.tsx`),
   each with its own metadata, canonical and hreflang cluster.
 - All four added to `sitemap.xml` with hreflang alternates.
 
 The Venice design is preserved (verified by screenshot of
-`/fr`). Known minor: the shared root layout emits `<html lang="en">` statically and
-the client effect updates it per route; content uses `<div lang={locale}>` +
-hreflang, matching the existing blog/solution pattern. A per-locale `<html lang>`
-would need a `[locale]` layout (future).
+`/fr`). 2026-07-04 update: the route-group layout split now emits static
+per-locale `<html lang>` values before JavaScript runs.
 
 ## Notes / smaller items
-- **Homepage canonical**: not emitted. Can't be set in the shared `layout.tsx`
-  without mis-canonicalizing `/site-map`, and the client home page can't export
-  `metadata`. Resolve as part of Opportunity #1 (server home route can set its own).
+- **Homepage canonical**: emitted from the root server route after Opportunity #1
+  and the 2026-07-04 route-group layout split.
 - The `ai-book-cover-generator` solution page and the `ai-book-cover-design...`
   blog post target **different intents** (tool vs how-to) and cross-link — no
   cannibalization, but keep titles distinct as both mature.
