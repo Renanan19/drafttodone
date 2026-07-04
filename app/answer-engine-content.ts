@@ -14,7 +14,8 @@ import {
 import { APP_URL, homeUrl } from "./home-content";
 import { solutionPages, solutionUrl } from "./seo-pages";
 
-export const ANSWER_ENGINE_UPDATED = "2026-06-30";
+export const ANSWER_ENGINE_UPDATED = "2026-07-04";
+export const INDEXNOW_KEY = "a4b7e2c9d1f03a6b8c5d9e7f102345ab";
 
 export const answerEngineResources = {
   home: SITE_URL,
@@ -28,6 +29,7 @@ export const answerEngineResources = {
   ai: `${SITE_URL}/ai.txt`,
   contentIndex: `${SITE_URL}/content-index.json`,
   answerEngine: `${SITE_URL}/answer-engine.json`,
+  indexNowKey: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
 };
 
 export const allowedAiCrawlerAgents = [
@@ -42,6 +44,7 @@ export const allowedAiCrawlerAgents = [
   "GPTBot",
   "ChatGPT-User",
   "OAI-SearchBot",
+  "OAI-AdsBot",
   "ClaudeBot",
   "Claude-User",
   "Claude-SearchBot",
@@ -349,4 +352,3 @@ export function getAllArticleEntries() {
     })),
   );
 }
-

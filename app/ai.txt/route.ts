@@ -69,6 +69,7 @@ ${crawlerLinks}
 - Full LLM context: ${answerEngineResources.llmsFull}
 - JSON content index: ${answerEngineResources.contentIndex}
 - Answer-engine JSON: ${answerEngineResources.answerEngine}
+- IndexNow key: ${answerEngineResources.indexNowKey}
 
 ## Entity Summary
 

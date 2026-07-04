@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "indexnow": "node ops/submit-indexnow.mjs",
     "start": "next start"
   },
   "dependencies": {

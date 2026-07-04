@@ -39,3 +39,8 @@ jobs:
     steps:
       - uses: actions/deploy-pages@v5
         id: deployment
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: npm run indexnow
