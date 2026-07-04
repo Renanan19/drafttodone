@@ -1,8 +1,7 @@
-import { readFileSync, readdirSync } from "node:fs";
-
 const siteUrl = process.env.SITE_URL ?? "https://drafttodone.io";
 const endpoint = process.env.INDEXNOW_ENDPOINT ?? "https://www.bing.com/indexnow";
-const publicDir = new URL("../public/", import.meta.url);
+const key = process.env.INDEXNOW_KEY ?? "a4b7e2c9d1f03a6b8c5d9e7f102345ab";
+const keyFile = `${key}.txt`;
 
 function decodeXml(value) {
   return value
@@ -13,19 +12,7 @@ function decodeXml(value) {
     .replaceAll("&apos;", "'");
 }
 
-function findIndexNowKeyFile() {
-  const keyFile = readdirSync(publicDir).find((name) =>
-    /^[a-zA-Z0-9-]{8,128}\.txt$/.test(name),
-  );
-  if (!keyFile) {
-    throw new Error("No IndexNow key file found in public/.");
-  }
-  return keyFile;
-}
-
 async function main() {
-  const keyFile = findIndexNowKeyFile();
-  const key = readFileSync(new URL(keyFile, publicDir), "utf8").trim();
   const sitemapUrl = `${siteUrl}/sitemap.xml`;
   const sitemapResponse = await fetch(sitemapUrl, { cache: "no-store" });
 
