@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { answerEngineResources } from "../../answer-engine-content";
 import {
   blogCopy,
   blogIndexPath,
@@ -8,12 +9,12 @@ import {
   postPath,
   SITE_NAME,
   SITE_URL,
-} from "../blog-content";
-import { answerEngineResources } from "../answer-engine-content";
-import { BlogFooter, BlogHeader } from "../blog-ui";
-import { solutionPages, solutionPath } from "../seo-pages";
+} from "../../blog-content";
+import { BlogFooter, BlogHeader } from "../../blog-ui";
+import { solutionPages, solutionPath } from "../../seo-pages";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: `Sitemap | ${SITE_NAME}`,
   description:
     "HTML sitemap for DraftToDone.io: multilingual blog guides, AI publishing software pages, RSS feed, robots.txt and XML sitemap.",

@@ -99,13 +99,30 @@ build stays green (`npm run build`, 0 errors).
    schema/entity quick win from prompt #14 without inventing unconfirmed social
    profiles. -> **Impact: medium, 2-8 weeks** for entity clarity and AI-answer
    citation consistency.
+8. **Removed unconfirmed X placeholder links** (`app/blog-ui.tsx`,
+   `app/blog-content.ts`, `app/home-content.ts`): the footer no longer links to
+   `#`, and unused "follow X" copy was removed until a real social profile is
+   confirmed. -> **Impact: low-medium, immediate** for trust, crawl hygiene and
+   broken-link cleanup.
+9. **Static localized document language** (`app/site-layout.tsx`,
+   `app/(root)/layout.tsx`, `app/[locale]/layout.tsx`): replaced the single
+   global `html lang="en"` layout with route-group root layouts so `/fr`, `/it`
+   and `/de` export the correct `<html lang>` before JavaScript runs. -> **Impact:
+   medium, immediate** for accessibility and international SEO consistency.
+10. **Social metadata made explicit after the layout split** (`app/(root)/page.tsx`,
+   `app/[locale]/page.tsx`, blog and solution page metadata): each representative
+   page type now declares `metadataBase`, `og:image` and `twitter:image` directly;
+   the exported `404.html` no longer leaks a localhost OG image. Local validation:
+   `npm run build`, full `out/` scan for `http://localhost:3000`, and JSON-LD
+   parsing on home, localized home, blog index, solution page and article. ->
+   **Impact: medium, immediate** for share-card reliability.
 
 ## Prioritized backlog
 
 ### Quick wins (high impact, low effort)
 | Action | Impact | Effort | How |
 |--------|:------:|:------:|-----|
-| Set the real **X / social handle** (currently `href="#"` in headers/footers) and add to `Organization.sameAs` | Med | XS | edit `page.tsx`, `blog-ui.tsx`, layout JSON-LD |
+| Create or confirm the real **X / social handle** and add it to `Organization.sameAs` | Med | XS | add only after the profile exists |
 | Run **title/meta audit** + rewrite outliers | High | S | prompt #1 |
 | Run **Rich Results** validation on 1 page per type | Med | XS | prompt #2 |
 | ~~Add `Organization.sameAs` + `founder` to layout JSON-LD~~ DONE 2026-07-04 | Med | S | prompt #14 |

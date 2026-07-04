@@ -52,6 +52,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   const article = getPostTranslation(post, locale);
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: `${article.title} | ${SITE_NAME}`,
     description: article.description,
     keywords: article.keywords,
@@ -73,11 +74,20 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       alternateLocale: postLocales(post)
         .filter((item) => item !== locale)
         .map((item) => openGraphLocales[item]),
+      images: [
+        {
+          url: `${postPath(locale, post)}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: article.title,
       description: article.description,
+      images: [`${postPath(locale, post)}/opengraph-image`],
     },
   };
 }

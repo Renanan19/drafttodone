@@ -359,11 +359,6 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
     })),
   };
 
-  /* keep the document language in sync with the route locale */
-  useEffect(() => {
-    document.documentElement.lang = locale;
-  }, [locale]);
-
   /* scroll reveal */
   useEffect(() => {
     const els = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));

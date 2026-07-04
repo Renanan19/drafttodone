@@ -5,7 +5,7 @@ export const APP_URL = "https://app.drafttodone.io";
 
 export type HomeCopy = {
   meta: { title: string; description: string };
-  nav: { blog: string; followX: string; pricing: string; openApp: string };
+  nav: { blog: string; pricing: string; openApp: string };
   hero: {
     eyebrow: string;
     h1main: string;
@@ -87,7 +87,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       description:
         "Generate a manuscript, full wrap cover, KDP metadata, and a verified pen name from one niche brief. Build 6 ready-to-publish books a week.",
     },
-    nav: { blog: "Blog", followX: "Follow on X", pricing: "Pricing", openApp: "Generate a book" },
+    nav: { blog: "Blog", pricing: "Pricing", openApp: "Generate a book" },
     hero: {
       eyebrow: "Live: 1 brief -> 1 complete book",
       h1main: "Turn one idea into a complete",
@@ -207,7 +207,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       description:
         "Générez manuscrit, couverture complète, métadonnées KDP et nom de plume vérifié depuis un seul brief de niche. 6 livres prêts à publier par semaine.",
     },
-    nav: { blog: "Blog", followX: "Suivre sur X", pricing: "Tarifs", openApp: "Générer un livre" },
+    nav: { blog: "Blog", pricing: "Tarifs", openApp: "Générer un livre" },
     hero: {
       eyebrow: "En ligne : 1 brief -> 1 livre complet",
       h1main: "Transformez une idée en livre",
@@ -327,7 +327,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       description:
         "Genera manoscritto, copertina completa, metadati KDP e pseudonimo verificato da un solo brief di nicchia. 6 libri pronti a settimana.",
     },
-    nav: { blog: "Blog", followX: "Segui su X", pricing: "Prezzi", openApp: "Genera un libro" },
+    nav: { blog: "Blog", pricing: "Prezzi", openApp: "Genera un libro" },
     hero: {
       eyebrow: "Live: 1 brief -> 1 libro completo",
       h1main: "Trasforma un'idea in un libro",
@@ -447,7 +447,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       description:
         "Erzeuge Manuskript, komplettes Cover, KDP-Metadaten und verifizierten Autorennamen aus einem einzigen Nischenbrief. 6 fertige Bücher pro Woche.",
     },
-    nav: { blog: "Blog", followX: "Auf X folgen", pricing: "Preise", openApp: "Buch erzeugen" },
+    nav: { blog: "Blog", pricing: "Preise", openApp: "Buch erzeugen" },
     hero: {
       eyebrow: "Live: 1 Brief -> 1 komplettes Buch",
       h1main: "Mach aus einer Idee ein",

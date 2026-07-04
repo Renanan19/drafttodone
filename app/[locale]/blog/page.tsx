@@ -39,6 +39,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   const t = blogCopy[locale];
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: t.metaTitle,
     description: t.metaDescription,
     keywords: t.keywords,
@@ -56,11 +57,20 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       alternateLocale: locales
         .filter((item) => item !== locale)
         .map((item) => openGraphLocales[item]),
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: `${SITE_NAME} publishing guides`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: t.metaTitle,
       description: t.metaDescription,
+      images: ["/opengraph-image"],
     },
   };
 }

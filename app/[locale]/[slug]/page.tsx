@@ -53,6 +53,7 @@ export async function generateMetadata({ params }: SolutionPageProps): Promise<M
   const solution = page.translations[locale];
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: `${solution.title} | ${SITE_NAME}`,
     description: solution.description,
     keywords: solution.keywords,
@@ -70,11 +71,20 @@ export async function generateMetadata({ params }: SolutionPageProps): Promise<M
       alternateLocale: locales
         .filter((item) => item !== locale)
         .map((item) => openGraphLocales[item]),
+      images: [
+        {
+          url: `${solutionPath(locale, page)}/opengraph-image`,
+          width: 1200,
+          height: 630,
+          alt: solution.title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: solution.title,
       description: solution.description,
+      images: [`${solutionPath(locale, page)}/opengraph-image`],
     },
   };
 }

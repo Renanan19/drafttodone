@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { isLocale, locales, SITE_NAME, type Locale } from "@/app/blog-content";
+import { isLocale, locales, SITE_NAME, SITE_URL, type Locale } from "@/app/blog-content";
 import { getHomeAlternates, homeCopy, homePath, homeUrl } from "@/app/home-content";
 import { HomeView } from "@/app/home-view";
 
@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: LocaleHomeProps): Promise<Met
   const copy = homeCopy[locale];
 
   return {
+    metadataBase: new URL(SITE_URL),
     title: copy.meta.title,
     description: copy.meta.description,
     alternates: {
@@ -42,6 +43,20 @@ export async function generateMetadata({ params }: LocaleHomeProps): Promise<Met
       alternateLocale: locales
         .filter((item) => item !== locale)
         .map((item) => openGraphLocales[item]),
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: "DraftToDone.io - one idea becomes a complete KDP book",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: copy.meta.title,
+      description: copy.meta.description,
+      images: ["/opengraph-image"],
     },
   };
 }

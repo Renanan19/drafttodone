@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Newsreader, Hanken_Grotesk } from "next/font/google";
+import { Hanken_Grotesk, Newsreader } from "next/font/google";
 import { answerEngineResources } from "./answer-engine-content";
-import { SITE_NAME, SITE_URL } from "./blog-content";
+import { SITE_NAME, SITE_URL, type Locale } from "./blog-content";
 import { APP_URL } from "./home-content";
-import "./globals.css";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -24,9 +23,9 @@ const WEBSITE_ID = `${SITE_URL}/#website`;
 const SOFTWARE_ID = `${SITE_URL}/#software`;
 const FOUNDER_ID = `${SITE_URL}/#founder`;
 
-export const metadata: Metadata = {
+export const siteMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "DraftToDone.io — Turn One Idea Into a Complete KDP Book",
+  title: "DraftToDone.io - Turn One Idea Into a Complete KDP Book",
   description:
     "Generate a manuscript, full wrap cover, KDP metadata, and a verified pen name from one niche brief. Build 6 ready-to-publish books a week.",
   applicationName: SITE_NAME,
@@ -60,7 +59,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "DraftToDone.io — Turn One Idea Into a Complete KDP Book",
+    title: "DraftToDone.io - Turn One Idea Into a Complete KDP Book",
     description:
       "One brief becomes manuscript, cover, KDP metadata, and pen name. The app is live.",
     type: "website",
@@ -173,13 +172,15 @@ const siteJsonLd = [
   },
 ];
 
-export default function RootLayout({
+export function SiteDocument({
   children,
+  lang,
 }: {
   children: React.ReactNode;
+  lang: Locale;
 }) {
   return (
-    <html lang="en" className={`${newsreader.variable} ${hanken.variable}`}>
+    <html lang={lang} className={`${newsreader.variable} ${hanken.variable}`}>
       <body>
         {/* No-JS fallback: reveal-up elements must stay visible without the observer */}
         <noscript>

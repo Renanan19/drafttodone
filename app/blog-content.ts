@@ -23,7 +23,6 @@ export const localeLabels: Record<Locale, string> = {
 export type BlogCopy = {
   home: string;
   blog: string;
-  followX: string;
   appCta: string;
   languageLabel: string;
   metaTitle: string;
@@ -90,7 +89,6 @@ export const blogCopy: Record<Locale, BlogCopy> = {
   en: {
     home: "Home",
     blog: "Blog",
-    followX: "Follow on X",
     appCta: "Open the app",
     languageLabel: "Choose language",
     metaTitle: "AI Publishing Blog: SEO, KDP, Covers and Book Automation",
@@ -129,7 +127,6 @@ export const blogCopy: Record<Locale, BlogCopy> = {
   fr: {
     home: "Accueil",
     blog: "Blog",
-    followX: "Suivre sur X",
     appCta: "Ouvrir l'app",
     languageLabel: "Choisir la langue",
     metaTitle: "Blog édition IA : SEO, KDP, couvertures et automatisation",
@@ -168,7 +165,6 @@ export const blogCopy: Record<Locale, BlogCopy> = {
   it: {
     home: "Home",
     blog: "Blog",
-    followX: "Segui su X",
     appCta: "Apri l'app",
     languageLabel: "Scegli lingua",
     metaTitle: "Blog editoria IA: SEO, KDP, copertine e automazione",
@@ -207,7 +203,6 @@ export const blogCopy: Record<Locale, BlogCopy> = {
   de: {
     home: "Startseite",
     blog: "Blog",
-    followX: "Auf X folgen",
     appCta: "App öffnen",
     languageLabel: "Sprache wählen",
     metaTitle: "KI-Publishing-Blog: SEO, KDP, Cover und Automatisierung",
