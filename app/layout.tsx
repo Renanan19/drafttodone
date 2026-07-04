@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Newsreader, Hanken_Grotesk } from "next/font/google";
 import { answerEngineResources } from "./answer-engine-content";
 import { SITE_NAME, SITE_URL } from "./blog-content";
+import { APP_URL } from "./home-content";
 import "./globals.css";
 
 const newsreader = Newsreader({
@@ -16,6 +17,12 @@ const hanken = Hanken_Grotesk({
   variable: "--font-hanken",
   display: "swap",
 });
+
+const GITHUB_REPO_URL = "https://github.com/Renanan19/drafttodone";
+const ORGANIZATION_ID = `${SITE_URL}/#organization`;
+const WEBSITE_ID = `${SITE_URL}/#website`;
+const SOFTWARE_ID = `${SITE_URL}/#software`;
+const FOUNDER_ID = `${SITE_URL}/#founder`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -65,12 +72,26 @@ const siteJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": ORGANIZATION_ID,
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/icon.svg`,
     description:
       "AI publishing software for creating manuscripts, book covers, KDP metadata and repeatable publishing catalog workflows.",
     foundingDate: "2026",
+    founder: {
+      "@type": "Person",
+      "@id": FOUNDER_ID,
+      name: "Antoine",
+      jobTitle: "Founder",
+      knowsAbout: [
+        "Amazon KDP",
+        "AI publishing",
+        "book metadata",
+        "self-publishing workflows",
+      ],
+    },
+    sameAs: [GITHUB_REPO_URL],
     subjectOf: [
       {
         "@type": "DigitalDocument",
@@ -87,9 +108,16 @@ const siteJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": WEBSITE_ID,
     name: SITE_NAME,
     url: SITE_URL,
     inLanguage: ["en", "fr", "it", "de"],
+    publisher: {
+      "@id": ORGANIZATION_ID,
+    },
+    about: {
+      "@id": SOFTWARE_ID,
+    },
     potentialAction: {
       "@type": "ReadAction",
       target: [
@@ -106,12 +134,33 @@ const siteJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
+    "@id": SOFTWARE_ID,
     name: SITE_NAME,
+    alternateName: "DraftToDone",
     applicationCategory: "PublishingApplication",
+    applicationSubCategory: "AI publishing software",
     operatingSystem: "Web",
-    url: SITE_URL,
+    url: APP_URL,
+    mainEntityOfPage: SITE_URL,
+    isAccessibleForFree: false,
     description:
       "AI publishing software for turning one niche brief into a manuscript, full cover, KDP metadata and catalog quality workflow.",
+    brand: {
+      "@id": ORGANIZATION_ID,
+    },
+    publisher: {
+      "@id": ORGANIZATION_ID,
+    },
+    creator: {
+      "@id": FOUNDER_ID,
+    },
+    featureList: [
+      "Full manuscript generation",
+      "Complete front, spine and back cover package",
+      "KDP title, subtitle, description and keyword metadata",
+      "Verified pen names",
+      "Catalog quality gates",
+    ],
     offers: {
       "@type": "AggregateOffer",
       availability: "https://schema.org/OnlineOnly",
@@ -119,6 +168,7 @@ const siteJsonLd = [
       highPrice: "390",
       offerCount: "2",
       priceCurrency: "EUR",
+      url: APP_URL,
     },
   },
 ];

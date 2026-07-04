@@ -90,6 +90,16 @@ images**, (2) the homepage linked to **no money pages**, and (3) too few
 All changes keep the Venice Inc. design system (reused tokens/components) and the
 build stays green (`npm run build`, 0 errors).
 
+## Follow-up shipped 2026-07-04
+
+7. **Entity JSON-LD strengthened** (`app/layout.tsx`): added stable `@id`
+   references for Organization, WebSite and SoftwareApplication; connected the
+   site to the app URL, founder entity, confirmed GitHub repo `sameAs`, publisher
+   / brand relationships, app feature list and offer URL. This closes the
+   schema/entity quick win from prompt #14 without inventing unconfirmed social
+   profiles. -> **Impact: medium, 2-8 weeks** for entity clarity and AI-answer
+   citation consistency.
+
 ## Prioritized backlog
 
 ### Quick wins (high impact, low effort)
@@ -98,7 +108,7 @@ build stays green (`npm run build`, 0 errors).
 | Set the real **X / social handle** (currently `href="#"` in headers/footers) and add to `Organization.sameAs` | Med | XS | edit `page.tsx`, `blog-ui.tsx`, layout JSON-LD |
 | Run **title/meta audit** + rewrite outliers | High | S | prompt #1 |
 | Run **Rich Results** validation on 1 page per type | Med | XS | prompt #2 |
-| Add `Organization.sameAs` + `founder` to layout JSON-LD | Med | S | prompt #14 |
+| ~~Add `Organization.sameAs` + `founder` to layout JSON-LD~~ DONE 2026-07-04 | Med | S | prompt #14 |
 
 ### Medium (high impact, medium effort)
 | Action | Impact | Effort | How |
