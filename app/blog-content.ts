@@ -1,3 +1,4 @@
+import { agentWorkflowSeoPosts } from "./agent-workflow-seo-posts";
 import { aiWritingSeoPosts } from "./ai-writing-seo-posts";
 import { bookMarketingSeoPosts } from "./book-marketing-seo-posts";
 import { kdpAccountPaymentsPost } from "./kdp-account-post";
@@ -241,6 +242,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
 };
 
 export const posts: BlogPost[] = [
+  ...agentWorkflowSeoPosts,
   ...aiWritingSeoPosts,
   ...selfPublishingSeoPosts,
   ...bookMarketingSeoPosts,
