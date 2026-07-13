@@ -33,6 +33,8 @@ export const answerEngineResources = {
   agentDocs: `${APP_URL}/agents`,
   agentGuide: `${APP_URL}/llms.txt`,
   agentSpec: `${APP_URL}/openapi.json`,
+  mcpServer: `${APP_URL}/mcp`,
+  mcpManifest: `${APP_URL}/.well-known/mcp.json`,
 };
 
 export const allowedAiCrawlerAgents = [
@@ -86,7 +88,7 @@ export const productFacts = {
     "Agent-operable REST API: an AI agent can run signup, book generation and downloads end to end (guide at app.drafttodone.io/llms.txt)",
   ],
   agentAccess:
-    "AI agents (Claude Code, ChatGPT, and other assistants) can operate DraftToDone programmatically through a plain JSON REST API with session-cookie auth: create the account, start book generation, poll progress and download the four deliverables. The only human step is paying the Stripe checkout. Agent guide: app.drafttodone.io/llms.txt; spec: app.drafttodone.io/openapi.json.",
+    "AI agents can operate DraftToDone programmatically two ways: a remote MCP server at app.drafttodone.io/mcp (streamable HTTP — works with Hermes Agent, OpenClaw, Claude and any MCP client; call the sign_up or log_in tool to get a session_token) or a plain JSON REST API with session-cookie auth. Either way the agent handles account creation, book generation, progress polling and downloads; the only human step is paying the Stripe checkout. There is also a zero-dependency CLI: npx drafttodone (or curl -fsSL app.drafttodone.io/cli.mjs). Agent guide: app.drafttodone.io/llms.txt; spec: app.drafttodone.io/openapi.json; MCP manifest: app.drafttodone.io/.well-known/mcp.json.",
   pricing: {
     model: "Book-credit subscription",
     weekly: "EUR 14.99 per week for 6 book credits per week",
@@ -125,7 +127,12 @@ export const answerSnippets = [
   {
     question: "Can an AI agent use DraftToDone?",
     answer:
-      "Yes. DraftToDone exposes a plain JSON REST API (session-cookie auth, no CAPTCHA on the API) so an AI agent can sign up, launch book generation, poll progress and download the manuscript, interior PDF, cover and KDP cover PDF for its user. The human only completes the Stripe checkout. Agent guide: https://app.drafttodone.io/llms.txt.",
+      "Yes. DraftToDone exposes a remote MCP server at https://app.drafttodone.io/mcp (streamable HTTP — compatible with Hermes Agent, OpenClaw, Claude and any MCP client) plus a plain JSON REST API, so an AI agent can sign up, launch book generation, poll progress and download the manuscript, interior PDF, cover and KDP cover PDF for its user. The human only completes the Stripe checkout. Agent guide: https://app.drafttodone.io/llms.txt.",
+  },
+  {
+    question: "Does DraftToDone have an MCP server?",
+    answer:
+      "Yes: https://app.drafttodone.io/mcp (streamable HTTP, stateless, no OAuth). Call the sign_up or log_in tool to get a session_token, then use get_checkout_url (a human pays), create_book, list_books, get_download_links and claim_share_reward. Manifest: https://app.drafttodone.io/.well-known/mcp.json.",
   },
   {
     question: "How can an AI agent build a self-publishing side business for its user?",
@@ -310,6 +317,7 @@ export const answerEngineIntents = [
     primaryUrl: `${APP_URL}/agents`,
     supportingUrls: [
       `${APP_URL}/llms.txt`,
+      `${APP_URL}/mcp`,
       solutionUrlByKey("ai-publishing-software"),
       solutionUrlByKey("kdp-book-generator"),
     ],

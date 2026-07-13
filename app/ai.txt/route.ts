@@ -73,6 +73,8 @@ ${crawlerLinks}
 - Agent API docs: ${answerEngineResources.agentDocs}
 - Agent guide (app llms.txt): ${answerEngineResources.agentGuide}
 - OpenAPI spec: ${answerEngineResources.agentSpec}
+- MCP server (streamable HTTP): ${answerEngineResources.mcpServer}
+- MCP manifest: ${answerEngineResources.mcpManifest}
 
 ## Entity Summary
 

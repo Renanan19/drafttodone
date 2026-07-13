@@ -86,6 +86,8 @@ ${snippets}
 - [Agent API docs](${answerEngineResources.agentDocs}): How an AI agent operates DraftToDone end to end.
 - [Agent guide (app llms.txt)](${answerEngineResources.agentGuide}): Full REST API reference with curl examples.
 - [OpenAPI spec](${answerEngineResources.agentSpec}): Machine-readable API specification.
+- [MCP server](${answerEngineResources.mcpServer}): Remote MCP endpoint (streamable HTTP) for Hermes Agent, OpenClaw, Claude and other MCP clients.
+- [MCP manifest](${answerEngineResources.mcpManifest}): Discovery manifest for the MCP server.
 
 ## Operating DraftToDone As An Agent
 
