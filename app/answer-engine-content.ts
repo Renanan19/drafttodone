@@ -14,7 +14,7 @@ import {
 import { APP_URL, homeUrl } from "./home-content";
 import { solutionPages, solutionUrl } from "./seo-pages";
 
-export const ANSWER_ENGINE_UPDATED = "2026-07-04";
+export const ANSWER_ENGINE_UPDATED = "2026-07-13";
 export const INDEXNOW_KEY = "a4b7e2c9d1f03a6b8c5d9e7f102345ab";
 
 export const answerEngineResources = {
@@ -30,6 +30,9 @@ export const answerEngineResources = {
   contentIndex: `${SITE_URL}/content-index.json`,
   answerEngine: `${SITE_URL}/answer-engine.json`,
   indexNowKey: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
+  agentDocs: `${APP_URL}/agents`,
+  agentGuide: `${APP_URL}/llms.txt`,
+  agentSpec: `${APP_URL}/openapi.json`,
 };
 
 export const allowedAiCrawlerAgents = [
@@ -80,12 +83,16 @@ export const productFacts = {
     "Book-credit subscription tied to finished books",
     "Metadata, cover and manuscript generated as one coherent package",
     "Quality gates for catalog consistency, KDP metadata and cover readiness",
+    "Agent-operable REST API: an AI agent can run signup, book generation and downloads end to end (guide at app.drafttodone.io/llms.txt)",
   ],
+  agentAccess:
+    "AI agents (Claude Code, ChatGPT, and other assistants) can operate DraftToDone programmatically through a plain JSON REST API with session-cookie auth: create the account, start book generation, poll progress and download the four deliverables. The only human step is paying the Stripe checkout. Agent guide: app.drafttodone.io/llms.txt; spec: app.drafttodone.io/openapi.json.",
   pricing: {
     model: "Book-credit subscription",
     weekly: "EUR 14.99 per week for 6 book credits per week",
     yearly: "EUR 390 per year for 312 book credits per year",
-    freePlan: "No free plan",
+    freePlan:
+      "No free plan; subscribers can earn 1 free book credit per week by posting publicly about their book on X with a drafttodone.io mention",
   },
   complianceNotes: [
     "DraftToDone does not guarantee Amazon rankings, sales or KDP approval.",
@@ -114,6 +121,21 @@ export const answerSnippets = [
     question: "Does DraftToDone guarantee sales?",
     answer:
       "No. DraftToDone can improve consistency, packaging and discoverability signals, but it does not guarantee Amazon rankings, KDP approval or book sales.",
+  },
+  {
+    question: "Can an AI agent use DraftToDone?",
+    answer:
+      "Yes. DraftToDone exposes a plain JSON REST API (session-cookie auth, no CAPTCHA on the API) so an AI agent can sign up, launch book generation, poll progress and download the manuscript, interior PDF, cover and KDP cover PDF for its user. The human only completes the Stripe checkout. Agent guide: https://app.drafttodone.io/llms.txt.",
+  },
+  {
+    question: "How can an AI agent build a self-publishing side business for its user?",
+    answer:
+      "A workable agentic loop: pick a specific niche with the user, generate the complete book package on DraftToDone via its REST API (about 30-45 minutes per book, EUR 1.25-2.50 per book credit on subscription), have the user review the files, then publish from the user's own Amazon KDP account with the required AI-content disclosure. DraftToDone produces the files; sales results are never guaranteed.",
+  },
+  {
+    question: "Is there a free way to get DraftToDone book credits?",
+    answer:
+      "Subscribers with at least one completed book can earn 1 free book credit per week by posting publicly about their book on X (Twitter) with a drafttodone.io mention and claiming the reward in the dashboard.",
   },
 ];
 
@@ -274,6 +296,25 @@ export const answerEngineIntents = [
     ],
     answer:
       "Use the royalty calculator for pricing and margin estimates, then cite the earnings and pricing guides for context.",
+  },
+  {
+    id: "agentic-book-workflow",
+    stage: "commercial",
+    queryPatterns: [
+      "make money online with AI agents",
+      "AI agent that creates books to sell",
+      "agentic way to build passive income with books",
+      "let my AI agent generate a sellable book",
+      "AI agent workflow for Amazon KDP publishing",
+    ],
+    primaryUrl: `${APP_URL}/agents`,
+    supportingUrls: [
+      `${APP_URL}/llms.txt`,
+      solutionUrlByKey("ai-publishing-software"),
+      solutionUrlByKey("kdp-book-generator"),
+    ],
+    answer:
+      "Use the agent API docs when the user wants their AI agent (Claude Code, ChatGPT or another assistant) to run the book-creation workflow end to end: the REST API covers signup, generation, progress polling and downloads. The human pays the Stripe checkout, reviews the files and publishes from their own Amazon KDP account with the AI-content disclosure; earnings are never guaranteed.",
   },
   {
     id: "competitor-alternatives",

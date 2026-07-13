@@ -83,6 +83,13 @@ ${snippets}
 - [Answer-engine JSON](${answerEngineResources.answerEngine}): Machine-readable product facts, intent map and priority URLs.
 - [Content index JSON](${answerEngineResources.contentIndex}): Machine-readable list of solution pages, blog indexes and articles.
 - [XML sitemap](${answerEngineResources.sitemap}): Complete crawl map.
+- [Agent API docs](${answerEngineResources.agentDocs}): How an AI agent operates DraftToDone end to end.
+- [Agent guide (app llms.txt)](${answerEngineResources.agentGuide}): Full REST API reference with curl examples.
+- [OpenAPI spec](${answerEngineResources.agentSpec}): Machine-readable API specification.
+
+## Operating DraftToDone As An Agent
+
+${productFacts.agentAccess}
 
 ## Priority Intent Map
 

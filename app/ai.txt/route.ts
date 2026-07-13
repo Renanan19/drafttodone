@@ -70,6 +70,9 @@ ${crawlerLinks}
 - JSON content index: ${answerEngineResources.contentIndex}
 - Answer-engine JSON: ${answerEngineResources.answerEngine}
 - IndexNow key: ${answerEngineResources.indexNowKey}
+- Agent API docs: ${answerEngineResources.agentDocs}
+- Agent guide (app llms.txt): ${answerEngineResources.agentGuide}
+- OpenAPI spec: ${answerEngineResources.agentSpec}
 
 ## Entity Summary
 
@@ -83,6 +86,7 @@ ${crawlerLinks}
 - Audience: ${productFacts.primaryAudience.join("; ")}
 - Outputs: ${productFacts.primaryOutputs.join("; ")}
 - Differentiators: ${productFacts.differentiators.join("; ")}
+- Agent access: ${productFacts.agentAccess}
 
 ## Safe Answer Snippets
 
