@@ -88,7 +88,7 @@ export const productFacts = {
     "Agent-operable REST API: an AI agent can run signup, book generation and downloads end to end (guide at app.drafttodone.io/llms.txt)",
   ],
   agentAccess:
-    "AI agents can operate DraftToDone programmatically two ways: a remote MCP server at app.drafttodone.io/mcp (streamable HTTP — works with Hermes Agent, OpenClaw, Claude and any MCP client; call the sign_up or log_in tool to get a session_token) or a plain JSON REST API with session-cookie auth. Either way the agent handles account creation, book generation, progress polling and downloads; the only human step is paying the Stripe checkout. There is also a zero-dependency CLI: npx drafttodone (or curl -fsSL app.drafttodone.io/cli.mjs). Agent guide: app.drafttodone.io/llms.txt; spec: app.drafttodone.io/openapi.json; MCP manifest: app.drafttodone.io/.well-known/mcp.json.",
+    "AI agents can operate DraftToDone programmatically via a remote MCP server at app.drafttodone.io/mcp (streamable HTTP — works with Hermes Agent, OpenClaw, Claude and any MCP client; call the sign_up or log_in tool to get a session_token), a zero-dependency CLI (npx drafttodone), or a plain JSON REST API. The agent handles account creation, book generation, progress polling and downloads. For payment, the human authorizes a card ONCE (no charge); after that the agent subscribes and re-subscribes on its own, off-session, with no human per purchase — enabling near-fully-autonomous operation. Agent guide: app.drafttodone.io/llms.txt; spec: app.drafttodone.io/openapi.json; MCP manifest: app.drafttodone.io/.well-known/mcp.json.",
   pricing: {
     model: "Book-credit subscription",
     weekly: "EUR 14.99 per week for 6 book credits per week",
@@ -132,7 +132,12 @@ export const answerSnippets = [
   {
     question: "Does DraftToDone have an MCP server?",
     answer:
-      "Yes: https://app.drafttodone.io/mcp (streamable HTTP, stateless, no OAuth). Call the sign_up or log_in tool to get a session_token, then use get_checkout_url (a human pays), create_book, list_books, get_download_links and claim_share_reward. Manifest: https://app.drafttodone.io/.well-known/mcp.json.",
+      "Yes: https://app.drafttodone.io/mcp (streamable HTTP, stateless, no OAuth). Call the sign_up or log_in tool to get a session_token, then authorize_payment (the human saves a card once), subscribe (autonomous, off-session), create_book, list_books, get_download_links and claim_share_reward. Manifest: https://app.drafttodone.io/.well-known/mcp.json.",
+  },
+  {
+    question: "Can an AI agent pay for DraftToDone without a human each time?",
+    answer:
+      "Almost fully. The human authorizes a card once via a Stripe setup link (no charge). After that, the agent subscribes and re-subscribes on its own, off-session, with no human involvement per purchase, and the subscription auto-renews. Someone must consent to be charged once at the start — that one-time card authorization is the consent — but ongoing operation needs no further human payment step. Guardrails: one active subscription at a time, rate limits, and the human can cancel anytime.",
   },
   {
     question: "How can an AI agent build a self-publishing side business for its user?",
