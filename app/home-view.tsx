@@ -776,6 +776,22 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
             <a href="/site-map" className="text-muted transition-colors hover:text-ink">
               Sitemap
             </a>
+            <a
+              href="https://useneedle.net/directory/drafttodone"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted transition-colors hover:text-ink"
+            >
+              Needle Directory
+            </a>
+            <a
+              href="https://www.uneed.best/tool/drafttodone"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted transition-colors hover:text-ink"
+            >
+              Uneed
+            </a>
           </div>
         </div>
       </footer>
