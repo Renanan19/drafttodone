@@ -16,10 +16,13 @@ import {
   postUrl,
   SITE_NAME,
   SITE_URL,
+  type BlogTranslation,
   type Locale,
 } from "@/app/blog-content";
 import { BlogFooter, BlogHeader, BlogVisual, CtaBand } from "@/app/blog-ui";
 import { homePath, homeUrl } from "@/app/home-content";
+import { seoDescription, seoTitle } from "@/app/seo-metadata";
+import { solutionPages, solutionPath } from "@/app/seo-pages";
 
 export const dynamicParams = false;
 
@@ -33,6 +36,32 @@ const openGraphLocales: Record<Locale, string> = {
   it: "it_IT",
   de: "de_DE",
 };
+
+const topicStopWords = new Set([
+  "amazon", "book", "books", "drafttodone", "guide", "kdp", "livre", "livres",
+  "buch", "bücher", "libro", "libri", "pour", "with", "your", "the", "and", "for",
+  "avec", "les", "des", "und", "mit", "für", "con", "per", "una", "uno",
+]);
+
+function topicTokens(values: string[]) {
+  return new Set(
+    values
+      .join(" ")
+      .toLocaleLowerCase()
+      .split(/[^\p{L}\p{N}]+/u)
+      .filter((token) => token.length >= 3 && !topicStopWords.has(token)),
+  );
+}
+
+function relevanceScore(source: BlogTranslation, target: BlogTranslation) {
+  const sourceKeywords = new Set(source.keywords.map((keyword) => keyword.toLocaleLowerCase()));
+  const exactKeywordMatches = target.keywords.filter((keyword) => sourceKeywords.has(keyword.toLocaleLowerCase())).length;
+  const sourceTokens = topicTokens([source.title, source.category, ...source.keywords]);
+  const targetTokens = topicTokens([target.title, target.category, ...target.keywords]);
+  const tokenMatches = [...targetTokens].filter((token) => sourceTokens.has(token)).length;
+
+  return exactKeywordMatches * 8 + tokenMatches + (source.category === target.category ? 5 : 0);
+}
 
 export function generateStaticParams() {
   return getArticleStaticParams();
@@ -50,11 +79,13 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   }
 
   const article = getPostTranslation(post, locale);
+  const metadataTitle = seoTitle(article.seoTitle ?? article.title);
+  const metadataDescription = seoDescription(article.seoDescription ?? article.description);
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: `${article.title} | ${SITE_NAME}`,
-    description: article.description,
+    title: metadataTitle,
+    description: metadataDescription,
     keywords: article.keywords,
     authors: [{ name: BLOG_AUTHOR }],
     alternates: {
@@ -62,8 +93,8 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       languages: getPostAlternates(post),
     },
     openGraph: {
-      title: article.title,
-      description: article.description,
+      title: metadataTitle,
+      description: metadataDescription,
       url: postUrl(locale, post),
       siteName: SITE_NAME,
       type: "article",
@@ -85,8 +116,8 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     },
     twitter: {
       card: "summary_large_image",
-      title: article.title,
-      description: article.description,
+      title: metadataTitle,
+      description: metadataDescription,
       images: [`${postPath(locale, post)}/opengraph-image`],
     },
   };
@@ -104,7 +135,20 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
   const article = getPostTranslation(post, locale);
   const relatedPosts = getPostsForLocale(locale)
     .filter((item) => item.key !== post.key)
+    .map((item) => ({ item, score: relevanceScore(article, item.translation) }))
+    .sort((left, right) => right.score - left.score || right.item.updated.localeCompare(left.item.updated))
+    .map(({ item }) => item)
     .slice(0, 6);
+  const articleTopicTokens = topicTokens([article.title, article.category, ...article.keywords]);
+  const relatedSolutions = solutionPages
+    .map((item) => {
+      const translation = item.translations[locale];
+      const targetTokens = topicTokens([translation.title, translation.h1, ...translation.keywords]);
+      const score = [...targetTokens].filter((token) => articleTopicTokens.has(token)).length;
+      return { item, translation, score };
+    })
+    .sort((left, right) => right.score - left.score || right.item.updated.localeCompare(left.item.updated))
+    .slice(0, 3);
   const wordCount = [
     article.title,
     article.description,
@@ -147,6 +191,11 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
       about: article.keywords.map((keyword) => ({
         "@type": "Thing",
         name: keyword,
+      })),
+      citation: article.sources?.map((source) => ({
+        "@type": "CreativeWork",
+        name: source.label,
+        url: source.href,
       })),
     },
     {
@@ -297,6 +346,29 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
                   ))}
                 </div>
               </section>
+
+              {article.sources && article.sources.length > 0 && (
+                <section className="mt-16" aria-labelledby="official-sources">
+                  <h2 id="official-sources" className="font-display text-3xl font-medium tracking-[-0.01em] text-ink">
+                    {t.sources}
+                  </h2>
+                  <ul className="mt-6 grid gap-3 rounded-[18px] border border-line bg-paper-2 p-6 text-[15px]">
+                    {article.sources.map((source) => (
+                      <li key={source.href}>
+                        <a
+                          href={source.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-2 text-ink-soft underline decoration-line underline-offset-4 transition-colors hover:text-ink"
+                        >
+                          {source.label}
+                          <ArrowRight className="h-4 w-4" />
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
             </div>
 
             <aside className="lg:sticky lg:top-24 lg:self-start">
@@ -340,6 +412,34 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
                   </h3>
                   <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors group-hover:text-ink">
                     {t.readGuide}
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-line/70">
+          <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6">
+            <h2 className="font-display text-4xl font-medium tracking-[-0.01em] text-ink">
+              {t.tools}
+            </h2>
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              {relatedSolutions.map(({ item, translation }) => (
+                <a
+                  key={item.key}
+                  href={solutionPath(locale, item)}
+                  className="group rounded-[18px] border border-line bg-paper p-5 transition-shadow duration-300 hover:shadow-[0_24px_60px_-34px_rgba(16,24,40,0.38)]"
+                >
+                  <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-mint-deep">
+                    {translation.eyebrow}
+                  </p>
+                  <h3 className="mt-3 font-display text-2xl font-medium leading-tight text-ink">
+                    {translation.h1}
+                  </h3>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors group-hover:text-ink">
+                    {translation.cta}
                     <ArrowRight className="h-4 w-4" />
                   </span>
                 </a>

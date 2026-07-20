@@ -30,7 +30,9 @@ const copy = {
     formula: "Formula",
     minimumPrice: "Approx. minimum print price",
     note:
-      "Paperback estimates use black ink, regular trim size, and current KDP fixed/per-page examples for US, EU and UK marketplaces. Always confirm final royalties inside KDP.",
+      "Verified July 20, 2026. Paperback estimates use black ink, white or cream paper, regular trim size, and KDP's current US, EU and UK costs. Always confirm the final amount inside KDP.",
+    ebookEligibility:
+      "The 70% ebook option only applies in eligible territories and price bands. On Amazon.com, the current band is $2.99–$12.99; other marketplaces use local equivalents.",
   },
   fr: {
     eyebrow: "Estimateur interactif",
@@ -55,7 +57,9 @@ const copy = {
     formula: "Formule",
     minimumPrice: "Prix print minimum approx.",
     note:
-      "Les estimations brochées utilisent l'encre noire, le format standard, et les coûts fixes/par page KDP pour US, UE et UK. Confirmez toujours les redevances finales dans KDP.",
+      "Vérifié le 20 juillet 2026. Les estimations brochées utilisent l'encre noire, le papier blanc ou crème, le format standard et les coûts KDP US, UE et UK. Confirmez le montant final dans KDP.",
+    ebookEligibility:
+      "L'option ebook à 70 % dépend du territoire et de la tranche de prix. Sur Amazon.com, la tranche actuelle est de 2,99 à 12,99 $ ; les autres marketplaces utilisent leurs équivalents.",
   },
   it: {
     eyebrow: "Stimatore interattivo",
@@ -80,7 +84,9 @@ const copy = {
     formula: "Formula",
     minimumPrice: "Prezzo print minimo approx.",
     note:
-      "Le stime paperback usano inchiostro nero, formato standard e costi fissi/per pagina KDP per US, UE e UK. Conferma sempre le royalty finali dentro KDP.",
+      "Verificato il 20 luglio 2026. Le stime paperback usano inchiostro nero, carta bianca o crema, formato standard e costi KDP per US, UE e UK. Conferma il valore finale in KDP.",
+    ebookEligibility:
+      "L'opzione ebook al 70% dipende da territorio e fascia di prezzo. Su Amazon.com la fascia attuale è $2,99–$12,99; gli altri marketplace usano equivalenti locali.",
   },
   de: {
     eyebrow: "Interaktiver Rechner",
@@ -105,7 +111,9 @@ const copy = {
     formula: "Formel",
     minimumPrice: "Ca. Mindestpreis Print",
     note:
-      "Taschenbuch-Schätzungen nutzen schwarze Tinte, Standardformat und aktuelle KDP-Fix-/Seitenkosten für US, EU und UK. Prüfe finale Tantiemen immer in KDP.",
+      "Geprüft am 20. Juli 2026. Taschenbuch-Schätzungen nutzen schwarze Tinte, weißes oder cremefarbenes Papier, Standardformat und aktuelle KDP-Kosten für USA, EU und UK. Prüfe den Endwert in KDP.",
+    ebookEligibility:
+      "Die 70%-Ebook-Option gilt nur in passenden Gebieten und Preisbändern. Bei Amazon.com liegt das aktuelle Band bei 2,99–12,99 USD; andere Marketplaces nutzen lokale Werte.",
   },
 } satisfies Record<Locale, Record<string, string>>;
 
@@ -194,7 +202,7 @@ export function KdpRoyaltyCalculator({ locale }: { locale: Locale }) {
     const currency = market.currency;
     const taxAmount = price * (vat / (100 + vat));
     const printingCost =
-      pages <= 108 ? market.fixedShort : market.fixedLong + pages * market.perPageLong;
+      pages <= 110 ? market.fixedShort : market.fixedLong + pages * market.perPageLong;
     const printRate = format === "expanded" ? 0.4 : price >= market.threshold ? 0.6 : 0.5;
 
     if (format === "ebook") {
@@ -329,6 +337,11 @@ export function KdpRoyaltyCalculator({ locale }: { locale: Locale }) {
                       step={0.01}
                       onChange={setDelivery}
                     />
+                    {ebookRate === 70 && (
+                      <p className="sm:col-span-2 rounded-xl border border-line bg-paper-2 px-4 py-3 text-sm leading-relaxed text-muted">
+                        {t.ebookEligibility}
+                      </p>
+                    )}
                   </>
                 ) : (
                   <>

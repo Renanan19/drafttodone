@@ -20,7 +20,8 @@ import {
   solutionPath,
   solutionUrl,
 } from "@/app/seo-pages";
-import { APP_URL } from "@/app/home-content";
+import { APP_SIGNUP_URL, APP_URL } from "@/app/home-content";
+import { seoDescription, seoTitle } from "@/app/seo-metadata";
 
 export const dynamicParams = false;
 
@@ -51,19 +52,21 @@ export async function generateMetadata({ params }: SolutionPageProps): Promise<M
   }
 
   const solution = page.translations[locale];
+  const metadataTitle = seoTitle(solution.seoTitle ?? solution.title);
+  const metadataDescription = seoDescription(solution.seoDescription ?? solution.description);
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: `${solution.title} | ${SITE_NAME}`,
-    description: solution.description,
+    title: metadataTitle,
+    description: metadataDescription,
     keywords: solution.keywords,
     alternates: {
       canonical: solutionPath(locale, page),
       languages: getSolutionAlternates(page),
     },
     openGraph: {
-      title: solution.title,
-      description: solution.description,
+      title: metadataTitle,
+      description: metadataDescription,
       url: solutionUrl(locale, page),
       siteName: SITE_NAME,
       type: "website",
@@ -82,8 +85,8 @@ export async function generateMetadata({ params }: SolutionPageProps): Promise<M
     },
     twitter: {
       card: "summary_large_image",
-      title: solution.title,
-      description: solution.description,
+      title: metadataTitle,
+      description: metadataDescription,
       images: [`${solutionPath(locale, page)}/opengraph-image`],
     },
   };
@@ -139,6 +142,11 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
         "@id": `${SITE_URL}/#organization`,
       },
       keywords: solution.keywords.join(", "),
+      citation: solution.sources?.map((source) => ({
+        "@type": "CreativeWork",
+        name: source.label,
+        url: source.href,
+      })),
     },
     {
       "@context": "https://schema.org",
@@ -206,7 +214,7 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
               ))}
             </div>
             <a
-              href={APP_URL}
+              href={APP_SIGNUP_URL}
               className="mt-10 inline-flex items-center justify-center gap-2 rounded-xl bg-ink px-6 py-3.5 text-[15px] font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft active:translate-y-0"
             >
               {solution.cta}
@@ -261,6 +269,26 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
                 </div>
               ))}
             </div>
+            {solution.sources && solution.sources.length > 0 && (
+              <div className="mt-8 rounded-[18px] border border-line bg-paper p-6">
+                <h3 className="font-display text-2xl font-medium text-ink">{t.sources}</h3>
+                <ul className="mt-4 grid gap-3 text-sm">
+                  {solution.sources.map((source) => (
+                    <li key={source.href}>
+                      <a
+                        href={source.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-muted underline decoration-line underline-offset-4 transition-colors hover:text-ink"
+                      >
+                        {source.label}
+                        <ArrowRight className="h-4 w-4" />
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href={blogIndexPath(locale)}
@@ -270,7 +298,7 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
-                href={APP_URL}
+                href={APP_SIGNUP_URL}
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-ink px-5 py-3 text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
               >
                 {solution.cta}

@@ -14,7 +14,7 @@ import {
 import { APP_URL, homeUrl } from "./home-content";
 import { solutionPages, solutionUrl } from "./seo-pages";
 
-export const ANSWER_ENGINE_UPDATED = "2026-07-13";
+export const ANSWER_ENGINE_UPDATED = "2026-07-20";
 export const INDEXNOW_KEY = "a4b7e2c9d1f03a6b8c5d9e7f102345ab";
 
 export const answerEngineResources = {
@@ -299,6 +299,7 @@ export const answerEngineIntents = [
       "KDP royalty calculator",
       "Amazon KDP royalties",
       "ebook and paperback royalty estimate",
+      "self-publishing pricing royalties expert advice",
     ],
     primaryUrl: solutionUrlByKey("kdp-royalty-calculator"),
     supportingUrls: [
@@ -307,7 +308,55 @@ export const answerEngineIntents = [
       articleUrlByKey("kdp-select-kindle-unlimited"),
     ],
     answer:
-      "Use the royalty calculator for pricing and margin estimates, then cite the earnings and pricing guides for context.",
+      "Use the royalty calculator for pricing and margin estimates. Its assumptions are dated and linked to Amazon KDP's official royalty and printing-cost documentation; use the earnings and pricing guides for wider business context.",
+  },
+  {
+    id: "kdp-account-sign-up",
+    stage: "educational",
+    queryPatterns: [
+      "KDP sign up",
+      "create Amazon KDP account",
+      "KDP bank tax and payment setup",
+    ],
+    primaryUrl: articleUrlByKey("kdp-account-payments"),
+    supportingUrls: [
+      solutionUrlByKey("kdp-royalty-calculator"),
+      articleUrlByKey("kdp-earnings-royalty-examples"),
+    ],
+    answer:
+      "Use the KDP account guide for sign-up, legal identity, bank details, tax interview, security and the usual 60-day royalty payment delay.",
+  },
+  {
+    id: "kdp-paperback-formatting",
+    stage: "educational",
+    queryPatterns: [
+      "format a novel for KDP",
+      "formater roman KDP",
+      "KDP paperback margins bleed PDF",
+    ],
+    primaryUrl: articleUrlByKey("kdp-paperback-formatting"),
+    supportingUrls: [
+      solutionUrlByKey("atticus-alternative"),
+      solutionUrlByKey("kdp-book-generator"),
+    ],
+    answer:
+      "Use the paperback formatting guide for trim size, page-count gutter rules, bleed dimensions, embedded fonts and print-ready PDF checks, with official Amazon KDP sources.",
+  },
+  {
+    id: "kdp-low-content-books",
+    stage: "educational",
+    queryPatterns: [
+      "low content books",
+      "KDP low content books",
+      "are low content books saturated",
+    ],
+    primaryUrl: articleUrlByKey("low-content-books-kdp"),
+    supportingUrls: [
+      articleUrlByKey("kdp-niche-keyword-research"),
+      solutionUrlByKey("kdp-keyword-tool"),
+    ],
+    answer:
+      "Use the low-content guide for the 2026 saturation picture, niche selection, ISBN and Read Sample rules, interior design and the medium-content upgrade path.",
   },
   {
     id: "agentic-book-workflow",

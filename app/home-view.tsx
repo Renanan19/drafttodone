@@ -18,7 +18,7 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { locales, type Locale } from "./blog-content";
-import { APP_URL, homePath, homeUrl, type HomeCopy } from "./home-content";
+import { APP_SIGNUP_URL, homePath, homeUrl, type HomeCopy } from "./home-content";
 
 /* -------------------------------------------------------------------------- */
 /*  Logo                                                                      */
@@ -65,7 +65,7 @@ function OpenAppButton({ label, size = "lg" }: { label: string; size?: "lg" | "m
   const pad = size === "lg" ? "px-7 py-4 text-base" : "px-6 py-3.5 text-[15px]";
   return (
     <a
-      href={APP_URL}
+      href={APP_SIGNUP_URL}
       className={`group inline-flex items-center justify-center gap-2 rounded-xl bg-ink ${pad} font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft active:translate-y-0`}
     >
       {label}
@@ -415,7 +415,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
               {t.nav.pricing}
             </a>
             <a
-              href={APP_URL}
+              href={APP_SIGNUP_URL}
               className="hidden whitespace-nowrap rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-ink-soft sm:inline-flex"
             >
               {t.nav.openApp}
@@ -697,7 +697,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
                   </ul>
 
                   <a
-                    href={APP_URL}
+                    href={APP_SIGNUP_URL}
                     className={`group mt-7 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-[15px] font-medium shadow-sm transition-all duration-200 hover:-translate-y-0.5 ${
                       p.highlight
                         ? "bg-ink text-paper hover:bg-ink-soft"

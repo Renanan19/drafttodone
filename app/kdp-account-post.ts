@@ -3,7 +3,7 @@ import type { BlogPost } from "./blog-content";
 export const kdpAccountPaymentsPost: BlogPost = {
   key: "kdp-account-payments",
   date: "2026-06-07",
-  updated: "2026-06-07",
+  updated: "2026-07-20",
   readingTime: 14,
   accent: {
     start: "#f4fbf7",
@@ -16,6 +16,9 @@ export const kdpAccountPaymentsPost: BlogPost = {
       title: "How to create an Amazon KDP account and get paid: setup, royalties and payment timing",
       description:
         "A practical guide to creating an Amazon KDP account, adding bank and tax details, tracking royalties and understanding why KDP payments usually arrive about 60 days after month end.",
+      seoTitle: "KDP Sign Up: Create an Account, Add Tax & Get Paid",
+      seoDescription:
+        "Create an Amazon KDP account, complete bank and tax details, secure it, and understand the 60-day royalty payment schedule.",
       keywords: [
         "create KDP account",
         "Amazon KDP account",
@@ -28,7 +31,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
       ],
       category: "KDP account",
       intro: [
-        "A KDP account is the control room for publishing on Amazon. It is where you upload Kindle ebooks, paperbacks and hardcovers, enter metadata, choose prices, check reports and receive royalties.",
+        "KDP sign up creates the control room for publishing on Amazon. Your account is where you upload Kindle ebooks, paperbacks and hardcovers, enter metadata, choose prices, check reports and receive royalties.",
         "The setup is not complicated, but small mistakes can slow down validation or payments. The important pieces are identity details, bank information, tax interview, security and a clear understanding of the payment calendar.",
       ],
       sections: [
@@ -153,6 +156,11 @@ export const kdpAccountPaymentsPost: BlogPost = {
           answer:
             "Yes. A single KDP account can publish books under different author names, as long as the account itself is managed according to Amazon's rules.",
         },
+      ],
+      sources: [
+        { label: "Amazon KDP: create and complete a KDP account", href: "https://kdp.amazon.com/en_US/help/topic/G200620010" },
+        { label: "Amazon KDP: payment timing and troubleshooting", href: "https://kdp.amazon.com/en_US/help/topic/G4EQZQ73RYEX8RQQ" },
+        { label: "Amazon KDP: manage bank, tax and account details", href: "https://kdp.amazon.com/en_US/help/topic/G200634350" },
       ],
     },
     fr: {

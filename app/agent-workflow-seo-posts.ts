@@ -322,7 +322,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
             title: "Install and authenticate the CLI",
             body: [
               "The fastest path is npx, which needs only Node 18 or newer: run 'npx drafttodone help' to see every command. If you would rather not use npm at all, download the single file directly — 'curl -fsSL https://app.drafttodone.io/cli.mjs -o drafttodone.mjs' — and run it with 'node drafttodone.mjs help'. There are zero dependencies either way.",
-              "Authenticate once: 'npx drafttodone signup --email you@example.com --password \"min8chars\"' creates the account and stores a session token in ~/.drafttodone.json. Returning users run 'login' with the same flags. You can also pass credentials through the DRAFTTODONE_EMAIL and DRAFTTODONE_PASSWORD environment variables, which is handy in a CI job or an agent's sandbox.",
+              "Authenticate once: 'npx drafttodone signup --email your-email-address --password \"min8chars\"' creates the account and stores a session token in ~/.drafttodone.json. Replace the email placeholder with your own address. Returning users run 'login' with the same flags. You can also pass credentials through the DRAFTTODONE_EMAIL and DRAFTTODONE_PASSWORD environment variables, which is handy in a CI job or an agent's sandbox.",
               "Every command accepts --json, which swaps the human-readable output for a machine-parseable object. Agents should always pass --json; humans can leave it off for readable tables. The stored token can be overridden per-invocation with the DRAFTTODONE_TOKEN environment variable if you juggle multiple accounts.",
             ],
             bullets: [
@@ -366,7 +366,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
             id: "full-flow",
             title: "The full flow, start to finish",
             body: [
-              "A complete terminal session reads like this: 'npx drafttodone signup --email you@example.com --password \"min8chars\"', then 'npx drafttodone checkout --plan weekly' and pay the printed URL in a browser. Confirm credits landed with 'npx drafttodone status'.",
+              "A complete terminal session reads like this: 'npx drafttodone signup --email your-email-address --password \"min8chars\"', then 'npx drafttodone checkout --plan weekly' and pay the printed URL in a browser. Replace the email placeholder first, then confirm credits landed with 'npx drafttodone status'.",
               "Then generate and collect: 'npx drafttodone create --niche \"beginner yoga for seniors\" --lang en' returns a book id; 'npx drafttodone wait <book-id>' blocks for the roughly 30 to 45 minutes of server-side generation; 'npx drafttodone download <book-id> --out ./my-book' saves the manuscript, interior PDF, cover image and KDP cover PDF.",
               "From there it is your turn: review the manuscript, adjust anything you want, then upload to Amazon KDP with the AI-content disclosure. The CLI and MCP server get you to production-ready files fast; the editorial and publishing decisions stay yours, which is exactly where they belong.",
             ],
@@ -442,7 +442,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
             title: "Installer et authentifier le CLI",
             body: [
               "La voie la plus rapide est npx, qui ne nécessite que Node 18 ou plus récent : lancez « npx drafttodone help » pour voir toutes les commandes. Si vous préférez ne pas utiliser npm du tout, téléchargez le fichier unique directement — « curl -fsSL https://app.drafttodone.io/cli.mjs -o drafttodone.mjs » — et lancez-le avec « node drafttodone.mjs help ». Zéro dépendance dans les deux cas.",
-              "Authentifiez-vous une fois : « npx drafttodone signup --email vous@exemple.com --password \"min8car\" » crée le compte et stocke un jeton de session dans ~/.drafttodone.json. Les utilisateurs de retour lancent « login » avec les mêmes drapeaux. Vous pouvez aussi passer les identifiants via les variables d'environnement DRAFTTODONE_EMAIL et DRAFTTODONE_PASSWORD, pratique dans un job CI ou le bac à sable d'un agent.",
+              "Authentifiez-vous une fois : « npx drafttodone signup --email votre-adresse-email --password \"min8car\" » crée le compte et stocke un jeton de session dans ~/.drafttodone.json. Remplacez d'abord le placeholder par votre adresse. Les utilisateurs de retour lancent « login » avec les mêmes drapeaux. Vous pouvez aussi passer les identifiants via les variables d'environnement DRAFTTODONE_EMAIL et DRAFTTODONE_PASSWORD, pratique dans un job CI ou le bac à sable d'un agent.",
               "Chaque commande accepte --json, qui échange la sortie lisible par un humain contre un objet analysable par machine. Les agents devraient toujours passer --json ; les humains peuvent l'omettre pour des tableaux lisibles. Le jeton stocké peut être remplacé par invocation avec la variable d'environnement DRAFTTODONE_TOKEN si vous jonglez avec plusieurs comptes.",
             ],
             bullets: [
@@ -486,7 +486,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
             id: "flux-complet",
             title: "Le flux complet, du début à la fin",
             body: [
-              "Une session terminal complète ressemble à ceci : « npx drafttodone signup --email vous@exemple.com --password \"min8car\" », puis « npx drafttodone checkout --plan weekly » et payez l'URL affichée dans un navigateur. Confirmez l'arrivée des crédits avec « npx drafttodone status ».",
+              "Une session terminal complète ressemble à ceci : « npx drafttodone signup --email votre-adresse-email --password \"min8car\" », puis « npx drafttodone checkout --plan weekly » et payez l'URL affichée dans un navigateur. Remplacez d'abord le placeholder, puis confirmez l'arrivée des crédits avec « npx drafttodone status ».",
               "Ensuite générez et récupérez : « npx drafttodone create --niche \"yoga pour seniors débutants\" --lang fr » renvoie un identifiant de livre ; « npx drafttodone wait <book-id> » bloque pendant les 30 à 45 minutes environ de génération côté serveur ; « npx drafttodone download <book-id> --out ./mon-livre » sauvegarde le manuscrit, le PDF intérieur, l'image de couverture et le PDF de couverture KDP.",
               "À partir de là, c'est votre tour : relisez le manuscrit, ajustez ce que vous voulez, puis téléversez sur Amazon KDP avec la déclaration de contenu IA. Le CLI et le serveur MCP vous amènent vite à des fichiers prêts pour la production ; les décisions éditoriales et de publication restent les vôtres, ce qui est exactement leur place.",
             ],

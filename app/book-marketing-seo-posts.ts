@@ -4,7 +4,7 @@ export const bookMarketingSeoPosts: BlogPost[] = [
   {
     key: "amazon-ads-for-books",
     date: "2026-06-12",
-    updated: "2026-06-12",
+    updated: "2026-07-20",
     readingTime: 15,
     accent: {
       start: "#f6f3ff",
@@ -17,6 +17,9 @@ export const bookMarketingSeoPosts: BlogPost[] = [
         title: "Amazon Ads for KDP books: a beginner's system that doesn't burn the royalty",
         description:
           "How to run profitable Amazon Ads for self-published books: when a book is ready for ads, the ACOS break-even math, the three campaign types, a starter structure with real budgets, and the weekly optimization loop.",
+        seoTitle: "Amazon Ads for KDP Books: Beginner Guide (2026)",
+        seoDescription:
+          "Launch Amazon Ads for a KDP book with break-even ACOS math, three starter campaigns, practical budgets and a weekly optimization loop.",
         keywords: [
           "Amazon ads for books",
           "Amazon ads KDP",
@@ -146,6 +149,9 @@ export const bookMarketingSeoPosts: BlogPost[] = [
             answer:
               "Often better than for purchase-only books: a click that becomes a borrow earns page-read revenue that ACOS does not display, so KU-enrolled books can sustainably run at higher visible ACOS. Estimate KU revenue per borrow when you review profitability.",
           },
+        ],
+        sources: [
+          { label: "Amazon KDP: advertising for KDP books", href: "https://kdp.amazon.com/en_US/help/topic/G201499010" },
         ],
       },
       fr: {
@@ -982,6 +988,9 @@ export const bookMarketingSeoPosts: BlogPost[] = [
         title: "Eine Amazon-Buchbeschreibung schreiben, die verkauft: Struktur, erste Zeilen und die Formatierung, die Amazon wirklich erlaubt",
         description:
           "Das 4.000-Zeichen-Beschreibungsfeld zum besten Verkäufer machen: der Haken vor dem « Mehr lesen », bewährte Strukturen für Belletristik und Sachbuch, erlaubtes HTML, die Keyword-Realität und eine Iterationsschleife.",
+        seoTitle: "Amazon-Buchbeschreibung schreiben, die verkauft",
+        seoDescription:
+          "Schreibe eine Amazon-Buchbeschreibung mit starkem Einstieg, klarer Struktur, erlaubtem HTML und einer messbaren Iterationsschleife.",
         keywords: [
           "Amazon Buchbeschreibung",
           "Buchbeschreibung die verkauft",

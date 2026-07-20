@@ -2,6 +2,8 @@ import { SITE_NAME, SITE_URL, type Locale } from "./blog-content";
 
 /* The live app (sign up, subscribe, generate). */
 export const APP_URL = "https://app.drafttodone.io";
+export const APP_SIGNUP_URL =
+  "https://app.drafttodone.io/signup?utm_source=drafttodone.io&utm_medium=owned_web&utm_campaign=seo_content";
 
 export type HomeCopy = {
   meta: { title: string; description: string };

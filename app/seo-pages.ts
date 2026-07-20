@@ -4,6 +4,8 @@ export type SolutionTranslation = {
   slug: string;
   title: string;
   description: string;
+  seoTitle?: string;
+  seoDescription?: string;
   eyebrow: string;
   h1: string;
   lead: string;
@@ -18,6 +20,10 @@ export type SolutionTranslation = {
     question: string;
     answer: string;
   }[];
+  sources?: {
+    label: string;
+    href: string;
+  }[];
   cta: string;
 };
 
@@ -31,7 +37,7 @@ export type SolutionPage = {
 export const solutionPages: SolutionPage[] = [
   {
     key: "kdp-royalty-calculator",
-    updated: "2026-06-07",
+    updated: "2026-07-20",
     tool: "kdpRoyaltyCalculator",
     translations: {
       en: {
@@ -39,9 +45,12 @@ export const solutionPages: SolutionPage[] = [
         title: "KDP royalty calculator for ebooks, paperbacks and Kindle Unlimited planning",
         description:
           "Estimate Amazon KDP royalties for Kindle ebooks, paperbacks and Expanded Distribution with price, tax, delivery cost, printing cost and sales scenarios.",
+        seoTitle: "KDP Royalty Calculator: Ebook & Paperback Earnings",
+        seoDescription:
+          "Estimate KDP ebook and paperback royalties by price, tax, delivery cost, page count and marketplace. Updated with Amazon's July 2026 rules.",
         eyebrow: "KDP royalty calculator",
         h1: "Estimate KDP royalties before you choose a book price.",
-        lead: "Use this interactive calculator to model ebook royalties, paperback margins, Expanded Distribution tradeoffs and realistic sales scenarios before you publish or change a price.",
+        lead: "Use this interactive calculator to model ebook royalties, paperback margins, Expanded Distribution tradeoffs and realistic sales scenarios before you publish or change a price. The assumptions were checked against Amazon KDP's official help pages on July 20, 2026.",
         keywords: [
           "KDP royalty calculator",
           "Amazon KDP royalties",
@@ -101,6 +110,11 @@ export const solutionPages: SolutionPage[] = [
               "KDP subtracts printing cost from print royalties, so page count, ink type and marketplace can change your margin.",
           },
         ],
+        sources: [
+          { label: "Amazon KDP: eBook royalties", href: "https://kdp.amazon.com/en_US/help/topic/G200644210" },
+          { label: "Amazon KDP: paperback royalties", href: "https://kdp.amazon.com/en_US/help/topic/G201834330" },
+          { label: "Amazon KDP: paperback printing costs", href: "https://kdp.amazon.com/en_US/help/topic/G201834340" },
+        ],
         cta: "Open the app",
       },
       fr: {
@@ -108,9 +122,12 @@ export const solutionPages: SolutionPage[] = [
         title: "Calculateur de redevances KDP pour ebooks, brochés et scénarios de ventes",
         description:
           "Estimez les redevances Amazon KDP pour ebooks Kindle, livres brochés et distribution étendue avec prix, TVA, livraison numérique, impression et volume de ventes.",
+        seoTitle: "Calculateur de redevances KDP : ebook et broché",
+        seoDescription:
+          "Calculez vos redevances KDP ebook et broché selon le prix, la TVA, la livraison, les pages et la marketplace. Règles vérifiées en juillet 2026.",
         eyebrow: "Calculateur redevances KDP",
         h1: "Estimez vos redevances KDP avant de choisir un prix.",
-        lead: "Utilisez ce calculateur interactif pour modéliser les redevances ebook, les marges brochées, la distribution étendue et des scénarios de ventes réalistes avant publication.",
+        lead: "Utilisez ce calculateur interactif pour modéliser les redevances ebook, les marges brochées, la distribution étendue et des scénarios de ventes réalistes avant publication. Les hypothèses ont été vérifiées sur l'aide officielle Amazon KDP le 20 juillet 2026.",
         keywords: [
           "calculateur redevances KDP",
           "redevances Amazon KDP",
@@ -170,6 +187,11 @@ export const solutionPages: SolutionPage[] = [
               "KDP retire le coût d'impression. Le nombre de pages, l'encre et le marketplace peuvent donc changer fortement la marge.",
           },
         ],
+        sources: [
+          { label: "Amazon KDP : redevances ebook", href: "https://kdp.amazon.com/en_US/help/topic/G200644210" },
+          { label: "Amazon KDP : redevances des brochés", href: "https://kdp.amazon.com/en_US/help/topic/G201834330" },
+          { label: "Amazon KDP : coûts d'impression", href: "https://kdp.amazon.com/en_US/help/topic/G201834340" },
+        ],
         cta: "Ouvrir l'app",
       },
       it: {
@@ -177,6 +199,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Calcolatore royalty KDP per ebook, paperback e scenari di vendita",
         description:
           "Stima le royalty Amazon KDP per ebook Kindle, paperback e Distribuzione Estesa con prezzo, IVA, consegna digitale, stampa e volume vendite.",
+        seoTitle: "Calcolatore royalty KDP per ebook e paperback",
+        seoDescription:
+          "Stima le royalty KDP di ebook e paperback per prezzo, IVA, consegna, pagine e marketplace. Regole Amazon verificate a luglio 2026.",
         eyebrow: "Calcolatore royalty KDP",
         h1: "Stima le royalty KDP prima di scegliere il prezzo.",
         lead: "Usa questo calcolatore interattivo per modellare royalty ebook, margini paperback, Distribuzione Estesa e scenari realistici prima della pubblicazione.",
@@ -239,6 +264,11 @@ export const solutionPages: SolutionPage[] = [
               "KDP sottrae il costo di stampa. Pagine, inchiostro e marketplace possono cambiare molto il margine.",
           },
         ],
+        sources: [
+          { label: "Amazon KDP: royalty ebook", href: "https://kdp.amazon.com/en_US/help/topic/G200644210" },
+          { label: "Amazon KDP: royalty paperback", href: "https://kdp.amazon.com/en_US/help/topic/G201834330" },
+          { label: "Amazon KDP: costi di stampa", href: "https://kdp.amazon.com/en_US/help/topic/G201834340" },
+        ],
         cta: "Apri l'app",
       },
       de: {
@@ -246,6 +276,9 @@ export const solutionPages: SolutionPage[] = [
         title: "KDP-Tantiemen-Rechner für Ebooks, Taschenbücher und Verkaufsszenarien",
         description:
           "Schätze Amazon-KDP-Tantiemen für Kindle Ebooks, Taschenbücher und Erweiterte Distribution mit Preis, Steuer, Lieferkosten, Druckkosten und Verkaufsvolumen.",
+        seoTitle: "KDP-Tantiemen-Rechner für Ebook und Taschenbuch",
+        seoDescription:
+          "Schätze KDP-Tantiemen für Ebook und Taschenbuch nach Preis, Steuer, Lieferkosten, Seiten und Marketplace. Im Juli 2026 geprüft.",
         eyebrow: "KDP-Tantiemen-Rechner",
         h1: "Schätze KDP-Tantiemen, bevor du den Buchpreis wählst.",
         lead: "Nutze diesen interaktiven Rechner für Ebook-Tantiemen, Taschenbuchmargen, Erweiterte Distribution und realistische Verkaufsszenarien vor der Veröffentlichung.",
@@ -307,6 +340,11 @@ export const solutionPages: SolutionPage[] = [
             answer:
               "KDP zieht Druckkosten ab. Seitenzahl, Tinte und Marketplace können die Marge stark verändern.",
           },
+        ],
+        sources: [
+          { label: "Amazon KDP: Ebook-Tantiemen", href: "https://kdp.amazon.com/en_US/help/topic/G200644210" },
+          { label: "Amazon KDP: Taschenbuch-Tantiemen", href: "https://kdp.amazon.com/en_US/help/topic/G201834330" },
+          { label: "Amazon KDP: Druckkosten", href: "https://kdp.amazon.com/en_US/help/topic/G201834340" },
         ],
         cta: "App öffnen",
       },
@@ -1155,6 +1193,9 @@ export const solutionPages: SolutionPage[] = [
         title: "KDP keyword tool for the 7 backend slots and categories",
         description:
           "Research Amazon book keywords, fill the 7 backend keyword slots, and check category fit. A KDP keyword tool built into one publishing pipeline.",
+        seoTitle: "KDP Keyword Tool: Find Amazon Keywords & Fill 7 Slots",
+        seoDescription:
+          "Research Amazon book keywords, rank phrases, fill all 7 KDP backend fields and check category fit in one publishing workflow.",
         eyebrow: "KDP keyword tool",
         h1: "Find and fill every keyword a book should target on Amazon.",
         lead: "Research Kindle and print keywords, then place the strongest seven in the backend slots that KDP gives you. Category fit is checked alongside, so the metadata reads as one coherent listing.",
@@ -1335,6 +1376,9 @@ export const solutionPages: SolutionPage[] = [
         title: "KDP book generator for manuscript, cover and Amazon metadata",
         description:
           "Generate a KDP-ready book package with AI: manuscript, cover direction, title, description, keywords and quality checks before Amazon upload.",
+        seoTitle: "KDP Book Generator: Manuscript, Cover & Metadata",
+        seoDescription:
+          "Generate a KDP book package with manuscript, full cover direction, title, description, 7 keyword slots and pre-upload quality checks.",
         eyebrow: "KDP book generator",
         h1: "Generate the KDP book package, not just the manuscript.",
         lead: "Amazon KDP publishing is more than writing chapters. DraftToDone turns a niche brief into the assets a publisher actually needs before upload: manuscript, cover, title, description, keyword set and review checklist.",
@@ -1515,6 +1559,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Atticus alternative that generates the book, not only formats it",
         description:
           "Looking for an Atticus alternative? Atticus formats books you have written; DraftToDone generates the manuscript, cover and KDP metadata as one pipeline.",
+        seoTitle: "Atticus Alternative for KDP: Generate, Cover & Publish",
+        seoDescription:
+          "Compare Atticus with DraftToDone for KDP: book formatting versus an end-to-end manuscript, cover and metadata generation workflow.",
         eyebrow: "Atticus alternative",
         h1: "An Atticus alternative that builds the book, not only formats it.",
         lead: "Atticus is a polished writing and formatting tool. DraftToDone starts earlier and ends later: it generates the manuscript, the full cover and the KDP metadata, then checks quality before upload.",

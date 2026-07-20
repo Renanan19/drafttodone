@@ -1859,7 +1859,7 @@ export const aiWritingSeoPosts: BlogPost[] = [
   {
     key: "kdp-paperback-formatting",
     date: "2026-06-12",
-    updated: "2026-06-12",
+    updated: "2026-07-20",
     readingTime: 14,
     accent: {
       start: "#eef7ff",
@@ -1872,6 +1872,9 @@ export const aiWritingSeoPosts: BlogPost[] = [
         title: "KDP paperback formatting: trim size, margins, bleed and a print-ready interior that passes review first time",
         description:
           "Everything KDP checks in a paperback interior: choosing a trim size, calculating gutter margins from page count, bleed rules, fonts and embedding, spine width math and the errors behind most rejections.",
+        seoTitle: "KDP Paperback Formatting: Size, Margins, Bleed & PDF",
+        seoDescription:
+          "Format a KDP paperback with the right trim size, gutter, margins, bleed, fonts and print-ready PDF settings. Includes official KDP sources.",
         keywords: [
           "KDP paperback formatting",
           "KDP trim size",
@@ -2019,12 +2022,20 @@ export const aiWritingSeoPosts: BlogPost[] = [
               "Yes — set the page size to the trim, configure mirrored margins with the correct gutter, embed fonts when saving to PDF, and check the result in the previewer. Dedicated layout tools and automated pipelines produce more polished results, but Word output passes review when the numbers are right.",
           },
         ],
+        sources: [
+          { label: "Amazon KDP: format your paperback", href: "https://kdp.amazon.com/en_US/help/topic/G201834190" },
+          { label: "Amazon KDP: trim size, bleed and margins", href: "https://kdp.amazon.com/en_US/help/topic/GVBQ3CMEQW3W2VL6" },
+          { label: "Amazon KDP: paperback submission guidelines", href: "https://kdp.amazon.com/en_US/help/topic/G201857950" },
+        ],
       },
       fr: {
         slug: "mise-en-page-livre-broche-kdp",
         title: "Mise en page d'un livre broché KDP : format, marges, fond perdu et un PDF d'intérieur accepté du premier coup",
         description:
           "Tout ce que KDP vérifie dans l'intérieur d'un broché : choix du format, calcul de la marge de reliure selon le nombre de pages, règles de fond perdu, polices et incorporation, calcul du dos et les erreurs derrière la plupart des rejets.",
+        seoTitle: "Formater un roman pour KDP : marges, format et PDF",
+        seoDescription:
+          "Formatez un roman pour KDP : taille 6 x 9, marges, reliure, fond perdu, polices et PDF prêt à imprimer selon les règles Amazon.",
         keywords: [
           "mise en page livre KDP",
           "format livre broché KDP",
@@ -2038,7 +2049,7 @@ export const aiWritingSeoPosts: BlogPost[] = [
         ],
         category: "Mise en page",
         intro: [
-          "La mise en page du broché est l'endroit où la plupart des nouveaux éditeurs KDP reçoivent leur premier e-mail de rejet. Les règles sont mécaniques — format, marges, fond perdu, polices incorporées — mais elles interagissent : le nombre de pages change la marge de reliure, la marge change la maquette, et la maquette change le nombre de pages.",
+          "Pour formater un roman pour KDP, commencez par verrouiller le format, les marges, la reliure, le fond perdu et les polices incorporées. Ces règles sont mécaniques, mais elles interagissent : le nombre de pages change la marge de reliure, la marge change la maquette, et la maquette change le nombre de pages.",
           "La bonne nouvelle : tout le système se réduit à une poignée de chiffres que vous pouvez fixer avant de mettre en forme la moindre page. Ce guide vous donne ces chiffres, l'ordre dans lequel les appliquer, et les erreurs précises qui génèrent la majorité des rejets pour « problème de fichier ».",
           "Il s'applique aux brochés standard en encre noire, fiction et non-fiction. Les livres pour enfants, les formats riches en images et les couvertures rigides ajoutent des règles, mais la mécanique de base reste la même.",
         ],
@@ -2171,6 +2182,11 @@ export const aiWritingSeoPosts: BlogPost[] = [
             answer:
               "Oui — réglez la taille de page sur le format, configurez des marges en miroir avec la bonne reliure, incorporez les polices à l'export PDF, et vérifiez le résultat dans l'aperçu. Les outils de maquette dédiés et les pipelines automatisés produisent un rendu plus soigné, mais une sortie Word passe l'examen quand les chiffres sont justes.",
           },
+        ],
+        sources: [
+          { label: "Amazon KDP : formater un livre broché", href: "https://kdp.amazon.com/en_US/help/topic/G201834190" },
+          { label: "Amazon KDP : format, fond perdu et marges", href: "https://kdp.amazon.com/en_US/help/topic/GVBQ3CMEQW3W2VL6" },
+          { label: "Amazon KDP : règles de soumission des brochés", href: "https://kdp.amazon.com/en_US/help/topic/G201857950" },
         ],
       },
       it: {

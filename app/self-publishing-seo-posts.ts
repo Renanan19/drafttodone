@@ -1739,7 +1739,7 @@ export const selfPublishingSeoPosts: BlogPost[] = [
   {
     key: "low-content-books-kdp",
     date: "2026-06-12",
-    updated: "2026-06-12",
+    updated: "2026-07-20",
     readingTime: 13,
     accent: {
       start: "#f0f9ff",
@@ -1752,6 +1752,9 @@ export const selfPublishingSeoPosts: BlogPost[] = [
         title: "Low-content books on KDP: what still works, what's saturated and how to compete in 2026",
         description:
           "A realistic guide to publishing journals, planners, logbooks and workbooks on Amazon KDP: the post-saturation landscape, niches that still sell, design and interior standards, keyword rules and the medium-content upgrade path.",
+        seoTitle: "KDP Low-Content Books: What Still Sells in 2026",
+        seoDescription:
+          "Learn which KDP low-content niches still sell, what is saturated, how ISBN and Read Sample rules work, and when to upgrade to medium-content.",
         keywords: [
           "low content books KDP",
           "sell journals on Amazon",
@@ -1819,7 +1822,7 @@ export const selfPublishingSeoPosts: BlogPost[] = [
             title: "Covers, keywords and the rules KDP enforces",
             body: [
               "Low-content covers compete at thumbnail size against many siblings, so clarity beats decoration: the use case readable in the title, a visual that says the activity instantly, professional typography. Our cover design guide's thumbnail test applies double here.",
-              "Metadata rules tightened after the gold rush: KDP requires transcending honesty in low-content listings — no fake page counts, no 'journal' titles on notebooks, and the dedicated low-content checkbox during setup (it removes the look-inside feature and some category options, but misdeclaring is a policy violation).",
+              "KDP requires accurate low-content classification during setup. Low-content books are not eligible for KDP's free ISBN; you can use your own ISBN or publish without one. Publishing without an ISBN removes Read Sample and the back-cover thumbnail, while Expanded Distribution and series are unavailable to low-content books regardless of ISBN choice.",
               "Keyword the specificity: every interior field you designed is a search phrase someone types. The 'mite count' field justifies 'varroa mite tracking'; the gift angle justifies 'beekeeper gifts for men'. Specific interiors generate their own long-tail keywords — generic notebooks cannot.",
             ],
             bullets: [
@@ -1835,7 +1838,7 @@ export const selfPublishingSeoPosts: BlogPost[] = [
             body: [
               "Medium-content books add written value to functional interiors: a habit tracker opening with 20 pages on habit science, a beekeeping log with a seasonal task guide per section, a budgeting workbook with method explanations between worksheets. The writing raises perceived value, justifies $9.99–$14.99 prices, and — critically — cannot be replicated by template sellers.",
               "This is where AI generation changes the category's economics: producing 30 pages of well-researched instructional content per book was the bottleneck that kept low-content sellers from upgrading; a quality-gated writing pipeline removes it. A DraftToDone-style workflow can produce the instructional layer while you design the functional interior — the combination is a product neither pure-text nor pure-template competitors ship.",
-              "Medium-content also unlocks better categories, the look-inside feature, and review-worthy substance — the structural advantages low-content forfeits. For any niche you validate, ask: what would the medium-content version of this look like? That version is usually the business.",
+              "Medium-content can retain a normal publishing setup and adds review-worthy substance. For any niche you validate, ask: what would the medium-content version of this look like? That version is usually the more defensible business.",
             ],
             bullets: [
               "Medium-content = functional interior + instructional writing.",
@@ -1879,8 +1882,13 @@ export const selfPublishingSeoPosts: BlogPost[] = [
           {
             question: "Does the KDP low-content declaration hurt sales?",
             answer:
-              "It removes the look-inside preview and some category options, which mildly affects discoverability — but it is required honesty for books that qualify. Medium-content books with real written sections do not declare as low-content and keep the full feature set.",
+              "The declaration itself is mandatory for qualifying books. The important choice is ISBN: a low-content book published without an ISBN does not receive Read Sample or a back-cover thumbnail. Low-content books also cannot use series or Expanded Distribution.",
           },
+        ],
+        sources: [
+          { label: "Amazon KDP: low-content book rules and ISBN options", href: "https://kdp.amazon.com/en_US/help/topic/GGE5T76TWKA85DJM" },
+          { label: "Amazon KDP: Read Sample availability", href: "https://kdp.amazon.com/en_US/help/topic/G200644250" },
+          { label: "Amazon KDP: metadata guidelines", href: "https://kdp.amazon.com/en_US/help/topic/G201097560" },
         ],
       },
       fr: {

@@ -40,6 +40,7 @@ export type BlogCopy = {
   checklist: string;
   faq: string;
   related: string;
+  sources: string;
   tools: string;
   ctaTitle: string;
   ctaText: string;
@@ -63,12 +64,18 @@ export type BlogTranslation = {
   slug: string;
   title: string;
   description: string;
+  seoTitle?: string;
+  seoDescription?: string;
   keywords: string[];
   category: string;
   intro: string[];
   sections: BlogSection[];
   checklist: string[];
   faq: BlogFaq[];
+  sources?: {
+    label: string;
+    href: string;
+  }[];
 };
 
 export type BlogPost = {
@@ -118,6 +125,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     checklist: "Operational checklist",
     faq: "FAQ",
     related: "Related guides",
+    sources: "Official sources",
     tools: "Tools",
     ctaTitle: "Turn your publishing workflow into a system.",
     ctaText:
@@ -156,6 +164,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     checklist: "Checklist opérationnelle",
     faq: "FAQ",
     related: "Guides liés",
+    sources: "Sources officielles",
     tools: "Outils",
     ctaTitle: "Transformez votre workflow éditorial en système.",
     ctaText:
@@ -194,6 +203,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     checklist: "Checklist operativa",
     faq: "FAQ",
     related: "Guide correlate",
+    sources: "Fonti ufficiali",
     tools: "Strumenti",
     ctaTitle: "Trasforma il workflow editoriale in un sistema.",
     ctaText:
@@ -232,6 +242,7 @@ export const blogCopy: Record<Locale, BlogCopy> = {
     checklist: "Operative Checkliste",
     faq: "FAQ",
     related: "Verwandte Guides",
+    sources: "Offizielle Quellen",
     tools: "Tools",
     ctaTitle: "Mach aus deinem Publishing-Workflow ein System.",
     ctaText:
@@ -1900,6 +1911,9 @@ export const posts: BlogPost[] = [
         title: "KDP niche and keyword research: find book ideas readers already want",
         description:
           "A practical SEO guide to finding profitable KDP niches, reader demand, keyword clusters, category fit and book angles before writing.",
+        seoTitle: "KDP Niche & Keyword Research: Find Book Ideas",
+        seoDescription:
+          "Find KDP niches with proven reader demand, build keyword clusters, check category fit and choose a differentiated book angle before writing.",
         keywords: [
           "KDP niche research",
           "KDP keyword research",

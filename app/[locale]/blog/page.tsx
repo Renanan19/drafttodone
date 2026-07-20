@@ -15,6 +15,7 @@ import {
   type Locale,
 } from "@/app/blog-content";
 import { BlogFooter, BlogHeader, BlogVisual, CtaBand } from "@/app/blog-ui";
+import { seoDescription, seoTitle } from "@/app/seo-metadata";
 
 export const dynamicParams = false;
 
@@ -37,19 +38,21 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : "en";
   const t = blogCopy[locale];
+  const metadataTitle = seoTitle(t.metaTitle);
+  const metadataDescription = seoDescription(t.metaDescription);
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: t.metaTitle,
-    description: t.metaDescription,
+    title: metadataTitle,
+    description: metadataDescription,
     keywords: t.keywords,
     alternates: {
       canonical: blogIndexPath(locale),
       languages: getBlogIndexAlternates(),
     },
     openGraph: {
-      title: t.metaTitle,
-      description: t.metaDescription,
+      title: metadataTitle,
+      description: metadataDescription,
       url: blogIndexUrl(locale),
       siteName: SITE_NAME,
       type: "website",
@@ -68,8 +71,8 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     },
     twitter: {
       card: "summary_large_image",
-      title: t.metaTitle,
-      description: t.metaDescription,
+      title: metadataTitle,
+      description: metadataDescription,
       images: ["/opengraph-image"],
     },
   };

@@ -65,6 +65,71 @@ One controlled pipeline from idea to KDP upload:
 
 When a prompt says "competitors", default to the relevant bucket above unless told otherwise.
 
+## Ahrefs baseline — 20 July 2026
+
+Treat these as a dated snapshot, not permanent truth. Refresh them before any decision that depends on current rankings, traffic, or backlinks.
+
+### Organic visibility
+
+- **DR 0, UR 0, Ahrefs Rank 98,995,747.**
+- **1 organic keyword, 0 estimated organic visits, $0 traffic value.**
+- The only detected ranking is **“amazon kdp keywords”**, position **44** in the US, monthly volume **500**, estimated traffic **0**.
+- The ranking URL is `/en/blog/how-to-choose-kdp-keywords-beginner-guide`; Ahrefs reports no keyword in positions 8–30 and only one organic page.
+- Relevant US organic competitors surfaced by Ahrefs: `keywordtooldominator.com`, `keywordtool.io`, `kindlepreneur.com`, and `reedsy.com`. Content Gap itself is locked on the current plan.
+
+### Backlinks and authority
+
+- **9 live backlinks** from **8 referring domains**; 11 backlinks and 9 referring domains all-time.
+- 8 backlinks are followed and 1 is nofollow. The only high-DR referring domain is `trustmrr.com` (DR 69), and that backlink is nofollow.
+- Ahrefs labels `sheepnav.com`, `mrrwars.com`, and `aistartup.co` as spam. Most remaining domains have DR 0.
+- Existing backlinks point to the homepage or `http://www` tracking/redirect variants. There are **no observed deep editorial backlinks** to solution pages, tools, or guides.
+
+### Technical crawl
+
+- Latest Site Audit: **Health Score 98 (Excellent)**, **182 crawled URLs** (168 internal URLs and 14 resources).
+- HTTP distribution: **180 successful**, **4 redirects**, **1 client error**. Ahrefs reports 4 errors affecting 3 URLs, 379 warnings, and 474 notices.
+- One 404 is Cloudflare’s `/cdn-cgi/l/email-protection`, linked from the EN and FR DraftToDone CLI/MCP articles. Replace or exempt the obfuscated email links.
+- **157 pages link to `https://app.drafttodone.io/`, which returns 307.** Point CTAs directly to the final destination to remove the site-wide redirect hop.
+- **146 titles** and **71 meta descriptions** are flagged as too long. Shorten templates first, prioritizing English money pages and then localized variants.
+- Ahrefs showed a structured-data validation warning count in the overview, but the detail report returned no rows and a fetch error; validate independently before changing schema.
+- Site Audit found 0 internal-link opportunities, but this is not evidence that the current maillage is sufficient: the report has only one ranked keyword/page to work from.
+
+### Data gaps on the current Ahrefs plan
+
+- GSC Insights, Rank Tracker, Keywords Explorer, and Content Gap are unavailable without upgrading. Ahrefs Web Analytics is not configured.
+- Brand Radar was still setting up, so there is no dependable AI-visibility baseline yet.
+- Do not upgrade or subscribe to fill these gaps. Use the connected Google Search Console directly when available, plus manual SERP checks and the accessible Ahrefs reports.
+
+## Search-performance baseline — exports dated 20 July 2026
+
+Treat these exports as a dated snapshot. GSC daily totals are the source of truth for overall Google performance; query and page tables are partial and must not be summed against the daily total.
+
+### Google Search Console
+
+- Coverage period in the export: **2 June–18 July 2026**.
+- **6 clicks, 593 impressions, 1.01% CTR, weighted average position 41.78**.
+- The latest 14 active days produced **520 impressions but only 1 click** (0.19% CTR, average position about 46), versus 58 impressions and 4 clicks in the previous 14 active days. Visibility is expanding faster than rankings.
+- Priority pages by impressions: `/en/kdp-royalty-calculator` (141, position 63.06), `/en/blog/create-kdp-account-payments-guide` (92, position 42.89), `/fr/blog/mise-en-page-livre-broche-kdp` (74, position 34.31), `/en/ai-publishing-software` (46, position 55.91), `/en/blog/how-to-choose-kdp-keywords-beginner-guide` (41, position 40.63), and `/en/blog/best-ai-book-writing-tools-compared` (36, position 45.25).
+- Best striking-distance opportunities: Amazon Ads guide (30 impressions, position 19.47), EN blog index (20, 23.65), IT KDP categories guide (10, 8.6), EN KDP book generator (7, 9.86), EN Atticus alternative (7, 16.43), EN niche/keyword research (5, 12.6), and DE Amazon book description (5, 18.8).
+- Leading query clusters: `formater roman kdp` (72 impressions, position 34.71), royalty-calculator variants (113 impressions, average position about 70), and KDP keyword variants (23 impressions, average position about 49).
+
+### Bing / Brave search export
+
+- Daily totals: **3 clicks, 278 impressions, 1.08% CTR**; impressions accelerated to 90 on 18 July.
+- Keyword table: 102 rows, 175 represented impressions, weighted average position 5.27.
+- Important top-10 CTR gaps: `kdp sign up`, French KDP royalty-calculator variants, and low-content-book queries rank on page one but often have zero clicks.
+- Main represented clusters: royalties (49 impressions, 1 click, position 5.90), low-content (49, 1 click, 4.47), and KDP account setup (37, 0 clicks, 5.57).
+
+### AI search / Brave grounding
+
+- The daily export contains **186 citation occurrences summed across the available dates**; the peak was 24 citations on 12 July.
+- The query report exposes one high-confidence opportunity: `self-publishing pricing royalties expert advice`, with 11 citations and 25% citation share.
+- This makes the royalty calculator the first GEO page to strengthen with answer-first copy, dated methodology, transparent assumptions, official sources and numerical examples.
+
+### Execution rule from this baseline
+
+Prioritize CTR and relevance improvements on pages that already have impressions before creating new URLs. The first implementation queue is: royalty calculator, KDP account sign-up/payments, French paperback formatting, low-content books, Amazon Ads, KDP keywords, KDP book generator and Atticus alternative.
+
 ## Tech & content constraints (this is a codebase, not a CMS)
 
 - **Next.js 15 App Router, `output: "export"`** → fully static, deployed to **GitHub Pages** at custom domain `drafttodone.io`. No server runtime, no DB, no ISR.

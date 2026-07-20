@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { isLocale, locales, SITE_NAME, SITE_URL, type Locale } from "@/app/blog-content";
 import { getHomeAlternates, homeCopy, homePath, homeUrl } from "@/app/home-content";
 import { HomeView } from "@/app/home-view";
+import { seoDescription, seoTitle } from "@/app/seo-metadata";
 
 export const dynamicParams = false;
 
@@ -24,18 +25,20 @@ export async function generateMetadata({ params }: LocaleHomeProps): Promise<Met
   const { locale: rawLocale } = await params;
   const locale = isLocale(rawLocale) ? rawLocale : "en";
   const copy = homeCopy[locale];
+  const metadataTitle = seoTitle(copy.meta.title);
+  const metadataDescription = seoDescription(copy.meta.description);
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: copy.meta.title,
-    description: copy.meta.description,
+    title: metadataTitle,
+    description: metadataDescription,
     alternates: {
       canonical: homePath(locale),
       languages: getHomeAlternates(),
     },
     openGraph: {
-      title: copy.meta.title,
-      description: copy.meta.description,
+      title: metadataTitle,
+      description: metadataDescription,
       url: homeUrl(locale),
       siteName: SITE_NAME,
       type: "website",
@@ -54,8 +57,8 @@ export async function generateMetadata({ params }: LocaleHomeProps): Promise<Met
     },
     twitter: {
       card: "summary_large_image",
-      title: copy.meta.title,
-      description: copy.meta.description,
+      title: metadataTitle,
+      description: metadataDescription,
       images: ["/opengraph-image"],
     },
   };
