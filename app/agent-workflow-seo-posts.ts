@@ -36,7 +36,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "why-agent-operable",
-            title: "What 'agent-operable' actually means here",
+            title: "What does 'agent-operable' actually mean for a book tool?",
             body: [
               "Most SaaS products assume a human at a browser: they gate signup behind CAPTCHAs, hide functionality in dashboards, and answer scripts with challenge pages. An agent hitting those walls stalls silently. Agent-operable means the opposite — every step the workflow needs is reachable through a documented, machine-friendly interface that returns structured data, not HTML.",
               "For DraftToDone that means a session token an agent can hold, JSON responses with clear error codes, and generation that runs server-side so the agent can fire a job and poll for it later instead of holding a connection open for 40 minutes. The agent never has to render a page or solve a puzzle.",
@@ -51,7 +51,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "three-surfaces",
-            title: "Three interfaces: MCP, CLI, REST — pick one",
+            title: "MCP vs CLI vs REST: which interface should your agent use?",
             body: [
               "The MCP server at app.drafttodone.io/mcp is the native choice for frameworks that speak Model Context Protocol. Hermes Agent discovers its tools at startup; Claude clients add it with one command; any MCP host registers it as a remote streamable-HTTP server. The agent then calls named tools — sign_up, get_checkout_url, create_book, list_books, get_download_links — like any other tool in its registry.",
               "The CLI (npx drafttodone, or a single downloadable file) suits agents that already have shell access and prefer to run commands. Every command accepts a --json flag so the output is machine-parseable. It is a thin client over the same backend, so behaviour is identical to MCP.",
@@ -66,7 +66,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "the-loop",
-            title: "The end-to-end loop an agent runs",
+            title: "What does the end-to-end loop an agent runs look like?",
             body: [
               "Step one, account: the agent calls sign_up with the user's email and a password, and receives a session token it stores. Step two, funding: it requests a checkout URL and hands that URL to the human — this is the one blocking step. Once payment clears, credits appear automatically.",
               "Step three, generation: the agent calls create_book with a specific niche and language. Specific beats broad every time — 'beginner strength training for women over 50' outperforms 'fitness.' The job runs server-side for roughly 30 to 45 minutes. Step four, polling: the agent checks list_books every minute or so until the status reads completed and the progress counter reaches four of four.",
@@ -81,7 +81,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "human-in-the-loop",
-            title: "The one step that stays human — and why that's a feature",
+            title: "Which step stays human, and why is that a feature?",
             body: [
               "Payment is deliberately not automatable. The agent generates a Stripe Checkout URL, but a person must open it and complete the transaction. This is not a missing feature; it is a guardrail. An autonomous agent with unattended spending authority is a liability for its owner, and DraftToDone refuses to be the service that drains a card while nobody is watching.",
               "Publishing is the second human checkpoint, this time by Amazon's rules rather than ours. The user uploads the files to their own KDP account, sets price and categories, and — importantly — declares the AI-assisted content, which KDP requires. The agent produces the assets; the human owns the listing and the compliance.",
@@ -96,7 +96,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "honest-limits",
-            title: "The limits worth stating plainly",
+            title: "What an AI agent cannot promise you about book income",
             body: [
               "DraftToDone produces files; it does not produce guaranteed income. No tool can promise Amazon approval, search rankings or sales, and any service that does is lying. The realistic value is leverage: turning a niche into a complete, consistent book package in under an hour, repeatable across a catalog, at a per-book cost of roughly one to two and a half euros on subscription.",
               "Quality still needs a human's eye. Generated manuscripts are a strong first draft, not a finished product exempt from review — reading before publishing is both good practice and, for AI content, an ethical baseline. Agents should present the output as a draft to approve, never as guaranteed-sellable on arrival.",
@@ -171,7 +171,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "operable-par-agent",
-            title: "Ce que « opérable par un agent » signifie vraiment ici",
+            title: "Que signifie vraiment « opérable par un agent » ici ?",
             body: [
               "La plupart des SaaS supposent un humain devant un navigateur : ils verrouillent l'inscription derrière des CAPTCHA, cachent les fonctions dans des tableaux de bord et répondent aux scripts par des pages de défi. Un agent qui heurte ces murs cale en silence. Opérable par un agent signifie l'inverse — chaque étape nécessaire est accessible via une interface documentée et lisible par machine qui renvoie des données structurées, pas du HTML.",
               "Pour DraftToDone, cela veut dire un jeton de session que l'agent peut conserver, des réponses JSON avec des codes d'erreur clairs, et une génération côté serveur pour que l'agent lance un travail et le suive plus tard au lieu de tenir une connexion ouverte 40 minutes. L'agent n'a jamais à afficher une page ni à résoudre une énigme.",
@@ -186,7 +186,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "trois-surfaces",
-            title: "Trois interfaces : MCP, CLI, REST — une au choix",
+            title: "MCP, CLI ou REST : quelle interface pour votre agent ?",
             body: [
               "Le serveur MCP à app.drafttodone.io/mcp est le choix natif pour les frameworks qui parlent Model Context Protocol. Hermes Agent découvre ses outils au démarrage ; les clients Claude l'ajoutent en une commande ; n'importe quel hôte MCP l'enregistre comme serveur distant streamable-HTTP. L'agent appelle alors des outils nommés — sign_up, get_checkout_url, create_book, list_books, get_download_links — comme tout autre outil de son registre.",
               "Le CLI (npx drafttodone, ou un fichier unique à télécharger) convient aux agents qui ont déjà un accès shell et préfèrent lancer des commandes. Chaque commande accepte un drapeau --json pour une sortie analysable par machine. C'est un client léger sur le même backend, donc le comportement est identique au MCP.",
@@ -201,7 +201,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "la-boucle",
-            title: "La boucle de bout en bout que l'agent exécute",
+            title: "À quoi ressemble la boucle complète exécutée par l'agent ?",
             body: [
               "Étape un, le compte : l'agent appelle sign_up avec l'email de l'utilisateur et un mot de passe, et reçoit un jeton de session qu'il stocke. Étape deux, le financement : il demande une URL de paiement et la remet à l'humain — c'est l'unique étape bloquante. Une fois le paiement passé, les crédits apparaissent automatiquement.",
               "Étape trois, la génération : l'agent appelle create_book avec une niche précise et une langue. Précis bat large à chaque fois — « renforcement musculaire débutant pour femmes de plus de 50 ans » surpasse « fitness ». Le travail tourne côté serveur environ 30 à 45 minutes. Étape quatre, le suivi : l'agent vérifie list_books toutes les minutes environ jusqu'à ce que le statut affiche completed et que le compteur atteigne quatre sur quatre.",
@@ -216,7 +216,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "humain-dans-la-boucle",
-            title: "L'unique étape qui reste humaine — et pourquoi c'est un atout",
+            title: "Quelle étape reste humaine, et pourquoi est-ce un atout ?",
             body: [
               "Le paiement n'est volontairement pas automatisable. L'agent génère une URL Stripe Checkout, mais une personne doit l'ouvrir et finaliser la transaction. Ce n'est pas une fonction manquante ; c'est un garde-fou. Un agent autonome avec autorité de dépense sans surveillance est un risque pour son propriétaire, et DraftToDone refuse d'être le service qui vide une carte pendant que personne ne regarde.",
               "La publication est le second point de contrôle humain, cette fois par les règles d'Amazon plutôt que les nôtres. L'utilisateur téléverse les fichiers sur son propre compte KDP, fixe prix et catégories, et — surtout — déclare le contenu assisté par IA, ce que KDP exige. L'agent produit les assets ; l'humain possède la fiche et la conformité.",
@@ -231,7 +231,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "limites-honnetes",
-            title: "Les limites qu'il vaut mieux énoncer clairement",
+            title: "Ce qu'un agent IA ne peut pas vous promettre sur les revenus",
             body: [
               "DraftToDone produit des fichiers ; il ne produit pas de revenu garanti. Aucun outil ne peut promettre l'approbation Amazon, un classement ou des ventes, et tout service qui le prétend ment. La valeur réaliste est l'effet de levier : transformer une niche en pack livre complet et cohérent en moins d'une heure, reproductible sur un catalogue, à un coût par livre d'environ un à deux euros et demi sur abonnement.",
               "La qualité demande encore l'œil d'un humain. Les manuscrits générés sont un solide premier jet, pas un produit fini dispensé de relecture — lire avant de publier est à la fois une bonne pratique et, pour du contenu IA, une base éthique. Les agents doivent présenter la sortie comme un brouillon à approuver, jamais comme vendable garanti à l'arrivée.",
@@ -319,7 +319,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "install",
-            title: "Install and authenticate the CLI",
+            title: "How do you install and authenticate the CLI?",
             body: [
               "The fastest path is npx, which needs only Node 18 or newer: run 'npx drafttodone help' to see every command. If you would rather not use npm at all, download the single file directly — 'curl -fsSL https://app.drafttodone.io/cli.mjs -o drafttodone.mjs' — and run it with 'node drafttodone.mjs help'. There are zero dependencies either way.",
               "Authenticate once: 'npx drafttodone signup --email your-email-address --password \"min8chars\"' creates the account and stores a session token in ~/.drafttodone.json. Replace the email placeholder with your own address. Returning users run 'login' with the same flags. You can also pass credentials through the DRAFTTODONE_EMAIL and DRAFTTODONE_PASSWORD environment variables, which is handy in a CI job or an agent's sandbox.",
@@ -334,7 +334,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "commands",
-            title: "The command set",
+            title: "Which commands does the CLI actually give you?",
             body: [
               "The core commands map one-to-one onto the workflow. 'status' prints your credits, subscription and share-reward eligibility. 'checkout --plan weekly' (or yearly) prints a Stripe URL you open in a browser to pay. 'create --niche \"...\" --lang en' starts a book and returns its id; add --random to let DraftToDone pick a surprise niche instead.",
               "'books' lists your books with status and a progress counter. 'wait <book-id>' blocks and polls until that book completes, printing status as it goes — ideal in a script that should not proceed until the files exist. 'download <book-id> --out ./dir' fetches all four deliverables into a folder.",
@@ -349,7 +349,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "mcp-equivalents",
-            title: "The MCP server and its tools",
+            title: "Which tools does the MCP server expose?",
             body: [
               "For agent frameworks, the same functionality lives at the MCP endpoint app.drafttodone.io/mcp — a stateless, streamable-HTTP server with no OAuth. In Claude Code, add it with 'claude mcp add --transport http drafttodone https://app.drafttodone.io/mcp'. In Hermes Agent, OpenClaw or any MCP host, register a remote server pointing at that URL; tools are discovered automatically.",
               "The eight tools mirror the CLI: sign_up and log_in return a session_token that every other tool takes as an argument; get_status, get_checkout_url, create_book, list_books, get_download_links and claim_share_reward do exactly what their names say. A discovery manifest sits at app.drafttodone.io/.well-known/mcp.json for agents that probe the well-known path.",
@@ -364,7 +364,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "full-flow",
-            title: "The full flow, start to finish",
+            title: "What does the full flow look like, from signup to download?",
             body: [
               "A complete terminal session reads like this: 'npx drafttodone signup --email your-email-address --password \"min8chars\"', then 'npx drafttodone checkout --plan weekly' and pay the printed URL in a browser. Replace the email placeholder first, then confirm credits landed with 'npx drafttodone status'.",
               "Then generate and collect: 'npx drafttodone create --niche \"beginner yoga for seniors\" --lang en' returns a book id; 'npx drafttodone wait <book-id>' blocks for the roughly 30 to 45 minutes of server-side generation; 'npx drafttodone download <book-id> --out ./my-book' saves the manuscript, interior PDF, cover image and KDP cover PDF.",
@@ -439,7 +439,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "installation",
-            title: "Installer et authentifier le CLI",
+            title: "Comment installer et authentifier le CLI ?",
             body: [
               "La voie la plus rapide est npx, qui ne nécessite que Node 18 ou plus récent : lancez « npx drafttodone help » pour voir toutes les commandes. Si vous préférez ne pas utiliser npm du tout, téléchargez le fichier unique directement — « curl -fsSL https://app.drafttodone.io/cli.mjs -o drafttodone.mjs » — et lancez-le avec « node drafttodone.mjs help ». Zéro dépendance dans les deux cas.",
               "Authentifiez-vous une fois : « npx drafttodone signup --email votre-adresse-email --password \"min8car\" » crée le compte et stocke un jeton de session dans ~/.drafttodone.json. Remplacez d'abord le placeholder par votre adresse. Les utilisateurs de retour lancent « login » avec les mêmes drapeaux. Vous pouvez aussi passer les identifiants via les variables d'environnement DRAFTTODONE_EMAIL et DRAFTTODONE_PASSWORD, pratique dans un job CI ou le bac à sable d'un agent.",
@@ -454,7 +454,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "commandes",
-            title: "L'ensemble des commandes",
+            title: "Quelles commandes le CLI met-il à disposition ?",
             body: [
               "Les commandes principales correspondent une à une au workflow. « status » affiche vos crédits, votre abonnement et votre éligibilité au crédit de partage. « checkout --plan weekly » (ou yearly) affiche une URL Stripe que vous ouvrez dans un navigateur pour payer. « create --niche \"...\" --lang fr » démarre un livre et renvoie son identifiant ; ajoutez --random pour laisser DraftToDone choisir une niche surprise.",
               "« books » liste vos livres avec statut et compteur de progression. « wait <book-id> » bloque et interroge jusqu'à ce que ce livre soit terminé, en affichant le statut au fil de l'eau — idéal dans un script qui ne doit pas avancer avant que les fichiers existent. « download <book-id> --out ./dossier » récupère les quatre livrables dans un dossier.",
@@ -469,7 +469,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "equivalents-mcp",
-            title: "Le serveur MCP et ses outils",
+            title: "Quels outils le serveur MCP expose-t-il ?",
             body: [
               "Pour les frameworks d'agents, la même fonctionnalité vit à l'endpoint MCP app.drafttodone.io/mcp — un serveur streamable-HTTP sans état, sans OAuth. Dans Claude Code, ajoutez-le avec « claude mcp add --transport http drafttodone https://app.drafttodone.io/mcp ». Dans Hermes Agent, OpenClaw ou tout hôte MCP, enregistrez un serveur distant pointant vers cette URL ; les outils sont découverts automatiquement.",
               "Les huit outils reflètent le CLI : sign_up et log_in renvoient un session_token que tout autre outil prend en argument ; get_status, get_checkout_url, create_book, list_books, get_download_links et claim_share_reward font exactement ce que leur nom indique. Un manifeste de découverte se trouve à app.drafttodone.io/.well-known/mcp.json pour les agents qui sondent le chemin well-known.",
@@ -484,7 +484,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
           },
           {
             id: "flux-complet",
-            title: "Le flux complet, du début à la fin",
+            title: "À quoi ressemble le flux complet, de l'inscription au téléchargement ?",
             body: [
               "Une session terminal complète ressemble à ceci : « npx drafttodone signup --email votre-adresse-email --password \"min8car\" », puis « npx drafttodone checkout --plan weekly » et payez l'URL affichée dans un navigateur. Remplacez d'abord le placeholder, puis confirmez l'arrivée des crédits avec « npx drafttodone status ».",
               "Ensuite générez et récupérez : « npx drafttodone create --niche \"yoga pour seniors débutants\" --lang fr » renvoie un identifiant de livre ; « npx drafttodone wait <book-id> » bloque pendant les 30 à 45 minutes environ de génération côté serveur ; « npx drafttodone download <book-id> --out ./mon-livre » sauvegarde le manuscrit, le PDF intérieur, l'image de couverture et le PDF de couverture KDP.",

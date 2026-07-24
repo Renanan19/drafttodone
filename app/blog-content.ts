@@ -289,7 +289,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "positioning",
-            title: "Start with a market promise, not a prompt",
+            title: "Why start with a reader promise, not a prompt?",
             body: [
               "Every profitable publishing workflow starts with a clear reader promise. Define who the book serves, what transformation it offers, what competing books already cover and where your angle is sharper or more useful.",
               "A practical niche brief includes the reader profile, pain points, search language, expected depth, tone, format constraints and the reason this book should exist now.",
@@ -303,7 +303,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "outline",
-            title: "Build an outline that can survive editing",
+            title: "What makes an outline strong enough to survive editing?",
             body: [
               "The outline is the control layer. It should define the sequence of ideas, the job of each chapter and the evidence or examples required before drafting begins.",
               "For nonfiction, use chapters as steps in a transformation. For fiction, use scenes as pressure points in a character arc. In both cases, ask the AI to critique gaps before it writes.",
@@ -317,7 +317,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "drafting",
-            title: "Draft in controlled passes",
+            title: "Chapter-by-chapter drafting vs one prompt for the whole book",
             body: [
               "Long-form quality improves when drafting happens in passes. Generate a rough chapter, evaluate it against the outline, request targeted rewrites, then edit with a human eye for rhythm, clarity and usefulness.",
               "Use the model for expansion and alternatives, but keep the acceptance criteria outside the model: reader promise, factual caution, originality, voice and formatting.",
@@ -331,7 +331,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "packaging",
-            title: "Package the book as a product",
+            title: "Why is packaging product design, not decoration?",
             body: [
               "Readers discover a book through its title, cover, subtitle, description and sample pages. Treat packaging as product design, not decoration.",
               "Before upload, confirm the cover communicates genre, the metadata matches search intent, the description sells the transformation and the interior formatting feels professional on the devices or trim sizes you target.",
@@ -353,17 +353,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Can AI write an entire book by itself?",
+            question: "Can AI write an entire book without a human editor?",
             answer:
               "It can generate long manuscripts, but a publishable book still needs editorial direction, fact checking, structure, taste and quality control. The strongest workflow uses AI as production leverage, not as the final editor.",
           },
           {
-            question: "What is the biggest mistake in AI publishing?",
+            question: "What is the biggest mistake in an AI publishing workflow?",
             answer:
               "Skipping positioning. If the reader promise is weak, more automation only produces more undifferentiated books.",
           },
           {
-            question: "How many quality checks should an AI-assisted book have?",
+            question: "How many quality checks does an AI-assisted book need?",
             answer:
               "At minimum: outline review, chapter review, full-manuscript consistency pass, metadata review, cover review and final file review.",
           },
@@ -388,7 +388,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "positionnement",
-            title: "Commencer par une promesse de marché, pas par un prompt",
+            title: "Pourquoi commencer par une promesse lecteur, pas par un prompt ?",
             body: [
               "Tout workflow rentable commence par une promesse lecteur claire. Définissez à qui le livre s'adresse, quelle transformation il promet, ce que les concurrents couvrent déjà et l'angle qui rend votre livre plus net ou plus utile.",
               "Un brief de niche utile précise le profil lecteur, les douleurs, le vocabulaire de recherche, la profondeur attendue, le ton, les contraintes de format et la raison d'exister du livre.",
@@ -402,7 +402,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "plan",
-            title: "Construire un plan qui résiste à l'édition",
+            title: "Qu'est-ce qui rend un plan capable de résister à l'édition ?",
             body: [
               "Le plan est la couche de contrôle. Il définit la séquence des idées, le rôle de chaque chapitre et les exemples ou preuves nécessaires avant la rédaction.",
               "En non-fiction, les chapitres doivent suivre les étapes d'une transformation. En fiction, les scènes doivent faire avancer la tension et l'arc des personnages. Dans les deux cas, demandez à l'IA de critiquer les trous avant d'écrire.",
@@ -416,7 +416,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "redaction",
-            title: "Rédiger en passes contrôlées",
+            title: "Rédiger chapitre par chapitre vs un prompt pour tout le livre",
             body: [
               "La qualité long format augmente quand la rédaction se fait par passes. Générez un premier chapitre, évaluez-le face au plan, demandez des réécritures ciblées, puis éditez humainement le rythme, la clarté et l'utilité.",
               "Utilisez le modèle pour produire des options, mais gardez les critères d'acceptation hors du modèle : promesse lecteur, prudence factuelle, originalité, voix et formatage.",
@@ -430,7 +430,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "packaging",
-            title: "Packager le livre comme un produit",
+            title: "Pourquoi traiter le packaging comme du design produit ?",
             body: [
               "Les lecteurs découvrent un livre par son titre, sa couverture, son sous-titre, sa description et ses premières pages. Le packaging est du design produit, pas de la décoration.",
               "Avant publication, vérifiez que la couverture communique le genre, que les métadonnées répondent à l'intention de recherche, que la description vend la transformation et que le format intérieur paraît professionnel.",
@@ -452,17 +452,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "L'IA peut-elle écrire un livre entier seule ?",
+            question: "L'IA peut-elle écrire un livre entier sans éditeur humain ?",
             answer:
               "Elle peut générer de longs manuscrits, mais un livre publiable demande encore direction éditoriale, vérification, structure, goût et contrôle qualité.",
           },
           {
-            question: "Quelle est la plus grosse erreur en édition IA ?",
+            question: "Quelle est la plus grosse erreur dans un workflow d'édition IA ?",
             answer:
               "Sauter le positionnement. Si la promesse lecteur est faible, l'automatisation produit seulement plus de livres indifférenciés.",
           },
           {
-            question: "Combien de contrôles qualité faut-il prévoir ?",
+            question: "Combien de contrôles qualité faut-il avant de publier ?",
             answer:
               "Au minimum : revue du plan, revue par chapitre, cohérence globale, métadonnées, couverture et vérification finale des fichiers.",
           },
@@ -487,7 +487,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "posizionamento",
-            title: "Parti da una promessa di mercato, non da un prompt",
+            title: "Perché partire da una promessa al lettore, non da un prompt?",
             body: [
               "Ogni workflow redditizio inizia con una promessa chiara per il lettore. Definisci chi servi, quale trasformazione prometti, cosa coprono già i concorrenti e dove il tuo angolo è più utile.",
               "Un brief di nicchia pratico include profilo del lettore, problemi, linguaggio di ricerca, profondità attesa, tono, vincoli di formato e ragione per cui il libro deve esistere.",
@@ -501,7 +501,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "outline",
-            title: "Crea un outline che regga l'editing",
+            title: "Cosa rende un outline abbastanza solido per l'editing?",
             body: [
               "L'outline è il livello di controllo. Deve definire sequenza delle idee, ruolo di ogni capitolo ed esempi necessari prima della stesura.",
               "Nella non-fiction, i capitoli sono passi di una trasformazione. Nella fiction, le scene sono punti di pressione nell'arco dei personaggi. In entrambi i casi, fai criticare i vuoti all'IA prima di scrivere.",
@@ -515,7 +515,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "stesura",
-            title: "Scrivi in passaggi controllati",
+            title: "Capitolo per capitolo vs un prompt per tutto il libro",
             body: [
               "La qualità del long form aumenta quando la stesura avviene per passaggi. Genera una bozza, confrontala con l'outline, chiedi riscritture mirate e poi edita ritmo, chiarezza e utilità.",
               "Usa il modello per espansioni e alternative, ma mantieni i criteri di accettazione fuori dal modello: promessa al lettore, cautela sui fatti, originalità, voce e formattazione.",
@@ -529,7 +529,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "packaging",
-            title: "Trasforma il libro in un prodotto",
+            title: "Perché il packaging è product design e non decorazione?",
             body: [
               "I lettori scoprono un libro da titolo, copertina, sottotitolo, descrizione e prime pagine. Il packaging è product design, non decorazione.",
               "Prima dell'upload, verifica che la copertina comunichi il genere, i metadati rispondano all'intento di ricerca e la descrizione venda la trasformazione.",
@@ -551,17 +551,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "L'IA può scrivere un libro intero da sola?",
+            question: "L'IA può scrivere un libro intero senza un editor umano?",
             answer:
               "Può generare manoscritti lunghi, ma un libro pubblicabile richiede ancora direzione editoriale, verifica, struttura, gusto e controllo qualità.",
           },
           {
-            question: "Qual è l'errore principale nell'editoria IA?",
+            question: "Qual è l'errore più grave in un workflow editoriale IA?",
             answer:
               "Saltare il posizionamento. Se la promessa al lettore è debole, l'automazione produce solo più libri indistinti.",
           },
           {
-            question: "Quanti controlli qualità servono?",
+            question: "Quanti controlli qualità servono prima di pubblicare?",
             answer:
               "Almeno: revisione outline, capitoli, coerenza completa, metadati, copertina e file finali.",
           },
@@ -586,7 +586,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "positionierung",
-            title: "Starte mit einem Marktversprechen, nicht mit einem Prompt",
+            title: "Warum mit einem Leserversprechen starten, nicht mit einem Prompt?",
             body: [
               "Jeder profitable Publishing-Workflow beginnt mit einem klaren Leserinnenversprechen. Definiere, wem das Buch dient, welche Veränderung es bietet, was Konkurrenzbücher bereits abdecken und wo dein Blickwinkel nützlicher ist.",
               "Ein praktischer Nischenbrief enthält Leserprofil, Probleme, Suchsprache, erwartete Tiefe, Ton, Formatgrenzen und den Grund, warum dieses Buch existieren sollte.",
@@ -600,7 +600,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "outline",
-            title: "Baue eine Outline, die dem Lektorat standhält",
+            title: "Was macht eine Outline stark genug für das Lektorat?",
             body: [
               "Die Outline ist die Kontrollschicht. Sie definiert die Reihenfolge der Ideen, die Aufgabe jedes Kapitels und welche Beispiele oder Belege vor dem Schreiben nötig sind.",
               "In Nonfiction sind Kapitel Schritte einer Transformation. In Fiction sind Szenen Druckpunkte im Figurenbogen. In beiden Fällen sollte die KI zuerst Lücken kritisieren, bevor sie schreibt.",
@@ -614,7 +614,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "entwurf",
-            title: "Schreibe in kontrollierten Durchläufen",
+            title: "Kapitelweise schreiben vs ein Prompt für das ganze Buch",
             body: [
               "Langform wird besser, wenn Entwürfe in Durchläufen entstehen. Erzeuge ein Rohkapitel, prüfe es gegen die Outline, fordere gezielte Überarbeitungen an und editiere anschließend Rhythmus, Klarheit und Nutzen.",
               "Nutze das Modell für Erweiterungen und Varianten, aber halte die Akzeptanzkriterien außerhalb des Modells: Leserversprechen, Faktenvorsicht, Originalität, Stimme und Format.",
@@ -628,7 +628,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "packaging",
-            title: "Verpacke das Buch wie ein Produkt",
+            title: "Warum ist Packaging Produktdesign und nicht Dekoration?",
             body: [
               "Leser entdecken ein Buch über Titel, Cover, Untertitel, Beschreibung und Leseprobe. Packaging ist Produktdesign, nicht Dekoration.",
               "Vor dem Upload sollte das Cover das Genre kommunizieren, die Metadaten zur Suchintention passen, die Beschreibung die Transformation verkaufen und das Innenlayout professionell wirken.",
@@ -650,17 +650,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Kann KI ein ganzes Buch allein schreiben?",
+            question: "Kann KI ein ganzes Buch ohne menschliches Lektorat schreiben?",
             answer:
               "Sie kann lange Manuskripte erzeugen, aber ein veröffentlichbares Buch braucht weiterhin redaktionelle Richtung, Prüfung, Struktur, Geschmack und Qualitätskontrolle.",
           },
           {
-            question: "Was ist der größte Fehler im KI-Publishing?",
+            question: "Was ist der größte Fehler in einem KI-Publishing-Workflow?",
             answer:
               "Positionierung zu überspringen. Wenn das Leserversprechen schwach ist, produziert Automatisierung nur mehr austauschbare Bücher.",
           },
           {
-            question: "Wie viele Qualitätschecks braucht ein KI-Buch?",
+            question: "Wie viele Qualitätschecks braucht ein KI-Buch vor dem Upload?",
             answer:
               "Mindestens Outline-Review, Kapitelreview, Konsistenzprüfung, Metadatenprüfung, Coverprüfung und finale Dateiprüfung.",
           },
@@ -698,7 +698,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "intent",
-            title: "Translate reader intent into metadata",
+            title: "How do you turn reader search intent into book metadata?",
             body: [
               "Readers do not search for your internal concept. They search for outcomes, genres, problems, tropes, formats and recognizable language. Your metadata should mirror that language while staying natural.",
               "Start by grouping search phrases by intent: informational, comparison, transformation, genre expectation and gift or use case. Then decide which intent belongs in the title, subtitle, description and keywords.",
@@ -712,7 +712,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "title",
-            title: "Make the title clear before it is clever",
+            title: "Clear vs clever: which book title stops the right reader?",
             body: [
               "A title must stop the right reader, not impress every reader. The best titles combine a memorable hook with a category signal or promise.",
               "For nonfiction, test whether a reader can infer the benefit in three seconds. For fiction, test whether genre, tone and emotional premise are visible.",
@@ -726,7 +726,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "description",
-            title: "Write descriptions as conversion pages",
+            title: "How do you write a book description that converts?",
             body: [
               "A good book description has a hook, reader identification, outcome, credibility signals, format expectation and a clean call to action. It should sound like the book, not like a generic ad.",
               "Use short paragraphs, strong first lines and scannable benefits. The description should answer: Is this for me? What will I get? Why this book instead of another one?",
@@ -740,7 +740,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "maintenance",
-            title: "Maintain metadata as the catalog grows",
+            title: "How do you maintain book metadata as the catalog grows?",
             body: [
               "SEO metadata is not finished at upload. As the catalog grows, you need naming conventions, keyword maps, category notes and a schedule for refreshing weak listings.",
               "Track why every metadata choice was made. This makes future optimization faster and prevents internal competition between books that should target different intents.",
@@ -762,17 +762,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Should book metadata include exact keywords?",
+            question: "Do I need exact-match keywords in my book metadata?",
             answer:
               "Use exact phrases only when they are relevant and natural. Metadata should help the right reader and marketplace understand the book, not feel stuffed.",
           },
           {
-            question: "What matters most: title or description?",
+            question: "Which matters more, the book title or the description?",
             answer:
               "They do different jobs. The title earns attention and relevance; the description converts interest into a purchase decision.",
           },
           {
-            question: "How often should metadata be updated?",
+            question: "How often should I update book metadata on KDP?",
             answer:
               "Review it when you have enough performance signal, when the category shifts or when the catalog strategy changes. Avoid constant random edits.",
           },
@@ -797,7 +797,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "intention",
-            title: "Traduire l'intention lecteur en métadonnées",
+            title: "Comment traduire l'intention de recherche en métadonnées livre ?",
             body: [
               "Les lecteurs ne cherchent pas votre concept interne. Ils cherchent des résultats, des genres, des problèmes, des tropes, des formats et un langage reconnaissable.",
               "Regroupez les requêtes par intention : information, comparaison, transformation, attente de genre, cadeau ou cas d'usage. Puis décidez ce qui va dans le titre, le sous-titre, la description et les mots-clés.",
@@ -811,7 +811,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "titre",
-            title: "Rendre le titre clair avant de le rendre malin",
+            title: "Clair vs malin : quel titre de livre arrête le bon lecteur ?",
             body: [
               "Un titre doit arrêter le bon lecteur, pas impressionner tout le monde. Les meilleurs titres combinent un hook mémorable avec un signal de catégorie ou une promesse.",
               "En non-fiction, testez si le bénéfice se comprend en trois secondes. En fiction, testez si le genre, le ton et la prémisse émotionnelle sont visibles.",
@@ -825,7 +825,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "description",
-            title: "Écrire la description comme une page de conversion",
+            title: "Comment écrire une description de livre qui convertit ?",
             body: [
               "Une bonne description contient un hook, une identification lecteur, un résultat, des signaux de crédibilité, une attente de format et un appel à l'action clair.",
               "Utilisez des paragraphes courts, une première ligne forte et des bénéfices scannables. La description doit répondre : est-ce pour moi, que vais-je obtenir, pourquoi ce livre plutôt qu'un autre ?",
@@ -839,7 +839,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "maintenance",
-            title: "Maintenir les métadonnées quand le catalogue grandit",
+            title: "Comment maintenir les métadonnées quand le catalogue grandit ?",
             body: [
               "Les métadonnées SEO ne sont pas terminées au moment de l'upload. Avec un catalogue, il faut des conventions, des cartes de mots-clés, des notes de catégorie et un calendrier de révision.",
               "Documentez pourquoi chaque choix a été fait. Cela accélère l'optimisation et évite la concurrence interne entre livres qui devraient viser des intentions différentes.",
@@ -861,17 +861,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Faut-il mettre des mots-clés exacts dans les métadonnées ?",
+            question: "Faut-il des mots-clés en correspondance exacte dans les métadonnées ?",
             answer:
               "Oui seulement s'ils sont pertinents et naturels. Les métadonnées doivent aider le lecteur et la plateforme à comprendre le livre, pas donner une impression de bourrage.",
           },
           {
-            question: "Qu'est-ce qui compte le plus : titre ou description ?",
+            question: "Qu'est-ce qui compte le plus, le titre ou la description ?",
             answer:
               "Ils ont des rôles différents. Le titre capte l'attention et la pertinence ; la description transforme l'intérêt en décision d'achat.",
           },
           {
-            question: "À quelle fréquence mettre à jour les métadonnées ?",
+            question: "À quelle fréquence faut-il mettre à jour les métadonnées KDP ?",
             answer:
               "Quand vous avez assez de signal, quand la catégorie change ou quand la stratégie catalogue évolue. Évitez les modifications aléatoires permanentes.",
           },
@@ -896,7 +896,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "intento",
-            title: "Traduci l'intento del lettore in metadati",
+            title: "Come si traduce l'intento di ricerca in metadati del libro?",
             body: [
               "I lettori non cercano il tuo concetto interno. Cercano risultati, generi, problemi, tropi, formati e parole riconoscibili.",
               "Raggruppa le frasi di ricerca per intento: informativo, comparativo, trasformativo, aspettativa di genere, regalo o uso pratico. Poi assegna ogni intento a titolo, sottotitolo, descrizione o keyword.",
@@ -910,7 +910,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "titolo",
-            title: "Rendi il titolo chiaro prima che brillante",
+            title: "Chiaro vs brillante: quale titolo ferma il lettore giusto?",
             body: [
               "Un titolo deve fermare il lettore giusto, non impressionare tutti. I titoli migliori uniscono un hook memorabile a un segnale di categoria o promessa.",
               "Nella non-fiction, verifica se il beneficio si capisce in tre secondi. Nella fiction, verifica se genere, tono e premessa emotiva sono visibili.",
@@ -924,7 +924,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "descrizione",
-            title: "Scrivi la descrizione come una pagina di conversione",
+            title: "Come si scrive una descrizione di libro che converte?",
             body: [
               "Una buona descrizione contiene hook, identificazione del lettore, risultato, segnali di credibilità, aspettativa di formato e call to action pulita.",
               "Usa paragrafi brevi, prime righe forti e benefici scansionabili. La descrizione deve rispondere: è per me, cosa ottengo, perché questo libro?",
@@ -938,7 +938,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "manutenzione",
-            title: "Mantieni i metadati mentre il catalogo cresce",
+            title: "Come si mantengono i metadati quando il catalogo cresce?",
             body: [
               "I metadati SEO non finiscono all'upload. Quando il catalogo cresce servono convenzioni, mappe keyword, note di categoria e revisioni programmate.",
               "Traccia il perché di ogni scelta. Questo rende più rapida l'ottimizzazione futura ed evita competizione interna tra libri simili.",
@@ -960,17 +960,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "I metadati devono includere keyword esatte?",
+            question: "Servono keyword a corrispondenza esatta nei metadati?",
             answer:
               "Solo se sono rilevanti e naturali. I metadati devono aiutare lettore e marketplace a capire il libro, non sembrare keyword stuffing.",
           },
           {
-            question: "Conta di più il titolo o la descrizione?",
+            question: "Conta di più il titolo o la descrizione del libro?",
             answer:
               "Fanno lavori diversi. Il titolo guadagna attenzione e rilevanza; la descrizione converte l'interesse in decisione d'acquisto.",
           },
           {
-            question: "Quanto spesso aggiornare i metadati?",
+            question: "Ogni quanto vanno aggiornati i metadati su KDP?",
             answer:
               "Quando hai abbastanza segnale, quando cambia la categoria o quando evolve la strategia di catalogo. Evita modifiche casuali continue.",
           },
@@ -995,7 +995,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "intention",
-            title: "Übersetze Leserintention in Metadaten",
+            title: "Wie übersetzt man Suchintention in Buchmetadaten?",
             body: [
               "Leser suchen nicht nach deinem internen Konzept. Sie suchen nach Ergebnissen, Genres, Problemen, Tropes, Formaten und vertrauter Sprache.",
               "Gruppiere Suchphrasen nach Intention: Information, Vergleich, Transformation, Genreerwartung, Geschenk oder Anwendungsfall. Danach verteilst du sie auf Titel, Untertitel, Beschreibung und Keywords.",
@@ -1009,7 +1009,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "titel",
-            title: "Mach den Titel klar, bevor er clever ist",
+            title: "Klar vs clever: welcher Buchtitel stoppt die richtigen Leser?",
             body: [
               "Ein Titel muss den richtigen Leser stoppen, nicht alle beeindrucken. Die besten Titel verbinden einen merkbaren Hook mit Kategorie oder Versprechen.",
               "Bei Nonfiction sollte der Nutzen in drei Sekunden sichtbar sein. Bei Fiction sollten Genre, Ton und emotionaler Kern erkennbar sein.",
@@ -1023,7 +1023,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "beschreibung",
-            title: "Schreibe Beschreibungen wie Conversion-Seiten",
+            title: "Wie schreibt man eine Buchbeschreibung, die konvertiert?",
             body: [
               "Eine gute Buchbeschreibung hat Hook, Leseridentifikation, Ergebnis, Glaubwürdigkeit, Formatklarheit und eine saubere Handlungsaufforderung.",
               "Nutze kurze Absätze, starke erste Zeilen und scanbare Nutzenpunkte. Die Beschreibung beantwortet: Ist das für mich? Was bekomme ich? Warum dieses Buch?",
@@ -1037,7 +1037,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "pflege",
-            title: "Pflege Metadaten, wenn der Katalog wächst",
+            title: "Wie pflegt man Buchmetadaten, wenn der Katalog wächst?",
             body: [
               "SEO-Metadaten sind beim Upload nicht fertig. Mit wachsendem Katalog brauchst du Namenskonventionen, Keyword-Maps, Kategorienotizen und geplante Reviews.",
               "Dokumentiere, warum jede Entscheidung getroffen wurde. So optimierst du später schneller und vermeidest interne Konkurrenz zwischen Titeln.",
@@ -1059,17 +1059,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Sollten Buchmetadaten exakte Keywords enthalten?",
+            question: "Brauchen Buchmetadaten exakte Keywords im Wortlaut?",
             answer:
               "Nur, wenn sie relevant und natürlich sind. Metadaten sollen Leser und Marketplace helfen, das Buch zu verstehen, nicht überladen wirken.",
           },
           {
-            question: "Was ist wichtiger: Titel oder Beschreibung?",
+            question: "Was ist wichtiger, der Buchtitel oder die Beschreibung?",
             answer:
               "Sie erfüllen verschiedene Aufgaben. Der Titel erzeugt Aufmerksamkeit und Relevanz; die Beschreibung wandelt Interesse in Kaufabsicht.",
           },
           {
-            question: "Wie oft sollten Metadaten aktualisiert werden?",
+            question: "Wie oft sollte man KDP-Metadaten aktualisieren?",
             answer:
               "Wenn genug Performance-Signal vorliegt, die Kategorie sich verändert oder die Katalogstrategie wechselt. Vermeide ständige zufällige Änderungen.",
           },
@@ -1107,7 +1107,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "genre",
-            title: "Design for genre recognition first",
+            title: "Why should an AI book cover follow genre codes first?",
             body: [
               "Readers use covers to sort books quickly. Before aesthetics, define the genre codes: color range, typography style, subject matter, composition density and emotional tone.",
               "AI prompts should include these codes explicitly. Otherwise, you may get beautiful images that fail the marketplace test because they look like the wrong category.",
@@ -1121,7 +1121,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "thumbnail",
-            title: "Win the thumbnail before the full-size cover",
+            title: "Thumbnail first, not the full-size cover",
             body: [
               "Most buyers first see the cover at small size. If the title, subject and contrast disappear in thumbnail view, the cover is not ready.",
               "Design the cover in repeated zoom checks. The title should stay legible, the central shape should remain recognizable and the emotional signal should survive compression.",
@@ -1135,7 +1135,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "wrap",
-            title: "Treat spine and back cover as part of the system",
+            title: "What does a full print wrap need beyond the front cover?",
             body: [
               "Print covers need more than a front image. Spine width, trim size, bleed, barcode area and back-cover copy all affect the final file.",
               "Generate or extend background art with room for text, then assemble the full wrap in a layout tool where dimensions can be controlled precisely.",
@@ -1149,7 +1149,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "qa",
-            title: "Run a cover QA pass before upload",
+            title: "What should a cover QA pass catch before upload?",
             body: [
               "AI-generated images can contain artifacts, strange hands, broken objects, unreadable signs or style inconsistencies. These details weaken trust even when the overall image looks strong.",
               "A final QA pass should inspect edges, faces, hands, text, shadows, print contrast, typography alignment and whether the cover still matches the book promise.",
@@ -1171,17 +1171,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Can AI generate a finished book cover?",
+            question: "Can an AI image tool deliver a print-ready book cover?",
             answer:
               "It can generate strong imagery, but finished covers need typography, layout, dimensions, bleed, spine and back-cover handling.",
           },
           {
-            question: "What makes an AI cover look amateur?",
+            question: "What makes an AI book cover look amateur?",
             answer:
               "Weak typography, wrong genre codes, cluttered imagery, low contrast and uncorrected image artifacts are the most common signals.",
           },
           {
-            question: "Should the cover be unique or genre-consistent?",
+            question: "Should a book cover look unique or match its genre?",
             answer:
               "Both. It should be familiar enough to be recognized and distinctive enough to be remembered.",
           },
@@ -1206,7 +1206,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "genre",
-            title: "Designer d'abord pour la reconnaissance de genre",
+            title: "Pourquoi suivre d'abord les codes du genre sur une couverture IA ?",
             body: [
               "Les lecteurs utilisent les couvertures pour trier les livres très vite. Avant l'esthétique, définissez les codes du genre : couleurs, typographie, sujet, densité de composition et ton émotionnel.",
               "Les prompts d'image doivent inclure ces codes. Sinon, vous obtenez parfois une belle image qui échoue en marketplace parce qu'elle ressemble au mauvais rayon.",
@@ -1220,7 +1220,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "miniature",
-            title: "Gagner la miniature avant le grand format",
+            title: "La miniature d'abord, pas le grand format",
             body: [
               "La plupart des acheteurs voient d'abord la couverture en petit. Si le titre, le sujet ou le contraste disparaissent en miniature, la couverture n'est pas prête.",
               "Vérifiez le design à plusieurs tailles. Le titre doit rester lisible, la forme centrale reconnaissable et le signal émotionnel visible malgré la compression.",
@@ -1234,7 +1234,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "wrap",
-            title: "Traiter le dos et la quatrième comme un système",
+            title: "Comment préparer dos et quatrième de couverture pour le print ?",
             body: [
               "Une couverture print ne se limite pas à la première. Largeur du dos, format, fonds perdus, zone code-barres et texte de quatrième influencent le fichier final.",
               "Générez ou étendez l'art avec des zones calmes pour le texte, puis assemblez la couverture complète dans un outil où les dimensions sont précises.",
@@ -1248,7 +1248,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "qa",
-            title: "Faire une passe QA avant l'upload",
+            title: "Que doit détecter une passe QA de couverture avant l'upload ?",
             body: [
               "Les images IA peuvent contenir artefacts, mains étranges, objets cassés, signes illisibles ou incohérences de style. Ces détails cassent la confiance.",
               "La QA finale inspecte bords, visages, mains, textes, ombres, contraste print, alignement typographique et cohérence avec la promesse du livre.",
@@ -1270,17 +1270,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "L'IA peut-elle générer une couverture finie ?",
+            question: "Un outil d'image IA peut-il livrer une couverture prête à imprimer ?",
             answer:
               "Elle peut générer une très bonne image, mais une couverture finie demande typographie, layout, dimensions, fonds perdus, dos et quatrième.",
           },
           {
-            question: "Qu'est-ce qui rend une couverture IA amateur ?",
+            question: "Qu'est-ce qui fait qu'une couverture IA paraît amateur ?",
             answer:
               "Typographie faible, mauvais codes de genre, image chargée, contraste insuffisant et artefacts non corrigés.",
           },
           {
-            question: "Faut-il une couverture unique ou conforme au genre ?",
+            question: "Faut-il une couverture unique ou fidèle aux codes du genre ?",
             answer:
               "Les deux. Elle doit être assez familière pour être reconnue et assez distinctive pour être mémorisée.",
           },
@@ -1305,7 +1305,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "genere",
-            title: "Progetta prima per il riconoscimento del genere",
+            title: "Perché una copertina IA deve seguire prima i codici del genere?",
             body: [
               "I lettori usano le copertine per ordinare i libri velocemente. Prima dell'estetica, definisci i codici del genere: colori, tipografia, soggetto, densità della composizione e tono emotivo.",
               "I prompt IA devono includere questi codici. Altrimenti rischi immagini belle che falliscono sul marketplace perché sembrano di un'altra categoria.",
@@ -1319,7 +1319,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "thumbnail",
-            title: "Vinci la thumbnail prima della copertina grande",
+            title: "Prima la thumbnail, non la copertina grande",
             body: [
               "Molti acquirenti vedono prima la copertina in piccolo. Se titolo, soggetto e contrasto spariscono nella thumbnail, non è pronta.",
               "Controlla il design a zoom diversi. Il titolo deve restare leggibile, la forma principale riconoscibile e il segnale emotivo chiaro.",
@@ -1333,7 +1333,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "wrap",
-            title: "Tratta dorso e retro come parte del sistema",
+            title: "Come si preparano dorso e retro copertina per la stampa?",
             body: [
               "Una copertina per stampa richiede più del fronte. Larghezza del dorso, formato, abbondanza, area barcode e copy del retro influenzano il file finale.",
               "Genera o estendi lo sfondo lasciando aree tranquille per il testo, poi assembla il wrap completo in uno strumento con dimensioni precise.",
@@ -1347,7 +1347,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "qa",
-            title: "Esegui una QA della copertina prima dell'upload",
+            title: "Cosa deve intercettare la QA della copertina prima dell'upload?",
             body: [
               "Le immagini generate possono contenere artefatti, mani strane, oggetti rotti, segni illeggibili o incoerenze di stile. Questi dettagli riducono la fiducia.",
               "La QA finale controlla bordi, volti, mani, testi, ombre, contrasto stampa, allineamento tipografico e coerenza con la promessa del libro.",
@@ -1369,17 +1369,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "L'IA può generare una copertina finita?",
+            question: "Un generatore IA può dare una copertina pronta per la stampa?",
             answer:
               "Può generare immagini forti, ma una copertina finita richiede tipografia, layout, dimensioni, abbondanza, dorso e retro.",
           },
           {
-            question: "Cosa fa sembrare amatoriale una copertina IA?",
+            question: "Cosa fa sembrare amatoriale una copertina di libro IA?",
             answer:
               "Tipografia debole, codici di genere sbagliati, immagine troppo piena, basso contrasto e artefatti non corretti.",
           },
           {
-            question: "La copertina deve essere unica o coerente col genere?",
+            question: "La copertina deve essere unica o riconoscibile nel genere?",
             answer:
               "Entrambe. Deve essere abbastanza familiare da essere riconosciuta e abbastanza distintiva da essere ricordata.",
           },
@@ -1404,7 +1404,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "genre",
-            title: "Entwirf zuerst für Genreerkennung",
+            title: "Warum folgt ein KI-Buchcover zuerst den Genrecodes?",
             body: [
               "Leser nutzen Cover, um Bücher schnell einzuordnen. Vor der Ästhetik definierst du Genre-Codes: Farben, Typografie, Motiv, Kompositionsdichte und emotionalen Ton.",
               "KI-Prompts sollten diese Codes ausdrücklich enthalten. Sonst entstehen schöne Bilder, die im Marketplace falsch einsortiert wirken.",
@@ -1418,7 +1418,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "thumbnail",
-            title: "Gewinne das Thumbnail vor dem großen Cover",
+            title: "Zuerst das Thumbnail, nicht das große Cover",
             body: [
               "Die meisten Käufer sehen das Cover zuerst klein. Wenn Titel, Motiv und Kontrast im Thumbnail verschwinden, ist es nicht bereit.",
               "Prüfe das Design in mehreren Zoomstufen. Titel, Hauptform und emotionales Signal müssen auch komprimiert klar bleiben.",
@@ -1432,7 +1432,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "wrap",
-            title: "Behandle Rücken und Rückseite als System",
+            title: "Wie bereitet man Rücken und Rückseite für den Druck vor?",
             body: [
               "Printcover brauchen mehr als ein Frontbild. Rückenbreite, Format, Beschnitt, Barcodefläche und Rückseitentext beeinflussen die finale Datei.",
               "Generiere oder erweitere die Bildfläche mit ruhigen Textzonen und baue danach das komplette Cover in einem Layouttool mit präzisen Maßen.",
@@ -1446,7 +1446,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "qa",
-            title: "Führe vor dem Upload eine Cover-QA durch",
+            title: "Was findet eine Cover-QA vor dem Upload?",
             body: [
               "KI-Bilder können Artefakte, seltsame Hände, kaputte Objekte, unlesbare Zeichen oder Stilbrüche enthalten. Solche Details schwächen Vertrauen.",
               "Die finale QA prüft Kanten, Gesichter, Hände, Text, Schatten, Printkontrast, Typografieausrichtung und die Übereinstimmung mit dem Buchversprechen.",
@@ -1468,17 +1468,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Kann KI ein fertiges Buchcover erzeugen?",
+            question: "Liefert ein KI-Bildtool ein druckfertiges Buchcover?",
             answer:
               "Sie kann starke Bilder erzeugen, aber fertige Cover brauchen Typografie, Layout, Maße, Beschnitt, Rücken und Rückseite.",
           },
           {
-            question: "Was lässt ein KI-Cover amateurhaft wirken?",
+            question: "Woran erkennt man ein amateurhaftes KI-Buchcover?",
             answer:
               "Schwache Typografie, falsche Genre-Codes, überladene Bilder, geringer Kontrast und unkorrigierte Artefakte.",
           },
           {
-            question: "Soll ein Cover einzigartig oder genretypisch sein?",
+            question: "Soll ein Buchcover einzigartig oder genretypisch aussehen?",
             answer:
               "Beides. Es sollte vertraut genug sein, um erkannt zu werden, und markant genug, um in Erinnerung zu bleiben.",
           },
@@ -1516,7 +1516,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "system",
-            title: "Define the catalog system before the calendar",
+            title: "Why does the catalog system come before the calendar?",
             body: [
               "Publishing calendars are useful only after the production system is clear. Decide which categories you serve, which formats you support, what quality threshold is non-negotiable and how ideas move from research to upload.",
               "This prevents the common trap of chasing weekly output while the catalog becomes messy, redundant and hard to optimize.",
@@ -1530,7 +1530,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "templates",
-            title: "Use templates without flattening the books",
+            title: "Templates for the process, not for the voice",
             body: [
               "Templates reduce cognitive load, but they should not make every book feel identical. Separate structural templates from creative decisions.",
               "For example, keep a consistent metadata brief, QA checklist and cover handoff format, while allowing tone, examples, pacing and visual direction to change by niche.",
@@ -1544,7 +1544,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "qa",
-            title: "Install quality gates that stop weak books",
+            title: "Which quality gates stop a weak book before upload?",
             body: [
               "A quality gate is a decision point where a book can move forward, return for revision or be killed. Gates protect the catalog from speed-driven mistakes.",
               "Useful gates cover niche fit, outline strength, manuscript usefulness, originality risk, cover clarity, metadata alignment and final file readiness.",
@@ -1558,7 +1558,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "learning",
-            title: "Turn performance into process improvement",
+            title: "Review launches in cohorts, not one book at a time",
             body: [
               "Catalog scale becomes powerful when every launch improves the operating system. Track what changed, why it changed and what you will test next.",
               "Look for patterns across titles instead of overreacting to one book. The goal is to improve niche selection, packaging and production quality over time.",
@@ -1580,17 +1580,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "How many books can one operator manage?",
+            question: "How many books can one person publish and still manage?",
             answer:
               "It depends on scope, quality bar and automation. A system matters more than a number: without briefs and gates, even a small catalog becomes hard to manage.",
           },
           {
-            question: "Should every book use the same production template?",
+            question: "Should every title use the same production template?",
             answer:
               "Use the same operational skeleton, but adapt creative choices to each niche and reader promise.",
           },
           {
-            question: "What should be tracked in a publishing catalog?",
+            question: "What should a publishing catalog track for each title?",
             answer:
               "Track niche, promise, audience, metadata, cover direction, production notes, quality issues, launch date and future optimization ideas.",
           },
@@ -1615,7 +1615,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "systeme",
-            title: "Définir le système de catalogue avant le calendrier",
+            title: "Pourquoi le système de catalogue passe-t-il avant le calendrier ?",
             body: [
               "Un calendrier éditorial n'est utile qu'après clarification du système de production. Décidez quelles catégories vous servez, quels formats vous supportez, quel niveau qualité est non négociable et comment une idée passe de la recherche à l'upload.",
               "Cela évite de courir après une cadence hebdomadaire pendant que le catalogue devient brouillon, redondant et difficile à optimiser.",
@@ -1629,7 +1629,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "templates",
-            title: "Utiliser des templates sans aplatir les livres",
+            title: "Des templates pour le process, pas pour la voix",
             body: [
               "Les templates réduisent la charge mentale, mais ne doivent pas rendre tous les livres identiques. Séparez les templates structurels des décisions créatives.",
               "Gardez un brief de métadonnées, une checklist QA et un format de handoff couverture cohérents, tout en adaptant ton, exemples, rythme et direction visuelle à la niche.",
@@ -1643,7 +1643,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "qa",
-            title: "Installer des portes qualité qui stoppent les livres faibles",
+            title: "Quelles portes qualité stoppent un livre faible avant l'upload ?",
             body: [
               "Une porte qualité est un point de décision : avancer, revenir en révision ou tuer le projet. Elle protège le catalogue des erreurs causées par la vitesse.",
               "Les portes utiles couvrent fit de niche, solidité du plan, utilité du manuscrit, risque d'originalité, clarté couverture, alignement des métadonnées et readiness des fichiers.",
@@ -1657,7 +1657,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "apprentissage",
-            title: "Transformer la performance en amélioration du process",
+            title: "Analyser les lancements par cohortes, pas livre par livre",
             body: [
               "L'échelle devient puissante quand chaque lancement améliore le système. Notez ce qui a changé, pourquoi et ce que vous testerez ensuite.",
               "Cherchez des patterns sur plusieurs titres au lieu de réagir à un seul livre. L'objectif est d'améliorer sélection de niche, packaging et qualité de production.",
@@ -1679,17 +1679,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Combien de livres un opérateur peut-il gérer ?",
+            question: "Combien de livres une seule personne peut-elle gérer ?",
             answer:
               "Cela dépend du périmètre, du niveau qualité et de l'automatisation. Le système compte plus que le chiffre : sans briefs et portes qualité, même un petit catalogue devient difficile.",
           },
           {
-            question: "Faut-il le même template pour chaque livre ?",
+            question: "Faut-il le même template de production pour chaque titre ?",
             answer:
               "Gardez le même squelette opérationnel, mais adaptez les choix créatifs à chaque niche et promesse lecteur.",
           },
           {
-            question: "Que faut-il suivre dans un catalogue éditorial ?",
+            question: "Quelles données suivre pour chaque titre du catalogue ?",
             answer:
               "Niche, promesse, audience, métadonnées, direction couverture, notes de production, problèmes qualité, date de lancement et idées d'optimisation.",
           },
@@ -1714,7 +1714,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "sistema",
-            title: "Definisci il sistema di catalogo prima del calendario",
+            title: "Perché il sistema di catalogo viene prima del calendario?",
             body: [
               "I calendari editoriali servono solo dopo aver chiarito il sistema di produzione. Decidi categorie, formati, soglie qualità e come un'idea passa da ricerca a upload.",
               "Questo evita di inseguire output settimanale mentre il catalogo diventa confuso, ridondante e difficile da ottimizzare.",
@@ -1728,7 +1728,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "template",
-            title: "Usa template senza appiattire i libri",
+            title: "Template per il processo, non per la voce",
             body: [
               "I template riducono carico cognitivo, ma non devono far sembrare ogni libro identico. Separa template strutturali da decisioni creative.",
               "Mantieni brief metadati, checklist QA e handoff copertina coerenti, lasciando variare tono, esempi, ritmo e direzione visiva.",
@@ -1742,7 +1742,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "qa",
-            title: "Installa gate di qualità che fermano libri deboli",
+            title: "Quali gate di qualità fermano un libro debole prima dell'upload?",
             body: [
               "Un gate di qualità è un punto decisionale dove un libro avanza, torna in revisione o viene fermato. Protegge il catalogo dagli errori della velocità.",
               "Gate utili coprono fit di nicchia, solidità outline, utilità del manoscritto, rischio originalità, chiarezza copertina, metadati e file finali.",
@@ -1756,7 +1756,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "apprendimento",
-            title: "Trasforma performance in miglioramento del processo",
+            title: "Analizza i lanci per coorti, non un libro alla volta",
             body: [
               "La scala diventa potente quando ogni lancio migliora il sistema. Traccia cosa è cambiato, perché e cosa testerai dopo.",
               "Cerca pattern su più titoli invece di reagire a un solo libro. L'obiettivo è migliorare selezione di nicchia, packaging e qualità produttiva.",
@@ -1778,17 +1778,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Quanti libri può gestire un operatore?",
+            question: "Quanti libri può gestire davvero una sola persona?",
             answer:
               "Dipende da perimetro, soglia qualità e automazione. Il sistema conta più del numero: senza brief e gate, anche un piccolo catalogo diventa difficile.",
           },
           {
-            question: "Ogni libro deve usare lo stesso template?",
+            question: "Ogni titolo deve usare lo stesso template di produzione?",
             answer:
               "Usa lo stesso scheletro operativo, ma adatta le scelte creative a nicchia e promessa.",
           },
           {
-            question: "Cosa tracciare in un catalogo editoriale?",
+            question: "Quali dati tracciare per ogni titolo del catalogo?",
             answer:
               "Nicchia, promessa, audience, metadati, direzione copertina, note produttive, problemi qualità, data lancio e idee di ottimizzazione.",
           },
@@ -1813,7 +1813,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "system",
-            title: "Definiere das Katalogsystem vor dem Kalender",
+            title: "Warum kommt das Katalogsystem vor dem Kalender?",
             body: [
               "Publishing-Kalender sind erst nützlich, wenn das Produktionssystem klar ist. Entscheide Kategorien, Formate, nicht verhandelbare Qualität und wie Ideen von Recherche zu Upload wandern.",
               "So vermeidest du, wöchentlichen Output zu jagen, während der Katalog unübersichtlich, redundant und schwer optimierbar wird.",
@@ -1827,7 +1827,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "templates",
-            title: "Nutze Templates, ohne Bücher flach zu machen",
+            title: "Templates für den Prozess, nicht für die Stimme",
             body: [
               "Templates reduzieren mentale Last, sollten aber nicht jedes Buch gleich klingen lassen. Trenne strukturelle Templates von kreativen Entscheidungen.",
               "Halte Metadatenbrief, QA-Checkliste und Cover-Handoff konsistent, während Ton, Beispiele, Tempo und visuelle Richtung je Nische variieren.",
@@ -1841,7 +1841,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "qa",
-            title: "Installiere Qualitätsgates, die schwache Bücher stoppen",
+            title: "Welche Qualitätsgates stoppen ein schwaches Buch vor dem Upload?",
             body: [
               "Ein Qualitätsgate ist ein Entscheidungspunkt: weiter, zurück in Revision oder beenden. Gates schützen den Katalog vor Fehlern durch Geschwindigkeit.",
               "Sinnvolle Gates prüfen Nischenfit, Outline-Stärke, Manuskriptnutzen, Originalitätsrisiko, Coverklarheit, Metadatenalignment und finale Dateien.",
@@ -1855,7 +1855,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "lernen",
-            title: "Mache Performance zu Prozessverbesserung",
+            title: "Launches in Kohorten prüfen, nicht Buch für Buch",
             body: [
               "Katalogskalierung wird stark, wenn jeder Launch das System verbessert. Halte fest, was geändert wurde, warum es geändert wurde und was als Nächstes getestet wird.",
               "Suche Muster über mehrere Titel statt auf ein einzelnes Buch zu überreagieren. Ziel ist bessere Nischenauswahl, besseres Packaging und bessere Produktionsqualität.",
@@ -1877,17 +1877,17 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Wie viele Bücher kann eine Person managen?",
+            question: "Wie viele Bücher kann eine Person wirklich managen?",
             answer:
               "Das hängt von Umfang, Qualitätsanspruch und Automatisierung ab. Das System zählt mehr als die Zahl: Ohne Briefs und Gates wird selbst ein kleiner Katalog schwer steuerbar.",
           },
           {
-            question: "Soll jedes Buch dasselbe Produktionstemplate nutzen?",
+            question: "Soll jeder Titel dasselbe Produktionstemplate nutzen?",
             answer:
               "Nutze dasselbe operative Gerüst, aber passe kreative Entscheidungen an Nische und Leserversprechen an.",
           },
           {
-            question: "Was sollte ein Publishing-Katalog tracken?",
+            question: "Was sollte ein Publishing-Katalog pro Titel tracken?",
             answer:
               "Nische, Versprechen, Zielgruppe, Metadaten, Coverrichtung, Produktionsnotizen, Qualitätsprobleme, Launchdatum und künftige Optimierungsideen.",
           },
@@ -1928,7 +1928,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "demand",
-            title: "Measure demand before choosing the book idea",
+            title: "How do you measure reader demand before picking a KDP niche?",
             body: [
               "Start by listing phrases readers already use: problem words, genre labels, outcomes, audience descriptors and format terms. Demand is visible when those phrases repeat across search suggestions, competing titles, reviews and community questions.",
               "Do not chase a niche only because it looks empty. Empty can mean underserved, but it can also mean nobody is searching.",
@@ -1942,7 +1942,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "clusters",
-            title: "Build keyword clusters instead of isolated terms",
+            title: "Keyword clusters vs single terms: which guides a book better?",
             body: [
               "One keyword rarely defines a book. Group related phrases into clusters: beginner intent, advanced intent, problem-solving intent, genre trope, gift intent and format intent.",
               "Clusters make metadata, outlines and cover direction more coherent because every asset points toward the same reader job.",
@@ -1956,7 +1956,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "angle",
-            title: "Turn research into a sharper angle",
+            title: "How does keyword research turn into a sharper book angle?",
             body: [
               "Research only matters if it changes the book. A strong angle can be narrower, faster, more visual, more practical, more beginner-friendly or more premium than what already exists.",
               "The goal is to enter a recognizable market with a promise that feels specific enough to choose.",
@@ -1978,12 +1978,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Is a low-competition KDP niche always better?",
+            question: "Is a low-competition KDP niche always the better choice?",
             answer:
               "No. Low competition is useful only when demand exists. A niche with no buyers can look easy while producing no discovery.",
           },
           {
-            question: "How many keywords should a book target?",
+            question: "How many keywords should one book target on KDP?",
             answer:
               "One primary intent cluster is best. Secondary keywords can support the description and chapters, but the book should not feel split between audiences.",
           },
@@ -2008,7 +2008,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "demande",
-            title: "Mesurer la demande avant de choisir l'idée",
+            title: "Comment mesurer la demande avant de choisir une niche KDP ?",
             body: [
               "Commencez par lister les expressions que les lecteurs utilisent déjà : problèmes, genres, résultats attendus, audience et formats. La demande devient visible quand ces expressions reviennent dans les suggestions, titres concurrents, avis et questions de communautés.",
               "Ne poursuivez pas une niche seulement parce qu'elle paraît vide. Vide peut vouloir dire sous-servie, mais aussi personne ne cherche.",
@@ -2022,7 +2022,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "clusters",
-            title: "Construire des clusters plutôt que des mots isolés",
+            title: "Clusters de mots-clés vs mots isolés : lequel guide un livre ?",
             body: [
               "Un seul mot-clé définit rarement un livre. Regroupez les phrases par intention : débutant, avancé, résolution de problème, trope de genre, cadeau ou format.",
               "Les clusters rendent les métadonnées, le plan et la couverture plus cohérents parce que chaque asset sert le même job lecteur.",
@@ -2036,7 +2036,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "angle",
-            title: "Transformer la recherche en angle plus net",
+            title: "Comment la recherche devient-elle un angle de livre plus net ?",
             body: [
               "La recherche compte seulement si elle change le livre. Un bon angle peut être plus étroit, plus rapide, plus visuel, plus pratique, plus débutant ou plus premium que l'existant.",
               "L'objectif est d'entrer dans un marché reconnaissable avec une promesse assez spécifique pour être choisie.",
@@ -2058,12 +2058,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Une niche KDP peu concurrentielle est-elle toujours meilleure ?",
+            question: "Une niche KDP peu concurrentielle est-elle toujours un bon choix ?",
             answer:
               "Non. La faible concurrence n'aide que s'il existe une demande. Une niche sans acheteurs peut paraître facile et rester invisible.",
           },
           {
-            question: "Combien de mots-clés viser pour un livre ?",
+            question: "Combien de mots-clés un seul livre doit-il viser sur KDP ?",
             answer:
               "Un cluster d'intention principal suffit. Les mots-clés secondaires soutiennent la description et les chapitres sans diviser l'audience.",
           },
@@ -2088,7 +2088,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "domanda",
-            title: "Misura la domanda prima dell'idea",
+            title: "Come misurare la domanda prima di scegliere una nicchia KDP?",
             body: [
               "Elenca le frasi che i lettori usano già: problemi, generi, risultati, audience e formati. La domanda appare quando quelle frasi tornano in suggerimenti, titoli concorrenti, recensioni e community.",
               "Non scegliere una nicchia solo perché sembra vuota. Vuota può voler dire sottoservita, ma anche non cercata.",
@@ -2102,7 +2102,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "cluster",
-            title: "Costruisci cluster keyword, non termini isolati",
+            title: "Cluster di keyword vs termini isolati: cosa guida il libro?",
             body: [
               "Una keyword sola raramente definisce un libro. Raggruppa frasi per intento: principiante, avanzato, problema, trope di genere, regalo o formato.",
               "I cluster rendono metadati, outline e copertina più coerenti perché ogni asset parla allo stesso lettore.",
@@ -2116,7 +2116,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "angolo",
-            title: "Trasforma la ricerca in un angolo più forte",
+            title: "Come si trasforma la ricerca in un angolo di libro più forte?",
             body: [
               "La ricerca conta se cambia il libro. Un angolo può essere più stretto, rapido, visuale, pratico, beginner-friendly o premium dell'esistente.",
               "L'obiettivo è entrare in un mercato riconoscibile con una promessa abbastanza specifica da essere scelta.",
@@ -2138,12 +2138,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Una nicchia KDP con poca concorrenza è sempre migliore?",
+            question: "Una nicchia KDP con poca concorrenza è sempre la scelta giusta?",
             answer:
               "No. Serve domanda. Una nicchia senza acquirenti può sembrare facile ma non generare discovery.",
           },
           {
-            question: "Quante keyword deve targetizzare un libro?",
+            question: "Quante keyword deve targetizzare un singolo libro su KDP?",
             answer:
               "Meglio un cluster primario. Le keyword secondarie supportano descrizione e capitoli senza dividere il pubblico.",
           },
@@ -2168,7 +2168,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "nachfrage",
-            title: "Miss Nachfrage, bevor du die Buchidee wählst",
+            title: "Wie misst man Nachfrage, bevor man eine KDP-Nische wählt?",
             body: [
               "Liste zuerst Phrasen, die Leser bereits nutzen: Probleme, Genres, Ergebnisse, Zielgruppen und Formate. Nachfrage wird sichtbar, wenn diese Sprache in Vorschlägen, Konkurrenz, Rezensionen und Community-Fragen wiederkehrt.",
               "Verfolge eine Nische nicht nur, weil sie leer wirkt. Leer kann unterschätzt bedeuten, aber auch: niemand sucht.",
@@ -2182,7 +2182,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "cluster",
-            title: "Baue Keyword-Cluster statt Einzellisten",
+            title: "Keyword-Cluster vs Einzelbegriffe: was steuert ein Buch besser?",
             body: [
               "Ein Keyword definiert selten ein Buch. Gruppiere Phrasen nach Intention: Anfänger, Fortgeschrittene, Problem, Genre-Trope, Geschenk oder Format.",
               "Cluster machen Metadaten, Outline und Cover konsistenter, weil jedes Asset denselben Leserjob unterstützt.",
@@ -2196,7 +2196,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "winkel",
-            title: "Mach aus Recherche einen schärferen Winkel",
+            title: "Wie wird aus Keyword-Recherche ein schärferer Buchwinkel?",
             body: [
               "Recherche zählt, wenn sie das Buch verändert. Ein starker Winkel kann enger, schneller, visueller, praktischer, anfängerfreundlicher oder hochwertiger sein als das Bestehende.",
               "Ziel ist ein erkennbarer Markt mit einem Versprechen, das spezifisch genug ist, um gewählt zu werden.",
@@ -2218,12 +2218,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Ist eine KDP-Nische mit wenig Konkurrenz immer besser?",
+            question: "Ist eine KDP-Nische mit wenig Konkurrenz immer die bessere Wahl?",
             answer:
               "Nein. Wenig Konkurrenz hilft nur bei vorhandener Nachfrage. Ohne Käufer bleibt auch eine leichte Nische unsichtbar.",
           },
           {
-            question: "Wie viele Keywords sollte ein Buch targeten?",
+            question: "Wie viele Keywords sollte ein einzelnes Buch bei KDP targeten?",
             answer:
               "Ein primärer Intent-Cluster ist ideal. Sekundäre Keywords unterstützen Beschreibung und Kapitel, ohne die Zielgruppe zu spalten.",
           },
@@ -2261,7 +2261,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "diagnosis",
-            title: "Diagnose the manuscript before rewriting",
+            title: "Why diagnose the manuscript before polishing sentences?",
             body: [
               "Do not start by polishing sentences. First identify structural weaknesses: repeated ideas, missing transitions, shallow examples, unsupported claims and chapters that drift away from the reader promise.",
               "A diagnostic pass saves time because it tells you whether the manuscript needs a line edit, a section rewrite or a deeper outline repair.",
@@ -2275,7 +2275,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "voice",
-            title: "Make the voice consistent and specific",
+            title: "How do you stop AI prose from sounding interchangeable?",
             body: [
               "Generated prose often sounds smooth but interchangeable. Strong voice comes from concrete examples, sharper verbs, consistent perspective and a defined level of expertise.",
               "Create a voice sheet with preferred terms, banned phrases, sentence rhythm and examples of how the book should sound.",
@@ -2289,7 +2289,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "trust",
-            title: "Protect reader trust with final QA",
+            title: "What does the final QA pass check to protect reader trust?",
             body: [
               "Trust breaks when a book overclaims, contradicts itself or feels padded. The final QA pass should inspect facts, terminology, formatting, cross-references and the relationship between title promise and actual content.",
               "For sensitive topics, avoid presenting generated text as professional advice. Be clear, cautious and useful.",
@@ -2311,12 +2311,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Can AI edit its own manuscript?",
+            question: "Can AI edit its own manuscript without a human editor?",
             answer:
               "It can help find issues and propose revisions, but the final acceptance criteria should come from a human editor or operator.",
           },
           {
-            question: "What is the fastest way to improve an AI draft?",
+            question: "What is the fastest way to improve an AI first draft?",
             answer:
               "Remove repetition, add concrete examples and check every chapter against one clear objective.",
           },
@@ -2341,7 +2341,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "diagnostic",
-            title: "Diagnostiquer le manuscrit avant de réécrire",
+            title: "Pourquoi diagnostiquer le manuscrit avant de polir les phrases ?",
             body: [
               "Ne commencez pas par polir les phrases. Repérez d'abord les faiblesses structurelles : idées répétées, transitions manquantes, exemples faibles, affirmations non soutenues et chapitres hors promesse.",
               "Le diagnostic indique s'il faut une correction de style, une réécriture de section ou une réparation du plan.",
@@ -2355,7 +2355,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "voix",
-            title: "Rendre la voix cohérente et spécifique",
+            title: "Comment éviter une prose IA lisse et interchangeable ?",
             body: [
               "La prose générée est souvent fluide mais interchangeable. Une voix forte vient d'exemples concrets, de verbes plus nets, d'une perspective stable et d'un niveau d'expertise défini.",
               "Créez une fiche de voix avec termes préférés, phrases interdites, rythme et exemples du rendu attendu.",
@@ -2369,7 +2369,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "confiance",
-            title: "Protéger la confiance lecteur avec une QA finale",
+            title: "Que vérifie la QA finale pour protéger la confiance lecteur ?",
             body: [
               "La confiance casse quand un livre surpromet, se contredit ou paraît gonflé. La QA finale inspecte faits, terminologie, formatage, renvois et cohérence entre promesse marketing et contenu.",
               "Sur les sujets sensibles, évitez de présenter du texte généré comme conseil professionnel. Soyez clair, prudent et utile.",
@@ -2391,12 +2391,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "L'IA peut-elle éditer son propre manuscrit ?",
+            question: "L'IA peut-elle éditer son propre manuscrit sans relecteur humain ?",
             answer:
               "Elle peut aider à trouver des problèmes et proposer des révisions, mais les critères d'acceptation doivent rester humains.",
           },
           {
-            question: "Quel est le moyen le plus rapide d'améliorer une ébauche IA ?",
+            question: "Comment améliorer le plus vite une première ébauche IA ?",
             answer:
               "Supprimer les répétitions, ajouter des exemples concrets et vérifier chaque chapitre face à un objectif clair.",
           },
@@ -2421,7 +2421,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "diagnosi",
-            title: "Diagnostica il manoscritto prima di riscrivere",
+            title: "Perché diagnosticare il manoscritto prima di limare le frasi?",
             body: [
               "Non iniziare lucidando le frasi. Prima identifica problemi strutturali: idee ripetute, transizioni mancanti, esempi superficiali, claim non supportati e capitoli fuori promessa.",
               "La diagnosi ti dice se serve line editing, riscrittura di sezioni o riparazione dell'outline.",
@@ -2435,7 +2435,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "voce",
-            title: "Rendi la voce coerente e specifica",
+            title: "Come evitare una prosa IA scorrevole ma intercambiabile?",
             body: [
               "La prosa generata può essere scorrevole ma intercambiabile. Una voce forte nasce da esempi concreti, verbi più precisi, prospettiva stabile e livello di competenza definito.",
               "Crea una voice sheet con termini preferiti, frasi vietate, ritmo e campioni del tono desiderato.",
@@ -2449,7 +2449,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "fiducia",
-            title: "Proteggi la fiducia con una QA finale",
+            title: "Cosa controlla la QA finale per proteggere la fiducia?",
             body: [
               "La fiducia si rompe quando un libro promette troppo, si contraddice o sembra gonfiato. La QA controlla fatti, terminologia, formattazione e coerenza tra promessa e contenuto.",
               "Per temi sensibili, evita di presentare testo generato come consulenza professionale. Sii chiaro, cauto e utile.",
@@ -2471,12 +2471,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "L'IA può editare il proprio manoscritto?",
+            question: "L'IA può editare il proprio manoscritto senza un editor umano?",
             answer:
               "Può aiutare a trovare problemi e proporre revisioni, ma i criteri finali devono restare umani.",
           },
           {
-            question: "Come migliorare velocemente una bozza IA?",
+            question: "Come si migliora in fretta una prima bozza IA?",
             answer:
               "Rimuovi ripetizioni, aggiungi esempi concreti e controlla ogni capitolo contro un obiettivo chiaro.",
           },
@@ -2501,7 +2501,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "diagnose",
-            title: "Diagnostiziere das Manuskript vor der Überarbeitung",
+            title: "Warum das Manuskript prüfen, bevor man Sätze poliert?",
             body: [
               "Beginne nicht mit Satzpolitur. Finde zuerst strukturelle Schwächen: wiederholte Ideen, fehlende Übergänge, flache Beispiele, unbelegte Claims und Kapitel, die vom Versprechen abdriften.",
               "Die Diagnose zeigt, ob ein Line-Edit, eine Abschnittsüberarbeitung oder eine tiefere Outline-Reparatur nötig ist.",
@@ -2515,7 +2515,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "stimme",
-            title: "Mach die Stimme konsistent und konkret",
+            title: "Wie verhindert man glatte, austauschbare KI-Prosa?",
             body: [
               "Generierte Prosa klingt oft glatt, aber austauschbar. Starke Stimme entsteht durch konkrete Beispiele, präzisere Verben, stabile Perspektive und ein definiertes Kompetenzniveau.",
               "Erstelle ein Voice Sheet mit bevorzugten Begriffen, verbotenen Phrasen, Rhythmus und Beispielen für den gewünschten Klang.",
@@ -2529,7 +2529,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "vertrauen",
-            title: "Schütze Vertrauen mit finaler QA",
+            title: "Was prüft die finale QA, um Leservertrauen zu schützen?",
             body: [
               "Vertrauen bricht, wenn ein Buch übertreibt, sich widerspricht oder aufgebläht wirkt. Die finale QA prüft Fakten, Terminologie, Formatierung und die Verbindung zwischen Titelversprechen und Inhalt.",
               "Bei sensiblen Themen sollte generierter Text nicht als professionelle Beratung auftreten. Klar, vorsichtig und nützlich ist stärker.",
@@ -2551,12 +2551,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Kann KI ihr eigenes Manuskript lektorieren?",
+            question: "Kann KI ihr eigenes Manuskript ohne Lektor lektorieren?",
             answer:
               "Sie kann Probleme finden und Revisionen vorschlagen, aber die finalen Akzeptanzkriterien sollten menschlich bleiben.",
           },
           {
-            question: "Wie verbessert man einen KI-Entwurf am schnellsten?",
+            question: "Wie verbessert man einen ersten KI-Entwurf am schnellsten?",
             answer:
               "Wiederholungen entfernen, konkrete Beispiele ergänzen und jedes Kapitel gegen ein klares Ziel prüfen.",
           },
@@ -2594,7 +2594,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "files",
-            title: "Check files before upload",
+            title: "What should you check in the files before a KDP upload?",
             body: [
               "Most launch problems start with files: wrong trim size, missing bleed, broken table of contents, low-resolution assets or inconsistent formatting.",
               "Run the book through preview tools and inspect the exact formats readers will buy.",
@@ -2608,7 +2608,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "metadata",
-            title: "Lock metadata before pressing publish",
+            title: "Why lock the metadata before pressing publish?",
             body: [
               "Title, subtitle, description, author name, categories and keywords should all communicate the same reader promise.",
               "Last-minute metadata improvisation creates mismatched listings. Use the research brief and make every field earn its place.",
@@ -2622,7 +2622,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "after",
-            title: "Plan the first optimization pass",
+            title: "Fix the description first, not the cover, after launch",
             body: [
               "The launch is the beginning of measurement. After the first signal window, review impressions, clicks, conversion, reviews and page quality before changing the wrong thing.",
               "Optimize one major variable at a time so you can learn what actually moved performance.",
@@ -2644,12 +2644,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Should metadata be changed immediately after launch?",
+            question: "Should I change metadata right after a KDP launch?",
             answer:
               "Not without signal. Wait until you can distinguish low visibility, low click-through and low conversion.",
           },
           {
-            question: "What is the most common KDP launch mistake?",
+            question: "What is the most common mistake in a KDP book launch?",
             answer:
               "Publishing with mismatched assets: a title, cover, description and manuscript that each promise something slightly different.",
           },
@@ -2674,7 +2674,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "fichiers",
-            title: "Vérifier les fichiers avant l'upload",
+            title: "Que vérifier dans les fichiers avant un upload KDP ?",
             body: [
               "La plupart des problèmes viennent des fichiers : mauvais format, fonds perdus manquants, table des matières cassée, visuels basse résolution ou formatage incohérent.",
               "Passez le livre dans les outils d'aperçu et inspectez les formats exacts que les lecteurs achèteront.",
@@ -2688,7 +2688,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "metadonnees",
-            title: "Verrouiller les métadonnées avant publication",
+            title: "Pourquoi verrouiller les métadonnées avant de publier ?",
             body: [
               "Titre, sous-titre, description, nom d'auteur, catégories et mots-clés doivent communiquer la même promesse lecteur.",
               "L'improvisation de dernière minute crée des fiches incohérentes. Utilisez le brief de recherche et donnez un rôle à chaque champ.",
@@ -2702,7 +2702,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "apres",
-            title: "Prévoir la première passe d'optimisation",
+            title: "Corriger la description d'abord, pas la couverture",
             body: [
               "Le lancement démarre la mesure. Après une première fenêtre de signal, analysez impressions, clics, conversion, avis et qualité de page avant de changer le mauvais élément.",
               "Optimisez une grande variable à la fois pour apprendre ce qui déplace réellement la performance.",
@@ -2724,12 +2724,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Faut-il modifier les métadonnées juste après le lancement ?",
+            question: "Faut-il changer les métadonnées juste après un lancement KDP ?",
             answer:
               "Pas sans signal. Attendez de distinguer faible visibilité, faible clic et faible conversion.",
           },
           {
-            question: "Quelle est l'erreur de lancement KDP la plus fréquente ?",
+            question: "Quelle est l'erreur la plus fréquente lors d'un lancement KDP ?",
             answer:
               "Publier des assets désalignés : titre, couverture, description et manuscrit promettent chacun une chose un peu différente.",
           },
@@ -2754,7 +2754,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "file",
-            title: "Controlla i file prima dell'upload",
+            title: "Cosa controllare nei file prima dell'upload su KDP?",
             body: [
               "Molti problemi nascono dai file: formato sbagliato, abbondanza mancante, indice rotto, asset a bassa risoluzione o formattazione incoerente.",
               "Usa gli strumenti di preview e ispeziona i formati che i lettori compreranno davvero.",
@@ -2768,7 +2768,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "metadati",
-            title: "Blocca i metadati prima di pubblicare",
+            title: "Perché bloccare i metadati prima di pubblicare?",
             body: [
               "Titolo, sottotitolo, descrizione, autore, categorie e keyword devono comunicare la stessa promessa.",
               "L'improvvisazione finale crea listing incoerenti. Usa il brief di ricerca e assegna uno scopo a ogni campo.",
@@ -2782,7 +2782,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "dopo",
-            title: "Pianifica la prima ottimizzazione",
+            title: "Correggi prima la descrizione, non la copertina",
             body: [
               "Il lancio è l'inizio della misurazione. Dopo una finestra di segnale, rivedi impression, clic, conversione, recensioni e pagina prima di cambiare l'elemento sbagliato.",
               "Ottimizza una variabile importante alla volta per capire cosa muove davvero la performance.",
@@ -2804,12 +2804,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Cambiare subito i metadati dopo il lancio?",
+            question: "Conviene cambiare i metadati subito dopo il lancio su KDP?",
             answer:
               "Non senza segnale. Prima distingui bassa visibilità, basso click-through e bassa conversione.",
           },
           {
-            question: "Qual è l'errore KDP più comune?",
+            question: "Qual è l'errore più comune in un lancio su KDP?",
             answer:
               "Asset disallineati: titolo, copertina, descrizione e manoscritto promettono cose leggermente diverse.",
           },
@@ -2834,7 +2834,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "dateien",
-            title: "Prüfe Dateien vor dem Upload",
+            title: "Was prüft man in den Dateien vor dem KDP-Upload?",
             body: [
               "Viele Launchprobleme beginnen mit Dateien: falsches Format, fehlender Beschnitt, kaputtes Inhaltsverzeichnis, niedrige Auflösung oder inkonsistentes Layout.",
               "Nutze Preview-Tools und prüfe die exakten Formate, die Leser kaufen werden.",
@@ -2848,7 +2848,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "metadaten",
-            title: "Sperre Metadaten vor dem Veröffentlichen",
+            title: "Warum Metadaten vor dem Veröffentlichen sperren?",
             body: [
               "Titel, Untertitel, Beschreibung, Autorenname, Kategorien und Keywords sollten dasselbe Leserversprechen kommunizieren.",
               "Spontane Metadaten im letzten Moment erzeugen unpassende Listings. Nutze den Recherchebrief und gib jedem Feld eine Aufgabe.",
@@ -2862,7 +2862,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "danach",
-            title: "Plane die erste Optimierung",
+            title: "Erst die Beschreibung verbessern, nicht das Cover",
             body: [
               "Der Launch ist der Beginn der Messung. Nach einer ersten Signalphase prüfst du Impressionen, Klicks, Conversion, Reviews und Seitenqualität, bevor du das falsche Element änderst.",
               "Optimiere eine große Variable nach der anderen, damit du lernst, was die Performance wirklich bewegt.",
@@ -2884,12 +2884,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Sollten Metadaten direkt nach dem Launch geändert werden?",
+            question: "Sollte man Metadaten direkt nach dem KDP-Launch ändern?",
             answer:
               "Nicht ohne Signal. Warte, bis Sichtbarkeit, Klickrate und Conversion unterscheidbar sind.",
           },
           {
-            question: "Was ist der häufigste KDP-Launchfehler?",
+            question: "Was ist der häufigste Fehler bei einem KDP-Launch?",
             answer:
               "Nicht abgestimmte Assets: Titel, Cover, Beschreibung und Manuskript versprechen leicht unterschiedliche Dinge.",
           },
@@ -2927,7 +2927,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "positioning",
-            title: "Choose a pen name around reader expectation",
+            title: "How do you pick a pen name that fits the category?",
             body: [
               "The best pen name fits the category, sounds credible to the target reader and leaves room for future titles. It should feel natural on the cover, product page and author bio.",
               "Avoid names that create copyright, impersonation or trust issues. Distinctive and simple beats clever and confusing.",
@@ -2941,7 +2941,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "bio",
-            title: "Make the author bio a trust signal",
+            title: "What makes an author bio a trust signal without fake credentials?",
             body: [
               "A useful bio tells readers why this author publishes in this space and what standard the catalog follows. It does not need fake credentials.",
               "Use the bio to set tone, audience, topics and editorial promise. Trust comes from clarity and consistency.",
@@ -2955,7 +2955,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "catalog",
-            title: "Keep author brands clean as the catalog expands",
+            title: "When should one pen name split into two author brands?",
             body: [
               "One author name should not carry unrelated promises. If two niches attract different readers, split them before reviews, recommendations and expectations become mixed.",
               "Create a simple author map with genres, promises, tone rules, cover style and metadata conventions.",
@@ -2977,12 +2977,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Can one pen name cover many niches?",
+            question: "Can one pen name cover several unrelated niches?",
             answer:
               "Only if the reader expectation stays coherent. Conflicting genres or promises usually need separate author brands.",
           },
           {
-            question: "Should a pen name pretend to have credentials?",
+            question: "Should a pen name claim credentials it does not have?",
             answer:
               "No. Credibility should come from clarity, quality, useful positioning and truthful presentation.",
           },
@@ -3007,7 +3007,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "positionnement",
-            title: "Choisir un nom de plume autour de l'attente lecteur",
+            title: "Comment choisir un nom de plume qui colle à la catégorie ?",
             body: [
               "Le meilleur nom de plume correspond à la catégorie, paraît crédible pour l'audience et laisse de la place aux prochains titres. Il doit fonctionner sur couverture, fiche produit et bio.",
               "Évitez les noms qui créent des problèmes de droits, d'usurpation ou de confiance. Simple et distinct vaut mieux que malin et confus.",
@@ -3021,7 +3021,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "bio",
-            title: "Faire de la bio auteur un signal de confiance",
+            title: "Comment rendre une bio auteur crédible sans références inventées ?",
             body: [
               "Une bio utile explique pourquoi cet auteur publie dans cet univers et quel standard suit le catalogue. Elle n'a pas besoin de faux diplômes.",
               "Utilisez la bio pour poser ton, audience, thèmes et promesse éditoriale. La confiance vient de la clarté et de la cohérence.",
@@ -3035,7 +3035,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "catalogue",
-            title: "Garder des marques auteur propres quand le catalogue s'étend",
+            title: "Quand faut-il séparer un nom de plume en deux marques auteur ?",
             body: [
               "Un même nom ne doit pas porter des promesses sans lien. Si deux niches attirent des lecteurs différents, séparez-les avant que recommandations et avis ne se mélangent.",
               "Créez une carte auteur avec genres, promesses, règles de ton, style couverture et conventions de métadonnées.",
@@ -3057,12 +3057,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Un nom de plume peut-il couvrir beaucoup de niches ?",
+            question: "Un nom de plume peut-il couvrir plusieurs niches sans lien ?",
             answer:
               "Seulement si l'attente lecteur reste cohérente. Des genres ou promesses contradictoires demandent souvent des marques séparées.",
           },
           {
-            question: "Faut-il inventer des références dans une bio ?",
+            question: "Faut-il inventer des références pour un nom de plume ?",
             answer:
               "Non. La crédibilité doit venir de la clarté, de la qualité, du positionnement utile et d'une présentation honnête.",
           },
@@ -3087,7 +3087,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "posizionamento",
-            title: "Scegli lo pseudonimo intorno all'aspettativa del lettore",
+            title: "Come scegliere uno pseudonimo adatto alla categoria?",
             body: [
               "Il miglior pseudonimo si adatta alla categoria, suona credibile e lascia spazio a titoli futuri. Deve funzionare in copertina, pagina prodotto e bio.",
               "Evita nomi che creano problemi di copyright, impersonificazione o fiducia. Distintivo e semplice batte brillante ma confuso.",
@@ -3101,7 +3101,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "bio",
-            title: "Trasforma la bio autore in segnale di fiducia",
+            title: "Come rendere credibile la bio autore senza credenziali inventate?",
             body: [
               "Una bio utile spiega perché l'autore pubblica in quello spazio e quale standard segue il catalogo. Non servono credenziali inventate.",
               "Usa la bio per definire tono, audience, temi e promessa editoriale. La fiducia nasce da chiarezza e coerenza.",
@@ -3115,7 +3115,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "catalogo",
-            title: "Mantieni puliti i brand autore mentre il catalogo cresce",
+            title: "Quando conviene dividere uno pseudonimo in due brand autore?",
             body: [
               "Un nome autore non dovrebbe portare promesse scollegate. Se due nicchie attirano lettori diversi, separale prima che recensioni e aspettative si mescolino.",
               "Crea una mappa autore con generi, promesse, regole di tono, stile copertina e convenzioni metadati.",
@@ -3137,12 +3137,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Uno pseudonimo può coprire molte nicchie?",
+            question: "Uno pseudonimo può coprire più nicchie senza legame?",
             answer:
               "Solo se l'aspettativa del lettore resta coerente. Generi o promesse contrastanti richiedono spesso brand separati.",
           },
           {
-            question: "Uno pseudonimo deve fingere credenziali?",
+            question: "Conviene inventare credenziali per uno pseudonimo?",
             answer:
               "No. La credibilità viene da chiarezza, qualità, posizionamento utile e presentazione onesta.",
           },
@@ -3167,7 +3167,7 @@ export const posts: BlogPost[] = [
         sections: [
           {
             id: "positionierung",
-            title: "Wähle das Pseudonym rund um Leserwartung",
+            title: "Wie wählt man ein Pseudonym, das zur Kategorie passt?",
             body: [
               "Das beste Pseudonym passt zur Kategorie, wirkt für die Zielgruppe glaubwürdig und lässt Raum für künftige Titel. Es muss auf Cover, Produktseite und Bio natürlich funktionieren.",
               "Vermeide Namen, die Urheberrechts-, Verwechslungs- oder Vertrauensprobleme schaffen. Klar und unterscheidbar schlägt clever und verwirrend.",
@@ -3181,7 +3181,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "bio",
-            title: "Mach die Autorenbio zum Vertrauenssignal",
+            title: "Was macht eine Autorenbio glaubwürdig ohne erfundene Referenzen?",
             body: [
               "Eine gute Bio erklärt, warum diese Autorenmarke in diesem Bereich publiziert und welchem Standard der Katalog folgt. Falsche Referenzen sind nicht nötig.",
               "Nutze die Bio für Ton, Zielgruppe, Themen und redaktionelles Versprechen. Vertrauen entsteht durch Klarheit und Konsistenz.",
@@ -3195,7 +3195,7 @@ export const posts: BlogPost[] = [
           },
           {
             id: "katalog",
-            title: "Halte Autorenmarken sauber, wenn der Katalog wächst",
+            title: "Wann sollte ein Pseudonym in zwei Autorenmarken aufgeteilt werden?",
             body: [
               "Ein Autorenname sollte keine unverbundenen Versprechen tragen. Wenn zwei Nischen andere Leser anziehen, trenne sie, bevor Reviews, Empfehlungen und Erwartungen vermischt werden.",
               "Erstelle eine Autorenkarte mit Genres, Versprechen, Tonregeln, Coverstil und Metadatenkonventionen.",
@@ -3217,12 +3217,12 @@ export const posts: BlogPost[] = [
         ],
         faq: [
           {
-            question: "Kann ein Pseudonym viele Nischen abdecken?",
+            question: "Kann ein Pseudonym mehrere unverbundene Nischen abdecken?",
             answer:
               "Nur wenn die Leserwartung konsistent bleibt. Widersprüchliche Genres oder Versprechen brauchen meist getrennte Marken.",
           },
           {
-            question: "Sollte ein Pseudonym Referenzen vortäuschen?",
+            question: "Sollte man für ein Pseudonym Referenzen erfinden?",
             answer:
               "Nein. Glaubwürdigkeit entsteht durch Klarheit, Qualität, hilfreiche Positionierung und ehrliche Darstellung.",
           },

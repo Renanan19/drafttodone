@@ -37,7 +37,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
       sections: [
         {
           id: "create-account",
-          title: "Create the KDP account before preparing the first upload",
+          title: "Should you create the KDP account before or after the first book?",
           body: [
             "Go to kdp.amazon.com and sign in with an existing Amazon account or create a dedicated account for publishing. A dedicated email address is often cleaner if you plan to treat publishing as a long-term operation.",
             "Complete the account profile with legal name, address, country and contact details. These details should match the person or company that will receive royalties and complete the tax information.",
@@ -51,7 +51,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "bank-tax",
-          title: "Add bank details and complete the tax interview",
+          title: "What bank and tax details does KDP require before it pays?",
           body: [
             "KDP cannot pay royalties correctly until the payment and tax sections are complete. Add the bank account where you want to receive royalties, then fill in the tax interview with accurate personal or business information.",
             "For many countries, electronic funds transfer is the simplest payment method because it avoids check handling and can remove minimum payment thresholds when supported for the marketplace and currency.",
@@ -65,7 +65,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "payment-calendar",
-          title: "Understand the KDP payment calendar",
+          title: "When does KDP actually pay, and why 60 days later?",
           body: [
             "The most confusing part for new authors is timing. KDP royalties are generally paid around 60 days after the end of the month in which the sale was reported. Expanded Distribution royalties are generally paid around 90 days after the end of the month.",
             "For example, sales reported in January are usually paid near the end of March. Sales reported in February are usually paid near the end of April. Once you sell every month, the delay remains, but the rhythm becomes predictable.",
@@ -79,7 +79,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "reports",
-          title: "Use reports to separate sales, royalties and payments",
+          title: "Sales, royalties or payments: which number is your money?",
           body: [
             "KDP reports show orders, Kindle Unlimited page reads, estimated royalties and payments. These are related, but they are not the same number. A sale can later be refunded, a royalty can be converted into another currency and a payment can combine several marketplaces.",
             "Use reports as an operating dashboard: which books sell, which marketplace performs, which formats work and which royalties are already scheduled for payment.",
@@ -93,7 +93,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "manage-account",
-          title: "Manage the account like a publishing business",
+          title: "What does it take to run a KDP account like a business?",
           body: [
             "A good KDP account is maintained, not just opened once. Check your payment settings, tax profile, security, author names, live books and reports on a recurring schedule.",
             "Before each launch, confirm that the account is ready to receive royalties and that the book listing matches the reader promise: title, subtitle, categories, keywords, description, cover and sample pages.",
@@ -107,7 +107,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "common-issues",
-          title: "Avoid the problems that delay first royalties",
+          title: "What usually delays a first KDP royalty payment?",
           body: [
             "Most first-payment anxiety comes from one of three issues: incomplete tax information, incorrect bank details or misunderstanding the two-month delay. The best fix is to verify the account before launch, then wait for the normal royalty cycle.",
             "If a payment is missing after the expected date, check whether the marketplace has a threshold, whether the bank information is accepted, whether the tax interview is complete and whether the sale month has actually reached its payout window.",
@@ -186,7 +186,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
       sections: [
         {
           id: "creation-compte",
-          title: "Créer le compte KDP avant de préparer le premier upload",
+          title: "Faut-il créer le compte KDP avant ou après le premier livre ?",
           body: [
             "Allez sur kdp.amazon.com puis connectez-vous avec un compte Amazon existant ou créez un compte dédié à votre activité d'auteur. Si vous voulez publier plusieurs livres, une adresse email séparée et stable est souvent plus propre.",
             "Dans les paramètres du compte, complétez le nom légal, l'adresse, le pays et les coordonnées de contact. Ces informations doivent être cohérentes avec la personne ou la société qui recevra les redevances et remplira le questionnaire fiscal.",
@@ -200,7 +200,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "banque-fiscalite",
-          title: "Ajouter son compte bancaire et remplir les informations fiscales",
+          title: "Quelles informations bancaires et fiscales KDP exige-t-il ?",
           body: [
             "KDP ne peut pas payer correctement vos redevances tant que les sections paiement et fiscalité ne sont pas complètes. Ajoutez le compte bancaire sur lequel vous voulez recevoir les virements, puis remplissez le questionnaire fiscal avec des informations exactes.",
             "Pour beaucoup de pays, le transfert électronique est le mode de paiement le plus pratique. Il évite les chèques et peut supprimer les seuils minimums de paiement lorsque ce mode est disponible pour la devise et la place de marché concernée.",
@@ -214,7 +214,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "calendrier-virements",
-          title: "Comprendre le calendrier des virements KDP",
+          title: "Quand KDP verse-t-il vraiment, et pourquoi 60 jours plus tard ?",
           body: [
             "Le point qui surprend le plus les nouveaux auteurs est le délai. Les redevances KDP sont généralement payées environ 60 jours après la fin du mois où la vente a été déclarée. Pour la distribution étendue, le délai est généralement d'environ 90 jours après la fin du mois.",
             "Exemple concret : les ventes de janvier sont en général payées vers la fin mars. Les ventes de février arrivent vers la fin avril. Une fois que vous vendez chaque mois, le décalage reste le même, mais les virements deviennent plus prévisibles.",
@@ -228,7 +228,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "rapports",
-          title: "Distinguer ventes, redevances et paiements",
+          title: "Ventes, redevances ou virements : quel chiffre est votre argent ?",
           body: [
             "Les rapports KDP affichent les commandes, les pages lues Kindle Unlimited, les redevances estimées et les paiements. Ces chiffres sont liés, mais ils ne représentent pas exactement la même chose. Une vente peut être remboursée, une redevance peut être convertie en devise et un paiement peut regrouper plusieurs marketplaces.",
             "Utilisez les rapports comme un tableau de bord : quels livres vendent, quels pays performent, quels formats fonctionnent et quelles redevances sont déjà programmées en paiement.",
@@ -242,7 +242,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "gestion-compte",
-          title: "Gérer son compte KDP comme une vraie activité éditoriale",
+          title: "Que faut-il pour gérer un compte KDP comme une activité ?",
           body: [
             "Un compte KDP ne se configure pas une seule fois pour toujours. Il faut vérifier régulièrement les paiements, la fiscalité, la sécurité, les noms d'auteur, les livres en ligne et les rapports.",
             "Avant chaque lancement, assurez-vous que le compte est prêt à recevoir les redevances et que la fiche du livre est alignée avec la promesse lecteur : titre, sous-titre, catégories, mots-clés, description, couverture et extrait.",
@@ -256,7 +256,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "problemes-frequents",
-          title: "Éviter les erreurs qui retardent les premiers virements",
+          title: "Qu'est-ce qui retarde le plus souvent un premier virement KDP ?",
           body: [
             "La plupart des inquiétudes sur le premier paiement viennent de trois causes : informations fiscales incomplètes, coordonnées bancaires incorrectes ou mauvaise compréhension du décalage de deux mois. La bonne méthode consiste à vérifier le compte avant le lancement, puis à attendre le cycle normal.",
             "Si un virement manque après la date attendue, vérifiez le seuil éventuel de la marketplace, l'acceptation du compte bancaire, le questionnaire fiscal et le fait que le mois de vente soit bien arrivé dans sa fenêtre de paiement.",
@@ -330,7 +330,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
       sections: [
         {
           id: "creare-account",
-          title: "Crea l'account KDP prima del primo upload",
+          title: "Meglio creare l'account KDP prima o dopo il primo libro?",
           body: [
             "Vai su kdp.amazon.com e accedi con un account Amazon esistente o crea un account dedicato alla pubblicazione. Se vuoi costruire un catalogo nel tempo, una email separata e stabile è spesso più ordinata.",
             "Completa il profilo con nome legale, indirizzo, paese e contatti. Questi dati devono essere coerenti con la persona o società che riceverà le royalty e completerà le informazioni fiscali.",
@@ -344,7 +344,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "banca-fisco",
-          title: "Aggiungi i dati bancari e completa l'intervista fiscale",
+          title: "Quali dati bancari e fiscali richiede KDP per pagare?",
           body: [
             "KDP non può pagare correttamente le royalty finché pagamento e fiscalità non sono completi. Inserisci il conto su cui vuoi ricevere i pagamenti e compila l'intervista fiscale con dati accurati.",
             "In molti paesi, il trasferimento elettronico è il metodo più pratico perché evita assegni e può rimuovere soglie minime quando è supportato per marketplace e valuta.",
@@ -358,7 +358,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "calendario-pagamenti",
-          title: "Capisci il calendario dei pagamenti KDP",
+          title: "Quando paga davvero KDP, e perché 60 giorni dopo?",
           body: [
             "La parte più confusa per i nuovi autori è il timing. Le royalty KDP sono generalmente pagate circa 60 giorni dopo la fine del mese in cui la vendita è stata registrata. Le royalty da Distribuzione Estesa sono generalmente pagate circa 90 giorni dopo la fine del mese.",
             "Esempio: le vendite di gennaio vengono di solito pagate verso fine marzo. Le vendite di febbraio arrivano verso fine aprile. Quando vendi ogni mese, il ritardo resta, ma il ritmo diventa prevedibile.",
@@ -372,7 +372,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "report",
-          title: "Distingui vendite, royalty e pagamenti",
+          title: "Vendite, royalty o pagamenti: quale cifra è il tuo guadagno?",
           body: [
             "I report KDP mostrano ordini, pagine lette con Kindle Unlimited, royalty stimate e pagamenti. Sono numeri collegati, ma non identici. Una vendita può essere rimborsata, una royalty può essere convertita in valuta e un pagamento può unire marketplace diversi.",
             "Usa i report come dashboard operativa: quali libri vendono, quali paesi funzionano, quali formati performano e quali royalty sono già in pagamento.",
@@ -386,7 +386,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "gestione-account",
-          title: "Gestisci l'account come una vera attivita editoriale",
+          title: "Cosa serve per gestire l'account KDP come un'attività?",
           body: [
             "Un account KDP va mantenuto, non solo aperto una volta. Controlla periodicamente pagamenti, dati fiscali, sicurezza, nomi autore, libri attivi e report.",
             "Prima di ogni lancio, verifica che l'account sia pronto a ricevere royalty e che la pagina libro sia allineata alla promessa al lettore: titolo, sottotitolo, categorie, keyword, descrizione, copertina ed estratto.",
@@ -400,7 +400,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "problemi-comuni",
-          title: "Evita gli errori che ritardano le prime royalty",
+          title: "Cosa ritarda più spesso il primo pagamento KDP?",
           body: [
             "La maggior parte dell'ansia sul primo pagamento nasce da tre cause: dati fiscali incompleti, coordinate bancarie errate o incomprensione del ritardo di due mesi. La soluzione è verificare l'account prima del lancio e poi aspettare il ciclo normale.",
             "Se un pagamento manca dopo la data prevista, controlla soglie del marketplace, accettazione del conto bancario, intervista fiscale e finestra di pagamento del mese di vendita.",
@@ -474,7 +474,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
       sections: [
         {
           id: "konto-erstellen",
-          title: "Erstelle das KDP Konto vor dem ersten Upload",
+          title: "KDP Konto vor oder nach dem ersten Buch anlegen?",
           body: [
             "Gehe auf kdp.amazon.com und melde dich mit einem bestehenden Amazon Konto an oder erstelle ein eigenes Konto für dein Publishing. Wenn du langfristig einen Katalog aufbauen willst, ist eine separate stabile E-Mail-Adresse oft sauberer.",
             "Vervollständige das Profil mit rechtlichem Namen, Adresse, Land und Kontaktdaten. Diese Angaben sollten zur Person oder Firma passen, die Tantiemen erhält und die Steuerinformationen ausfüllt.",
@@ -488,7 +488,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "bank-steuern",
-          title: "Bankdaten eintragen und Steuerinterview abschließen",
+          title: "Welche Bank- und Steuerdaten verlangt KDP vor der Auszahlung?",
           body: [
             "KDP kann Tantiemen nicht korrekt auszahlen, solange Zahlungs- und Steuerbereich nicht abgeschlossen sind. Füge das Bankkonto hinzu, auf das du Auszahlungen erhalten willst, und fülle das Steuerinterview mit genauen Angaben aus.",
             "In vielen Ländern ist die elektronische Überweisung die einfachste Zahlungsart, weil sie Schecks vermeidet und Mindestgrenzen entfernen kann, wenn sie für Marketplace und Währung unterstützt wird.",
@@ -502,7 +502,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "auszahlungskalender",
-          title: "Den KDP Auszahlungskalender verstehen",
+          title: "Wann zahlt KDP wirklich, und warum erst 60 Tage später?",
           body: [
             "Am meisten verwirrt neue Autorinnen und Autoren das Timing. KDP Tantiemen werden im Regelfall etwa 60 Tage nach Ende des Monats ausgezahlt, in dem der Verkauf gemeldet wurde. Tantiemen aus Erweiterter Distribution werden meist etwa 90 Tage nach Monatsende ausgezahlt.",
             "Beispiel: Verkäufe aus Januar werden meist gegen Ende März bezahlt. Verkäufe aus Februar kommen meist gegen Ende April. Wenn du jeden Monat verkaufst, bleibt der Versatz, aber der Rhythmus wird planbar.",
@@ -516,7 +516,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "berichte",
-          title: "Verkäufe, Tantiemen und Auszahlungen trennen",
+          title: "Verkäufe, Tantiemen oder Auszahlung: welche Zahl ist dein Geld?",
           body: [
             "KDP Berichte zeigen Bestellungen, gelesene Kindle Unlimited Seiten, geschätzte Tantiemen und Auszahlungen. Diese Zahlen hängen zusammen, sind aber nicht identisch. Ein Verkauf kann erstattet werden, eine Tantieme kann in eine andere Währung umgerechnet werden und eine Auszahlung kann mehrere Marketplaces zusammenfassen.",
             "Nutze Berichte als operatives Dashboard: Welche Bücher verkaufen sich, welche Länder funktionieren, welche Formate tragen und welche Tantiemen sind bereits zur Auszahlung vorgesehen.",
@@ -530,7 +530,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "konto-managen",
-          title: "Das Konto wie ein Publishing-Geschäft managen",
+          title: "Was gehört dazu, ein KDP Konto wie ein Geschäft zu führen?",
           body: [
             "Ein KDP Konto wird gepflegt, nicht nur einmal eröffnet. Prüfe Zahlungseinstellungen, Steuerprofil, Sicherheit, Autorennamen, aktive Bücher und Berichte regelmäßig.",
             "Vor jedem Launch sollte das Konto bereit für Auszahlungen sein und die Buchseite zum Leserversprechen passen: Titel, Untertitel, Kategorien, Keywords, Beschreibung, Cover und Leseprobe.",
@@ -544,7 +544,7 @@ export const kdpAccountPaymentsPost: BlogPost = {
         },
         {
           id: "haeufige-probleme",
-          title: "Probleme vermeiden, die erste Tantiemen verzögern",
+          title: "Was verzögert die erste KDP Auszahlung am häufigsten?",
           body: [
             "Die meiste Unsicherheit bei der ersten Auszahlung entsteht durch drei Dinge: unvollständige Steuerangaben, falsche Bankdaten oder ein Missverständnis des zweimonatigen Versatzes. Die beste Methode ist, das Konto vor dem Launch zu prüfen und dann den normalen Zyklus abzuwarten.",
             "Wenn eine Auszahlung nach dem erwarteten Datum fehlt, prüfe mögliche Marketplace-Grenzen, Bankdaten, Steuerinterview und ob der Verkaufsmonat wirklich schon im Auszahlungsfenster liegt.",

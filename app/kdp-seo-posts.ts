@@ -33,7 +33,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "ebook-royalties",
-            title: "Start with ebook royalty options",
+            title: "35% vs 70% ebook royalty: which one applies to your book?",
             body: [
               "KDP offers two main ebook royalty options: 35% and 70%. The 35% option is simpler and applies to more price points and territories. The 70% option can earn more per sale, but the book must meet pricing and territory requirements, and delivery costs are deducted.",
               "A simple 35% example: if an ebook sells for $0.99 in a place with no applicable VAT, the royalty is about $0.35. A 70% example: if a German ebook sells for €2.99, has 7% VAT and €0.12 delivery cost, the royalty is about €1.87.",
@@ -47,7 +47,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "print-royalties",
-            title: "Paperback royalties depend on printing cost",
+            title: "Paperback royalty vs printing cost: what is left per sale?",
             body: [
               "For paperbacks sold through standard Amazon distribution, KDP applies a royalty rate, then subtracts printing cost. KDP now uses 50% or 60% paperback royalty depending on marketplace and list price. Expanded Distribution uses 40% minus printing cost.",
               "Example: a $15 paperback with a $5 printing cost at a 60% royalty rate earns about $4. The same book through Expanded Distribution at 40% earns about $1. That is why print margin is mostly a pricing and page-count problem.",
@@ -61,7 +61,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "kindle-unlimited",
-            title: "Kindle Unlimited pays by pages read",
+            title: "Does Kindle Unlimited pay per borrow or per page read?",
             body: [
               "If an ebook is enrolled in KDP Select, it can earn through Kindle Unlimited. KU does not pay a fixed amount per borrow. It pays from the KDP Select Global Fund based on qualified pages read for the first time by customers.",
               "This means a book with strong completion can earn more than a book that is borrowed often but abandoned quickly. KU is especially interesting when the genre has subscription readers who read deeply.",
@@ -75,7 +75,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "realistic-math",
-            title: "Estimate profit per 100 sales",
+            title: "How much do 100 KDP sales actually earn?",
             body: [
               "To understand a book, calculate royalties per unit, then multiply by realistic volume. If your ebook earns €2 per sale, 100 sales produce about €200 before taxes and business expenses. If your paperback earns €3.50 per sale, 100 sales produce about €350.",
               "The larger opportunity is not guessing one viral number. It is building a catalog where each book has a clear promise, decent margin and enough search demand to produce recurring sales.",
@@ -89,7 +89,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "what-changes-income",
-            title: "The variables that change KDP income",
+            title: "Which variables actually change KDP earnings?",
             body: [
               "KDP income changes when you change the price, category, book length, file size, cover, description, keywords, ad spend, review quality and publishing cadence. A higher price can increase royalty per sale but lower conversion. A lower price can increase conversion but reduce margin.",
               "The best strategy is to measure one large variable at a time. If you change the cover, price and keywords on the same day, you will not know which element moved the result.",
@@ -154,7 +154,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "redevances-ebook",
-            title: "Commencer par les redevances ebook",
+            title: "35% ou 70% : quelle redevance ebook s'applique à votre livre ?",
             body: [
               "KDP propose deux grandes options de redevance ebook : 35% et 70%. L'option 35% est plus simple et couvre plus de prix et territoires. L'option 70% peut rapporter davantage, mais elle dépend de conditions de prix, de territoire et de frais de livraison.",
               "Exemple simple à 35% : un ebook à $0.99 vendu sans TVA applicable rapporte environ $0.35. Exemple à 70% : un ebook allemand à €2.99 avec 7% de TVA et €0.12 de livraison numérique rapporte environ €1.87.",
@@ -168,7 +168,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "redevances-print",
-            title: "Les livres brochés dépendent du coût d'impression",
+            title: "Comment calculer la redevance d'un broché après impression ?",
             body: [
               "Pour les brochés vendus via Amazon, KDP applique un taux de redevance puis retire le coût d'impression. KDP utilise maintenant 50% ou 60% selon le prix et le marketplace. La distribution étendue utilise 40% moins les coûts d'impression.",
               "Exemple : un broché à $15 avec $5 de coût d'impression et un taux de 60% rapporte environ $4. Le même livre en distribution étendue à 40% rapporte environ $1. La marge print est donc une affaire de prix et de nombre de pages.",
@@ -182,7 +182,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "kindle-unlimited",
-            title: "Kindle Unlimited paie selon les pages lues",
+            title: "Kindle Unlimited paie-t-il par emprunt ou par page lue ?",
             body: [
               "Si l'ebook est inscrit à KDP Select, il peut gagner via Kindle Unlimited. KU ne paie pas un montant fixe par emprunt. Le paiement vient du fonds global KDP Select selon les pages qualifiées lues pour la première fois.",
               "Un livre lu jusqu'au bout peut donc mieux performer qu'un livre souvent emprunté mais vite abandonné. KU est intéressant quand la niche a des lecteurs abonnés qui lisent beaucoup.",
@@ -196,7 +196,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "calcul-realiste",
-            title: "Estimer le profit pour 100 ventes",
+            title: "Combien rapportent vraiment 100 ventes sur KDP ?",
             body: [
               "Pour comprendre un livre, calculez la redevance par unité puis multipliez par un volume réaliste. Si votre ebook rapporte €2 par vente, 100 ventes font environ €200 avant taxes et dépenses. Si votre broché rapporte €3.50, 100 ventes font environ €350.",
               "Le vrai levier n'est pas de fantasmer un chiffre viral. C'est de construire un catalogue où chaque livre a une promesse claire, une marge correcte et assez de demande de recherche.",
@@ -210,7 +210,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "variables-revenu",
-            title: "Ce qui change vraiment les revenus KDP",
+            title: "Quelles variables changent vraiment les revenus KDP ?",
             body: [
               "Les revenus changent avec le prix, la catégorie, la longueur du livre, le poids du fichier, la couverture, la description, les mots-clés, les avis, les pubs et le rythme de publication. Un prix plus haut augmente la marge mais peut réduire la conversion.",
               "La bonne méthode est de mesurer une variable importante à la fois. Si vous changez couverture, prix et mots-clés le même jour, vous ne saurez pas ce qui a réellement bougé.",
@@ -275,7 +275,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "royalty-ebook",
-            title: "Parti dalle opzioni royalty ebook",
+            title: "35% o 70%: quale royalty ebook si applica al tuo libro?",
             body: [
               "KDP offre due opzioni principali per gli ebook: 35% e 70%. Il 35% è più semplice e copre più prezzi e territori. Il 70% può rendere di più, ma richiede requisiti di prezzo e territorio e sottrae i costi di consegna.",
               "Esempio a 35%: un ebook a $0.99 venduto senza IVA applicabile rende circa $0.35. Esempio a 70%: un ebook tedesco a €2.99 con 7% IVA e €0.12 di consegna digitale rende circa €1.87.",
@@ -289,7 +289,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "royalty-print",
-            title: "I paperback dipendono dai costi di stampa",
+            title: "Come si calcola la royalty di un paperback dopo la stampa?",
             body: [
               "Per i paperback venduti su Amazon, KDP applica un tasso royalty e poi sottrae il costo di stampa. KDP usa 50% o 60% in base a prezzo e marketplace. La Distribuzione Estesa usa 40% meno costi di stampa.",
               "Esempio: un paperback da $15 con $5 di stampa e tasso 60% rende circa $4. Lo stesso libro in Distribuzione Estesa al 40% rende circa $1.",
@@ -303,7 +303,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "kindle-unlimited",
-            title: "Kindle Unlimited paga per pagine lette",
+            title: "Kindle Unlimited paga per prestito o per pagina letta?",
             body: [
               "Se l'ebook è iscritto a KDP Select, può guadagnare con Kindle Unlimited. KU non paga un importo fisso per prestito. Il pagamento arriva dal fondo globale KDP Select in base alle pagine qualificate lette per la prima volta.",
               "Un libro letto fino in fondo può rendere meglio di un libro preso spesso in prestito ma abbandonato presto.",
@@ -317,7 +317,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "calcolo-realistico",
-            title: "Stima il profitto su 100 vendite",
+            title: "Quanto rendono davvero 100 vendite su KDP?",
             body: [
               "Calcola la royalty per unità e poi moltiplica per un volume realistico. Se un ebook rende €2 per vendita, 100 vendite fanno circa €200 prima di tasse e spese. Se un paperback rende €3.50, 100 vendite fanno circa €350.",
               "Il vero obiettivo è costruire un catalogo in cui ogni libro ha promessa chiara, margine corretto e domanda sufficiente.",
@@ -331,7 +331,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "variabili",
-            title: "Le variabili che cambiano il reddito",
+            title: "Quali variabili cambiano davvero i guadagni KDP?",
             body: [
               "Il reddito cambia con prezzo, categoria, lunghezza, dimensione file, copertina, descrizione, keyword, recensioni, pubblicità e ritmo di pubblicazione. Un prezzo più alto aumenta il margine ma può ridurre conversione.",
               "Misura una variabile importante alla volta. Se cambi copertina, prezzo e keyword insieme, non saprai cosa ha mosso il risultato.",
@@ -396,7 +396,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "ebook-tantiemen",
-            title: "Beginne mit den Ebook-Tantiemen",
+            title: "35% oder 70% Ebook-Tantieme: was gilt für dein Buch?",
             body: [
               "KDP bietet zwei Hauptoptionen für Ebooks: 35% und 70%. Die 35%-Option ist einfacher und gilt für mehr Preise und Gebiete. Die 70%-Option kann mehr bringen, hat aber Preis- und Gebietsanforderungen und zieht Lieferkosten ab.",
               "Ein einfaches 35%-Beispiel: Ein Ebook für $0.99 ohne anwendbare Mehrwertsteuer bringt etwa $0.35. Ein 70%-Beispiel: Ein deutsches Ebook für €2.99 mit 7% MwSt. und €0.12 Lieferkosten bringt etwa €1.87.",
@@ -410,7 +410,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "print-tantiemen",
-            title: "Taschenbücher hängen von Druckkosten ab",
+            title: "Wie berechnet KDP Taschenbuch-Tantiemen nach Druckkosten?",
             body: [
               "Bei Taschenbüchern wendet KDP einen Tantiemensatz an und zieht danach die Druckkosten ab. KDP nutzt je nach Preis und Marketplace 50% oder 60%. Erweiterte Distribution nutzt 40% minus Druckkosten.",
               "Beispiel: Ein Taschenbuch für $15 mit $5 Druckkosten und 60% Tantiemensatz bringt etwa $4. Dasselbe Buch über Erweiterte Distribution mit 40% bringt etwa $1.",
@@ -424,7 +424,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "kindle-unlimited",
-            title: "Kindle Unlimited zahlt nach gelesenen Seiten",
+            title: "Zahlt Kindle Unlimited pro Ausleihe oder pro gelesene Seite?",
             body: [
               "Wenn ein Ebook in KDP Select ist, kann es über Kindle Unlimited verdienen. KU zahlt keinen festen Betrag pro Ausleihe. Die Auszahlung kommt aus dem KDP Select Global Fund und basiert auf qualifizierten erstmals gelesenen Seiten.",
               "Ein Buch, das zu Ende gelesen wird, kann mehr verdienen als ein Buch, das oft ausgeliehen und schnell abgebrochen wird.",
@@ -438,7 +438,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "realistische-rechnung",
-            title: "Gewinn für 100 Verkäufe schätzen",
+            title: "Wie viel bringen 100 KDP-Verkäufe wirklich?",
             body: [
               "Berechne die Tantieme pro Einheit und multipliziere sie mit realistischem Volumen. Wenn ein Ebook €2 pro Verkauf bringt, ergeben 100 Verkäufe etwa €200 vor Steuern und Kosten. Wenn ein Taschenbuch €3.50 bringt, ergeben 100 Verkäufe etwa €350.",
               "Der Hebel liegt in einem Katalog, in dem jedes Buch klares Versprechen, brauchbare Marge und echte Suchnachfrage hat.",
@@ -452,7 +452,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "variablen",
-            title: "Was KDP-Einnahmen wirklich verändert",
+            title: "Welche Variablen verändern die KDP-Einnahmen wirklich?",
             body: [
               "Einnahmen ändern sich mit Preis, Kategorie, Länge, Dateigröße, Cover, Beschreibung, Keywords, Bewertungen, Anzeigen und Publikationsrhythmus. Ein höherer Preis kann Marge erhöhen, aber Conversion senken.",
               "Miss jeweils eine große Variable. Wenn du Cover, Preis und Keywords gleichzeitig änderst, lernst du nicht, was wirklich gewirkt hat.",
@@ -530,7 +530,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "what-it-is",
-            title: "What KDP Select actually does",
+            title: "What does KDP Select include and what does exclusivity cost?",
             body: [
               "KDP Select is a free 90-day program for Kindle ebooks. When you enroll an ebook, it is automatically included in Kindle Unlimited. The ebook can also use KDP Select promotional tools such as Free Book Promotions or Kindle Countdown Deals when eligible.",
               "The tradeoff is exclusivity for the digital edition. During the enrollment period, the Kindle ebook must be distributed through KDP only. Print, audio and other non-digital formats can still be distributed elsewhere.",
@@ -544,7 +544,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "ku-money",
-            title: "How Kindle Unlimited money works",
+            title: "How does Kindle Unlimited pay authors through KENP pages?",
             body: [
               "Kindle Unlimited royalties are based on pages read, not downloads. Amazon uses KENP pages and allocates money from the KDP Select Global Fund. The monthly value per page changes, so KU income is never a fixed per-borrow amount.",
               "A book that keeps readers engaged can do well in KU. A book with a strong hook but weak completion may get borrows without meaningful royalties.",
@@ -558,7 +558,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "when-select-fits",
-            title: "When KDP Select makes sense",
+            title: "Best for genres with heavy Kindle Unlimited readership",
             body: [
               "KDP Select usually fits when your target readers already live inside Amazon, your genre has heavy Kindle Unlimited readership and your launch plan uses Amazon ads, free days, Countdown Deals or series read-through.",
               "It is also useful for testing a new pen name because the 90-day window creates a contained experiment. You can measure sales, KENP reads, reviews and ad conversion before deciding whether to renew.",
@@ -572,7 +572,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "when-wide-fits",
-            title: "When going wide may be better",
+            title: "KDP Select vs wide: when is publishing outside Amazon better?",
             body: [
               "Going wide means selling the ebook beyond Amazon, for example through Kobo, Apple Books, Google Play or direct sales. This can be better if you already have an audience outside Amazon, want library access or do not want one platform to control ebook distribution.",
               "Wide publishing is slower for many beginners because each store needs metadata, pricing, links and promotion. But it creates platform diversification.",
@@ -586,7 +586,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "test",
-            title: "Run it as a 90-day test",
+            title: "How do you test KDP Select over one 90-day period?",
             body: [
               "The cleanest decision is to test KDP Select for one enrollment period with a clear dashboard. Track sales, KENP reads, read-through, reviews, ad spend and profit. Before renewal, decide based on data instead of hope.",
               "If KU pages are weak, ads are expensive and you have readers elsewhere, going wide may be better. If KU reads are strong and the book feeds a series, renewal can make sense.",
@@ -624,7 +624,7 @@ export const kdpSeoPosts: BlogPost[] = [
               "No. KU royalties are based on qualified pages read for the first time, measured through KENP.",
           },
           {
-            question: "Should beginners use KDP Select?",
+            question: "Should a beginner enroll a first book in KDP Select?",
             answer:
               "Often it is a useful test because the ecosystem is simple, but the right answer depends on genre, audience and whether exclusivity blocks another channel.",
           },
@@ -651,7 +651,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "definition",
-            title: "Ce que fait vraiment KDP Select",
+            title: "Que contient KDP Select et que coûte l'exclusivité ?",
             body: [
               "KDP Select est un programme gratuit de 90 jours pour les ebooks Kindle. Quand vous inscrivez un ebook, il entre automatiquement dans Kindle Unlimited. Il peut aussi utiliser certains outils comme les promotions gratuites ou Kindle Countdown Deals.",
               "La contrepartie est l'exclusivité de l'édition numérique. Pendant l'inscription, l'ebook Kindle doit être distribué uniquement via KDP. Les formats papier, audio ou autres formats non numériques peuvent rester ailleurs.",
@@ -665,7 +665,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "argent-ku",
-            title: "Comment Kindle Unlimited paie",
+            title: "Comment Kindle Unlimited paie-t-il avec les pages KENP ?",
             body: [
               "Kindle Unlimited paie selon les pages lues, pas selon les téléchargements. Amazon utilise les pages KENP et répartit le fonds global KDP Select. La valeur mensuelle par page change, donc KU n'est jamais un montant fixe par emprunt.",
               "Un livre qui garde les lecteurs peut bien performer. Un livre avec une bonne promesse mais une faible lecture peut obtenir des emprunts sans gros revenus.",
@@ -679,7 +679,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "quand-select",
-            title: "Quand KDP Select est pertinent",
+            title: "Idéal pour les genres très lus en Kindle Unlimited",
             body: [
               "KDP Select est souvent pertinent si vos lecteurs sont déjà sur Amazon, si votre genre est fort en Kindle Unlimited et si votre lancement utilise pubs Amazon, jours gratuits, Countdown Deals ou lecture de série.",
               "C'est aussi utile pour tester un nouveau nom de plume : la fenêtre de 90 jours crée une expérience cadrée avec ventes, KENP, avis et conversion publicitaire.",
@@ -693,7 +693,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "quand-wide",
-            title: "Quand publier wide peut être meilleur",
+            title: "KDP Select ou wide : quand publier hors Amazon est-il mieux ?",
             body: [
               "Publier wide signifie vendre l'ebook hors Amazon, par exemple Kobo, Apple Books, Google Play ou vente directe. C'est intéressant si vous avez déjà une audience hors Amazon ou si vous voulez diversifier les plateformes.",
               "Le wide est souvent plus lent pour les débutants, car chaque boutique demande métadonnées, prix, liens et promotion. Mais il réduit la dépendance à un seul canal.",
@@ -707,7 +707,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "test",
-            title: "Le traiter comme un test de 90 jours",
+            title: "Comment tester KDP Select sur une période de 90 jours ?",
             body: [
               "La méthode la plus propre est de tester KDP Select sur une période avec un tableau de bord. Suivez ventes, pages KENP, avis, dépenses pub et profit. Avant renouvellement, décidez avec les données.",
               "Si les pages KU sont faibles, que les pubs coûtent cher et que vous avez des lecteurs ailleurs, le wide peut gagner. Si KU lit fort et nourrit une série, renouveler peut avoir du sens.",
@@ -745,7 +745,7 @@ export const kdpSeoPosts: BlogPost[] = [
               "Non. Les redevances KU reposent sur les pages qualifiées lues pour la première fois, mesurées en KENP.",
           },
           {
-            question: "Un débutant devrait-il utiliser KDP Select ?",
+            question: "Un débutant devrait-il inscrire son premier livre à KDP Select ?",
             answer:
               "Souvent, c'est un bon test car l'écosystème est simple. Mais cela dépend du genre, de l'audience et du coût réel de l'exclusivité.",
           },
@@ -772,7 +772,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "cos-e",
-            title: "Che cosa fa davvero KDP Select",
+            title: "Cosa include KDP Select e quanto costa l'esclusiva?",
             body: [
               "KDP Select è un programma gratuito di 90 giorni per ebook Kindle. Quando iscrivi un ebook, entra automaticamente in Kindle Unlimited. Può anche usare strumenti come promozioni gratuite o Kindle Countdown Deals.",
               "Il compromesso è l'esclusiva dell'edizione digitale. Durante l'iscrizione, l'ebook Kindle deve essere distribuito solo tramite KDP. Print, audio e altri formati possono restare altrove.",
@@ -786,7 +786,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "soldi-ku",
-            title: "Come paga Kindle Unlimited",
+            title: "Come paga Kindle Unlimited con le pagine KENP?",
             body: [
               "Kindle Unlimited paga in base alle pagine lette, non ai download. Amazon usa pagine KENP e distribuisce il fondo globale KDP Select. Il valore mensile per pagina cambia.",
               "Un libro letto fino in fondo può performare bene. Un libro preso spesso in prestito ma abbandonato presto può rendere poco.",
@@ -800,7 +800,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "quando-select",
-            title: "Quando KDP Select ha senso",
+            title: "Ideale per generi con molti lettori Kindle Unlimited",
             body: [
               "KDP Select ha senso se i lettori del genere sono già su Amazon, se Kindle Unlimited è forte nella nicchia e se il lancio usa ads Amazon, giorni gratuiti, Countdown Deals o serie.",
               "È utile anche per testare un nuovo pseudonimo perché i 90 giorni creano un esperimento chiaro.",
@@ -814,7 +814,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "quando-wide",
-            title: "Quando il wide può essere meglio",
+            title: "KDP Select o wide: quando conviene vendere fuori Amazon?",
             body: [
               "Andare wide significa vendere l'ebook anche fuori Amazon, per esempio Kobo, Apple Books, Google Play o vendita diretta. È utile se hai pubblico fuori Amazon o vuoi diversificare.",
               "Per i principianti è spesso più lento, perché ogni store richiede metadati, prezzi, link e promozione.",
@@ -828,7 +828,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "test",
-            title: "Usalo come test di 90 giorni",
+            title: "Come testare KDP Select in un periodo di 90 giorni?",
             body: [
               "La scelta più pulita è testare KDP Select per un periodo con dashboard chiara. Segui vendite, KENP, recensioni, spesa ads e profitto. Prima del rinnovo, decidi con i dati.",
               "Se KU è debole e hai lettori altrove, wide può essere meglio. Se KU legge bene e alimenta una serie, rinnovare ha senso.",
@@ -866,7 +866,7 @@ export const kdpSeoPosts: BlogPost[] = [
               "No. Le royalty KU dipendono da pagine qualificate lette per la prima volta, misurate in KENP.",
           },
           {
-            question: "Un principiante dovrebbe usare KDP Select?",
+            question: "Un principiante dovrebbe iscrivere il primo libro a KDP Select?",
             answer:
               "Spesso è un buon test perché l'ecosistema è semplice, ma dipende da genere, pubblico e costo dell'esclusiva.",
           },
@@ -893,7 +893,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "was-ist-das",
-            title: "Was KDP Select wirklich macht",
+            title: "Was bietet KDP Select und was kostet die Exklusivität?",
             body: [
               "KDP Select ist ein kostenloses 90-Tage-Programm für Kindle Ebooks. Wenn du ein Ebook anmeldest, wird es automatisch in Kindle Unlimited aufgenommen. Es kann außerdem Tools wie Gratisaktionen oder Kindle Countdown Deals nutzen.",
               "Der Preis ist Exklusivität für die digitale Ausgabe. Während der Laufzeit darf das Kindle Ebook nur über KDP vertrieben werden. Print, Audio und andere Formate können anderswo bleiben.",
@@ -907,7 +907,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "ku-geld",
-            title: "Wie Kindle Unlimited bezahlt",
+            title: "Wie bezahlt Kindle Unlimited über KENP-Seiten?",
             body: [
               "Kindle Unlimited bezahlt nach gelesenen Seiten, nicht nach Downloads. Amazon nutzt KENP-Seiten und verteilt Geld aus dem KDP Select Global Fund. Der monatliche Seitenwert schwankt.",
               "Ein Buch mit hoher Lesetiefe kann gut verdienen. Ein Buch mit vielen Ausleihen, aber schwacher Completion, kann enttäuschen.",
@@ -921,7 +921,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "wann-select",
-            title: "Wann KDP Select passt",
+            title: "Am besten für Genres mit vielen Kindle-Unlimited-Lesern",
             body: [
               "KDP Select passt oft, wenn die Zielgruppe auf Amazon liest, das Genre in KU stark ist und dein Launch Amazon Ads, Gratisaktionen, Countdown Deals oder Serien-Read-through nutzt.",
               "Auch für neue Pseudonyme kann es sinnvoll sein, weil 90 Tage ein klares Experiment mit Verkäufen, KENP, Reviews und Anzeigenleistung ergeben.",
@@ -935,7 +935,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "wann-wide",
-            title: "Wann Wide Publishing besser sein kann",
+            title: "KDP Select oder wide: wann lohnt sich Wide Publishing?",
             body: [
               "Wide bedeutet, das Ebook auch außerhalb von Amazon zu verkaufen, etwa über Kobo, Apple Books, Google Play oder direkt. Das passt, wenn du Publikum außerhalb Amazon hast oder Plattformrisiko reduzieren willst.",
               "Für Anfänger ist Wide oft langsamer, weil jeder Shop Metadaten, Preise, Links und Promotion braucht.",
@@ -949,7 +949,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "test",
-            title: "Als 90-Tage-Test behandeln",
+            title: "Wie testest du KDP Select in 90 Tagen?",
             body: [
               "Am saubersten ist ein KDP-Select-Test mit Dashboard. Verfolge Verkäufe, KENP, Reviews, Anzeigenkosten und Gewinn. Vor der Verlängerung entscheidest du nach Daten.",
               "Wenn KU-Seiten schwach sind und du Leser anderswo hast, kann Wide besser sein. Wenn KU stark liest und eine Serie füttert, kann Verlängerung sinnvoll sein.",
@@ -977,7 +977,7 @@ export const kdpSeoPosts: BlogPost[] = [
               "Nein. KDP Select ist das Autorenprogramm. Kindle Unlimited ist das Leserabo, in das ein angemeldetes Ebook automatisch kommt.",
           },
           {
-            question: "Kann ich mein Taschenbuch woanders verkaufen?",
+            question: "Kann ich mein Taschenbuch trotz KDP Select woanders verkaufen?",
             answer:
               "Ja. Die Exklusivität betrifft die digitale Ebook-Ausgabe, nicht Print, Audio oder andere Formate.",
           },
@@ -987,7 +987,7 @@ export const kdpSeoPosts: BlogPost[] = [
               "Nein. KU-Tantiemen basieren auf qualifizierten erstmals gelesenen Seiten, gemessen in KENP.",
           },
           {
-            question: "Sollten Anfänger KDP Select nutzen?",
+            question: "Sollte ein Anfänger sein erstes Buch bei KDP Select anmelden?",
             answer:
               "Oft ist es ein guter Test, weil das System einfach ist. Die richtige Antwort hängt aber von Genre, Publikum und Exklusivitätskosten ab.",
           },
@@ -1027,7 +1027,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "visibility",
-            title: "First ask whether the book is visible",
+            title: "Is anyone actually seeing your KDP book in Amazon search?",
             body: [
               "No sales can mean no one is seeing the book. Check whether the title appears for relevant search phrases, whether the categories match the book and whether the keywords reflect real reader language.",
               "If the book is buried in broad competitive phrases, narrow the positioning. A book about habits for new parents should not only target habits. It needs the specific reader context.",
@@ -1041,7 +1041,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "clicks",
-            title: "If people see it, check the click",
+            title: "Impressions but no clicks: is it the cover, title or price?",
             body: [
               "If impressions exist but clicks are weak, the problem is usually cover, title, subtitle, review count, price or mismatch with the surrounding books. Amazon search is a shelf. Your cover has to explain genre and promise in a small thumbnail.",
               "A beautiful cover can still fail if it signals the wrong category. A plain title can fail if it does not promise a clear reader outcome.",
@@ -1055,7 +1055,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "conversion",
-            title: "If people click, fix conversion",
+            title: "Clicks but no sales: what stops the book page converting?",
             body: [
               "Clicks without sales point to the product page. The description may be vague, the first pages may be weak, the formatting may feel amateur, the reviews may be absent or the price may feel too high for the perceived value.",
               "The description should not summarize the book like a school report. It should sell the transformation, the audience, the structure and the reason to buy now.",
@@ -1069,7 +1069,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "product",
-            title: "Check whether the product deserves the sale",
+            title: "Is the book itself the problem, not the listing?",
             body: [
               "Sometimes the listing is fine and the book itself is the problem. Weak structure, generic AI prose, thin information, poor pacing or misleading packaging can suppress sales and reviews.",
               "A book that promises beginner clarity must actually be clear. A low-content or notebook product must have a visual reason to exist. A niche book must be more useful than the free information readers already have.",
@@ -1083,7 +1083,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "ads",
-            title: "Use ads only after the page can convert",
+            title: "Ads buy visibility, not conversion: when should you start?",
             body: [
               "Ads can buy visibility, but they cannot repair a weak offer. If the cover, metadata, sample and description are not ready, ads mainly accelerate the lesson that the page does not convert.",
               "Start small. Test exact keyword campaigns, track clicks, spend and sales, then improve the product page before scaling budget.",
@@ -1112,17 +1112,17 @@ export const kdpSeoPosts: BlogPost[] = [
               "Wait until you have enough signal. If there are no impressions, fix visibility. If there are clicks without sales, fix conversion. If traffic is tiny, gather more data.",
           },
           {
-            question: "Should I lower my KDP price to get sales?",
+            question: "Should I lower my KDP price to get the first sales?",
             answer:
               "Sometimes, but price is only one lever. A lower price will not fix a confusing cover, weak metadata or poor sample pages.",
           },
           {
-            question: "Do Amazon ads solve no sales?",
+            question: "Will Amazon ads fix a book that gets no sales?",
             answer:
               "Ads can create visibility, but they do not guarantee conversion. Use them after the book page is strong enough to earn clicks and sales.",
           },
           {
-            question: "What is the first thing to fix?",
+            question: "What should I fix first when my KDP book is not selling?",
             answer:
               "Start with the biggest bottleneck: visibility if no one sees the book, cover/title if no one clicks, description/sample if no one buys.",
           },
@@ -1149,7 +1149,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "visibilite",
-            title: "D'abord vérifier si le livre est visible",
+            title: "Votre livre KDP est-il vraiment visible dans la recherche ?",
             body: [
               "Pas de ventes peut vouloir dire que personne ne voit le livre. Vérifiez si le titre apparaît sur des recherches pertinentes, si les catégories correspondent vraiment et si les mots-clés utilisent le langage des lecteurs.",
               "Si le livre est enterré sur des expressions trop larges, resserrez le positionnement. Un livre sur les habitudes pour jeunes parents ne doit pas seulement viser habitudes. Il doit viser le contexte lecteur.",
@@ -1163,7 +1163,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "clic",
-            title: "Si le livre est vu, vérifier le clic",
+            title: "Des impressions mais peu de clics : couverture, titre ou prix ?",
             body: [
               "S'il y a des impressions mais peu de clics, le problème vient souvent de la couverture, du titre, du sous-titre, des avis, du prix ou d'un décalage avec les livres voisins. Amazon est une étagère. Votre couverture doit expliquer genre et promesse en miniature.",
               "Une belle couverture peut échouer si elle signale la mauvaise catégorie. Un titre plat peut échouer s'il ne promet aucun résultat lecteur.",
@@ -1177,7 +1177,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "conversion",
-            title: "Si les gens cliquent, corriger la conversion",
+            title: "Des clics sans ventes : qu'est-ce qui bloque la conversion ?",
             body: [
               "Des clics sans ventes pointent vers la fiche produit. La description peut être vague, les premières pages faibles, le formatage amateur, les avis absents ou le prix trop élevé pour la valeur perçue.",
               "La description ne doit pas résumer le livre comme une fiche scolaire. Elle doit vendre la transformation, l'audience, la structure et la raison d'acheter maintenant.",
@@ -1191,7 +1191,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "produit",
-            title: "Vérifier si le produit mérite la vente",
+            title: "Le problème vient-il du livre et non de la fiche ?",
             body: [
               "Parfois la fiche est correcte et le livre lui-même bloque. Structure faible, prose IA générique, information mince, mauvais rythme ou packaging trompeur peuvent limiter ventes et avis.",
               "Un livre qui promet de la clarté débutant doit réellement être clair. Un carnet doit avoir une raison visuelle d'exister. Un livre de niche doit apporter plus que l'information gratuite déjà disponible.",
@@ -1205,7 +1205,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "publicites",
-            title: "Utiliser les pubs seulement après la conversion",
+            title: "Les pubs achètent la visibilité, pas la conversion : quand démarrer ?",
             body: [
               "Les pubs achètent de la visibilité, mais ne réparent pas une offre faible. Si couverture, métadonnées, extrait et description ne sont pas prêts, les pubs accélèrent surtout l'apprentissage que la fiche ne convertit pas.",
               "Commencez petit. Testez des campagnes par mots-clés précis, suivez clics, dépenses et ventes, puis améliorez la fiche avant d'augmenter le budget.",
@@ -1234,17 +1234,17 @@ export const kdpSeoPosts: BlogPost[] = [
               "Attendez d'avoir un minimum de signal. Sans impressions, corrigez la visibilité. Avec clics mais sans ventes, corrigez la conversion. Avec très peu de trafic, collectez plus de données.",
           },
           {
-            question: "Faut-il baisser le prix pour vendre ?",
+            question: "Faut-il baisser le prix d'un livre KDP pour vendre ?",
             answer:
               "Parfois, mais le prix n'est qu'un levier. Un prix bas ne corrige pas une couverture confuse, de mauvaises métadonnées ou un extrait faible.",
           },
           {
-            question: "Les pubs Amazon règlent-elles l'absence de ventes ?",
+            question: "Les pubs Amazon suffisent-elles quand un livre ne vend pas ?",
             answer:
               "Elles peuvent créer de la visibilité, mais pas garantir la conversion. Utilisez-les après avoir rendu la fiche assez solide.",
           },
           {
-            question: "Que corriger en premier ?",
+            question: "Que corriger en premier quand un livre KDP ne se vend pas ?",
             answer:
               "Le plus gros blocage : visibilité si personne ne voit le livre, couverture/titre si personne ne clique, description/extrait si personne n'achète.",
           },
@@ -1271,7 +1271,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "visibilita",
-            title: "Prima verifica se il libro è visibile",
+            title: "Il tuo libro KDP è davvero visibile nella ricerca Amazon?",
             body: [
               "Zero vendite può significare che nessuno vede il libro. Controlla se appare per ricerche rilevanti, se le categorie sono coerenti e se le keyword usano il linguaggio dei lettori.",
               "Se il libro è sepolto in frasi troppo generiche, restringi il posizionamento. Un libro sulle abitudini per neo-genitori non deve puntare solo su abitudini.",
@@ -1285,7 +1285,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "click",
-            title: "Se viene visto, controlla il click",
+            title: "Impression ma pochi click: copertina, titolo o prezzo?",
             body: [
               "Se ci sono impression ma pochi click, il problema è spesso copertina, titolo, sottotitolo, recensioni, prezzo o mismatch con i concorrenti. La copertina deve comunicare genere e promessa in miniatura.",
               "Una copertina bella può fallire se segnala la categoria sbagliata. Un titolo piatto può fallire se non promette nulla.",
@@ -1299,7 +1299,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "conversione",
-            title: "Se cliccano, correggi la conversione",
+            title: "Click senza vendite: cosa blocca la pagina del libro?",
             body: [
               "Click senza vendite indicano la pagina prodotto. Descrizione vaga, prime pagine deboli, formattazione amatoriale, poche recensioni o prezzo alto possono bloccare.",
               "La descrizione non deve riassumere il libro. Deve vendere trasformazione, pubblico, struttura e motivo per comprare ora.",
@@ -1313,7 +1313,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "prodotto",
-            title: "Verifica se il prodotto merita la vendita",
+            title: "Il problema è il libro e non la pagina prodotto?",
             body: [
               "A volte la pagina è ok e il problema è il libro: struttura debole, testo IA generico, informazioni sottili, ritmo povero o packaging ingannevole.",
               "Un libro che promette chiarezza per principianti deve essere davvero chiaro. Un notebook deve avere una ragione visiva per esistere.",
@@ -1327,7 +1327,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "ads",
-            title: "Usa ads solo dopo la conversione",
+            title: "Le ads comprano visibilità, non conversione: quando partire?",
             body: [
               "Le ads comprano visibilità, ma non riparano un'offerta debole. Se copertina, metadati, sample e descrizione non sono pronti, accelerano solo il costo dell'errore.",
               "Inizia piccolo. Testa keyword precise, traccia click, spesa e vendite, poi migliora la pagina prima di scalare.",
@@ -1356,17 +1356,17 @@ export const kdpSeoPosts: BlogPost[] = [
               "Aspetta abbastanza segnale. Se non ci sono impression, correggi visibilità. Se ci sono click senza vendite, correggi conversione.",
           },
           {
-            question: "Devo abbassare il prezzo?",
+            question: "Devo abbassare il prezzo del libro KDP per vendere?",
             answer:
               "A volte, ma il prezzo è solo una leva. Non corregge copertina confusa, metadati deboli o sample povero.",
           },
           {
-            question: "Le Amazon ads risolvono zero vendite?",
+            question: "Le Amazon ads bastano se un libro KDP non vende?",
             answer:
               "Possono creare visibilità, ma non garantiscono conversione. Usale dopo aver reso forte la pagina.",
           },
           {
-            question: "Cosa correggere per primo?",
+            question: "Cosa correggere per primo se il libro KDP non vende?",
             answer:
               "Il blocco principale: visibilità se nessuno vede, copertina/titolo se nessuno clicca, descrizione/sample se nessuno compra.",
           },
@@ -1393,7 +1393,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "sichtbarkeit",
-            title: "Zuerst prüfen, ob das Buch sichtbar ist",
+            title: "Ist dein KDP-Buch in der Amazon-Suche überhaupt sichtbar?",
             body: [
               "Keine Verkäufe können bedeuten, dass niemand das Buch sieht. Prüfe, ob es für relevante Suchbegriffe erscheint, ob Kategorien passen und ob Keywords echte Lesersprache nutzen.",
               "Wenn das Buch in breiten Begriffen untergeht, positioniere enger. Ein Buch über Gewohnheiten für junge Eltern sollte nicht nur Gewohnheiten targetieren.",
@@ -1407,7 +1407,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "klicks",
-            title: "Wenn es gesehen wird, den Klick prüfen",
+            title: "Impressionen ohne Klicks: Cover, Titel oder Preis?",
             body: [
               "Bei Impressionen ohne Klicks liegt es oft an Cover, Titel, Untertitel, Reviews, Preis oder Umfeld. Das Cover muss Genre und Versprechen als Thumbnail erklären.",
               "Ein schönes Cover kann scheitern, wenn es die falsche Kategorie signalisiert. Ein flacher Titel kann scheitern, wenn er kein Ergebnis verspricht.",
@@ -1421,7 +1421,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "conversion",
-            title: "Bei Klicks ohne Verkäufe Conversion reparieren",
+            title: "Klicks ohne Verkäufe: was blockiert die Buchseite?",
             body: [
               "Klicks ohne Verkäufe zeigen auf die Produktseite. Vage Beschreibung, schwache erste Seiten, amateurhafte Formatierung, fehlende Reviews oder zu hoher Preis können blockieren.",
               "Die Beschreibung sollte nicht zusammenfassen. Sie soll Transformation, Zielgruppe, Struktur und Kaufgrund verkaufen.",
@@ -1435,7 +1435,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "produkt",
-            title: "Prüfen, ob das Produkt den Kauf verdient",
+            title: "Ist das Buch selbst das Problem, nicht die Seite?",
             body: [
               "Manchmal ist die Seite okay und das Buch selbst blockiert. Schwache Struktur, generische KI-Prosa, dünne Information, schlechter Rhythmus oder irreführendes Packaging können Verkäufe und Reviews drücken.",
               "Ein Buch, das Klarheit für Anfänger verspricht, muss wirklich klar sein. Ein Notizbuch braucht einen visuellen Grund zu existieren.",
@@ -1449,7 +1449,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "anzeigen",
-            title: "Ads erst nutzen, wenn die Seite konvertiert",
+            title: "Ads kaufen Sichtbarkeit, nicht Conversion: wann starten?",
             body: [
               "Ads kaufen Sichtbarkeit, reparieren aber kein schwaches Angebot. Wenn Cover, Metadaten, Leseprobe und Beschreibung nicht bereit sind, beschleunigen Ads nur die Erkenntnis, dass die Seite nicht verkauft.",
               "Starte klein. Teste genaue Keywords, tracke Klicks, Kosten und Verkäufe, dann verbessere die Seite vor höherem Budget.",
@@ -1478,17 +1478,17 @@ export const kdpSeoPosts: BlogPost[] = [
               "Warte auf genug Signal. Ohne Impressionen Sichtbarkeit reparieren. Mit Klicks ohne Verkäufe Conversion reparieren. Bei wenig Traffic mehr Daten sammeln.",
           },
           {
-            question: "Soll ich den Preis senken?",
+            question: "Soll ich den Preis meines KDP-Buchs senken?",
             answer:
               "Manchmal, aber Preis ist nur ein Hebel. Er repariert kein verwirrendes Cover, schwache Metadaten oder schlechte Leseprobe.",
           },
           {
-            question: "Lösen Amazon Ads keine Verkäufe?",
+            question: "Helfen Amazon Ads, wenn ein KDP-Buch nicht verkauft?",
             answer:
               "Ads können Sichtbarkeit schaffen, aber keine Conversion garantieren. Nutze sie, wenn die Buchseite stark genug ist.",
           },
           {
-            question: "Was zuerst verbessern?",
+            question: "Was verbessere ich zuerst, wenn das Buch nicht verkauft?",
             answer:
               "Den größten Engpass: Sichtbarkeit, wenn niemand das Buch sieht; Cover/Titel, wenn niemand klickt; Beschreibung/Leseprobe, wenn niemand kauft.",
           },
@@ -1528,7 +1528,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "intent",
-            title: "Start with reader intent",
+            title: "What reader intent should a KDP keyword describe?",
             body: [
               "Before opening a keyword tool, write down the exact reader. A cookbook for students, a sleep guide for parents and a journal for nurses can all be books, but the searches are completely different.",
               "A useful keyword phrase contains a reader, problem, outcome, genre, format or situation. The more specific the intent, the easier it is to create a book page that feels relevant.",
@@ -1542,7 +1542,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "amazon-search",
-            title: "Use Amazon search like a beginner-friendly research tool",
+            title: "How do you use Amazon autocomplete for keyword research?",
             body: [
               "Amazon autocomplete is a simple way to collect phrases readers may use. Type seed words slowly and note the suggestions that fit your book. Then open the results and study titles, subtitles, covers and review language.",
               "Do not copy competitor metadata. Use it to understand patterns: repeated promises, audience words, formats, benefits and complaints.",
@@ -1556,7 +1556,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "clusters",
-            title: "Build keyword clusters instead of one list",
+            title: "Keyword clusters vs one long list: why group by intent?",
             body: [
               "A keyword cluster is a group of related phrases around one intent. For example, beginner guitar, guitar for adults, easy guitar lessons and learn guitar at home can belong to the same cluster.",
               "Clusters help you avoid mixing unrelated audiences. A book for children and a book for retired adults may both mention beginner, but they need different metadata and packaging.",
@@ -1570,7 +1570,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "fields",
-            title: "Fill the seven KDP keyword boxes with phrases",
+            title: "What should go in each of the 7 KDP keyword slots?",
             body: [
               "KDP gives keyword fields during setup. Beginners often waste them with single words, repeated title words or phrases that are too broad. Use phrase-level intent instead.",
               "You do not need to repeat words already obvious in the title unless the phrase changes meaning. Use the space for alternate searches, audience language and use cases.",
@@ -1584,7 +1584,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "mistakes",
-            title: "Avoid beginner keyword mistakes",
+            title: "What should you never put in a KDP keyword field?",
             body: [
               "The biggest mistake is chasing volume without relevance. A huge keyword that does not fit the book can bring poor clicks and weak conversion. Amazon learns from reader behavior, not just metadata.",
               "Another mistake is treating keywords as a replacement for the product. If the cover, title, description and sample do not satisfy the keyword promise, visibility will not turn into sales.",
@@ -1613,7 +1613,7 @@ export const kdpSeoPosts: BlogPost[] = [
               "KDP provides seven keyword fields during book setup. Use them for natural search phrases rather than repeating single words.",
           },
           {
-            question: "Should I put keywords in the title?",
+            question: "Should I put KDP keywords in the book title?",
             answer:
               "Only if they make the title clearer and more appealing. The title must still read naturally and match the book.",
           },
@@ -1650,7 +1650,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "intention",
-            title: "Commencer par l'intention lecteur",
+            title: "Quelle intention lecteur doit décrire un mot-clé KDP ?",
             body: [
               "Avant d'ouvrir un outil, écrivez qui est le lecteur exact. Un livre de cuisine pour étudiants, un guide sommeil pour parents et un carnet pour infirmières sont tous des livres, mais les recherches sont différentes.",
               "Une bonne phrase contient un lecteur, un problème, un résultat, un genre, un format ou une situation. Plus l'intention est précise, plus la fiche paraît pertinente.",
@@ -1664,7 +1664,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "recherche-amazon",
-            title: "Utiliser la recherche Amazon simplement",
+            title: "Comment utiliser les suggestions Amazon pour ses mots-clés ?",
             body: [
               "L'autocomplétion Amazon permet de collecter des phrases possibles. Tapez lentement des mots de départ et notez les suggestions qui correspondent au livre. Ouvrez ensuite les résultats et étudiez titres, sous-titres, couvertures et avis.",
               "Ne copiez pas les métadonnées concurrentes. Utilisez-les pour comprendre les promesses répétées, les mots d'audience, les formats, les bénéfices et les plaintes.",
@@ -1678,7 +1678,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "clusters",
-            title: "Créer des clusters plutôt qu'une simple liste",
+            title: "Clusters ou liste unique : pourquoi grouper les mots-clés ?",
             body: [
               "Un cluster est un groupe d'expressions autour d'une même intention. Par exemple guitare débutant, guitare adulte, apprendre la guitare facilement et cours guitare maison peuvent appartenir au même cluster.",
               "Les clusters évitent de mélanger des audiences incompatibles. Un livre pour enfants et un livre pour adultes retraités peuvent tous les deux dire débutant, mais ils demandent des pages très différentes.",
@@ -1692,7 +1692,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "champs",
-            title: "Remplir les sept champs KDP avec des phrases",
+            title: "Que mettre dans chacun des 7 champs de mots-clés KDP ?",
             body: [
               "KDP donne des champs de mots-clés pendant la configuration. Les débutants les gaspillent souvent avec des mots seuls, des répétitions du titre ou des termes trop larges. Utilisez plutôt des phrases d'intention.",
               "Vous n'avez pas besoin de répéter les mots déjà évidents du titre, sauf si l'expression change le sens. Gardez l'espace pour les recherches alternatives, l'audience et les usages.",
@@ -1706,7 +1706,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "erreurs",
-            title: "Éviter les erreurs de débutant",
+            title: "Que ne faut-il jamais mettre dans un champ mots-clés KDP ?",
             body: [
               "La plus grosse erreur est de viser le volume sans pertinence. Un mot-clé énorme mais mal aligné peut créer de mauvais clics et une faible conversion. Amazon observe aussi le comportement lecteur.",
               "Autre erreur : croire que les mots-clés remplacent le produit. Si couverture, titre, description et extrait ne tiennent pas la promesse, la visibilité ne devient pas ventes.",
@@ -1735,12 +1735,12 @@ export const kdpSeoPosts: BlogPost[] = [
               "KDP propose sept champs de mots-clés pendant la configuration du livre. Utilisez-les pour des phrases naturelles plutôt que des mots isolés répétés.",
           },
           {
-            question: "Faut-il mettre des mots-clés dans le titre ?",
+            question: "Les mots-clés KDP doivent-ils apparaître dans le titre ?",
             answer:
               "Seulement s'ils rendent le titre plus clair et plus désirable. Le titre doit rester naturel et fidèle au livre.",
           },
           {
-            question: "Peut-on utiliser des noms d'auteurs concurrents ?",
+            question: "Peut-on utiliser des noms d'auteurs concurrents en mots-clés ?",
             answer:
               "Évitez les noms ou marques trompeurs et protégés. Les mots-clés doivent représenter honnêtement votre livre et respecter KDP.",
           },
@@ -1772,7 +1772,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "intento",
-            title: "Parti dall'intento del lettore",
+            title: "Quale intento del lettore deve descrivere una keyword KDP?",
             body: [
               "Prima di usare strumenti, scrivi chi è il lettore preciso. Un ricettario per studenti, una guida sonno per genitori e un journal per infermieri hanno ricerche diverse.",
               "Una buona frase contiene lettore, problema, risultato, genere, formato o situazione. Più l'intento è specifico, più la pagina appare rilevante.",
@@ -1786,7 +1786,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "ricerca-amazon",
-            title: "Usa la ricerca Amazon in modo semplice",
+            title: "Come usare l'autocomplete Amazon per cercare le keyword?",
             body: [
               "L'autocomplete Amazon aiuta a raccogliere frasi. Digita lentamente parole seed e nota i suggerimenti pertinenti. Poi apri i risultati e studia titoli, sottotitoli, copertine e recensioni.",
               "Non copiare i metadati concorrenti. Usali per capire promesse, parole audience, formati, benefici e lamentele.",
@@ -1800,7 +1800,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "cluster",
-            title: "Crea cluster invece di una lista unica",
+            title: "Cluster o lista unica: perché raggruppare le keyword?",
             body: [
               "Un cluster è un gruppo di frasi intorno a un intento. Per esempio chitarra principianti, chitarra adulti, imparare chitarra facile e lezioni chitarra a casa possono stare insieme.",
               "I cluster evitano di mescolare audience incompatibili. Un libro per bambini e uno per adulti possono dire principianti, ma richiedono pagine diverse.",
@@ -1814,7 +1814,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "campi",
-            title: "Riempi i sette campi KDP con frasi",
+            title: "Cosa scrivere in ciascuno dei 7 campi keyword KDP?",
             body: [
               "KDP offre campi keyword durante la configurazione. I principianti li sprecano con parole singole, ripetizioni del titolo o termini troppo larghi. Usa frasi di intento.",
               "Non serve ripetere parole già ovvie nel titolo, salvo che la frase cambi significato. Usa lo spazio per ricerche alternative, audience e casi d'uso.",
@@ -1828,7 +1828,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "errori",
-            title: "Evita errori da principianti",
+            title: "Cosa non mettere mai in un campo keyword KDP?",
             body: [
               "L'errore più grande è inseguire volume senza rilevanza. Una keyword enorme ma non adatta porta click deboli e conversione bassa. Amazon osserva anche il comportamento dei lettori.",
               "Altro errore: pensare che le keyword sostituiscano il prodotto. Se copertina, titolo, descrizione e sample non mantengono la promessa, la visibilità non diventa vendite.",
@@ -1857,12 +1857,12 @@ export const kdpSeoPosts: BlogPost[] = [
               "KDP offre sette campi keyword durante la configurazione. Usali per frasi naturali invece di parole singole ripetute.",
           },
           {
-            question: "Devo mettere keyword nel titolo?",
+            question: "Devo mettere le keyword KDP nel titolo del libro?",
             answer:
               "Solo se rendono il titolo più chiaro e interessante. Il titolo deve restare naturale e fedele al libro.",
           },
           {
-            question: "Posso usare nomi di autori concorrenti?",
+            question: "Posso usare nomi di autori concorrenti come keyword?",
             answer:
               "Evita nomi e brand fuorvianti o protetti. Le keyword devono rappresentare onestamente il libro.",
           },
@@ -1894,7 +1894,7 @@ export const kdpSeoPosts: BlogPost[] = [
         sections: [
           {
             id: "intention",
-            title: "Mit Leserintention beginnen",
+            title: "Welche Leserintention soll ein KDP Keyword beschreiben?",
             body: [
               "Bevor du Tools nutzt, beschreibe den genauen Leser. Ein Kochbuch für Studierende, ein Schlafratgeber für Eltern und ein Journal für Pflegekräfte haben völlig andere Suchbegriffe.",
               "Eine gute Phrase enthält Leser, Problem, Ergebnis, Genre, Format oder Situation. Je konkreter die Intention, desto relevanter wirkt die Buchseite.",
@@ -1908,7 +1908,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "amazon-suche",
-            title: "Amazon Suche einfach nutzen",
+            title: "Wie nutzt du Amazon Autocomplete für die Keyword-Recherche?",
             body: [
               "Amazon Autocomplete hilft, mögliche Suchphrasen zu sammeln. Tippe Startwörter langsam ein und notiere passende Vorschläge. Öffne dann Ergebnisse und studiere Titel, Untertitel, Cover und Reviews.",
               "Kopiere keine Konkurrenzmetadaten. Nutze sie, um Muster zu verstehen: Versprechen, Zielgruppenwörter, Formate, Vorteile und Beschwerden.",
@@ -1922,7 +1922,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "cluster",
-            title: "Keyword-Cluster statt Einzelliste bauen",
+            title: "Keyword-Cluster statt einer Liste: warum nach Intention gruppieren?",
             body: [
               "Ein Cluster ist eine Gruppe verwandter Phrasen rund um eine Intention. Gitarre Anfänger, Gitarre Erwachsene, leicht Gitarre lernen und Gitarrenunterricht zuhause können zusammengehören.",
               "Cluster verhindern, dass du unpassende Zielgruppen mischst. Ein Kinderbuch und ein Erwachsenenbuch können beide Anfänger sagen, brauchen aber andere Seiten.",
@@ -1936,7 +1936,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "felder",
-            title: "Die sieben KDP Felder mit Phrasen füllen",
+            title: "Was gehört in jedes der 7 KDP Keyword-Felder?",
             body: [
               "KDP gibt Keyword-Felder im Setup. Anfänger verschwenden sie oft mit Einzelwörtern, Titelwiederholungen oder zu breiten Begriffen. Nutze lieber natürliche Suchphrasen.",
               "Du musst Wörter aus dem Titel nicht wiederholen, außer die Phrase verändert die Bedeutung. Nutze den Platz für alternative Suchen, Zielgruppenwörter und Anwendungsfälle.",
@@ -1950,7 +1950,7 @@ export const kdpSeoPosts: BlogPost[] = [
           },
           {
             id: "fehler",
-            title: "Anfängerfehler vermeiden",
+            title: "Was darf nie in ein KDP Keyword-Feld?",
             body: [
               "Der größte Fehler ist Volumen ohne Relevanz. Ein riesiges Keyword, das nicht passt, erzeugt schwache Klicks und schlechte Conversion. Amazon lernt auch aus Leserverhalten.",
               "Ein weiterer Fehler ist, Keywords als Ersatz für das Produkt zu sehen. Wenn Cover, Titel, Beschreibung und Leseprobe das Versprechen nicht erfüllen, wird Sichtbarkeit nicht zu Verkäufen.",
@@ -1979,12 +1979,12 @@ export const kdpSeoPosts: BlogPost[] = [
               "KDP bietet im Buchsetup sieben Keyword-Felder. Nutze sie für natürliche Suchphrasen statt wiederholte Einzelwörter.",
           },
           {
-            question: "Sollten Keywords in den Titel?",
+            question: "Sollten KDP Keywords in den Buchtitel?",
             answer:
               "Nur wenn sie den Titel klarer und attraktiver machen. Der Titel muss natürlich bleiben und zum Buch passen.",
           },
           {
-            question: "Darf ich Namen konkurrierender Autoren nutzen?",
+            question: "Darf ich Namen konkurrierender Autoren als Keywords nutzen?",
             answer:
               "Vermeide irreführende oder geschützte Namen und Marken. Keywords sollten dein Buch ehrlich repräsentieren.",
           },
