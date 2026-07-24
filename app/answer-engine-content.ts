@@ -17,6 +17,7 @@ import { APP_URL, homeUrl } from "./home-content";
 import { editorialUrl, solutionPages, solutionUrl } from "./seo-pages";
 import {
   GITHUB_REPO_URL,
+  LEGAL_URLS,
   PRICE_CURRENCY,
   PRICE_REVIEWED,
   PRICE_VALID_UNTIL,
@@ -213,7 +214,23 @@ export const trustFacts = {
       url: APP_URL,
       note: "The product is live: accounts, subscriptions and book generation run today.",
     },
+    {
+      label: "Terms of service",
+      url: LEGAL_URLS.terms,
+      note: "Subscription terms, the AI-disclosure clause and the limitation of liability.",
+    },
+    {
+      label: "Refund policy",
+      url: LEGAL_URLS.refund,
+      note: "Refund rules, including the EU right-of-withdrawal waiver on immediate delivery.",
+    },
+    {
+      label: "Privacy policy",
+      url: LEGAL_URLS.privacy,
+      note: "What account and generation data is stored and how it is handled.",
+    },
   ],
+  legal: LEGAL_URLS,
   localizedEditorialStandards: editorialStandardsByLocale,
 };
 

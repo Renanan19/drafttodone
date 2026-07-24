@@ -21,6 +21,7 @@ import { blogIndexPath, locales, SITE_URL, type Locale } from "./blog-content";
 import { APP_SIGNUP_URL, homePath, homeUrl, type HomeCopy } from "./home-content";
 import { LATEST_CONTENT_UPDATE } from "./answer-engine-content";
 import { editorialPath, getEditorialPage } from "./seo-pages";
+import { legalFooterLinks } from "./glance-content";
 import {
   aggregateOffer,
   itemListNode,
@@ -834,6 +835,17 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
             <a href="/site-map" className="text-muted transition-colors hover:text-ink">
               Sitemap
             </a>
+            {legalFooterLinks(locale).map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="text-muted transition-colors hover:text-ink"
+              >
+                {link.label}
+              </a>
+            ))}
             <a
               href="https://useneedle.net/directory/drafttodone"
               target="_blank"

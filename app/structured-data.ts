@@ -12,6 +12,13 @@ import { APP_SIGNUP_URL, APP_URL } from "./home-content";
 
 export const GITHUB_REPO_URL = "https://github.com/Renanan19/drafttodone";
 
+/** Legal documents live on the app host. Paths verified live — there is no `/legal` index. */
+export const LEGAL_URLS = {
+  terms: `${APP_URL}/legal/terms`,
+  privacy: `${APP_URL}/legal/privacy`,
+  refund: `${APP_URL}/legal/refund`,
+} as const;
+
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 export const SOFTWARE_ID = `${SITE_URL}/#software`;

@@ -236,6 +236,18 @@ export const contrastLabels: Record<Locale, {
   },
 };
 
+/**
+ * Footer labels for the legal documents. They live on the app host; linking
+ * them from every marketing page is a plain credibility signal — a business
+ * that states its terms, privacy and refund rules in public is checkable.
+ */
+export const legalLabels: Record<Locale, { terms: string; privacy: string; refund: string }> = {
+  en: { terms: "Terms", privacy: "Privacy", refund: "Refunds" },
+  fr: { terms: "Conditions", privacy: "Confidentialité", refund: "Remboursements" },
+  it: { terms: "Termini", privacy: "Privacy", refund: "Rimborsi" },
+  de: { terms: "AGB", privacy: "Datenschutz", refund: "Rückerstattungen" },
+};
+
 const monthNames: Record<Locale, string[]> = {
   en: [
     "January",
@@ -304,6 +316,18 @@ export function formatLongDate(locale: Locale, iso: string) {
   if (locale === "en") return `${name} ${day}, ${year}`;
   if (locale === "de") return `${day}. ${name} ${year}`;
   return `${day} ${name} ${year}`;
+}
+
+/** Footer link list for the legal documents, in the page's language. */
+export function legalFooterLinks(locale: Locale) {
+  const labels = legalLabels[locale];
+  const base = "https://app.drafttodone.io/legal";
+
+  return [
+    { label: labels.terms, href: `${base}/terms` },
+    { label: labels.privacy, href: `${base}/privacy` },
+    { label: labels.refund, href: `${base}/refund` },
+  ];
 }
 
 /** The plain-text version of the block, reused by llms.txt and answer-engine.json. */

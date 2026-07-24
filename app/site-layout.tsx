@@ -9,6 +9,7 @@ import {
   FOUNDER_ID,
   GITHUB_REPO_URL,
   imageObject,
+  LEGAL_URLS,
   LOGO_ID,
   ORGANIZATION_ID,
   PRICE_REVIEWED,
@@ -135,6 +136,7 @@ const siteJsonLd = [
     // Editorial policy, sourcing and the limits the product does not claim.
     // Answer engines weigh a stated, checkable policy over marketing adjectives.
     publishingPrinciples: editorialUrl("en"),
+    termsOfService: LEGAL_URLS.terms,
     slogan: "One idea in, a complete KDP book out.",
     sameAs: [GITHUB_REPO_URL, APP_URL],
     knowsAbout: [
@@ -158,6 +160,21 @@ const siteJsonLd = [
         "@type": "DigitalDocument",
         name: "DraftToDone LLMs text",
         url: answerEngineResources.llms,
+      },
+      {
+        "@type": "DigitalDocument",
+        name: "Terms of service",
+        url: LEGAL_URLS.terms,
+      },
+      {
+        "@type": "DigitalDocument",
+        name: "Privacy policy",
+        url: LEGAL_URLS.privacy,
+      },
+      {
+        "@type": "DigitalDocument",
+        name: "Refund policy",
+        url: LEGAL_URLS.refund,
       },
     ],
   },

@@ -67,7 +67,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "ebook",
-            title: "Model ebook royalties",
+            title: "Kindle 35% vs 70%: what changes in the payout?",
             body: "Estimate 35% or 70% Kindle ebook royalties with tax and delivery cost so pricing decisions are closer to real payout.",
             points: [
               "35% and 70% royalty options",
@@ -78,7 +78,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "print",
-            title: "Understand print margins",
+            title: "Why is a paperback royalty lower than price times rate?",
             body: "Paperback royalties are easy to overestimate because printing cost is subtracted after the royalty rate is applied.",
             points: [
               "US, EU and UK marketplace examples",
@@ -89,7 +89,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "planning",
-            title: "Plan before ads and launches",
+            title: "Can this book afford ads, discounts and bundles?",
             body: "A royalty estimate helps you decide whether a book can support ads, discounts, bundles or a wider catalog strategy.",
             points: [
               "Compare ebook and print economics",
@@ -101,17 +101,17 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           {
-            question: "Is this the official KDP calculator?",
+            question: "Is this the official Amazon KDP royalty calculator?",
             answer:
               "No. It is a practical estimator for planning. Always confirm the final royalty inside KDP's own pricing grid before publishing.",
           },
           {
-            question: "Does the calculator include Kindle Unlimited?",
+            question: "Does the calculator cover Kindle Unlimited page reads?",
             answer:
               "Kindle Unlimited page-read payout changes monthly, so this page focuses on ebook and print royalty math. Use the related KU guides to model page-read strategy.",
           },
           {
-            question: "Why is print royalty lower than list price times rate?",
+            question: "Does page count change what I earn on a paperback?",
             answer:
               "KDP subtracts printing cost from print royalties, so page count, ink type and marketplace can change your margin.",
           },
@@ -144,7 +144,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "ebook",
-            title: "Modéliser les redevances ebook",
+            title: "Kindle 35% ou 70% : qu'est-ce qui change ?",
             body: "Estimez les redevances Kindle 35% ou 70% avec TVA et livraison numérique pour fixer un prix plus proche du revenu réel.",
             points: [
               "Options de redevance 35% et 70%",
@@ -155,7 +155,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "print",
-            title: "Comprendre les marges print",
+            title: "Pourquoi une redevance broché est-elle plus basse que prévu ?",
             body: "Les redevances brochées sont faciles à surestimer car le coût d'impression est retiré après le taux de redevance.",
             points: [
               "Exemples marketplaces US, UE et UK",
@@ -166,7 +166,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "planning",
-            title: "Planifier avant pubs et lancements",
+            title: "Ce livre peut-il financer pubs, remises et bundles ?",
             body: "Une estimation de redevance aide à savoir si un livre peut supporter publicité, remises, bundles ou stratégie catalogue.",
             points: [
               "Comparer économie ebook et print",
@@ -178,17 +178,17 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           {
-            question: "Est-ce le calculateur officiel KDP ?",
+            question: "Est-ce le calculateur officiel de redevances KDP ?",
             answer:
               "Non. C'est un estimateur pratique pour planifier. Confirmez toujours la redevance finale dans la grille de prix KDP avant publication.",
           },
           {
-            question: "Le calculateur inclut-il Kindle Unlimited ?",
+            question: "Le calculateur couvre-t-il les pages lues Kindle Unlimited ?",
             answer:
               "Le paiement par page lue KU change chaque mois. Cette page se concentre donc sur la logique ebook et print, avec les guides KU en complément.",
           },
           {
-            question: "Pourquoi la redevance print est-elle plus basse que prévu ?",
+            question: "Le nombre de pages change-t-il ma marge sur un broché ?",
             answer:
               "KDP retire le coût d'impression. Le nombre de pages, l'encre et le marketplace peuvent donc changer fortement la marge.",
           },
@@ -221,7 +221,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "ebook",
-            title: "Modellare royalty ebook",
+            title: "Kindle 35% o 70%: cosa cambia nel payout?",
             body: "Stima royalty Kindle 35% o 70% con IVA e consegna digitale per scegliere un prezzo più vicino al payout reale.",
             points: [
               "Opzioni royalty 35% e 70%",
@@ -232,7 +232,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "print",
-            title: "Capire i margini print",
+            title: "Perché la royalty paperback è più bassa del previsto?",
             body: "Le royalty paperback sono facili da sovrastimare perché il costo di stampa viene sottratto dopo il tasso royalty.",
             points: [
               "Esempi marketplace US, UE e UK",
@@ -243,7 +243,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "planning",
-            title: "Pianificare prima di ads e lanci",
+            title: "Questo libro può sostenere ads, sconti e bundle?",
             body: "Una stima royalty aiuta a capire se un libro può sostenere pubblicità, sconti, bundle o strategia catalogo.",
             points: [
               "Confrontare economia ebook e print",
@@ -255,17 +255,17 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           {
-            question: "È il calcolatore ufficiale KDP?",
+            question: "È il calcolatore royalty ufficiale di KDP?",
             answer:
               "No. È uno stimatore pratico per pianificare. Conferma sempre la royalty finale nella griglia prezzi KDP.",
           },
           {
-            question: "Include Kindle Unlimited?",
+            question: "Il calcolatore copre le pagine lette di Kindle Unlimited?",
             answer:
               "Il payout per pagina KU cambia ogni mese. Questa pagina si concentra su ebook e print; usa le guide KU per la strategia page-read.",
           },
           {
-            question: "Perché la royalty print è più bassa del previsto?",
+            question: "Il numero di pagine cambia il mio margine sul paperback?",
             answer:
               "KDP sottrae il costo di stampa. Pagine, inchiostro e marketplace possono cambiare molto il margine.",
           },
@@ -298,7 +298,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "ebook",
-            title: "Ebook-Tantiemen modellieren",
+            title: "Kindle 35% oder 70%: was ändert sich bei der Auszahlung?",
             body: "Schätze 35% oder 70% Kindle-Tantiemen mit Steuer und Lieferkosten, damit der Preis näher am echten Auszahlungswert liegt.",
             points: [
               "35% und 70% Tantiemenoptionen",
@@ -309,7 +309,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "print",
-            title: "Printmargen verstehen",
+            title: "Warum ist die Taschenbuch-Tantieme niedriger als erwartet?",
             body: "Taschenbuch-Tantiemen werden oft überschätzt, weil KDP Druckkosten nach dem Tantiemensatz abzieht.",
             points: [
               "US-, EU- und UK-Marketplace-Beispiele",
@@ -320,7 +320,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "planung",
-            title: "Vor Ads und Launch planen",
+            title: "Trägt dieses Buch Anzeigen, Rabatte und Bundles?",
             body: "Eine Tantiemenschätzung zeigt, ob ein Buch Anzeigen, Rabatte, Bundles oder eine Katalogstrategie tragen kann.",
             points: [
               "Ebook- und Printwirtschaft vergleichen",
@@ -332,17 +332,17 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           {
-            question: "Ist das der offizielle KDP-Rechner?",
+            question: "Ist das der offizielle KDP-Tantiemen-Rechner?",
             answer:
               "Nein. Es ist ein praktischer Planungsrechner. Prüfe finale Tantiemen immer in der offiziellen KDP-Preisübersicht.",
           },
           {
-            question: "Enthält der Rechner Kindle Unlimited?",
+            question: "Deckt der Rechner die gelesenen Seiten bei Kindle Unlimited ab?",
             answer:
               "Der KU-Seitenwert ändert sich monatlich. Diese Seite fokussiert Ebook- und Printlogik; die KU-Guides helfen bei Page-Read-Strategie.",
           },
           {
-            question: "Warum ist Print-Tantieme niedriger als erwartet?",
+            question: "Ändert die Seitenzahl meine Marge beim Taschenbuch?",
             answer:
               "KDP zieht Druckkosten ab. Seitenzahl, Tinte und Marketplace können die Marge stark verändern.",
           },
@@ -378,7 +378,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "workflow",
-            title: "One workflow from idea to upload",
+            title: "What does AI publishing software cover from idea to upload?",
             body: "Instead of stitching together prompts, spreadsheets and design files, DraftToDone is designed around the whole publishing pipeline.",
             points: [
               "Niche and reader-promise brief",
@@ -389,7 +389,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "quality",
-            title: "Built for catalog quality, not content spam",
+            title: "Catalog quality gates, not content spam at volume",
             body: "A publishing system should make every book easier to review, improve and position. DraftToDone focuses on repeatable quality gates rather than blind volume.",
             points: [
               "Chapter-level acceptance criteria",
@@ -400,7 +400,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "seo",
-            title: "Designed for discoverability",
+            title: "How do metadata and cover signals make a book findable?",
             body: "Search visibility starts before upload. The product workflow connects reader intent, book promise, metadata and cover signals so the final listing is easier to understand.",
             points: [
               "Keyword clusters by reader intent",
@@ -412,17 +412,17 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           {
-            question: "Is DraftToDone an AI book generator?",
+            question: "Is DraftToDone an AI book generator or a publishing workflow?",
             answer:
               "Yes, but the goal is broader than generating text. DraftToDone is designed to help create the manuscript, cover direction, metadata and quality workflow needed for a publish-ready book.",
           },
           {
-            question: "Can it help with Amazon KDP SEO?",
+            question: "Can AI publishing software help with Amazon KDP SEO?",
             answer:
               "The workflow is built around reader intent, titles, descriptions, keyword clusters and category fit, which are core parts of KDP discoverability.",
           },
           {
-            question: "Does AI publishing software guarantee sales?",
+            question: "Does AI publishing software guarantee book sales?",
             answer:
               "No software can guarantee rankings or sales. It can improve the quality, consistency and discoverability signals of the publishing process.",
           },
@@ -447,7 +447,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "workflow",
-            title: "Un workflow de l'idée à l'upload",
+            title: "Que couvre un logiciel d'édition IA, de l'idée à l'upload ?",
             body: "Au lieu d'empiler prompts, tableurs et fichiers design, DraftToDone est pensé autour de toute la chaîne de publication.",
             points: [
               "Brief de niche et promesse lecteur",
@@ -458,7 +458,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "qualite",
-            title: "Pensé pour la qualité catalogue",
+            title: "Des portes qualité catalogue, pas du volume aveugle",
             body: "Un système d'édition doit rendre chaque livre plus facile à relire, améliorer et positionner. DraftToDone privilégie les portes qualité plutôt que le volume aveugle.",
             points: [
               "Critères d'acceptation par chapitre",
@@ -469,7 +469,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "seo",
-            title: "Conçu pour être trouvable",
+            title: "Comment métadonnées et couverture rendent un livre trouvable ?",
             body: "La visibilité commence avant l'upload. Le workflow connecte intention lecteur, promesse, métadonnées et signaux de couverture.",
             points: [
               "Clusters de mots-clés par intention",
@@ -481,17 +481,17 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           {
-            question: "DraftToDone est-il un générateur de livres IA ?",
+            question: "DraftToDone est-il un générateur de livres ou un workflow ?",
             answer:
               "Oui, mais l'objectif est plus large que le texte. DraftToDone aide à créer manuscrit, direction couverture, métadonnées et workflow qualité pour un livre prêt à publier.",
           },
           {
-            question: "Est-ce utile pour le SEO Amazon KDP ?",
+            question: "Un logiciel d'édition IA aide-t-il au SEO Amazon KDP ?",
             answer:
               "Le workflow s'appuie sur intention lecteur, titres, descriptions, clusters de mots-clés et fit catégorie, des éléments clés de la découvrabilité KDP.",
           },
           {
-            question: "Un logiciel d'édition IA garantit-il des ventes ?",
+            question: "Un logiciel d'édition IA garantit-il des ventes de livres ?",
             answer:
               "Non. Aucun logiciel ne garantit classement ou ventes. Il peut améliorer la qualité, la cohérence et les signaux de découvrabilité.",
           },
@@ -516,7 +516,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "workflow",
-            title: "Un workflow dall'idea all'upload",
+            title: "Cosa copre un software di editoria IA, dall'idea all'upload?",
             body: "Invece di unire prompt, fogli e file design, DraftToDone è progettato intorno all'intera pipeline editoriale.",
             points: [
               "Brief di nicchia e promessa al lettore",
@@ -527,7 +527,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "qualita",
-            title: "Costruito per qualità di catalogo",
+            title: "Gate di qualità del catalogo, non spam di contenuti",
             body: "Un sistema editoriale deve rendere ogni libro più facile da revisionare, migliorare e posizionare. DraftToDone privilegia gate qualità invece di volume cieco.",
             points: [
               "Criteri di accettazione per capitolo",
@@ -538,7 +538,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "seo",
-            title: "Progettato per la discoverability",
+            title: "Come metadati e copertina rendono un libro trovabile?",
             body: "La visibilità inizia prima dell'upload. Il workflow collega intento del lettore, promessa, metadati e segnali visivi.",
             points: [
               "Cluster keyword per intento",
@@ -550,17 +550,17 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           {
-            question: "DraftToDone è un generatore di libri IA?",
+            question: "DraftToDone è un generatore di libri o un workflow editoriale?",
             answer:
               "Sì, ma l'obiettivo è più ampio del testo. Aiuta a creare manoscritto, copertina, metadati e workflow qualità per un libro pronto.",
           },
           {
-            question: "Aiuta con la SEO Amazon KDP?",
+            question: "Un software di editoria IA aiuta con la SEO di Amazon KDP?",
             answer:
               "Il workflow usa intento lettore, titoli, descrizioni, cluster keyword e fit categoria, elementi centrali per essere trovati su KDP.",
           },
           {
-            question: "Un software IA garantisce vendite?",
+            question: "Un software di editoria IA garantisce vendite di libri?",
             answer:
               "No. Nessun software garantisce ranking o vendite. Può migliorare qualità, coerenza e segnali di discoverability.",
           },
@@ -585,7 +585,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "workflow",
-            title: "Ein Workflow von Idee bis Upload",
+            title: "Was deckt KI-Publishing-Software von der Idee bis zum Upload ab?",
             body: "Statt Prompts, Tabellen und Designfiles zu verbinden, ist DraftToDone rund um die gesamte Publishing-Pipeline gedacht.",
             points: [
               "Nischenbrief und Leserversprechen",
@@ -596,7 +596,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "qualitaet",
-            title: "Für Katalogqualität gebaut",
+            title: "Katalogqualität statt blindes Volumen",
             body: "Ein Publishing-System sollte jedes Buch leichter prüfbar, verbesserbar und positionierbar machen. DraftToDone fokussiert Qualitätsgates statt blindes Volumen.",
             points: [
               "Akzeptanzkriterien pro Kapitel",
@@ -607,7 +607,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "seo",
-            title: "Für Auffindbarkeit entwickelt",
+            title: "Wie machen Metadaten und Coversignale ein Buch auffindbar?",
             body: "Sichtbarkeit beginnt vor dem Upload. Der Workflow verbindet Suchintention, Buchversprechen, Metadaten und Coversignale.",
             points: [
               "Keyword-Cluster nach Leserintention",
@@ -619,17 +619,17 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           {
-            question: "Ist DraftToDone ein KI-Buchgenerator?",
+            question: "Ist DraftToDone ein KI-Buchgenerator oder ein Publishing-Workflow?",
             answer:
               "Ja, aber das Ziel ist breiter als Textgenerierung. DraftToDone soll Manuskript, Coverrichtung, Metadaten und Qualitätsworkflow für veröffentlichungsfertige Bücher verbinden.",
           },
           {
-            question: "Hilft es bei Amazon-KDP-SEO?",
+            question: "Hilft KI-Publishing-Software beim Amazon-KDP-SEO?",
             answer:
               "Der Workflow basiert auf Leserintention, Titeln, Beschreibungen, Keyword-Clustern und Kategorie-Fit, zentralen Elementen der KDP-Auffindbarkeit.",
           },
           {
-            question: "Garantiert KI-Publishing-Software Verkäufe?",
+            question: "Garantiert KI-Publishing-Software Buchverkäufe?",
             answer:
               "Nein. Keine Software garantiert Rankings oder Verkäufe. Sie kann Qualität, Konsistenz und Auffindbarkeitssignale verbessern.",
           },
@@ -660,7 +660,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "full-wrap",
-            title: "A full wrap, not just a thumbnail",
+            title: "Front cover only vs full wrap: what a paperback needs",
             body: "Most cover tools stop at the front image. A paperback needs a front cover, a correctly sized spine and a back cover with room for the blurb and barcode.",
             points: [
               "Front cover sized to your trim",
@@ -671,7 +671,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "genre",
-            title: "Designed to fit the genre",
+            title: "How should a book cover change with the genre?",
             body: "A thriller, a romance and a non-fiction guide signal value in very different ways. The cover direction follows the genre conventions buyers already trust.",
             points: [
               "Genre-aware typography and color",
@@ -682,7 +682,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "kdp-ready",
-            title: "Built to pass KDP review",
+            title: "What does a cover need to pass KDP technical review?",
             body: "A beautiful cover that fails technical review costs you days. The output targets resolution, bleed and format rules before you upload.",
             points: [
               "300 DPI print resolution",
@@ -694,17 +694,17 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           {
-            question: "Does it create the spine and back cover too?",
+            question: "Does the generator create the spine and back cover too?",
             answer:
               "Yes. The goal is a full wrap — front cover, a spine sized from your page count, and a back cover with space for the blurb and barcode — plus a matching ebook cover.",
           },
           {
-            question: "Will the cover meet Amazon KDP requirements?",
+            question: "Will the cover meet Amazon KDP file requirements?",
             answer:
               "The output targets KDP resolution, bleed and trim rules and includes a pre-upload checklist. Always confirm the final file in KDP's previewer before publishing.",
           },
           {
-            question: "Can I keep covers consistent across a series?",
+            question: "Can I keep book covers consistent across a series?",
             answer:
               "Yes. Author and series branding can stay consistent across books so a catalog reads as one shelf, which helps repeat readers and discovery.",
           },
@@ -729,7 +729,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "full-wrap",
-            title: "Un dos carré complet, pas juste une vignette",
+            title: "Première seule ou dos carré complet : que faut-il pour un broché ?",
             body: "La plupart des outils s'arrêtent à l'image de première. Un broché exige une première, un dos correctement dimensionné et une quatrième avec la place pour le résumé et le code-barres.",
             points: [
               "Première au format de votre livre",
@@ -740,7 +740,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "genre",
-            title: "Pensé pour coller au genre",
+            title: "Comment la couverture doit-elle changer selon le genre ?",
             body: "Un thriller, une romance et un guide pratique signalent leur valeur très différemment. La direction de couverture suit les codes que les lecteurs reconnaissent déjà.",
             points: [
               "Typographie et couleurs selon le genre",
@@ -751,7 +751,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "kdp-ready",
-            title: "Conçu pour passer la validation KDP",
+            title: "Que faut-il pour passer la validation technique KDP ?",
             body: "Une belle couverture refusée à la validation technique coûte des jours. La sortie vise les règles de résolution, fond perdu et format avant l'upload.",
             points: [
               "Résolution 300 DPI pour le print",
@@ -763,17 +763,17 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           {
-            question: "Crée-t-il aussi le dos et la quatrième ?",
+            question: "Le générateur crée-t-il aussi le dos et la quatrième ?",
             answer:
               "Oui. L'objectif est un dos carré complet — première, dos dimensionné selon le nombre de pages et quatrième avec la place pour le résumé et le code-barres — plus une couverture ebook accordée.",
           },
           {
-            question: "La couverture respecte-t-elle les exigences KDP ?",
+            question: "La couverture respecte-t-elle les exigences de fichier KDP ?",
             answer:
               "La sortie vise les règles KDP de résolution, fond perdu et format, avec une checklist avant upload. Confirmez toujours le fichier final dans l'aperçu KDP avant de publier.",
           },
           {
-            question: "Puis-je garder des couvertures cohérentes sur une série ?",
+            question: "Puis-je garder des couvertures cohérentes sur toute une série ?",
             answer:
               "Oui. Le branding auteur et série peut rester cohérent d'un livre à l'autre, pour qu'un catalogue se lise comme une même étagère — utile pour les lecteurs fidèles et la découverte.",
           },
@@ -798,7 +798,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "full-wrap",
-            title: "Una copertina intera, non solo una miniatura",
+            title: "Solo fronte o copertina intera: cosa serve a un paperback?",
             body: "Molti strumenti si fermano all'immagine frontale. Un paperback richiede fronte, un dorso dimensionato correttamente e un retro con spazio per la quarta di copertina e il codice a barre.",
             points: [
               "Fronte dimensionato al tuo formato",
@@ -809,7 +809,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "genre",
-            title: "Progettata per il genere",
+            title: "Come deve cambiare la copertina in base al genere?",
             body: "Un thriller, un romance e una guida non-fiction comunicano valore in modi molto diversi. La direzione della copertina segue le convenzioni che i lettori già riconoscono.",
             points: [
               "Tipografia e colori per genere",
@@ -820,7 +820,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "kdp-ready",
-            title: "Costruita per superare la revisione KDP",
+            title: "Cosa serve per superare la revisione tecnica di KDP?",
             body: "Una bella copertina bocciata alla revisione tecnica costa giorni. L'output mira a risoluzione, abbondanza e formato prima dell'upload.",
             points: [
               "Risoluzione di stampa 300 DPI",
@@ -832,17 +832,17 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           {
-            question: "Crea anche dorso e retro?",
+            question: "Il generatore crea anche il dorso e il retro?",
             answer:
               "Sì. L'obiettivo è una copertina intera — fronte, dorso dimensionato dal numero di pagine e retro con spazio per quarta e codice a barre — più una copertina ebook allineata.",
           },
           {
-            question: "La copertina rispetta i requisiti Amazon KDP?",
+            question: "La copertina rispetta i requisiti di file di Amazon KDP?",
             answer:
               "L'output mira alle regole KDP di risoluzione, abbondanza e formato e include una checklist pre-upload. Conferma sempre il file finale nell'anteprima KDP prima di pubblicare.",
           },
           {
-            question: "Posso mantenere le copertine coerenti in una serie?",
+            question: "Posso mantenere le copertine coerenti in tutta una serie?",
             answer:
               "Sì. Il branding di autore e serie può restare coerente tra i libri, così un catalogo si legge come un unico scaffale — utile per lettori abituali e scoperta.",
           },
@@ -867,7 +867,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "full-wrap",
-            title: "Ein voller Umschlag, nicht nur ein Thumbnail",
+            title: "Nur Vorderseite oder voller Umschlag: was braucht ein Taschenbuch?",
             body: "Viele Tools enden beim Frontbild. Ein Taschenbuch braucht Vorderseite, einen korrekt dimensionierten Rücken und eine Rückseite mit Platz für Klappentext und Barcode.",
             points: [
               "Vorderseite passend zum Format",
@@ -878,7 +878,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "genre",
-            title: "Auf das Genre zugeschnitten",
+            title: "Wie muss sich ein Buchcover je nach Genre ändern?",
             body: "Ein Thriller, ein Liebesroman und ein Sachbuch signalisieren Wert sehr unterschiedlich. Die Cover-Richtung folgt den Genre-Konventionen, denen Käufer bereits vertrauen.",
             points: [
               "Genre-gerechte Typografie und Farben",
@@ -889,7 +889,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "kdp-ready",
-            title: "Gebaut, um die KDP-Prüfung zu bestehen",
+            title: "Was braucht ein Cover für die technische KDP-Prüfung?",
             body: "Ein schönes Cover, das die technische Prüfung nicht besteht, kostet Tage. Die Ausgabe zielt auf Auflösung, Beschnitt und Format vor dem Upload.",
             points: [
               "300 DPI Druckauflösung",
@@ -901,17 +901,17 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           {
-            question: "Erstellt es auch Rücken und Rückseite?",
+            question: "Erstellt der Generator auch Buchrücken und Rückseite?",
             answer:
               "Ja. Ziel ist ein voller Umschlag — Vorderseite, ein aus der Seitenzahl dimensionierter Rücken und eine Rückseite mit Platz für Klappentext und Barcode — plus ein abgestimmtes Ebook-Cover.",
           },
           {
-            question: "Erfüllt das Cover die Amazon-KDP-Anforderungen?",
+            question: "Erfüllt das Cover die Dateianforderungen von Amazon KDP?",
             answer:
               "Die Ausgabe zielt auf KDP-Regeln für Auflösung, Beschnitt und Format und enthält eine Checkliste vor dem Upload. Prüfe die finale Datei immer in der KDP-Vorschau vor der Veröffentlichung.",
           },
           {
-            question: "Kann ich Cover über eine Serie hinweg konsistent halten?",
+            question: "Kann ich Cover über eine ganze Reihe konsistent halten?",
             answer:
               "Ja. Autoren- und Serien-Branding kann über Bücher hinweg konsistent bleiben, sodass ein Katalog wie ein Regal wirkt — gut für Stammleser und Auffindbarkeit.",
           },
@@ -934,14 +934,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "DraftToDone reads your manuscript and drafts a benefit-led blurb for the KDP description field, with a strong opening hook and metadata that fit the listing.",
         keywords: ["book description generator", "Amazon book blurb generator", "KDP description", "book blurb writer", "book sales copy"],
         sections: [
-          { id: "what-it-writes", title: "Sales copy, not a synopsis", body: "A back-cover summary describes the plot. A blurb makes a reader want the book. The generator writes the second one.", points: ["Opening hook in the first two lines", "Benefit-led copy, not a plot recap", "Reader-facing tone for your genre", "Clear close that points to the buy"] },
-          { id: "kdp-ready", title: "Built for the KDP description field", body: "Amazon shows the first lines before the More button, so the hook has to land early. Output is sized and formatted for that field.", points: ["Front-loaded for the truncated preview", "Length that fits the 4000-character limit", "Light formatting the KDP editor accepts", "Matches your title, subtitle and keywords"] },
-          { id: "variants", title: "Variants you can test", body: "One blurb is a guess. The generator gives you angles to compare so you can pick what fits the book and the category.", points: ["Several hooks per title", "Short and long versions", "Tone options from plain to dramatic", "Edit any draft before you publish"] }
+          { id: "what-it-writes", title: "Book blurb vs synopsis: which one sells the book?", body: "A back-cover summary describes the plot. A blurb makes a reader want the book. The generator writes the second one.", points: ["Opening hook in the first two lines", "Benefit-led copy, not a plot recap", "Reader-facing tone for your genre", "Clear close that points to the buy"] },
+          { id: "kdp-ready", title: "Where does Amazon cut off the book description?", body: "Amazon shows the first lines before the More button, so the hook has to land early. Output is sized and formatted for that field.", points: ["Front-loaded for the truncated preview", "Length that fits the 4000-character limit", "Light formatting the KDP editor accepts", "Matches your title, subtitle and keywords"] },
+          { id: "variants", title: "How many blurb variants can I compare before publishing?", body: "One blurb is a guess. The generator gives you angles to compare so you can pick what fits the book and the category.", points: ["Several hooks per title", "Short and long versions", "Tone options from plain to dramatic", "Edit any draft before you publish"] }
         ],
         faq: [
-          { question: "Will a better description guarantee more sales?", answer: "No. A clear, honest blurb helps a browsing reader decide, but no software guarantees sales or rankings. Price, cover, reviews and category all play a part." },
-          { question: "Does it fit the Amazon KDP description field?", answer: "Yes. The draft is front-loaded for the truncated preview and stays within the 4000-character limit, using only the light formatting the KDP editor accepts." },
-          { question: "Can I edit the blurb before publishing?", answer: "Yes. Every draft is a starting point. You can rewrite any line, mix variants and adjust the tone, then paste the final version into KDP yourself." }
+          { question: "Will a better book description guarantee more sales?", answer: "No. A clear, honest blurb helps a browsing reader decide, but no software guarantees sales or rankings. Price, cover, reviews and category all play a part." },
+          { question: "Does the description fit the Amazon KDP field limit?", answer: "Yes. The draft is front-loaded for the truncated preview and stays within the 4000-character limit, using only the light formatting the KDP editor accepts." },
+          { question: "Can I edit the blurb before publishing it on KDP?", answer: "Yes. Every draft is a starting point. You can rewrite any line, mix variants and adjust the tone, then paste the final version into KDP yourself." }
         ],
         cta: "Open the app",
       },
@@ -955,14 +955,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "DraftToDone lit votre manuscrit et rédige un résumé orienté bénéfices pour le champ description de KDP, avec une accroche forte et des métadonnées cohérentes avec la fiche.",
         keywords: ["générateur de description de livre", "générateur de résumé Amazon", "description KDP", "rédaction de résumé de livre", "texte de vente livre"],
         sections: [
-          { id: "texte-de-vente", title: "Un texte de vente, pas un synopsis", body: "Un résumé de quatrième décrit l'intrigue. Une description donne envie du livre. Le générateur écrit la seconde.", points: ["Accroche dès les deux premières lignes", "Texte orienté bénéfices, pas un résumé d'intrigue", "Ton adressé au lecteur de votre genre", "Conclusion claire qui oriente vers l'achat"] },
-          { id: "pret-pour-kdp", title: "Pensé pour le champ description de KDP", body: "Amazon affiche les premières lignes avant le bouton Lire la suite : l'accroche doit donc porter tôt. Le texte est calibré pour ce champ.", points: ["Accroche placée avant la troncature", "Longueur compatible avec la limite de 4000 caractères", "Mise en forme légère acceptée par KDP", "Cohérent avec votre titre, sous-titre et mots-clés"] },
-          { id: "variantes", title: "Des variantes à tester", body: "Une seule description est un pari. Le générateur propose des angles à comparer pour choisir ce qui convient au livre et à la catégorie.", points: ["Plusieurs accroches par titre", "Versions courte et longue", "Options de ton, du sobre au dramatique", "Modifiez chaque version avant publication"] }
+          { id: "texte-de-vente", title: "Texte de vente ou synopsis : lequel vend le livre ?", body: "Un résumé de quatrième décrit l'intrigue. Une description donne envie du livre. Le générateur écrit la seconde.", points: ["Accroche dès les deux premières lignes", "Texte orienté bénéfices, pas un résumé d'intrigue", "Ton adressé au lecteur de votre genre", "Conclusion claire qui oriente vers l'achat"] },
+          { id: "pret-pour-kdp", title: "Où Amazon coupe-t-il la description du livre ?", body: "Amazon affiche les premières lignes avant le bouton Lire la suite : l'accroche doit donc porter tôt. Le texte est calibré pour ce champ.", points: ["Accroche placée avant la troncature", "Longueur compatible avec la limite de 4000 caractères", "Mise en forme légère acceptée par KDP", "Cohérent avec votre titre, sous-titre et mots-clés"] },
+          { id: "variantes", title: "Combien de variantes puis-je comparer avant de publier ?", body: "Une seule description est un pari. Le générateur propose des angles à comparer pour choisir ce qui convient au livre et à la catégorie.", points: ["Plusieurs accroches par titre", "Versions courte et longue", "Options de ton, du sobre au dramatique", "Modifiez chaque version avant publication"] }
         ],
         faq: [
           { question: "Une meilleure description garantit-elle plus de ventes ?", answer: "Non. Un résumé clair et honnête aide le lecteur à décider, mais aucun logiciel ne garantit les ventes ni le classement. Le prix, la couverture, les avis et la catégorie comptent aussi." },
-          { question: "Le texte tient-il dans le champ description de KDP ?", answer: "Oui. Le brouillon place l'accroche avant la troncature et respecte la limite de 4000 caractères, avec uniquement la mise en forme légère acceptée par l'éditeur KDP." },
-          { question: "Puis-je modifier le résumé avant publication ?", answer: "Oui. Chaque brouillon est un point de départ. Vous pouvez réécrire chaque ligne, mélanger les variantes et ajuster le ton, puis coller la version finale dans KDP vous-même." }
+          { question: "La description tient-elle dans la limite du champ KDP ?", answer: "Oui. Le brouillon place l'accroche avant la troncature et respecte la limite de 4000 caractères, avec uniquement la mise en forme légère acceptée par l'éditeur KDP." },
+          { question: "Puis-je modifier le résumé avant de le publier sur KDP ?", answer: "Oui. Chaque brouillon est un point de départ. Vous pouvez réécrire chaque ligne, mélanger les variantes et ajuster le ton, puis coller la version finale dans KDP vous-même." }
         ],
         cta: "Ouvrir l'app",
       },
@@ -976,14 +976,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "DraftToDone legge il tuo manoscritto e redige una sinossi orientata ai benefici per il campo descrizione di KDP, con un gancio forte e metadati coerenti con la scheda.",
         keywords: ["generatore di descrizione libro", "generatore di sinossi Amazon", "descrizione KDP", "scrittura sinossi libro", "testo di vendita libro"],
         sections: [
-          { id: "testo-di-vendita", title: "Un testo di vendita, non un riassunto", body: "Un riassunto di quarta racconta la trama. Una descrizione fa venire voglia del libro. Il generatore scrive la seconda.", points: ["Gancio nelle prime due righe", "Testo orientato ai benefici, non un riassunto di trama", "Tono rivolto al lettore del tuo genere", "Chiusura chiara che porta all'acquisto"] },
-          { id: "pronto-per-kdp", title: "Pensato per il campo descrizione di KDP", body: "Amazon mostra le prime righe prima del pulsante Altro: il gancio deve colpire subito. Il testo è calibrato per quel campo.", points: ["Gancio collocato prima del taglio", "Lunghezza compatibile con il limite di 4000 caratteri", "Formattazione leggera accettata da KDP", "Coerente con titolo, sottotitolo e parole chiave"] },
-          { id: "varianti", title: "Varianti da testare", body: "Una sola descrizione è una scommessa. Il generatore offre angolazioni da confrontare per scegliere ciò che si adatta al libro e alla categoria.", points: ["Più ganci per titolo", "Versioni breve e lunga", "Opzioni di tono, dal sobrio al drammatico", "Modifica ogni bozza prima di pubblicare"] }
+          { id: "testo-di-vendita", title: "Testo di vendita o sinossi: quale vende il libro?", body: "Un riassunto di quarta racconta la trama. Una descrizione fa venire voglia del libro. Il generatore scrive la seconda.", points: ["Gancio nelle prime due righe", "Testo orientato ai benefici, non un riassunto di trama", "Tono rivolto al lettore del tuo genere", "Chiusura chiara che porta all'acquisto"] },
+          { id: "pronto-per-kdp", title: "Dove Amazon taglia la descrizione del libro?", body: "Amazon mostra le prime righe prima del pulsante Altro: il gancio deve colpire subito. Il testo è calibrato per quel campo.", points: ["Gancio collocato prima del taglio", "Lunghezza compatibile con il limite di 4000 caratteri", "Formattazione leggera accettata da KDP", "Coerente con titolo, sottotitolo e parole chiave"] },
+          { id: "varianti", title: "Quante varianti posso confrontare prima di pubblicare?", body: "Una sola descrizione è una scommessa. Il generatore offre angolazioni da confrontare per scegliere ciò che si adatta al libro e alla categoria.", points: ["Più ganci per titolo", "Versioni breve e lunga", "Opzioni di tono, dal sobrio al drammatico", "Modifica ogni bozza prima di pubblicare"] }
         ],
         faq: [
           { question: "Una descrizione migliore garantisce più vendite?", answer: "No. Una sinossi chiara e onesta aiuta il lettore a decidere, ma nessun software garantisce vendite o posizionamenti. Contano anche prezzo, copertina, recensioni e categoria." },
-          { question: "Il testo rientra nel campo descrizione di KDP?", answer: "Sì. La bozza colloca il gancio prima del taglio e rispetta il limite di 4000 caratteri, usando solo la formattazione leggera accettata dall'editor KDP." },
-          { question: "Posso modificare la sinossi prima di pubblicare?", answer: "Sì. Ogni bozza è un punto di partenza. Puoi riscrivere ogni riga, combinare le varianti e regolare il tono, poi incollare la versione finale in KDP da solo." }
+          { question: "La descrizione rientra nel limite del campo KDP?", answer: "Sì. La bozza colloca il gancio prima del taglio e rispetta il limite di 4000 caratteri, usando solo la formattazione leggera accettata dall'editor KDP." },
+          { question: "Posso modificare la sinossi prima di pubblicarla su KDP?", answer: "Sì. Ogni bozza è un punto di partenza. Puoi riscrivere ogni riga, combinare le varianti e regolare il tono, poi incollare la versione finale in KDP da solo." }
         ],
         cta: "Apri l'app",
       },
@@ -997,14 +997,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "DraftToDone liest dein Manuskript und entwirft einen nutzenorientierten Klappentext für das KDP-Beschreibungsfeld, mit starkem Aufhänger und stimmigen Metadaten.",
         keywords: ["Buchbeschreibung-Generator", "Amazon Klappentext Generator", "KDP Beschreibung", "Klappentext schreiben", "Verkaufstext Buch"],
         sections: [
-          { id: "verkaufstext", title: "Verkaufstext, keine Inhaltsangabe", body: "Eine Inhaltsangabe beschreibt die Handlung. Ein Klappentext weckt Lust auf das Buch. Der Generator schreibt das Zweite.", points: ["Aufhänger in den ersten zwei Zeilen", "Nutzenorientiert statt Handlung nacherzählt", "Leseransprache für dein Genre", "Klarer Abschluss, der zum Kauf führt"] },
-          { id: "kdp-bereit", title: "Gebaut für das KDP-Beschreibungsfeld", body: "Amazon zeigt die ersten Zeilen vor dem Mehr-Button: der Aufhänger muss früh sitzen. Der Text ist auf dieses Feld zugeschnitten.", points: ["Aufhänger vor dem Abschnitt platziert", "Länge innerhalb des 4000-Zeichen-Limits", "Leichte Formatierung, die KDP akzeptiert", "Passt zu Titel, Untertitel und Keywords"] },
-          { id: "varianten", title: "Varianten zum Testen", body: "Ein einziger Klappentext ist geraten. Der Generator liefert Blickwinkel zum Vergleichen, damit du das Passende für Buch und Kategorie wählst.", points: ["Mehrere Aufhänger pro Titel", "Kurze und lange Fassung", "Tonoptionen von sachlich bis dramatisch", "Jeden Entwurf vor dem Veröffentlichen anpassen"] }
+          { id: "verkaufstext", title: "Verkaufstext oder Inhaltsangabe: was verkauft das Buch?", body: "Eine Inhaltsangabe beschreibt die Handlung. Ein Klappentext weckt Lust auf das Buch. Der Generator schreibt das Zweite.", points: ["Aufhänger in den ersten zwei Zeilen", "Nutzenorientiert statt Handlung nacherzählt", "Leseransprache für dein Genre", "Klarer Abschluss, der zum Kauf führt"] },
+          { id: "kdp-bereit", title: "Wo schneidet Amazon die Buchbeschreibung ab?", body: "Amazon zeigt die ersten Zeilen vor dem Mehr-Button: der Aufhänger muss früh sitzen. Der Text ist auf dieses Feld zugeschnitten.", points: ["Aufhänger vor dem Abschnitt platziert", "Länge innerhalb des 4000-Zeichen-Limits", "Leichte Formatierung, die KDP akzeptiert", "Passt zu Titel, Untertitel und Keywords"] },
+          { id: "varianten", title: "Wie viele Klappentext-Varianten kann ich vergleichen?", body: "Ein einziger Klappentext ist geraten. Der Generator liefert Blickwinkel zum Vergleichen, damit du das Passende für Buch und Kategorie wählst.", points: ["Mehrere Aufhänger pro Titel", "Kurze und lange Fassung", "Tonoptionen von sachlich bis dramatisch", "Jeden Entwurf vor dem Veröffentlichen anpassen"] }
         ],
         faq: [
-          { question: "Garantiert eine bessere Beschreibung mehr Verkäufe?", answer: "Nein. Ein klarer, ehrlicher Klappentext hilft beim Entscheiden, aber keine Software garantiert Verkäufe oder Rankings. Preis, Cover, Rezensionen und Kategorie zählen ebenso." },
-          { question: "Passt der Text in das Amazon-KDP-Beschreibungsfeld?", answer: "Ja. Der Entwurf stellt den Aufhänger vor den Abschnitt und bleibt im 4000-Zeichen-Limit, mit nur der leichten Formatierung, die der KDP-Editor akzeptiert." },
-          { question: "Kann ich den Klappentext vor dem Veröffentlichen bearbeiten?", answer: "Ja. Jeder Entwurf ist ein Ausgangspunkt. Du kannst jede Zeile umschreiben, Varianten mischen und den Ton anpassen und die finale Fassung selbst in KDP einfügen." }
+          { question: "Garantiert eine bessere Buchbeschreibung mehr Verkäufe?", answer: "Nein. Ein klarer, ehrlicher Klappentext hilft beim Entscheiden, aber keine Software garantiert Verkäufe oder Rankings. Preis, Cover, Rezensionen und Kategorie zählen ebenso." },
+          { question: "Passt die Beschreibung in das KDP-Zeichenlimit?", answer: "Ja. Der Entwurf stellt den Aufhänger vor den Abschnitt und bleibt im 4000-Zeichen-Limit, mit nur der leichten Formatierung, die der KDP-Editor akzeptiert." },
+          { question: "Kann ich den Klappentext vor der Veröffentlichung bearbeiten?", answer: "Ja. Jeder Entwurf ist ein Ausgangspunkt. Du kannst jede Zeile umschreiben, Varianten mischen und den Ton anpassen und die finale Fassung selbst in KDP einfügen." }
         ],
         cta: "App öffnen",
       },
@@ -1024,14 +1024,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "DraftToDone turns your topic into clear, keyword-aware title and subtitle options for Amazon KDP. You get ideas shaped by your category, not random slogans.",
         keywords: ["book title generator", "AI book title ideas", "subtitle generator", "KDP title", "book name generator"],
         sections: [
-          { id: "title-and-subtitle", title: "Title and subtitle, working together", body: "A strong KDP listing needs a short hook and a subtitle that does the search work. We generate both as one pair.", points: ["Main title kept short and readable", "Subtitle that carries the category keywords", "Variants for fiction and nonfiction tone", "Pairs you can compare side by side"] },
-          { id: "keyword-aware", title: "Keyword-aware, not keyword-stuffed", body: "Each option is shaped around how readers actually search your niche, while staying natural enough to read out loud.", points: ["Built from your topic and target category", "Phrases that match real reader intent", "Length checked against KDP field limits", "No keyword spam or fake urgency"] },
-          { id: "part-of-the-pipeline", title: "Part of one publishing pipeline", body: "The title is generated alongside your manuscript, cover and metadata, so the whole product stays consistent.", points: ["Title aligned with the finished cover", "Matches your description and keywords", "Consistent across ebook and paperback", "Held to the same catalog quality gate"] }
+          { id: "title-and-subtitle", title: "Title vs subtitle: which one carries the keywords?", body: "A strong KDP listing needs a short hook and a subtitle that does the search work. We generate both as one pair.", points: ["Main title kept short and readable", "Subtitle that carries the category keywords", "Variants for fiction and nonfiction tone", "Pairs you can compare side by side"] },
+          { id: "keyword-aware", title: "Keyword-aware, not keyword-stuffed: where is the line?", body: "Each option is shaped around how readers actually search your niche, while staying natural enough to read out loud.", points: ["Built from your topic and target category", "Phrases that match real reader intent", "Length checked against KDP field limits", "No keyword spam or fake urgency"] },
+          { id: "part-of-the-pipeline", title: "Why generate the title with the cover and metadata?", body: "The title is generated alongside your manuscript, cover and metadata, so the whole product stays consistent.", points: ["Title aligned with the finished cover", "Matches your description and keywords", "Consistent across ebook and paperback", "Held to the same catalog quality gate"] }
         ],
         faq: [
-          { question: "Will a generated title guarantee more sales?", answer: "No. A clearer, keyword-aware title can help discovery, but sales depend on the book, the cover, reviews and your market. We do not promise rankings or revenue." },
-          { question: "Can I edit the suggested titles?", answer: "Yes. Every title and subtitle is a starting point you can refine, rewrite or replace before you publish on KDP." },
-          { question: "Are the titles safe to use on Amazon?", answer: "They are written as original suggestions, but you stay responsible for checking trademark and KDP title rules. Avoid claiming another book series or a protected brand name." }
+          { question: "Will a generated book title guarantee more sales?", answer: "No. A clearer, keyword-aware title can help discovery, but sales depend on the book, the cover, reviews and your market. We do not promise rankings or revenue." },
+          { question: "Can I edit the suggested titles and subtitles?", answer: "Yes. Every title and subtitle is a starting point you can refine, rewrite or replace before you publish on KDP." },
+          { question: "Are AI-generated book titles safe to use on Amazon?", answer: "They are written as original suggestions, but you stay responsible for checking trademark and KDP title rules. Avoid claiming another book series or a protected brand name." }
         ],
         cta: "Open the app",
       },
@@ -1045,14 +1045,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "DraftToDone transforme votre sujet en titres et sous-titres clairs et optimisés pour Amazon KDP. Vous obtenez des idées adaptées à votre catégorie, pas des slogans au hasard.",
         keywords: ["générateur de titre de livre", "idées de titre IA", "générateur de sous-titre", "titre KDP", "trouver un titre de livre"],
         sections: [
-          { id: "titre-et-sous-titre", title: "Titre et sous-titre, ensemble", body: "Une bonne fiche KDP a besoin d'une accroche courte et d'un sous-titre qui porte la recherche. Nous générons les deux comme une paire.", points: ["Titre principal court et lisible", "Sous-titre qui porte les mots-clés de la catégorie", "Variantes pour la fiction et la non-fiction", "Paires comparables côte à côte"] },
-          { id: "axe-mots-cles", title: "Optimisé sans bourrage de mots-clés", body: "Chaque option suit la façon dont les lecteurs cherchent dans votre niche, tout en restant assez naturelle pour être lue à voix haute.", points: ["Construit à partir de votre sujet et de votre catégorie", "Expressions proches de l'intention réelle des lecteurs", "Longueur vérifiée selon les champs KDP", "Aucun bourrage ni fausse urgence"] },
-          { id: "dans-le-pipeline", title: "Intégré à un seul pipeline d'édition", body: "Le titre est généré avec votre manuscrit, votre couverture et vos métadonnées, pour garder un produit cohérent.", points: ["Titre aligné avec la couverture finale", "Cohérent avec la description et les mots-clés", "Identique en ebook et en broché", "Soumis au même contrôle qualité de catalogue"] }
+          { id: "titre-et-sous-titre", title: "Titre ou sous-titre : lequel porte les mots-clés ?", body: "Une bonne fiche KDP a besoin d'une accroche courte et d'un sous-titre qui porte la recherche. Nous générons les deux comme une paire.", points: ["Titre principal court et lisible", "Sous-titre qui porte les mots-clés de la catégorie", "Variantes pour la fiction et la non-fiction", "Paires comparables côte à côte"] },
+          { id: "axe-mots-cles", title: "Optimisé sans bourrage : où est la limite ?", body: "Chaque option suit la façon dont les lecteurs cherchent dans votre niche, tout en restant assez naturelle pour être lue à voix haute.", points: ["Construit à partir de votre sujet et de votre catégorie", "Expressions proches de l'intention réelle des lecteurs", "Longueur vérifiée selon les champs KDP", "Aucun bourrage ni fausse urgence"] },
+          { id: "dans-le-pipeline", title: "Pourquoi générer le titre avec la couverture et les métadonnées ?", body: "Le titre est généré avec votre manuscrit, votre couverture et vos métadonnées, pour garder un produit cohérent.", points: ["Titre aligné avec la couverture finale", "Cohérent avec la description et les mots-clés", "Identique en ebook et en broché", "Soumis au même contrôle qualité de catalogue"] }
         ],
         faq: [
           { question: "Un titre généré garantit-il plus de ventes ?", answer: "Non. Un titre plus clair et optimisé peut aider la visibilité, mais les ventes dépendent du livre, de la couverture, des avis et de votre marché. Nous ne promettons ni classement ni revenu." },
-          { question: "Puis-je modifier les titres proposés ?", answer: "Oui. Chaque titre et sous-titre est un point de départ que vous pouvez affiner, réécrire ou remplacer avant de publier sur KDP." },
-          { question: "Les titres sont-ils sûrs à utiliser sur Amazon ?", answer: "Ils sont rédigés comme des suggestions originales, mais vous restez responsable du respect des marques et des règles de titre KDP. Évitez de reprendre une autre série ou une marque protégée." }
+          { question: "Puis-je modifier les titres et sous-titres proposés ?", answer: "Oui. Chaque titre et sous-titre est un point de départ que vous pouvez affiner, réécrire ou remplacer avant de publier sur KDP." },
+          { question: "Les titres générés par IA sont-ils sûrs sur Amazon ?", answer: "Ils sont rédigés comme des suggestions originales, mais vous restez responsable du respect des marques et des règles de titre KDP. Évitez de reprendre une autre série ou une marque protégée." }
         ],
         cta: "Ouvrir l'app",
       },
@@ -1066,14 +1066,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "DraftToDone trasforma il tuo argomento in titoli e sottotitoli chiari e ottimizzati per Amazon KDP. Ottieni idee adatte alla tua categoria, non slogan casuali.",
         keywords: ["generatore di titoli per libri", "idee per titoli con IA", "generatore di sottotitoli", "titolo KDP", "trovare un titolo di libro"],
         sections: [
-          { id: "titolo-e-sottotitolo", title: "Titolo e sottotitolo, insieme", body: "Una buona scheda KDP ha bisogno di un gancio breve e di un sottotitolo che faccia il lavoro di ricerca. Generiamo entrambi come una coppia.", points: ["Titolo principale breve e leggibile", "Sottotitolo che porta le parole chiave della categoria", "Varianti per narrativa e saggistica", "Coppie confrontabili una accanto all'altra"] },
-          { id: "attento-alle-keyword", title: "Ottimizzato senza riempire di parole chiave", body: "Ogni opzione segue il modo in cui i lettori cercano nella tua nicchia, restando abbastanza naturale da leggere ad alta voce.", points: ["Costruito dal tuo argomento e dalla tua categoria", "Frasi vicine all'intento reale dei lettori", "Lunghezza verificata sui campi KDP", "Nessun riempimento né falsa urgenza"] },
-          { id: "parte-del-pipeline", title: "Parte di un unico pipeline editoriale", body: "Il titolo viene generato insieme al manoscritto, alla copertina e ai metadati, così il prodotto resta coerente.", points: ["Titolo allineato alla copertina finita", "Coerente con descrizione e parole chiave", "Uguale in ebook e cartaceo", "Sottoposto allo stesso controllo qualità del catalogo"] }
+          { id: "titolo-e-sottotitolo", title: "Titolo o sottotitolo: quale porta le parole chiave?", body: "Una buona scheda KDP ha bisogno di un gancio breve e di un sottotitolo che faccia il lavoro di ricerca. Generiamo entrambi come una coppia.", points: ["Titolo principale breve e leggibile", "Sottotitolo che porta le parole chiave della categoria", "Varianti per narrativa e saggistica", "Coppie confrontabili una accanto all'altra"] },
+          { id: "attento-alle-keyword", title: "Ottimizzato senza keyword stuffing: dov'è il limite?", body: "Ogni opzione segue il modo in cui i lettori cercano nella tua nicchia, restando abbastanza naturale da leggere ad alta voce.", points: ["Costruito dal tuo argomento e dalla tua categoria", "Frasi vicine all'intento reale dei lettori", "Lunghezza verificata sui campi KDP", "Nessun riempimento né falsa urgenza"] },
+          { id: "parte-del-pipeline", title: "Perché generare il titolo insieme a copertina e metadati?", body: "Il titolo viene generato insieme al manoscritto, alla copertina e ai metadati, così il prodotto resta coerente.", points: ["Titolo allineato alla copertina finita", "Coerente con descrizione e parole chiave", "Uguale in ebook e cartaceo", "Sottoposto allo stesso controllo qualità del catalogo"] }
         ],
         faq: [
           { question: "Un titolo generato garantisce più vendite?", answer: "No. Un titolo più chiaro e ottimizzato può aiutare la scoperta, ma le vendite dipendono dal libro, dalla copertina, dalle recensioni e dal tuo mercato. Non promettiamo posizionamenti né ricavi." },
-          { question: "Posso modificare i titoli proposti?", answer: "Sì. Ogni titolo e sottotitolo è un punto di partenza che puoi affinare, riscrivere o sostituire prima di pubblicare su KDP." },
-          { question: "I titoli sono sicuri da usare su Amazon?", answer: "Sono scritti come suggerimenti originali, ma resti responsabile del controllo dei marchi e delle regole KDP sui titoli. Evita di riprendere un'altra serie o un marchio protetto." }
+          { question: "Posso modificare i titoli e i sottotitoli proposti?", answer: "Sì. Ogni titolo e sottotitolo è un punto di partenza che puoi affinare, riscrivere o sostituire prima di pubblicare su KDP." },
+          { question: "I titoli generati dall'IA sono sicuri su Amazon?", answer: "Sono scritti come suggerimenti originali, ma resti responsabile del controllo dei marchi e delle regole KDP sui titoli. Evita di riprendere un'altra serie o un marchio protetto." }
         ],
         cta: "Apri l'app",
       },
@@ -1087,14 +1087,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "DraftToDone macht aus deinem Thema klare, keyword-bewusste Titel und Untertitel für Amazon KDP. Du bekommst Ideen passend zu deiner Kategorie, keine zufälligen Slogans.",
         keywords: ["Buchtitel-Generator", "KI Buchtitel Ideen", "Untertitel Generator", "KDP Titel", "Buchtitel finden"],
         sections: [
-          { id: "titel-und-untertitel", title: "Titel und Untertitel zusammen", body: "Ein gutes KDP-Listing braucht einen kurzen Haken und einen Untertitel, der die Suche trägt. Wir erzeugen beides als Paar.", points: ["Haupttitel kurz und gut lesbar", "Untertitel trägt die Kategorie-Keywords", "Varianten für Belletristik und Sachbuch", "Paare, die du direkt vergleichen kannst"] },
-          { id: "keyword-bewusst", title: "Keyword-bewusst, ohne Keyword-Stuffing", body: "Jede Option folgt der Art, wie Leser in deiner Nische wirklich suchen, und bleibt dabei natürlich genug zum Vorlesen.", points: ["Aufgebaut aus deinem Thema und deiner Kategorie", "Formulierungen nah an echter Leserintention", "Länge gegen die KDP-Felder geprüft", "Kein Keyword-Spam und keine falsche Dringlichkeit"] },
-          { id: "teil-der-pipeline", title: "Teil einer einzigen Publishing-Pipeline", body: "Der Titel entsteht zusammen mit Manuskript, Cover und Metadaten, damit das ganze Produkt stimmig bleibt.", points: ["Titel passend zum fertigen Cover", "Stimmig mit Beschreibung und Keywords", "Gleich bei E-Book und Taschenbuch", "Gleiches Katalog-Qualitätstor wie alles andere"] }
+          { id: "titel-und-untertitel", title: "Titel oder Untertitel: was trägt die Keywords?", body: "Ein gutes KDP-Listing braucht einen kurzen Haken und einen Untertitel, der die Suche trägt. Wir erzeugen beides als Paar.", points: ["Haupttitel kurz und gut lesbar", "Untertitel trägt die Kategorie-Keywords", "Varianten für Belletristik und Sachbuch", "Paare, die du direkt vergleichen kannst"] },
+          { id: "keyword-bewusst", title: "Keyword-bewusst statt Keyword-Stuffing: wo ist die Grenze?", body: "Jede Option folgt der Art, wie Leser in deiner Nische wirklich suchen, und bleibt dabei natürlich genug zum Vorlesen.", points: ["Aufgebaut aus deinem Thema und deiner Kategorie", "Formulierungen nah an echter Leserintention", "Länge gegen die KDP-Felder geprüft", "Kein Keyword-Spam und keine falsche Dringlichkeit"] },
+          { id: "teil-der-pipeline", title: "Warum den Titel zusammen mit Cover und Metadaten erzeugen?", body: "Der Titel entsteht zusammen mit Manuskript, Cover und Metadaten, damit das ganze Produkt stimmig bleibt.", points: ["Titel passend zum fertigen Cover", "Stimmig mit Beschreibung und Keywords", "Gleich bei E-Book und Taschenbuch", "Gleiches Katalog-Qualitätstor wie alles andere"] }
         ],
         faq: [
-          { question: "Garantiert ein erzeugter Titel mehr Verkäufe?", answer: "Nein. Ein klarerer, keyword-bewusster Titel kann die Sichtbarkeit verbessern, doch Verkäufe hängen vom Buch, vom Cover, von Rezensionen und vom Markt ab. Wir versprechen keine Rankings oder Umsätze." },
-          { question: "Kann ich die vorgeschlagenen Titel bearbeiten?", answer: "Ja. Jeder Titel und Untertitel ist ein Ausgangspunkt, den du vor der Veröffentlichung bei KDP verfeinern, umschreiben oder ersetzen kannst." },
-          { question: "Sind die Titel sicher für Amazon?", answer: "Sie sind als eigenständige Vorschläge formuliert, aber du bleibst für die Prüfung von Marken und KDP-Titelregeln verantwortlich. Übernimm keine fremde Reihe und keinen geschützten Markennamen." }
+          { question: "Garantiert ein erzeugter Buchtitel mehr Verkäufe?", answer: "Nein. Ein klarerer, keyword-bewusster Titel kann die Sichtbarkeit verbessern, doch Verkäufe hängen vom Buch, vom Cover, von Rezensionen und vom Markt ab. Wir versprechen keine Rankings oder Umsätze." },
+          { question: "Kann ich die vorgeschlagenen Titel und Untertitel bearbeiten?", answer: "Ja. Jeder Titel und Untertitel ist ein Ausgangspunkt, den du vor der Veröffentlichung bei KDP verfeinern, umschreiben oder ersetzen kannst." },
+          { question: "Sind KI-erzeugte Buchtitel bei Amazon sicher?", answer: "Sie sind als eigenständige Vorschläge formuliert, aber du bleibst für die Prüfung von Marken und KDP-Titelregeln verantwortlich. Übernimm keine fremde Reihe und keinen geschützten Markennamen." }
         ],
         cta: "App öffnen",
       },
@@ -1114,14 +1114,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "DraftToDone turns one brief into a complete manuscript — outline, chapters, length and a steady voice — so you start the cover and metadata stage with a finished book, not a blank page.",
         keywords: ["AI book generator", "generate a book with AI", "AI book writer", "write a book with AI", "AI manuscript generator"],
         sections: [
-          { id: "outline-to-manuscript", title: "From brief to a complete manuscript", body: "The generator starts with your topic, reader and length target, builds a working outline, then writes every chapter so the book holds together end to end.", points: ["Topic, reader and promise brief", "Structured chapter outline first", "Full chapter drafting, not snippets", "Target length and word count control"] },
-          { id: "voice-and-consistency", title: "One voice across the whole book", body: "A generated book fails when chapters drift in tone or repeat themselves. The pipeline keeps voice, terminology and structure consistent across the manuscript.", points: ["Consistent tone and reading level", "Fiction and non-fiction structures", "Continuity across chapters", "Reduced repetition between sections"] },
-          { id: "handoff", title: "A manuscript ready for cover and metadata", body: "Generating text is only the first step. The finished manuscript flows into the cover, metadata and quality stages so the book becomes a complete KDP product.", points: ["Clean chapter structure to export", "Hands off to cover generation", "Feeds title, subtitle and keywords", "Enters catalog quality review"] }
+          { id: "outline-to-manuscript", title: "How does one brief become a complete manuscript?", body: "The generator starts with your topic, reader and length target, builds a working outline, then writes every chapter so the book holds together end to end.", points: ["Topic, reader and promise brief", "Structured chapter outline first", "Full chapter drafting, not snippets", "Target length and word count control"] },
+          { id: "voice-and-consistency", title: "How do you stop chapters drifting in tone or repeating?", body: "A generated book fails when chapters drift in tone or repeat themselves. The pipeline keeps voice, terminology and structure consistent across the manuscript.", points: ["Consistent tone and reading level", "Fiction and non-fiction structures", "Continuity across chapters", "Reduced repetition between sections"] },
+          { id: "handoff", title: "What happens to the manuscript after the last chapter?", body: "Generating text is only the first step. The finished manuscript flows into the cover, metadata and quality stages so the book becomes a complete KDP product.", points: ["Clean chapter structure to export", "Hands off to cover generation", "Feeds title, subtitle and keywords", "Enters catalog quality review"] }
         ],
         faq: [
           { question: "Does it write the entire book or just an outline?", answer: "It generates both. You start with an outline, then the pipeline drafts the full chapters toward your target length, rather than returning short fragments." },
-          { question: "Can I publish the AI output as-is on Amazon KDP?", answer: "No. You should read and edit the manuscript yourself, and disclose AI use where KDP requires it. The generator gives you a strong draft, not a final book." },
-          { question: "How is this different from the full publishing workflow?", answer: "This page is the manuscript stage, focused on outline, chapters and voice. The broader workflow then adds the cover, metadata and quality gates on top of that book." }
+          { question: "Can I publish AI-generated text as-is on Amazon KDP?", answer: "No. You should read and edit the manuscript yourself, and disclose AI use where KDP requires it. The generator gives you a strong draft, not a final book." },
+          { question: "How is the manuscript stage different from the full workflow?", answer: "This page is the manuscript stage, focused on outline, chapters and voice. The broader workflow then adds the cover, metadata and quality gates on top of that book." }
         ],
         cta: "Open the app",
       },
@@ -1135,14 +1135,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "DraftToDone transforme un brief en manuscrit complet — plan, chapitres, longueur et voix régulière — pour aborder la couverture et les métadonnées avec un livre fini, pas une page blanche.",
         keywords: ["générateur livre IA", "générer un livre avec IA", "écrire un livre avec IA", "rédacteur de livre IA", "générateur de manuscrit IA"],
         sections: [
-          { id: "outline-to-manuscript", title: "Du brief au manuscrit complet", body: "Le générateur part de votre sujet, lecteur et longueur cible, construit un plan de travail, puis rédige chaque chapitre pour que le livre tienne de bout en bout.", points: ["Brief sujet, lecteur et promesse", "Plan de chapitres structuré d'abord", "Rédaction de chapitres entiers", "Contrôle de la longueur visée"] },
-          { id: "voice-and-consistency", title: "Une voix sur tout le livre", body: "Un livre généré échoue quand les chapitres dérivent ou se répètent. Le pipeline garde voix, terminologie et structure cohérentes dans tout le manuscrit.", points: ["Ton et niveau de lecture cohérents", "Structures fiction et non-fiction", "Continuité entre les chapitres", "Moins de répétitions entre sections"] },
-          { id: "handoff", title: "Un manuscrit prêt pour couverture et métadonnées", body: "Générer le texte n'est que la première étape. Le manuscrit fini alimente la couverture, les métadonnées et la qualité pour devenir un produit KDP complet.", points: ["Structure de chapitres propre à exporter", "Transmis à la génération de couverture", "Nourrit titre, sous-titre et mots-clés", "Entre en revue qualité catalogue"] }
+          { id: "outline-to-manuscript", title: "Comment un brief devient-il un manuscrit complet ?", body: "Le générateur part de votre sujet, lecteur et longueur cible, construit un plan de travail, puis rédige chaque chapitre pour que le livre tienne de bout en bout.", points: ["Brief sujet, lecteur et promesse", "Plan de chapitres structuré d'abord", "Rédaction de chapitres entiers", "Contrôle de la longueur visée"] },
+          { id: "voice-and-consistency", title: "Comment éviter que les chapitres dérivent ou se répètent ?", body: "Un livre généré échoue quand les chapitres dérivent ou se répètent. Le pipeline garde voix, terminologie et structure cohérentes dans tout le manuscrit.", points: ["Ton et niveau de lecture cohérents", "Structures fiction et non-fiction", "Continuité entre les chapitres", "Moins de répétitions entre sections"] },
+          { id: "handoff", title: "Que devient le manuscrit après le dernier chapitre ?", body: "Générer le texte n'est que la première étape. Le manuscrit fini alimente la couverture, les métadonnées et la qualité pour devenir un produit KDP complet.", points: ["Structure de chapitres propre à exporter", "Transmis à la génération de couverture", "Nourrit titre, sous-titre et mots-clés", "Entre en revue qualité catalogue"] }
         ],
         faq: [
-          { question: "Rédige-t-il tout le livre ou juste un plan ?", answer: "Les deux. Vous partez d'un plan, puis le pipeline rédige les chapitres complets vers la longueur cible, au lieu de renvoyer de courts fragments." },
-          { question: "Puis-je publier la sortie IA telle quelle sur Amazon KDP ?", answer: "Non. Vous devez relire et corriger le manuscrit vous-même, et déclarer l'usage de l'IA là où KDP l'exige. Le générateur fournit un bon brouillon, pas un livre final." },
-          { question: "En quoi est-ce différent du workflow de publication complet ?", answer: "Cette page est l'étape manuscrit, centrée sur plan, chapitres et voix. Le workflow plus large ajoute ensuite couverture, métadonnées et portes qualité sur ce livre." }
+          { question: "Rédige-t-il tout le livre ou seulement un plan ?", answer: "Les deux. Vous partez d'un plan, puis le pipeline rédige les chapitres complets vers la longueur cible, au lieu de renvoyer de courts fragments." },
+          { question: "Puis-je publier un texte généré par IA tel quel sur KDP ?", answer: "Non. Vous devez relire et corriger le manuscrit vous-même, et déclarer l'usage de l'IA là où KDP l'exige. Le générateur fournit un bon brouillon, pas un livre final." },
+          { question: "En quoi l'étape manuscrit diffère-t-elle du workflow complet ?", answer: "Cette page est l'étape manuscrit, centrée sur plan, chapitres et voix. Le workflow plus large ajoute ensuite couverture, métadonnées et portes qualité sur ce livre." }
         ],
         cta: "Ouvrir l'app",
       },
@@ -1156,14 +1156,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "DraftToDone trasforma un brief in un manoscritto completo — outline, capitoli, lunghezza e voce costante — così affronti copertina e metadati con un libro finito, non una pagina bianca.",
         keywords: ["generatore libri IA", "generare un libro con IA", "scrivere un libro con IA", "scrittore di libri IA", "generatore di manoscritti IA"],
         sections: [
-          { id: "outline-to-manuscript", title: "Dal brief al manoscritto completo", body: "Il generatore parte da argomento, lettore e lunghezza obiettivo, costruisce un outline di lavoro, poi scrive ogni capitolo perché il libro regga dall'inizio alla fine.", points: ["Brief di argomento, lettore e promessa", "Outline dei capitoli prima di tutto", "Stesura di capitoli interi", "Controllo della lunghezza obiettivo"] },
-          { id: "voice-and-consistency", title: "Una voce in tutto il libro", body: "Un libro generato fallisce quando i capitoli cambiano tono o si ripetono. Il pipeline mantiene voce, terminologia e struttura coerenti in tutto il manoscritto.", points: ["Tono e livello di lettura coerenti", "Strutture fiction e non-fiction", "Continuità tra i capitoli", "Meno ripetizioni tra le sezioni"] },
-          { id: "handoff", title: "Un manoscritto pronto per copertina e metadati", body: "Generare il testo è solo il primo passo. Il manoscritto finito alimenta copertina, metadati e qualità per diventare un prodotto KDP completo.", points: ["Struttura di capitoli pulita da esportare", "Passa alla generazione della copertina", "Alimenta titolo, sottotitolo e keyword", "Entra nella revisione qualità catalogo"] }
+          { id: "outline-to-manuscript", title: "Come un brief diventa un manoscritto completo?", body: "Il generatore parte da argomento, lettore e lunghezza obiettivo, costruisce un outline di lavoro, poi scrive ogni capitolo perché il libro regga dall'inizio alla fine.", points: ["Brief di argomento, lettore e promessa", "Outline dei capitoli prima di tutto", "Stesura di capitoli interi", "Controllo della lunghezza obiettivo"] },
+          { id: "voice-and-consistency", title: "Come evitare che i capitoli cambino tono o si ripetano?", body: "Un libro generato fallisce quando i capitoli cambiano tono o si ripetono. Il pipeline mantiene voce, terminologia e struttura coerenti in tutto il manoscritto.", points: ["Tono e livello di lettura coerenti", "Strutture fiction e non-fiction", "Continuità tra i capitoli", "Meno ripetizioni tra le sezioni"] },
+          { id: "handoff", title: "Cosa succede al manoscritto dopo l'ultimo capitolo?", body: "Generare il testo è solo il primo passo. Il manoscritto finito alimenta copertina, metadati e qualità per diventare un prodotto KDP completo.", points: ["Struttura di capitoli pulita da esportare", "Passa alla generazione della copertina", "Alimenta titolo, sottotitolo e keyword", "Entra nella revisione qualità catalogo"] }
         ],
         faq: [
           { question: "Scrive l'intero libro o solo un outline?", answer: "Entrambi. Parti da un outline, poi il pipeline stende i capitoli completi verso la lunghezza obiettivo, invece di restituire brevi frammenti." },
-          { question: "Posso pubblicare l'output IA così com'è su Amazon KDP?", answer: "No. Devi leggere e correggere il manoscritto, e dichiarare l'uso dell'IA dove KDP lo richiede. Il generatore offre una buona bozza, non un libro finale." },
-          { question: "In cosa differisce dal workflow di pubblicazione completo?", answer: "Questa pagina è la fase manoscritto, centrata su outline, capitoli e voce. Il workflow più ampio aggiunge poi copertina, metadati e gate qualità su quel libro." }
+          { question: "Posso pubblicare il testo IA così com'è su Amazon KDP?", answer: "No. Devi leggere e correggere il manoscritto, e dichiarare l'uso dell'IA dove KDP lo richiede. Il generatore offre una buona bozza, non un libro finale." },
+          { question: "In cosa differisce la fase manoscritto dal workflow completo?", answer: "Questa pagina è la fase manoscritto, centrata su outline, capitoli e voce. Il workflow più ampio aggiunge poi copertina, metadati e gate qualità su quel libro." }
         ],
         cta: "Apri l'app",
       },
@@ -1177,14 +1177,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "DraftToDone macht aus einem Brief ein komplettes Manuskript — Outline, Kapitel, Länge und eine ruhige Stimme — damit du Cover und Metadaten mit einem fertigen Buch statt einer leeren Seite beginnst.",
         keywords: ["KI Buch Generator", "Buch mit KI erstellen", "Buch mit KI schreiben", "KI Buch Autor", "KI Manuskript Generator"],
         sections: [
-          { id: "outline-to-manuscript", title: "Vom Brief zum kompletten Manuskript", body: "Der Generator startet mit Thema, Leser und Ziellänge, baut eine Arbeits-Outline und schreibt dann jedes Kapitel, damit das Buch von Anfang bis Ende zusammenhält.", points: ["Brief zu Thema, Leser und Versprechen", "Strukturierte Kapitel-Outline zuerst", "Volle Kapitel statt Schnipsel", "Kontrolle über Ziellänge und Wortzahl"] },
-          { id: "voice-and-consistency", title: "Eine Stimme im ganzen Buch", body: "Ein generiertes Buch scheitert, wenn Kapitel im Ton abweichen oder sich wiederholen. Die Pipeline hält Stimme, Terminologie und Struktur im Manuskript konsistent.", points: ["Konsistenter Ton und Leseniveau", "Strukturen für Fiction und Sachbuch", "Kontinuität über Kapitel hinweg", "Weniger Wiederholungen zwischen Abschnitten"] },
-          { id: "handoff", title: "Ein Manuskript bereit für Cover und Metadaten", body: "Text zu generieren ist nur der erste Schritt. Das fertige Manuskript fließt in Cover, Metadaten und Qualität, damit das Buch ein vollständiges KDP-Produkt wird.", points: ["Saubere Kapitelstruktur zum Export", "Übergabe an die Cover-Generierung", "Speist Titel, Untertitel und Keywords", "Geht in die Katalog-Qualitätsprüfung"] }
+          { id: "outline-to-manuscript", title: "Wie wird aus einem Brief ein komplettes Manuskript?", body: "Der Generator startet mit Thema, Leser und Ziellänge, baut eine Arbeits-Outline und schreibt dann jedes Kapitel, damit das Buch von Anfang bis Ende zusammenhält.", points: ["Brief zu Thema, Leser und Versprechen", "Strukturierte Kapitel-Outline zuerst", "Volle Kapitel statt Schnipsel", "Kontrolle über Ziellänge und Wortzahl"] },
+          { id: "voice-and-consistency", title: "Wie verhindert man abweichende oder doppelte Kapitel?", body: "Ein generiertes Buch scheitert, wenn Kapitel im Ton abweichen oder sich wiederholen. Die Pipeline hält Stimme, Terminologie und Struktur im Manuskript konsistent.", points: ["Konsistenter Ton und Leseniveau", "Strukturen für Fiction und Sachbuch", "Kontinuität über Kapitel hinweg", "Weniger Wiederholungen zwischen Abschnitten"] },
+          { id: "handoff", title: "Was passiert mit dem Manuskript nach dem letzten Kapitel?", body: "Text zu generieren ist nur der erste Schritt. Das fertige Manuskript fließt in Cover, Metadaten und Qualität, damit das Buch ein vollständiges KDP-Produkt wird.", points: ["Saubere Kapitelstruktur zum Export", "Übergabe an die Cover-Generierung", "Speist Titel, Untertitel und Keywords", "Geht in die Katalog-Qualitätsprüfung"] }
         ],
         faq: [
           { question: "Schreibt es das ganze Buch oder nur eine Outline?", answer: "Beides. Du startest mit einer Outline, dann schreibt die Pipeline die vollen Kapitel bis zur Ziellänge, statt nur kurze Fragmente zurückzugeben." },
-          { question: "Kann ich die KI-Ausgabe unverändert auf Amazon KDP veröffentlichen?", answer: "Nein. Du solltest das Manuskript selbst lesen und überarbeiten und KI-Nutzung dort offenlegen, wo KDP es verlangt. Der Generator liefert einen starken Entwurf, kein fertiges Buch." },
-          { question: "Wie unterscheidet sich das vom kompletten Publishing-Workflow?", answer: "Diese Seite ist die Manuskript-Phase, fokussiert auf Outline, Kapitel und Stimme. Der breitere Workflow ergänzt danach Cover, Metadaten und Qualitätsgates auf diesem Buch." }
+          { question: "Kann ich KI-Text unverändert auf Amazon KDP veröffentlichen?", answer: "Nein. Du solltest das Manuskript selbst lesen und überarbeiten und KI-Nutzung dort offenlegen, wo KDP es verlangt. Der Generator liefert einen starken Entwurf, kein fertiges Buch." },
+          { question: "Wie unterscheidet sich die Manuskript-Phase vom ganzen Workflow?", answer: "Diese Seite ist die Manuskript-Phase, fokussiert auf Outline, Kapitel und Stimme. Der breitere Workflow ergänzt danach Cover, Metadaten und Qualitätsgates auf diesem Buch." }
         ],
         cta: "App öffnen",
       },
@@ -1207,14 +1207,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "Research Kindle and print keywords, then place the strongest seven in the backend slots that KDP gives you. Category fit is checked alongside, so the metadata reads as one coherent listing.",
         keywords: ["KDP keyword tool", "Amazon book keyword research", "Kindle keyword research", "book keyword finder", "7 keyword slots"],
         sections: [
-          { id: "seven-backend-slots", title: "Built around the 7 keyword slots", body: "KDP gives you seven backend keyword fields, and each one should earn its place. The tool drafts candidates, removes overlap with your title and subtitle, and fits the strongest terms into the slots that count.", points: ["One ranked shortlist mapped to the seven backend fields", "No wasted words repeating the title or subtitle", "Search phrases readers actually type, not single nouns", "Each slot kept inside KDP character limits"] },
-          { id: "category-and-relevancy", title: "Keyword and category fit, read together", body: "Keywords and categories work as a pair on Amazon. The tool reviews your shortlist against likely browse categories so the listing stays relevant rather than scattered across unrelated shelves.", points: ["Candidate categories matched to your keyword theme", "Relevancy checked so terms reflect the actual book", "Flags for terms too broad to rank against", "Notes where a niche category beats a crowded one"] },
-          { id: "inside-the-pipeline", title: "Part of one publishing pipeline", body: "Keyword research is not a separate tab here. It runs inside the same controlled pipeline that produces the manuscript, cover, and the rest of the metadata, so everything points the same direction.", points: ["Keywords align with the generated title and description", "Metadata produced as one set, not stitched together", "Quality gates check the listing before you export", "Built for catalog quality, not keyword stuffing"] }
+          { id: "seven-backend-slots", title: "How do you fill the 7 KDP backend keyword slots?", body: "KDP gives you seven backend keyword fields, and each one should earn its place. The tool drafts candidates, removes overlap with your title and subtitle, and fits the strongest terms into the slots that count.", points: ["One ranked shortlist mapped to the seven backend fields", "No wasted words repeating the title or subtitle", "Search phrases readers actually type, not single nouns", "Each slot kept inside KDP character limits"] },
+          { id: "category-and-relevancy", title: "How do keywords and categories work together on Amazon?", body: "Keywords and categories work as a pair on Amazon. The tool reviews your shortlist against likely browse categories so the listing stays relevant rather than scattered across unrelated shelves.", points: ["Candidate categories matched to your keyword theme", "Relevancy checked so terms reflect the actual book", "Flags for terms too broad to rank against", "Notes where a niche category beats a crowded one"] },
+          { id: "inside-the-pipeline", title: "Why research keywords inside the publishing pipeline?", body: "Keyword research is not a separate tab here. It runs inside the same controlled pipeline that produces the manuscript, cover, and the rest of the metadata, so everything points the same direction.", points: ["Keywords align with the generated title and description", "Metadata produced as one set, not stitched together", "Quality gates check the listing before you export", "Built for catalog quality, not keyword stuffing"] }
         ],
         faq: [
-          { question: "Does this fill all seven KDP keyword slots for me?", answer: "It produces a ranked shortlist mapped to the seven backend fields, trimmed to fit KDP character limits. You review and approve the final selection before anything is published." },
+          { question: "Do I approve the keyword list before anything is published?", answer: "It produces a ranked shortlist mapped to the seven backend fields, trimmed to fit KDP character limits. You review and approve the final selection before anything is published." },
           { question: "Will the right keywords guarantee sales or a top ranking?", answer: "No. Good keyword choice helps the right readers discover your book, but it does not guarantee sales or rankings. Cover, writing, pricing, reviews, and demand all play a part." },
-          { question: "How is this different from your keyword how-to guides?", answer: "The guides explain how to choose KDP keywords by hand. This is the tool that does the research and drafts the slots inside the publishing pipeline, ready for your review." }
+          { question: "How is this tool different from your keyword how-to guides?", answer: "The guides explain how to choose KDP keywords by hand. This is the tool that does the research and drafts the slots inside the publishing pipeline, ready for your review." }
         ],
         cta: "Open the app",
       },
@@ -1228,13 +1228,13 @@ export const solutionPages: SolutionPage[] = [
         lead: "Recherchez les mots-clés Kindle et papier, puis placez les sept plus forts dans les champs backend prévus par KDP. La catégorie est vérifiée en parallèle, pour une fiche cohérente.",
         keywords: ["outil mots-clés KDP", "recherche mots-clés livre Amazon", "recherche mots-clés Kindle", "trouver mots-clés livre", "7 champs mots-clés"],
         sections: [
-          { id: "sept-champs-backend", title: "Pensé pour les 7 champs de mots-clés", body: "KDP propose sept champs de mots-clés backend, et chacun doit justifier sa place. L'outil propose des candidats, retire les doublons avec votre titre et sous-titre, puis place les meilleurs termes.", points: ["Une liste classée reliée aux sept champs backend", "Aucun mot gaspillé à répéter le titre ou le sous-titre", "Des expressions réellement tapées par les lecteurs", "Chaque champ tenu dans les limites de caractères KDP"] },
-          { id: "categorie-et-pertinence", title: "Mots-clés et catégorie, lus ensemble", body: "Sur Amazon, mots-clés et catégories forment une paire. L'outil compare votre liste aux catégories de navigation probables, pour une fiche pertinente plutôt que dispersée.", points: ["Catégories candidates reliées à votre thème de mots-clés", "Pertinence vérifiée pour refléter le vrai livre", "Alertes sur les termes trop larges pour se positionner", "Notes quand une niche vaut mieux qu'une catégorie saturée"] },
-          { id: "dans-le-pipeline", title: "Intégré à un seul pipeline d'édition", body: "La recherche de mots-clés n'est pas un onglet à part. Elle tourne dans le même pipeline contrôlé qui produit le manuscrit, la couverture et le reste des métadonnées.", points: ["Mots-clés alignés sur le titre et la description générés", "Métadonnées produites en un seul ensemble cohérent", "Contrôles qualité sur la fiche avant l'export", "Conçu pour la qualité catalogue, pas le bourrage"] }
+          { id: "sept-champs-backend", title: "Comment remplir les 7 champs de mots-clés KDP ?", body: "KDP propose sept champs de mots-clés backend, et chacun doit justifier sa place. L'outil propose des candidats, retire les doublons avec votre titre et sous-titre, puis place les meilleurs termes.", points: ["Une liste classée reliée aux sept champs backend", "Aucun mot gaspillé à répéter le titre ou le sous-titre", "Des expressions réellement tapées par les lecteurs", "Chaque champ tenu dans les limites de caractères KDP"] },
+          { id: "categorie-et-pertinence", title: "Comment mots-clés et catégories fonctionnent-ils ensemble ?", body: "Sur Amazon, mots-clés et catégories forment une paire. L'outil compare votre liste aux catégories de navigation probables, pour une fiche pertinente plutôt que dispersée.", points: ["Catégories candidates reliées à votre thème de mots-clés", "Pertinence vérifiée pour refléter le vrai livre", "Alertes sur les termes trop larges pour se positionner", "Notes quand une niche vaut mieux qu'une catégorie saturée"] },
+          { id: "dans-le-pipeline", title: "Pourquoi chercher les mots-clés dans le même pipeline ?", body: "La recherche de mots-clés n'est pas un onglet à part. Elle tourne dans le même pipeline contrôlé qui produit le manuscrit, la couverture et le reste des métadonnées.", points: ["Mots-clés alignés sur le titre et la description générés", "Métadonnées produites en un seul ensemble cohérent", "Contrôles qualité sur la fiche avant l'export", "Conçu pour la qualité catalogue, pas le bourrage"] }
         ],
         faq: [
-          { question: "L'outil remplit-il les sept champs de mots-clés KDP pour moi ?", answer: "Il produit une liste classée reliée aux sept champs backend, ajustée aux limites de caractères KDP. Vous validez la sélection finale avant toute publication." },
-          { question: "Les bons mots-clés garantissent-ils des ventes ou un classement ?", answer: "Non. Un bon choix de mots-clés aide les bons lecteurs à vous trouver, mais ne garantit ni ventes ni classement. Couverture, texte, prix, avis et demande comptent aussi." },
+          { question: "Est-ce moi qui valide la liste de mots-clés avant publication ?", answer: "Il produit une liste classée reliée aux sept champs backend, ajustée aux limites de caractères KDP. Vous validez la sélection finale avant toute publication." },
+          { question: "Les bons mots-clés garantissent-ils ventes ou classement ?", answer: "Non. Un bon choix de mots-clés aide les bons lecteurs à vous trouver, mais ne garantit ni ventes ni classement. Couverture, texte, prix, avis et demande comptent aussi." },
           { question: "Quelle différence avec vos guides pratiques sur les mots-clés ?", answer: "Les guides expliquent comment choisir les mots-clés KDP à la main. Ceci est l'outil qui fait la recherche et prépare les champs dans le pipeline, prêts à valider." }
         ],
         cta: "Ouvrir l'app",
@@ -1249,13 +1249,13 @@ export const solutionPages: SolutionPage[] = [
         lead: "Cerca le keyword Kindle e cartacee, poi inserisci le sette più forti nei campi backend previsti da KDP. La categoria viene verificata in parallelo, per una scheda coerente.",
         keywords: ["strumento keyword KDP", "ricerca keyword libro Amazon", "ricerca keyword Kindle", "trova keyword libro", "7 campi keyword"],
         sections: [
-          { id: "sette-campi-backend", title: "Pensato per i 7 campi keyword", body: "KDP offre sette campi keyword backend, e ognuno deve meritare il suo posto. Lo strumento propone candidati, elimina le sovrapposizioni con titolo e sottotitolo e inserisce i termini migliori.", points: ["Una lista ordinata collegata ai sette campi backend", "Nessuna parola sprecata a ripetere titolo o sottotitolo", "Frasi che i lettori digitano davvero, non singoli nomi", "Ogni campo entro i limiti di caratteri di KDP"] },
-          { id: "categoria-e-pertinenza", title: "Keyword e categoria, lette insieme", body: "Su Amazon keyword e categorie formano una coppia. Lo strumento confronta la tua lista con le probabili categorie di navigazione, per una scheda pertinente e non dispersa.", points: ["Categorie candidate collegate al tuo tema di keyword", "Pertinenza verificata per riflettere il libro reale", "Avvisi sui termini troppo ampi per posizionarsi", "Note quando una nicchia batte una categoria affollata"] },
-          { id: "dentro-la-pipeline", title: "Parte di una sola pipeline editoriale", body: "La ricerca keyword non è una scheda separata. Gira dentro la stessa pipeline controllata che produce manoscritto, copertina e il resto dei metadati.", points: ["Keyword allineate al titolo e alla descrizione generati", "Metadati prodotti come un insieme unico e coerente", "Controlli di qualità sulla scheda prima dell'export", "Pensato per la qualità di catalogo, non il riempimento"] }
+          { id: "sette-campi-backend", title: "Come si riempiono i 7 campi keyword di KDP?", body: "KDP offre sette campi keyword backend, e ognuno deve meritare il suo posto. Lo strumento propone candidati, elimina le sovrapposizioni con titolo e sottotitolo e inserisce i termini migliori.", points: ["Una lista ordinata collegata ai sette campi backend", "Nessuna parola sprecata a ripetere titolo o sottotitolo", "Frasi che i lettori digitano davvero, non singoli nomi", "Ogni campo entro i limiti di caratteri di KDP"] },
+          { id: "categoria-e-pertinenza", title: "Come funzionano insieme keyword e categorie su Amazon?", body: "Su Amazon keyword e categorie formano una coppia. Lo strumento confronta la tua lista con le probabili categorie di navigazione, per una scheda pertinente e non dispersa.", points: ["Categorie candidate collegate al tuo tema di keyword", "Pertinenza verificata per riflettere il libro reale", "Avvisi sui termini troppo ampi per posizionarsi", "Note quando una nicchia batte una categoria affollata"] },
+          { id: "dentro-la-pipeline", title: "Perché cercare le keyword dentro la stessa pipeline?", body: "La ricerca keyword non è una scheda separata. Gira dentro la stessa pipeline controllata che produce manoscritto, copertina e il resto dei metadati.", points: ["Keyword allineate al titolo e alla descrizione generati", "Metadati prodotti come un insieme unico e coerente", "Controlli di qualità sulla scheda prima dell'export", "Pensato per la qualità di catalogo, non il riempimento"] }
         ],
         faq: [
-          { question: "Lo strumento riempie tutti e sette i campi keyword KDP?", answer: "Produce una lista ordinata collegata ai sette campi backend, adattata ai limiti di caratteri di KDP. Tu rivedi e approvi la selezione finale prima della pubblicazione." },
-          { question: "Le keyword giuste garantiscono vendite o un posizionamento?", answer: "No. Una buona scelta di keyword aiuta i lettori giusti a trovarti, ma non garantisce vendite né posizionamento. Contano anche copertina, testo, prezzo, recensioni e domanda." },
+          { question: "Approvo io la lista di keyword prima della pubblicazione?", answer: "Produce una lista ordinata collegata ai sette campi backend, adattata ai limiti di caratteri di KDP. Tu rivedi e approvi la selezione finale prima della pubblicazione." },
+          { question: "Le keyword giuste garantiscono vendite o posizionamento?", answer: "No. Una buona scelta di keyword aiuta i lettori giusti a trovarti, ma non garantisce vendite né posizionamento. Contano anche copertina, testo, prezzo, recensioni e domanda." },
           { question: "In cosa differisce dalle vostre guide pratiche sulle keyword?", answer: "Le guide spiegano come scegliere le keyword KDP a mano. Questo è lo strumento che fa la ricerca e prepara i campi dentro la pipeline, pronti da rivedere." }
         ],
         cta: "Apri l'app",
@@ -1270,14 +1270,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "Recherchiere Kindle- und Print-Keywords und setze die sieben stärksten in die Backend-Felder, die KDP vorgibt. Die Kategorie wird parallel geprüft, für ein stimmiges Listing.",
         keywords: ["KDP Keyword Tool", "Amazon Buch Keyword Recherche", "Kindle Keyword Recherche", "Buch Keyword Finder", "7 Keyword Felder"],
         sections: [
-          { id: "sieben-backend-felder", title: "Gebaut für die 7 Keyword-Felder", body: "KDP bietet sieben Backend-Keyword-Felder, und jedes sollte seinen Platz verdienen. Das Tool entwirft Kandidaten, entfernt Überschneidungen mit Titel und Untertitel und setzt die stärksten Begriffe.", points: ["Eine sortierte Liste passend zu den sieben Backend-Feldern", "Keine verschwendeten Wörter, die Titel oder Untertitel wiederholen", "Suchphrasen, die Leser wirklich tippen, keine Einzelwörter", "Jedes Feld innerhalb der KDP-Zeichengrenzen"] },
-          { id: "kategorie-und-relevanz", title: "Keyword und Kategorie, zusammen gelesen", body: "Bei Amazon bilden Keywords und Kategorien ein Paar. Das Tool gleicht deine Liste mit wahrscheinlichen Browse-Kategorien ab, damit das Listing relevant bleibt statt verstreut.", points: ["Kandidaten-Kategorien passend zu deinem Keyword-Thema", "Relevanz geprüft, damit Begriffe das echte Buch zeigen", "Hinweise auf Begriffe, die zu breit zum Ranken sind", "Notizen, wo eine Nische eine überfüllte Kategorie schlägt"] },
-          { id: "in-der-pipeline", title: "Teil einer einzigen Publishing-Pipeline", body: "Keyword-Recherche ist hier kein eigener Tab. Sie läuft in derselben kontrollierten Pipeline, die Manuskript, Cover und die übrigen Metadaten erzeugt.", points: ["Keywords stimmen mit erzeugtem Titel und Beschreibung überein", "Metadaten als ein Satz erstellt, nicht zusammengeflickt", "Qualitätsprüfungen am Listing vor dem Export", "Gebaut für Katalogqualität, nicht für Keyword-Stuffing"] }
+          { id: "sieben-backend-felder", title: "Wie füllt man die 7 KDP-Keyword-Felder richtig?", body: "KDP bietet sieben Backend-Keyword-Felder, und jedes sollte seinen Platz verdienen. Das Tool entwirft Kandidaten, entfernt Überschneidungen mit Titel und Untertitel und setzt die stärksten Begriffe.", points: ["Eine sortierte Liste passend zu den sieben Backend-Feldern", "Keine verschwendeten Wörter, die Titel oder Untertitel wiederholen", "Suchphrasen, die Leser wirklich tippen, keine Einzelwörter", "Jedes Feld innerhalb der KDP-Zeichengrenzen"] },
+          { id: "kategorie-und-relevanz", title: "Wie wirken Keywords und Kategorien bei Amazon zusammen?", body: "Bei Amazon bilden Keywords und Kategorien ein Paar. Das Tool gleicht deine Liste mit wahrscheinlichen Browse-Kategorien ab, damit das Listing relevant bleibt statt verstreut.", points: ["Kandidaten-Kategorien passend zu deinem Keyword-Thema", "Relevanz geprüft, damit Begriffe das echte Buch zeigen", "Hinweise auf Begriffe, die zu breit zum Ranken sind", "Notizen, wo eine Nische eine überfüllte Kategorie schlägt"] },
+          { id: "in-der-pipeline", title: "Warum läuft die Keyword-Recherche in derselben Pipeline?", body: "Keyword-Recherche ist hier kein eigener Tab. Sie läuft in derselben kontrollierten Pipeline, die Manuskript, Cover und die übrigen Metadaten erzeugt.", points: ["Keywords stimmen mit erzeugtem Titel und Beschreibung überein", "Metadaten als ein Satz erstellt, nicht zusammengeflickt", "Qualitätsprüfungen am Listing vor dem Export", "Gebaut für Katalogqualität, nicht für Keyword-Stuffing"] }
         ],
         faq: [
-          { question: "Füllt das Tool alle sieben KDP-Keyword-Felder für mich?", answer: "Es erstellt eine sortierte Liste passend zu den sieben Backend-Feldern, auf die KDP-Zeichengrenzen zugeschnitten. Du prüfst und bestätigst die Auswahl vor der Veröffentlichung." },
+          { question: "Bestätige ich die Keyword-Liste vor der Veröffentlichung?", answer: "Es erstellt eine sortierte Liste passend zu den sieben Backend-Feldern, auf die KDP-Zeichengrenzen zugeschnitten. Du prüfst und bestätigst die Auswahl vor der Veröffentlichung." },
           { question: "Garantieren die richtigen Keywords Verkäufe oder ein Ranking?", answer: "Nein. Eine gute Keyword-Wahl hilft den richtigen Lesern, dich zu finden, garantiert aber weder Verkäufe noch Rankings. Auch Cover, Text, Preis, Rezensionen und Nachfrage zählen." },
-          { question: "Worin unterscheidet es sich von euren Keyword-Anleitungen?", answer: "Die Anleitungen erklären, wie man KDP-Keywords von Hand wählt. Dies ist das Tool, das die Recherche macht und die Felder in der Pipeline vorbereitet, bereit zur Prüfung." }
+          { question: "Worin unterscheidet sich das Tool von euren Keyword-Anleitungen?", answer: "Die Anleitungen erklären, wie man KDP-Keywords von Hand wählt. Dies ist das Tool, das die Recherche macht und die Felder in der Pipeline vorbereitet, bereit zur Prüfung." }
         ],
         cta: "App öffnen",
       },
@@ -1297,13 +1297,13 @@ export const solutionPages: SolutionPage[] = [
         lead: "Most AI writing tools stop at text. KDP publishers need more: a coherent manuscript, cover direction, title, description, keywords and quality checks before upload. This page shows the buying criteria and where DraftToDone fits.",
         keywords: ["best AI book generator", "AI book generator for KDP", "AI book writing software", "AI publishing software", "publish a book with AI"],
         sections: [
-          { id: "criteria", title: "Judge the full publishing job", body: "A book generator should be judged by the finished product, not by how impressive one chapter looks in isolation.", points: ["Complete manuscript, not only a draft sample", "Cover and metadata included in the same workflow", "Export path for KDP decisions", "Clear limits: no sales or ranking guarantees"] },
-          { id: "workflow", title: "Look for repeatable quality gates", body: "The strongest tool is the one that makes every book easier to inspect, revise and package before it reaches Amazon.", points: ["Structure checks before generation", "Metadata aligned with the actual book", "Cover readiness before upload", "Catalog notes for future refreshes"] },
-          { id: "fit", title: "Where DraftToDone fits", body: "DraftToDone is built for publishers who want a controlled pipeline from niche brief to publishable KDP package, not a blank chat window.", points: ["Manuscript, cover and KDP metadata as one package", "Book-credit pricing tied to finished output", "Works for repeatable catalog operations", "Human review stays part of the workflow"] }
+          { id: "criteria", title: "What should you compare when choosing an AI book generator?", body: "A book generator should be judged by the finished product, not by how impressive one chapter looks in isolation.", points: ["Complete manuscript, not only a draft sample", "Cover and metadata included in the same workflow", "Export path for KDP decisions", "Clear limits: no sales or ranking guarantees"] },
+          { id: "workflow", title: "What does a repeatable quality gate look like?", body: "The strongest tool is the one that makes every book easier to inspect, revise and package before it reaches Amazon.", points: ["Structure checks before generation", "Metadata aligned with the actual book", "Cover readiness before upload", "Catalog notes for future refreshes"] },
+          { id: "fit", title: "Best for publishers who want a pipeline, not a chat window", body: "DraftToDone is built for publishers who want a controlled pipeline from niche brief to publishable KDP package, not a blank chat window.", points: ["Manuscript, cover and KDP metadata as one package", "Book-credit pricing tied to finished output", "Works for repeatable catalog operations", "Human review stays part of the workflow"] }
         ],
         faq: [
           { question: "What makes an AI book generator good for KDP?", answer: "It should produce a coherent manuscript, support cover and metadata decisions, keep claims honest and leave a clear human review step before publication." },
-          { question: "Is DraftToDone only an AI writer?", answer: "No. DraftToDone covers the broader publishing package: manuscript, cover direction, title, description, keywords, pen-name notes and catalog quality gates." },
+          { question: "Is DraftToDone only an AI writing tool?", answer: "No. DraftToDone covers the broader publishing package: manuscript, cover direction, title, description, keywords, pen-name notes and catalog quality gates." },
           { question: "Can any AI book generator guarantee sales?", answer: "No. No responsible tool can guarantee Amazon rankings, approval or sales. Packaging and metadata help, but demand, quality, price, reviews and promotion still matter." }
         ],
         cta: "Open the app",
@@ -1318,14 +1318,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "La plupart des outils d'écriture IA s'arrêtent au texte. Un éditeur KDP a besoin de plus : manuscrit cohérent, couverture, titre, description, mots-clés et contrôles avant upload.",
         keywords: ["meilleur générateur livre IA", "générateur livre IA KDP", "logiciel écriture livre IA", "logiciel édition IA", "publier un livre avec IA"],
         sections: [
-          { id: "criteres", title: "Juger le vrai travail d'édition", body: "Un générateur de livre doit être jugé sur le produit fini, pas sur un chapitre isolé qui impressionne en démo.", points: ["Manuscrit complet, pas seulement un extrait", "Couverture et métadonnées dans le même flux", "Chemin clair vers les décisions KDP", "Limites honnêtes : aucune garantie de ventes ou de classement"] },
-          { id: "workflow", title: "Chercher des contrôles qualité répétables", body: "Le meilleur outil rend chaque livre plus facile à inspecter, corriger et empaqueter avant Amazon.", points: ["Structure vérifiée avant génération", "Métadonnées alignées avec le vrai livre", "Couverture contrôlée avant upload", "Notes catalogue pour les futures mises à jour"] },
-          { id: "fit", title: "Où DraftToDone se place", body: "DraftToDone vise les éditeurs qui veulent un pipeline contrôlé du brief de niche au package KDP publiable, pas une conversation vide à piloter.", points: ["Manuscrit, couverture et métadonnées KDP ensemble", "Prix par crédits de livres liés au résultat", "Adapté aux opérations catalogue répétables", "La revue humaine reste dans le workflow"] }
+          { id: "criteres", title: "Que comparer pour choisir un générateur de livre IA ?", body: "Un générateur de livre doit être jugé sur le produit fini, pas sur un chapitre isolé qui impressionne en démo.", points: ["Manuscrit complet, pas seulement un extrait", "Couverture et métadonnées dans le même flux", "Chemin clair vers les décisions KDP", "Limites honnêtes : aucune garantie de ventes ou de classement"] },
+          { id: "workflow", title: "À quoi ressemble un contrôle qualité répétable ?", body: "Le meilleur outil rend chaque livre plus facile à inspecter, corriger et empaqueter avant Amazon.", points: ["Structure vérifiée avant génération", "Métadonnées alignées avec le vrai livre", "Couverture contrôlée avant upload", "Notes catalogue pour les futures mises à jour"] },
+          { id: "fit", title: "Fait pour les éditeurs qui veulent un pipeline, pas un chat", body: "DraftToDone vise les éditeurs qui veulent un pipeline contrôlé du brief de niche au package KDP publiable, pas une conversation vide à piloter.", points: ["Manuscrit, couverture et métadonnées KDP ensemble", "Prix par crédits de livres liés au résultat", "Adapté aux opérations catalogue répétables", "La revue humaine reste dans le workflow"] }
         ],
         faq: [
           { question: "Qu'est-ce qui rend un générateur IA adapté à KDP ?", answer: "Il doit produire un manuscrit cohérent, aider la couverture et les métadonnées, rester honnête dans ses promesses et garder une revue humaine avant publication." },
-          { question: "DraftToDone est-il seulement un outil d'écriture ?", answer: "Non. DraftToDone couvre le package d'édition : manuscrit, couverture, titre, description, mots-clés, notes de plume et contrôles qualité catalogue." },
-          { question: "Un générateur IA peut-il garantir des ventes ?", answer: "Non. Aucun outil sérieux ne garantit classement, validation KDP ou ventes. Qualité, demande, prix, avis et promotion comptent toujours." }
+          { question: "DraftToDone est-il seulement un outil d'écriture IA ?", answer: "Non. DraftToDone couvre le package d'édition : manuscrit, couverture, titre, description, mots-clés, notes de plume et contrôles qualité catalogue." },
+          { question: "Un générateur de livre IA peut-il garantir des ventes ?", answer: "Non. Aucun outil sérieux ne garantit classement, validation KDP ou ventes. Qualité, demande, prix, avis et promotion comptent toujours." }
         ],
         cta: "Ouvrir l'app",
       },
@@ -1339,14 +1339,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "Molti strumenti di scrittura IA si fermano al testo. Un publisher KDP ha bisogno di manoscritto coerente, copertina, titolo, descrizione, keyword e controlli prima dell'upload.",
         keywords: ["miglior generatore libro IA", "generatore libro IA KDP", "software scrittura libro IA", "software editoriale IA", "pubblicare un libro con IA"],
         sections: [
-          { id: "criteri", title: "Valuta il lavoro editoriale completo", body: "Un generatore di libri va giudicato dal prodotto finito, non da un singolo capitolo impressionante.", points: ["Manoscritto completo, non solo un esempio", "Copertina e metadati nello stesso flusso", "Percorso chiaro verso le decisioni KDP", "Limiti chiari: nessuna garanzia di vendite o ranking"] },
-          { id: "workflow", title: "Cerca controlli qualità ripetibili", body: "Lo strumento più forte rende ogni libro più facile da ispezionare, correggere e confezionare prima di Amazon.", points: ["Struttura verificata prima della generazione", "Metadati allineati al libro reale", "Copertina controllata prima dell'upload", "Note catalogo per aggiornamenti futuri"] },
-          { id: "fit", title: "Dove si colloca DraftToDone", body: "DraftToDone è pensato per publisher che vogliono una pipeline controllata dal brief di nicchia al pacchetto KDP pubblicabile.", points: ["Manoscritto, copertina e metadati KDP insieme", "Prezzo a crediti libro legato all'output", "Adatto a operazioni catalogo ripetibili", "La revisione umana resta nel workflow"] }
+          { id: "criteri", title: "Cosa confrontare per scegliere un generatore di libri IA?", body: "Un generatore di libri va giudicato dal prodotto finito, non da un singolo capitolo impressionante.", points: ["Manoscritto completo, non solo un esempio", "Copertina e metadati nello stesso flusso", "Percorso chiaro verso le decisioni KDP", "Limiti chiari: nessuna garanzia di vendite o ranking"] },
+          { id: "workflow", title: "Com'è fatto un controllo qualità ripetibile?", body: "Lo strumento più forte rende ogni libro più facile da ispezionare, correggere e confezionare prima di Amazon.", points: ["Struttura verificata prima della generazione", "Metadati allineati al libro reale", "Copertina controllata prima dell'upload", "Note catalogo per aggiornamenti futuri"] },
+          { id: "fit", title: "Ideale per editori che vogliono una pipeline, non una chat", body: "DraftToDone è pensato per publisher che vogliono una pipeline controllata dal brief di nicchia al pacchetto KDP pubblicabile.", points: ["Manoscritto, copertina e metadati KDP insieme", "Prezzo a crediti libro legato all'output", "Adatto a operazioni catalogo ripetibili", "La revisione umana resta nel workflow"] }
         ],
         faq: [
-          { question: "Cosa rende un generatore IA adatto a KDP?", answer: "Deve produrre un manoscritto coerente, supportare copertina e metadati, restare onesto nelle promesse e lasciare una revisione umana prima della pubblicazione." },
-          { question: "DraftToDone è solo uno strumento di scrittura?", answer: "No. DraftToDone copre il pacchetto editoriale: manoscritto, copertina, titolo, descrizione, keyword, note sul pen name e controlli qualità catalogo." },
-          { question: "Un generatore IA può garantire vendite?", answer: "No. Nessuno strumento serio garantisce ranking, approvazione KDP o vendite. Contano anche qualità, domanda, prezzo, recensioni e promozione." }
+          { question: "Cosa rende un generatore di libri IA adatto a KDP?", answer: "Deve produrre un manoscritto coerente, supportare copertina e metadati, restare onesto nelle promesse e lasciare una revisione umana prima della pubblicazione." },
+          { question: "DraftToDone è solo uno strumento di scrittura IA?", answer: "No. DraftToDone copre il pacchetto editoriale: manoscritto, copertina, titolo, descrizione, keyword, note sul pen name e controlli qualità catalogo." },
+          { question: "Un generatore di libri IA può garantire vendite?", answer: "No. Nessuno strumento serio garantisce ranking, approvazione KDP o vendite. Contano anche qualità, domanda, prezzo, recensioni e promozione." }
         ],
         cta: "Apri l'app",
       },
@@ -1360,13 +1360,13 @@ export const solutionPages: SolutionPage[] = [
         lead: "Viele KI-Schreibtools enden beim Text. KDP-Publisher brauchen mehr: ein stimmiges Manuskript, Cover, Titel, Beschreibung, Keywords und Prüfungen vor dem Upload.",
         keywords: ["bester KI Buchgenerator", "KI Buchgenerator KDP", "KI Buch Schreibsoftware", "KI Publishing Software", "Buch mit KI veröffentlichen"],
         sections: [
-          { id: "kriterien", title: "Bewerte den ganzen Publishing-Job", body: "Ein Buchgenerator sollte am fertigen Produkt gemessen werden, nicht an einem einzelnen beeindruckenden Kapitel.", points: ["Vollständiges Manuskript statt nur Probe", "Cover und Metadaten im selben Workflow", "Klarer Weg zu KDP-Entscheidungen", "Ehrliche Grenzen: keine Verkaufs- oder Ranking-Garantien"] },
-          { id: "workflow", title: "Achte auf wiederholbare Qualitätschecks", body: "Das stärkste Tool macht jedes Buch leichter prüfbar, korrigierbar und verpackbar, bevor es zu Amazon geht.", points: ["Strukturprüfung vor der Generierung", "Metadaten passend zum echten Buch", "Cover-Check vor dem Upload", "Katalognotizen für spätere Updates"] },
-          { id: "fit", title: "Wo DraftToDone passt", body: "DraftToDone ist für Publisher gebaut, die eine kontrollierte Pipeline vom Nischenbriefing bis zum veröffentlichbaren KDP-Paket wollen.", points: ["Manuskript, Cover und KDP-Metadaten zusammen", "Book-Credit-Preis an fertigen Output gekoppelt", "Geeignet für wiederholbare Katalogarbeit", "Menschliche Prüfung bleibt Teil des Workflows"] }
+          { id: "kriterien", title: "Was vergleicht man bei der Wahl eines KI-Buchgenerators?", body: "Ein Buchgenerator sollte am fertigen Produkt gemessen werden, nicht an einem einzelnen beeindruckenden Kapitel.", points: ["Vollständiges Manuskript statt nur Probe", "Cover und Metadaten im selben Workflow", "Klarer Weg zu KDP-Entscheidungen", "Ehrliche Grenzen: keine Verkaufs- oder Ranking-Garantien"] },
+          { id: "workflow", title: "Wie sieht ein wiederholbarer Qualitätscheck aus?", body: "Das stärkste Tool macht jedes Buch leichter prüfbar, korrigierbar und verpackbar, bevor es zu Amazon geht.", points: ["Strukturprüfung vor der Generierung", "Metadaten passend zum echten Buch", "Cover-Check vor dem Upload", "Katalognotizen für spätere Updates"] },
+          { id: "fit", title: "Für Publisher, die eine Pipeline wollen, keine leere Chatbox", body: "DraftToDone ist für Publisher gebaut, die eine kontrollierte Pipeline vom Nischenbriefing bis zum veröffentlichbaren KDP-Paket wollen.", points: ["Manuskript, Cover und KDP-Metadaten zusammen", "Book-Credit-Preis an fertigen Output gekoppelt", "Geeignet für wiederholbare Katalogarbeit", "Menschliche Prüfung bleibt Teil des Workflows"] }
         ],
         faq: [
           { question: "Was macht einen KI-Buchgenerator gut für KDP?", answer: "Er sollte ein stimmiges Manuskript erzeugen, Cover- und Metadatenentscheidungen unterstützen, ehrlich bleiben und eine menschliche Prüfung vor Veröffentlichung einplanen." },
-          { question: "Ist DraftToDone nur ein Schreibtool?", answer: "Nein. DraftToDone deckt das breitere Publishing-Paket ab: Manuskript, Cover, Titel, Beschreibung, Keywords, Pen-Name-Notizen und Katalog-Qualitätschecks." },
+          { question: "Ist DraftToDone nur ein KI-Schreibtool?", answer: "Nein. DraftToDone deckt das breitere Publishing-Paket ab: Manuskript, Cover, Titel, Beschreibung, Keywords, Pen-Name-Notizen und Katalog-Qualitätschecks." },
           { question: "Kann ein KI-Buchgenerator Verkäufe garantieren?", answer: "Nein. Kein seriöses Tool garantiert Amazon-Rankings, KDP-Freigabe oder Verkäufe. Qualität, Nachfrage, Preis, Rezensionen und Promotion zählen weiter." }
         ],
         cta: "App öffnen",
@@ -1390,14 +1390,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "Amazon KDP publishing is more than writing chapters. DraftToDone turns a niche brief into the assets a publisher actually needs before upload: manuscript, cover, title, description, keyword set and review checklist.",
         keywords: ["KDP book generator", "Amazon KDP book generator", "AI KDP book generator", "generate KDP book", "KDP publishing software"],
         sections: [
-          { id: "package", title: "Built around KDP inputs", body: "The workflow mirrors the decisions a publisher makes before opening KDP, so the output is easier to review and package.", points: ["Manuscript shaped from the niche brief", "Title and subtitle drafted with reader intent", "Description and seven keyword slots prepared", "Cover direction kept consistent with the book promise"] },
-          { id: "quality", title: "Quality before upload", body: "AI speed only matters if the book can survive human review. DraftToDone keeps the publisher in the loop before anything reaches Amazon.", points: ["Review checklist for content and metadata", "No promise of account safety or guaranteed approval", "Human rights and policy checks remain required", "Catalog notes for improvements after launch"] },
-          { id: "catalog", title: "Designed for catalog operators", body: "The point is not one random book. The point is a repeatable system for producing, checking and improving many titles over time.", points: ["Book-credit subscription", "Repeatable briefs and packaging", "Metadata snapshots for future refreshes", "Useful for multi-title publishing operations"] }
+          { id: "package", title: "What does the KDP book package actually include?", body: "The workflow mirrors the decisions a publisher makes before opening KDP, so the output is easier to review and package.", points: ["Manuscript shaped from the niche brief", "Title and subtitle drafted with reader intent", "Description and seven keyword slots prepared", "Cover direction kept consistent with the book promise"] },
+          { id: "quality", title: "What is checked before the book reaches Amazon?", body: "AI speed only matters if the book can survive human review. DraftToDone keeps the publisher in the loop before anything reaches Amazon.", points: ["Review checklist for content and metadata", "No promise of account safety or guaranteed approval", "Human rights and policy checks remain required", "Catalog notes for improvements after launch"] },
+          { id: "catalog", title: "Best for operators running a catalog, not a single title", body: "The point is not one random book. The point is a repeatable system for producing, checking and improving many titles over time.", points: ["Book-credit subscription", "Repeatable briefs and packaging", "Metadata snapshots for future refreshes", "Useful for multi-title publishing operations"] }
         ],
         faq: [
           { question: "Can I upload the output directly to KDP?", answer: "DraftToDone prepares the book package for review, but you should inspect the manuscript, cover and metadata yourself before uploading anything to Amazon." },
-          { question: "Does this replace KDP's publishing dashboard?", answer: "No. DraftToDone prepares the assets and metadata; Amazon KDP remains where you upload, price and publish the book." },
-          { question: "Is this safe under KDP AI rules?", answer: "Amazon allows AI-assisted books with the required disclosure and quality standards. You remain responsible for rights checks, disclosure and final review." }
+          { question: "Does this replace the Amazon KDP dashboard?", answer: "No. DraftToDone prepares the assets and metadata; Amazon KDP remains where you upload, price and publish the book." },
+          { question: "Is an AI-generated book allowed under KDP rules?", answer: "Amazon allows AI-assisted books with the required disclosure and quality standards. You remain responsible for rights checks, disclosure and final review." }
         ],
         cta: "Open the app",
       },
@@ -1411,14 +1411,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "Publier sur Amazon KDP ne se limite pas aux chapitres. DraftToDone transforme un brief de niche en actifs utiles avant upload : manuscrit, couverture, titre, description, mots-clés et checklist.",
         keywords: ["générateur livre KDP", "générateur livre Amazon KDP", "générateur livre IA KDP", "générer livre KDP", "logiciel publication KDP"],
         sections: [
-          { id: "package", title: "Pensé autour des champs KDP", body: "Le workflow suit les décisions qu'un éditeur prend avant d'ouvrir KDP, pour un résultat plus facile à relire et empaqueter.", points: ["Manuscrit construit depuis le brief de niche", "Titre et sous-titre orientés lecteur", "Description et sept champs mots-clés préparés", "Direction de couverture cohérente avec la promesse"] },
-          { id: "qualite", title: "Qualité avant upload", body: "La vitesse de l'IA compte seulement si le livre tient la revue humaine. DraftToDone garde l'éditeur dans la boucle avant Amazon.", points: ["Checklist de revue contenu et métadonnées", "Aucune promesse de sécurité de compte ou validation garantie", "Contrôles droits et politique toujours requis", "Notes catalogue pour améliorer après lancement"] },
-          { id: "catalogue", title: "Conçu pour les opérateurs de catalogue", body: "L'objectif n'est pas un livre isolé au hasard. L'objectif est un système répétable pour produire, contrôler et améliorer plusieurs titres.", points: ["Abonnement par crédits de livres", "Briefs et packaging répétables", "Snapshots de métadonnées pour refresh futur", "Utile pour opérations multi-titres"] }
+          { id: "package", title: "Que contient exactement le package de livre KDP ?", body: "Le workflow suit les décisions qu'un éditeur prend avant d'ouvrir KDP, pour un résultat plus facile à relire et empaqueter.", points: ["Manuscrit construit depuis le brief de niche", "Titre et sous-titre orientés lecteur", "Description et sept champs mots-clés préparés", "Direction de couverture cohérente avec la promesse"] },
+          { id: "qualite", title: "Que vérifie-t-on avant que le livre arrive sur Amazon ?", body: "La vitesse de l'IA compte seulement si le livre tient la revue humaine. DraftToDone garde l'éditeur dans la boucle avant Amazon.", points: ["Checklist de revue contenu et métadonnées", "Aucune promesse de sécurité de compte ou validation garantie", "Contrôles droits et politique toujours requis", "Notes catalogue pour améliorer après lancement"] },
+          { id: "catalogue", title: "Fait pour un catalogue entier, pas pour un titre isolé", body: "L'objectif n'est pas un livre isolé au hasard. L'objectif est un système répétable pour produire, contrôler et améliorer plusieurs titres.", points: ["Abonnement par crédits de livres", "Briefs et packaging répétables", "Snapshots de métadonnées pour refresh futur", "Utile pour opérations multi-titres"] }
         ],
         faq: [
-          { question: "Puis-je uploader directement le résultat sur KDP ?", answer: "DraftToDone prépare un package à relire, mais vous devez inspecter manuscrit, couverture et métadonnées avant tout upload sur Amazon." },
-          { question: "Cela remplace-t-il le tableau de bord KDP ?", answer: "Non. DraftToDone prépare les fichiers et métadonnées ; Amazon KDP reste l'endroit où uploader, fixer le prix et publier." },
-          { question: "Est-ce compatible avec les règles IA de KDP ?", answer: "Amazon accepte les livres assistés par IA avec déclaration requise et standards qualité. Vous restez responsable des droits, de la déclaration et de la revue finale." }
+          { question: "Puis-je uploader le résultat directement sur KDP ?", answer: "DraftToDone prépare un package à relire, mais vous devez inspecter manuscrit, couverture et métadonnées avant tout upload sur Amazon." },
+          { question: "Cela remplace-t-il le tableau de bord Amazon KDP ?", answer: "Non. DraftToDone prépare les fichiers et métadonnées ; Amazon KDP reste l'endroit où uploader, fixer le prix et publier." },
+          { question: "Un livre généré par IA est-il autorisé par les règles KDP ?", answer: "Amazon accepte les livres assistés par IA avec déclaration requise et standards qualité. Vous restez responsable des droits, de la déclaration et de la revue finale." }
         ],
         cta: "Ouvrir l'app",
       },
@@ -1432,14 +1432,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "Pubblicare su Amazon KDP non significa solo scrivere capitoli. DraftToDone trasforma un brief di nicchia negli asset utili prima dell'upload: manoscritto, copertina, titolo, descrizione, keyword e checklist.",
         keywords: ["generatore libro KDP", "generatore libro Amazon KDP", "generatore libro IA KDP", "generare libro KDP", "software pubblicazione KDP"],
         sections: [
-          { id: "pacchetto", title: "Costruito intorno agli input KDP", body: "Il workflow segue le decisioni che un publisher prende prima di aprire KDP, così l'output è più facile da rivedere e confezionare.", points: ["Manoscritto modellato dal brief di nicchia", "Titolo e sottotitolo orientati al lettore", "Descrizione e sette campi keyword preparati", "Direzione copertina coerente con la promessa"] },
-          { id: "qualita", title: "Qualità prima dell'upload", body: "La velocità dell'IA conta solo se il libro supera una revisione umana. DraftToDone tiene il publisher nel flusso prima di Amazon.", points: ["Checklist per contenuto e metadati", "Nessuna promessa di sicurezza account o approvazione garantita", "Controlli diritti e policy sempre necessari", "Note catalogo per miglioramenti post-lancio"] },
-          { id: "catalogo", title: "Pensato per operatori di catalogo", body: "Il punto non è un libro casuale. Il punto è un sistema ripetibile per produrre, controllare e migliorare molti titoli nel tempo.", points: ["Abbonamento a crediti libro", "Brief e packaging ripetibili", "Snapshot metadati per refresh futuri", "Utile per operazioni multi-titolo"] }
+          { id: "pacchetto", title: "Cosa contiene davvero il pacchetto libro KDP?", body: "Il workflow segue le decisioni che un publisher prende prima di aprire KDP, così l'output è più facile da rivedere e confezionare.", points: ["Manoscritto modellato dal brief di nicchia", "Titolo e sottotitolo orientati al lettore", "Descrizione e sette campi keyword preparati", "Direzione copertina coerente con la promessa"] },
+          { id: "qualita", title: "Cosa si controlla prima che il libro arrivi su Amazon?", body: "La velocità dell'IA conta solo se il libro supera una revisione umana. DraftToDone tiene il publisher nel flusso prima di Amazon.", points: ["Checklist per contenuto e metadati", "Nessuna promessa di sicurezza account o approvazione garantita", "Controlli diritti e policy sempre necessari", "Note catalogo per miglioramenti post-lancio"] },
+          { id: "catalogo", title: "Ideale per chi gestisce un catalogo, non un singolo titolo", body: "Il punto non è un libro casuale. Il punto è un sistema ripetibile per produrre, controllare e migliorare molti titoli nel tempo.", points: ["Abbonamento a crediti libro", "Brief e packaging ripetibili", "Snapshot metadati per refresh futuri", "Utile per operazioni multi-titolo"] }
         ],
         faq: [
-          { question: "Posso caricare direttamente l'output su KDP?", answer: "DraftToDone prepara un pacchetto da rivedere, ma devi controllare manoscritto, copertina e metadati prima di caricare su Amazon." },
-          { question: "Sostituisce la dashboard KDP?", answer: "No. DraftToDone prepara asset e metadati; Amazon KDP resta il luogo in cui carichi, imposti il prezzo e pubblichi." },
-          { question: "È compatibile con le regole IA di KDP?", answer: "Amazon accetta libri assistiti da IA con dichiarazione richiesta e standard qualità. Resti responsabile di diritti, disclosure e revisione finale." }
+          { question: "Posso caricare l'output direttamente su KDP?", answer: "DraftToDone prepara un pacchetto da rivedere, ma devi controllare manoscritto, copertina e metadati prima di caricare su Amazon." },
+          { question: "Sostituisce la dashboard di Amazon KDP?", answer: "No. DraftToDone prepara asset e metadati; Amazon KDP resta il luogo in cui carichi, imposti il prezzo e pubblichi." },
+          { question: "Un libro generato dall'IA è ammesso dalle regole KDP?", answer: "Amazon accetta libri assistiti da IA con dichiarazione richiesta e standard qualità. Resti responsabile di diritti, disclosure e revisione finale." }
         ],
         cta: "Apri l'app",
       },
@@ -1453,14 +1453,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "Amazon-KDP-Publishing ist mehr als Kapitel schreiben. DraftToDone verwandelt ein Nischenbriefing in die Assets vor dem Upload: Manuskript, Cover, Titel, Beschreibung, Keywords und Prüfliste.",
         keywords: ["KDP Buchgenerator", "Amazon KDP Buchgenerator", "KI KDP Buchgenerator", "KDP Buch generieren", "KDP Publishing Software"],
         sections: [
-          { id: "paket", title: "An KDP-Eingaben ausgerichtet", body: "Der Workflow folgt den Entscheidungen, die ein Publisher vor KDP trifft, damit der Output leichter prüfbar und verpackbar ist.", points: ["Manuskript aus dem Nischenbriefing geformt", "Titel und Untertitel nach Leserintention", "Beschreibung und sieben Keyword-Felder vorbereitet", "Cover-Richtung passend zum Buchversprechen"] },
-          { id: "qualitaet", title: "Qualität vor dem Upload", body: "KI-Geschwindigkeit zählt nur, wenn das Buch menschliche Prüfung übersteht. DraftToDone hält den Publisher vor Amazon im Prozess.", points: ["Checkliste für Inhalt und Metadaten", "Keine Garantie für Kontosicherheit oder Freigabe", "Rechte- und Policy-Prüfungen bleiben Pflicht", "Katalognotizen für Verbesserungen nach Launch"] },
-          { id: "katalog", title: "Für Katalogbetreiber gedacht", body: "Es geht nicht um ein zufälliges einzelnes Buch. Es geht um ein wiederholbares System für viele Titel.", points: ["Book-Credit-Abonnement", "Wiederholbare Briefings und Verpackung", "Metadaten-Snapshots für spätere Refreshes", "Nützlich für Multi-Titel-Operationen"] }
+          { id: "paket", title: "Was steckt genau im KDP-Buchpaket?", body: "Der Workflow folgt den Entscheidungen, die ein Publisher vor KDP trifft, damit der Output leichter prüfbar und verpackbar ist.", points: ["Manuskript aus dem Nischenbriefing geformt", "Titel und Untertitel nach Leserintention", "Beschreibung und sieben Keyword-Felder vorbereitet", "Cover-Richtung passend zum Buchversprechen"] },
+          { id: "qualitaet", title: "Was wird geprüft, bevor das Buch zu Amazon geht?", body: "KI-Geschwindigkeit zählt nur, wenn das Buch menschliche Prüfung übersteht. DraftToDone hält den Publisher vor Amazon im Prozess.", points: ["Checkliste für Inhalt und Metadaten", "Keine Garantie für Kontosicherheit oder Freigabe", "Rechte- und Policy-Prüfungen bleiben Pflicht", "Katalognotizen für Verbesserungen nach Launch"] },
+          { id: "katalog", title: "Für Katalogbetreiber gedacht, nicht für einen Einzeltitel", body: "Es geht nicht um ein zufälliges einzelnes Buch. Es geht um ein wiederholbares System für viele Titel.", points: ["Book-Credit-Abonnement", "Wiederholbare Briefings und Verpackung", "Metadaten-Snapshots für spätere Refreshes", "Nützlich für Multi-Titel-Operationen"] }
         ],
         faq: [
           { question: "Kann ich den Output direkt bei KDP hochladen?", answer: "DraftToDone bereitet das Buchpaket zur Prüfung vor, aber du solltest Manuskript, Cover und Metadaten selbst prüfen, bevor du etwas bei Amazon hochlädst." },
-          { question: "Ersetzt es das KDP-Dashboard?", answer: "Nein. DraftToDone bereitet Assets und Metadaten vor; Amazon KDP bleibt der Ort zum Hochladen, Bepreisen und Veröffentlichen." },
-          { question: "Ist das mit den KDP-KI-Regeln vereinbar?", answer: "Amazon erlaubt KI-unterstützte Bücher mit der erforderlichen Offenlegung und Qualitätsstandards. Du bleibst verantwortlich für Rechteprüfung, Offenlegung und finale Prüfung." }
+          { question: "Ersetzt es das Amazon-KDP-Dashboard?", answer: "Nein. DraftToDone bereitet Assets und Metadaten vor; Amazon KDP bleibt der Ort zum Hochladen, Bepreisen und Veröffentlichen." },
+          { question: "Ist ein KI-generiertes Buch nach den KDP-Regeln erlaubt?", answer: "Amazon erlaubt KI-unterstützte Bücher mit der erforderlichen Offenlegung und Qualitätsstandards. Du bleibst verantwortlich für Rechteprüfung, Offenlegung und finale Prüfung." }
         ],
         cta: "App öffnen",
       },
@@ -1480,13 +1480,13 @@ export const solutionPages: SolutionPage[] = [
         lead: "Sudowrite is a strong AI writing partner for fiction. DraftToDone aims one step wider: turning a brief into a publish-ready KDP product — manuscript, cover and metadata — for indie publishers and catalog operators.",
         keywords: ["Sudowrite alternative", "AI book writing software", "AI fiction writing tool", "write a book with AI", "AI publishing software"],
         sections: [
-          { id: "what-sudowrite-does", title: "What Sudowrite is great at", body: "Sudowrite is built for fiction craft: a non-judgemental AI writing partner that helps you draft, rewrite and brainstorm scenes with a model tuned for stories.", points: ["Story-focused AI writing", "Scene and prose rewriting", "Brainstorming and continuity help", "Subscription, craft-first"] },
-          { id: "where-drafttodone-differs", title: "Where DraftToDone is different", body: "DraftToDone is not a writing-craft tool. It produces the whole product a marketplace needs, from one controlled pipeline, then runs quality gates before upload.", points: ["Full manuscript generation", "Front, spine and back cover", "KDP title, description and keywords", "Verified pen name and catalog QA"] },
-          { id: "who-each-is-for", title: "Which one fits you", body: "The two solve different problems, and some authors use both: write with one, package and publish with the other.", points: ["Sudowrite: novelists refining prose", "DraftToDone: publishers shipping catalogs", "Single literary novel vs repeatable output", "Craft assistance vs publish-ready product"] }
+          { id: "what-sudowrite-does", title: "What is Sudowrite actually good at?", body: "Sudowrite is built for fiction craft: a non-judgemental AI writing partner that helps you draft, rewrite and brainstorm scenes with a model tuned for stories.", points: ["Story-focused AI writing", "Scene and prose rewriting", "Brainstorming and continuity help", "Subscription, craft-first"] },
+          { id: "where-drafttodone-differs", title: "Sudowrite vs DraftToDone: what is different?", body: "DraftToDone is not a writing-craft tool. It produces the whole product a marketplace needs, from one controlled pipeline, then runs quality gates before upload.", points: ["Full manuscript generation", "Front, spine and back cover", "KDP title, description and keywords", "Verified pen name and catalog QA"] },
+          { id: "who-each-is-for", title: "Which one fits: novelist or catalog publisher?", body: "The two solve different problems, and some authors use both: write with one, package and publish with the other.", points: ["Sudowrite: novelists refining prose", "DraftToDone: publishers shipping catalogs", "Single literary novel vs repeatable output", "Craft assistance vs publish-ready product"] }
         ],
         faq: [
           { question: "Is DraftToDone available now?", answer: "Yes — DraftToDone is live. Open the app at app.drafttodone.io to start publishing today." },
-          { question: "Is DraftToDone better than Sudowrite?", answer: "They do different jobs. Sudowrite helps you write better fiction; DraftToDone turns a brief into a publish-ready KDP product. Plenty of authors could use both." },
+          { question: "Is DraftToDone better than Sudowrite for publishing?", answer: "They do different jobs. Sudowrite helps you write better fiction; DraftToDone turns a brief into a publish-ready KDP product. Plenty of authors could use both." },
           { question: "Does DraftToDone write fiction too?", answer: "Yes, it generates full manuscripts, but its focus is the complete publishable product for KDP rather than line-by-line literary craft." }
         ],
         cta: "Open the app",
@@ -1501,13 +1501,13 @@ export const solutionPages: SolutionPage[] = [
         lead: "Sudowrite est un bon partenaire d'écriture IA pour la fiction. DraftToDone vise un cran plus large : transformer un brief en produit KDP prêt à publier — manuscrit, couverture et métadonnées — pour éditeurs indépendants et opérateurs de catalogue.",
         keywords: ["alternative Sudowrite", "logiciel d'écriture de livre IA", "outil d'écriture de fiction IA", "écrire un livre avec IA", "logiciel d'édition IA"],
         sections: [
-          { id: "what-sudowrite-does", title: "Ce que Sudowrite réussit", body: "Sudowrite est conçu pour la fiction : un partenaire d'écriture IA sans jugement qui aide à rédiger, réécrire et explorer des scènes avec un modèle pensé pour les histoires.", points: ["Écriture IA centrée sur l'histoire", "Réécriture de scènes et de prose", "Aide au brainstorming et à la continuité", "Abonnement, axé sur le métier d'écrire"] },
-          { id: "where-drafttodone-differs", title: "Ce qui distingue DraftToDone", body: "DraftToDone n'est pas un outil de métier d'écriture. Il produit tout ce qu'une marketplace exige, depuis un pipeline contrôlé, puis applique des contrôles qualité avant l'upload.", points: ["Génération complète du manuscrit", "Première, dos et quatrième de couverture", "Titre, description et mots-clés KDP", "Nom de plume vérifié et QA catalogue"] },
-          { id: "who-each-is-for", title: "Lequel vous convient", body: "Les deux résolvent des problèmes différents, et certains auteurs utilisent les deux : écrire avec l'un, packager et publier avec l'autre.", points: ["Sudowrite : romanciers qui peaufinent la prose", "DraftToDone : éditeurs qui publient des catalogues", "Roman littéraire unique vs production répétable", "Aide à l'écriture vs produit prêt à publier"] }
+          { id: "what-sudowrite-does", title: "En quoi Sudowrite est-il vraiment bon ?", body: "Sudowrite est conçu pour la fiction : un partenaire d'écriture IA sans jugement qui aide à rédiger, réécrire et explorer des scènes avec un modèle pensé pour les histoires.", points: ["Écriture IA centrée sur l'histoire", "Réécriture de scènes et de prose", "Aide au brainstorming et à la continuité", "Abonnement, axé sur le métier d'écrire"] },
+          { id: "where-drafttodone-differs", title: "Sudowrite ou DraftToDone : quelle est la différence ?", body: "DraftToDone n'est pas un outil de métier d'écriture. Il produit tout ce qu'une marketplace exige, depuis un pipeline contrôlé, puis applique des contrôles qualité avant l'upload.", points: ["Génération complète du manuscrit", "Première, dos et quatrième de couverture", "Titre, description et mots-clés KDP", "Nom de plume vérifié et QA catalogue"] },
+          { id: "who-each-is-for", title: "Lequel choisir : romancier ou éditeur de catalogue ?", body: "Les deux résolvent des problèmes différents, et certains auteurs utilisent les deux : écrire avec l'un, packager et publier avec l'autre.", points: ["Sudowrite : romanciers qui peaufinent la prose", "DraftToDone : éditeurs qui publient des catalogues", "Roman littéraire unique vs production répétable", "Aide à l'écriture vs produit prêt à publier"] }
         ],
         faq: [
           { question: "DraftToDone est-il disponible maintenant ?", answer: "Oui — DraftToDone est en ligne. Ouvrez l'app sur app.drafttodone.io pour commencer à publier dès aujourd'hui." },
-          { question: "DraftToDone est-il meilleur que Sudowrite ?", answer: "Ils font des choses différentes. Sudowrite aide à mieux écrire la fiction ; DraftToDone transforme un brief en produit KDP prêt à publier. Beaucoup d'auteurs pourraient utiliser les deux." },
+          { question: "DraftToDone est-il meilleur que Sudowrite pour publier ?", answer: "Ils font des choses différentes. Sudowrite aide à mieux écrire la fiction ; DraftToDone transforme un brief en produit KDP prêt à publier. Beaucoup d'auteurs pourraient utiliser les deux." },
           { question: "DraftToDone écrit-il aussi de la fiction ?", answer: "Oui, il génère des manuscrits complets, mais son objectif est le produit publiable complet pour KDP plutôt que le travail littéraire ligne à ligne." }
         ],
         cta: "Ouvrir l'app",
@@ -1522,13 +1522,13 @@ export const solutionPages: SolutionPage[] = [
         lead: "Sudowrite è un buon partner di scrittura IA per la narrativa. DraftToDone punta un passo più in là: trasformare un brief in un prodotto KDP pronto da pubblicare — manoscritto, copertina e metadati — per editori indipendenti e operatori di catalogo.",
         keywords: ["alternativa Sudowrite", "software di scrittura libri IA", "strumento di scrittura narrativa IA", "scrivere un libro con IA", "software di editoria IA"],
         sections: [
-          { id: "what-sudowrite-does", title: "Cosa fa bene Sudowrite", body: "Sudowrite è costruito per la narrativa: un partner di scrittura IA senza giudizio che aiuta a scrivere, riscrivere ed esplorare scene con un modello pensato per le storie.", points: ["Scrittura IA centrata sulla storia", "Riscrittura di scene e prosa", "Aiuto a brainstorming e continuità", "Abbonamento, incentrato sul mestiere"] },
-          { id: "where-drafttodone-differs", title: "Cosa distingue DraftToDone", body: "DraftToDone non è uno strumento di mestiere della scrittura. Produce tutto ciò che un marketplace richiede, da un pipeline controllato, poi applica controlli di qualità prima dell'upload.", points: ["Generazione completa del manoscritto", "Copertina anteriore, dorso e retro", "Titolo, descrizione e keyword KDP", "Nome d'autore verificato e QA catalogo"] },
-          { id: "who-each-is-for", title: "Quale fa per te", body: "I due risolvono problemi diversi, e alcuni autori usano entrambi: scrivere con uno, impacchettare e pubblicare con l'altro.", points: ["Sudowrite: romanzieri che rifiniscono la prosa", "DraftToDone: editori che pubblicano cataloghi", "Romanzo singolo vs produzione ripetibile", "Aiuto alla scrittura vs prodotto pronto"] }
+          { id: "what-sudowrite-does", title: "In cosa è davvero bravo Sudowrite?", body: "Sudowrite è costruito per la narrativa: un partner di scrittura IA senza giudizio che aiuta a scrivere, riscrivere ed esplorare scene con un modello pensato per le storie.", points: ["Scrittura IA centrata sulla storia", "Riscrittura di scene e prosa", "Aiuto a brainstorming e continuità", "Abbonamento, incentrato sul mestiere"] },
+          { id: "where-drafttodone-differs", title: "Sudowrite o DraftToDone: qual è la differenza?", body: "DraftToDone non è uno strumento di mestiere della scrittura. Produce tutto ciò che un marketplace richiede, da un pipeline controllato, poi applica controlli di qualità prima dell'upload.", points: ["Generazione completa del manoscritto", "Copertina anteriore, dorso e retro", "Titolo, descrizione e keyword KDP", "Nome d'autore verificato e QA catalogo"] },
+          { id: "who-each-is-for", title: "Quale scegliere: romanziere o editore di catalogo?", body: "I due risolvono problemi diversi, e alcuni autori usano entrambi: scrivere con uno, impacchettare e pubblicare con l'altro.", points: ["Sudowrite: romanzieri che rifiniscono la prosa", "DraftToDone: editori che pubblicano cataloghi", "Romanzo singolo vs produzione ripetibile", "Aiuto alla scrittura vs prodotto pronto"] }
         ],
         faq: [
           { question: "DraftToDone è disponibile ora?", answer: "Sì — DraftToDone è online. Apri l'app su app.drafttodone.io e inizia a pubblicare oggi." },
-          { question: "DraftToDone è migliore di Sudowrite?", answer: "Fanno cose diverse. Sudowrite aiuta a scrivere meglio la narrativa; DraftToDone trasforma un brief in un prodotto KDP pronto da pubblicare. Molti autori potrebbero usare entrambi." },
+          { question: "DraftToDone è migliore di Sudowrite per pubblicare?", answer: "Fanno cose diverse. Sudowrite aiuta a scrivere meglio la narrativa; DraftToDone trasforma un brief in un prodotto KDP pronto da pubblicare. Molti autori potrebbero usare entrambi." },
           { question: "DraftToDone scrive anche narrativa?", answer: "Sì, genera manoscritti completi, ma il suo obiettivo è il prodotto pubblicabile completo per KDP più che il lavoro letterario riga per riga." }
         ],
         cta: "Apri l'app",
@@ -1543,13 +1543,13 @@ export const solutionPages: SolutionPage[] = [
         lead: "Sudowrite ist ein starker KI-Schreibpartner für Belletristik. DraftToDone zielt einen Schritt weiter: aus einem Brief ein veröffentlichungsfertiges KDP-Produkt machen — Manuskript, Cover und Metadaten — für Indie-Publisher und Katalog-Operatoren.",
         keywords: ["Sudowrite Alternative", "KI Buch Schreibsoftware", "KI Belletristik Schreibtool", "Buch mit KI schreiben", "KI Publishing Software"],
         sections: [
-          { id: "what-sudowrite-does", title: "Worin Sudowrite stark ist", body: "Sudowrite ist für Belletristik gebaut: ein wertfreier KI-Schreibpartner, der beim Entwerfen, Umschreiben und Ausdenken von Szenen mit einem auf Geschichten getrimmten Modell hilft.", points: ["Story-fokussiertes KI-Schreiben", "Umschreiben von Szenen und Prosa", "Hilfe bei Brainstorming und Kontinuität", "Abo, handwerksorientiert"] },
-          { id: "where-drafttodone-differs", title: "Was DraftToDone unterscheidet", body: "DraftToDone ist kein Schreibhandwerk-Tool. Es produziert alles, was ein Marktplatz verlangt, aus einer kontrollierten Pipeline, und prüft die Qualität vor dem Upload.", points: ["Vollständige Manuskriptgenerierung", "Vorderseite, Rücken und Rückseite", "KDP-Titel, -Beschreibung und -Keywords", "Verifizierter Autorname und Katalog-QA"] },
-          { id: "who-each-is-for", title: "Was zu dir passt", body: "Beide lösen verschiedene Probleme, und manche Autoren nutzen beide: mit dem einen schreiben, mit dem anderen verpacken und veröffentlichen.", points: ["Sudowrite: Romanautoren, die Prosa verfeinern", "DraftToDone: Verlage, die Kataloge veröffentlichen", "Einzelner Roman vs wiederholbare Produktion", "Schreibhilfe vs fertiges Produkt"] }
+          { id: "what-sudowrite-does", title: "Worin ist Sudowrite wirklich stark?", body: "Sudowrite ist für Belletristik gebaut: ein wertfreier KI-Schreibpartner, der beim Entwerfen, Umschreiben und Ausdenken von Szenen mit einem auf Geschichten getrimmten Modell hilft.", points: ["Story-fokussiertes KI-Schreiben", "Umschreiben von Szenen und Prosa", "Hilfe bei Brainstorming und Kontinuität", "Abo, handwerksorientiert"] },
+          { id: "where-drafttodone-differs", title: "Sudowrite vs DraftToDone: was ist der Unterschied?", body: "DraftToDone ist kein Schreibhandwerk-Tool. Es produziert alles, was ein Marktplatz verlangt, aus einer kontrollierten Pipeline, und prüft die Qualität vor dem Upload.", points: ["Vollständige Manuskriptgenerierung", "Vorderseite, Rücken und Rückseite", "KDP-Titel, -Beschreibung und -Keywords", "Verifizierter Autorname und Katalog-QA"] },
+          { id: "who-each-is-for", title: "Was passt: Romanautor oder Katalog-Publisher?", body: "Beide lösen verschiedene Probleme, und manche Autoren nutzen beide: mit dem einen schreiben, mit dem anderen verpacken und veröffentlichen.", points: ["Sudowrite: Romanautoren, die Prosa verfeinern", "DraftToDone: Verlage, die Kataloge veröffentlichen", "Einzelner Roman vs wiederholbare Produktion", "Schreibhilfe vs fertiges Produkt"] }
         ],
         faq: [
           { question: "Ist DraftToDone jetzt verfügbar?", answer: "Ja — DraftToDone ist live. Öffne die App unter app.drafttodone.io und starte noch heute." },
-          { question: "Ist DraftToDone besser als Sudowrite?", answer: "Sie machen Verschiedenes. Sudowrite hilft, bessere Belletristik zu schreiben; DraftToDone macht aus einem Brief ein veröffentlichungsfertiges KDP-Produkt. Viele Autoren könnten beide nutzen." },
+          { question: "Ist DraftToDone besser als Sudowrite zum Veröffentlichen?", answer: "Sie machen Verschiedenes. Sudowrite hilft, bessere Belletristik zu schreiben; DraftToDone macht aus einem Brief ein veröffentlichungsfertiges KDP-Produkt. Viele Autoren könnten beide nutzen." },
           { question: "Schreibt DraftToDone auch Belletristik?", answer: "Ja, es erzeugt vollständige Manuskripte, aber der Fokus liegt auf dem kompletten veröffentlichungsfertigen KDP-Produkt statt auf literarischer Feinarbeit Zeile für Zeile." }
         ],
         cta: "App öffnen",
@@ -1573,14 +1573,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "Atticus is a polished writing and formatting tool. DraftToDone starts earlier and ends later: it generates the manuscript, the full cover and the KDP metadata, then checks quality before upload.",
         keywords: ["Atticus alternative", "book formatting software", "AI publishing software", "KDP book formatting", "all-in-one book tool"],
         sections: [
-          { id: "what-atticus-does", title: "What Atticus is great at", body: "Atticus is an all-in-one writing and formatting tool: import your manuscript and produce clean print and ebook files with customizable templates, on any platform, for a one-time price.", points: ["Writing editor for authors", "Print and ebook formatting", "Customizable templates", "One-time purchase, cross-platform"] },
-          { id: "where-drafttodone-differs", title: "Where DraftToDone is different", body: "Atticus assumes you already wrote the book. DraftToDone generates it — and the cover and metadata — so formatting is one step inside a wider pipeline, not the whole job.", points: ["Generates the manuscript itself", "Front, spine and back cover", "KDP title, description and keywords", "Catalog quality gates before upload"] },
-          { id: "who-each-is-for", title: "Which one fits you", body: "If you write your own books and want beautiful files, Atticus is excellent. If you want to produce publish-ready products at catalog scale, DraftToDone targets that.", points: ["Atticus: format what you wrote", "DraftToDone: generate the whole product", "Single polished title vs repeatable catalog", "Formatting craft vs end-to-end pipeline"] }
+          { id: "what-atticus-does", title: "What is Atticus actually good at?", body: "Atticus is an all-in-one writing and formatting tool: import your manuscript and produce clean print and ebook files with customizable templates, on any platform, for a one-time price.", points: ["Writing editor for authors", "Print and ebook formatting", "Customizable templates", "One-time purchase, cross-platform"] },
+          { id: "where-drafttodone-differs", title: "Atticus vs DraftToDone: format or generate the book?", body: "Atticus assumes you already wrote the book. DraftToDone generates it — and the cover and metadata — so formatting is one step inside a wider pipeline, not the whole job.", points: ["Generates the manuscript itself", "Front, spine and back cover", "KDP title, description and keywords", "Catalog quality gates before upload"] },
+          { id: "who-each-is-for", title: "Which one fits: one polished book or a whole catalog?", body: "If you write your own books and want beautiful files, Atticus is excellent. If you want to produce publish-ready products at catalog scale, DraftToDone targets that.", points: ["Atticus: format what you wrote", "DraftToDone: generate the whole product", "Single polished title vs repeatable catalog", "Formatting craft vs end-to-end pipeline"] }
         ],
         faq: [
           { question: "Is DraftToDone available now?", answer: "Yes — DraftToDone is live. Open the app at app.drafttodone.io to start publishing today." },
           { question: "Does DraftToDone format print and ebook files like Atticus?", answer: "Formatting is one stage of the pipeline. The focus is producing the whole product — manuscript, cover and metadata — ready for KDP, rather than being a standalone formatting editor." },
-          { question: "Atticus is one-time; what about DraftToDone?", answer: "DraftToDone is a book-credit subscription (one credit makes one complete book). Atticus is a one-time purchase for its editor and formatter. Different models for different jobs." }
+          { question: "Is DraftToDone a subscription or a one-time purchase?", answer: "DraftToDone is a book-credit subscription (one credit makes one complete book). Atticus is a one-time purchase for its editor and formatter. Different models for different jobs." }
         ],
         cta: "Open the app",
       },
@@ -1594,14 +1594,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "Atticus est un outil d'écriture et de mise en page soigné. DraftToDone commence plus tôt et finit plus tard : il génère le manuscrit, la couverture complète et les métadonnées KDP, puis vérifie la qualité avant l'upload.",
         keywords: ["alternative Atticus", "logiciel de mise en page livre", "logiciel d'édition IA", "mise en page livre KDP", "outil livre tout-en-un"],
         sections: [
-          { id: "what-atticus-does", title: "Ce qu'Atticus réussit", body: "Atticus est un outil d'écriture et de mise en page tout-en-un : importez votre manuscrit et produisez des fichiers print et ebook propres avec des modèles personnalisables, sur toutes les plateformes, pour un achat unique.", points: ["Éditeur d'écriture pour auteurs", "Mise en page print et ebook", "Modèles personnalisables", "Achat unique, multiplateforme"] },
-          { id: "where-drafttodone-differs", title: "Ce qui distingue DraftToDone", body: "Atticus suppose que vous avez déjà écrit le livre. DraftToDone le génère — avec la couverture et les métadonnées — de sorte que la mise en page n'est qu'une étape d'un pipeline plus large.", points: ["Génère le manuscrit lui-même", "Première, dos et quatrième", "Titre, description et mots-clés KDP", "Contrôles qualité catalogue avant l'upload"] },
-          { id: "who-each-is-for", title: "Lequel vous convient", body: "Si vous écrivez vos livres et voulez de beaux fichiers, Atticus est excellent. Si vous voulez produire des produits prêts à publier à l'échelle d'un catalogue, DraftToDone vise cela.", points: ["Atticus : mettre en page ce que vous avez écrit", "DraftToDone : générer tout le produit", "Titre unique soigné vs catalogue répétable", "Métier de mise en page vs pipeline complet"] }
+          { id: "what-atticus-does", title: "En quoi Atticus est-il vraiment bon ?", body: "Atticus est un outil d'écriture et de mise en page tout-en-un : importez votre manuscrit et produisez des fichiers print et ebook propres avec des modèles personnalisables, sur toutes les plateformes, pour un achat unique.", points: ["Éditeur d'écriture pour auteurs", "Mise en page print et ebook", "Modèles personnalisables", "Achat unique, multiplateforme"] },
+          { id: "where-drafttodone-differs", title: "Atticus ou DraftToDone : mettre en page ou générer le livre ?", body: "Atticus suppose que vous avez déjà écrit le livre. DraftToDone le génère — avec la couverture et les métadonnées — de sorte que la mise en page n'est qu'une étape d'un pipeline plus large.", points: ["Génère le manuscrit lui-même", "Première, dos et quatrième", "Titre, description et mots-clés KDP", "Contrôles qualité catalogue avant l'upload"] },
+          { id: "who-each-is-for", title: "Lequel choisir : un livre soigné ou tout un catalogue ?", body: "Si vous écrivez vos livres et voulez de beaux fichiers, Atticus est excellent. Si vous voulez produire des produits prêts à publier à l'échelle d'un catalogue, DraftToDone vise cela.", points: ["Atticus : mettre en page ce que vous avez écrit", "DraftToDone : générer tout le produit", "Titre unique soigné vs catalogue répétable", "Métier de mise en page vs pipeline complet"] }
         ],
         faq: [
           { question: "DraftToDone est-il disponible maintenant ?", answer: "Oui — DraftToDone est en ligne. Ouvrez l'app sur app.drafttodone.io pour commencer à publier dès aujourd'hui." },
-          { question: "DraftToDone met-il en page les fichiers print et ebook comme Atticus ?", answer: "La mise en page est une étape du pipeline. L'objectif est de produire tout le produit — manuscrit, couverture et métadonnées — prêt pour KDP, plutôt que d'être un éditeur de mise en page autonome." },
-          { question: "Atticus est en achat unique ; et DraftToDone ?", answer: "DraftToDone est un abonnement à crédits livres (1 crédit = 1 livre complet). Atticus est un achat unique pour son éditeur et son outil de mise en page. Des modèles différents pour des besoins différents." }
+          { question: "DraftToDone met-il en page les fichiers print et ebook ?", answer: "La mise en page est une étape du pipeline. L'objectif est de produire tout le produit — manuscrit, couverture et métadonnées — prêt pour KDP, plutôt que d'être un éditeur de mise en page autonome." },
+          { question: "DraftToDone est-il un abonnement ou un achat unique ?", answer: "DraftToDone est un abonnement à crédits livres (1 crédit = 1 livre complet). Atticus est un achat unique pour son éditeur et son outil de mise en page. Des modèles différents pour des besoins différents." }
         ],
         cta: "Ouvrir l'app",
       },
@@ -1615,14 +1615,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "Atticus è un curato strumento di scrittura e impaginazione. DraftToDone inizia prima e finisce dopo: genera il manoscritto, la copertina completa e i metadati KDP, poi verifica la qualità prima dell'upload.",
         keywords: ["alternativa Atticus", "software di impaginazione libri", "software di editoria IA", "impaginazione libro KDP", "strumento libro tutto-in-uno"],
         sections: [
-          { id: "what-atticus-does", title: "Cosa fa bene Atticus", body: "Atticus è uno strumento tutto-in-uno di scrittura e impaginazione: importi il manoscritto e produci file print ed ebook puliti con modelli personalizzabili, su ogni piattaforma, con un acquisto unico.", points: ["Editor di scrittura per autori", "Impaginazione print ed ebook", "Modelli personalizzabili", "Acquisto unico, multipiattaforma"] },
-          { id: "where-drafttodone-differs", title: "Cosa distingue DraftToDone", body: "Atticus presuppone che tu abbia già scritto il libro. DraftToDone lo genera — con copertina e metadati — così l'impaginazione è solo una tappa di un pipeline più ampio.", points: ["Genera il manoscritto stesso", "Fronte, dorso e retro", "Titolo, descrizione e keyword KDP", "Controlli qualità catalogo prima dell'upload"] },
-          { id: "who-each-is-for", title: "Quale fa per te", body: "Se scrivi i tuoi libri e vuoi file belli, Atticus è eccellente. Se vuoi produrre prodotti pronti da pubblicare su scala di catalogo, DraftToDone punta a quello.", points: ["Atticus: impaginare ciò che hai scritto", "DraftToDone: generare tutto il prodotto", "Titolo singolo curato vs catalogo ripetibile", "Mestiere di impaginazione vs pipeline completo"] }
+          { id: "what-atticus-does", title: "In cosa è davvero bravo Atticus?", body: "Atticus è uno strumento tutto-in-uno di scrittura e impaginazione: importi il manoscritto e produci file print ed ebook puliti con modelli personalizzabili, su ogni piattaforma, con un acquisto unico.", points: ["Editor di scrittura per autori", "Impaginazione print ed ebook", "Modelli personalizzabili", "Acquisto unico, multipiattaforma"] },
+          { id: "where-drafttodone-differs", title: "Atticus o DraftToDone: impaginare o generare il libro?", body: "Atticus presuppone che tu abbia già scritto il libro. DraftToDone lo genera — con copertina e metadati — così l'impaginazione è solo una tappa di un pipeline più ampio.", points: ["Genera il manoscritto stesso", "Fronte, dorso e retro", "Titolo, descrizione e keyword KDP", "Controlli qualità catalogo prima dell'upload"] },
+          { id: "who-each-is-for", title: "Quale scegliere: un libro curato o un intero catalogo?", body: "Se scrivi i tuoi libri e vuoi file belli, Atticus è eccellente. Se vuoi produrre prodotti pronti da pubblicare su scala di catalogo, DraftToDone punta a quello.", points: ["Atticus: impaginare ciò che hai scritto", "DraftToDone: generare tutto il prodotto", "Titolo singolo curato vs catalogo ripetibile", "Mestiere di impaginazione vs pipeline completo"] }
         ],
         faq: [
           { question: "DraftToDone è disponibile ora?", answer: "Sì — DraftToDone è online. Apri l'app su app.drafttodone.io e inizia a pubblicare oggi." },
           { question: "DraftToDone impagina i file print ed ebook come Atticus?", answer: "L'impaginazione è una tappa del pipeline. L'obiettivo è produrre tutto il prodotto — manoscritto, copertina e metadati — pronto per KDP, più che essere un editor di impaginazione autonomo." },
-          { question: "Atticus è acquisto unico; e DraftToDone?", answer: "DraftToDone è un abbonamento a crediti libri (1 credito = 1 libro completo). Atticus è un acquisto unico per il suo editor e impaginatore. Modelli diversi per esigenze diverse." }
+          { question: "DraftToDone è un abbonamento o un acquisto unico?", answer: "DraftToDone è un abbonamento a crediti libri (1 credito = 1 libro completo). Atticus è un acquisto unico per il suo editor e impaginatore. Modelli diversi per esigenze diverse." }
         ],
         cta: "Apri l'app",
       },
@@ -1636,14 +1636,14 @@ export const solutionPages: SolutionPage[] = [
         lead: "Atticus ist ein ausgereiftes Schreib- und Formatierungstool. DraftToDone beginnt früher und endet später: es erzeugt Manuskript, das komplette Cover und die KDP-Metadaten und prüft die Qualität vor dem Upload.",
         keywords: ["Atticus Alternative", "Buch Formatierungssoftware", "KI Publishing Software", "KDP Buchformatierung", "All-in-One Buch Tool"],
         sections: [
-          { id: "what-atticus-does", title: "Worin Atticus stark ist", body: "Atticus ist ein All-in-One-Schreib- und Formatierungstool: importiere dein Manuskript und erzeuge saubere Print- und Ebook-Dateien mit anpassbaren Vorlagen, auf jeder Plattform, zum Einmalpreis.", points: ["Schreibeditor für Autoren", "Print- und Ebook-Formatierung", "Anpassbare Vorlagen", "Einmalkauf, plattformübergreifend"] },
-          { id: "where-drafttodone-differs", title: "Was DraftToDone unterscheidet", body: "Atticus setzt voraus, dass du das Buch schon geschrieben hast. DraftToDone erzeugt es — mit Cover und Metadaten — sodass Formatierung nur ein Schritt in einer breiteren Pipeline ist.", points: ["Erzeugt das Manuskript selbst", "Vorderseite, Rücken und Rückseite", "KDP-Titel, -Beschreibung und -Keywords", "Katalog-Qualitätsgates vor dem Upload"] },
-          { id: "who-each-is-for", title: "Was zu dir passt", body: "Wenn du deine Bücher selbst schreibst und schöne Dateien willst, ist Atticus ausgezeichnet. Wenn du veröffentlichungsfertige Produkte im Katalogmaßstab willst, zielt DraftToDone darauf.", points: ["Atticus: formatieren, was du geschrieben hast", "DraftToDone: das ganze Produkt erzeugen", "Einzelner Titel vs wiederholbarer Katalog", "Formatierungshandwerk vs End-to-End-Pipeline"] }
+          { id: "what-atticus-does", title: "Worin ist Atticus wirklich stark?", body: "Atticus ist ein All-in-One-Schreib- und Formatierungstool: importiere dein Manuskript und erzeuge saubere Print- und Ebook-Dateien mit anpassbaren Vorlagen, auf jeder Plattform, zum Einmalpreis.", points: ["Schreibeditor für Autoren", "Print- und Ebook-Formatierung", "Anpassbare Vorlagen", "Einmalkauf, plattformübergreifend"] },
+          { id: "where-drafttodone-differs", title: "Atticus vs DraftToDone: formatieren oder erzeugen?", body: "Atticus setzt voraus, dass du das Buch schon geschrieben hast. DraftToDone erzeugt es — mit Cover und Metadaten — sodass Formatierung nur ein Schritt in einer breiteren Pipeline ist.", points: ["Erzeugt das Manuskript selbst", "Vorderseite, Rücken und Rückseite", "KDP-Titel, -Beschreibung und -Keywords", "Katalog-Qualitätsgates vor dem Upload"] },
+          { id: "who-each-is-for", title: "Was passt: ein poliertes Buch oder ein ganzer Katalog?", body: "Wenn du deine Bücher selbst schreibst und schöne Dateien willst, ist Atticus ausgezeichnet. Wenn du veröffentlichungsfertige Produkte im Katalogmaßstab willst, zielt DraftToDone darauf.", points: ["Atticus: formatieren, was du geschrieben hast", "DraftToDone: das ganze Produkt erzeugen", "Einzelner Titel vs wiederholbarer Katalog", "Formatierungshandwerk vs End-to-End-Pipeline"] }
         ],
         faq: [
           { question: "Ist DraftToDone jetzt verfügbar?", answer: "Ja — DraftToDone ist live. Öffne die App unter app.drafttodone.io und starte noch heute." },
           { question: "Formatiert DraftToDone Print- und Ebook-Dateien wie Atticus?", answer: "Formatierung ist eine Stufe der Pipeline. Der Fokus liegt darauf, das ganze Produkt — Manuskript, Cover und Metadaten — fertig für KDP zu erzeugen, statt ein eigenständiger Formatierungseditor zu sein." },
-          { question: "Atticus ist Einmalkauf; und DraftToDone?", answer: "DraftToDone ist ein Buch-Kredit-Abo (1 Kredit = 1 komplettes Buch). Atticus ist ein Einmalkauf für Editor und Formatierer. Verschiedene Modelle für verschiedene Aufgaben." }
+          { question: "Ist DraftToDone ein Abo oder ein Einmalkauf?", answer: "DraftToDone ist ein Buch-Kredit-Abo (1 Kredit = 1 komplettes Buch). Atticus ist ein Einmalkauf für Editor und Formatierer. Verschiedene Modelle für verschiedene Aufgaben." }
         ],
         cta: "App öffnen",
       },
@@ -1674,7 +1674,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "who-is-behind-it",
-            title: "Who is behind DraftToDone",
+            title: "Who is behind DraftToDone?",
             body: "DraftToDone is built and run by Antoine, a solo founder. He ran an Amazon KDP catalog earning roughly EUR 400 a month until the account was permanently banned over a pen-name issue. The private automation behind that catalog is what became this product.",
             points: [
               "Solo founder, building in public",
@@ -1685,7 +1685,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "how-content-is-made",
-            title: "How the guides are written and reviewed",
+            title: "How are the guides written and reviewed?",
             body: "Guides are drafted with AI assistance and edited by a human before publication. Every claim about how Amazon KDP works — royalty rates, trim sizes, keyword slots, content policy — is checked against Amazon's own help pages, and the pages that depend on those rules carry the date they were last reviewed.",
             points: [
               "AI-assisted drafting, human review before publishing",
@@ -1697,7 +1697,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "what-we-do-not-claim",
-            title: "What we do not claim",
+            title: "What DraftToDone does not promise",
             body: "The product generates a complete book package. It does not decide whether Amazon approves, ranks or sells the result — and no software can honestly promise that.",
             points: [
               "No guarantee of Amazon rankings, KDP approval or sales",
@@ -1720,7 +1720,7 @@ export const solutionPages: SolutionPage[] = [
               "There are none. We publish no customer reviews, star ratings or user counts, and we emit no rating markup in the page schema, because we have no verified ones to show. The only quote on the site is the founder's own and is attributed to him.",
           },
           {
-            question: "Are the guides written by AI?",
+            question: "Are these guides written by AI or by a human?",
             answer:
               "They are drafted with AI assistance and reviewed by a human before publishing. KDP-specific facts are checked against Amazon's official documentation, and each page carries the date of its last review plus its source list.",
           },
@@ -1730,7 +1730,7 @@ export const solutionPages: SolutionPage[] = [
               "Yes. Amazon KDP requires you to inform it of AI-generated text, images or translations when you publish or republish a book. DraftToDone does not make that disclosure for you and does not exempt you from it.",
           },
           {
-            question: "What happens if a book generation fails?",
+            question: "What happens to my credit if a book generation fails?",
             answer:
               "The credit is only spent on a completed book. A failed generation refunds the credit automatically, and generation runs server-side, so closing the browser does not lose the book.",
           },
@@ -1780,7 +1780,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "who-is-behind-it",
-            title: "Qui est derrière DraftToDone",
+            title: "Qui est derrière DraftToDone ?",
             body: "DraftToDone est construit et opéré par Antoine, fondateur solo. Il gérait un catalogue Amazon KDP qui rapportait environ 400 € par mois jusqu'au bannissement définitif du compte à cause d'un nom de plume. L'automatisation privée derrière ce catalogue est devenue ce produit.",
             points: [
               "Fondateur solo, qui construit en public",
@@ -1791,7 +1791,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "how-content-is-made",
-            title: "Comment les guides sont écrits et relus",
+            title: "Comment les guides sont-ils écrits et relus ?",
             body: "Les guides sont rédigés avec l'aide de l'IA puis relus par un humain avant publication. Chaque affirmation sur le fonctionnement d'Amazon KDP — taux de redevance, formats, emplacements de mots-clés, règles de contenu — est vérifiée sur les pages d'aide d'Amazon, et les pages qui en dépendent affichent leur date de dernière relecture.",
             points: [
               "Rédaction assistée par IA, relecture humaine avant publication",
@@ -1803,7 +1803,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "what-we-do-not-claim",
-            title: "Ce que nous ne promettons pas",
+            title: "Ce que DraftToDone ne promet pas",
             body: "Le produit génère un pack de livre complet. Il ne décide pas si Amazon approuve, classe ou vend le résultat — et aucun logiciel ne peut honnêtement le promettre.",
             points: [
               "Aucune garantie de classement Amazon, d'approbation KDP ni de ventes",
@@ -1826,7 +1826,7 @@ export const solutionPages: SolutionPage[] = [
               "Il n'y en a aucun. Nous ne publions ni avis client, ni note en étoiles, ni nombre d'utilisateurs, et nous n'émettons aucun balisage de notation, parce que nous n'en avons pas de vérifiés. La seule citation du site est celle du fondateur, et elle lui est attribuée.",
           },
           {
-            question: "Les guides sont-ils écrits par une IA ?",
+            question: "Ces guides sont-ils écrits par une IA ou par un humain ?",
             answer:
               "Ils sont rédigés avec l'aide de l'IA puis relus par un humain avant publication. Les faits propres à KDP sont vérifiés sur la documentation officielle d'Amazon, et chaque page affiche sa date de relecture et sa liste de sources.",
           },
@@ -1836,7 +1836,7 @@ export const solutionPages: SolutionPage[] = [
               "Oui. Amazon KDP exige que vous l'informiez de tout texte, image ou traduction généré par IA lors de la publication ou de la republication d'un livre. DraftToDone ne fait pas cette déclaration à votre place et ne vous en dispense pas.",
           },
           {
-            question: "Que se passe-t-il si une génération échoue ?",
+            question: "Que devient mon crédit si une génération échoue ?",
             answer:
               "Le crédit n'est débité que pour un livre terminé. Une génération échouée rembourse le crédit automatiquement, et la génération tourne côté serveur : fermer le navigateur ne perd pas le livre.",
           },
@@ -1886,7 +1886,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "who-is-behind-it",
-            title: "Chi c'è dietro DraftToDone",
+            title: "Chi c'è dietro DraftToDone?",
             body: "DraftToDone è costruito e gestito da Antoine, fondatore solo. Gestiva un catalogo Amazon KDP da circa 400 € al mese finché l'account non è stato bandito in modo permanente per una questione di pseudonimo. L'automazione privata dietro quel catalogo è diventata questo prodotto.",
             points: [
               "Fondatore solo, che costruisce in pubblico",
@@ -1897,7 +1897,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "how-content-is-made",
-            title: "Come vengono scritte e riviste le guide",
+            title: "Come vengono scritte e riviste le guide?",
             body: "Le guide sono redatte con l'aiuto dell'IA e riviste da una persona prima della pubblicazione. Ogni affermazione sul funzionamento di Amazon KDP — royalty, formati, slot di keyword, regole sui contenuti — è verificata sulle pagine di aiuto di Amazon, e le pagine che dipendono da quelle regole mostrano la data dell'ultima revisione.",
             points: [
               "Stesura assistita dall'IA, revisione umana prima della pubblicazione",
@@ -1909,7 +1909,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "what-we-do-not-claim",
-            title: "Cosa non promettiamo",
+            title: "Cosa DraftToDone non promette",
             body: "Il prodotto genera un pacchetto libro completo. Non decide se Amazon approva, posiziona o vende il risultato — e nessun software può prometterlo onestamente.",
             points: [
               "Nessuna garanzia di posizionamento su Amazon, approvazione KDP o vendite",
@@ -1932,7 +1932,7 @@ export const solutionPages: SolutionPage[] = [
               "Non ce ne sono. Non pubblichiamo recensioni dei clienti, valutazioni a stelle o numeri di utenti, e non emettiamo markup di rating, perché non ne abbiamo di verificati. L'unica citazione del sito è quella del fondatore, ed è attribuita a lui.",
           },
           {
-            question: "Le guide sono scritte da un'IA?",
+            question: "Le guide sono scritte da un'IA o da una persona?",
             answer:
               "Sono redatte con l'aiuto dell'IA e riviste da una persona prima della pubblicazione. I fatti specifici di KDP sono verificati sulla documentazione ufficiale di Amazon e ogni pagina riporta la data dell'ultima revisione e l'elenco delle fonti.",
           },
@@ -1942,7 +1942,7 @@ export const solutionPages: SolutionPage[] = [
               "Sì. Amazon KDP richiede di segnalare testi, immagini o traduzioni generati dall'IA quando pubblichi o ripubblichi un libro. DraftToDone non fa quella dichiarazione al posto tuo e non ti esonera dal farla.",
           },
           {
-            question: "Cosa succede se una generazione fallisce?",
+            question: "Che fine fa il mio credito se una generazione fallisce?",
             answer:
               "Il credito viene speso solo per un libro completato. Una generazione fallita rimborsa il credito automaticamente, e la generazione gira lato server: chiudere il browser non fa perdere il libro.",
           },
@@ -1992,7 +1992,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           {
             id: "who-is-behind-it",
-            title: "Wer hinter DraftToDone steht",
+            title: "Wer steht hinter DraftToDone?",
             body: "DraftToDone wird von Antoine gebaut und betrieben, einem Solo-Gründer. Er führte einen Amazon-KDP-Katalog mit rund 400 € Umsatz pro Monat, bis das Konto wegen eines Autorennamens dauerhaft gesperrt wurde. Die private Automatisierung hinter diesem Katalog ist zu diesem Produkt geworden.",
             points: [
               "Solo-Gründer, der öffentlich baut",
@@ -2003,7 +2003,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "how-content-is-made",
-            title: "Wie die Guides entstehen und geprüft werden",
+            title: "Wie werden die Guides geschrieben und geprüft?",
             body: "Die Guides werden KI-gestützt verfasst und vor der Veröffentlichung von einem Menschen redigiert. Jede Aussage darüber, wie Amazon KDP funktioniert — Tantiemen, Formate, Keyword-Felder, Inhaltsregeln — wird gegen Amazons eigene Hilfeseiten geprüft, und die betroffenen Seiten zeigen das Datum der letzten Prüfung.",
             points: [
               "KI-gestützter Entwurf, menschliche Prüfung vor der Veröffentlichung",
@@ -2015,7 +2015,7 @@ export const solutionPages: SolutionPage[] = [
           },
           {
             id: "what-we-do-not-claim",
-            title: "Was wir nicht versprechen",
+            title: "Was DraftToDone nicht verspricht",
             body: "Das Produkt erzeugt ein komplettes Buchpaket. Es entscheidet nicht, ob Amazon das Ergebnis freigibt, rankt oder verkauft — und keine Software kann das ehrlich versprechen.",
             points: [
               "Keine Garantie für Amazon-Rankings, KDP-Freigabe oder Verkäufe",
@@ -2038,7 +2038,7 @@ export const solutionPages: SolutionPage[] = [
               "Es gibt keine. Wir veröffentlichen keine Kundenbewertungen, Sternebewertungen oder Nutzerzahlen und geben kein Rating-Markup aus, weil wir keine verifizierten haben. Das einzige Zitat auf der Website stammt vom Gründer und ist ihm zugeordnet.",
           },
           {
-            question: "Werden die Guides von einer KI geschrieben?",
+            question: "Werden die Guides von einer KI oder von Menschen geschrieben?",
             answer:
               "Sie werden KI-gestützt entworfen und vor der Veröffentlichung von einem Menschen geprüft. KDP-spezifische Fakten werden gegen Amazons offizielle Dokumentation geprüft, und jede Seite nennt ihr Prüfdatum und ihre Quellen.",
           },
@@ -2048,7 +2048,7 @@ export const solutionPages: SolutionPage[] = [
               "Ja. Amazon KDP verlangt, KI-generierte Texte, Bilder oder Übersetzungen beim Veröffentlichen oder erneuten Veröffentlichen anzugeben. DraftToDone übernimmt diese Angabe nicht für dich und befreit dich nicht davon.",
           },
           {
-            question: "Was passiert, wenn eine Generierung fehlschlägt?",
+            question: "Was passiert mit meinem Credit, wenn eine Generierung fehlschlägt?",
             answer:
               "Der Credit wird nur für ein fertiges Buch verbraucht. Eine fehlgeschlagene Generierung erstattet den Credit automatisch, und die Generierung läuft serverseitig: Den Browser zu schließen verliert kein Buch.",
           },

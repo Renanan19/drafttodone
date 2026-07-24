@@ -4,10 +4,16 @@ import { ArrowRight, Check, Layers, Minus, Search, ShieldCheck } from "lucide-re
 import {
   blogCopy,
   blogIndexPath,
+  getPostTranslation,
   isLocale,
   locales,
+  postLocales,
+  postPath,
+  posts,
+  postUrl,
   SITE_NAME,
   SITE_URL,
+  type BlogPost,
   type Locale,
 } from "@/app/blog-content";
 import { BlogFooter, BlogHeader } from "@/app/blog-ui";
@@ -25,6 +31,7 @@ import { seoDescription, seoTitle } from "@/app/seo-metadata";
 import { AnswerBlock } from "@/app/answer-block";
 import { contrastCopy } from "@/app/contrast-content";
 import { contrastLabels } from "@/app/glance-content";
+import { getTopicLinks, topicLinkCopy, type TopicLink } from "@/app/topic-links";
 import {
   aggregateOffer,
   breadcrumbList,
@@ -124,6 +131,18 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
   const moreTools = commercialSolutionPages.filter((item) => item.key !== page.key);
   const contrast = contrastCopy[page.key]?.[locale];
   const ogImageUrl = `${canonicalUrl}/opengraph-image`;
+  // The intent bridge: the 3-4 guides that answer the questions this page
+  // sells the answer to, with anchors that name the job. A guide that has no
+  // translation in this locale is dropped rather than linked to English.
+  const topicGuides = getTopicLinks(page.key)
+    .map((link) => {
+      const post = posts.find((item) => item.key === link.postKey);
+      return post ? { link, post } : undefined;
+    })
+    .filter(
+      (entry): entry is { link: TopicLink; post: BlogPost } =>
+        entry !== undefined && postLocales(entry.post).includes(locale),
+    );
 
   const breadcrumb = breadcrumbList([
     { name: SITE_NAME, url: SITE_URL },
@@ -218,6 +237,24 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
         description: section.body,
       })),
     }),
+    // The intent bridge as data: which guide resolves which job, stated in the
+    // same words as the visible anchor, so the relationship survives without
+    // the HTML.
+    ...(topicGuides.length > 0
+      ? [
+          itemListNode({
+            id: `${canonicalUrl}#topic-guides`,
+            name: topicLinkCopy[locale].heading,
+            description: topicLinkCopy[locale].intro,
+            locale,
+            items: topicGuides.map(({ link, post }) => ({
+              name: link.anchor[locale],
+              url: postUrl(locale, post),
+              description: getPostTranslation(post, locale).description,
+            })),
+          }),
+        ]
+      : []),
     ...(moreTools.length > 0
       ? [
           itemListNode({
@@ -351,7 +388,9 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
                   <span className="grid h-12 w-12 place-items-center rounded-xl bg-paper-3 text-mint-deep">
                     <Icon className="h-5 w-5" strokeWidth={1.8} />
                   </span>
-                  <h2 className="mt-6 font-display text-3xl font-medium leading-tight tracking-[-0.01em] text-ink">
+                  {/* Headings are now full questions (~50 chars), so the card
+                      title steps down a size to keep three even columns. */}
+                  <h2 className="mt-6 text-balance font-display text-[1.6rem] font-medium leading-[1.15] tracking-[-0.01em] text-ink">
                     {section.title}
                   </h2>
                   <p className="mt-4 text-[15px] leading-relaxed text-muted">{section.body}</p>
@@ -368,6 +407,42 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
             })}
           </div>
         </section>
+
+        {topicGuides.length > 0 && (
+          <section id="topic-guides" className="border-t border-line/70">
+            <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6">
+              <h2 className="font-display text-4xl font-medium tracking-[-0.01em] text-ink">
+                {topicLinkCopy[locale].heading}
+              </h2>
+              <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted">
+                {topicLinkCopy[locale].intro}
+              </p>
+              <div className="mt-9 grid gap-5 md:grid-cols-2">
+                {topicGuides.map(({ link, post }) => {
+                  const guide = getPostTranslation(post, locale);
+                  return (
+                    <a
+                      key={post.key}
+                      href={postPath(locale, post)}
+                      className="group flex flex-col rounded-[18px] border border-line bg-paper p-6 transition-shadow duration-300 hover:shadow-[0_24px_60px_-34px_rgba(16,24,40,0.38)]"
+                    >
+                      <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-mint-deep">
+                        {guide.category}
+                      </p>
+                      <h3 className="mt-3 font-display text-2xl font-medium leading-tight tracking-[-0.01em] text-ink">
+                        {link.anchor[locale]}
+                      </h3>
+                      <span className="mt-5 inline-flex items-start gap-2 text-sm leading-relaxed text-muted transition-colors group-hover:text-ink">
+                        <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-mint transition-transform group-hover:translate-x-0.5" />
+                        <span>{guide.title}</span>
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="border-y border-line/70 bg-paper-2">
           <div className="mx-auto max-w-4xl px-5 py-16 sm:px-6">

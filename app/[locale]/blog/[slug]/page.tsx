@@ -22,8 +22,14 @@ import {
 import { BlogFooter, BlogHeader, BlogVisual, CtaBand } from "@/app/blog-ui";
 import { homePath, homeUrl } from "@/app/home-content";
 import { seoDescription, seoTitle } from "@/app/seo-metadata";
-import { commercialSolutionPages, editorialUrl, solutionPath } from "@/app/seo-pages";
+import {
+  commercialSolutionPages,
+  editorialUrl,
+  solutionPath,
+  solutionUrl,
+} from "@/app/seo-pages";
 import { ArticleAnswer } from "@/app/article-answer";
+import { getSolutionBackAnchor, getSolutionForPost, topicLinkCopy } from "@/app/topic-links";
 import {
   imageObject,
   itemListNode,
@@ -148,16 +154,21 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
     .sort((left, right) => right.score - left.score || right.item.updated.localeCompare(left.item.updated))
     .map(({ item }) => item)
     .slice(0, 6);
-  const articleTopicTokens = topicTokens([article.title, article.category, ...article.keywords]);
-  const relatedSolutions = commercialSolutionPages
-    .map((item) => {
-      const translation = item.translations[locale];
-      const targetTokens = topicTokens([translation.title, translation.h1, ...translation.keywords]);
-      const score = [...targetTokens].filter((token) => articleTopicTokens.has(token)).length;
-      return { item, translation, score };
-    })
-    .sort((left, right) => right.score - left.score || right.item.updated.localeCompare(left.item.updated))
-    .slice(0, 3);
+  // The other half of the intent bridge: one link back to the page that
+  // converts the job this guide creates, named by that job. It replaces the
+  // former token-overlap "tools" grid, which scored three pages by shared
+  // words and then labelled all three with the same generic CTA.
+  const convertingKey = getSolutionForPost(post.key);
+  const convertingPage = convertingKey
+    ? commercialSolutionPages.find((item) => item.key === convertingKey)
+    : undefined;
+  const convertingAnchor = convertingKey
+    ? getSolutionBackAnchor(convertingKey, locale)
+    : undefined;
+  const convertingBridge =
+    convertingPage && convertingAnchor
+      ? { page: convertingPage, anchor: convertingAnchor, solution: convertingPage.translations[locale] }
+      : undefined;
   const wordCount = [
     article.title,
     article.description,
@@ -265,6 +276,11 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
         articleSection: article.category,
         keywords: article.keywords.join(", "),
         timeRequired: `PT${post.readingTime}M`,
+        // The page that converts this guide's intent, stated as data rather
+        // than left for a retriever to infer from an anchor.
+        ...(convertingBridge
+          ? { relatedLink: solutionUrl(locale, convertingBridge.page) }
+          : {}),
       },
     }),
     // Each H2 is anchored and enumerated so a single section can be retrieved,
@@ -474,33 +490,30 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
           </div>
         </section>
 
-        <section className="border-t border-line/70">
-          <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6">
-            <h2 className="font-display text-4xl font-medium tracking-[-0.01em] text-ink">
-              {t.tools}
-            </h2>
-            <div className="mt-8 grid gap-5 md:grid-cols-3">
-              {relatedSolutions.map(({ item, translation }) => (
-                <a
-                  key={item.key}
-                  href={solutionPath(locale, item)}
-                  className="group rounded-[18px] border border-line bg-paper p-5 transition-shadow duration-300 hover:shadow-[0_24px_60px_-34px_rgba(16,24,40,0.38)]"
-                >
-                  <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-mint-deep">
-                    {translation.eyebrow}
-                  </p>
-                  <h3 className="mt-3 font-display text-2xl font-medium leading-tight text-ink">
-                    {translation.h1}
-                  </h3>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors group-hover:text-ink">
-                    {translation.cta}
-                    <ArrowRight className="h-4 w-4" />
-                  </span>
-                </a>
-              ))}
+        {convertingBridge && (
+          <section className="border-t border-line/70">
+            <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6">
+              <a
+                href={solutionPath(locale, convertingBridge.page)}
+                className="group block rounded-[18px] border border-line bg-paper p-7 transition-shadow duration-300 hover:shadow-[0_24px_60px_-34px_rgba(16,24,40,0.38)] sm:p-9"
+              >
+                <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-mint-deep">
+                  {topicLinkCopy[locale].backLabel}
+                </p>
+                <h2 className="mt-4 max-w-3xl font-display text-3xl font-medium leading-tight tracking-[-0.01em] text-ink sm:text-4xl">
+                  {convertingBridge.anchor}
+                </h2>
+                <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted">
+                  {convertingBridge.solution.description}
+                </p>
+                <span className="mt-6 inline-flex items-start gap-2 text-sm leading-relaxed text-muted transition-colors group-hover:text-ink">
+                  <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-mint transition-transform group-hover:translate-x-0.5" />
+                  <span>{convertingBridge.solution.h1}</span>
+                </span>
+              </a>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         <CtaBand locale={locale} />
       </main>

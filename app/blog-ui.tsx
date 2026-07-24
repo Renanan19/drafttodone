@@ -15,6 +15,7 @@ import {
   getEditorialPage,
   solutionPath,
 } from "./seo-pages";
+import { legalFooterLinks } from "./glance-content";
 import { APP_SIGNUP_URL, homePath } from "./home-content";
 
 // A post may not exist in every locale; missing locales fall back to the blog index.
@@ -150,6 +151,17 @@ export function BlogFooter({ locale }: { locale: Locale }) {
             >
               Sitemap
             </a>
+            {legalFooterLinks(locale).map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="text-muted transition-colors hover:text-ink"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>

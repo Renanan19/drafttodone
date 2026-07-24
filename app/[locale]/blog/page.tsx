@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check, Search } from "lucide-react";
+import { ArrowRight, Check, Search, Sparkles } from "lucide-react";
 import {
   blogCopy,
   blogIndexPath,
@@ -10,12 +10,23 @@ import {
   isLocale,
   locales,
   postPath,
+  postUrl,
   SITE_NAME,
   SITE_URL,
   type Locale,
 } from "@/app/blog-content";
 import { BlogFooter, BlogHeader, BlogVisual, CtaBand } from "@/app/blog-ui";
+import { latestArticleUpdate } from "@/app/answer-engine-content";
+import { collectionLabels } from "@/app/collection-labels";
+import { formatLongDate } from "@/app/glance-content";
+import { homeUrl } from "@/app/home-content";
 import { seoDescription, seoTitle } from "@/app/seo-metadata";
+import {
+  breadcrumbList,
+  imageObject,
+  itemListNode,
+  webPageNode,
+} from "@/app/structured-data";
 
 export const dynamicParams = false;
 
@@ -84,32 +95,96 @@ export default async function BlogIndexPage({ params }: BlogPageProps) {
 
   const locale = rawLocale;
   const t = blogCopy[locale];
+  const labels = collectionLabels[locale];
   const localizedPosts = getPostsForLocale(locale);
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: t.metaTitle,
-    description: t.metaDescription,
-    url: blogIndexUrl(locale),
-    inLanguage: locale,
-    isPartOf: {
-      "@type": "WebSite",
-      name: SITE_NAME,
-      url: SITE_URL,
-    },
-    mainEntity: localizedPosts.map((post) => ({
-      "@type": "BlogPosting",
-      headline: post.translation.title,
-      description: post.translation.description,
-      url: `${SITE_URL}${postPath(locale, post)}`,
-      datePublished: post.date,
-      dateModified: post.updated,
-      author: {
-        "@type": "Organization",
+  // Counted, never typed: the number of guides per language changes on every
+  // ship, and a stale figure in the answer-first block would be a false claim.
+  const guideCount = localizedPosts.length;
+  const summary = labels.summary(guideCount);
+  const canonicalUrl = blogIndexUrl(locale);
+  // Freshness for the collection itself: the newest review date among the
+  // guides that actually exist in this language.
+  const lastUpdated = latestArticleUpdate(locale);
+  const guideListId = `${canonicalUrl}#guides`;
+  const primaryImageId = `${canonicalUrl}#primaryimage`;
+
+  const primaryImage = imageObject({
+    url: `${SITE_URL}/opengraph-image`,
+    caption: `${SITE_NAME} — ${t.h1}`,
+    id: primaryImageId,
+  });
+
+  const breadcrumb = breadcrumbList([
+    { name: SITE_NAME, url: homeUrl(locale) },
+    { name: t.blog, url: canonicalUrl },
+  ]);
+
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${canonicalUrl}#blog`,
+      name: t.metaTitle,
+      description: t.metaDescription,
+      url: canonicalUrl,
+      inLanguage: locale,
+      isPartOf: {
+        "@type": "WebSite",
         name: SITE_NAME,
+        url: SITE_URL,
       },
-    })),
-  };
+      mainEntity: localizedPosts.map((post) => ({
+        "@type": "BlogPosting",
+        headline: post.translation.title,
+        description: post.translation.description,
+        url: `${SITE_URL}${postPath(locale, post)}`,
+        datePublished: post.date,
+        dateModified: post.updated,
+        author: {
+          "@type": "Organization",
+          name: SITE_NAME,
+        },
+      })),
+    },
+    // The page node: what this URL is, when the collection last changed, and
+    // which enumerated list is the thing the page exists to present.
+    webPageNode({
+      type: "CollectionPage",
+      url: canonicalUrl,
+      name: t.metaTitle,
+      description: t.metaDescription,
+      locale,
+      dateModified: lastUpdated,
+      breadcrumb,
+      primaryEntity: { "@id": guideListId },
+      extra: {
+        // Same string as the visible `data-speakable` block.
+        abstract: summary,
+        keywords: t.keywords.join(", "),
+        about: t.keywords.map((keyword) => ({
+          "@type": "Thing",
+          name: keyword,
+        })),
+        primaryImageOfPage: primaryImage,
+        image: { "@id": primaryImageId },
+      },
+    }),
+    // Microsoft's AEO guidance calls out ItemList for exactly this shape of
+    // page: a category index whose options should be enumerated, not inferred
+    // from whichever links a crawler happened to follow.
+    itemListNode({
+      id: guideListId,
+      name: labels.listName,
+      description: t.metaDescription,
+      locale,
+      items: localizedPosts.map((post) => ({
+        name: post.translation.title,
+        url: postUrl(locale, post),
+        description: post.translation.description,
+      })),
+    }),
+    breadcrumb,
+  ];
 
   return (
     <div lang={locale} className="min-h-screen bg-paper text-ink">
@@ -132,6 +207,24 @@ export default async function BlogIndexPage({ params }: BlogPageProps) {
               <p className="mt-6 max-w-2xl text-balance text-lg leading-relaxed text-muted">
                 {t.subtitle}
               </p>
+              <div
+                data-speakable
+                className="mt-8 max-w-2xl rounded-[18px] border border-line bg-paper-2 p-5 sm:p-6"
+              >
+                <h2 className="flex items-center gap-2.5 font-display text-2xl font-medium tracking-[-0.01em] text-ink">
+                  <Sparkles className="h-4 w-4 text-mint-deep" strokeWidth={2} />
+                  {labels.summaryHeading}
+                </h2>
+                <p className="mt-4 text-[15px] leading-relaxed text-ink-soft">{summary}</p>
+                <p className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-[13px] text-faint">
+                  <span>{labels.guideCount(guideCount)}</span>
+                  <span aria-hidden>·</span>
+                  <span>
+                    {t.updatedLabel}{" "}
+                    <time dateTime={lastUpdated}>{formatLongDate(locale, lastUpdated)}</time>
+                  </span>
+                </p>
+              </div>
               <div className="mt-9 flex flex-wrap gap-2">
                 {localizedPosts.map((post) => (
                   <a
@@ -197,15 +290,17 @@ export default async function BlogIndexPage({ params }: BlogPageProps) {
                   <p className="mt-4 text-[15px] leading-relaxed text-muted">
                     {post.translation.description}
                   </p>
-                  <div className="mt-6 flex items-center justify-between gap-4">
+                  <div className="mt-6 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
                     <time dateTime={post.updated} className="text-sm text-faint">
-                      {t.updatedLabel} {post.updated}
+                      {t.updatedLabel} {formatLongDate(locale, post.updated)}
                     </time>
                     <a
                       href={postPath(locale, post)}
                       className="inline-flex items-center gap-2 text-sm font-medium text-ink transition-colors group-hover:text-mint-deep"
                     >
-                      {t.readGuide}
+                      {/* Intent-bearing anchor text: "Read the KDP keywords guide"
+                          carries a topic, "Read guide" carries nothing. */}
+                      {labels.readGuideAbout(post.translation.category)}
                       <ArrowRight className="h-4 w-4" />
                     </a>
                   </div>
