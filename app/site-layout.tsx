@@ -2,7 +2,20 @@ import type { Metadata } from "next";
 import { Hanken_Grotesk, Newsreader } from "next/font/google";
 import { answerEngineResources } from "./answer-engine-content";
 import { SITE_NAME, SITE_URL, type Locale } from "./blog-content";
-import { APP_URL } from "./home-content";
+import { APP_SIGNUP_URL, APP_URL } from "./home-content";
+import { editorialUrl } from "./seo-pages";
+import {
+  aggregateOffer,
+  FOUNDER_ID,
+  GITHUB_REPO_URL,
+  imageObject,
+  LOGO_ID,
+  ORGANIZATION_ID,
+  PRICE_REVIEWED,
+  softwareRef,
+  SOFTWARE_ID,
+  WEBSITE_ID,
+} from "./structured-data";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -17,11 +30,6 @@ const hanken = Hanken_Grotesk({
   display: "swap",
 });
 
-const GITHUB_REPO_URL = "https://github.com/Renanan19/drafttodone";
-const ORGANIZATION_ID = `${SITE_URL}/#organization`;
-const WEBSITE_ID = `${SITE_URL}/#website`;
-const SOFTWARE_ID = `${SITE_URL}/#software`;
-const FOUNDER_ID = `${SITE_URL}/#founder`;
 const COMMERCIAL_PAGES = [
   {
     name: "AI publishing software",
@@ -100,7 +108,14 @@ const siteJsonLd = [
     "@id": ORGANIZATION_ID,
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/icon.svg`,
+    logo: imageObject({
+      id: LOGO_ID,
+      url: `${SITE_URL}/icon.svg`,
+      caption: `${SITE_NAME} logo`,
+      width: 512,
+      height: 512,
+    }),
+    image: { "@id": LOGO_ID },
     description:
       "AI publishing software for creating manuscripts, book covers, KDP metadata and repeatable publishing catalog workflows.",
     foundingDate: "2026",
@@ -109,6 +124,7 @@ const siteJsonLd = [
       "@id": FOUNDER_ID,
       name: "Antoine",
       jobTitle: "Founder",
+      worksFor: { "@id": ORGANIZATION_ID },
       knowsAbout: [
         "Amazon KDP",
         "AI publishing",
@@ -116,7 +132,11 @@ const siteJsonLd = [
         "self-publishing workflows",
       ],
     },
-    sameAs: [GITHUB_REPO_URL],
+    // Editorial policy, sourcing and the limits the product does not claim.
+    // Answer engines weigh a stated, checkable policy over marketing adjectives.
+    publishingPrinciples: editorialUrl("en"),
+    slogan: "One idea in, a complete KDP book out.",
+    sameAs: [GITHUB_REPO_URL, APP_URL],
     knowsAbout: [
       "Amazon Kindle Direct Publishing",
       "AI book generation",
@@ -148,12 +168,14 @@ const siteJsonLd = [
     name: SITE_NAME,
     url: SITE_URL,
     inLanguage: ["en", "fr", "it", "de"],
+    dateModified: PRICE_REVIEWED,
     publisher: {
       "@id": ORGANIZATION_ID,
     },
     about: {
       "@id": SOFTWARE_ID,
     },
+    publishingPrinciples: editorialUrl("en"),
     hasPart: COMMERCIAL_PAGES.map((page) => ({
       "@type": "WebPage",
       name: page.name,
@@ -162,6 +184,17 @@ const siteJsonLd = [
         "@id": SOFTWARE_ID,
       },
     })),
+    mainEntity: {
+      "@type": "ItemList",
+      name: "DraftToDone tools and solution pages",
+      numberOfItems: COMMERCIAL_PAGES.length,
+      itemListElement: COMMERCIAL_PAGES.map((page, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: page.name,
+        url: page.url,
+      })),
+    },
     potentialAction: {
       "@type": "ReadAction",
       target: [
@@ -185,6 +218,10 @@ const siteJsonLd = [
     applicationSubCategory: "AI publishing software",
     operatingSystem: "Web",
     url: APP_URL,
+    // Straight to signup: the bare app root answers 307, and every redirect hop
+    // is spent inside the fetch budget an answer-engine crawler allows a page.
+    installUrl: APP_SIGNUP_URL,
+    downloadUrl: APP_SIGNUP_URL,
     sameAs: [SITE_URL, GITHUB_REPO_URL],
     isPartOf: {
       "@id": WEBSITE_ID,
@@ -220,46 +257,38 @@ const siteJsonLd = [
       "KDP title, subtitle, description and keyword metadata",
       "Verified pen names",
       "Catalog quality gates",
+      "MCP server, CLI and REST API for autonomous AI agents",
     ],
-    offers: {
-      "@type": "AggregateOffer",
-      availability: "https://schema.org/OnlineOnly",
-      lowPrice: "14.99",
-      highPrice: "390",
-      offerCount: "2",
-      priceCurrency: "EUR",
-      url: APP_URL,
-      offers: [
-        {
-          "@type": "Offer",
-          name: "Weekly book-credit subscription",
-          price: "14.99",
-          priceCurrency: "EUR",
-          availability: "https://schema.org/OnlineOnly",
-          url: APP_URL,
-          priceSpecification: {
-            "@type": "UnitPriceSpecification",
-            price: "14.99",
-            priceCurrency: "EUR",
-            unitText: "week",
-          },
-        },
-        {
-          "@type": "Offer",
-          name: "Yearly book-credit subscription",
-          price: "390",
-          priceCurrency: "EUR",
-          availability: "https://schema.org/OnlineOnly",
-          url: APP_URL,
-          priceSpecification: {
-            "@type": "UnitPriceSpecification",
-            price: "390",
-            priceCurrency: "EUR",
-            unitText: "year",
-          },
-        },
-      ],
-    },
+    dateModified: PRICE_REVIEWED,
+    offers: aggregateOffer(),
+    // Stated limits, not disclaimers in a footer: answer engines quote these
+    // back, and a product that names what it cannot do reads as more citable.
+    disambiguatingDescription:
+      "DraftToDone generates the book package. It does not upload to Amazon, and it does not guarantee KDP approval, rankings or sales; AI-content disclosure remains the publisher's responsibility.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE_URL}/#agent-api`,
+    name: "DraftToDone agent API (MCP, CLI and REST)",
+    serviceType: "Agent-operable book generation API",
+    provider: { "@id": ORGANIZATION_ID },
+    isRelatedTo: softwareRef,
+    url: `${APP_URL}/agents`,
+    description:
+      "An AI agent can sign up, authorize payment once, subscribe off-session, generate a complete book package, poll progress and download the files through a remote MCP server, a zero-dependency CLI or a plain JSON REST API.",
+    availableChannel: [
+      {
+        "@type": "ServiceChannel",
+        name: "MCP server (streamable HTTP)",
+        serviceUrl: `${APP_URL}/mcp`,
+      },
+      {
+        "@type": "ServiceChannel",
+        name: "OpenAPI specification",
+        serviceUrl: `${APP_URL}/openapi.json`,
+      },
+    ],
   },
 ];
 

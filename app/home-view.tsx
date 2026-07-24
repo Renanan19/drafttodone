@@ -17,8 +17,17 @@ import {
   Wand2,
   type LucideIcon,
 } from "lucide-react";
-import { locales, type Locale } from "./blog-content";
+import { blogIndexPath, locales, SITE_URL, type Locale } from "./blog-content";
 import { APP_SIGNUP_URL, homePath, homeUrl, type HomeCopy } from "./home-content";
+import { LATEST_CONTENT_UPDATE } from "./answer-engine-content";
+import { editorialPath, getEditorialPage } from "./seo-pages";
+import {
+  aggregateOffer,
+  itemListNode,
+  softwareRef,
+  speakableSpec,
+  webPageNode,
+} from "./structured-data";
 
 /* -------------------------------------------------------------------------- */
 /*  Logo                                                                      */
@@ -349,15 +358,58 @@ function ShareFooter({ locale, share }: { locale: Locale; share: HomeCopy["share
 export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
   const t = copy;
 
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: t.faq.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
+  const canonicalUrl = homeUrl(locale);
+
+  const homeJsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": `${canonicalUrl}#faq`,
+      inLanguage: locale,
+      speakable: speakableSpec,
+      mainEntity: t.faq.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+    webPageNode({
+      url: canonicalUrl,
+      name: t.meta.title,
+      description: t.meta.description,
+      locale,
+      dateModified: LATEST_CONTENT_UPDATE,
+      image: { url: `${SITE_URL}/opengraph-image`, caption: t.hero.caption },
+      primaryEntity: softwareRef,
+      extra: {
+        // The hero and the comparison table answer "what is it / who is it for /
+        // how is it different" before any scroll.
+        abstract: `${t.hero.h1main} ${t.hero.h1accent} — ${t.hero.sub}`,
+        significantLink: [APP_SIGNUP_URL, `${SITE_URL}${blogIndexPath(locale)}`],
+      },
+    }),
+    // The free tools, as an enumerable list rather than three anchors.
+    itemListNode({
+      id: `${canonicalUrl}#tools`,
+      name: t.tools.h2,
+      description: t.tools.sub,
+      locale,
+      items: t.tools.items.map((item) => ({
+        name: item.title,
+        url: `${SITE_URL}${item.href}`,
+        description: item.text,
+      })),
+    }),
+    // Plans as real Offers: price, currency, validity and what one credit buys.
+    {
+      "@context": "https://schema.org",
+      "@type": "OfferCatalog",
+      "@id": `${canonicalUrl}#plans`,
+      name: t.pricing.h2,
+      inLanguage: locale,
+      itemListElement: aggregateOffer().offers,
+    },
+  ];
 
   /* scroll reveal */
   useEffect(() => {
@@ -391,7 +443,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
     <div lang={locale} className="relative min-h-screen bg-paper">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
 
       {/* Header */}
@@ -772,6 +824,12 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a href={blogPath} className="text-muted transition-colors hover:text-ink">
               {t.nav.blog}
+            </a>
+            <a
+              href={editorialPath(locale)}
+              className="text-muted transition-colors hover:text-ink"
+            >
+              {getEditorialPage().translations[locale].eyebrow}
             </a>
             <a href="/site-map" className="text-muted transition-colors hover:text-ink">
               Sitemap

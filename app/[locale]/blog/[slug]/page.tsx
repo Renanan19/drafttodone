@@ -22,7 +22,16 @@ import {
 import { BlogFooter, BlogHeader, BlogVisual, CtaBand } from "@/app/blog-ui";
 import { homePath, homeUrl } from "@/app/home-content";
 import { seoDescription, seoTitle } from "@/app/seo-metadata";
-import { solutionPages, solutionPath } from "@/app/seo-pages";
+import { commercialSolutionPages, editorialUrl, solutionPath } from "@/app/seo-pages";
+import { ArticleAnswer } from "@/app/article-answer";
+import {
+  imageObject,
+  itemListNode,
+  organizationRef,
+  speakableSpec,
+  webPageNode,
+  websiteRef,
+} from "@/app/structured-data";
 
 export const dynamicParams = false;
 
@@ -140,7 +149,7 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
     .map(({ item }) => item)
     .slice(0, 6);
   const articleTopicTokens = topicTokens([article.title, article.category, ...article.keywords]);
-  const relatedSolutions = solutionPages
+  const relatedSolutions = commercialSolutionPages
     .map((item) => {
       const translation = item.translations[locale];
       const targetTokens = topicTokens([translation.title, translation.h1, ...translation.keywords]);
@@ -165,25 +174,34 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
     postLocales(post).map((item) => [item, postPath(item, post)]),
   ) as Partial<Record<Locale, string>>;
 
+  const canonicalUrl = postUrl(locale, post);
+  const articleImage = imageObject({
+    url: `${canonicalUrl}/opengraph-image`,
+    caption: article.title,
+  });
+
   const jsonLd = [
     {
       "@context": "https://schema.org",
       "@type": "Article",
+      "@id": `${canonicalUrl}#article`,
       headline: article.title,
       description: article.description,
+      image: articleImage,
       author: {
         "@type": "Organization",
         name: BLOG_AUTHOR,
       },
-      publisher: {
-        "@type": "Organization",
-        name: SITE_NAME,
-        url: SITE_URL,
-      },
+      publisher: organizationRef,
+      isPartOf: websiteRef,
+      // How these guides are written, reviewed and sourced — and what the
+      // product deliberately does not claim.
+      publishingPrinciples: editorialUrl(locale),
+      speakable: speakableSpec,
       datePublished: post.date,
       dateModified: post.updated,
       inLanguage: locale,
-      mainEntityOfPage: postUrl(locale, post),
+      mainEntityOfPage: { "@type": "WebPage", "@id": `${canonicalUrl}#webpage` },
       articleSection: article.category,
       keywords: article.keywords.join(", "),
       wordCount,
@@ -230,10 +248,36 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
           "@type": "ListItem",
           position: 3,
           name: article.title,
-          item: postUrl(locale, post),
+          item: canonicalUrl,
         },
       ],
     },
+    webPageNode({
+      url: canonicalUrl,
+      name: article.title,
+      description: article.description,
+      locale,
+      datePublished: post.date,
+      dateModified: post.updated,
+      image: { url: `${canonicalUrl}/opengraph-image`, caption: article.title },
+      primaryEntity: { "@id": `${canonicalUrl}#article` },
+      extra: {
+        articleSection: article.category,
+        keywords: article.keywords.join(", "),
+        timeRequired: `PT${post.readingTime}M`,
+      },
+    }),
+    // Each H2 is anchored and enumerated so a single section can be retrieved,
+    // quoted and linked without the rest of the article.
+    itemListNode({
+      id: `${canonicalUrl}#sections`,
+      name: `${article.title} — ${t.tableOfContents}`,
+      locale,
+      items: article.sections.map((section) => ({
+        name: section.title,
+        url: `${canonicalUrl}#${section.id}`,
+      })),
+    }),
   ];
 
   return (
@@ -286,7 +330,17 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
 
           <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-6 lg:grid-cols-[minmax(0,1fr)_18rem]">
             <div className="min-w-0">
-              <div className="space-y-5 text-xl leading-relaxed text-ink-soft">
+              <ArticleAnswer
+                locale={locale}
+                article={article}
+                updated={post.updated}
+                readingTime={post.readingTime}
+                sourcesHref={
+                  article.sources && article.sources.length > 0 ? "#official-sources" : undefined
+                }
+              />
+
+              <div className="mt-12 space-y-5 text-xl leading-relaxed text-ink-soft">
                 {article.intro.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}

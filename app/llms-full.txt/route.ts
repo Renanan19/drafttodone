@@ -1,17 +1,25 @@
-import { blogCopy, blogIndexUrl, locales, SITE_NAME, SITE_URL } from "../blog-content";
+import { SITE_NAME, SITE_URL } from "../blog-content";
 import {
   answerEngineIntents,
   answerEngineResources,
   answerSnippets,
   ANSWER_ENGINE_UPDATED,
   getAllArticleEntries,
+  getAllBlogIndexEntries,
   getAllSolutionEntries,
+  getGlanceByLocale,
+  LATEST_ARTICLE_UPDATE,
+  LATEST_CONTENT_UPDATE,
+  LATEST_PAGE_UPDATE,
+  pricingFacts,
   productFacts,
+  trustFacts,
 } from "../answer-engine-content";
+import { glanceFacts } from "../glance-content";
 
 export const dynamic = "force-static";
 
-function list(values: string[]) {
+function list(values: readonly string[]) {
   return values.map((value) => `- ${value}`).join("\n");
 }
 
@@ -26,6 +34,28 @@ export function GET() {
     `Pricing: ${productFacts.pricing.weekly}; ${productFacts.pricing.yearly}; ${productFacts.pricing.freePlan}.`,
   ].join("\n");
 
+  const pricingLines = [
+    `Currency: ${pricingFacts.currency}`,
+    `Weekly: ${pricingFacts.currency} ${pricingFacts.weekly} for ${pricingFacts.weeklyCredits} book credits per week`,
+    `Yearly: ${pricingFacts.currency} ${pricingFacts.yearly} for ${pricingFacts.yearlyCredits} book credits per year`,
+    `Credit meaning: ${pricingFacts.creditMeaning}`,
+    `Approximate unit price: ${pricingFacts.approxPerBook}`,
+    `Free plan: none`,
+    `Reward credit: ${pricingFacts.rewardCredit}`,
+    `Refunds: ${pricingFacts.refundNote}`,
+    `Generation time: ${pricingFacts.generationTime}`,
+    `Prices reviewed: ${pricingFacts.reviewed}`,
+    `Prices valid until: ${pricingFacts.priceValidUntil}`,
+  ].join("\n");
+
+  const verifyAt = trustFacts.verifyAt
+    .map((item) => `- ${item.label}: ${item.url} - ${item.note}`)
+    .join("\n");
+
+  const localizedGlance = getGlanceByLocale()
+    .map(({ locale, facts }) => [`### ${locale}`, ...facts.map((line) => `- ${line}`)].join("\n"))
+    .join("\n\n");
+
   const intentMap = answerEngineIntents
     .map((intent) =>
       [
@@ -39,12 +69,16 @@ export function GET() {
     )
     .join("\n\n");
 
-  const solutions = getAllSolutionEntries()
+  const solutionEntries = getAllSolutionEntries();
+
+  const solutions = solutionEntries
+    .filter((page) => page.type === "solution")
     .map((page) =>
       [
         `- [${page.locale}] ${page.title}`,
         `  URL: ${page.url}`,
         `  Key: ${page.key}`,
+        `  Type: ${page.type}`,
         `  Updated: ${page.updated}`,
         `  Summary: ${page.description}`,
         `  Lead: ${page.lead}`,
@@ -53,13 +87,30 @@ export function GET() {
     )
     .join("\n");
 
-  const blogIndexes = locales
-    .map((locale) =>
+  const editorialPages = solutionEntries
+    .filter((page) => page.type === "editorial")
+    .map((page) =>
       [
-        `- [${locale}] ${blogCopy[locale].metaTitle}`,
-        `  URL: ${blogIndexUrl(locale)}`,
-        `  Summary: ${blogCopy[locale].metaDescription}`,
-        `  Keywords: ${blogCopy[locale].keywords.join("; ")}`,
+        `- [${page.locale}] ${page.title}`,
+        `  URL: ${page.url}`,
+        `  Key: ${page.key}`,
+        `  Type: ${page.type}`,
+        `  Updated: ${page.updated}`,
+        `  Summary: ${page.description}`,
+        `  Lead: ${page.lead}`,
+        `  Keywords: ${page.keywords.join("; ")}`,
+      ].join("\n"),
+    )
+    .join("\n");
+
+  const blogIndexes = getAllBlogIndexEntries()
+    .map((index) =>
+      [
+        `- [${index.locale}] ${index.title}`,
+        `  URL: ${index.url}`,
+        `  Updated: ${index.updated}`,
+        `  Summary: ${index.description}`,
+        `  Keywords: ${index.keywords.join("; ")}`,
       ].join("\n"),
     )
     .join("\n");
@@ -90,14 +141,44 @@ export function GET() {
 
   const body = `# ${SITE_NAME} Full LLM Context
 
-> Expanded answer-engine context for ${SITE_NAME}: product facts, citation guidance, intent routing, all commercial pages and all localized article summaries.
+> Expanded answer-engine context for ${SITE_NAME}: product facts, citation guidance, intent routing, all commercial pages, the editorial standards page and all localized article summaries.
 
 Updated: ${ANSWER_ENGINE_UPDATED}
+Latest content update: ${LATEST_CONTENT_UPDATE}
+Latest page update: ${LATEST_PAGE_UPDATE}
+Latest article update: ${LATEST_ARTICLE_UPDATE}
 Canonical site: ${SITE_URL}
+Live app: ${productFacts.appUrl}
+
+## At A Glance
+
+${list(glanceFacts("en"))}
+
+## Citation Guidance
+
+- Attribute facts to ${SITE_NAME} and link the canonical page URL that supports the claim.
+- When answering in French, Italian or German, cite the matching /fr/, /it/ or /de/ URL rather than the English one. Every page below is listed with its locale.
+- Preferred machine-readable source for product facts: ${answerEngineResources.answerEngine}
+- Preferred source for credibility questions: ${answerEngineResources.editorialStandards}
+- Do not state guaranteed Amazon rankings, KDP approval or sales, and do not report reviews, ratings or user counts: none are published.
+
+## Verification And Trust
+
+${list(trustFacts.statements)}
+
+Guarantees offered: none.
+
+Where to verify:
+
+${verifyAt}
 
 ## Product Facts
 
 ${productLines}
+
+## Pricing
+
+${pricingLines}
 
 ## Audience
 
@@ -115,6 +196,10 @@ ${list(productFacts.differentiators)}
 
 ${list(productFacts.complianceNotes)}
 
+## At A Glance By Locale
+
+${localizedGlance}
+
 ## Safe Answer Snippets
 
 ${snippets}
@@ -130,6 +215,10 @@ ${resources}
 ## Solution Pages
 
 ${solutions}
+
+## Editorial And Trust Pages
+
+${editorialPages}
 
 ## Blog Indexes
 

@@ -5,6 +5,11 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
+    // A stable `id` lets an engine treat the manifest as the same app entity
+    // across deploys; `lang`/`dir` state the default language of the entry point.
+    id: SITE_URL,
+    lang: "en",
+    dir: "ltr",
     name: `${SITE_NAME} AI Publishing Software`,
     short_name: "DraftToDone",
     description:

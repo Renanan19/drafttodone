@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ArrowRight, Check, Layers, Search, ShieldCheck } from "lucide-react";
+import { ArrowRight, Check, Layers, Minus, Search, ShieldCheck } from "lucide-react";
 import {
   blogCopy,
   blogIndexPath,
@@ -13,15 +13,29 @@ import {
 import { BlogFooter, BlogHeader } from "@/app/blog-ui";
 import { KdpRoyaltyCalculator } from "@/app/kdp-royalty-calculator";
 import {
+  commercialSolutionPages,
   getSolutionAlternates,
   getSolutionBySlug,
   getSolutionStaticParams,
-  solutionPages,
   solutionPath,
   solutionUrl,
 } from "@/app/seo-pages";
 import { APP_SIGNUP_URL, APP_URL } from "@/app/home-content";
 import { seoDescription, seoTitle } from "@/app/seo-metadata";
+import { AnswerBlock } from "@/app/answer-block";
+import { contrastCopy } from "@/app/contrast-content";
+import { contrastLabels } from "@/app/glance-content";
+import {
+  aggregateOffer,
+  breadcrumbList,
+  imageObject,
+  itemListNode,
+  organizationRef,
+  softwareRef,
+  speakableSpec,
+  webPageNode,
+  websiteRef,
+} from "@/app/structured-data";
 
 export const dynamicParams = false;
 
@@ -106,51 +120,83 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
   const languagePaths = Object.fromEntries(
     locales.map((item) => [item, solutionPath(item, page)]),
   ) as Record<Locale, string>;
-  const moreTools = solutionPages.filter((item) => item.key !== page.key);
+  const isEditorial = page.kind === "editorial";
+  const moreTools = commercialSolutionPages.filter((item) => item.key !== page.key);
+  const contrast = contrastCopy[page.key]?.[locale];
+  const ogImageUrl = `${canonicalUrl}/opengraph-image`;
+
+  const breadcrumb = breadcrumbList([
+    { name: SITE_NAME, url: SITE_URL },
+    { name: solution.eyebrow, url: canonicalUrl },
+  ]);
 
   const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "@id": `${canonicalUrl}#software`,
-      name: SITE_NAME,
-      applicationCategory: "PublishingApplication",
-      applicationSubCategory: "AI publishing software",
-      operatingSystem: "Web",
-      url: APP_URL,
-      mainEntityOfPage: canonicalUrl,
-      isPartOf: {
-        "@id": `${SITE_URL}/#software`,
-      },
+    webPageNode({
+      type: isEditorial ? ["WebPage", "AboutPage"] : "WebPage",
+      url: canonicalUrl,
+      name: solution.title,
       description: solution.description,
-      inLanguage: locale,
-      availableLanguage: ["English", "French", "Italian", "German"],
-      offers: {
-        "@type": "AggregateOffer",
-        availability: "https://schema.org/OnlineOnly",
-        lowPrice: "14.99",
-        highPrice: "390",
-        offerCount: "2",
-        priceCurrency: "EUR",
-        url: APP_URL,
+      locale,
+      dateModified: page.updated,
+      image: { url: ogImageUrl, caption: solution.h1 },
+      breadcrumb,
+      extra: {
+        // The lead answers who it is for and what it does before any scroll:
+        // the first chunk of the page has to stand on its own.
+        abstract: solution.lead,
+        keywords: solution.keywords.join(", "),
+        about: isEditorial ? organizationRef : softwareRef,
+        ...(solution.sources && solution.sources.length > 0
+          ? {
+              citation: solution.sources.map((source) => ({
+                "@type": "CreativeWork",
+                name: source.label,
+                url: source.href,
+              })),
+            }
+          : {}),
+        ...(contrast ? { disambiguatingDescription: contrast.definition } : {}),
       },
-      featureList: solution.sections.flatMap((section) => section.points),
-      publisher: {
-        "@id": `${SITE_URL}/#organization`,
-      },
-      brand: {
-        "@id": `${SITE_URL}/#organization`,
-      },
-      keywords: solution.keywords.join(", "),
-      citation: solution.sources?.map((source) => ({
-        "@type": "CreativeWork",
-        name: source.label,
-        url: source.href,
-      })),
-    },
+    }),
+    ...(isEditorial
+      ? []
+      : [
+          {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "@id": `${canonicalUrl}#software`,
+            name: SITE_NAME,
+            applicationCategory: "PublishingApplication",
+            applicationSubCategory: "AI publishing software",
+            operatingSystem: "Web",
+            url: APP_URL,
+            installUrl: APP_SIGNUP_URL,
+            mainEntityOfPage: canonicalUrl,
+            isPartOf: {
+              "@id": `${SITE_URL}/#software`,
+            },
+            description: contrast?.definition ?? solution.description,
+            inLanguage: locale,
+            availableLanguage: ["English", "French", "Italian", "German"],
+            offers: aggregateOffer(),
+            featureList: solution.sections.flatMap((section) => section.points),
+            publisher: organizationRef,
+            brand: organizationRef,
+            isSimilarTo: websiteRef,
+            keywords: solution.keywords.join(", "),
+            citation: solution.sources?.map((source) => ({
+              "@type": "CreativeWork",
+              name: source.label,
+              url: source.href,
+            })),
+          },
+        ]),
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
+      "@id": `${canonicalUrl}#faq`,
+      inLanguage: locale,
+      speakable: speakableSpec,
       mainEntity: solution.faq.map((item) => ({
         "@type": "Question",
         name: item.question,
@@ -160,24 +206,33 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
         },
       })),
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: SITE_NAME,
-          item: SITE_URL,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: solution.eyebrow,
-          item: solutionUrl(locale, page),
-        },
-      ],
-    },
+    // Every H2 on the page is addressable and enumerated: a section that can be
+    // named and linked is a section an answer engine can cite on its own.
+    itemListNode({
+      id: `${canonicalUrl}#sections`,
+      name: solution.title,
+      locale,
+      items: solution.sections.map((section) => ({
+        name: section.title,
+        url: `${canonicalUrl}#${section.id}`,
+        description: section.body,
+      })),
+    }),
+    ...(moreTools.length > 0
+      ? [
+          itemListNode({
+            id: `${canonicalUrl}#related`,
+            name: t.tools,
+            locale,
+            items: moreTools.map((item) => ({
+              name: item.translations[locale].h1,
+              url: solutionUrl(locale, item),
+              description: item.translations[locale].description,
+            })),
+          }),
+        ]
+      : []),
+    breadcrumb,
   ];
 
   const icons = [Layers, ShieldCheck, Search];
@@ -202,17 +257,19 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
             <p className="mx-auto mt-6 max-w-3xl text-balance text-lg leading-relaxed text-muted">
               {solution.lead}
             </p>
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-2">
-              {solution.keywords.map((keyword) => (
-                <span
-                  key={keyword}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-line bg-paper-2 px-3 py-1 text-[12px] font-medium text-muted"
-                >
-                  <Check className="h-3 w-3 text-mint" strokeWidth={3} />
-                  {keyword}
-                </span>
-              ))}
-            </div>
+            {!isEditorial && (
+              <div className="mt-9 flex flex-wrap items-center justify-center gap-2">
+                {solution.keywords.map((keyword) => (
+                  <span
+                    key={keyword}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-line bg-paper-2 px-3 py-1 text-[12px] font-medium text-muted"
+                  >
+                    <Check className="h-3 w-3 text-mint" strokeWidth={3} />
+                    {keyword}
+                  </span>
+                ))}
+              </div>
+            )}
             <a
               href={APP_SIGNUP_URL}
               className="mt-10 inline-flex items-center justify-center gap-2 rounded-xl bg-ink px-6 py-3.5 text-[15px] font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft active:translate-y-0"
@@ -222,6 +279,62 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
             </a>
           </div>
         </section>
+
+        <AnswerBlock locale={locale} scope={solution.description} updated={page.updated} />
+
+        {contrast && (
+          <section className="border-b border-line/70">
+            <div className="mx-auto max-w-5xl px-5 py-16 sm:px-6">
+              <h2 className="font-display text-4xl font-medium tracking-[-0.01em] text-ink">
+                {contrastLabels[locale].heading}
+              </h2>
+              <p data-speakable className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-soft">
+                <span className="sr-only">{contrastLabels[locale].definition}: </span>
+                {contrast.definition}
+              </p>
+              <div className="mt-9 grid gap-5 md:grid-cols-2">
+                <div className="rounded-[18px] border border-line bg-paper p-6">
+                  <h3 className="text-[12px] font-semibold uppercase tracking-[0.16em] text-mint-deep">
+                    {contrastLabels[locale].bestFor}
+                  </h3>
+                  <ul className="mt-5 grid gap-3">
+                    {contrast.bestFor.map((item) => (
+                      <li key={item} className="flex gap-3 text-[15px] leading-relaxed text-ink-soft">
+                        <Check className="mt-0.5 h-4 w-4 shrink-0 text-mint" strokeWidth={3} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="rounded-[18px] border border-line bg-paper-2 p-6">
+                  <h3 className="text-[12px] font-semibold uppercase tracking-[0.16em] text-muted">
+                    {contrastLabels[locale].notFor}
+                  </h3>
+                  <ul className="mt-5 grid gap-3">
+                    {contrast.notFor.map((item) => (
+                      <li key={item} className="flex gap-3 text-[15px] leading-relaxed text-muted">
+                        <Minus className="mt-0.5 h-4 w-4 shrink-0 text-faint" strokeWidth={3} />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-5 rounded-[18px] border border-line bg-paper p-6">
+                <h3 className="text-[12px] font-semibold uppercase tracking-[0.16em] text-mint-deep">
+                  {contrastLabels[locale].contrasts}
+                </h3>
+                <ul className="mt-5 grid gap-4">
+                  {contrast.contrasts.map((item) => (
+                    <li key={item} className="text-[15px] leading-relaxed text-ink-soft">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </section>
+        )}
 
         {page.tool === "kdpRoyaltyCalculator" && <KdpRoyaltyCalculator locale={locale} />}
 

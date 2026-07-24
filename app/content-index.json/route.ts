@@ -1,82 +1,102 @@
-import {
-  blogCopy,
-  blogIndexUrl,
-  locales,
-  postEntries,
-  posts,
-  postUrl,
-  SITE_NAME,
-  SITE_URL,
-} from "../blog-content";
+import { locales, SITE_NAME, SITE_URL } from "../blog-content";
 import {
   answerEngineResources,
   answerSnippets,
+  ANSWER_ENGINE_UPDATED,
+  getAllArticleEntries,
+  getAllBlogIndexEntries,
+  getAllHomeEntries,
+  getAllSolutionEntries,
   getAnswerEngineData,
+  LATEST_ARTICLE_UPDATE,
+  LATEST_CONTENT_UPDATE,
+  LATEST_PAGE_UPDATE,
+  pricingFacts,
   productFacts,
+  trustFacts,
 } from "../answer-engine-content";
-import { solutionPages, solutionUrl } from "../seo-pages";
 
 export const dynamic = "force-static";
 
+/**
+ * The structured feed plane.
+ *
+ * Answer engines fuse crawled HTML, live page data and structured feeds. This
+ * file is the feed: every public URL on the site, one row each, with a `type`,
+ * a `locale` and a date. Nothing here has to be inferred from prose.
+ */
 export function GET() {
+  const homePages = getAllHomeEntries();
+  const solutionEntries = getAllSolutionEntries();
+  const solutions = solutionEntries.filter((entry) => entry.type === "solution");
+  const editorial = solutionEntries.filter((entry) => entry.type === "editorial");
+  const blogIndexes = getAllBlogIndexEntries();
+  const articles = getAllArticleEntries();
+
   const body = {
     site: {
       name: SITE_NAME,
       url: SITE_URL,
       description:
         "AI publishing software and multilingual SEO knowledge base for KDP books, manuscripts, covers, metadata and catalog operations.",
-      resources: {
-        sitemap: answerEngineResources.sitemap,
-        htmlSitemap: answerEngineResources.htmlSitemap,
-        robots: answerEngineResources.robots,
-        rss: answerEngineResources.rss,
-        llms: answerEngineResources.llms,
-        llmsFull: answerEngineResources.llmsFull,
-        ai: answerEngineResources.ai,
-        answerEngine: answerEngineResources.answerEngine,
-      },
+      locales,
+      updated: ANSWER_ENGINE_UPDATED,
+      dateModified: LATEST_CONTENT_UPDATE,
+      resources: answerEngineResources,
+    },
+    freshness: {
+      answerEngineUpdated: ANSWER_ENGINE_UPDATED,
+      latestContentUpdate: LATEST_CONTENT_UPDATE,
+      latestPageUpdate: LATEST_PAGE_UPDATE,
+      latestArticleUpdate: LATEST_ARTICLE_UPDATE,
+      priceReviewed: pricingFacts.reviewed,
+    },
+    pricing: pricingFacts,
+    trust: {
+      noReviewsPublished: trustFacts.noReviewsPublished,
+      noRatingMarkup: trustFacts.noRatingMarkup,
+      noUserCountsPublished: trustFacts.noUserCountsPublished,
+      guarantees: trustFacts.guarantees,
+      editorialStandardsUrl: trustFacts.editorialStandardsUrl,
+      sourceCodeUrl: trustFacts.sourceCodeUrl,
+      statements: trustFacts.statements,
+      verifyAt: trustFacts.verifyAt,
+      localizedEditorialStandards: trustFacts.localizedEditorialStandards,
+    },
+    counts: {
+      homePages: homePages.length,
+      solutionPages: solutions.length,
+      editorialPages: editorial.length,
+      blogIndexes: blogIndexes.length,
+      articles: articles.length,
+      total:
+        homePages.length +
+        solutions.length +
+        editorial.length +
+        blogIndexes.length +
+        articles.length,
     },
     answerEngine: {
       product: productFacts,
       snippets: answerSnippets,
       map: getAnswerEngineData(),
     },
-    solutionPages: solutionPages.flatMap((page) =>
-      locales.map((locale) => ({
-        type: "solution",
-        key: page.key,
-        locale,
-        title: page.translations[locale].title,
-        description: page.translations[locale].description,
-        h1: page.translations[locale].h1,
-        lead: page.translations[locale].lead,
-        keywords: page.translations[locale].keywords,
-        url: solutionUrl(locale, page),
-        updated: page.updated,
-      })),
-    ),
-    blogIndexes: locales.map((locale) => ({
-      type: "blog-index",
-      locale,
-      title: blogCopy[locale].metaTitle,
-      description: blogCopy[locale].metaDescription,
-      keywords: blogCopy[locale].keywords,
-      url: blogIndexUrl(locale),
-    })),
-    articles: posts.flatMap((post) =>
-      postEntries(post).map(({ locale, article }) => ({
-        type: "article",
-        key: post.key,
-        locale,
-        title: article.title,
-        description: article.description,
-        category: article.category,
-        keywords: article.keywords,
-        url: postUrl(locale, post),
-        published: post.date,
-        updated: post.updated,
-        readingTimeMinutes: post.readingTime,
-      })),
+    homePages,
+    solutionPages: solutions,
+    editorialPages: editorial,
+    blogIndexes,
+    articles,
+    /** Every entry above, flattened, for consumers that want one dated list. */
+    entries: [...homePages, ...solutions, ...editorial, ...blogIndexes, ...articles].map(
+      (entry) => ({
+        type: entry.type,
+        locale: entry.locale,
+        title: entry.title,
+        description: entry.description,
+        url: entry.url,
+        updated: entry.updated,
+        dateModified: entry.dateModified,
+      }),
     ),
   };
 

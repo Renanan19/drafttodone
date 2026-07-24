@@ -9,7 +9,12 @@ import {
   type BlogPost,
   type Locale,
 } from "./blog-content";
-import { solutionPages, solutionPath } from "./seo-pages";
+import {
+  commercialSolutionPages,
+  editorialPath,
+  getEditorialPage,
+  solutionPath,
+} from "./seo-pages";
 import { APP_SIGNUP_URL, homePath } from "./home-content";
 
 // A post may not exist in every locale; missing locales fall back to the blog index.
@@ -110,7 +115,7 @@ export function BlogFooter({ locale }: { locale: Locale }) {
           <span className="text-[12px] font-semibold uppercase tracking-[0.18em] text-mint-deep">
             {t.tools}
           </span>
-          {solutionPages.map((page) => (
+          {commercialSolutionPages.map((page) => (
             <a
               key={page.key}
               href={solutionPath(locale, page)}
@@ -132,6 +137,12 @@ export function BlogFooter({ locale }: { locale: Locale }) {
             </a>
             <a href={homePath(locale)} className="text-muted transition-colors hover:text-ink">
               {t.home}
+            </a>
+            <a
+              href={editorialPath(locale)}
+              className="text-muted transition-colors hover:text-ink"
+            >
+              {getEditorialPage().translations[locale].eyebrow}
             </a>
             <a
               href="/site-map"

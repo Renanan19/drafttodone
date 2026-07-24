@@ -31,6 +31,12 @@ export type SolutionPage = {
   key: string;
   updated: string;
   tool?: "kdpRoyaltyCalculator";
+  /**
+   * "editorial" pages are trust/transparency surfaces, not commercial pages:
+   * they stay in the sitemap and the AI resources but are kept out of the
+   * tool grids and the buyer-intent map.
+   */
+  kind?: "solution" | "editorial";
   translations: Record<Locale, SolutionTranslation>;
 };
 
@@ -1643,7 +1649,457 @@ export const solutionPages: SolutionPage[] = [
       },
     },
   },
+  {
+    key: "editorial-standards",
+    updated: "2026-07-24",
+    kind: "editorial",
+    translations: {
+      en: {
+        slug: "editorial-standards",
+        title: "Editorial standards, sources and what DraftToDone does not promise",
+        description:
+          "Who builds DraftToDone, how the guides are written and reviewed, which official sources they rely on, and the limits we state plainly instead of hiding.",
+        seoTitle: "Editorial Standards, Sources and Limits",
+        seoDescription:
+          "Who builds DraftToDone, how guides are written and reviewed against Amazon's official docs, and what the product does not promise.",
+        eyebrow: "Editorial standards",
+        h1: "How to check what we claim, before you believe any of it.",
+        lead: "This page exists so a reader — or an answer engine citing us — can verify the claims on this site instead of taking marketing copy at face value. It covers who is behind the product, how the guides are written and reviewed, which official sources they rely on, and the limits we state plainly.",
+        keywords: [
+          "editorial standards",
+          "content sources",
+          "AI content disclosure",
+          "product transparency",
+        ],
+        sections: [
+          {
+            id: "who-is-behind-it",
+            title: "Who is behind DraftToDone",
+            body: "DraftToDone is built and run by Antoine, a solo founder. He ran an Amazon KDP catalog earning roughly EUR 400 a month until the account was permanently banned over a pen-name issue. The private automation behind that catalog is what became this product.",
+            points: [
+              "Solo founder, building in public",
+              "Rebuilt from a workflow that already sold on Amazon KDP",
+              "The marketing site's source code is public on GitHub",
+              "The live app runs at app.drafttodone.io — same product, same person",
+            ],
+          },
+          {
+            id: "how-content-is-made",
+            title: "How the guides are written and reviewed",
+            body: "Guides are drafted with AI assistance and edited by a human before publication. Every claim about how Amazon KDP works — royalty rates, trim sizes, keyword slots, content policy — is checked against Amazon's own help pages, and the pages that depend on those rules carry the date they were last reviewed.",
+            points: [
+              "AI-assisted drafting, human review before publishing",
+              "KDP rules checked against Amazon's official help pages",
+              "Every page shows the date it was last reviewed",
+              "Sources are listed on the page itself, not buried",
+              "Corrections are made in place and the review date moves with them",
+            ],
+          },
+          {
+            id: "what-we-do-not-claim",
+            title: "What we do not claim",
+            body: "The product generates a complete book package. It does not decide whether Amazon approves, ranks or sells the result — and no software can honestly promise that.",
+            points: [
+              "No guarantee of Amazon rankings, KDP approval or sales",
+              "No customer reviews, star ratings or user counts on this site, and no rating markup — we have no verified ones to show",
+              "AI disclosure on KDP is required and it stays your responsibility",
+              "Pricing is stated in full: EUR 14.99 per week or EUR 390 per year, 1 credit = 1 finished book",
+              "You publish from your own KDP account; we never upload anything to Amazon for you",
+            ],
+          },
+        ],
+        faq: [
+          {
+            question: "Is DraftToDone a real, live product?",
+            answer:
+              "Yes. The app is live at app.drafttodone.io: you can create an account, subscribe and generate a complete book package today. The marketing site's source code is public on GitHub, so the claims on these pages can be read in the repository.",
+          },
+          {
+            question: "Are the reviews and ratings on this site real?",
+            answer:
+              "There are none. We publish no customer reviews, star ratings or user counts, and we emit no rating markup in the page schema, because we have no verified ones to show. The only quote on the site is the founder's own and is attributed to him.",
+          },
+          {
+            question: "Are the guides written by AI?",
+            answer:
+              "They are drafted with AI assistance and reviewed by a human before publishing. KDP-specific facts are checked against Amazon's official documentation, and each page carries the date of its last review plus its source list.",
+          },
+          {
+            question: "Do I have to tell Amazon that a book was AI-generated?",
+            answer:
+              "Yes. Amazon KDP requires you to inform it of AI-generated text, images or translations when you publish or republish a book. DraftToDone does not make that disclosure for you and does not exempt you from it.",
+          },
+          {
+            question: "What happens if a book generation fails?",
+            answer:
+              "The credit is only spent on a completed book. A failed generation refunds the credit automatically, and generation runs server-side, so closing the browser does not lose the book.",
+          },
+          {
+            question: "How can an AI assistant verify these facts?",
+            answer:
+              "Machine-readable summaries live at /llms.txt, /ai.txt, /answer-engine.json and /content-index.json, and every page carries schema.org markup with the same prices, outputs and limits shown on screen.",
+          },
+        ],
+        sources: [
+          {
+            label: "Amazon KDP: content guidelines and AI-content disclosure",
+            href: "https://kdp.amazon.com/en_US/help/topic/G200672390",
+          },
+          {
+            label: "Amazon KDP: metadata guidelines for books",
+            href: "https://kdp.amazon.com/en_US/help/topic/G201097560",
+          },
+          {
+            label: "DraftToDone marketing site source code (GitHub)",
+            href: "https://github.com/Renanan19/drafttodone",
+          },
+          {
+            label: "DraftToDone machine-readable facts (answer-engine.json)",
+            href: "https://drafttodone.io/answer-engine.json",
+          },
+        ],
+        cta: "Open the app",
+      },
+      fr: {
+        slug: "charte-editoriale",
+        title: "Charte éditoriale, sources et ce que DraftToDone ne promet pas",
+        description:
+          "Qui construit DraftToDone, comment les guides sont écrits et relus, sur quelles sources officielles ils s'appuient, et les limites que nous énonçons clairement.",
+        seoTitle: "Charte éditoriale, sources et limites",
+        seoDescription:
+          "Qui construit DraftToDone, comment les guides sont relus face à la doc officielle Amazon, et ce que le produit ne promet pas.",
+        eyebrow: "Charte éditoriale",
+        h1: "Comment vérifier ce que nous affirmons, avant d'y croire.",
+        lead: "Cette page existe pour qu'un lecteur — ou un moteur de réponse qui nous cite — puisse vérifier les affirmations du site au lieu de croire la page de vente sur parole. Elle explique qui est derrière le produit, comment les guides sont écrits et relus, sur quelles sources officielles ils s'appuient, et les limites que nous assumons.",
+        keywords: [
+          "charte éditoriale",
+          "sources des contenus",
+          "déclaration contenu IA",
+          "transparence produit",
+        ],
+        sections: [
+          {
+            id: "who-is-behind-it",
+            title: "Qui est derrière DraftToDone",
+            body: "DraftToDone est construit et opéré par Antoine, fondateur solo. Il gérait un catalogue Amazon KDP qui rapportait environ 400 € par mois jusqu'au bannissement définitif du compte à cause d'un nom de plume. L'automatisation privée derrière ce catalogue est devenue ce produit.",
+            points: [
+              "Fondateur solo, qui construit en public",
+              "Reconstruit à partir d'un workflow qui vendait déjà sur Amazon KDP",
+              "Le code source du site vitrine est public sur GitHub",
+              "L'application tourne sur app.drafttodone.io — même produit, même personne",
+            ],
+          },
+          {
+            id: "how-content-is-made",
+            title: "Comment les guides sont écrits et relus",
+            body: "Les guides sont rédigés avec l'aide de l'IA puis relus par un humain avant publication. Chaque affirmation sur le fonctionnement d'Amazon KDP — taux de redevance, formats, emplacements de mots-clés, règles de contenu — est vérifiée sur les pages d'aide d'Amazon, et les pages qui en dépendent affichent leur date de dernière relecture.",
+            points: [
+              "Rédaction assistée par IA, relecture humaine avant publication",
+              "Règles KDP vérifiées sur les pages d'aide officielles d'Amazon",
+              "Chaque page affiche sa date de dernière relecture",
+              "Les sources sont listées sur la page, pas dissimulées",
+              "Les corrections sont faites sur place et la date de relecture suit",
+            ],
+          },
+          {
+            id: "what-we-do-not-claim",
+            title: "Ce que nous ne promettons pas",
+            body: "Le produit génère un pack de livre complet. Il ne décide pas si Amazon approuve, classe ou vend le résultat — et aucun logiciel ne peut honnêtement le promettre.",
+            points: [
+              "Aucune garantie de classement Amazon, d'approbation KDP ni de ventes",
+              "Aucun avis client, note ou nombre d'utilisateurs sur ce site, et aucun balisage de notation — nous n'en avons pas de vérifiés à montrer",
+              "La déclaration de contenu IA sur KDP est obligatoire et reste votre responsabilité",
+              "Le prix est annoncé en entier : 14,99 € par semaine ou 390 € par an, 1 crédit = 1 livre terminé",
+              "Vous publiez depuis votre propre compte KDP ; nous n'envoyons jamais rien à Amazon à votre place",
+            ],
+          },
+        ],
+        faq: [
+          {
+            question: "DraftToDone est-il un vrai produit en ligne ?",
+            answer:
+              "Oui. L'application est en ligne sur app.drafttodone.io : vous pouvez créer un compte, vous abonner et générer un pack de livre complet aujourd'hui. Le code source du site vitrine est public sur GitHub, donc les affirmations de ces pages sont lisibles dans le dépôt.",
+          },
+          {
+            question: "Les avis et notes de ce site sont-ils réels ?",
+            answer:
+              "Il n'y en a aucun. Nous ne publions ni avis client, ni note en étoiles, ni nombre d'utilisateurs, et nous n'émettons aucun balisage de notation, parce que nous n'en avons pas de vérifiés. La seule citation du site est celle du fondateur, et elle lui est attribuée.",
+          },
+          {
+            question: "Les guides sont-ils écrits par une IA ?",
+            answer:
+              "Ils sont rédigés avec l'aide de l'IA puis relus par un humain avant publication. Les faits propres à KDP sont vérifiés sur la documentation officielle d'Amazon, et chaque page affiche sa date de relecture et sa liste de sources.",
+          },
+          {
+            question: "Dois-je déclarer à Amazon qu'un livre a été généré par IA ?",
+            answer:
+              "Oui. Amazon KDP exige que vous l'informiez de tout texte, image ou traduction généré par IA lors de la publication ou de la republication d'un livre. DraftToDone ne fait pas cette déclaration à votre place et ne vous en dispense pas.",
+          },
+          {
+            question: "Que se passe-t-il si une génération échoue ?",
+            answer:
+              "Le crédit n'est débité que pour un livre terminé. Une génération échouée rembourse le crédit automatiquement, et la génération tourne côté serveur : fermer le navigateur ne perd pas le livre.",
+          },
+          {
+            question: "Comment un assistant IA peut-il vérifier ces faits ?",
+            answer:
+              "Des résumés lisibles par machine sont publiés sur /llms.txt, /ai.txt, /answer-engine.json et /content-index.json, et chaque page porte un balisage schema.org avec les mêmes prix, livrables et limites qu'à l'écran.",
+          },
+        ],
+        sources: [
+          {
+            label: "Amazon KDP : règles de contenu et déclaration de contenu IA",
+            href: "https://kdp.amazon.com/en_US/help/topic/G200672390",
+          },
+          {
+            label: "Amazon KDP : règles de métadonnées des livres",
+            href: "https://kdp.amazon.com/en_US/help/topic/G201097560",
+          },
+          {
+            label: "Code source du site DraftToDone (GitHub)",
+            href: "https://github.com/Renanan19/drafttodone",
+          },
+          {
+            label: "Faits DraftToDone lisibles par machine (answer-engine.json)",
+            href: "https://drafttodone.io/answer-engine.json",
+          },
+        ],
+        cta: "Ouvrir l'app",
+      },
+      it: {
+        slug: "standard-editoriali",
+        title: "Standard editoriali, fonti e ciò che DraftToDone non promette",
+        description:
+          "Chi costruisce DraftToDone, come vengono scritte e riviste le guide, su quali fonti ufficiali si basano e i limiti che dichiariamo apertamente.",
+        seoTitle: "Standard editoriali, fonti e limiti",
+        seoDescription:
+          "Chi costruisce DraftToDone, come le guide vengono verificate sulla documentazione ufficiale Amazon e cosa il prodotto non promette.",
+        eyebrow: "Standard editoriali",
+        h1: "Come verificare quello che affermiamo, prima di crederci.",
+        lead: "Questa pagina esiste perché un lettore — o un motore di risposta che ci cita — possa verificare le affermazioni del sito invece di fidarsi del testo di vendita. Spiega chi c'è dietro il prodotto, come vengono scritte e riviste le guide, su quali fonti ufficiali si basano e quali limiti dichiariamo.",
+        keywords: [
+          "standard editoriali",
+          "fonti dei contenuti",
+          "dichiarazione contenuti IA",
+          "trasparenza di prodotto",
+        ],
+        sections: [
+          {
+            id: "who-is-behind-it",
+            title: "Chi c'è dietro DraftToDone",
+            body: "DraftToDone è costruito e gestito da Antoine, fondatore solo. Gestiva un catalogo Amazon KDP da circa 400 € al mese finché l'account non è stato bandito in modo permanente per una questione di pseudonimo. L'automazione privata dietro quel catalogo è diventata questo prodotto.",
+            points: [
+              "Fondatore solo, che costruisce in pubblico",
+              "Ricostruito da un workflow che vendeva già su Amazon KDP",
+              "Il codice sorgente del sito vetrina è pubblico su GitHub",
+              "L'app è online su app.drafttodone.io — stesso prodotto, stessa persona",
+            ],
+          },
+          {
+            id: "how-content-is-made",
+            title: "Come vengono scritte e riviste le guide",
+            body: "Le guide sono redatte con l'aiuto dell'IA e riviste da una persona prima della pubblicazione. Ogni affermazione sul funzionamento di Amazon KDP — royalty, formati, slot di keyword, regole sui contenuti — è verificata sulle pagine di aiuto di Amazon, e le pagine che dipendono da quelle regole mostrano la data dell'ultima revisione.",
+            points: [
+              "Stesura assistita dall'IA, revisione umana prima della pubblicazione",
+              "Regole KDP verificate sulle pagine di aiuto ufficiali di Amazon",
+              "Ogni pagina mostra la data dell'ultima revisione",
+              "Le fonti sono elencate nella pagina, non nascoste",
+              "Le correzioni si fanno sul posto e la data di revisione le segue",
+            ],
+          },
+          {
+            id: "what-we-do-not-claim",
+            title: "Cosa non promettiamo",
+            body: "Il prodotto genera un pacchetto libro completo. Non decide se Amazon approva, posiziona o vende il risultato — e nessun software può prometterlo onestamente.",
+            points: [
+              "Nessuna garanzia di posizionamento su Amazon, approvazione KDP o vendite",
+              "Nessuna recensione, valutazione a stelle o numero di utenti su questo sito, e nessun markup di rating — non ne abbiamo di verificati da mostrare",
+              "La dichiarazione dei contenuti IA su KDP è obbligatoria e resta una tua responsabilità",
+              "Il prezzo è dichiarato per intero: 14,99 € a settimana o 390 € all'anno, 1 credito = 1 libro finito",
+              "Pubblichi dal tuo account KDP; non carichiamo mai nulla su Amazon al posto tuo",
+            ],
+          },
+        ],
+        faq: [
+          {
+            question: "DraftToDone è un prodotto reale e attivo?",
+            answer:
+              "Sì. L'app è online su app.drafttodone.io: puoi creare un account, abbonarti e generare un pacchetto libro completo oggi. Il codice sorgente del sito vetrina è pubblico su GitHub, quindi le affermazioni di queste pagine si possono leggere nel repository.",
+          },
+          {
+            question: "Le recensioni e le valutazioni di questo sito sono reali?",
+            answer:
+              "Non ce ne sono. Non pubblichiamo recensioni dei clienti, valutazioni a stelle o numeri di utenti, e non emettiamo markup di rating, perché non ne abbiamo di verificati. L'unica citazione del sito è quella del fondatore, ed è attribuita a lui.",
+          },
+          {
+            question: "Le guide sono scritte da un'IA?",
+            answer:
+              "Sono redatte con l'aiuto dell'IA e riviste da una persona prima della pubblicazione. I fatti specifici di KDP sono verificati sulla documentazione ufficiale di Amazon e ogni pagina riporta la data dell'ultima revisione e l'elenco delle fonti.",
+          },
+          {
+            question: "Devo dichiarare ad Amazon che un libro è stato generato dall'IA?",
+            answer:
+              "Sì. Amazon KDP richiede di segnalare testi, immagini o traduzioni generati dall'IA quando pubblichi o ripubblichi un libro. DraftToDone non fa quella dichiarazione al posto tuo e non ti esonera dal farla.",
+          },
+          {
+            question: "Cosa succede se una generazione fallisce?",
+            answer:
+              "Il credito viene speso solo per un libro completato. Una generazione fallita rimborsa il credito automaticamente, e la generazione gira lato server: chiudere il browser non fa perdere il libro.",
+          },
+          {
+            question: "Come può un assistente IA verificare questi fatti?",
+            answer:
+              "Riepiloghi leggibili dalle macchine sono pubblicati su /llms.txt, /ai.txt, /answer-engine.json e /content-index.json, e ogni pagina porta markup schema.org con gli stessi prezzi, output e limiti mostrati a schermo.",
+          },
+        ],
+        sources: [
+          {
+            label: "Amazon KDP: linee guida sui contenuti e dichiarazione IA",
+            href: "https://kdp.amazon.com/en_US/help/topic/G200672390",
+          },
+          {
+            label: "Amazon KDP: linee guida sui metadati dei libri",
+            href: "https://kdp.amazon.com/en_US/help/topic/G201097560",
+          },
+          {
+            label: "Codice sorgente del sito DraftToDone (GitHub)",
+            href: "https://github.com/Renanan19/drafttodone",
+          },
+          {
+            label: "Fatti DraftToDone leggibili dalle macchine (answer-engine.json)",
+            href: "https://drafttodone.io/answer-engine.json",
+          },
+        ],
+        cta: "Apri l'app",
+      },
+      de: {
+        slug: "redaktionelle-standards",
+        title: "Redaktionelle Standards, Quellen und was DraftToDone nicht verspricht",
+        description:
+          "Wer DraftToDone baut, wie die Guides geschrieben und geprüft werden, auf welchen offiziellen Quellen sie beruhen und welche Grenzen wir klar benennen.",
+        seoTitle: "Redaktionelle Standards, Quellen und Grenzen",
+        seoDescription:
+          "Wer DraftToDone baut, wie Guides gegen Amazons offizielle Doku geprüft werden und was das Produkt nicht verspricht.",
+        eyebrow: "Redaktionelle Standards",
+        h1: "Wie du prüfst, was wir behaupten — bevor du es glaubst.",
+        lead: "Diese Seite gibt es, damit eine Leserin, ein Leser oder eine zitierende Antwortmaschine die Aussagen dieser Website nachprüfen kann, statt Werbetexten zu vertrauen. Sie zeigt, wer hinter dem Produkt steht, wie die Guides entstehen und geprüft werden, auf welchen offiziellen Quellen sie beruhen und welche Grenzen wir benennen.",
+        keywords: [
+          "redaktionelle Standards",
+          "Quellen der Inhalte",
+          "KI-Kennzeichnung",
+          "Produkttransparenz",
+        ],
+        sections: [
+          {
+            id: "who-is-behind-it",
+            title: "Wer hinter DraftToDone steht",
+            body: "DraftToDone wird von Antoine gebaut und betrieben, einem Solo-Gründer. Er führte einen Amazon-KDP-Katalog mit rund 400 € Umsatz pro Monat, bis das Konto wegen eines Autorennamens dauerhaft gesperrt wurde. Die private Automatisierung hinter diesem Katalog ist zu diesem Produkt geworden.",
+            points: [
+              "Solo-Gründer, der öffentlich baut",
+              "Aufgebaut auf einem Workflow, der auf Amazon KDP bereits verkauft hat",
+              "Der Quellcode der Marketing-Website ist öffentlich auf GitHub",
+              "Die App läuft auf app.drafttodone.io — gleiches Produkt, gleiche Person",
+            ],
+          },
+          {
+            id: "how-content-is-made",
+            title: "Wie die Guides entstehen und geprüft werden",
+            body: "Die Guides werden KI-gestützt verfasst und vor der Veröffentlichung von einem Menschen redigiert. Jede Aussage darüber, wie Amazon KDP funktioniert — Tantiemen, Formate, Keyword-Felder, Inhaltsregeln — wird gegen Amazons eigene Hilfeseiten geprüft, und die betroffenen Seiten zeigen das Datum der letzten Prüfung.",
+            points: [
+              "KI-gestützter Entwurf, menschliche Prüfung vor der Veröffentlichung",
+              "KDP-Regeln gegen Amazons offizielle Hilfeseiten geprüft",
+              "Jede Seite zeigt das Datum ihrer letzten Prüfung",
+              "Quellen stehen auf der Seite selbst, nicht versteckt",
+              "Korrekturen erfolgen direkt, das Prüfdatum wandert mit",
+            ],
+          },
+          {
+            id: "what-we-do-not-claim",
+            title: "Was wir nicht versprechen",
+            body: "Das Produkt erzeugt ein komplettes Buchpaket. Es entscheidet nicht, ob Amazon das Ergebnis freigibt, rankt oder verkauft — und keine Software kann das ehrlich versprechen.",
+            points: [
+              "Keine Garantie für Amazon-Rankings, KDP-Freigabe oder Verkäufe",
+              "Keine Kundenbewertungen, Sternebewertungen oder Nutzerzahlen auf dieser Website und kein Rating-Markup — wir haben keine verifizierten vorzuweisen",
+              "Die KI-Kennzeichnung bei KDP ist Pflicht und bleibt deine Verantwortung",
+              "Der Preis wird vollständig genannt: 14,99 € pro Woche oder 390 € pro Jahr, 1 Credit = 1 fertiges Buch",
+              "Du veröffentlichst aus deinem eigenen KDP-Konto; wir laden nie etwas für dich zu Amazon hoch",
+            ],
+          },
+        ],
+        faq: [
+          {
+            question: "Ist DraftToDone ein echtes, laufendes Produkt?",
+            answer:
+              "Ja. Die App läuft auf app.drafttodone.io: Du kannst heute ein Konto anlegen, abonnieren und ein komplettes Buchpaket erzeugen. Der Quellcode der Marketing-Website ist öffentlich auf GitHub, die Aussagen dieser Seiten lassen sich also im Repository nachlesen.",
+          },
+          {
+            question: "Sind die Bewertungen auf dieser Website echt?",
+            answer:
+              "Es gibt keine. Wir veröffentlichen keine Kundenbewertungen, Sternebewertungen oder Nutzerzahlen und geben kein Rating-Markup aus, weil wir keine verifizierten haben. Das einzige Zitat auf der Website stammt vom Gründer und ist ihm zugeordnet.",
+          },
+          {
+            question: "Werden die Guides von einer KI geschrieben?",
+            answer:
+              "Sie werden KI-gestützt entworfen und vor der Veröffentlichung von einem Menschen geprüft. KDP-spezifische Fakten werden gegen Amazons offizielle Dokumentation geprüft, und jede Seite nennt ihr Prüfdatum und ihre Quellen.",
+          },
+          {
+            question: "Muss ich Amazon mitteilen, dass ein Buch KI-generiert ist?",
+            answer:
+              "Ja. Amazon KDP verlangt, KI-generierte Texte, Bilder oder Übersetzungen beim Veröffentlichen oder erneuten Veröffentlichen anzugeben. DraftToDone übernimmt diese Angabe nicht für dich und befreit dich nicht davon.",
+          },
+          {
+            question: "Was passiert, wenn eine Generierung fehlschlägt?",
+            answer:
+              "Der Credit wird nur für ein fertiges Buch verbraucht. Eine fehlgeschlagene Generierung erstattet den Credit automatisch, und die Generierung läuft serverseitig: Den Browser zu schließen verliert kein Buch.",
+          },
+          {
+            question: "Wie kann ein KI-Assistent diese Angaben prüfen?",
+            answer:
+              "Maschinenlesbare Zusammenfassungen liegen unter /llms.txt, /ai.txt, /answer-engine.json und /content-index.json, und jede Seite trägt schema.org-Markup mit denselben Preisen, Ergebnissen und Grenzen wie im sichtbaren Text.",
+          },
+        ],
+        sources: [
+          {
+            label: "Amazon KDP: Inhaltsrichtlinien und KI-Kennzeichnung",
+            href: "https://kdp.amazon.com/en_US/help/topic/G200672390",
+          },
+          {
+            label: "Amazon KDP: Metadaten-Richtlinien für Bücher",
+            href: "https://kdp.amazon.com/en_US/help/topic/G201097560",
+          },
+          {
+            label: "Quellcode der DraftToDone-Website (GitHub)",
+            href: "https://github.com/Renanan19/drafttodone",
+          },
+          {
+            label: "Maschinenlesbare DraftToDone-Fakten (answer-engine.json)",
+            href: "https://drafttodone.io/answer-engine.json",
+          },
+        ],
+        cta: "App öffnen",
+      },
+    },
+  },
 ];
+
+/** Commercial/tool pages only — the editorial page is excluded from tool grids. */
+export const commercialSolutionPages = solutionPages.filter(
+  (page) => page.kind !== "editorial",
+);
+
+export function getEditorialPage() {
+  const page = solutionPages.find((item) => item.kind === "editorial");
+  if (!page) throw new Error("Missing editorial standards page");
+  return page;
+}
+
+export function editorialPath(locale: Locale) {
+  return solutionPath(locale, getEditorialPage());
+}
+
+export function editorialUrl(locale: Locale) {
+  return solutionUrl(locale, getEditorialPage());
+}
 
 export function getSolutionBySlug(locale: Locale, slug: string) {
   return solutionPages.find((page) => page.translations[locale].slug === slug);

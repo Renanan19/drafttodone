@@ -14,7 +14,12 @@ import {
   solutionPages,
   solutionUrl,
 } from "./seo-pages";
-import { ANSWER_ENGINE_UPDATED, answerEngineResources } from "./answer-engine-content";
+import {
+  ANSWER_ENGINE_UPDATED,
+  answerEngineResources,
+  LATEST_CONTENT_UPDATE,
+  latestArticleUpdate,
+} from "./answer-engine-content";
 import { getHomeAlternates, homeUrl } from "./home-content";
 
 export const dynamic = "force-static";
@@ -33,14 +38,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...locales.map((locale) => ({
       url: homeUrl(locale),
-      lastModified: new Date("2026-06-12"),
+      lastModified: new Date(LATEST_CONTENT_UPDATE),
       changeFrequency: "monthly" as const,
       priority: locale === "en" ? 1 : 0.9,
       alternates: { languages: homeAlternates },
     })),
     {
       url: `${SITE_URL}/site-map`,
-      lastModified: new Date("2026-06-12"),
+      lastModified: new Date(LATEST_CONTENT_UPDATE),
       changeFrequency: "weekly",
       priority: 0.7,
     },
@@ -74,6 +79,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.4,
     },
+    {
+      url: answerEngineResources.rss,
+      lastModified: new Date(latestArticleUpdate("en")),
+      changeFrequency: "weekly",
+      priority: 0.4,
+    },
+    // Includes the editorial standards page: it is part of solutionPages and
+    // must stay crawlable, just at a lower priority than the commercial pages.
     ...solutionPages.flatMap((page) => {
       const alternates = absoluteAlternates(getSolutionAlternates(page));
 
@@ -81,7 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: solutionUrl(locale, page),
         lastModified: new Date(page.updated),
         changeFrequency: "weekly" as const,
-        priority: 0.95,
+        priority: page.kind === "editorial" ? 0.6 : 0.95,
         alternates: {
           languages: alternates,
         },
@@ -89,7 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
     ...locales.map((locale) => ({
       url: blogIndexUrl(locale),
-      lastModified: new Date("2026-06-12"),
+      lastModified: new Date(latestArticleUpdate(locale)),
       changeFrequency: "weekly" as const,
       priority: 0.9,
       alternates: {
