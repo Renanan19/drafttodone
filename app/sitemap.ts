@@ -21,6 +21,7 @@ import {
   latestArticleUpdate,
 } from "./answer-engine-content";
 import { getHomeAlternates, homeUrl } from "./home-content";
+import { playbookPath } from "./playbook-content";
 
 export const dynamic = "force-static";
 
@@ -34,6 +35,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogAlternates = absoluteAlternates(getBlogIndexAlternates());
 
   const homeAlternates = absoluteAlternates(getHomeAlternates());
+
+  const playbookAlternates = absoluteAlternates(
+    Object.fromEntries(locales.map((locale) => [locale, playbookPath(locale)])),
+  );
 
   return [
     ...locales.map((locale) => ({
@@ -100,6 +105,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       }));
     }),
+    // The lead magnet: fully readable, so it earns its own ranking rather than
+    // sitting behind the email form it asks for.
+    ...locales.map((locale) => ({
+      url: `${SITE_URL}${playbookPath(locale)}`,
+      lastModified: new Date("2026-07-26"),
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+      alternates: { languages: playbookAlternates },
+    })),
     ...locales.map((locale) => ({
       url: blogIndexUrl(locale),
       lastModified: new Date(latestArticleUpdate(locale)),
