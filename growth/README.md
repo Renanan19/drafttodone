@@ -6,6 +6,8 @@ DraftToDone. Started 2026-07-26 at **€0 MRR, 2 lifetime customers**.
 | File | What it is |
 |------|-----------|
 | [`CADENCE.md`](./CADENCE.md) | **Open this every Monday.** The weekly rhythm, the 90 days, the kill criteria. |
+| [`SCHEDULE-WEEK-1-4.md`](./SCHEDULE-WEEK-1-4.md) | Four weeks of posts, mapped to day and platform. Load one week each Sunday. |
+| [`POSTIZ-SETUP.md`](./POSTIZ-SETUP.md) | Self-hosting the scheduler on the existing Coolify box. |
 | [`STRATEGY.md`](./STRATEGY.md) | The diagnosis and why the plan is sequenced this way. |
 | [`PHASE-1-EXECUTION.md`](./PHASE-1-EXECUTION.md) | The five plays for the first 10 paying customers, with the copy to send. |
 | [`CREATOR-PARTNERSHIPS.md`](./CREATOR-PARTNERSHIPS.md) | The biggest single lever: the pitch, the ladder, the short-list. |
@@ -45,6 +47,8 @@ Everything writable is written. What is left needs you, a camera, or a decision.
 
 1. **Do the setup block** at the top of [`CADENCE.md`](./CADENCE.md) — warmed sending domain,
    customer interviews, the showcase book, the demo video, the tracking sheet. Two days.
+   Deploy Postiz alongside it ([`POSTIZ-SETUP.md`](./POSTIZ-SETUP.md)) so week 1 can be queued
+   rather than typed daily.
 2. **Interview the two existing customers.** Two real quotes beat any amount of written copy,
    and answer engines weigh authority signals heavily. I will not invent these.
 3. **Run Play 1** (free generations). Highest-leverage action available, costs only credits.
