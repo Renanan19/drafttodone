@@ -5,9 +5,15 @@ DraftToDone. Started 2026-07-26 at **€0 MRR, 2 lifetime customers**.
 
 | File | What it is |
 |------|-----------|
-| [`STRATEGY.md`](./STRATEGY.md) | **Start here.** The diagnosis and the sequenced 90-day plan. |
+| [`CADENCE.md`](./CADENCE.md) | **Open this every Monday.** The weekly rhythm, the 90 days, the kill criteria. |
+| [`STRATEGY.md`](./STRATEGY.md) | The diagnosis and why the plan is sequenced this way. |
 | [`PHASE-1-EXECUTION.md`](./PHASE-1-EXECUTION.md) | The five plays for the first 10 paying customers, with the copy to send. |
 | [`CREATOR-PARTNERSHIPS.md`](./CREATOR-PARTNERSHIPS.md) | The biggest single lever: the pitch, the ladder, the short-list. |
+| [`content/REDDIT-POSTS.md`](./content/REDDIT-POSTS.md) | Four posts, written out. |
+| [`content/SOCIAL-POSTS.md`](./content/SOCIAL-POSTS.md) | ~35 X and LinkedIn posts. |
+| [`content/VIDEO-SCRIPTS.md`](./content/VIDEO-SCRIPTS.md) | Three flagship scripts + the tutorial series. |
+| [`content/GEO-LISTICLE.md`](./content/GEO-LISTICLE.md) | The Medium/LinkedIn listicle — the 72-hour AI-visibility win. |
+| [`emails/`](./emails/) | Kit delivery, founding launch, cold outreach. |
 | [`PLAYBOOK-NOTES.md`](./PLAYBOOK-NOTES.md) | The raw extraction — what the founders actually said. |
 
 ## The one-paragraph version
@@ -30,21 +36,25 @@ can be paid in credits rather than cash.
   capped **Founding Operator** cohort that captures email.
 - `LeadCapture` — client-side email capture for a static site, via Web3Forms.
 
+- `/kit` — the four operator-kit assets, live and downloadable. Noindex; it is what the email buys.
+- The content bank, the three email sequences and the GEO listicle, all written out.
+
 ## Open items, in priority order
 
-1. **Build the operator kit** — the four assets the playbook page promises. Nothing else should
-   ship before this; the page is currently writing a cheque the inbox cannot cash.
-2. **Build the partner kit** — demo video, a real book's full output, copy blocks. A creator who
-   says yes and then waits a week has already lost interest.
-3. **Interview the two existing customers** and publish it. Two real quotes beat any amount of
-   generated copy, and answer engines weigh authority signals heavily.
-4. **Run Play 1** (free generations). It is the highest-leverage action available and costs only
-   credits.
-5. **Wire `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`** as a GitHub secret so the key can be rotated
+Everything writable is written. What is left needs you, a camera, or a decision.
+
+1. **Do the setup block** at the top of [`CADENCE.md`](./CADENCE.md) — warmed sending domain,
+   customer interviews, the showcase book, the demo video, the tracking sheet. Two days.
+2. **Interview the two existing customers.** Two real quotes beat any amount of written copy,
+   and answer engines weigh authority signals heavily. I will not invent these.
+3. **Run Play 1** (free generations). Highest-leverage action available, costs only credits.
+4. **Wire `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`** as a GitHub secret so the key can be rotated
    without a code change.
-6. **Decide on a monthly plan.** Weekly billing is unusual and reads as churn-prone; every
-   comparable product in the corpus sells monthly. This is an app-side change (`lib/plans.ts`
-   plus a Stripe price).
+5. **Decide on the app-side attribution** — capture UTM/referrer at signup into
+   `users.signup_source`. Without it, none of the above is measurable and you will double down
+   on guesses. Additive, no pipeline or Stripe impact.
+6. **Decide on a monthly plan.** Weekly billing is 52 chances a year to churn, and nothing
+   comparable in the corpus bills weekly. Needs a Stripe price plus `lib/plans.ts`.
 7. **Update `FOUNDING_SEATS_CLAIMED`** in `app/home-content.ts` as seats fill.
 
 ## Two things worth disagreeing with me about
