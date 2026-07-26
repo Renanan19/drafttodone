@@ -5,6 +5,22 @@ export const APP_URL = "https://app.drafttodone.io";
 export const APP_SIGNUP_URL =
   "https://app.drafttodone.io/signup?utm_source=drafttodone.io&utm_medium=owned_web&utm_campaign=seo_content";
 
+/**
+ * The Founding Operator cohort.
+ *
+ * A capped first cohort is the launch mechanic: it constrains supply against
+ * demand, and it keeps the number of people to support small enough that every
+ * one of them can actually be talked to.
+ *
+ * These are hand-maintained on purpose — the site is static, and a seat counter
+ * that invents its own numbers is worse than no counter. Update CLAIMED as
+ * seats are filled.
+ */
+export const FOUNDING_SEATS_TOTAL = 50;
+export const FOUNDING_SEATS_CLAIMED = 2;
+export const foundingSeatsLeft = () =>
+  Math.max(FOUNDING_SEATS_TOTAL - FOUNDING_SEATS_CLAIMED, 0);
+
 export type HomeCopy = {
   meta: { title: string; description: string };
   nav: { blog: string; pricing: string; openApp: string };
@@ -77,6 +93,17 @@ export type HomeCopy = {
     note: string;
     plans: { name: string; price: string; period: string; credits: string; perBook: string; highlight: boolean }[];
   };
+  /** The capped first cohort: the launch mechanic, and the email capture. */
+  founding: {
+    eyebrow: string;
+    h2: string;
+    sub: string;
+    /** Tokens {left} and {total} are substituted at render time. */
+    seats: string;
+    includes: string[];
+    playbookLine: string;
+    playbookCta: string;
+  };
   cta: { h2: string; sub: string };
   share: { line: string; cta: string; text: string };
   footer: string;
@@ -91,14 +118,14 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
     nav: { blog: "Blog", pricing: "Pricing", openApp: "Generate a book" },
     hero: {
-      eyebrow: "Live: 1 brief -> 1 complete book",
+      eyebrow: "For KDP catalog operators",
       h1main: "Turn one idea into a complete",
       h1accent: "KDP book.",
       sub: "DraftToDone generates the manuscript, front and back cover, title, description, keywords, and pen name from a single niche brief.",
-      subHighlight: "6 ready-to-publish books a week.",
+      subHighlight: "Built to pass KDP review, not to flood it.",
       microcopy: "No free plan: every credit goes toward a real book.",
       chips: ["Manuscript", "Front cover", "Back cover", "Verified pen name"],
-      caption: "Six ready-to-publish books. Every week.",
+      caption: "Six books a week when you want them. Reviewed before every upload.",
       openApp: "Generate my book",
     },
     demo: {
@@ -195,6 +222,20 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { name: "Yearly", price: "€390", period: "/ year", credits: "312 books a year", perBook: "≈ €1.25 per book", highlight: true },
       ],
     },
+    founding: {
+      eyebrow: "Founding operators",
+      h2: "The first 50 operators get built around.",
+      sub: "I am taking a small first cohort so I can talk to every one of them. Founding operators get the lowest price DraftToDone will ever have, kept for as long as they stay, and their feedback decides what gets built next.",
+      seats: "{left} of {total} seats left",
+      includes: [
+        "Founding price, locked for as long as you stay",
+        "A direct line to me — not a support form",
+        "Your requests go to the top of the roadmap",
+        "The operator kit: review checklist, brief templates, metadata worksheet",
+      ],
+      playbookLine: "Not ready to talk pricing? Start with the playbook — the whole loop, free, no signup.",
+      playbookCta: "Read the operator playbook",
+    },
     cta: { h2: "One brief. One complete KDP book.", sub: "Open the app, enter a niche brief, and build the full package instead of babysitting five disconnected tools." },
     share: {
       line: "One brief. One complete KDP book. That is DraftToDone.",
@@ -211,14 +252,14 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
     nav: { blog: "Blog", pricing: "Tarifs", openApp: "Générer un livre" },
     hero: {
-      eyebrow: "En ligne : 1 brief -> 1 livre complet",
+      eyebrow: "Pour les opérateurs de catalogue KDP",
       h1main: "Transformez une idée en livre",
       h1accent: "prêt pour KDP.",
       sub: "DraftToDone génère le manuscrit, la couverture recto-verso, le titre, la description, les mots-clés et le nom de plume depuis un seul brief de niche.",
-      subHighlight: "6 livres prêts à publier par semaine.",
+      subHighlight: "Conçu pour passer la revue KDP, pas pour l'inonder.",
       microcopy: "Pas d'offre gratuite : chaque crédit sert à produire un vrai livre.",
       chips: ["Manuscrit", "Couverture", "Quatrième", "Nom de plume vérifié"],
-      caption: "Six livres prêts à publier. Chaque semaine.",
+      caption: "Six livres par semaine si vous voulez. Relus avant chaque upload.",
       openApp: "Générer mon livre",
     },
     demo: {
@@ -315,6 +356,20 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { name: "Annuel", price: "390 €", period: "/ an", credits: "312 livres par an", perBook: "≈ 1,25 € par livre", highlight: true },
       ],
     },
+    founding: {
+      eyebrow: "Opérateurs fondateurs",
+      h2: "Les 50 premiers opérateurs façonnent l'outil.",
+      sub: "Je prends une première cohorte réduite pour pouvoir parler à chacun. Les opérateurs fondateurs obtiennent le prix le plus bas que DraftToDone aura jamais, conservé tant qu'ils restent, et ce sont leurs retours qui décident de la suite.",
+      seats: "{left} places restantes sur {total}",
+      includes: [
+        "Le prix fondateur, bloqué tant que vous restez",
+        "Une ligne directe avec moi — pas un formulaire de support",
+        "Vos demandes passent en haut de la roadmap",
+        "Le kit opérateur : checklist de relecture, modèles de brief, fiche métadonnées",
+      ],
+      playbookLine: "Pas encore prêt à parler tarifs ? Commencez par le playbook — toute la boucle, gratuite, sans inscription.",
+      playbookCta: "Lire le playbook opérateur",
+    },
     cta: { h2: "Un brief. Un livre KDP complet.", sub: "Ouvrez l'app, entrez une niche et construisez tout le pack au lieu de surveiller cinq outils séparés." },
     share: {
       line: "Un brief. Un livre KDP complet. Voilà DraftToDone.",
@@ -331,14 +386,14 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
     nav: { blog: "Blog", pricing: "Prezzi", openApp: "Genera un libro" },
     hero: {
-      eyebrow: "Live: 1 brief -> 1 libro completo",
+      eyebrow: "Per operatori di cataloghi KDP",
       h1main: "Trasforma un'idea in un libro",
       h1accent: "pronto per KDP.",
       sub: "DraftToDone genera manoscritto, copertina fronte-retro, titolo, descrizione, keyword e pseudonimo da un solo brief di nicchia.",
-      subHighlight: "6 libri pronti da pubblicare a settimana.",
+      subHighlight: "Fatto per superare la revisione KDP, non per inondarla.",
       microcopy: "Nessun piano gratuito: ogni credito produce un libro reale.",
       chips: ["Manoscritto", "Copertina", "Quarta di copertina", "Nome d'autore verificato"],
-      caption: "Sei libri pronti da pubblicare. Ogni settimana.",
+      caption: "Sei libri a settimana se li vuoi. Riletti prima di ogni upload.",
       openApp: "Genera il mio libro",
     },
     demo: {
@@ -435,6 +490,20 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { name: "Annuale", price: "390 €", period: "/ anno", credits: "312 libri all'anno", perBook: "≈ 1,25 € a libro", highlight: true },
       ],
     },
+    founding: {
+      eyebrow: "Operatori fondatori",
+      h2: "I primi 50 operatori danno forma allo strumento.",
+      sub: "Prendo una prima coorte ristretta per poter parlare con ognuno. Gli operatori fondatori ottengono il prezzo più basso che DraftToDone avrà mai, mantenuto finché restano, e sono i loro riscontri a decidere cosa viene costruito dopo.",
+      seats: "{left} posti liberi su {total}",
+      includes: [
+        "Il prezzo fondatore, bloccato finché resti",
+        "Una linea diretta con me — non un modulo di assistenza",
+        "Le tue richieste vanno in cima alla roadmap",
+        "Il kit operatore: checklist di revisione, modelli di brief, scheda metadati",
+      ],
+      playbookLine: "Non ancora pronto a parlare di prezzi? Parti dal playbook — tutto il ciclo, gratis, senza registrazione.",
+      playbookCta: "Leggi il playbook operatore",
+    },
     cta: { h2: "Un brief. Un libro KDP completo.", sub: "Apri l'app, inserisci una nicchia e costruisci tutto il pacchetto invece di sorvegliare cinque tool separati." },
     share: {
       line: "Un brief. Un libro KDP completo. Questo è DraftToDone.",
@@ -451,14 +520,14 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
     nav: { blog: "Blog", pricing: "Preise", openApp: "Buch erzeugen" },
     hero: {
-      eyebrow: "Live: 1 Brief -> 1 komplettes Buch",
+      eyebrow: "Für KDP-Katalogbetreiber",
       h1main: "Mach aus einer Idee ein",
       h1accent: "KDP-fertiges Buch.",
       sub: "DraftToDone erzeugt Manuskript, Vorder- und Rückcover, Titel, Beschreibung, Keywords und Autorennamen aus einem einzigen Nischenbrief.",
-      subHighlight: "sechs veröffentlichungsfertigen Büchern pro Woche.",
+      subHighlight: "Gebaut, um die KDP-Prüfung zu bestehen, nicht um sie zu fluten.",
       microcopy: "Kein Gratisplan: jeder Credit produziert ein echtes Buch.",
       chips: ["Manuskript", "Cover", "Rückseite", "Verifizierter Autorname"],
-      caption: "Sechs veröffentlichungsfertige Bücher. Jede Woche.",
+      caption: "Sechs Bücher pro Woche, wenn du willst. Vor jedem Upload geprüft.",
       openApp: "Mein Buch erzeugen",
     },
     demo: {
@@ -554,6 +623,20 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { name: "Wöchentlich", price: "14,99 €", period: "/ Woche", credits: "6 Bücher pro Woche", perBook: "≈ 2,50 € pro Buch", highlight: false },
         { name: "Jährlich", price: "390 €", period: "/ Jahr", credits: "312 Bücher pro Jahr", perBook: "≈ 1,25 € pro Buch", highlight: true },
       ],
+    },
+    founding: {
+      eyebrow: "Gründungs-Operatoren",
+      h2: "Die ersten 50 Operatoren formen das Tool.",
+      sub: "Ich nehme eine kleine erste Kohorte auf, damit ich mit jedem einzelnen sprechen kann. Gründungs-Operatoren bekommen den niedrigsten Preis, den DraftToDone je haben wird — behalten, solange sie bleiben — und ihr Feedback entscheidet, was als Nächstes gebaut wird.",
+      seats: "{left} von {total} Plätzen frei",
+      includes: [
+        "Der Gründungspreis, festgeschrieben solange du bleibst",
+        "Eine direkte Leitung zu mir — kein Support-Formular",
+        "Deine Wünsche gehen an die Spitze der Roadmap",
+        "Das Operator-Kit: Prüfliste, Brief-Vorlagen, Metadaten-Arbeitsblatt",
+      ],
+      playbookLine: "Noch nicht bereit, über Preise zu reden? Fang mit dem Playbook an — die ganze Schleife, kostenlos, ohne Anmeldung.",
+      playbookCta: "Operator-Playbook lesen",
     },
     cta: { h2: "Ein Brief. Ein komplettes KDP-Buch.", sub: "Öffne die App, gib eine Nische ein und baue das ganze Paket, statt fünf getrennte Tools zu überwachen." },
     share: {

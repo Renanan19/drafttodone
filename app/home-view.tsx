@@ -18,7 +18,16 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { blogIndexPath, locales, SITE_URL, type Locale } from "./blog-content";
-import { APP_SIGNUP_URL, homePath, homeUrl, type HomeCopy } from "./home-content";
+import {
+  APP_SIGNUP_URL,
+  FOUNDING_SEATS_TOTAL,
+  foundingSeatsLeft,
+  homePath,
+  homeUrl,
+  type HomeCopy,
+} from "./home-content";
+import { LeadCapture } from "./lead-capture";
+import { playbookPath } from "./playbook-content";
 import { LATEST_CONTENT_UPDATE } from "./answer-engine-content";
 import { editorialPath, getEditorialPage } from "./seo-pages";
 import { legalFooterLinks } from "./glance-content";
@@ -792,6 +801,64 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Founding cohort — the capped launch offer, and the email capture */}
+        <section id="founding" className="relative border-t border-line/70 bg-paper-2">
+          <div className="mx-auto max-w-3xl px-5 py-24 sm:px-6">
+            <p
+              data-reveal
+              className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep"
+            >
+              {t.founding.eyebrow}
+            </p>
+            <h2
+              data-reveal
+              style={{ transitionDelay: "60ms" }}
+              className="reveal-up text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
+            >
+              {t.founding.h2}
+            </h2>
+            <p
+              data-reveal
+              style={{ transitionDelay: "120ms" }}
+              className="reveal-up mt-5 text-lg leading-relaxed text-muted"
+            >
+              {t.founding.sub}
+            </p>
+
+            <p className="mt-7 inline-flex items-center gap-2 rounded-full border border-mint/50 bg-paper px-3.5 py-1.5 text-[13px] font-semibold text-mint-deep">
+              <span className="h-1.5 w-1.5 rounded-full bg-mint" />
+              {t.founding.seats
+                .replace("{left}", String(foundingSeatsLeft()))
+                .replace("{total}", String(FOUNDING_SEATS_TOTAL))}
+            </p>
+
+            <ul className="mt-7 grid gap-3">
+              {t.founding.includes.map((item) => (
+                <li key={item} className="flex gap-3 text-[15px] leading-relaxed text-ink-soft">
+                  <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-mint-soft text-mint-deep">
+                    <Check className="h-3 w-3" strokeWidth={3} />
+                  </span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-9">
+              <LeadCapture locale={locale} source="founding-cohort" />
+            </div>
+
+            <p className="mt-8 text-[15px] leading-relaxed text-muted">
+              {t.founding.playbookLine}{" "}
+              <a
+                href={playbookPath(locale)}
+                className="font-medium text-ink underline decoration-line underline-offset-4 transition-colors hover:decoration-ink"
+              >
+                {t.founding.playbookCta}
+              </a>
+            </p>
           </div>
         </section>
 
