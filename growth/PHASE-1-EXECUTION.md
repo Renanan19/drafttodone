@@ -10,84 +10,96 @@ Not a novelist.
 
 ---
 
-## Play 1 — One showcase book, ten named operators
+## Play 1 — The showcase book and ten named operators, paid from the first message
 
-> **Revised.** The first version was an open "comment your niche and I'll generate it free"
-> post. Antoine pushed back on giving the product away, and the corpus backs the caution:
-> Rob Hoffman is explicit that you should charge from day one and that free tools attract the
-> wrong audience, and Florian's own line is that a free user is not a paid user.
+> **Decision, twice reaffirmed: nothing is given away.** No free tier, no free generations, no
+> trial. The corpus supports this — Rob Hoffman is explicit that you charge from day one and
+> that free tools attract the wrong audience, Florian's line is that a free user is not a paid
+> user, and Nadav deliberately refused cheap customers for a year.
 >
-> Sleek's open version genuinely worked — but they were selling €20 mockups, not a whole book.
-> The version below keeps the customer conversations and drops the give-away-at-scale.
+> The cost of the decision, stated plainly so it can be managed rather than ignored: without a
+> discovery mechanism, **product feedback becomes binary — they buy or they don't — and it does
+> not tell you why.** Section 4 below is the replacement, and it is free.
 
-**One generation up front. More only for people who have already replied.**
+### Step 1 — One showcase book, published not given
 
-That ordering is the whole point: spend on interest, not on outreach.
+Make one, make it genuinely good, run the full checklist, fix what the AI got wrong.
 
-### Step 1 — Make one showcase book
+Then **publish it as an artefact, not as a gift**: screenshots of the manuscript, the wrap
+cover, the metadata package. Post it. Put it in the partner kit, the launch emails, the Reddit
+posts and every video.
 
-You need this anyway. It appears in the partner kit, the launch emails, the Reddit posts and
-every video. Make it genuinely good — pick a niche you understand, run the full checklist, fix
-what the AI got wrong. This is the artefact your credibility rests on.
+People judge the output without receiving it. That is the entire function.
 
-### Step 2 — Find ten named operators
+### Step 2 — Ten named operators
 
-Not an audience. Ten specific people you can name. The filter: **3+ non-fiction titles under
-one pen name**, published in the last year.
+Ten specific people you can name, not an audience. Filter: **3+ non-fiction titles under one
+pen name**, published in the last year.
 
-Where they are visible:
-- Amazon author pages — follow any non-fiction title in a practical niche to its author
+- Amazon author pages — follow any non-fiction title in a practical niche back to its author
 - People asking tool questions in `r/selfpublish` and `r/KDP`
 - Commenters on KDP YouTube channels, who self-identify by asking operator questions
 - Anyone who posted their own KDP results in the last six months
 
-Ten is the number because you can genuinely follow up with ten. Not fifty.
+Ten, because you can genuinely follow up with ten.
 
 ### Step 3 — The approach
 
-Individually. Never a broadcast.
+Individually. Never a broadcast. The price is in the first message.
 
 > Hi {name},
 >
 > I saw you've published {N} books in {niche} — {one specific, true observation about their catalogue}.
 >
 > I ran a KDP catalog to €400/month myself before Amazon terminated the account over a pen name
-> that read like a joke. I've since built a tool that produces the whole package from one brief:
-> manuscript, full wrap cover, title, subtitle, description, the 7 keyword slots, pen name.
+> that read like a joke. I rebuilt the whole thing as a tool: one niche brief in, and out comes
+> the manuscript, the full wrap cover, the title, subtitle, description, the 7 keyword slots and
+> a pen name — as one package.
 >
-> Here's a complete one it made, so you can judge it rather than take my word: {link}
+> Here's a complete one it produced, so you can judge the output rather than take my word for it: {link}
 >
-> One question, and I'm genuinely asking rather than selling: **what would have to be true for
-> you to upload something like this?**
+> It's €14.99/week for 6 books, or €390/year. I'm taking a first cohort of 50 operators at the
+> lowest price it will ever have, and I work directly with everyone in it.
 >
-> If it's useful, I'll run one in your niche so you can see it on your own subject. No charge,
-> no signup — I want to know where it breaks before I sell more of it.
+> If it's not for you, I'd still like to know what put you off — that's genuinely more useful
+> to me than a polite no.
 >
 > Antoine
 
 ### Why it is worded that way
 
-- **The specific observation** proves it is not a mail merge. Without it the rest is ignored.
-- **The showcase link does the work.** They judge the output, not a description of it.
-- **The question is the actual deliverable.** Their answer is your roadmap, your objection list
-  and your landing-page copy.
-- **The personalised generation is conditional** — offered, not sent. That is what keeps this
-  affordable and stops it reading as desperate.
+- **The specific observation** proves it is not a mail merge. Without it, nothing after it is read.
+- **The showcase does the persuading.** They evaluate real output, not a description.
+- **The price appears immediately.** Rob's point: charging from the first message filters for
+  people who might actually buy, and stops you spending weeks on people who never would.
+- **The last line is the play.** It converts a rejection into the information a free generation
+  would have bought — at no cost.
 
-### What to do with replies
+### Step 4 — Mine the refusals
 
-1. Log the answer to the question verbatim. Their words, not your summary.
-2. Only then generate one in their niche, and send it inside 24 hours.
-3. Do not pitch. If the package is good they will ask what it costs. If nobody asks after ten,
-   that is the finding — and it is about the product, not the marketing.
+This replaces what the free offer was for, and it is the part to actually execute.
 
-### The kill criterion
+Every "no" gets one follow-up question, always the same one:
 
-**Ten approaches, nobody asks the price → stop selling and go fix the output.**
+> **What would have to be true for you to use something like this?**
 
-Gene's line applies directly: *if you think your problem is distribution, reconsider — it may be
-that you need a better product.* Two customers is not enough data to know. Ten operator
-conversations is.
+Log the answer **verbatim**. Their words, not your summary. Ten of those answers is a roadmap,
+an objection list and your landing-page copy — the same output Rob gets from talking to 50
+customers, obtained from people who declined.
+
+Most founders never ask. It is the cheapest research available and it is free.
+
+### The kill criteria
+
+| Signal | Reading |
+|---|---|
+| **Nobody replies at all** | The approach is wrong. Rewrite the opening observation, not the offer. |
+| **They reply but nobody buys, and the refusals are all about price** | The price is wrong for this ICP, or the value is not visible in the showcase. |
+| **They reply and the refusals are all about the output** | The product finding. Stop selling, go fix it. |
+
+Gene's line still applies: *if you think your problem is distribution, reconsider — it may be
+that you need a better product.* Ten refusals with reasons will tell you which of the three you
+are in. Two customers cannot.
 
 ---
 
