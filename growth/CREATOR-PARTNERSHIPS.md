@@ -96,6 +96,54 @@ content, and sort by recent upload date rather than subscriber count.
 
 ---
 
+## The version that costs nothing (start here, at €0 MRR)
+
+Jedi's bootstrapped variant, and it is close to free for this product specifically:
+
+> *"If you have creators in your audience, you can pay them with credits."*
+
+The marginal cost of generating a book is close to zero. A creator paid in 100 book credits
+costs you compute; a creator paid €1,000 costs you a month of runway. So:
+
+1. Look through the free generations from Play 1 in
+   [`PHASE-1-EXECUTION.md`](./PHASE-1-EXECUTION.md). Some of the people who comment will
+   already be creators — this is the cheapest source you have.
+2. Offer unlimited or heavily-loaded credits instead of cash, plus the 40% on top.
+3. Be straightforward about why: *"I'm bootstrapped, this is what I can actually offer right
+   now, and the commission scales with you."* Creators respond to this far better than to a
+   fake budget.
+
+**Make the content yourself first.** Test hooks on your own account, find the two or three that
+work, then hand the proven hooks to creators. It doubles as outreach — a creator who has
+already seen your posts replies to your DM.
+
+---
+
+## Qualifying a creator before you pay anything
+
+Not all reach is equal, and size is the least useful signal.
+
+- **Consistency**, and whether average views are *growing*.
+- **Outlier frequency.** Does the channel go viral every third video, or has it had two hits in
+  three hundred? The first cracked something; the second got lucky. VidIQ's free Chrome
+  extension shows this per channel.
+- **The comment section.** Comment-to-view ratio, whether the questions are genuine, and
+  **whether the creator answers them.** A creator who replies has real trust with their
+  audience — and trust is the thing that converts, not reach.
+- **Fit.** Do they talk to operators, or to first-time authors? Only one of those is our buyer.
+
+## What a creator video is really worth
+
+Track with an affiliate link, then **multiply tracked conversions by 2–3×**. A large share of
+viewers never click — they open a new tab and type the brand name. Then multiply by LTV.
+Skipping the LTV step is how founders wrongly conclude the channel lost money.
+
+Also: every creator video is ad creative you already paid for. Organic performance predicts ad
+performance, so ask for IP rights in the deal — or run the ad through the creator's own account,
+where it keeps their credibility.
+
+---
+
 ## The pitch
 
 Short, specific, and it leads with what they get. Do not attach a media kit to a cold email.

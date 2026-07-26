@@ -412,7 +412,78 @@ Included because the negative finding matters more here than the positive one.
 
 ---
 
-## 12. Recurring patterns across all episodes
+## 12. B2B influencer marketing (Jedi — the Lovable / Gamma / n8n playbook)
+
+Directly contradicts §9, on purpose, and the resolution matters for us.
+
+Julia's rule was *"B2B SaaS? Don't waste your time."* Jedi's counter is that **it works for
+product-led B2B** — the companies running it hardest are Lovable, Gamma, n8n, Arcads. The
+distinction is not B2B vs B2C, it is **product-led vs sales-led**: if a stranger can watch a
+video, sign up and pay without talking to anyone, creator marketing converts.
+
+**DraftToDone is product-led and prosumer. This playbook applies to us; the UGC-agency one does not.**
+
+**Two buckets, and he recommends both:**
+1. **Trusted creators** — you are renting the brand and trust they spent years building.
+2. **The UGC farm** — you do not care who they are; you care about volume and hooks.
+
+**Finding them — be counterintuitive about the platform.** Ask where the ICP actually consumes
+content, not where they work. His example: an AI receptionist for plumbers. Everyone guesses
+LinkedIn. The answer is TikTok, where thousands of plumbers give other plumbers business
+advice on a whiteboard. Search the niche's *advice* content and the creators surface.
+→ For us: KDP operators are on YouTube, and they are watching other operators explain KDP.
+
+**Qualifying a creator (this is the part people skip):**
+- Do they post consistently, and is average view count *growing*?
+- **How often do they produce outliers?** A channel that goes viral every third video has
+  cracked something; a channel with two hits in three hundred videos got lucky. (VidIQ's free
+  extension surfaces this per channel.)
+- **Read the comments.** Ratio of comments to views, whether the questions are genuine, and
+  **whether the creator replies.** A creator who answers their comments has real trust, and
+  real trust is what converts.
+- Does the content actually fit the product?
+- To find them on LinkedIn/X: look at which posts *your own best customers* comment under. The
+  people they engage with are your thought leaders.
+
+**Outreach:** a five-email sequence, one every 24h, from a **separate warmed domain** (never
+your main one). He gets **25–30% reply rates** — high for cold, for the obvious reason that
+you are offering to pay them.
+
+**Format that converts:** on YouTube, a **fully dedicated video beats a 60–90 second
+integration** when the goal is conversion. Integrations are for awareness. The best creators
+wrap it in a story or use case, so the tool appears at the point where it solves the problem.
+
+**Budgets (2026):** LinkedIn creators $500–2,000 per post. TikTok $500–4,000 per video, usually
+sold as a 3–4 video package because no single video is guaranteed. YouTube is the most
+inflated, especially in AI — $20K might buy five creators. **Offering an affiliate link
+reliably lowers the upfront fee.**
+
+**Measuring it:** track with an affiliate/attribution tool, then **multiply tracked conversions
+by 2–3×**, because a large share of viewers never click the link — they open a new tab and type
+your brand name. Then multiply by LTV. Most people forget the LTV step and conclude the channel
+lost money.
+
+**The bootstrapped version — and this is the one that matters at €0 MRR:**
+
+> *"If you have creators in your audience, you can pay them with credits."*
+
+He has done this repeatedly: the creator was already a customer, so the entire cost was credits
+that cost the company almost nothing. **For DraftToDone the marginal cost of a book is close to
+zero, which makes this nearly free distribution.** Combine it with the honest founder story —
+"I'm bootstrapped, here's what I can offer" — and it works at small scale.
+
+**Make the content yourself first.** Test hooks on your own account, find the two or three that
+work, *then* hand the proven hooks and copy to paid creators. It also makes the outreach far
+easier, because a creator who has seen your content replies to your DM.
+
+**The creator-to-paid-ads flywheel:** you are not only buying the organic post. Every creator
+video becomes ad creative, and organic performance predicts ad performance. Half of his
+best-performing ads were originally creator videos. Get IP rights in the deal, or run the ad
+through the creator's own account so it keeps their credibility.
+
+---
+
+## 13. Recurring patterns across all episodes
 
 Things almost every guest said independently, which is the strongest signal in the corpus:
 
