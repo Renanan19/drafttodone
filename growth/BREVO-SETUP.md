@@ -25,26 +25,25 @@ it — it posts to `app.drafttodone.io/api/subscribe`, and the key lives on the 
 
 ---
 
-## 1. Create three lists
+## 1. The three lists — DONE
 
-Brevo → *Contacts* → *Lists* → *Add a list*. Note the numeric ID of each one; that is what the
-env vars want, not the name.
+Created 2026-07-26 in the `DraftToDone` folder (id 3).
 
-| List | Who lands here | What they get |
-|---|---|---|
-| `DTD — Playbook` | Anyone downloading the operator kit | [Sequence 1](./emails/SEQUENCE-KIT-DELIVERY.md), 5 emails / 14 days |
-| `DTD — Founding` | Founding-operator applicants | [Sequence 2](./emails/SEQUENCE-FOUNDING-LAUNCH.md), the launch countdown |
-| `DTD — Partners` | Creators and affiliates | Neither. Handled personally. |
+| List | ID | Who lands here | What they get |
+|---|---|---|---|
+| `DTD - Playbook` | **4** | Anyone downloading the operator kit | [Sequence 1](./emails/SEQUENCE-KIT-DELIVERY.md), 5 emails / 14 days |
+| `DTD - Founding` | **5** | Founding-operator applicants | [Sequence 2](./emails/SEQUENCE-FOUNDING-LAUNCH.md), the launch countdown |
+| `DTD - Partners` | **6** | Creators and affiliates | Neither. Handled personally. |
 
 Three lists rather than one tagged list, because a creator receiving the founding-cohort
 countdown reads as spam and costs you the relationship.
 
 ---
 
-## 2. Create the contact attributes
+## 2. The contact attributes — DONE
 
-Brevo → *Contacts* → *Settings* → *Contact attributes*. The endpoint sends these, and without
-them the values are silently dropped:
+Created 2026-07-26. The endpoint sends these, and without them the values would be silently
+dropped:
 
 | Attribute | Type | Value |
 |---|---|---|
@@ -61,11 +60,16 @@ sequence wastes the lead.
 On the `drafttodone-app` resource:
 
 ```
-BREVO_API_KEY=xkeysib-...
-BREVO_LIST_PLAYBOOK=<numeric id>
-BREVO_LIST_FOUNDING=<numeric id>
-BREVO_LIST_PARTNERS=<numeric id>
+BREVO_API_KEY=xkeysib-...        # never in git — Coolify only
+BREVO_LIST_PLAYBOOK=4
+BREVO_LIST_FOUNDING=5
+BREVO_LIST_PARTNERS=6
 ```
+
+**The IP allowlist matters here.** Brevo is set to reject unrecognised IPs, which is why every
+call failed until the VPS was authorised. If Hetzner ever egresses over IPv6 and that address is
+not on the list, production will fail *silently* — `/api/subscribe` returns `ok` even when Brevo
+refuses, by design, so a visitor never sees an operator problem. Check the list, not the response.
 
 Then **redeploy** — Coolify does not pick up new env vars on a restart.
 
