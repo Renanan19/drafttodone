@@ -22,6 +22,7 @@ import {
 } from "./answer-engine-content";
 import { getHomeAlternates, homeUrl } from "./home-content";
 import { playbookPath } from "./playbook-content";
+import { partnersPath } from "./partners-content";
 
 export const dynamic = "force-static";
 
@@ -38,6 +39,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const playbookAlternates = absoluteAlternates(
     Object.fromEntries(locales.map((locale) => [locale, playbookPath(locale)])),
+  );
+
+  const partnersAlternates = absoluteAlternates(
+    Object.fromEntries(locales.map((locale) => [locale, partnersPath(locale)])),
   );
 
   return [
@@ -113,6 +118,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.9,
       alternates: { languages: playbookAlternates },
+    })),
+    // Affiliates and creators are a distribution channel, so the page has to be
+    // findable by them rather than only linked from the footer.
+    ...locales.map((locale) => ({
+      url: `${SITE_URL}${partnersPath(locale)}`,
+      lastModified: new Date("2026-07-26"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+      alternates: { languages: partnersAlternates },
     })),
     ...locales.map((locale) => ({
       url: blogIndexUrl(locale),

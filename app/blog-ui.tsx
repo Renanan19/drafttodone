@@ -17,6 +17,8 @@ import {
 } from "./seo-pages";
 import { legalFooterLinks } from "./glance-content";
 import { APP_SIGNUP_URL, homePath } from "./home-content";
+import { playbookCopy, playbookPath } from "./playbook-content";
+import { partnersCopy, partnersPath } from "./partners-content";
 
 // A post may not exist in every locale; missing locales fall back to the blog index.
 type LanguagePaths = Partial<Record<Locale, string>>;
@@ -138,6 +140,15 @@ export function BlogFooter({ locale }: { locale: Locale }) {
             </a>
             <a href={homePath(locale)} className="text-muted transition-colors hover:text-ink">
               {t.home}
+            </a>
+            <a
+              href={playbookPath(locale)}
+              className="text-muted transition-colors hover:text-ink"
+            >
+              {playbookCopy[locale].eyebrow}
+            </a>
+            <a href={partnersPath(locale)} className="text-muted transition-colors hover:text-ink">
+              {partnersCopy[locale].eyebrow}
             </a>
             <a
               href={editorialPath(locale)}
