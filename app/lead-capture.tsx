@@ -7,16 +7,24 @@ import type { Locale } from "./blog-content";
 /**
  * Email capture for a static site.
  *
- * The site is a static export with no server runtime, so the submit goes
- * straight from the browser to Web3Forms. Their access key is public by
- * design — it ships in the page HTML either way — so the committed value is
- * only a default; set NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY to rotate it without
- * touching code.
+ * Primary path: the app's /api/subscribe, which holds the Brevo key
+ * server-side and puts the address straight into the right list so a sequence
+ * can actually run. A Brevo key can send mail and read every contact, so it
+ * must never ship in a client bundle — hence the hop through the app rather
+ * than calling Brevo from the browser.
+ *
+ * Fallback: Web3Forms, which just emails the address to the founder. Their
+ * key is public by design (it ships in the page HTML either way). Kept so a
+ * Brevo outage, a missing env var or a CORS mistake costs a notification
+ * rather than a lead.
  */
-const ACCESS_KEY =
+const SUBSCRIBE_ENDPOINT =
+  process.env.NEXT_PUBLIC_SUBSCRIBE_ENDPOINT ?? "https://app.drafttodone.io/api/subscribe";
+
+const WEB3FORMS_KEY =
   process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "24066b21-d7f8-47d4-ba77-f3449e0c39e8";
 
-const ENDPOINT = "https://api.web3forms.com/submit";
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 type Status = "idle" | "sending" | "done" | "error";
 
@@ -92,13 +100,35 @@ export function LeadCapture({
     if (status === "sending") return;
 
     const form = event.currentTarget;
+    const fields = Object.fromEntries(new FormData(form).entries());
     setStatus("sending");
 
     try {
-      const response = await fetch(ENDPOINT, {
+      const response = await fetch(SUBSCRIBE_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(Object.fromEntries(new FormData(form).entries())),
+        body: JSON.stringify({
+          email: fields.email,
+          source,
+          locale,
+          botcheck: fields.botcheck,
+        }),
+      });
+
+      if (!response.ok) throw new Error(`subscribe responded ${response.status}`);
+
+      form.reset();
+      setStatus("done");
+      return;
+    } catch {
+      // Fall through to Web3Forms rather than losing the lead.
+    }
+
+    try {
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ ...fields, access_key: WEB3FORMS_KEY }),
       });
 
       if (!response.ok) throw new Error(`Web3Forms responded ${response.status}`);
@@ -124,7 +154,6 @@ export function LeadCapture({
 
   return (
     <form onSubmit={handleSubmit} className={compact ? "" : "rounded-[18px] border border-line bg-paper p-6"}>
-      <input type="hidden" name="access_key" value={ACCESS_KEY} />
       <input type="hidden" name="subject" value={`DraftToDone playbook — ${source} (${locale})`} />
       <input type="hidden" name="from_name" value="DraftToDone playbook" />
       <input type="hidden" name="source" value={source} />
