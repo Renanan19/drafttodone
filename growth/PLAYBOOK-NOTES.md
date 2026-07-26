@@ -483,7 +483,83 @@ through the creator's own account so it keeps their credibility.
 
 ---
 
-## 13. Recurring patterns across all episodes
+## 13. Third pass — two findings that CORRECT the plan
+
+### Outbound has a deal-size floor (Youssef, Scalelist)
+
+He ran an **outbound lead-generation agency to €800K/year**. Then he built a SaaS and ran
+outbound at it — his own core competence, his own product — and it produced roughly **one sale**
+in three or four months.
+
+His conclusion: *"Outbound works well if what you're selling has a deal size of at least four
+or five figures."* Below that, nobody will take a call, because the prospect's time is worth
+more than your product.
+
+**This corrects [`PHASE-1-EXECUTION.md`](./PHASE-1-EXECUTION.md).** DraftToDone is €14.99/week.
+That is squarely below his floor, so cold outreach to *operators* is unlikely to be the channel
+that produces the first ten customers, however well-written the sequence is.
+
+Two adjustments, neither of which throws the work away:
+
+1. **Outreach to creators still works** — that deal is four to five figures of value to them,
+   and the reply rates in the corpus (25–30%) reflect it. Keep sequence B, deprioritise sequence A.
+2. **Treat operator outreach as a cheap experiment, not a pillar.** The kill criterion already
+   written (500 sends, under 2% reply) now has a prior attached: expect it to fail. If it does,
+   that is confirmation rather than surprise, and the hours move to YouTube.
+
+**What replaced it for him: YouTube, now 50% of acquisition.** Exact-keyword videos with almost
+no competition — *"how to export leads from LinkedIn Sales Navigator"*. His best-performing
+video was an unedited screen recording with, in his words, the worst mic he has ever used.
+Their maths: LTV ~€750, roughly 250–300 views per paying customer, so they do not chase
+viewership at all.
+
+That is the same finding as Elston's jobs-to-be-done tutorials, arrived at independently. It is
+the strongest signal in the corpus for what our week should contain.
+
+### The low-ticket support trap (Nadav, VoiceDrop — €150K/month)
+
+He ran the exact comparison and chose deliberately:
+
+- **Artically:** 500 customers at ~$20/month = ~$12K MRR, and 500 people to support.
+- **VoiceDrop:** priced at **$500/$1,000/$2,000 a month**. Five customers = $2,500 MRR with a
+  support load he could actually carry — and did personally, which is how the roadmap got right.
+
+*"I don't care about losing a $20/month client. I do care about losing a $500 one."* People
+asked for a cheaper tier constantly. He refused for a year.
+
+**This is a genuine strategic tension with DraftToDone's €15/week**, and it is not settled by
+this episode — it is a different market. But two of his mechanics transfer directly:
+
+**Start stingy on credits and loosen later.** He launched with deliberately tight message units,
+took the complaints, and expanded the allowance roughly 4× as margins allowed. His rule:
+*"You can always improve the terms for your clients. You can never reduce them."*
+→ Our credit-per-book allowance should be set at the tightest defensible number now, precisely
+so it can be a gift later.
+
+**Pre-authorise the card on any free trial.** They were losing trials to cards with a €1 limit.
+Holding the trial amount — the same mechanic a car rental uses — took trial-to-paid conversion
+**from 12% to 50%**, and it has held there since. Not applicable today (no free plan), but it is
+the single highest-leverage detail to remember if a trial is ever introduced.
+
+**Google Ads with automated budget rules:** if 7-day average CPA is above $300, cut budget 15%;
+below $200, raise it 15%; in between, do nothing. Worth keeping for the day ads become viable.
+
+### Platform risk, named (Youssef again)
+
+LinkedIn sent a cease and desist. **100% of his revenue was threatened overnight**, at
+$22.5K MRR and 15% month-over-month growth. They complied, revenue tanked, and they had to
+re-position the entire company.
+
+DraftToDone is 100% dependent on Amazon KDP, and Antoine **has already been terminated once.**
+
+This is not a reason to stop. It is a reason that the compliance positioning is not just
+marketing: it is the thing that keeps the business alive, and it argues for the agent/API
+surface (MCP, CLI) as a genuine second leg rather than a curiosity — the buyer there is not
+gated by one marketplace's policy team.
+
+---
+
+## 14. Recurring patterns across all episodes
 
 Things almost every guest said independently, which is the strongest signal in the corpus:
 

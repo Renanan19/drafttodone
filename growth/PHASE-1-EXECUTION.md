@@ -99,6 +99,17 @@ Conclusion someone can use without buying anything. Link at the end, once, to th
 
 ## Play 3 — Cold outreach with the blueprint
 
+> **⚠️ Corrected on a later pass through the corpus — read this first.**
+>
+> Youssef built an outbound lead-generation agency to €800K/year, then ran outbound at his own
+> SaaS and got roughly **one sale in four months**. His conclusion: outbound needs a deal size
+> of **four to five figures**. At €14.99/week we are well under that floor.
+>
+> **So: run this as a cheap experiment, not a pillar.** Expect it to fail, cap it at 500 sends,
+> and move the hours to YouTube when it does. The play that keeps its full weight is the
+> **creator** sequence in [`CREATOR-PARTNERSHIPS.md`](./CREATOR-PARTNERSHIPS.md) — that deal *is*
+> four to five figures of value to the creator, which is why reply rates there run 25–30%.
+
 Roman's finding, which he later told Florian was his single most profitable channel: **do not
 ask for a demo, offer a blueprint.** Saying yes to a document is easy. Most people never book
 the call — they go start a trial instead.
