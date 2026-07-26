@@ -10,48 +10,84 @@ Not a novelist.
 
 ---
 
-## Play 1 — The free generation offer
+## Play 1 — One showcase book, ten named operators
 
-**This is the single highest-leverage thing available and it costs credits, not money.**
-
-Sleek used exactly this to go from nothing to €10K/month: *"comment your app idea and we'll
-design it for you free"* — run manually, handed back as a finished project. It removes 100% of
-the prospect's friction, and each reply is a warm lead who has now seen the output quality.
-
-For DraftToDone it is better than it was for Sleek, because the deliverable is a whole book
-package rather than a mockup.
-
-**Where to post it:** X, LinkedIn, r/selfpublish, r/KDP, and the KDP Facebook groups.
-
-### The post
-
-> I built an AI that produces a complete KDP package from one niche brief — manuscript, full
-> wrap cover, title, subtitle, description, 7 keyword slots, pen name.
+> **Revised.** The first version was an open "comment your niche and I'll generate it free"
+> post. Antoine pushed back on giving the product away, and the corpus backs the caution:
+> Rob Hoffman is explicit that you should charge from day one and that free tools attract the
+> wrong audience, and Florian's own line is that a free user is not a paid user.
 >
-> I want to know where it breaks before I sell more of it.
+> Sleek's open version genuinely worked — but they were selling €20 mockups, not a whole book.
+> The version below keeps the customer conversations and drops the give-away-at-scale.
+
+**One generation up front. More only for people who have already replied.**
+
+That ordering is the whole point: spend on interest, not on outreach.
+
+### Step 1 — Make one showcase book
+
+You need this anyway. It appears in the partner kit, the launch emails, the Reddit posts and
+every video. Make it genuinely good — pick a niche you understand, run the full checklist, fix
+what the AI got wrong. This is the artefact your credibility rests on.
+
+### Step 2 — Find ten named operators
+
+Not an audience. Ten specific people you can name. The filter: **3+ non-fiction titles under
+one pen name**, published in the last year.
+
+Where they are visible:
+- Amazon author pages — follow any non-fiction title in a practical niche to its author
+- People asking tool questions in `r/selfpublish` and `r/KDP`
+- Commenters on KDP YouTube channels, who self-identify by asking operator questions
+- Anyone who posted their own KDP results in the last six months
+
+Ten is the number because you can genuinely follow up with ten. Not fifty.
+
+### Step 3 — The approach
+
+Individually. Never a broadcast.
+
+> Hi {name},
 >
-> Comment your niche and I'll run it and send you the whole package. Free, no signup, nothing
-> to unsubscribe from. Yours to publish if it's good, and I'd rather you tell me if it isn't.
+> I saw you've published {N} books in {niche} — {one specific, true observation about their catalogue}.
 >
-> First 20.
+> I ran a KDP catalog to €400/month myself before Amazon terminated the account over a pen name
+> that read like a joke. I've since built a tool that produces the whole package from one brief:
+> manuscript, full wrap cover, title, subtitle, description, the 7 keyword slots, pen name.
+>
+> Here's a complete one it made, so you can judge it rather than take my word: {link}
+>
+> One question, and I'm genuinely asking rather than selling: **what would have to be true for
+> you to upload something like this?**
+>
+> If it's useful, I'll run one in your niche so you can see it on your own subject. No charge,
+> no signup — I want to know where it breaks before I sell more of it.
+>
+> Antoine
 
 ### Why it is worded that way
 
-- *"I want to know where it breaks"* — the ask is honest, so it does not read as a funnel.
-- *"Yours to publish"* — the gift is real and unconditional. Anything less and nobody comments.
-- *"First 20"* — capped, so it is credible and so you can actually deliver.
-- No link. The link kills reach on every platform, and the comments are the point.
+- **The specific observation** proves it is not a mail merge. Without it the rest is ignored.
+- **The showcase link does the work.** They judge the output, not a description of it.
+- **The question is the actual deliverable.** Their answer is your roadmap, your objection list
+  and your landing-page copy.
+- **The personalised generation is conditional** — offered, not sent. That is what keeps this
+  affordable and stops it reading as desperate.
 
-### What to do with every reply
+### What to do with replies
 
-1. Generate it. Send it back **inside 24 hours** — speed is most of the impression.
-2. Ask one question, always the same one: **"What would have to be true for you to upload this?"**
-   That answer is your roadmap, your objection list and your landing-page copy.
-3. Log it: niche, what they said, whether they published it.
-4. Do not pitch. If the package is good they will ask what it costs. If they do not ask, the
-   product is not ready and you have just learned the most valuable thing available.
+1. Log the answer to the question verbatim. Their words, not your summary.
+2. Only then generate one in their niche, and send it inside 24 hours.
+3. Do not pitch. If the package is good they will ask what it costs. If nobody asks after ten,
+   that is the finding — and it is about the product, not the marketing.
 
-This play doubles as Rob's step 6 — *talk to 50 customers* — except these are free and warm.
+### The kill criterion
+
+**Ten approaches, nobody asks the price → stop selling and go fix the output.**
+
+Gene's line applies directly: *if you think your problem is distribution, reconsider — it may be
+that you need a better product.* Two customers is not enough data to know. Ten operator
+conversations is.
 
 ---
 
