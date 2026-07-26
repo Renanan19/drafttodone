@@ -120,7 +120,7 @@ know the difference and claiming more than the fact makes the fact worthless.
 > - A complete book from a niche you choose, start to finish
 > - Where it breaks, and how I'd fix it before uploading
 > - One of the founding operators, on camera, telling you what it's actually like
-> - The founding price, for anyone on the call who wants it
+> - A founding seat for anyone on the call who wants one, while they last
 >
 > [N] seats left. **[link to join]**
 >
@@ -143,8 +143,9 @@ know the difference and claiming more than the fact makes the fact worthless.
 
 > [N] seats. Closing at midnight.
 >
-> After that the founding price is gone and it doesn't come back — the whole point of a founding
-> price is that it means something to the people who took the risk early.
+> After that the cohort closes and it doesn't reopen. The price stays what it is — I don't
+> discount this. What goes away is the access: the direct line, the roadmap priority, the first
+> look. That's what the fifty seats buy, and it only works because there are fifty.
 >
 > If you're on the fence, the honest summary:
 >
@@ -172,5 +173,6 @@ Then, per Rob's step 6: **talk to all 50.** Record every call, feed the transcri
 pull out the most-requested features, the bugs and the exact language they use. Their words
 become the landing page copy and the roadmap.
 
-Then repeat the cycle: cohort 2 at a smaller discount, then the public launch. Three launches,
-three scarcity events, three waves. Rob did exactly this to $60K MRR in 53 days.
+Then repeat the cycle: a second cohort with a smaller access package, then the public launch.
+Three launches, three scarcity events, three waves — Rob did exactly this to $60K MRR in 53
+days. The scarce thing is always access, never price.
