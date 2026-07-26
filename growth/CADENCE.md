@@ -29,20 +29,32 @@ Two days of work. Nothing below runs until these are done.
 
 ## The weekly rhythm
 
+> **Revised after the full corpus — see [`CORRECTIONS.md`](./CORRECTIONS.md) §1.**
+> The first version ran 7 text posts to 1 video. Four independent guests found the opposite:
+> one measured **90% of a $20K launch to YouTube and 10% to X, by coupon code**, with the
+> YouTube video at ~1K views against the X post at 50K. **Video is now the anchor; text is the
+> offcut.**
+
 Time-block it. Rob's team blocks whole days for content and lets nothing move them.
 
 | Day | Block | Output |
 |-----|-------|--------|
 | **Mon** | Free generations from the weekend's comments · the customer question · update the sheet | 5–10 packages delivered, numbers logged |
-| **Tue** | Reddit post 1 · outreach batch (add leads, answer replies) | 1 post, 30 emails |
-| **Wed** | Record and ship one video | 1 video + 3 clips |
-| **Thu** | Reddit post 2 · outreach batch | 1 post, 30 emails |
+| **Tue** | **Record video A** (flagship, problem-aware) | 1 video + 4 clips |
+| **Wed** | **Record video B** (faceless tutorial, jobs-to-be-done) · Reddit post 1 | 1 video, 1 post |
+| **Thu** | Creator outreach batch · answer everything | 20 creators contacted |
 | **Fri** | Free generations · weekly email to the list · log the week | Packages, 1 email |
-| **Sat** | Reddit post 3 · one off-site listicle or one backlink-exchange batch | 1 post, 1 placement |
+| **Sat** | Reddit post 2 · one off-site listicle or one backlink-exchange batch | 1 post, 1 placement |
 | **Sun** | Off. Genuinely. | — |
 
-**Daily, 20 minutes, non-negotiable:** one post on X and one on LinkedIn from
-[`content/SOCIAL-POSTS.md`](./content/SOCIAL-POSTS.md), and answer every comment and reply.
+**Two videos a week, both cheap.** Unedited screen recording. The corpus is unanimous that
+production value is nearly irrelevant — the second-largest YouTube education channel in the
+world runs on a webcam and a $100 mic, and one founder's best-performing video was recorded on
+a borrowed laptop mic in someone else's apartment.
+
+**Daily, 20 minutes, non-negotiable:** the clips and posts from
+[`content/SOCIAL-POSTS.md`](./content/SOCIAL-POSTS.md) — queued in Postiz on Sunday — and
+**answer every comment and reply yourself**. That last part never goes in the scheduler.
 
 Thomas (Uneed, €20K/month) spends **80% of his time on marketing** and calls it a muscle: at
 first you don't know what to post, and it only comes from doing it.
