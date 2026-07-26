@@ -15,6 +15,7 @@ DraftToDone. Started 2026-07-26 at **€0 MRR, 2 lifetime customers**.
 | [`content/SOCIAL-POSTS.md`](./content/SOCIAL-POSTS.md) | ~35 X and LinkedIn posts. |
 | [`content/VIDEO-SCRIPTS.md`](./content/VIDEO-SCRIPTS.md) | Three flagship scripts + the tutorial series. |
 | [`content/GEO-LISTICLE.md`](./content/GEO-LISTICLE.md) | The Medium/LinkedIn listicle — the 72-hour AI-visibility win. |
+| [`content/MEME-PLAYBOOK.md`](./content/MEME-PLAYBOOK.md) | The meme account: 12 concepts, the rules, and the honest risk. |
 | [`emails/`](./emails/) | Kit delivery, founding launch, cold outreach. |
 | [`PLAYBOOK-NOTES.md`](./PLAYBOOK-NOTES.md) | The raw extraction — what the founders actually said. |
 
