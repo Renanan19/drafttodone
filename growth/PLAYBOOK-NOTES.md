@@ -251,4 +251,181 @@ Channel-level, ranked least → most important:
 
 ---
 
-*Extraction continues below as more episodes are processed.*
+---
+
+## 6. The creator co-founder (Loïc — Minéa €750K/mo, DropMagic 0→€83K/mo in 7 months)
+
+The strongest single lever in the whole corpus, and the one DraftToDone is best positioned
+to use.
+
+- Influify plateaued at €30K/mo. They merged with a large French e-commerce YouTuber, became
+  Minéa, and went **0→€100K MRR on his audience alone** — overnight, off one live stream.
+- He repeated it deliberately with DropMagic: a YouTuber (Batista) in the founding team from
+  day one. €1K MRR in 5 days, €83K/mo in 7 months.
+
+**Why it works twice over, and the part people miss:**
+
+1. **Distribution** — obvious. A baseline of revenue is guaranteed before launch.
+2. **He is your best power user.** The creator lives in the niche; the founder does not.
+   Product feedback comes from someone with real domain expertise, daily.
+3. **He gives you the unit economics for free.** Once you have run one video with an insider,
+   you know your cost per view, your conversion, your LTV — so you can buy other creators
+   with data instead of guessing.
+
+**The creator ladder (his exact sequence):**
+
+- Start with creators **under 10K followers**, on **pure commission** (30% lifetime), no
+  upfront. Zero downside, and it validates the economics.
+- Once the pattern repeats, move to **10K–50K** — these want cash upfront, because production
+  is a real cost and the risk is now on their side.
+- When one converts well, **lock them for a quarter**, multiple videos.
+- The end state is an **ambassador**: the tool is embedded in their workflow, not sponsored.
+
+**Plateaus each need a different key** — his framing, and it maps cleanly onto a roadmap:
+
+| Plateau | What broke it |
+|---------|---------------|
+| €0 | Brute manual effort. One-to-one conversations that do not scale. Comments, friends, DMs. |
+| €30K | The creator partnership |
+| €100K | Finding the *one* channel that was actually working (YouTubers) and closing the others |
+| €300K | Webinars — but a webinar cannot carry a €50/mo product. They built a **€300–400/mo tier** for it |
+| €500K | A price rise plus a coaching upsell, built from churn interviews ("I'm quitting because I don't know how to start") |
+
+**Onboarding is the hook; the wow moment is separate.** For DropMagic the hook was a slick
+funnel; the wow was watching the store build itself live, streaming in. Know which is which.
+
+**The only question that matters:** *"How do I make my customer successful — how do I make
+them money?"* Everything else is a sub-problem. If they win, they keep the subscription.
+
+---
+
+## 7. Jobs-to-be-done SEO and the tutorial channel (Elston — TinyHost, $1M/year)
+
+The closest analogue in the corpus to DraftToDone's situation: a simple tool, sold to
+non-technical people, grown almost entirely on organic search.
+
+- **Nobody searches for your category.** Nobody googles "web hosting" — they google *"how do
+  I upload a PDF"*, *"how do I share my CV as a link"*, *"how do I upload a restaurant menu"*.
+  He built a page for every job, and each one opened a new audience.
+  → DraftToDone's equivalent: not "AI publishing software" but *"how to make a KDP cover"*,
+  *"how to write a book description that sells"*, *"how to pick KDP keywords"*.
+- **YouTube tutorials, faceless, evergreen.** "How to upload a PDF online." Some videos took
+  a **year** to start ranking and then did 100K views. He calls it the most underrated channel
+  there is, precisely because it is effortful: you are competing against low-quality video, so
+  a decent mic and a clear explanation wins. It also surfaces inside Google results.
+- **Monetise by paywalling what people request.** Users asked for custom domains → custom
+  domains went behind the paywall. The feature request *is* the pricing research.
+- **User-driven development is the moat.** He noticed people converting PDFs to HTML before
+  uploading, so he made PDF upload native — one weekend of work — and it became the top use
+  case. He deliberately does not plan six months of roadmap.
+- **A hundred small improvements beat one big feature.** Nobody's "wow, it has exactly what I
+  need" comes from a founder's insight; it comes from a year of other users asking.
+- **Design signals trust.** "You can tell when a landing page was designed by Claude" — the
+  redesign was a step change in conversion.
+- **Founder–market fit, not just product–market fit.** His edge is simplifying complex
+  technology; that is why the product is simple. Copying a founder whose edge is virality
+  produces nothing.
+- **Find a mentor slightly ahead of you** — someone at €40K when you are at €10K. Not
+  Zuckerberg, whose problems have nothing to do with yours, and whose era is gone. And never
+  ask "will you be my mentor"; just ask a specific question, act on the answer, report back.
+- **"If you can find one customer, you can find ten."** After the first sale the question is
+  never *what else do I build* — it is *who else is this exact person*.
+
+---
+
+## 8. Uneed / Thomas — 32 failed projects, then €20K/month
+
+- **80% of his time is marketing.** He states it flatly, and calls it a muscle: at first you
+  do not know what to post, and it only comes from doing it.
+- **The badge is a backlink engine.** Winners of a launch day get a badge they embed on their
+  own site — every winner is a backlink. Then every launch day, founders drive *their* audience
+  to *his* site. Worth studying as a mechanic even outside launch platforms.
+- **Gamification turned traffic into brand.** Streaks, karma, and an upvote multiplier for
+  active members. Direct traffic went from nothing to ~50% of the site — the top keyword is now
+  the brand name itself. That is the endgame of SEO.
+- **The newsletter beats the launch.** 12K subscribers, 40% open rate, list cleaned weekly.
+  Being mentioned in an issue drives more traffic than winning launch day.
+- **Comparison and alternative pages rank best** of everything he has tried.
+- **Personal brand is the tiebreaker.** A dozen near-identical post schedulers all make money;
+  people buy the one whose founder they follow.
+- **Pick one or two channels and quit the rest.** Try everything once, then decide what you are
+  willing to do for years, and drop the others entirely.
+
+---
+
+## 9. UGC and short-form — and where it does not apply (Julia, PlayKit)
+
+Included because the negative finding matters more here than the positive one.
+
+- **"B2B SaaS? Don't waste your time."** She turns those clients away. UGC works for consumer
+  utility apps — relationships, money, career, school. **Founder-led** content works for B2B;
+  agency-style UGC does not.
+  → DraftToDone sits in between: the buyer is semi-professional but the topic is
+  *making money*, which is one of her working categories. Verdict: **founder-led short-form is
+  worth testing; paying a UGC agency is not.**
+- Warm the account first: search what your ICP searches, from the account, before posting.
+- Accounts should look like a person, not a brand — real face as the profile picture.
+- **The comment section outranks the video.** Reply to everything; video-reply to top comments
+  (the platform pushes those replies to the same viewers, so a product-heavy reply gets
+  distribution a product-heavy post never would).
+- A viral video with no signups means the video had nothing to do with the product.
+- Volume: ~15 posts/week per creator; two weeks of pure testing, virality typically in weeks 3–4.
+- Creator rate: ~$125–175/week for 15 posts, flat plus view bonuses.
+
+---
+
+## 10. David Park ($10M/year, Jenny) — steal from other industries
+
+- **His stated edge: importing tactics from outside his own niche.** They ran UGC for a SaaS
+  three years before SaaS founders did it, purely because it was already standard in
+  e-commerce. Everyone in your niche reads the same blogs and therefore produces the same
+  playbook; the differentiated move comes from a different domain.
+- **Validate by asking for money before building.** "If I solved that, would you pay me a few
+  hundred a month?" Nine out of ten say no, because they were only complaining.
+- **The product and its distribution are the same object.** Visualise the post that goes viral,
+  what the product looks like inside it, what the comments say, what the landing page says.
+  When a small feature was what went viral in one of his tools, they rebuilt the product around
+  that feature.
+- **Do not keep an idea you cannot monetise early.** Easy to hear, hard to apply, saves years.
+- Give an influencer equity and let them become the face — obvious in hindsight, still underused.
+
+---
+
+## 11. Cody (Graft) — the content flywheel, and when *not* to build it
+
+- **A niche podcast is a go-to-market vehicle, not a media project.** Invite the experts your
+  buyers respect. The invitation itself is the pitch: *"love your posts — can I host you? It
+  goes out to N people and I'll cut you 8–10 clips for your own social."* ~10–20% reply rate,
+  because you arrive offering PR rather than asking for time.
+- One episode → transcript → newsletter → blog post → LinkedIn posts → clips → ad creative.
+  A clip of a customer describing their pain **in their own words** is the best paid-ad hook
+  you will ever write.
+- **Free guides behind an email wall, with a CTA under every single post.** He added ~3,500
+  subscribers in 30 days from a ~7K-follower account doing exactly this and nothing else.
+- **The honest caveat, and it applies directly to us:** *"If you need customers tomorrow, do
+  not start a podcast, and do not start with SEO."* Content marketing exists to keep CAC flat
+  as ad costs inevitably rise. It pays out at 6–12 months. At €0 MRR you do direct response
+  first and build the flywheel with the proceeds.
+- Naming matters: name the show the thing people search for.
+- **When something is working, stop touching it.** He has watched teams break a
+  dollar-in-six-dollars-out pipeline by tinkering, then fail to rebuild it.
+
+---
+
+## 12. Recurring patterns across all episodes
+
+Things almost every guest said independently, which is the strongest signal in the corpus:
+
+1. **Talk to customers before, during and after building.** Every single failure story starts
+   with "we built for six months without talking to anyone."
+2. **The first paying customer is the hardest thing in the business.** After that it is
+   arithmetic: if you found one, you can find ten.
+3. **Distribution is a skill, not a phase.** Roughly 80% of founder time at the growth stage.
+4. **Niche down until the sentence is uncomfortably specific.** Everyone who broadened early
+   lost a year.
+5. **Ship fast, but quit fast too.** Persistence on an unvalidated idea is the most expensive
+   habit in the room.
+6. **One channel does 80% of the volume.** Find it, then close the others.
+7. **A magical product cannot be marketed around, and a mediocre one cannot be marketed past.**
+8. **Charge from day one.** Free tiers recruit the wrong people.
+9. **The founder's own story is the most defensible content asset available** — nobody can copy it.
