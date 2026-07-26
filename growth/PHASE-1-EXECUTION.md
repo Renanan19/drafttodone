@@ -10,28 +10,35 @@ Not a novelist.
 
 ---
 
-## Play 1 — The showcase book and ten named operators, paid from the first message
+## Play 1 — Lead with the proof, ten named operators, priced from the first message
 
-> **Decision, twice reaffirmed: nothing is given away.** No free tier, no free generations, no
-> trial. The corpus supports this — Rob Hoffman is explicit that you charge from day one and
-> that free tools attract the wrong audience, Florian's line is that a free user is not a paid
-> user, and Nadav deliberately refused cheap customers for a year.
+> **Two decisions, both reaffirmed: nothing is given away, and the algorithm is not discounted.**
 >
-> The cost of the decision, stated plainly so it can be managed rather than ignored: without a
-> discovery mechanism, **product feedback becomes binary — they buy or they don't — and it does
-> not tell you why.** Section 4 below is the replacement, and it is free.
+> The proof that makes both workable: **two books produced by this algorithm reached #1 in their
+> Amazon category.** That is the strongest asset in this entire plan and everything below is
+> built on it.
 
-### Step 1 — One showcase book, published not given
+### Step 0 — How to state the proof so it survives scrutiny
 
-Make one, make it genuinely good, run the full checklist, fix what the AI got wrong.
+Say it precisely, because an operator will immediately test it:
 
-Then **publish it as an artefact, not as a gift**: screenshots of the manuscript, the wrap
-cover, the metadata package. Post it. Put it in the partner kit, the launch emails, the Reddit
-posts and every video.
+> **"Two books this system produced reached #1 in their Amazon category."**
 
-People judge the output without receiving it. That is the entire function.
+- **Never name the books or the pen names.** Naming them invites reverse-engineering of the
+  catalogue, and it hands competitors a target. Refusing to name them is also consistent with
+  the compliance posture the whole brand rests on.
+- **Say "category", not "bestseller".** Amazon has thousands of narrow categories and operators
+  know it. Claiming more than the fact makes the fact worthless. Claiming exactly the fact,
+  from someone who also admits he got banned, is credible.
+- **Pair it with the ban.** "I got to #1 twice, and I lost the account over a pen name" is a
+  far stronger and more memorable position than either half alone. It says: this works, and I
+  know exactly how it goes wrong.
 
-### Step 2 — Ten named operators
+This replaces the showcase-book plan. You do not need to make one to prove the point — you
+already have the result. Screenshots of a real output package still help, but as illustration,
+not as evidence.
+
+### Step 1 — Ten named operators
 
 Ten specific people you can name, not an audience. Filter: **3+ non-fiction titles under one
 pen name**, published in the last year.
@@ -43,63 +50,59 @@ pen name**, published in the last year.
 
 Ten, because you can genuinely follow up with ten.
 
-### Step 3 — The approach
+### Step 2 — The approach
 
-Individually. Never a broadcast. The price is in the first message.
+Individually. Never a broadcast. Proof first, price stated plainly.
 
 > Hi {name},
 >
 > I saw you've published {N} books in {niche} — {one specific, true observation about their catalogue}.
 >
-> I ran a KDP catalog to €400/month myself before Amazon terminated the account over a pen name
-> that read like a joke. I rebuilt the whole thing as a tool: one niche brief in, and out comes
-> the manuscript, the full wrap cover, the title, subtitle, description, the 7 keyword slots and
-> a pen name — as one package.
+> I built the system I use to produce KDP packages: one niche brief in, and out comes the
+> manuscript, the full wrap cover, the title, subtitle, description, the 7 keyword slots and a
+> pen name — as one package.
 >
-> Here's a complete one it produced, so you can judge the output rather than take my word for it: {link}
+> Two books it produced reached #1 in their Amazon category. I don't publish which ones, for
+> reasons you'll understand.
 >
-> It's €14.99/week for 6 books, or €390/year. I'm taking a first cohort of 50 operators at the
-> lowest price it will ever have, and I work directly with everyone in it.
+> I also lost a KDP account over a pen name that read like a joke, which is why the whole thing
+> is built around surviving review rather than around volume.
 >
-> If it's not for you, I'd still like to know what put you off — that's genuinely more useful
-> to me than a polite no.
+> It's €14.99/week for 6 books, or €390/year. I don't discount it.
+>
+> If it's not for you, I'd still like to know what put you off — that's more useful to me than
+> a polite no.
 >
 > Antoine
 
 ### Why it is worded that way
 
 - **The specific observation** proves it is not a mail merge. Without it, nothing after it is read.
-- **The showcase does the persuading.** They evaluate real output, not a description.
-- **The price appears immediately.** Rob's point: charging from the first message filters for
-  people who might actually buy, and stops you spending weeks on people who never would.
-- **The last line is the play.** It converts a rejection into the information a free generation
-  would have bought — at no cost.
+- **Proof before price.** Rob's hook formula is social proof, then curiosity, then benefit. Two
+  #1s is the social proof; refusing to name them is the curiosity.
+- **"I don't publish which ones, for reasons you'll understand."** An operator understands
+  immediately, and it reads as discipline rather than evasion.
+- **"I don't discount it."** Nadav held a high price for a year while people asked for a cheaper
+  tier, refused, and it worked. A price defended is a price believed.
+- **The last line converts a rejection into research**, at no cost.
 
-### Step 4 — Mine the refusals
+### Step 3 — Mine the refusals
 
-This replaces what the free offer was for, and it is the part to actually execute.
-
-Every "no" gets one follow-up question, always the same one:
+Every "no" gets one follow-up, always the same:
 
 > **What would have to be true for you to use something like this?**
 
-Log the answer **verbatim**. Their words, not your summary. Ten of those answers is a roadmap,
-an objection list and your landing-page copy — the same output Rob gets from talking to 50
-customers, obtained from people who declined.
-
-Most founders never ask. It is the cheapest research available and it is free.
+Log the answer **verbatim** — their words, not your summary. Ten of those is a roadmap, an
+objection list and your landing-page copy. It is the cheapest research available and it is free.
 
 ### The kill criteria
 
 | Signal | Reading |
 |---|---|
-| **Nobody replies at all** | The approach is wrong. Rewrite the opening observation, not the offer. |
-| **They reply but nobody buys, and the refusals are all about price** | The price is wrong for this ICP, or the value is not visible in the showcase. |
-| **They reply and the refusals are all about the output** | The product finding. Stop selling, go fix it. |
-
-Gene's line still applies: *if you think your problem is distribution, reconsider — it may be
-that you need a better product.* Ten refusals with reasons will tell you which of the three you
-are in. Two customers cannot.
+| **Nobody replies** | The approach is wrong. Rewrite the opening observation, not the offer. |
+| **Refusals are about price** | Do not cut the price. Add to the offer, or the ICP is wrong. |
+| **Refusals are about the output** | The product finding. Stop selling, go fix it. |
+| **Refusals are about trust in AI books** | Positioning. Lead harder on review-and-compliance. |
 
 ---
 

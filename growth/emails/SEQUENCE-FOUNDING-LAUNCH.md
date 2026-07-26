@@ -9,9 +9,15 @@ burn the mechanic — you only get to launch a cohort once.
 **Seat count:** 50 total. Update `FOUNDING_SEATS_CLAIMED` in `app/home-content.ts` as they fill,
 so the site and the emails never disagree.
 
-**The offer:** founding price locked for as long as they stay, a direct line to you, roadmap
-priority, and the kit. **Honour it manually with a Stripe coupon** until there is a real founding
-price in the app.
+**The offer — access, not discount.** The algorithm is not discounted, so the founding cohort
+gives *more* rather than *cheaper*: a direct line to Antoine, roadmap priority, and the kit.
+Nadav held his price for a year while people asked for a cheaper tier, refused, and it worked —
+and his rule is that you can always improve terms later but never reduce them. A founding price
+would spend that option on day one.
+
+**The proof that carries the launch:** two books this system produced reached #1 in their Amazon
+category. Never name the books or the pen names. Say "category", not "bestseller" — operators
+know the difference and claiming more than the fact makes the fact worthless.
 
 ---
 
@@ -26,10 +32,13 @@ price in the app.
 >
 > **What a founding seat is:**
 >
-> - The lowest price DraftToDone will ever have, locked for as long as you stay
 > - A direct line to me. Not a support form
 > - Your requests go to the top of the roadmap, because you'll know things about KDP I don't
 > - The operator kit
+> - First access to everything before it ships
+>
+> **What it isn't: a discount.** Two books this system produced reached #1 in their Amazon
+> category. I'm not going to price it like it didn't.
 >
 > **What it isn't:** a finished product with every feature you'll eventually want. You're
 > getting in early, and early means rough edges and a founder who answers his own email.
