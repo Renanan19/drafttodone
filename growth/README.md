@@ -8,6 +8,7 @@ DraftToDone. Started 2026-07-26 at **€0 MRR, 2 lifetime customers**.
 | [`CADENCE.md`](./CADENCE.md) | **Open this every Monday.** The weekly rhythm, the 90 days, the kill criteria. |
 | [`SCHEDULE-WEEK-1-4.md`](./SCHEDULE-WEEK-1-4.md) | Four weeks of posts, mapped to day and platform. Load one week each Sunday. |
 | [`POSTIZ-SETUP.md`](./POSTIZ-SETUP.md) | Self-hosting the scheduler on the existing Coolify box. |
+| [`BREVO-SETUP.md`](./BREVO-SETUP.md) | Wiring the email sequences: lists, attributes, env vars, automation. |
 | [`STRATEGY.md`](./STRATEGY.md) | The diagnosis and why the plan is sequenced this way. |
 | [`PHASE-1-EXECUTION.md`](./PHASE-1-EXECUTION.md) | The five plays for the first 10 paying customers, with the copy to send. |
 | [`CREATOR-PARTNERSHIPS.md`](./CREATOR-PARTNERSHIPS.md) | The biggest single lever: the pitch, the ladder, the short-list. |
