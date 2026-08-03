@@ -29,6 +29,7 @@ import {
   solutionUrl,
 } from "@/app/seo-pages";
 import { ArticleAnswer } from "@/app/article-answer";
+import { KdpFormatter } from "@/app/kdp-formatter";
 import { getSolutionBackAnchor, getSolutionForPost, topicLinkCopy } from "@/app/topic-links";
 import {
   imageObject,
@@ -361,6 +362,13 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
+
+              {/* The guide explains the rules; the tool applies them. It lives
+                  inside this post rather than on a route of its own, which
+                  would compete with it for the query that brings people here. */}
+              {post.key === "kdp-paperback-formatting" && (locale === "fr" || locale === "en") && (
+                <KdpFormatter locale={locale} />
+              )}
 
               <div className="mt-14 space-y-14">
                 {article.sections.map((section) => (
