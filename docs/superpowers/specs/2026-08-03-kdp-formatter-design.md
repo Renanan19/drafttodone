@@ -231,7 +231,33 @@ Ce que l'implémentation a appris et que la spec ne prévoyait pas :
 - La police est **Crimson Text** (4 styles statiques, 445 Ko) et non EB Garamond, dont la
   seule version distribuée est variable et pèse 851 Ko.
 
-## 13. Distribution
+## 13. Ce que les vrais manuscrits ont montré
+
+Testé le 2026-08-03 sur des fichiers Word réels — livres de la chaîne KDP, notes de
+recherche, documents commerciaux — plus *Madame Bovary* reconstruit depuis Gutenberg
+(112 434 mots, 77 chapitres) pour la longueur de roman qui manquait.
+
+**Le défaut principal, invisible aux fixtures :** 18,9 % des lignes justifiées étiraient
+leurs espaces au-delà du double, jusqu'à 4,07×. Tous les coupables jouxtaient un jeton
+insécable, presque toujours une URL. Corrigé par trois mesures standard : coupure des URL
+après un séparateur et sans tiret, resserrement des espaces jusqu'à 0,92, et abandon de la
+justification au-delà de 1,8× (la ligne passe en ragged). Résultat sur Flaubert :
+médiane 1,19, p99 1,78, aucune ligne au-dessus de 2,0 sur 7 886.
+
+**Autres constats :**
+
+- **Aucun des documents Word courants n'utilise le style Titre 1.** La détection heuristique
+  n'est pas un repli marginal, c'est le chemin dominant. Les livres « Professional » de la
+  chaîne, eux, l'utilisent.
+- **Un vrai livre de 26 Mo contenait 57 images** : l'avertissement sur les images ignorées
+  compte autant que le PDF lui-même.
+- **Un livre de 90 Mo est refusé** par la limite des 50 Mo. La garde fonctionne, mais les
+  vrais livres illustrés la dépassent.
+- **Roman de 112 434 mots → 449 pages**, reliure 0,75″ (tranche 301-500), zéro débordement,
+  PDF et EPUB validés. **~10,6 s de rendu**, dominé par le dessin et la sérialisation, pas
+  par les passes de mise en page. En navigateur, l'onglet reste figé pendant ce temps.
+
+## 14. Distribution
 
 Téléchargement immédiat, sans contrepartie. Après le téléchargement seulement, une carte
 propose DraftToDone pour qui doit faire la même chose sur tout un catalogue. Pas de mur,
