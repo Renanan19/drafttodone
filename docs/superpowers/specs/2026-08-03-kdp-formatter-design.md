@@ -208,7 +208,30 @@ Mesure de l'apport de la césure, sur un paragraphe français en 11 pt :
 La césure n'est donc pas un raffinement : sans elle, le texte justifié est inacceptable en
 français.
 
-## 12. Distribution
+## 12. Écarts constatés pendant la construction
+
+Ce que l'implémentation a appris et que la spec ne prévoyait pas :
+
+- **Césure : 3 lettres de part et d'autre**, pas 2/3. Le seuil 2/3 autorisait `l'hi-ver` et
+  `va-t-en`. En 3/3, aucun mot de moins de six lettres ne se coupe, ce qui est la règle
+  d'usage française.
+- **Sauts de ligne manuels** (Maj+Entrée) : traités au départ comme des espaces, ce qui
+  fusionnait deux répliques de dialogue sur une ligne. Ils terminent désormais la ligne sans
+  la justifier.
+- **Listes numérotées** : Word range la numérotation dans `numbering.xml`, que le lecteur ne
+  parse pas. Les items ordonnés consécutifs sont numérotés par le moteur.
+- **Le module `layout.ts` s'appelle `pagination.ts`** : sous `app/`, `layout` est un nom de
+  fichier réservé et Next le typait comme layout de route.
+- **Performance** : un manuscrit de 14 000 mots prenait 5,1 s. Mémoriser les largeurs et les
+  chaînes encodées — les deux passent par le moteur de composition de fontkit, et la prose
+  répète son vocabulaire — ramène à 1,3 s. Extrapolé, un roman de 90 000 mots tient sous
+  10 s, sur un seul fil.
+- **EPUBCheck a trouvé un défaut invisible aux tests unitaires** : les chapitres vivent dans
+  `OEBPS/text/` mais liaient `style.css` sans `../`.
+- La police est **Crimson Text** (4 styles statiques, 445 Ko) et non EB Garamond, dont la
+  seule version distribuée est variable et pèse 851 Ko.
+
+## 13. Distribution
 
 Téléchargement immédiat, sans contrepartie. Après le téléchargement seulement, une carte
 propose DraftToDone pour qui doit faire la même chose sur tout un catalogue. Pas de mur,
