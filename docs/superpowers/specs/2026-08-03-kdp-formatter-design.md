@@ -47,8 +47,11 @@ guide sans l'outil.
 
 ### Hors v1 (YAGNI)
 
-Autres formats, fond perdu, images intérieures, notes de bas de page, hiérarchie de titres
-au-delà de h2, contrôle veuves/orphelines, génération de couverture, comptes utilisateurs.
+Autres formats, fond perdu, notes de bas de page, hiérarchie de titres au-delà de h2,
+contrôle veuves/orphelines, génération de couverture, comptes utilisateurs.
+
+*(Les images intérieures étaient hors périmètre ; elles ont été ajoutées ensuite —
+section 14.)*
 
 ## 4. Architecture
 
@@ -251,13 +254,43 @@ médiane 1,19, p99 1,78, aucune ligne au-dessus de 2,0 sur 7 886.
   chaîne, eux, l'utilisent.
 - **Un vrai livre de 26 Mo contenait 57 images** : l'avertissement sur les images ignorées
   compte autant que le PDF lui-même.
-- **Un livre de 90 Mo est refusé** par la limite des 50 Mo. La garde fonctionne, mais les
-  vrais livres illustrés la dépassent.
+- **Un livre de 90 Mo était refusé** par la limite des 50 Mo. Résolu depuis en traitant les
+  images (section 14), pas en relevant la limite seule.
 - **Roman de 112 434 mots → 449 pages**, reliure 0,75″ (tranche 301-500), zéro débordement,
   PDF et EPUB validés. **~10,6 s de rendu**, dominé par le dessin et la sérialisation, pas
   par les passes de mise en page. En navigateur, l'onglet reste figé pendant ce temps.
 
-## 14. Distribution
+## 14. Images intérieures
+
+Ajouté après coup, parce que les vrais livres de l'utilisateur sont des non-fictions
+illustrées de 90 Mo que la limite d'entrée refusait.
+
+**Le principe :** ne pas relever la limite, traiter les images. Chacune est extraite de
+l'archive, ramenée à **300 DPI à la largeur de la colonne**, puis réencodée. Un manuscrit de
+94 Mo produit désormais un **PDF de 7 Mo et un EPUB de 6 Mo**.
+
+**Ce qui fait réellement la différence de taille :** le format de sortie est décidé par ce
+que l'image *contient*, pas par ce qu'elle était. Word regorge de photographies enregistrées
+en PNG à 2,3 Mo pièce ; conserver le PNG « pour préserver la transparence » ne préservait
+rien. La transparence est donc sondée sur une grille échantillonnée, et une image opaque part
+en JPEG.
+
+Passer par un canvas normalise au passage les JPEG progressifs et CMYK, que pdf-lib refuse et
+que Word produit couramment.
+
+**Règles :** une image n'est jamais agrandie au-delà de sa taille à 300 DPI — trop peu de
+pixels est un avertissement, pas quelque chose à masquer en en inventant. Une image qui ne
+tient pas sous la ligne courante démarre la page suivante.
+
+**Le piège rencontré :** l'EPUB embarquait les images d'origine pendant que le PDF utilisait
+les versions rééchantillonnées, soit un ebook de 90 Mo à côté d'un PDF de 7 Mo. Les deux
+partagent maintenant la même préparation.
+
+**Coût :** ~75 s pour ce livre de 94 Mo (39 images). Le décodage et le réencodage sont
+asynchrones, donc l'onglet respire pendant cette phase ; la mise en page et le dessin restent
+synchrones.
+
+## 15. Distribution
 
 Téléchargement immédiat, sans contrepartie. Après le téléchargement seulement, une carte
 propose DraftToDone pour qui doit faire la même chose sur tout un catalogue. Pas de mur,
