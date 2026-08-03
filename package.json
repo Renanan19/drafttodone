@@ -6,20 +6,32 @@
     "dev": "next dev",
     "build": "next build",
     "indexnow": "node ops/submit-indexnow.mjs",
-    "start": "next start"
+    "start": "next start",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "fixtures": "python tools/make-fixtures.py"
   },
   "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "fflate": "^0.8.3",
+    "hyphenation.en-us": "^0.2.1",
+    "hyphenation.fr": "^0.2.1",
+    "hypher": "^0.2.5",
+    "lucide-react": "latest",
     "next": "^15.1.0",
+    "pdf-lib": "^1.17.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "lucide-react": "latest"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/jsdom": "^28.0.3",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "jsdom": "^29.1.1",
     "tailwindcss": "^4.0.0",
-    "@tailwindcss/postcss": "^4.0.0"
+    "typescript": "^5",
+    "vitest": "^4.1.10"
   }
 }
