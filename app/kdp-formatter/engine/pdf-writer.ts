@@ -15,6 +15,7 @@ import {
   PDFDict,
   PDFDocument,
   PDFFont,
+  PDFImage,
   PDFName,
   PDFOperator,
   PDFPage,
@@ -28,13 +29,15 @@ import {
 } from "pdf-lib";
 import fontkit from "@pdf-lib/fontkit";
 
-import { FONT_FILES, TRIM, TYPE, type FontStyle } from "./kdp-rules";
+import { FONT_FILES, TRIM, TYPE, marginsFor, textHeightFor, textWidthFor, type FontStyle } from "./kdp-rules";
+import { canvasResampler, prepareImages, type PreparedImage, type Resampler } from "./images";
 import {
   folioBaseline,
   layoutBook,
   runningHeadBaseline,
   type LaidBook,
   type Metrics,
+  type PlacedImage,
   type PlacedLine,
 } from "./pagination";
 import type { BlockDoc } from "./model";
@@ -47,6 +50,11 @@ export type RenderOptions = {
   hyphenate: boolean;
   /** Copyright page wording, already localised by the caller. */
   legal: string[];
+  /**
+   * Resamples oversized images. Defaults to the canvas implementation, which
+   * only exists in a browser; pass null to embed the originals untouched.
+   */
+  resampler?: Resampler | null;
 };
 
 export type RenderedPdf = {
@@ -55,6 +63,14 @@ export type RenderedPdf = {
   gutterInches: number;
   overflowingLines: number;
   worstGapRatio: number;
+  /** Images that will print below 300 DPI at the size they were placed. */
+  softImages: number;
+  /**
+   * The resampled images, so the EPUB can ship the same ones. Preparing them
+   * twice would decode every picture again; shipping the originals turned a
+   * 7 MB PDF's companion ebook into a 90 MB download.
+   */
+  images: PreparedImage[];
 };
 
 const defaultFetchFont: FetchFont = async (path) => {
@@ -99,10 +115,21 @@ export async function renderPdf(doc: BlockDoc, options: RenderOptions): Promise<
 
   const metrics = cachedMetrics(fonts);
 
+  // Images are sized against a mid-table column: the gutter can still shift by
+  // an eighth of an inch, which is far too little to be worth resampling twice.
+  const margins = marginsFor(200);
+  const images = await prepareImages(
+    doc.images,
+    textWidthFor(margins),
+    textHeightFor(margins),
+    options.resampler === undefined ? canvasResampler : options.resampler,
+  );
+
   const book = layoutBook(doc, {
     metrics,
     hyphenate: options.hyphenate,
     legal: options.legal,
+    imageSizes: images.map((image) => image.pixels),
   });
 
   pdf.setTitle(doc.meta.title);
@@ -111,7 +138,7 @@ export async function renderPdf(doc: BlockDoc, options: RenderOptions): Promise<
   pdf.setProducer("DraftToDone KDP formatter");
   pdf.setCreator("DraftToDone KDP formatter");
 
-  drawPages(pdf, book, fonts);
+  await drawPages(pdf, book, fonts, images);
 
   const bytes = await tagFontSubsets(await pdf.save());
 
@@ -121,6 +148,8 @@ export async function renderPdf(doc: BlockDoc, options: RenderOptions): Promise<
     gutterInches: book.gutterInches,
     overflowingLines: book.overflowingLines,
     worstGapRatio: book.worstGapRatio,
+    softImages: book.softImages,
+    images,
   };
 }
 
@@ -144,7 +173,13 @@ function cachedEncoder(fonts: Fonts) {
 
 type Encoder = ReturnType<typeof cachedEncoder>;
 
-function drawPages(pdf: PDFDocument, book: LaidBook, fonts: Fonts): void {
+async function drawPages(
+  pdf: PDFDocument,
+  book: LaidBook,
+  fonts: Fonts,
+  images: PreparedImage[],
+): Promise<void> {
+  const embedded = await embedImages(pdf, images);
   const headY = runningHeadBaseline(book.margins);
   const folioY = folioBaseline(book.margins);
   const textWidth = TRIM.width - book.margins.gutter - book.margins.outer;
@@ -167,6 +202,8 @@ function drawPages(pdf: PDFDocument, book: LaidBook, fonts: Fonts): void {
         drawPieces(page, keyFor, fonts, encode, item.size, item.y, [
           { text: item.text, style: item.style, x: item.x },
         ]);
+      } else if (item.kind === "image") {
+        drawImage(page, embedded, item);
       } else {
         drawLine(page, keyFor, fonts, encode, item);
       }
@@ -189,6 +226,36 @@ function drawPages(pdf: PDFDocument, book: LaidBook, fonts: Fonts): void {
       ]);
     }
   }
+}
+
+/**
+ * Embeds each image once, whatever the number of pages that draw it.
+ *
+ * An image pdf-lib will not take — an exotic format, or a JPEG variant it
+ * rejects — is skipped rather than allowed to fail the whole render. The
+ * report already warns about images it could not read.
+ */
+async function embedImages(
+  pdf: PDFDocument,
+  images: PreparedImage[],
+): Promise<(PDFImage | null)[]> {
+  const out: (PDFImage | null)[] = [];
+  for (const image of images) {
+    try {
+      if (image.mediaType === "image/png") out.push(await pdf.embedPng(image.bytes));
+      else if (image.mediaType === "image/jpeg") out.push(await pdf.embedJpg(image.bytes));
+      else out.push(null);
+    } catch {
+      out.push(null);
+    }
+  }
+  return out;
+}
+
+function drawImage(page: PDFPage, images: (PDFImage | null)[], item: PlacedImage): void {
+  const image = images[item.image];
+  if (!image) return;
+  page.drawImage(image, { x: item.x, y: item.y, width: item.width, height: item.height });
 }
 
 type DrawPiece = { text: string; style: FontStyle; x: number };

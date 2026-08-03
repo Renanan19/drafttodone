@@ -103,8 +103,15 @@ export const spineWidthInches = (pageCount: number, paper: "white" | "cream"): n
 /** KDP only allows text on the spine from 100 pages up. */
 export const SPINE_TEXT_MIN_PAGES = 100;
 
-/** Refuse manuscripts we would only mangle. */
-export const MAX_INPUT_BYTES = 50 * 1024 * 1024;
+/**
+ * Refuse manuscripts we would only mangle.
+ *
+ * Illustrated non-fiction routinely passes 90 MB, because Word stores whatever
+ * the camera produced. Those images are resampled to 300 DPI at column width
+ * before anything is drawn, so the limit is about what a browser tab can hold
+ * while unzipping, not about the finished book.
+ */
+export const MAX_INPUT_BYTES = 200 * 1024 * 1024;
 
 export const FONT_FILES = {
   regular: "/fonts/crimson-text/CrimsonText-Regular.ttf",

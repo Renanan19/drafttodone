@@ -84,6 +84,33 @@ describe("readDocx", () => {
     expect(() => readDocx(junk)).toThrowError(/zip/i);
   });
 
+  it("extracts images and points blocks at them", () => {
+    const doc = readDocx(fixture("illustrated"));
+
+    expect(doc.images).toHaveLength(2);
+    expect(doc.unreadableImages).toBe(0);
+    for (const image of doc.images) {
+      expect(image.mediaType).toBe("image/png");
+      expect(image.bytes.byteLength).toBeGreaterThan(0);
+    }
+
+    const imageBlocks = doc.chapters
+      .flatMap((c) => c.blocks)
+      .filter((b) => b.kind === "image");
+    expect(imageBlocks).toHaveLength(2);
+    expect(imageBlocks.map((b) => b.image).sort()).toEqual([0, 1]);
+  });
+
+  it("keeps an image and the text of its paragraph as separate blocks", () => {
+    const doc = readDocx(fixture("illustrated"));
+    const kinds = doc.chapters[0].blocks.map((b) => b.kind);
+
+    // Word puts a picture in its own paragraph, so the image never swallows
+    // the prose around it.
+    expect(kinds).toContain("image");
+    expect(kinds).toContain("paragraph");
+  });
+
   it("reads a long manuscript without losing chapters", () => {
     const doc = readDocx(fixture("long-novel"));
     expect(doc.chapters).toHaveLength(20);

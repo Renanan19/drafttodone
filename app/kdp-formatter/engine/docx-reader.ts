@@ -11,12 +11,14 @@
  */
 
 import { unzipSync, strFromU8 } from "fflate";
-import type { Block, BlockDoc, Chapter, DocLang, Inline } from "./model";
+import type { Block, BlockDoc, Chapter, DocLang, ImageAsset, Inline } from "./model";
 import { isBlank, plainText } from "./model";
 import { MAX_INPUT_BYTES } from "./kdp-rules";
 
 const W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main";
 const R = "http://schemas.openxmlformats.org/officeDocument/2006/relationships";
+const A = "http://schemas.openxmlformats.org/drawingml/2006/main";
+const REL = "http://schemas.openxmlformats.org/officeDocument/2006/relationships";
 const DC = "http://purl.org/dc/elements/1.1/";
 const CP = "http://schemas.openxmlformats.org/package/2006/metadata/core-properties";
 
@@ -223,9 +225,79 @@ type ParaInfo = {
   isList: boolean;
   ordered: boolean;
   isQuote: boolean;
+  /** Indices into the document's image list, in the order they appear. */
+  images: number[];
 };
 
-function readParagraph(p: Element, styles: Map<string, StyleInfo>, rels: Map<string, string>): ParaInfo | null {
+const MEDIA_TYPES: Record<string, string> = {
+  png: "image/png",
+  jpg: "image/jpeg",
+  jpeg: "image/jpeg",
+  gif: "image/gif",
+  bmp: "image/bmp",
+  webp: "image/webp",
+  tif: "image/tiff",
+  tiff: "image/tiff",
+  emf: "image/emf",
+  wmf: "image/wmf",
+};
+
+/**
+ * Collects the images a paragraph draws.
+ *
+ * Word points at a media part through a relationship id on `a:blip`. The same
+ * part can be referenced many times, so images are kept in one list and blocks
+ * carry indices — a picture repeated on forty pages is stored once.
+ */
+class ImageLibrary {
+  readonly assets: ImageAsset[] = [];
+  unreadable = 0;
+  private readonly byTarget = new Map<string, number>();
+
+  constructor(
+    private readonly rels: Map<string, string>,
+    private readonly files: Record<string, Uint8Array>,
+  ) {}
+
+  /** Returns the index for a relationship id, or null when it cannot be read. */
+  resolve(relationshipId: string): number | null {
+    const target = this.rels.get(relationshipId);
+    if (!target) {
+      this.unreadable += 1;
+      return null;
+    }
+
+    const existing = this.byTarget.get(target);
+    if (existing !== undefined) return existing;
+
+    // Targets are relative to word/, and may be "../media/x.png" or absolute.
+    const path = target.startsWith("/")
+      ? target.slice(1)
+      : `word/${target}`.replace(/\/\.\//g, "/").replace(/word\/\.\.\//, "");
+    const bytes = this.files[path];
+    if (!bytes || bytes.byteLength === 0) {
+      this.unreadable += 1;
+      return null;
+    }
+
+    const extension = (path.split(".").pop() ?? "").toLowerCase();
+    const index = this.assets.length;
+    this.assets.push({
+      name: `img-${String(index + 1).padStart(3, "0")}.${extension || "bin"}`,
+      bytes,
+      mediaType: MEDIA_TYPES[extension] ?? "application/octet-stream",
+    });
+    this.byTarget.set(target, index);
+    return index;
+  }
+}
+
+function readParagraph(
+  p: Element,
+  styles: Map<string, StyleInfo>,
+  rels: Map<string, string>,
+  images: ImageLibrary,
+): ParaInfo | null {
   const props = kid(p, W, "pPr");
   const styleId = attr(props ? kid(props, W, "pStyle") : null, "val");
   const style = styleId ? styles.get(styleId) : undefined;
@@ -243,7 +315,16 @@ function readParagraph(p: Element, styles: Map<string, StyleInfo>, rels: Map<str
   const runs = stripLeaderFromRuns(paragraphRuns(p, rels));
   const text = plainText(runs).trim();
 
+  const drawn: number[] = [];
+  for (const blip of Array.from(p.getElementsByTagNameNS(A, "blip"))) {
+    const id = blip.getAttributeNS(REL, "embed") ?? blip.getAttributeNS(REL, "link");
+    if (!id) continue;
+    const index = images.resolve(id);
+    if (index !== null) drawn.push(index);
+  }
+
   return {
+    images: drawn,
     runs,
     text,
     headingLevel,
@@ -313,20 +394,17 @@ export function readDocx(bytes: Uint8Array, options: ReadOptions = {}): BlockDoc
   const body = doc.getElementsByTagNameNS(W, "body")[0];
   if (!body) throw new DocxError("not-a-docx", "document has no body");
 
-  const droppedImages = doc.getElementsByTagNameNS(
-    "http://schemas.openxmlformats.org/drawingml/2006/main",
-    "blip",
-  ).length;
+  const images = new ImageLibrary(rels, files);
 
   // Paragraphs, in document order, skipping Word's own contents blocks.
   const paragraphs: ParaInfo[] = [];
   for (const p of Array.from(doc.getElementsByTagNameNS(W, "p"))) {
     if (isInsideTableOfContents(p)) continue;
-    const info = readParagraph(p, styles, rels);
+    const info = readParagraph(p, styles, rels, images);
     if (info) paragraphs.push(info);
   }
 
-  if (paragraphs.every((p) => p.text === "")) {
+  if (paragraphs.every((p) => p.text === "" && p.images.length === 0)) {
     throw new DocxError("empty", "the document contains no text");
   }
 
@@ -340,7 +418,8 @@ export function readDocx(bytes: Uint8Array, options: ReadOptions = {}): BlockDoc
     },
     chapters: built.chapters,
     chapterSource: built.source,
-    droppedImages,
+    images: images.assets,
+    unreadableImages: images.unreadable,
   };
 }
 
@@ -402,13 +481,17 @@ function buildChapters(
       chapters.push(current);
       continue;
     }
-    if (info.text === "" && info.runs.length === 0) continue;
+    if (info.text === "" && info.runs.length === 0 && info.images.length === 0) continue;
     if (!current) {
       // Text before the first chapter title: keep it rather than lose it.
       current = { title: "", blocks: [] };
       chapters.push(current);
     }
-    current.blocks.push(toBlock(info));
+    // An image sits on its own line, before any text sharing its paragraph.
+    for (const image of info.images) {
+      current.blocks.push({ kind: "image", runs: [], image });
+    }
+    if (info.text !== "" || info.runs.length > 0) current.blocks.push(toBlock(info));
   }
 
   const kept = chapters.filter((c) => c.title !== "" || c.blocks.some((b) => !isBlank(b)));

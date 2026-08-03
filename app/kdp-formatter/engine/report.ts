@@ -12,7 +12,8 @@ import type { RenderedPdf } from "./pdf-writer";
 export type WarningCode =
   | "chaptersGuessed"
   | "noChapters"
-  | "imagesDropped"
+  | "imagesBelowDpi"
+  | "imagesUnreadable"
   | "linesOverflow"
   | "loose"
   | "spineTooThinForText"
@@ -22,6 +23,7 @@ export type Warning = { code: WarningCode; count?: number };
 
 export type Report = {
   pageCount: number;
+  imageCount: number;
   chapterCount: number;
   gutterInches: number;
   gutterMinInches: number;
@@ -38,8 +40,11 @@ export function buildReport(doc: BlockDoc, pdf: RenderedPdf): Report {
 
   if (doc.chapterSource === "heuristic") warnings.push({ code: "chaptersGuessed" });
   if (doc.chapterSource === "single") warnings.push({ code: "noChapters" });
-  if (doc.droppedImages > 0) {
-    warnings.push({ code: "imagesDropped", count: doc.droppedImages });
+  if (pdf.softImages > 0) {
+    warnings.push({ code: "imagesBelowDpi", count: pdf.softImages });
+  }
+  if (doc.unreadableImages > 0) {
+    warnings.push({ code: "imagesUnreadable", count: doc.unreadableImages });
   }
   if (pdf.overflowingLines > 0) {
     warnings.push({ code: "linesOverflow", count: pdf.overflowingLines });
@@ -52,6 +57,7 @@ export function buildReport(doc: BlockDoc, pdf: RenderedPdf): Report {
 
   return {
     pageCount: pdf.pageCount,
+    imageCount: doc.images.length,
     chapterCount: doc.chapters.length,
     gutterInches: pdf.gutterInches,
     gutterMinInches: gutterMinInchesFor(pdf.pageCount),

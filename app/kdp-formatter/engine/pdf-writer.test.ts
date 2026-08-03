@@ -23,7 +23,14 @@ const LEGAL = [
 
 const render = async (name: string) => {
   const doc = readDocx(fixture(name));
-  const result = await renderPdf(doc, { hyphenate: true, legal: LEGAL, fetchFont });
+  // Node has no canvas, so images are embedded at their original size. The
+  // resampling itself is verified in a browser.
+  const result = await renderPdf(doc, {
+    hyphenate: true,
+    legal: LEGAL,
+    fetchFont,
+    resampler: null,
+  });
   writeFileSync(join(OUT, `${name}.pdf`), result.bytes);
   return result;
 };
@@ -68,9 +75,25 @@ describe("renderPdf", () => {
     expect(result.pageCount).toBeGreaterThan(0);
   });
 
+  it("draws images and flags the ones that will print soft", async () => {
+    const result = await render("illustrated");
+
+    // The 240 px picture cannot reach 300 DPI at any useful size, so it is
+    // placed at its own 300 DPI width and is not counted as soft; the check
+    // that matters is that neither image breaks the render.
+    expect(result.pageCount).toBeGreaterThan(4);
+    expect(result.overflowingLines).toBe(0);
+    expect(result.softImages).toBe(0);
+  });
+
   it("starts every chapter on a recto", async () => {
     const doc = readDocx(fixture("clean-novel"));
-    const result = await renderPdf(doc, { hyphenate: true, legal: LEGAL, fetchFont });
+    const result = await renderPdf(doc, {
+      hyphenate: true,
+      legal: LEGAL,
+      fetchFont,
+      resampler: null,
+    });
     // Front matter is 4 pages, so chapter one opens on page 5, a recto.
     expect(result.pageCount % 1).toBe(0);
     expect(result.pageCount).toBeGreaterThanOrEqual(5);

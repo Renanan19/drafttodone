@@ -11,7 +11,7 @@
  */
 
 import { strToU8, zipSync } from "fflate";
-import type { Block, BlockDoc, Inline } from "./model";
+import type { Block, BlockDoc, ImageAsset, Inline } from "./model";
 import { plainText } from "./model";
 import { polishRuns } from "./typography";
 
@@ -38,6 +38,8 @@ p.first, h1 + p, h2 + p, blockquote p, .break + p { text-indent: 0; }
 blockquote { margin: 1em 2em; font-style: italic; }
 .u { text-decoration: underline; }
 ul, ol { margin: 0.5em 0 0.5em 1.5em; }
+figure { margin: 1em 0; text-align: center; }
+img { max-width: 100%; height: auto; }
 `;
 
 /** Stylesheet paths, relative to the document that links them. */
@@ -52,11 +54,17 @@ export type EpubOptions = {
   /** Overridable for deterministic tests. */
   now?: Date;
   identifier?: string;
+  /**
+   * Resampled images from the PDF pass. Without them the ebook ships whatever
+   * Word stored, which on a real illustrated book is 90 MB of photographs.
+   */
+  images?: ImageAsset[];
 };
 
 export type RenderedEpub = {
   bytes: Uint8Array;
   chapterCount: number;
+  imageCount: number;
 };
 
 const escapeXml = (s: string): string =>
@@ -81,7 +89,11 @@ function inlineToHtml(run: Inline): string {
 const runsToHtml = (runs: Inline[]): string => runs.map(inlineToHtml).join("");
 
 /** Groups consecutive list items so they land inside one <ul> or <ol>. */
-function blocksToHtml(blocks: Block[], lang: BlockDoc["meta"]["lang"]): string {
+function blocksToHtml(
+  blocks: Block[],
+  lang: BlockDoc["meta"]["lang"],
+  images: ImageAsset[],
+): string {
   const out: string[] = [];
   let list: { ordered: boolean; items: string[] } | null = null;
 
@@ -116,6 +128,13 @@ function blocksToHtml(blocks: Block[], lang: BlockDoc["meta"]["lang"]): string {
       case "sceneBreak":
         out.push(`<p class="break">*  *  *</p>`);
         break;
+      case "image": {
+        const asset = images[block.image ?? -1];
+        // alt is empty on purpose: inventing a description would be worse than
+        // none, and the author has no way to supply one here.
+        if (asset) out.push(`<figure><img src="../images/${asset.name}" alt=""/></figure>`);
+        break;
+      }
       default:
         if (plainText(runs).trim() !== "") out.push(`<p>${html}</p>`);
     }
@@ -151,6 +170,17 @@ export function renderEpub(doc: BlockDoc, options: EpubOptions): RenderedEpub {
     options.identifier ??
     (options.isbn ? `urn:isbn:${options.isbn.replace(/[^0-9X]/gi, "")}` : `urn:uuid:${uuid()}`);
 
+  // Only images a block actually references are packaged: an unused media part
+  // left in the archive is an EPUBCheck error, not a harmless extra.
+  const used = new Set<number>();
+  for (const chapter of doc.chapters) {
+    for (const block of chapter.blocks) {
+      if (block.kind === "image" && block.image !== undefined) used.add(block.image);
+    }
+  }
+  const available = options.images ?? doc.images;
+  const usedImages = available.filter((_, index) => used.has(index));
+
   const sections: { file: string; title: string; content: string }[] = [];
 
   sections.push({
@@ -181,7 +211,7 @@ export function renderEpub(doc: BlockDoc, options: EpubOptions): RenderedEpub {
         title,
         [
           chapter.title ? `<h1>${escapeXml(chapter.title)}</h1>` : "",
-          blocksToHtml(chapter.blocks, lang),
+          blocksToHtml(chapter.blocks, lang, available),
         ]
           .filter(Boolean)
           .join("\n"),
@@ -196,6 +226,10 @@ export function renderEpub(doc: BlockDoc, options: EpubOptions): RenderedEpub {
     '<item id="css" href="style.css" media-type="text/css"/>',
     ...sections.map(
       (s, i) => `<item id="s${i}" href="${s.file}" media-type="application/xhtml+xml"/>`,
+    ),
+    ...usedImages.map(
+      (image, i) =>
+        `<item id="img${i}" href="images/${image.name}" media-type="${image.mediaType}"/>`,
     ),
   ];
   const spine = sections.map((_, i) => `<itemref idref="s${i}"/>`);
@@ -282,10 +316,15 @@ ${navPoints}
   for (const section of sections) {
     files[`OEBPS/${section.file}`] = [strToU8(section.content), { level: 6 }];
   }
+  for (const image of usedImages) {
+    // Already-compressed formats gain nothing from deflate and cost time.
+    files[`OEBPS/images/${image.name}`] = [image.bytes, { level: 0 }];
+  }
 
   return {
     bytes: zipSync(files),
     chapterCount: doc.chapters.length,
+    imageCount: usedImages.length,
   };
 }
 

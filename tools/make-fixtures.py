@@ -107,6 +107,33 @@ def typography() -> None:
     doc.save(os.path.join(OUT, "typography.docx"))
 
 
+def illustrated() -> None:
+    """Manuscrit avec images : une nette, une volontairement trop peu definie."""
+    from docx.shared import Inches
+    from PIL import Image
+
+    tmp_big = os.path.join(OUT, "_tmp-big.png")
+    tmp_small = os.path.join(OUT, "_tmp-small.png")
+    # 2400 px de large : largement au-dessus des 300 DPI sur une colonne de 4,5 po.
+    Image.new("RGB", (2400, 1500), (180, 200, 220)).save(tmp_big)
+    # 240 px : impossible d'atteindre 300 DPI, doit declencher l'alerte.
+    Image.new("RGB", (240, 150), (220, 180, 180)).save(tmp_small)
+
+    doc = base("Livre Illustre")
+    doc.add_heading("Chapitre avec images", 1)
+    doc.add_paragraph(PROSE)
+    doc.add_picture(tmp_big, width=Inches(4))
+    doc.add_paragraph(PROSE)
+    doc.add_picture(tmp_small, width=Inches(4))
+    doc.add_paragraph(PROSE)
+    doc.add_heading("Chapitre sans image", 1)
+    add_chapter_body(doc, 2)
+    doc.save(os.path.join(OUT, "illustrated.docx"))
+
+    os.remove(tmp_big)
+    os.remove(tmp_small)
+
+
 def empty_doc() -> None:
     doc = base("Vide")
     doc.add_paragraph("")
@@ -115,6 +142,6 @@ def empty_doc() -> None:
 
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
-    for fn in (clean_novel, word_toc, no_headings, long_novel, typography, empty_doc):
+    for fn in (clean_novel, word_toc, no_headings, long_novel, typography, illustrated, empty_doc):
         fn()
         print("ecrit :", fn.__name__)

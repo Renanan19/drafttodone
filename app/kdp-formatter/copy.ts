@@ -84,8 +84,10 @@ export const formatterCopy: Record<ToolLocale, Copy> = {
         "Votre document n’utilise pas le style Titre 1, donc les chapitres ont été devinés. Vérifiez la liste ci-dessus avant de publier.",
       noChapters:
         "Aucun chapitre n’a pu être identifié : le livre est mis en page d’un seul tenant. Appliquez le style Titre 1 à vos titres de chapitre pour un meilleur résultat.",
-      imagesDropped: (n: number) =>
-        `${n} image(s) du manuscrit ne figurent pas dans les fichiers produits : cette version ne traite que le texte.`,
+      imagesBelowDpi: (n: number) =>
+        `${n} image(s) s’imprimeront sous 300 DPI à la taille où elles sont placées, et paraîtront floues. Remplacez-les par des versions plus définies.`,
+      imagesUnreadable: (n: number) =>
+        `${n} image(s) n’ont pas pu être extraites du document et sont absentes des fichiers produits.`,
       linesOverflow: (n: number) =>
         `${n} ligne(s) dépassent la colonne de texte, généralement à cause d’un mot ou d’une URL très long.`,
       loose: "Certaines lignes sont très étirées. Un mot inhabituellement long en est souvent la cause.",
@@ -111,6 +113,7 @@ export const formatterCopy: Record<ToolLocale, Copy> = {
       "Marge de reliure calculée sur la pagination réelle, un cran au-dessus du minimum KDP.",
       "Chapitres en belle page, têtes de page et folios, page de titre et page de copyright.",
       "Césure française ou anglaise, apostrophes, guillemets et espaces insécables.",
+      "Images rééchantillonnées à 300 DPI, avec alerte sur celles qui sont trop peu définies.",
     ],
   },
   en: {
@@ -152,8 +155,10 @@ export const formatterCopy: Record<ToolLocale, Copy> = {
         "Your document does not use the Heading 1 style, so the chapters were guessed. Check the list above before you publish.",
       noChapters:
         "No chapters could be identified, so the book is set as one continuous block. Apply Heading 1 to your chapter titles for a better result.",
-      imagesDropped: (n: number) =>
-        `${n} image(s) from the manuscript are missing from the output: this version handles text only.`,
+      imagesBelowDpi: (n: number) =>
+        `${n} image(s) will print below 300 DPI at the size they are placed, and will look soft. Replace them with higher resolution versions.`,
+      imagesUnreadable: (n: number) =>
+        `${n} image(s) could not be extracted from the document and are missing from the output.`,
       linesOverflow: (n: number) =>
         `${n} line(s) run past the text column, usually because of a very long word or URL.`,
       loose: "Some lines are stretched hard. An unusually long word is the usual cause.",
@@ -178,6 +183,7 @@ export const formatterCopy: Record<ToolLocale, Copy> = {
       "Gutter computed from the real page count, one step above the KDP minimum.",
       "Chapters on a recto, running heads and folios, title page and copyright page.",
       "French or English hyphenation, curly apostrophes, quotation marks and no-break spaces.",
+      "Images resampled to 300 DPI, with a warning on any that are too low to print well.",
     ],
   },
 };

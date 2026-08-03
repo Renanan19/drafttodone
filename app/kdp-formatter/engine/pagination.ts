@@ -24,6 +24,7 @@ import {
   type Margins,
 } from "./kdp-rules";
 import { breakParagraph, wrapText, type FontStyle, type Line, type Measure } from "./linebreak";
+import { TARGET_DPI, place } from "./images";
 import type { Block, BlockDoc, Chapter } from "./model";
 import { polishRuns } from "./typography";
 
@@ -51,7 +52,18 @@ export type PlacedText = {
   y: number;
 };
 
-export type PageItem = PlacedLine | PlacedText;
+export type PlacedImage = {
+  kind: "image";
+  /** Index into the prepared image list the writer holds. */
+  image: number;
+  x: number;
+  /** Bottom edge, in points from the bottom of the page. */
+  y: number;
+  width: number;
+  height: number;
+};
+
+export type PageItem = PlacedLine | PlacedText | PlacedImage;
 
 export type Page = {
   items: PageItem[];
@@ -69,6 +81,8 @@ export type LaidBook = {
   overflowingLines: number;
   /** Worst inter-word stretch across the body, as a multiple of a space. */
   worstGapRatio: number;
+  /** Images that will print below 300 DPI at the size they were placed. */
+  softImages: number;
 };
 
 export type LayoutOptions = {
@@ -76,6 +90,8 @@ export type LayoutOptions = {
   hyphenate: boolean;
   /** Copyright page wording, already localised. */
   legal: string[];
+  /** Pixel sizes of the prepared images, indexed as in BlockDoc.images. */
+  imageSizes?: ({ width: number; height: number } | null)[];
 };
 
 const MAX_PASSES = 3;
@@ -149,6 +165,7 @@ function layoutOnce(doc: BlockDoc, options: LayoutOptions, pageCountGuess: numbe
   let page: Page | null = null;
   let y = 0;
   let overflowingLines = 0;
+  let softImages = 0;
   let worstGapRatio = 1;
 
   const leftOf = (index: number) =>
@@ -267,6 +284,32 @@ function layoutOnce(doc: BlockDoc, options: LayoutOptions, pageCountGuess: numbe
         runs = [{ text: block.ordered ? `${ordinal}. ` : "• " }, ...runs];
       }
 
+      if (block.kind === "image") {
+        const pixels = options.imageSizes?.[block.image ?? -1] ?? null;
+        if (!pixels) continue;
+
+        const target = place(pixels, textWidth, textHeight - step * 2);
+        if (target.dpi < TARGET_DPI) softImages += 1;
+
+        // An image that cannot fit under the current line starts the next page
+        // rather than being squeezed or split.
+        if (y - target.height - step < margins.bottom) {
+          startPage({ folio: true, head: headFor(doc, pages.length) });
+        }
+        y -= step * 0.5;
+        page!.items.push({
+          kind: "image",
+          image: block.image!,
+          x: leftOf(pages.length - 1) + (textWidth - target.width) / 2,
+          y: y - target.height,
+          width: target.width,
+          height: target.height,
+        });
+        y -= target.height + step;
+        firstOfSection = true;
+        continue;
+      }
+
       if (block.kind === "sceneBreak") {
         if (remaining() < step * 3) {
           startPage({ folio: true, head: headFor(doc, pages.length) });
@@ -313,6 +356,7 @@ function layoutOnce(doc: BlockDoc, options: LayoutOptions, pageCountGuess: numbe
     gutterInches: gutterInchesFor(pageCountGuess),
     overflowingLines,
     worstGapRatio,
+    softImages,
   };
 }
 

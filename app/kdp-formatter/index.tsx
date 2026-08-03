@@ -114,7 +114,10 @@ export function KdpFormatter({ locale }: { locale: ToolLocale }) {
 
       await engine.loadHyphenator(lang);
       const pdf = await engine.renderPdf(prepared, { hyphenate: true, legal });
-      const epub = engine.renderEpub(prepared, { legal });
+      // The ebook reuses the images the PDF pass already resampled. Preparing
+      // them again would decode every picture twice; using the originals put
+      // 90 MB of Word photographs into a download whose PDF was 7 MB.
+      const epub = engine.renderEpub(prepared, { legal, images: pdf.images });
 
       setOutput({
         pdf: new Blob([pdf.bytes as BlobPart], { type: "application/pdf" }),

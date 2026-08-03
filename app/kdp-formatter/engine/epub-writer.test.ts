@@ -106,10 +106,21 @@ describe("renderEpub", () => {
   });
 
   it("builds every fixture, so EPUBCheck can be pointed at all of them", () => {
-    for (const name of ["long-novel", "no-headings"]) {
+    for (const name of ["long-novel", "no-headings", "illustrated"]) {
       const { epub } = build(name);
       expect(epub.chapterCount).toBeGreaterThan(0);
     }
+  });
+
+  it("packages images and declares them in the manifest", () => {
+    const { epub, files } = build("illustrated");
+    const opf = read(files, "OEBPS/content.opf");
+    const chapter = read(files, "OEBPS/text/chapter-001.xhtml");
+
+    expect(epub.imageCount).toBe(2);
+    expect(Object.keys(files).filter((n) => n.startsWith("OEBPS/images/"))).toHaveLength(2);
+    expect(opf).toContain('media-type="image/png"');
+    expect(chapter).toContain("<figure><img src=\"../images/");
   });
 
   it("escapes characters that would break the XML", () => {
