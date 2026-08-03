@@ -85,7 +85,7 @@ const MAX_PASSES = 3;
  * different gutter band than the one it was laid out with.
  */
 export function layoutBook(doc: BlockDoc, options: LayoutOptions): LaidBook {
-  let pageCount = 200; // a mid-table starting guess; the loop corrects it
+  let pageCount = estimatePages(doc);
   let widestGutter = 0;
   let result = layoutOnce(doc, options, pageCount);
 
@@ -104,6 +104,31 @@ export function layoutBook(doc: BlockDoc, options: LayoutOptions): LaidBook {
   return finalGutter === result.gutterInches
     ? result
     : layoutOnce(doc, options, pagesForGutter(finalGutter));
+}
+
+/**
+ * First guess at the page count, so most books settle their gutter in one pass.
+ *
+ * Measured across real manuscripts, a 6 x 9 page carries around 250 words once
+ * chapter openers and their blank versos are counted. Guessing badly only costs
+ * the extra pass the loop would have run anyway; guessing well halves the work
+ * on a full-length novel.
+ */
+const WORDS_PER_PAGE = 250;
+
+function estimatePages(doc: BlockDoc): number {
+  let words = 0;
+  for (const chapter of doc.chapters) {
+    for (const block of chapter.blocks) {
+      for (const run of block.runs) {
+        words += run.text.split(/\s+/).length;
+      }
+    }
+  }
+  // No allowance for front matter or chapter openers: the 250 was measured on
+  // finished books, so it already carries them. Adding them again overshot
+  // Madame Bovary by 80 pages, into the wrong gutter band.
+  return Math.max(1, Math.round(words / WORDS_PER_PAGE));
 }
 
 /** Smallest page count that forces the given gutter. */

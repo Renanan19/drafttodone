@@ -90,12 +90,38 @@ describe("breakParagraph", () => {
       "Une obstination tranquille accompagnait invariablement ces interminables " +
       "conversations administratives, disait-il, particulièrement vers minuit.";
 
-    const worst = (hyphenate: boolean) => {
-      const lines = breakParagraph([{ text }], measure, options({ hyphenate, width: 300 }));
-      return Math.max(...lines.filter((l) => !l.last).map((l) => l.gapRatio));
+    // The stretch cap means both settings peak at the same ratio, so the
+    // measure of quality is how many lines had to give up on the margin.
+    // The width is a realistic 60 characters; at 30 no setting can justify
+    // French prose, and the comparison says nothing.
+    const WIDTH = 600;
+    const ragged = (hyphenate: boolean) => {
+      const lines = breakParagraph([{ text }], measure, options({ hyphenate, width: WIDTH }));
+      return lines.filter((l) => !l.last && rightEdge(l) < WIDTH * 0.98).length;
     };
 
-    expect(worst(true)).toBeLessThan(worst(false));
+    expect(ragged(true)).toBeLessThan(ragged(false));
+  });
+
+  it("never stretches a space past the cap", () => {
+    // One unbreakable token used to drag the line before it to 4x.
+    const text = `mot ${"a".repeat(60)} et puis la suite du paragraphe qui continue`;
+    const lines = breakParagraph([{ text }], measure, options({ hyphenate: true, width: 400 }));
+
+    for (const line of lines) {
+      expect(line.gapRatio).toBeLessThanOrEqual(1.8);
+    }
+  });
+
+  it("breaks a long URL after a separator, without adding a hyphen", () => {
+    const text = "Source https://recherche-entreprises.api.gouv.fr/search encore du texte ici";
+    const lines = breakParagraph([{ text }], measure, options({ hyphenate: true, width: 300 }));
+    const rendered = lines.map(lineText);
+
+    // The address is split across lines, and no hyphen was invented inside it.
+    expect(rendered.length).toBeGreaterThan(1);
+    expect(rendered.join("")).not.toContain("-h");
+    expect(rendered.some((l) => /\.(fr|api|gouv)?$|\/$/.test(l.trim()))).toBe(true);
   });
 
   it("stops after two hyphenated lines in a row", () => {

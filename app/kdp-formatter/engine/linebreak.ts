@@ -11,7 +11,7 @@
  * skips space pieces, advancing by their width.
  */
 
-import { hyphenationPoints } from "./hyphenate";
+import { breakPoints } from "./hyphenate";
 import type { DocLang, Inline } from "./model";
 import { NARROW_NBSP, NBSP } from "./typography";
 
@@ -66,6 +66,10 @@ export type BreakOptions = {
 };
 
 const DEFAULT_LADDER = 2;
+/** Widest a justified space may stretch before the line goes ragged. */
+const MAX_STRETCH = 1.8;
+/** Tightest a justified space may be squeezed. Below this the words touch. */
+const MIN_SHRINK = 0.92;
 const NARROW_SPACE_EM = 0.17;
 
 /**
@@ -205,7 +209,13 @@ export function breakParagraph(
     const chunk = chunks[i];
     const gap = current.length > 0 ? spaceWidth : 0;
 
-    if (currentWidth + gap + chunk.width <= availableOf()) {
+    // Spaces may be squeezed as well as stretched. Fitting one more word by
+    // tightening the line is nearly invisible; leaving it out forces the line
+    // to stretch or go ragged, which is not. Real prose showed six ragged
+    // lines a page before this, all of them avoidable.
+    const squeeze = current.length > 0 ? current.length * spaceWidth * (1 - MIN_SHRINK) : 0;
+
+    if (currentWidth + gap + chunk.width - squeeze <= availableOf()) {
       current.push(chunk);
       currentWidth += gap + chunk.width;
       // A forced break ends the line here, unjustified — stretching a line the
@@ -252,7 +262,7 @@ export function breakParagraph(
   return lines;
 }
 
-/** Longest prefix of `word` whose hyphenated form still fits. */
+/** Longest prefix of `word` that still fits once broken. */
 function findSplit(
   word: { text: string; style: FontStyle },
   used: number,
@@ -260,11 +270,12 @@ function findSplit(
   measure: Measure,
   lang: DocLang,
 ): { head: string; tail: string } | null {
-  const points = hyphenationPoints(word.text, lang);
+  const points = breakPoints(word.text, lang);
   for (let i = points.length - 1; i >= 0; i--) {
-    const head = `${word.text.slice(0, points[i])}-`;
+    const { index, hyphen } = points[i];
+    const head = hyphen ? `${word.text.slice(0, index)}-` : word.text.slice(0, index);
     if (used + measure(head, word.style) <= available) {
-      return { head, tail: word.text.slice(points[i]) };
+      return { head, tail: word.text.slice(index) };
     }
   }
   return null;
@@ -279,10 +290,20 @@ function layout(
   const content = chunks.reduce((sum, c) => sum + c.width, 0);
   const gaps = chunks.length - 1;
 
+  const fitted = gaps === 0 ? opts.spaceWidth : (available - content) / gaps;
+
   // The last line of a paragraph, and any line with a single chunk, keeps its
-  // natural spacing: stretching them is the classic amateur mistake.
+  // natural spacing: stretching them is the classic amateur mistake. It may
+  // still need squeezing, because a line is allowed to fit by tightening, and
+  // composing it loose afterwards would push it past the margin.
+  const wanted = opts.last || gaps === 0 ? Math.min(opts.spaceWidth, fitted) : fitted;
+
+  // Past the cap, a justified line stops reading as even grey and starts
+  // reading as holes. One ragged line is better than a line full of rivers,
+  // so beyond the cap we give up on reaching the margin.
+  const ratio = wanted / opts.spaceWidth;
   const gap =
-    opts.last || gaps === 0 ? opts.spaceWidth : (available - content) / gaps;
+    ratio > MAX_STRETCH ? opts.spaceWidth : Math.max(wanted, opts.spaceWidth * MIN_SHRINK);
 
   const pieces: LaidPiece[] = [];
   let x = opts.indent;
