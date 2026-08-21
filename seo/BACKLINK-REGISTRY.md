@@ -56,3 +56,41 @@ A profile counts as a backlink only after its public page is live, accessible
 without authentication, and contains a real link to `https://drafttodone.io`.
 Domain Rating changes are measured later; they are never guaranteed by a
 submission or profile creation.
+
+## Editorial placements — the actual lever (opened 21 August 2026)
+
+Directory profiles are worth what they cost, which is little. The three months
+to 16 August 2026 confirmed the diagnosis in `AEO-AUDIT-2026-07-24.md`: the
+structure is finished, impressions grew twenty-five-fold, and positions did not
+move. Eight referring domains, one of them nofollow, three flagged as spam.
+
+Editorial placements are the only channel that changes that. Pitches are drafted
+and ready to send in [`../growth/press/`](../growth/press/); each needs three
+facts only Antoine has, listed in that folder's README.
+
+| Target | Approx. DR | Format offered | Status | Next action |
+| --- | --- | --- | --- | --- |
+| r/selfpublishing | community, no follow link | First-person post, no product link | Drafted | Post first — the response tells you whether the story lands before spending an editor's attention |
+| The Creative Penn | high | Guest post or interview | Drafted | Read current guest guidelines, then send |
+| Written Word Media | high | ~1,400-word operator story | Drafted | Confirm the current editorial contact on the site before sending |
+| ALLi Self-Publishing Advice | high | Watchdog case study, or advice piece | Drafted | Check membership requirement first; lead with the Watchdog offer |
+
+**Measurement:** count deep links separately from homepage links. Eight of the
+current referring domains point at the homepage or a redirect variant, and none
+point at a tool or a guide. The target for Q4 is 40 referring domains with at
+least three deep links to tools.
+
+## Tool-led distribution (unblocked 21 August 2026)
+
+The free KDP interior formatter now has its own URL in four locales, and four
+pages that previously promised a tool and shipped only copy now render working
+ones. These are the first assets on the site a stranger has a reason to link to.
+
+| Surface | Asset to lead with | Status |
+| --- | --- | --- |
+| r/selfpublishing, KBoards, self-publishing Facebook groups | `/en/kdp-interior-formatter` — free, no signup, nothing uploaded | Ready to post |
+| Product Hunt | Same, as a free tool launch | Not scheduled |
+| uneed.best (already listed) | Launch 8 October 2026 | Needs 10 upvotes on launch day to keep the link dofollow |
+
+Rule for all of them: the tool is the post. The subscription is not mentioned
+unless someone asks what else the site does.
