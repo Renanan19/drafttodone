@@ -1,17 +1,16 @@
 name: Deploy to GitHub Pages
 
-# Deploys are manual on purpose.
+# Deploys happen automatically when the publishing pipeline pushes a media asset
+# to main. A manual dispatch remains available for recovery or site-only changes.
 #
-# This repo is worked on a single branch, so `main` was both the working branch
-# and production: every commit went live within minutes, with no step in between
-# where the site could be looked at first. Removing the push trigger separates
-# committing from publishing without needing a second branch or a pull request.
+# The repo is worked on a single branch, so production updates are intentionally
+# deployed from main after the commit is created and can be verified remotely.
 #
-# To publish: Actions -> "Deploy to GitHub Pages" -> Run workflow (on main),
-# or `gh workflow run deploy.yml --ref main`.
+# To force a recovery deployment: Actions -> "Deploy to GitHub Pages" -> Run
+# workflow (on main), or `gh workflow run deploy.yml --ref main`.
 #
 # Do not downgrade the action versions below.
-#
+
 # On 17 Aug 2026 a build failed while downloading `upload-pages-artifact`, and
 # commit c9cad5f read that as a bad version pin and rolled every action back a
 # major version or two. The logs say otherwise: codeload.github.com answered 429
