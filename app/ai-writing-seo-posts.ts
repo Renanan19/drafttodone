@@ -843,6 +843,13 @@ export const aiWritingSeoPosts: BlogPost[] = [
               "Amazon accepts AI-generated books with disclosure at publishing time. Rejection and removal target quality and policy violations — thin content, misleading metadata, IP issues — regardless of which tool produced the book. Quality gates and human review are your protection.",
           },
         ],
+        sources: [
+          { label: "Sudowrite — AI writing tool for fiction", href: "https://www.sudowrite.com/" },
+          { label: "Atticus — book formatting and writing software", href: "https://www.atticus.io/" },
+          { label: "ChatGPT — OpenAI", href: "https://chatgpt.com/" },
+          { label: "Claude — Anthropic", href: "https://claude.ai/" },
+          { label: "Amazon KDP: AI-generated content policy", href: "https://kdp.amazon.com/en_US/help/topic/G200672390" },
+        ],
       },
       fr: {
         slug: "meilleurs-outils-ia-pour-ecrire-un-livre",
@@ -993,6 +1000,13 @@ export const aiWritingSeoPosts: BlogPost[] = [
             answer:
               "Amazon accepte les livres générés par IA avec déclaration au moment de la publication. Les rejets et retraits visent la qualité et les violations de politique — contenu maigre, métadonnées trompeuses, problèmes de propriété intellectuelle — quel que soit l'outil utilisé. Contrôles qualité et relecture humaine sont votre protection.",
           },
+        ],
+        sources: [
+          { label: "Sudowrite — outil d'écriture IA pour la fiction", href: "https://www.sudowrite.com/" },
+          { label: "Atticus — logiciel de mise en page et d'écriture", href: "https://www.atticus.io/" },
+          { label: "ChatGPT — OpenAI", href: "https://chatgpt.com/" },
+          { label: "Claude — Anthropic", href: "https://claude.ai/" },
+          { label: "Amazon KDP : politique sur le contenu généré par IA", href: "https://kdp.amazon.com/en_US/help/topic/G200672390" },
         ],
       },
       it: {
@@ -1145,6 +1159,13 @@ export const aiWritingSeoPosts: BlogPost[] = [
               "Amazon accetta i libri generati dall'IA con dichiarazione al momento della pubblicazione. Rifiuti e rimozioni colpiscono la qualità e le violazioni delle politiche — contenuto magro, metadati ingannevoli, problemi di proprietà intellettuale — qualunque sia lo strumento usato. Controlli qualità e rilettura umana sono la vostra protezione.",
           },
         ],
+        sources: [
+          { label: "Sudowrite — strumento di scrittura IA per la narrativa", href: "https://www.sudowrite.com/" },
+          { label: "Atticus — software di impaginazione e scrittura", href: "https://www.atticus.io/" },
+          { label: "ChatGPT — OpenAI", href: "https://chatgpt.com/" },
+          { label: "Claude — Anthropic", href: "https://claude.ai/" },
+          { label: "Amazon KDP: politica sui contenuti generati dall'IA", href: "https://kdp.amazon.com/en_US/help/topic/G200672390" },
+        ],
       },
       de: {
         slug: "beste-ki-tools-buch-schreiben-vergleich",
@@ -1295,6 +1316,13 @@ export const aiWritingSeoPosts: BlogPost[] = [
             answer:
               "Amazon akzeptiert KI-generierte Bücher mit Offenlegung bei der Veröffentlichung. Ablehnungen und Entfernungen zielen auf Qualität und Richtlinienverstöße — dünner Inhalt, irreführende Metadaten, IP-Probleme — unabhängig vom Tool. Qualitätskontrollen und menschliche Durchsicht sind Ihr Schutz.",
           },
+        ],
+        sources: [
+          { label: "Sudowrite — KI-Schreibwerkzeug für Belletristik", href: "https://www.sudowrite.com/" },
+          { label: "Atticus — Software für Buchsatz und Schreiben", href: "https://www.atticus.io/" },
+          { label: "ChatGPT — OpenAI", href: "https://chatgpt.com/" },
+          { label: "Claude — Anthropic", href: "https://claude.ai/" },
+          { label: "Amazon KDP: Richtlinie zu KI-generierten Inhalten", href: "https://kdp.amazon.com/en_US/help/topic/G200672390" },
         ],
       },
     },

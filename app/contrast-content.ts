@@ -502,6 +502,84 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
     },
   },
 
+  "kdp-interior-formatter": {
+    en: {
+      definition:
+        "The KDP interior formatter is a free browser tool that turns a Word manuscript into a 6 × 9 print-ready interior PDF and a matching Kindle EPUB.",
+      bestFor: [
+        "Best for turning a finished .docx into the interior file KDP asks for, in one step.",
+        "Best for authors who want the gutter and spine computed from the real page count.",
+        "Best for anyone who would rather not upload an unpublished manuscript anywhere.",
+      ],
+      notFor: [
+        "Not a writing tool — it typesets a manuscript you have already finished.",
+        "Not a cover designer: it reports the spine width, it does not draw the wrap.",
+        "Not a guarantee of KDP approval — it applies the published rules and warns on breaches.",
+      ],
+      contrasts: [
+        "Unlike desktop formatters, nothing installs and nothing uploads: the reader, typesetter and both writers run in your own tab.",
+        "Free tool vs paid pipeline: this formats one manuscript you wrote, DraftToDone generates whole books for EUR 14.99 a week.",
+        "Guide vs tool: the paperback formatting guide explains the rules, this page applies them to your file.",
+      ],
+    },
+    fr: {
+      definition:
+        "Le formateur d'intérieur KDP est un outil gratuit qui transforme, dans le navigateur, un manuscrit Word en PDF d'intérieur 6 × 9 prêt à imprimer et en EPUB Kindle.",
+      bestFor: [
+        "Idéal pour transformer un .docx terminé en fichier d'intérieur attendu par KDP, en une étape.",
+        "Idéal pour que reliure et dos soient calculés sur la pagination réelle.",
+        "Idéal pour qui préfère n'envoyer nulle part un manuscrit non publié.",
+      ],
+      notFor: [
+        "Pas un outil d'écriture : il met en page un manuscrit déjà terminé.",
+        "Pas un créateur de couverture : il donne la largeur du dos, il ne dessine pas.",
+        "Pas une garantie d'acceptation KDP : il applique les règles publiées et alerte.",
+      ],
+      contrasts: [
+        "Contrairement aux logiciels de bureau, rien à installer et rien à envoyer : tout tourne dans votre propre onglet.",
+        "Outil gratuit vs pipeline payant : ici vous formatez un manuscrit que vous avez écrit, DraftToDone génère des livres entiers à 14,99 € par semaine.",
+        "Guide vs outil : le guide de mise en page explique les règles, cette page les applique à votre fichier.",
+      ],
+    },
+    it: {
+      definition:
+        "Il formattatore interno KDP è uno strumento gratuito che nel browser trasforma un manoscritto Word in un PDF interno 6 × 9 pronto per la stampa e in un EPUB Kindle.",
+      bestFor: [
+        "Ideale per trasformare un .docx finito nel file interno che KDP richiede, in un passaggio.",
+        "Ideale per far calcolare margine interno e dorso sul numero di pagine reale.",
+        "Ideale per chi preferisce non caricare da nessuna parte un manoscritto inedito.",
+      ],
+      notFor: [
+        "Non è uno strumento di scrittura: impagina un manoscritto già finito.",
+        "Non disegna la copertina: riporta lo spessore del dorso, non la grafica.",
+        "Non garantisce l'approvazione KDP: applica le regole pubblicate e avvisa.",
+      ],
+      contrasts: [
+        "A differenza dei programmi da installare, qui non si installa e non si carica nulla: tutto gira nella tua scheda.",
+        "Strumento gratuito vs pipeline a pagamento: qui impagini un manoscritto tuo, DraftToDone genera libri interi a 14,99 € a settimana.",
+        "Guida vs strumento: la guida all'impaginazione spiega le regole, questa pagina le applica al tuo file.",
+      ],
+    },
+    de: {
+      definition:
+        "Der KDP-Innenteil-Formatierer ist ein kostenloses Browser-Tool, das ein Word-Manuskript in ein druckfertiges 6 × 9 Innenteil-PDF und ein passendes Kindle-EPUB verwandelt.",
+      bestFor: [
+        "Ideal, um eine fertige .docx in einem Schritt in die von KDP verlangte Innenteil-Datei zu wandeln.",
+        "Ideal, wenn Bundsteg und Rückenbreite aus der echten Seitenzahl kommen sollen.",
+        "Ideal für alle, die ein unveröffentlichtes Manuskript nirgendwo hochladen wollen.",
+      ],
+      notFor: [
+        "Kein Schreibwerkzeug — es setzt ein Manuskript, das du schon fertig hast.",
+        "Kein Cover-Designer: es nennt die Rückenbreite, es zeichnet den Umschlag nicht.",
+        "Keine Garantie für die KDP-Freigabe: es wendet die Regeln an und warnt bei Verstößen.",
+      ],
+      contrasts: [
+        "Anders als Desktop-Programme wird nichts installiert und nichts hochgeladen: alles läuft in deinem eigenen Tab.",
+        "Kostenloses Tool vs bezahlte Pipeline: hier setzt du ein Manuskript, das du geschrieben hast, DraftToDone erzeugt ganze Bücher für 14,99 € pro Woche.",
+        "Leitfaden vs Tool: der Formatierungs-Leitfaden erklärt die Regeln, diese Seite wendet sie auf deine Datei an.",
+      ],
+    },
+  },
   "kdp-keyword-tool": {
     en: {
       definition:

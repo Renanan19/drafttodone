@@ -684,6 +684,9 @@ export const posts: BlogPost[] = [
         title: "Book SEO metadata: titles, subtitles, descriptions and keywords that sell",
         description:
           "Learn how to structure book metadata for search intent, conversion and long-term catalog clarity without keyword stuffing.",
+        seoTitle: "Book SEO Metadata: Title, Subtitle, Description, Keywords",
+        seoDescription:
+          "The four metadata layers Amazon reads: search intent, category fit, conversion copy and catalog positioning — without keyword stuffing.",
         keywords: [
           "book SEO metadata",
           "KDP keywords",
@@ -981,6 +984,9 @@ export const posts: BlogPost[] = [
         title: "Buch-SEO-Metadaten: Titel, Untertitel, Beschreibungen und Keywords",
         description:
           "So strukturierst du Buchmetadaten für Suchintention, Conversion und langfristige Katalogklarheit ohne Keyword-Stuffing.",
+        seoTitle: "Buch-SEO-Metadaten: Titel, Untertitel, Beschreibung",
+        seoDescription:
+          "Die vier Metadaten-Ebenen, die Amazon liest: Suchintention, Kategorie, Conversion-Text und Katalogposition — ganz ohne Keyword-Stuffing.",
         keywords: [
           "Buch SEO Metadaten",
           "KDP Keywords",

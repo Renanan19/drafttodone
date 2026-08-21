@@ -24,7 +24,7 @@ import { breadcrumbList, itemListNode, webPageNode } from "../../structured-data
 const PAGE_URL = `${SITE_URL}/site-map`;
 
 const META_DESCRIPTION =
-  "HTML sitemap for DraftToDone.io: every public URL in one place — home pages, solution pages, editorial standards, the four blog indexes, every guide, and the feeds and crawl resources answer engines read.";
+  "Every public DraftToDone.io URL in one place: home pages, tools, editorial standards, the four blog indexes, every guide, and the feeds crawlers read.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

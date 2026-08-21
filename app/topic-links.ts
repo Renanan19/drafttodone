@@ -30,6 +30,44 @@ export type TopicLink = {
 };
 
 export const topicLinks: Record<string, TopicLink[]> = {
+  "kdp-interior-formatter": [
+    {
+      postKey: "kdp-paperback-formatting",
+      anchor: {
+        en: "Read the trim, margin and bleed rules the formatter applies for you",
+        fr: "Lire les règles de format, marges et fond perdu que le formateur applique",
+        it: "Leggere le regole di formato, margini e abbondanza che lo strumento applica",
+        de: "Die Format-, Rand- und Beschnittregeln nachlesen, die das Tool anwendet",
+      },
+    },
+    {
+      postKey: "ai-cover-design",
+      anchor: {
+        en: "Turn the spine width it reports into a full wraparound cover",
+        fr: "Transformer la largeur de dos obtenue en couverture complète",
+        it: "Trasformare lo spessore del dorso ottenuto in una copertina completa",
+        de: "Die ausgegebene Rückenbreite in einen kompletten Umschlag verwandeln",
+      },
+    },
+    {
+      postKey: "how-to-self-publish-amazon",
+      anchor: {
+        en: "See where the interior file fits in the whole KDP upload sequence",
+        fr: "Voir où le fichier d'intérieur intervient dans la séquence d'upload KDP",
+        it: "Vedere dove si colloca il file interno nella sequenza di upload KDP",
+        de: "Sehen, wo die Innenteil-Datei in der KDP-Upload-Reihenfolge steht",
+      },
+    },
+    {
+      postKey: "kdp-launch-checklist",
+      anchor: {
+        en: "Check everything else KDP verifies before the book goes live",
+        fr: "Vérifier tout ce que KDP contrôle d'autre avant la mise en vente",
+        it: "Controllare tutto ciò che KDP verifica prima della pubblicazione",
+        de: "Prüfen, was KDP sonst noch kontrolliert, bevor das Buch live geht",
+      },
+    },
+  ],
   "kdp-royalty-calculator": [
     {
       postKey: "kdp-earnings-royalty-examples",
@@ -489,7 +527,10 @@ const primarySolutionForPost: Record<string, string> = {
   "kdp-keywords-beginner": "kdp-keyword-tool",
   "kdp-launch-checklist": "kdp-book-generator",
   "kdp-niche-keyword-research": "kdp-keyword-tool",
-  "kdp-paperback-formatting": "atticus-alternative",
+  // The guide explains the formatting rules; the free formatter applies them
+  // to the reader's own file. That is a closer match for the intent this guide
+  // creates than the Atticus comparison it used to point at.
+  "kdp-paperback-formatting": "kdp-interior-formatter",
   "kdp-select-kindle-unlimited": "kdp-royalty-calculator",
   "low-content-books-kdp": "kdp-keyword-tool",
   "pen-name-author-brand": "book-title-generator",

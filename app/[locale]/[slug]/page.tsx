@@ -18,6 +18,11 @@ import {
 } from "@/app/blog-content";
 import { BlogFooter, BlogHeader } from "@/app/blog-ui";
 import { KdpRoyaltyCalculator } from "@/app/kdp-royalty-calculator";
+import { KdpFormatter } from "@/app/kdp-formatter";
+import { KdpKeywordSlots } from "@/app/tools/kdp-keyword-slots";
+import { KdpDescriptionFormatter } from "@/app/tools/kdp-description-formatter";
+import { KdpCoverTemplate } from "@/app/tools/kdp-cover-template";
+import { KdpTitleScore } from "@/app/tools/kdp-title-score";
 import {
   commercialSolutionPages,
   getSolutionAlternates,
@@ -255,6 +260,22 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
           }),
         ]
       : []),
+    // The side-by-side as data. A comparison an answer engine can lift row by
+    // row is worth more than one it has to infer from prose.
+    ...(solution.comparison
+      ? [
+          itemListNode({
+            id: `${canonicalUrl}#comparison`,
+            name: solution.comparison.heading,
+            locale,
+            items: solution.comparison.rows.map((row) => ({
+              name: row.criterion,
+              url: `${canonicalUrl}#comparison`,
+              description: `${solution.comparison!.oursLabel}: ${row.ours} — ${solution.comparison!.rivalName}: ${row.rival}`,
+            })),
+          }),
+        ]
+      : []),
     ...(moreTools.length > 0
       ? [
           itemListNode({
@@ -373,7 +394,71 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
           </section>
         )}
 
+        {/* A page named for a tool renders one. The union in `seo-pages.ts`
+            is what stops a "generator" page shipping as copy alone again. */}
         {page.tool === "kdpRoyaltyCalculator" && <KdpRoyaltyCalculator locale={locale} />}
+        {page.tool === "kdpInteriorFormatter" && <KdpFormatter locale={locale} />}
+        {page.tool === "kdpKeywordSlots" && <KdpKeywordSlots locale={locale} />}
+        {page.tool === "kdpDescriptionFormatter" && <KdpDescriptionFormatter locale={locale} />}
+        {page.tool === "kdpCoverTemplate" && <KdpCoverTemplate locale={locale} />}
+        {page.tool === "kdpTitleScore" && <KdpTitleScore locale={locale} />}
+
+        {solution.comparison && (
+          <section id="comparison" className="border-b border-line/70">
+            <div className="mx-auto max-w-5xl px-5 py-16 sm:px-6">
+              <h2 className="font-display text-4xl font-medium tracking-[-0.01em] text-ink">
+                {solution.comparison.heading}
+              </h2>
+              <div className="mt-8 overflow-x-auto rounded-[18px] border border-line bg-paper">
+                <table className="w-full min-w-[560px] border-collapse text-left text-[15px]">
+                  <thead>
+                    <tr className="border-b border-line bg-paper-2">
+                      <th className="px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.14em] text-faint" />
+                      <th className="px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.14em] text-mint-deep">
+                        {solution.comparison.oursLabel}
+                      </th>
+                      <th className="px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.14em] text-faint">
+                        <a
+                          href={solution.comparison.rivalUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="underline decoration-line underline-offset-4 transition-colors hover:text-ink"
+                        >
+                          {solution.comparison.rivalName}
+                        </a>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {solution.comparison.rows.map((row) => (
+                      <tr key={row.criterion} className="border-b border-line last:border-b-0">
+                        <th
+                          scope="row"
+                          className="px-5 py-4 align-top font-medium text-ink-soft"
+                        >
+                          {row.criterion}
+                        </th>
+                        <td className="px-5 py-4 align-top leading-relaxed text-muted">
+                          {row.ours}
+                        </td>
+                        <td
+                          className={`px-5 py-4 align-top leading-relaxed ${
+                            row.rivalWins ? "bg-paper-2 font-medium text-ink-soft" : "text-muted"
+                          }`}
+                        >
+                          {row.rival}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-5 max-w-2xl text-sm leading-relaxed text-faint">
+                {solution.comparison.footnote}
+              </p>
+            </div>
+          </section>
+        )}
 
         <section className="mx-auto max-w-6xl px-5 py-20 sm:px-6">
           <div className="grid gap-5 md:grid-cols-3">

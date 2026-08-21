@@ -20,6 +20,13 @@
   --color-aqua: #bfe9ff;
   --color-peach: #ffd9c2;
   --color-lilac: #ddd6fe;
+
+  /* Validation states. The free tools are the first surfaces on this site that
+     have to tell someone their input is wrong, and mint reads as success, not
+     as a problem. Both are desaturated to sit inside California Light rather
+     than punching a hole in it, and both clear 4.5:1 on paper and paper-2. */
+  --color-alert: #b03a2e;
+  --color-caution: #8a6212;
 }
 
 @layer base {
@@ -140,4 +147,47 @@
     transform: none;
     animation: none;
   }
+}
+
+/**
+ * The Amazon-rendering preview inside the description formatter.
+ *
+ * Tailwind's preflight strips list markers and heading sizes, which is right
+ * for the rest of the site and wrong here: this block has to look like the
+ * Amazon detail page, not like the design system, or the preview is a lie.
+ */
+.kdp-preview > * + * {
+  margin-top: 0.85em;
+}
+
+.kdp-preview h4 {
+  font-weight: 700;
+  font-size: 1.05em;
+  color: var(--color-ink);
+}
+
+.kdp-preview ul,
+.kdp-preview ol {
+  padding-left: 1.4em;
+}
+
+.kdp-preview ul {
+  list-style: disc;
+}
+
+.kdp-preview ol {
+  list-style: decimal;
+}
+
+.kdp-preview li + li {
+  margin-top: 0.3em;
+}
+
+.kdp-preview b {
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.kdp-preview i {
+  font-style: italic;
 }

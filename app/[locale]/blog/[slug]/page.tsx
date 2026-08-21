@@ -25,11 +25,12 @@ import { seoDescription, seoTitle } from "@/app/seo-metadata";
 import {
   commercialSolutionPages,
   editorialUrl,
+  getSolutionByKey,
   solutionPath,
   solutionUrl,
 } from "@/app/seo-pages";
 import { ArticleAnswer } from "@/app/article-answer";
-import { KdpFormatter } from "@/app/kdp-formatter";
+import { formatterCallout } from "@/app/kdp-formatter/copy";
 import { getSolutionBackAnchor, getSolutionForPost, topicLinkCopy } from "@/app/topic-links";
 import {
   imageObject,
@@ -366,8 +367,33 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
               {/* The guide explains the rules; the tool applies them. It lives
                   inside this post rather than on a route of its own, which
                   would compete with it for the query that brings people here. */}
-              {post.key === "kdp-paperback-formatting" && (locale === "fr" || locale === "en") && (
-                <KdpFormatter locale={locale} />
+              {/* The guide explains the rules; the tool that applies them now
+                  lives on its own route, so it can be linked to as a tool.
+                  This guide keeps the query that brings people here and hands
+                  them across — rendering a second interactive copy would put
+                  two of our own URLs in the same result set. */}
+              {post.key === "kdp-paperback-formatting" && (
+                <a
+                  href={solutionPath(locale, getSolutionByKey("kdp-interior-formatter"))}
+                  className="group mt-12 flex flex-col rounded-[18px] border border-line bg-paper-2 p-7 transition-shadow duration-300 hover:shadow-[0_24px_60px_-34px_rgba(16,24,40,0.38)]"
+                >
+                  <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-mint-deep">
+                    {formatterCallout[locale].eyebrow}
+                  </p>
+                  <h2 className="mt-3 font-display text-3xl font-medium leading-tight tracking-[-0.01em] text-ink">
+                    {formatterCallout[locale].title}
+                  </h2>
+                  <p className="mt-4 text-[15px] leading-relaxed text-muted">
+                    {formatterCallout[locale].body}
+                  </p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-[15px] font-medium text-ink">
+                    {formatterCallout[locale].link}
+                    <ArrowRight
+                      className="h-4 w-4 text-mint transition-transform group-hover:translate-x-0.5"
+                      strokeWidth={2.25}
+                    />
+                  </span>
+                </a>
               )}
 
               <div className="mt-14 space-y-14">

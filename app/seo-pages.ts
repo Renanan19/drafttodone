@@ -24,13 +24,40 @@ export type SolutionTranslation = {
     label: string;
     href: string;
   }[];
+  /**
+   * The honest side-by-side on an "alternative" page.
+   *
+   * A comparison page that never names the thing it is an alternative to is
+   * not a comparison, to a reader or to a retrieval system. `rivalWins` marks
+   * the rows where the other tool is the better choice; a table without any is
+   * a sales sheet, so the renderer expects at least one.
+   */
+  comparison?: {
+    heading: string;
+    rivalName: string;
+    rivalUrl: string;
+    oursLabel: string;
+    rows: { criterion: string; ours: string; rival: string; rivalWins?: boolean }[];
+    footnote: string;
+  };
   cta: string;
 };
 
 export type SolutionPage = {
   key: string;
   updated: string;
-  tool?: "kdpRoyaltyCalculator";
+  /**
+   * The interactive tool this page carries, if any. A page named for a tool
+   * must render one: four pages here promised a generator and shipped only
+   * copy, which is the intent mismatch this union now makes explicit.
+   */
+  tool?:
+    | "kdpRoyaltyCalculator"
+    | "kdpInteriorFormatter"
+    | "kdpKeywordSlots"
+    | "kdpDescriptionFormatter"
+    | "kdpCoverTemplate"
+    | "kdpTitleScore";
   /**
    * "editorial" pages are trust/transparency surfaces, not commercial pages:
    * they stay in the sitemap and the AI resources but are kept out of the
@@ -357,6 +384,366 @@ export const solutionPages: SolutionPage[] = [
     },
   },
   {
+    // The free formatter has its own address because a tool that lives only
+    // inside an article cannot be linked to as a tool. The split is by intent,
+    // not by topic: the paperback guide answers "how do I format a novel for
+    // KDP", this page answers "convert my .docx into a KDP interior PDF".
+    // Neither title may carry the other's keywords.
+    key: "kdp-interior-formatter",
+    updated: "2026-08-21",
+    tool: "kdpInteriorFormatter",
+    translations: {
+      en: {
+        slug: "kdp-interior-formatter",
+        title: "Free KDP interior formatter: turn a .docx into a print-ready PDF",
+        description:
+          "Convert a Word manuscript into a 6 × 9 KDP interior PDF and a matching Kindle EPUB, in your browser, with no upload and no account.",
+        seoTitle: "Free KDP Interior Formatter: DOCX to Print-Ready PDF",
+        seoDescription:
+          "Drop in a .docx, get a 6 × 9 KDP interior PDF and a Kindle EPUB. Runs in your browser — nothing is uploaded, no account, no watermark.",
+        eyebrow: "Free KDP formatter",
+        h1: "Turn a Word manuscript into a KDP interior PDF, in the browser.",
+        lead: "Drop in a .docx and get back a 6 × 9 interior PDF that follows Amazon's print rules, plus the matching Kindle EPUB. Margins and gutter are computed from the real page count, fonts are embedded, and the file never leaves your machine.",
+        keywords: [
+          "KDP interior formatter",
+          "docx to KDP PDF",
+          "free KDP formatter",
+          "KDP interior PDF",
+          "book formatting tool",
+        ],
+        sections: [
+          {
+            id: "output",
+            title: "What exactly do you get back?",
+            body: "Two files: the print interior Amazon asks for, and the ebook version of the same manuscript.",
+            points: [
+              "6 × 9 inch interior PDF, no bleed, fonts embedded",
+              "Kindle-compatible EPUB 3 from the same source",
+              "Title page, copyright page, running heads and folios",
+              "Chapters opening on a recto, as trade books set them",
+            ],
+          },
+          {
+            id: "rules",
+            title: "Which KDP rules does it apply for you?",
+            body: "The constraints that cause most rejections are computed rather than guessed, from the page count your manuscript actually produces.",
+            points: [
+              "Gutter from the real page count, one step above the KDP minimum",
+              "Spine width for white or cream paper, for your cover file",
+              "A warning under 100 pages, where KDP allows no spine text",
+              "Images resampled to 300 DPI, with a warning on any too soft to print",
+            ],
+          },
+          {
+            id: "privacy",
+            title: "Where does the manuscript go?",
+            body: "Nowhere. The reader, the typesetter and both writers run as JavaScript in your own tab.",
+            points: [
+              "No upload, no server, no account, no email",
+              "Nothing is stored, so nothing can leak",
+              "Works offline once the page has loaded",
+              "No watermark and no page limit",
+            ],
+          },
+        ],
+        faq: [
+          {
+            question: "Is the KDP interior formatter really free?",
+            answer:
+              "Yes. It runs entirely in your browser, needs no account, and adds no watermark. DraftToDone sells a paid pipeline for producing whole books; formatting one manuscript is not part of it.",
+          },
+          {
+            question: "Which trim size does it produce?",
+            answer:
+              "6 × 9 inches, the most common trade paperback size on KDP. Other trims are not supported yet.",
+          },
+          {
+            question: "Will Amazon accept the PDF it makes?",
+            answer:
+              "It applies Amazon's published margin, gutter and resolution rules, and warns when your manuscript breaks one. No tool can promise KDP approval, and this one does not.",
+          },
+          {
+            question: "What does it need from my .docx?",
+            answer:
+              "Chapter titles styled as Heading 1. Without them the chapter breaks are guessed, and the tool tells you when that happened so you can check the list.",
+          },
+        ],
+        sources: [
+          {
+            label: "Amazon KDP: paperback interior formatting",
+            href: "https://kdp.amazon.com/en_US/help/topic/G201834180",
+          },
+          {
+            label: "Amazon KDP: print options and paper",
+            href: "https://kdp.amazon.com/en_US/help/topic/G201834230",
+          },
+        ],
+        cta: "See the full publishing pipeline",
+      },
+      fr: {
+        slug: "formateur-interieur-kdp",
+        title: "Formateur d'intérieur KDP gratuit : convertir un .docx en PDF prêt à imprimer",
+        description:
+          "Convertissez un manuscrit Word en PDF d'intérieur 6 × 9 pour KDP et en EPUB Kindle assorti, dans votre navigateur, sans envoi et sans compte.",
+        seoTitle: "Formateur KDP gratuit : convertir un .docx en PDF",
+        seoDescription:
+          "Déposez un .docx, récupérez un PDF d'intérieur 6 × 9 pour KDP et un EPUB Kindle. Tout se passe dans le navigateur : aucun envoi, aucun compte.",
+        eyebrow: "Formateur KDP gratuit",
+        h1: "Transformez un manuscrit Word en PDF d'intérieur KDP, dans le navigateur.",
+        lead: "Déposez un .docx et récupérez un PDF d'intérieur 6 × 9 conforme aux règles d'impression d'Amazon, plus l'EPUB Kindle assorti. Marges et reliure sont calculées sur la pagination réelle, les polices sont incorporées, et le fichier ne quitte jamais votre machine.",
+        keywords: [
+          "formateur intérieur KDP",
+          "convertir docx en pdf kdp",
+          "formateur kdp gratuit",
+          "PDF intérieur KDP",
+          "outil mise en page livre",
+        ],
+        sections: [
+          {
+            id: "output",
+            title: "Qu'est-ce que vous récupérez exactement ?",
+            body: "Deux fichiers : l'intérieur imprimable qu'Amazon réclame, et la version ebook du même manuscrit.",
+            points: [
+              "PDF d'intérieur 6 × 9 pouces, sans fond perdu, polices incorporées",
+              "EPUB 3 compatible Kindle depuis la même source",
+              "Page de titre, page de copyright, têtes de page et folios",
+              "Chapitres en belle page, comme dans l'édition courante",
+            ],
+          },
+          {
+            id: "rules",
+            title: "Quelles règles KDP applique-t-il à votre place ?",
+            body: "Les contraintes qui causent le plus de rejets sont calculées, pas devinées, à partir de la pagination que votre manuscrit produit vraiment.",
+            points: [
+              "Reliure calculée sur la pagination réelle, un cran au-dessus du minimum KDP",
+              "Largeur de dos pour papier blanc ou crème, pour votre couverture",
+              "Alerte sous 100 pages, où KDP n'autorise aucun texte au dos",
+              "Images rééchantillonnées à 300 DPI, avec alerte sur les trop peu définies",
+            ],
+          },
+          {
+            id: "privacy",
+            title: "Où part votre manuscrit ?",
+            body: "Nulle part. Le lecteur, le metteur en page et les deux générateurs tournent en JavaScript dans votre propre onglet.",
+            points: [
+              "Aucun envoi, aucun serveur, aucun compte, aucun e-mail",
+              "Rien n'est stocké, donc rien ne peut fuiter",
+              "Fonctionne hors ligne une fois la page chargée",
+              "Aucun filigrane et aucune limite de pages",
+            ],
+          },
+        ],
+        faq: [
+          {
+            question: "Le formateur d'intérieur KDP est-il vraiment gratuit ?",
+            answer:
+              "Oui. Il tourne entièrement dans votre navigateur, ne demande aucun compte et n'ajoute aucun filigrane. DraftToDone vend un pipeline payant pour produire des livres entiers ; formater un manuscrit n'en fait pas partie.",
+          },
+          {
+            question: "Quel format de broché produit-il ?",
+            answer:
+              "6 × 9 pouces, le format le plus courant sur KDP. Les autres formats ne sont pas encore pris en charge.",
+          },
+          {
+            question: "Amazon acceptera-t-il le PDF produit ?",
+            answer:
+              "L'outil applique les règles publiées d'Amazon sur les marges, la reliure et la résolution, et vous alerte quand votre manuscrit en enfreint une. Aucun outil ne peut promettre l'acceptation par KDP, et celui-ci ne le promet pas.",
+          },
+          {
+            question: "Que demande-t-il à mon .docx ?",
+            answer:
+              "Des titres de chapitre au style Titre 1. Sans eux, les chapitres sont devinés, et l'outil vous le signale pour que vous vérifiiez la liste.",
+          },
+        ],
+        sources: [
+          {
+            label: "Amazon KDP : mise en page de l'intérieur broché",
+            href: "https://kdp.amazon.com/en_US/help/topic/G201834180",
+          },
+          {
+            label: "Amazon KDP : options d'impression et papier",
+            href: "https://kdp.amazon.com/en_US/help/topic/G201834230",
+          },
+        ],
+        cta: "Voir le pipeline complet",
+      },
+      it: {
+        slug: "formattatore-interno-kdp",
+        title: "Formattatore interno KDP gratuito: da .docx a PDF pronto per la stampa",
+        description:
+          "Converti un manoscritto Word in un PDF interno 6 × 9 per KDP e nell'EPUB Kindle abbinato, nel browser, senza caricamenti e senza account.",
+        seoTitle: "Formattatore KDP gratuito: da .docx a PDF per la stampa",
+        seoDescription:
+          "Carica un .docx e ottieni un PDF interno 6 × 9 per KDP più un EPUB Kindle. Tutto nel browser: nessun caricamento, nessun account, nessuna filigrana.",
+        eyebrow: "Formattatore KDP gratuito",
+        h1: "Trasforma un manoscritto Word in un PDF interno per KDP, nel browser.",
+        lead: "Carica un .docx e ottieni un PDF interno 6 × 9 conforme alle regole di stampa di Amazon, più l'EPUB Kindle abbinato. Margini e margine interno sono calcolati sul numero di pagine reale, i font sono incorporati e il file non lascia mai il tuo computer.",
+        keywords: [
+          "formattatore interno KDP",
+          "da docx a pdf kdp",
+          "formattatore kdp gratuito",
+          "PDF interno KDP",
+          "strumento impaginazione libro",
+        ],
+        sections: [
+          {
+            id: "output",
+            title: "Che cosa ottieni esattamente?",
+            body: "Due file: l'interno stampabile che Amazon richiede e la versione ebook dello stesso manoscritto.",
+            points: [
+              "PDF interno 6 × 9 pollici, senza abbondanza, font incorporati",
+              "EPUB 3 compatibile Kindle dalla stessa fonte",
+              "Frontespizio, pagina del copyright, testatine e numeri di pagina",
+              "Capitoli che si aprono in pagina destra, come nell'editoria di mestiere",
+            ],
+          },
+          {
+            id: "rules",
+            title: "Quali regole KDP applica al posto tuo?",
+            body: "I vincoli che causano più rifiuti vengono calcolati, non ipotizzati, dal numero di pagine che il tuo manoscritto produce davvero.",
+            points: [
+              "Margine interno calcolato sulle pagine reali, un gradino sopra il minimo KDP",
+              "Spessore del dorso per carta bianca o avorio, per la tua copertina",
+              "Avviso sotto le 100 pagine, dove KDP non ammette testo sul dorso",
+              "Immagini ricampionate a 300 DPI, con avviso su quelle troppo poco definite",
+            ],
+          },
+          {
+            id: "privacy",
+            title: "Dove finisce il manoscritto?",
+            body: "Da nessuna parte. Lettore, impaginatore e i due generatori girano come JavaScript nella tua scheda.",
+            points: [
+              "Nessun caricamento, nessun server, nessun account, nessuna email",
+              "Niente viene salvato, quindi niente può trapelare",
+              "Funziona offline una volta caricata la pagina",
+              "Nessuna filigrana e nessun limite di pagine",
+            ],
+          },
+        ],
+        faq: [
+          {
+            question: "Il formattatore interno KDP è davvero gratuito?",
+            answer:
+              "Sì. Gira interamente nel browser, non richiede account e non aggiunge filigrane. DraftToDone vende una pipeline a pagamento per produrre libri interi; formattare un manoscritto non ne fa parte.",
+          },
+          {
+            question: "Quale formato di stampa produce?",
+            answer:
+              "6 × 9 pollici, il formato paperback più diffuso su KDP. Gli altri formati non sono ancora supportati.",
+          },
+          {
+            question: "Amazon accetterà il PDF prodotto?",
+            answer:
+              "Lo strumento applica le regole pubblicate da Amazon su margini, margine interno e risoluzione, e ti avvisa quando il manoscritto ne viola una. Nessuno strumento può promettere l'approvazione KDP, e questo non la promette.",
+          },
+          {
+            question: "Che cosa serve nel mio .docx?",
+            answer:
+              "Titoli di capitolo con lo stile Titolo 1. Senza, i capitoli vengono ipotizzati, e lo strumento te lo segnala così puoi controllare l'elenco.",
+          },
+        ],
+        sources: [
+          {
+            label: "Amazon KDP: impaginazione dell'interno paperback",
+            href: "https://kdp.amazon.com/en_US/help/topic/G201834180",
+          },
+          {
+            label: "Amazon KDP: opzioni di stampa e carta",
+            href: "https://kdp.amazon.com/en_US/help/topic/G201834230",
+          },
+        ],
+        cta: "Guarda la pipeline completa",
+      },
+      de: {
+        slug: "kdp-innenteil-formatierer",
+        title: "Kostenloser KDP-Innenteil-Formatierer: .docx in druckfertiges PDF",
+        description:
+          "Wandle ein Word-Manuskript in ein 6 × 9 KDP-Innenteil-PDF und das passende Kindle-EPUB um, im Browser, ohne Upload und ohne Konto.",
+        seoTitle: "KDP-Formatierer gratis: .docx in druckfertiges PDF",
+        seoDescription:
+          "Lade eine .docx hoch und bekomme ein 6 × 9 KDP-Innenteil-PDF plus Kindle-EPUB. Läuft im Browser: kein Upload, kein Konto, kein Wasserzeichen.",
+        eyebrow: "Kostenloser KDP-Formatierer",
+        h1: "Mach aus einem Word-Manuskript ein KDP-Innenteil-PDF, im Browser.",
+        lead: "Lege eine .docx ab und bekomme ein 6 × 9 Zoll Innenteil-PDF nach Amazons Druckregeln, plus das passende Kindle-EPUB. Ränder und Bundsteg werden aus der echten Seitenzahl berechnet, Schriften sind eingebettet, und die Datei verlässt deinen Rechner nie.",
+        keywords: [
+          "KDP-Innenteil-Formatierer",
+          "docx in kdp pdf umwandeln",
+          "KDP Formatierer kostenlos",
+          "KDP Innenteil PDF",
+          "Buchsatz Tool",
+        ],
+        sections: [
+          {
+            id: "output",
+            title: "Was bekommst du genau zurück?",
+            body: "Zwei Dateien: den druckfertigen Innenteil, den Amazon verlangt, und die Ebook-Fassung desselben Manuskripts.",
+            points: [
+              "6 × 9 Zoll Innenteil-PDF, ohne Beschnitt, Schriften eingebettet",
+              "Kindle-kompatibles EPUB 3 aus derselben Quelle",
+              "Titelei, Impressum, Kolumnentitel und Seitenzahlen",
+              "Kapitel auf der rechten Seite, wie im gewachsenen Buchsatz",
+            ],
+          },
+          {
+            id: "rules",
+            title: "Welche KDP-Regeln wendet er für dich an?",
+            body: "Die Vorgaben, an denen die meisten Uploads scheitern, werden berechnet statt geschätzt — aus der Seitenzahl, die dein Manuskript wirklich ergibt.",
+            points: [
+              "Bundsteg aus der echten Seitenzahl, eine Stufe über dem KDP-Minimum",
+              "Rückenbreite für weißes oder cremefarbenes Papier, für dein Cover",
+              "Warnung unter 100 Seiten, wo KDP keinen Rückentext erlaubt",
+              "Bilder auf 300 DPI gerechnet, mit Warnung bei zu groben",
+            ],
+          },
+          {
+            id: "privacy",
+            title: "Wohin geht dein Manuskript?",
+            body: "Nirgendwohin. Leser, Satzprogramm und beide Generatoren laufen als JavaScript in deinem eigenen Tab.",
+            points: [
+              "Kein Upload, kein Server, kein Konto, keine E-Mail",
+              "Nichts wird gespeichert, also kann nichts abfließen",
+              "Funktioniert offline, sobald die Seite geladen ist",
+              "Kein Wasserzeichen und keine Seitenbegrenzung",
+            ],
+          },
+        ],
+        faq: [
+          {
+            question: "Ist der KDP-Innenteil-Formatierer wirklich kostenlos?",
+            answer:
+              "Ja. Er läuft komplett im Browser, braucht kein Konto und setzt kein Wasserzeichen. DraftToDone verkauft eine bezahlte Pipeline für ganze Bücher; ein Manuskript zu formatieren gehört nicht dazu.",
+          },
+          {
+            question: "Welches Format erzeugt er?",
+            answer:
+              "6 × 9 Zoll, das gängigste Taschenbuchformat auf KDP. Andere Formate werden noch nicht unterstützt.",
+          },
+          {
+            question: "Wird Amazon das erzeugte PDF akzeptieren?",
+            answer:
+              "Das Tool wendet Amazons veröffentlichte Regeln zu Rändern, Bundsteg und Auflösung an und warnt, wenn dein Manuskript eine davon bricht. Kein Tool kann die KDP-Freigabe versprechen, und dieses tut es nicht.",
+          },
+          {
+            question: "Was braucht er von meiner .docx?",
+            answer:
+              "Kapitelüberschriften im Stil Überschrift 1. Ohne sie werden die Kapitel geraten, und das Tool sagt dir, wann das passiert ist, damit du die Liste prüfen kannst.",
+          },
+        ],
+        sources: [
+          {
+            label: "Amazon KDP: Innenteil-Formatierung für Taschenbücher",
+            href: "https://kdp.amazon.com/en_US/help/topic/G201834180",
+          },
+          {
+            label: "Amazon KDP: Druckoptionen und Papier",
+            href: "https://kdp.amazon.com/en_US/help/topic/G201834230",
+          },
+        ],
+        cta: "Die komplette Pipeline ansehen",
+      },
+    },
+  },
+  {
     key: "ai-publishing-software",
     updated: "2026-06-07",
     translations: {
@@ -365,6 +752,9 @@ export const solutionPages: SolutionPage[] = [
         title: "AI publishing software for KDP books, covers and metadata",
         description:
           "DraftToDone is AI publishing software for creating manuscripts, book covers, KDP metadata and repeatable catalog workflows from one controlled pipeline.",
+        seoTitle: "AI Publishing Software: Manuscript, Cover, KDP Metadata",
+        seoDescription:
+          "One controlled pipeline turns a niche brief into a manuscript, a full wrap cover and KDP metadata. What it produces, what it costs, and its limits.",
         eyebrow: "AI publishing software",
         h1: "Create publish-ready books with one AI publishing workflow.",
         lead: "DraftToDone is being built for indie publishers, authors and operators who want a controlled system for manuscript generation, cover packaging, title research, KDP metadata and catalog quality assurance.",
@@ -434,6 +824,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Logiciel d'édition IA pour livres KDP, couvertures et métadonnées",
         description:
           "DraftToDone est un logiciel d'édition IA pour créer manuscrits, couvertures, métadonnées KDP et workflows de catalogue depuis un pipeline contrôlé.",
+        seoTitle: "Logiciel d'édition IA : manuscrit, couverture, métadonnées",
+        seoDescription:
+          "Un pipeline contrôlé transforme un brief en manuscrit, couverture complète et métadonnées KDP. Ce qu'il produit, ce qu'il coûte, et ses limites.",
         eyebrow: "Logiciel édition IA",
         h1: "Créez des livres prêts à publier avec un workflow d'édition IA.",
         lead: "DraftToDone est conçu pour les éditeurs indépendants, auteurs et opérateurs qui veulent un système contrôlé pour générer manuscrit, couverture, titre, métadonnées KDP et contrôle qualité.",
@@ -503,6 +896,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Software di editoria IA per libri KDP, copertine e metadati",
         description:
           "DraftToDone è un software di editoria IA per creare manoscritti, copertine, metadati KDP e workflow di catalogo da un pipeline controllato.",
+        seoTitle: "Software di editoria IA: manoscritto, copertina, metadati",
+        seoDescription:
+          "Una pipeline controllata trasforma un brief in manoscritto, copertina completa e metadati KDP. Cosa produce, quanto costa e i limiti dichiarati.",
         eyebrow: "Software editoria IA",
         h1: "Crea libri pronti alla pubblicazione con un workflow IA.",
         lead: "DraftToDone è pensato per editori indipendenti, autori e operatori che vogliono un sistema controllato per manoscritto, copertina, titolo, metadati KDP e qualità catalogo.",
@@ -572,6 +968,9 @@ export const solutionPages: SolutionPage[] = [
         title: "KI-Publishing-Software für KDP-Bücher, Cover und Metadaten",
         description:
           "DraftToDone ist KI-Publishing-Software für Manuskripte, Buchcover, KDP-Metadaten und wiederholbare Katalog-Workflows aus einer kontrollierten Pipeline.",
+        seoTitle: "KI-Publishing-Software: Manuskript, Cover, KDP-Metadaten",
+        seoDescription:
+          "Eine kontrollierte Pipeline macht aus einem Briefing Manuskript, Cover und KDP-Metadaten. Was sie liefert, was sie kostet, wo die Grenzen sind.",
         eyebrow: "KI-Publishing-Software",
         h1: "Erstelle veröffentlichungsfertige Bücher mit einem KI-Publishing-Workflow.",
         lead: "DraftToDone wird für Indie-Publisher, Autorinnen und Operatoren gebaut, die ein kontrolliertes System für Manuskript, Cover, Titel, KDP-Metadaten und Katalogqualität wollen.",
@@ -641,12 +1040,16 @@ export const solutionPages: SolutionPage[] = [
   {
     key: "ai-book-cover-generator",
     updated: "2026-06-19",
+    tool: "kdpCoverTemplate",
     translations: {
       en: {
         slug: "ai-book-cover-generator",
         title: "AI book cover generator for KDP front cover, spine and back cover",
         description:
           "Generate print-ready KDP book covers with AI: front cover, full-wrap spine and back cover sized for ebook and paperback, with title, subtitle and author typography.",
+        seoTitle: "AI Book Cover Generator + Free KDP Cover Template",
+        seoDescription:
+          "Get the exact flat wraparound dimensions for your trim, page count and paper, plus a 300 DPI template with spine, bleed and safe zones.",
         eyebrow: "AI book cover generator",
         h1: "Generate a print-ready book cover, front to back.",
         lead: "DraftToDone designs the full cover package — front, spine and back — with AI imagery and typography that fit your genre, your trim size and KDP print specs, so the file you upload is ready the first time.",
@@ -716,6 +1119,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Générateur de couverture de livre IA pour KDP : première, dos et quatrième",
         description:
           "Générez des couvertures KDP prêtes à imprimer avec l'IA : première de couverture, dos et quatrième, dimensionnées pour ebook et broché, avec titre, sous-titre et typographie auteur.",
+        seoTitle: "Générateur de couverture IA + gabarit KDP gratuit",
+        seoDescription:
+          "Obtenez les dimensions à plat exactes pour votre format, pagination et papier, plus un gabarit 300 DPI avec dos, fond perdu et zones sûres.",
         eyebrow: "Générateur de couverture IA",
         h1: "Générez une couverture prête à imprimer, de la première à la quatrième.",
         lead: "DraftToDone conçoit le pack complet — première, dos et quatrième — avec visuels et typographie IA adaptés à votre genre, votre format et les specs d'impression KDP, pour un fichier bon du premier coup.",
@@ -785,6 +1191,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Generatore di copertine libri IA per KDP: fronte, dorso e retro",
         description:
           "Genera copertine KDP pronte per la stampa con l'IA: copertina anteriore, dorso e retro dimensionati per ebook e paperback, con titolo, sottotitolo e tipografia autore.",
+        seoTitle: "Generatore di copertine IA + template KDP gratuito",
+        seoDescription:
+          "Ottieni le dimensioni piane esatte per formato, pagine e carta, più un template a 300 DPI con dorso, abbondanza e zone sicure.",
         eyebrow: "Generatore copertine IA",
         h1: "Genera una copertina pronta per la stampa, dal fronte al retro.",
         lead: "DraftToDone progetta il pacchetto completo — fronte, dorso e retro — con immagini e tipografia IA adatte al genere, al formato e alle specifiche di stampa KDP, così il file è pronto al primo tentativo.",
@@ -854,6 +1263,9 @@ export const solutionPages: SolutionPage[] = [
         title: "KI-Buchcover-Generator für KDP: Vorderseite, Rücken und Rückseite",
         description:
           "Erstelle druckfertige KDP-Buchcover mit KI: Vorderseite, Buchrücken und Rückseite, dimensioniert für Ebook und Taschenbuch, mit Titel, Untertitel und Autoren-Typografie.",
+        seoTitle: "KI-Buchcover-Generator + gratis KDP-Cover-Vorlage",
+        seoDescription:
+          "Hol dir die exakten flachen Maße für Format, Seitenzahl und Papier, plus eine 300-DPI-Vorlage mit Rücken, Beschnitt und Sicherheitszonen.",
         eyebrow: "KI-Buchcover-Generator",
         h1: "Erstelle ein druckfertiges Cover, von vorn bis hinten.",
         lead: "DraftToDone gestaltet das komplette Cover-Paket — Vorderseite, Rücken und Rückseite — mit KI-Bildern und Typografie passend zu Genre, Format und KDP-Druckvorgaben, damit die Datei gleich beim ersten Mal passt.",
@@ -923,12 +1335,16 @@ export const solutionPages: SolutionPage[] = [
   {
     key: "book-description-generator",
     updated: "2026-06-19",
+    tool: "kdpDescriptionFormatter",
     translations: {
       en: {
         slug: "book-description-generator",
         title: "Book description generator for the Amazon KDP blurb that sells",
         description:
           "Turn your manuscript into an Amazon book description that sells. The generator writes a hook, a benefit-led blurb and KDP metadata sized for the description field.",
+        seoTitle: "Book Description Generator + Free KDP HTML Formatter",
+        seoDescription:
+          "Format an Amazon blurb into the exact HTML KDP accepts, with the 4,000-character count that includes the tags. Free, no account.",
         eyebrow: "Book description generator",
         h1: "Write the Amazon book description that actually sells the book.",
         lead: "DraftToDone reads your manuscript and drafts a benefit-led blurb for the KDP description field, with a strong opening hook and metadata that fit the listing.",
@@ -950,6 +1366,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Générateur de description de livre pour le résumé KDP qui vend",
         description:
           "Transformez votre manuscrit en description Amazon qui vend : une accroche, un résumé orienté bénéfices et des métadonnées calibrées pour le champ KDP.",
+        seoTitle: "Générateur de description + formateur HTML KDP gratuit",
+        seoDescription:
+          "Mettez un résumé Amazon au format HTML exact accepté par KDP, avec le compteur de 4 000 caractères qui inclut les balises. Gratuit, sans compte.",
         eyebrow: "Générateur de description",
         h1: "Rédigez la description Amazon qui vend vraiment le livre.",
         lead: "DraftToDone lit votre manuscrit et rédige un résumé orienté bénéfices pour le champ description de KDP, avec une accroche forte et des métadonnées cohérentes avec la fiche.",
@@ -971,6 +1390,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Generatore di descrizione libro per la sinossi KDP che vende",
         description:
           "Trasforma il manoscritto in una descrizione Amazon che vende: un gancio, una sinossi orientata ai benefici e metadati calibrati per il campo KDP.",
+        seoTitle: "Generatore di descrizioni + formattatore HTML KDP",
+        seoDescription:
+          "Trasforma una sinossi Amazon nell'HTML esatto che KDP accetta, con il contatore da 4.000 caratteri che include i tag. Gratis, senza account.",
         eyebrow: "Generatore di descrizione",
         h1: "Scrivi la descrizione Amazon che vende davvero il libro.",
         lead: "DraftToDone legge il tuo manoscritto e redige una sinossi orientata ai benefici per il campo descrizione di KDP, con un gancio forte e metadati coerenti con la scheda.",
@@ -992,6 +1414,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Buchbeschreibung-Generator für den KDP-Klappentext der verkauft",
         description:
           "Mach aus deinem Manuskript eine Amazon-Beschreibung die verkauft: ein Aufhänger, ein nutzenorientierter Klappentext und Metadaten für das KDP-Feld.",
+        seoTitle: "Buchbeschreibung-Generator + gratis KDP-HTML-Tool",
+        seoDescription:
+          "Bring einen Amazon-Klappentext in genau das HTML, das KDP akzeptiert — mit dem 4.000-Zeichen-Zähler, der die Tags mitzählt. Gratis, ohne Konto.",
         eyebrow: "Buchbeschreibung-Generator",
         h1: "Schreib die Amazon-Beschreibung, die das Buch wirklich verkauft.",
         lead: "DraftToDone liest dein Manuskript und entwirft einen nutzenorientierten Klappentext für das KDP-Beschreibungsfeld, mit starkem Aufhänger und stimmigen Metadaten.",
@@ -1013,12 +1438,16 @@ export const solutionPages: SolutionPage[] = [
   {
     key: "book-title-generator",
     updated: "2026-06-19",
+    tool: "kdpTitleScore",
     translations: {
       en: {
         slug: "book-title-generator",
         title: "Book title generator for KDP titles, subtitles and series",
         description:
           "Generate clickable, keyword-aware book titles and subtitles for Amazon KDP with AI. Test title ideas built for search and your category before you publish.",
+        seoTitle: "Book Title Generator and Free KDP Title Checker",
+        seoDescription:
+          "Score a title against KDP's 200-character field and see exactly where Amazon's search listing clips it on desktop and mobile. Free.",
         eyebrow: "Book title generator",
         h1: "Generate book titles and subtitles built to be clicked and found.",
         lead: "DraftToDone turns your topic into clear, keyword-aware title and subtitle options for Amazon KDP. You get ideas shaped by your category, not random slogans.",
@@ -1040,6 +1469,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Générateur de titre de livre pour titres et sous-titres KDP",
         description:
           "Générez des titres et sous-titres de livres accrocheurs et optimisés pour Amazon KDP avec l'IA. Testez vos idées pensées pour la recherche avant de publier.",
+        seoTitle: "Générateur de titre et vérificateur de titre KDP",
+        seoDescription:
+          "Notez un titre face au champ KDP de 200 caractères et voyez où la liste Amazon le coupe, sur ordinateur et sur mobile. Gratuit.",
         eyebrow: "Générateur de titre",
         h1: "Générez des titres et sous-titres faits pour être cliqués et trouvés.",
         lead: "DraftToDone transforme votre sujet en titres et sous-titres clairs et optimisés pour Amazon KDP. Vous obtenez des idées adaptées à votre catégorie, pas des slogans au hasard.",
@@ -1061,6 +1493,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Generatore di titoli per libri con titoli e sottotitoli KDP",
         description:
           "Genera titoli e sottotitoli accattivanti e ottimizzati per Amazon KDP con l'IA. Prova le tue idee pensate per la ricerca e la categoria prima di pubblicare.",
+        seoTitle: "Generatore di titoli e verificatore di titoli KDP",
+        seoDescription:
+          "Valuta un titolo rispetto al campo KDP da 200 caratteri e vedi dove l'elenco Amazon lo taglia, da computer e da mobile. Gratis.",
         eyebrow: "Generatore di titoli",
         h1: "Genera titoli e sottotitoli fatti per essere cliccati e trovati.",
         lead: "DraftToDone trasforma il tuo argomento in titoli e sottotitoli chiari e ottimizzati per Amazon KDP. Ottieni idee adatte alla tua categoria, non slogan casuali.",
@@ -1082,6 +1517,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Buchtitel-Generator für KDP-Titel, Untertitel und Reihen",
         description:
           "Erzeuge klickstarke, keyword-bewusste Buchtitel und Untertitel für Amazon KDP mit KI. Teste deine Titelideen passend zur Kategorie, bevor du veröffentlichst.",
+        seoTitle: "Buchtitel-Generator und gratis KDP-Titel-Check",
+        seoDescription:
+          "Prüfe einen Titel gegen KDPs 200-Zeichen-Feld und sieh, wo Amazons Trefferliste ihn abschneidet — am Rechner und am Handy. Gratis.",
         eyebrow: "Buchtitel-Generator",
         h1: "Erzeuge Buchtitel und Untertitel, die geklickt und gefunden werden.",
         lead: "DraftToDone macht aus deinem Thema klare, keyword-bewusste Titel und Untertitel für Amazon KDP. Du bekommst Ideen passend zu deiner Kategorie, keine zufälligen Slogans.",
@@ -1109,6 +1547,9 @@ export const solutionPages: SolutionPage[] = [
         title: "AI book generator that writes a full manuscript for KDP",
         description:
           "Generate a full book with AI: outline, chapters and a consistent voice from a single brief, then hand the finished manuscript to cover and KDP metadata.",
+        seoTitle: "AI Book Generator: A Full Manuscript From One Brief",
+        seoDescription:
+          "Outline, chapters and a consistent voice from a single niche brief, then the cover and KDP metadata. No sales are promised — the limits are stated.",
         eyebrow: "AI book generator",
         h1: "Generate a full book manuscript with AI, from outline to last chapter.",
         lead: "DraftToDone turns one brief into a complete manuscript — outline, chapters, length and a steady voice — so you start the cover and metadata stage with a finished book, not a blank page.",
@@ -1130,6 +1571,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Générateur de livre IA qui rédige un manuscrit complet KDP",
         description:
           "Générez un livre complet avec l'IA : plan, chapitres et voix cohérente depuis un brief, puis transmettez le manuscrit fini à la couverture et aux métadonnées KDP.",
+        seoTitle: "Générateur de livre IA : un manuscrit complet en un brief",
+        seoDescription:
+          "Plan, chapitres et voix cohérente depuis un seul brief, puis la couverture et les métadonnées KDP. Aucune vente promise : les limites sont écrites.",
         eyebrow: "Générateur de livre IA",
         h1: "Générez un manuscrit de livre complet avec l'IA, du plan au dernier chapitre.",
         lead: "DraftToDone transforme un brief en manuscrit complet — plan, chapitres, longueur et voix régulière — pour aborder la couverture et les métadonnées avec un livre fini, pas une page blanche.",
@@ -1151,6 +1595,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Generatore di libri IA che scrive un manoscritto completo KDP",
         description:
           "Genera un libro completo con l'IA: outline, capitoli e una voce coerente da un brief, poi passa il manoscritto finito a copertina e metadati KDP.",
+        seoTitle: "Generatore di libri IA: manoscritto completo da un brief",
+        seoDescription:
+          "Scaletta, capitoli e voce coerente da un solo brief, poi copertina e metadati KDP. Nessuna vendita promessa: i limiti sono dichiarati.",
         eyebrow: "Generatore di libri IA",
         h1: "Genera un manoscritto di libro completo con l'IA, dall'outline all'ultimo capitolo.",
         lead: "DraftToDone trasforma un brief in un manoscritto completo — outline, capitoli, lunghezza e voce costante — così affronti copertina e metadati con un libro finito, non una pagina bianca.",
@@ -1172,6 +1619,9 @@ export const solutionPages: SolutionPage[] = [
         title: "KI-Buchgenerator, der ein komplettes KDP-Manuskript schreibt",
         description:
           "Erstelle ein komplettes Buch mit KI: Outline, Kapitel und eine konsistente Stimme aus einem Brief, dann geht das fertige Manuskript an Cover und KDP-Metadaten.",
+        seoTitle: "KI-Buchgenerator: komplettes Manuskript aus einem Brief",
+        seoDescription:
+          "Gliederung, Kapitel und konsistente Stimme aus einem Briefing, dann Cover und KDP-Metadaten. Keine Verkäufe versprochen — die Grenzen stehen da.",
         eyebrow: "KI-Buchgenerator",
         h1: "Erstelle ein komplettes Buchmanuskript mit KI, von der Outline bis zum letzten Kapitel.",
         lead: "DraftToDone macht aus einem Brief ein komplettes Manuskript — Outline, Kapitel, Länge und eine ruhige Stimme — damit du Cover und Metadaten mit einem fertigen Buch statt einer leeren Seite beginnst.",
@@ -1193,15 +1643,16 @@ export const solutionPages: SolutionPage[] = [
   {
     key: "kdp-keyword-tool",
     updated: "2026-06-19",
+    tool: "kdpKeywordSlots",
     translations: {
       en: {
         slug: "kdp-keyword-tool",
         title: "KDP keyword tool for the 7 backend slots and categories",
         description:
           "Research Amazon book keywords, fill the 7 backend keyword slots, and check category fit. A KDP keyword tool built into one publishing pipeline.",
-        seoTitle: "KDP Keyword Tool: Find Amazon Keywords & Fill 7 Slots",
+        seoTitle: "KDP Keyword Tool: Check Your 7 Backend Slots Free",
         seoDescription:
-          "Research Amazon book keywords, rank phrases, fill all 7 KDP backend fields and check category fit in one publishing workflow.",
+          "Paste your 7 KDP keywords and see what Amazon's rules reject: over-length slots, banned terms, and words already spent in your title.",
         eyebrow: "KDP keyword tool",
         h1: "Find and fill every keyword a book should target on Amazon.",
         lead: "Research Kindle and print keywords, then place the strongest seven in the backend slots that KDP gives you. Category fit is checked alongside, so the metadata reads as one coherent listing.",
@@ -1223,6 +1674,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Outil mots-clés KDP pour les 7 champs et les catégories",
         description:
           "Recherchez les mots-clés de votre livre Amazon, remplissez les 7 champs backend et vérifiez la catégorie. Un outil mots-clés KDP intégré au pipeline.",
+        seoTitle: "Outil mots-clés KDP : vérifiez vos 7 champs, gratuit",
+        seoDescription:
+          "Collez vos 7 mots-clés KDP et voyez ce que les règles d'Amazon refusent : champs trop longs, termes interdits, mots déjà pris par le titre.",
         eyebrow: "Outil mots-clés KDP",
         h1: "Trouvez et placez chaque mot-clé que votre livre doit viser sur Amazon.",
         lead: "Recherchez les mots-clés Kindle et papier, puis placez les sept plus forts dans les champs backend prévus par KDP. La catégorie est vérifiée en parallèle, pour une fiche cohérente.",
@@ -1244,6 +1698,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Strumento keyword KDP per i 7 campi e le categorie",
         description:
           "Cerca le keyword del tuo libro Amazon, riempi i 7 campi backend e verifica la categoria. Uno strumento keyword KDP integrato nella pipeline di pubblicazione.",
+        seoTitle: "Strumento keyword KDP: controlla i 7 campi, gratis",
+        seoDescription:
+          "Incolla le tue 7 keyword KDP e scopri cosa rifiutano le regole di Amazon: campi troppo lunghi, termini vietati, parole già usate nel titolo.",
         eyebrow: "Strumento keyword KDP",
         h1: "Trova e inserisci ogni keyword che il tuo libro deve puntare su Amazon.",
         lead: "Cerca le keyword Kindle e cartacee, poi inserisci le sette più forti nei campi backend previsti da KDP. La categoria viene verificata in parallelo, per una scheda coerente.",
@@ -1265,6 +1722,9 @@ export const solutionPages: SolutionPage[] = [
         title: "KDP-Keyword-Tool für die 7 Felder und Kategorien",
         description:
           "Recherchiere Amazon-Buch-Keywords, fülle die 7 Backend-Felder und prüfe die Kategorie. Ein KDP-Keyword-Tool, eingebettet in eine Publishing-Pipeline.",
+        seoTitle: "KDP-Keyword-Tool: die 7 Felder gratis prüfen",
+        seoDescription:
+          "Füge deine 7 KDP-Keywords ein und sieh, was Amazons Regeln ablehnen: zu lange Felder, verbotene Begriffe, im Titel schon vergebene Wörter.",
         eyebrow: "KDP-Keyword-Tool",
         h1: "Finde und setze jedes Keyword, das dein Buch bei Amazon treffen soll.",
         lead: "Recherchiere Kindle- und Print-Keywords und setze die sieben stärksten in die Backend-Felder, die KDP vorgibt. Die Kategorie wird parallel geprüft, für ein stimmiges Listing.",
@@ -1292,6 +1752,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Best AI book generator for KDP publishers who need the whole package",
         description:
           "Choosing the best AI book generator? Compare what matters for KDP: manuscript quality, cover workflow, metadata, pricing, review gates and export readiness.",
+        seoTitle: "Best AI Book Generator for KDP: 6 Criteria That Matter",
+        seoDescription:
+          "Manuscript quality, cover workflow, metadata, price per book, review gates and export readiness — the six criteria to compare before you pick one.",
         eyebrow: "Best AI book generator",
         h1: "The best AI book generator is the one that ships the whole KDP package.",
         lead: "Most AI writing tools stop at text. KDP publishers need more: a coherent manuscript, cover direction, title, description, keywords and quality checks before upload. This page shows the buying criteria and where DraftToDone fits.",
@@ -1313,6 +1776,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Meilleur générateur de livre IA pour publier sur KDP avec un package complet",
         description:
           "Vous cherchez le meilleur générateur de livre IA ? Comparez les vrais critères KDP : manuscrit, couverture, métadonnées, prix, contrôle qualité et export.",
+        seoTitle: "Meilleur générateur de livre IA : 6 critères KDP",
+        seoDescription:
+          "Manuscrit, couverture, métadonnées, prix par livre, contrôles qualité et export : les six critères à comparer avant de choisir un outil.",
         eyebrow: "Meilleur générateur livre IA",
         h1: "Le meilleur générateur de livre IA est celui qui livre tout le package KDP.",
         lead: "La plupart des outils d'écriture IA s'arrêtent au texte. Un éditeur KDP a besoin de plus : manuscrit cohérent, couverture, titre, description, mots-clés et contrôles avant upload.",
@@ -1334,6 +1800,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Miglior generatore di libri IA per publisher KDP che vogliono il pacchetto completo",
         description:
           "Cerchi il miglior generatore di libri IA? Confronta i criteri KDP reali: manoscritto, copertina, metadati, prezzo, controlli qualità ed export.",
+        seoTitle: "Miglior generatore di libri IA: 6 criteri KDP",
+        seoDescription:
+          "Manoscritto, copertina, metadati, prezzo per libro, controlli qualità ed export: i sei criteri da confrontare prima di scegliere uno strumento.",
         eyebrow: "Miglior generatore libro IA",
         h1: "Il miglior generatore di libri IA è quello che consegna tutto il pacchetto KDP.",
         lead: "Molti strumenti di scrittura IA si fermano al testo. Un publisher KDP ha bisogno di manoscritto coerente, copertina, titolo, descrizione, keyword e controlli prima dell'upload.",
@@ -1355,6 +1824,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Bester KI-Buchgenerator für KDP-Publisher, die das ganze Paket brauchen",
         description:
           "Suchst du den besten KI-Buchgenerator? Vergleiche die KDP-Kriterien: Manuskript, Cover, Metadaten, Preis, Qualitätschecks und Exportbereitschaft.",
+        seoTitle: "Bester KI-Buchgenerator für KDP: 6 Kriterien",
+        seoDescription:
+          "Manuskript, Cover, Metadaten, Preis pro Buch, Qualitätschecks und Export — die sechs Kriterien zum Vergleichen, bevor du dich entscheidest.",
         eyebrow: "Bester KI-Buchgenerator",
         h1: "Der beste KI-Buchgenerator liefert das ganze KDP-Paket.",
         lead: "Viele KI-Schreibtools enden beim Text. KDP-Publisher brauchen mehr: ein stimmiges Manuskript, Cover, Titel, Beschreibung, Keywords und Prüfungen vor dem Upload.",
@@ -1406,6 +1878,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Générateur de livre KDP pour manuscrit, couverture et métadonnées Amazon",
         description:
           "Générez un package de livre prêt à relire pour KDP : manuscrit, couverture, titre, description, mots-clés et contrôles avant upload Amazon.",
+        seoTitle: "Générateur de livre KDP : manuscrit, couverture, métadonnées",
+        seoDescription:
+          "Un package prêt pour KDP : manuscrit, couverture complète, titre, description et 7 mots-clés, avec des contrôles avant l'upload Amazon.",
         eyebrow: "Générateur livre KDP",
         h1: "Générez le package KDP, pas seulement le manuscrit.",
         lead: "Publier sur Amazon KDP ne se limite pas aux chapitres. DraftToDone transforme un brief de niche en actifs utiles avant upload : manuscrit, couverture, titre, description, mots-clés et checklist.",
@@ -1427,6 +1902,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Generatore di libri KDP per manoscritto, copertina e metadati Amazon",
         description:
           "Genera un pacchetto libro pronto da rivedere per KDP: manoscritto, copertina, titolo, descrizione, keyword e controlli prima dell'upload.",
+        seoTitle: "Generatore di libri KDP: manoscritto, copertina, metadati",
+        seoDescription:
+          "Un pacchetto pronto per KDP: manoscritto, copertina completa, titolo, descrizione e 7 keyword, con controlli prima dell'upload su Amazon.",
         eyebrow: "Generatore libro KDP",
         h1: "Genera il pacchetto KDP, non solo il manoscritto.",
         lead: "Pubblicare su Amazon KDP non significa solo scrivere capitoli. DraftToDone trasforma un brief di nicchia negli asset utili prima dell'upload: manoscritto, copertina, titolo, descrizione, keyword e checklist.",
@@ -1448,6 +1926,9 @@ export const solutionPages: SolutionPage[] = [
         title: "KDP-Buchgenerator für Manuskript, Cover und Amazon-Metadaten",
         description:
           "Erzeuge ein KDP-Buchpaket zur Prüfung: Manuskript, Cover-Richtung, Titel, Beschreibung, Keywords und Qualitätschecks vor dem Amazon-Upload.",
+        seoTitle: "KDP-Buchgenerator: Manuskript, Cover und Metadaten",
+        seoDescription:
+          "Ein KDP-fertiges Paket: Manuskript, komplettes Cover, Titel, Beschreibung und 7 Keywords, mit Qualitätschecks vor dem Amazon-Upload.",
         eyebrow: "KDP-Buchgenerator",
         h1: "Erzeuge das KDP-Buchpaket, nicht nur das Manuskript.",
         lead: "Amazon-KDP-Publishing ist mehr als Kapitel schreiben. DraftToDone verwandelt ein Nischenbriefing in die Assets vor dem Upload: Manuskript, Cover, Titel, Beschreibung, Keywords und Prüfliste.",
@@ -1475,6 +1956,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Sudowrite alternative for the whole publishable book, not just prose",
         description:
           "Looking for a Sudowrite alternative? DraftToDone generates the full KDP product — manuscript, cover and metadata — while Sudowrite focuses on AI fiction craft.",
+        seoTitle: "Sudowrite Alternative: The Whole Book, Not Just Prose",
+        seoDescription:
+          "Sudowrite is built for fiction craft. DraftToDone produces the full KDP product — manuscript, cover, metadata. Where each one wins, side by side.",
         eyebrow: "Sudowrite alternative",
         h1: "A Sudowrite alternative built around the whole book, not just the writing.",
         lead: "Sudowrite is a strong AI writing partner for fiction. DraftToDone aims one step wider: turning a brief into a publish-ready KDP product — manuscript, cover and metadata — for indie publishers and catalog operators.",
@@ -1489,6 +1973,22 @@ export const solutionPages: SolutionPage[] = [
           { question: "Is DraftToDone better than Sudowrite for publishing?", answer: "They do different jobs. Sudowrite helps you write better fiction; DraftToDone turns a brief into a publish-ready KDP product. Plenty of authors could use both." },
           { question: "Does DraftToDone write fiction too?", answer: "Yes, it generates full manuscripts, but its focus is the complete publishable product for KDP rather than line-by-line literary craft." }
         ],
+        comparison: {
+          heading: "DraftToDone vs Sudowrite, row by row",
+          rivalName: "Sudowrite",
+          rivalUrl: "https://www.sudowrite.com/",
+          oursLabel: "DraftToDone",
+          rows: [
+          { criterion: "What it optimises for", ours: "A finished, uploadable product.", rival: "The quality of the prose itself.", rivalWins: true },
+          { criterion: "Prose control", ours: "Chapter-level briefs and quality gates.", rival: "Sentence-level rewriting, expansion and description tools built for fiction.", rivalWins: true },
+          { criterion: "Output", ours: "Manuscript, wraparound cover, KDP metadata and a print-ready PDF.", rival: "Text you then format, cover and publish yourself." },
+          { criterion: "Cover and metadata", ours: "Generated with the book.", rival: "Not covered." },
+          { criterion: "Human in the loop", ours: "You review and approve before publishing.", rival: "You write with it continuously; it is a collaborator, not a pipeline.", rivalWins: true },
+          { criterion: "Pricing", ours: "EUR 14.99 a week or EUR 390 a year, per finished book credit.", rival: "Monthly plans priced by AI credits." },
+          { criterion: "Who it fits", ours: "Operators shipping many titles.", rival: "Novelists writing one book they care about.", rivalWins: true },
+          ],
+          footnote: "Sudowrite is a craft tool for novelists working line by line; DraftToDone is a production pipeline for a catalog. If you care about the prose of one book, the row below that says so is the one that matters. Checked against both products' public pages on 21 August 2026.",
+        },
         cta: "Open the app",
       },
       fr: {
@@ -1496,6 +1996,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Alternative à Sudowrite pour tout le livre publiable, pas que le texte",
         description:
           "Vous cherchez une alternative à Sudowrite ? DraftToDone génère le produit KDP complet — manuscrit, couverture, métadonnées — quand Sudowrite vise la fiction.",
+        seoTitle: "Alternative à Sudowrite : le livre entier, pas que le texte",
+        seoDescription:
+          "Sudowrite vise l'écriture de fiction. DraftToDone produit le livre KDP complet — manuscrit, couverture, métadonnées. Où chacun gagne, comparé.",
         eyebrow: "Alternative à Sudowrite",
         h1: "Une alternative à Sudowrite pensée pour tout le livre, pas seulement l'écriture.",
         lead: "Sudowrite est un bon partenaire d'écriture IA pour la fiction. DraftToDone vise un cran plus large : transformer un brief en produit KDP prêt à publier — manuscrit, couverture et métadonnées — pour éditeurs indépendants et opérateurs de catalogue.",
@@ -1510,6 +2013,22 @@ export const solutionPages: SolutionPage[] = [
           { question: "DraftToDone est-il meilleur que Sudowrite pour publier ?", answer: "Ils font des choses différentes. Sudowrite aide à mieux écrire la fiction ; DraftToDone transforme un brief en produit KDP prêt à publier. Beaucoup d'auteurs pourraient utiliser les deux." },
           { question: "DraftToDone écrit-il aussi de la fiction ?", answer: "Oui, il génère des manuscrits complets, mais son objectif est le produit publiable complet pour KDP plutôt que le travail littéraire ligne à ligne." }
         ],
+        comparison: {
+          heading: "DraftToDone vs Sudowrite, ligne par ligne",
+          rivalName: "Sudowrite",
+          rivalUrl: "https://www.sudowrite.com/",
+          oursLabel: "DraftToDone",
+          rows: [
+          { criterion: "Ce qu'il optimise", ours: "Un produit fini, prêt à téléverser.", rival: "La qualité de la prose elle-même.", rivalWins: true },
+          { criterion: "Contrôle du texte", ours: "Briefs au niveau du chapitre et contrôles qualité.", rival: "Réécriture, expansion et description au niveau de la phrase, pensées pour la fiction.", rivalWins: true },
+          { criterion: "Sortie", ours: "Manuscrit, couverture complète, métadonnées KDP et PDF prêt à imprimer.", rival: "Du texte que vous formatez, habillez et publiez ensuite vous-même." },
+          { criterion: "Couverture et métadonnées", ours: "Générées avec le livre.", rival: "Non couvert." },
+          { criterion: "Humain dans la boucle", ours: "Vous relisez et validez avant publication.", rival: "Vous écrivez avec lui en continu ; c'est un collaborateur, pas une chaîne.", rivalWins: true },
+          { criterion: "Prix", ours: "14,99 € par semaine ou 390 € par an, par crédit de livre fini.", rival: "Forfaits mensuels tarifés en crédits IA." },
+          { criterion: "À qui ça convient", ours: "Aux opérateurs qui publient beaucoup de titres.", rival: "Aux romanciers qui écrivent un livre auquel ils tiennent.", rivalWins: true },
+          ],
+          footnote: "Sudowrite est un outil d'artisanat pour romanciers qui travaillent phrase par phrase ; DraftToDone est une chaîne de production pour un catalogue. Si la prose d'un seul livre vous importe, la ligne qui le dit est celle qui compte. Vérifié sur les pages publiques des deux produits le 21 août 2026.",
+        },
         cta: "Ouvrir l'app",
       },
       it: {
@@ -1517,6 +2036,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Alternativa a Sudowrite per tutto il libro pubblicabile, non solo il testo",
         description:
           "Cerchi un'alternativa a Sudowrite? DraftToDone genera il prodotto KDP completo — manoscritto, copertina, metadati — mentre Sudowrite punta sulla narrativa.",
+        seoTitle: "Alternativa a Sudowrite: tutto il libro, non solo il testo",
+        seoDescription:
+          "Sudowrite punta sulla scrittura narrativa. DraftToDone produce il libro KDP completo — manoscritto, copertina, metadati. Dove vince ciascuno.",
         eyebrow: "Alternativa a Sudowrite",
         h1: "Un'alternativa a Sudowrite pensata per tutto il libro, non solo la scrittura.",
         lead: "Sudowrite è un buon partner di scrittura IA per la narrativa. DraftToDone punta un passo più in là: trasformare un brief in un prodotto KDP pronto da pubblicare — manoscritto, copertina e metadati — per editori indipendenti e operatori di catalogo.",
@@ -1531,6 +2053,22 @@ export const solutionPages: SolutionPage[] = [
           { question: "DraftToDone è migliore di Sudowrite per pubblicare?", answer: "Fanno cose diverse. Sudowrite aiuta a scrivere meglio la narrativa; DraftToDone trasforma un brief in un prodotto KDP pronto da pubblicare. Molti autori potrebbero usare entrambi." },
           { question: "DraftToDone scrive anche narrativa?", answer: "Sì, genera manoscritti completi, ma il suo obiettivo è il prodotto pubblicabile completo per KDP più che il lavoro letterario riga per riga." }
         ],
+        comparison: {
+          heading: "DraftToDone vs Sudowrite, riga per riga",
+          rivalName: "Sudowrite",
+          rivalUrl: "https://www.sudowrite.com/",
+          oursLabel: "DraftToDone",
+          rows: [
+          { criterion: "Cosa ottimizza", ours: "Un prodotto finito, pronto da caricare.", rival: "La qualità della prosa stessa.", rivalWins: true },
+          { criterion: "Controllo del testo", ours: "Brief a livello di capitolo e controlli qualità.", rival: "Riscrittura, espansione e descrizione a livello di frase, pensate per la narrativa.", rivalWins: true },
+          { criterion: "Output", ours: "Manoscritto, copertina completa, metadati KDP e PDF pronto per la stampa.", rival: "Testo che poi impagini, vesti e pubblichi tu." },
+          { criterion: "Copertina e metadati", ours: "Generati con il libro.", rival: "Non coperto." },
+          { criterion: "Umano nel processo", ours: "Rivedi e approvi prima di pubblicare.", rival: "Ci scrivi insieme in continuo; è un collaboratore, non una pipeline.", rivalWins: true },
+          { criterion: "Prezzo", ours: "14,99 € a settimana o 390 € all'anno, per credito di libro finito.", rival: "Piani mensili tariffati a crediti IA." },
+          { criterion: "A chi serve", ours: "Agli operatori che pubblicano molti titoli.", rival: "Ai romanzieri che scrivono un libro a cui tengono.", rivalWins: true },
+          ],
+          footnote: "Sudowrite è uno strumento di mestiere per romanzieri che lavorano frase per frase; DraftToDone è una linea di produzione per un catalogo. Se ti importa della prosa di un solo libro, la riga che lo dice è quella che conta. Verificato sulle pagine pubbliche di entrambi il 21 agosto 2026.",
+        },
         cta: "Apri l'app",
       },
       de: {
@@ -1538,6 +2076,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Sudowrite-Alternative für das ganze Buch, nicht nur den Text",
         description:
           "Du suchst eine Sudowrite-Alternative? DraftToDone erzeugt das komplette KDP-Produkt — Manuskript, Cover, Metadaten — während Sudowrite auf Belletristik zielt.",
+        seoTitle: "Sudowrite-Alternative: das ganze Buch, nicht nur der Text",
+        seoDescription:
+          "Sudowrite zielt auf Belletristik. DraftToDone liefert das komplette KDP-Produkt — Manuskript, Cover, Metadaten. Wo jedes von beiden gewinnt.",
         eyebrow: "Sudowrite-Alternative",
         h1: "Eine Sudowrite-Alternative rund um das ganze Buch, nicht nur das Schreiben.",
         lead: "Sudowrite ist ein starker KI-Schreibpartner für Belletristik. DraftToDone zielt einen Schritt weiter: aus einem Brief ein veröffentlichungsfertiges KDP-Produkt machen — Manuskript, Cover und Metadaten — für Indie-Publisher und Katalog-Operatoren.",
@@ -1552,6 +2093,22 @@ export const solutionPages: SolutionPage[] = [
           { question: "Ist DraftToDone besser als Sudowrite zum Veröffentlichen?", answer: "Sie machen Verschiedenes. Sudowrite hilft, bessere Belletristik zu schreiben; DraftToDone macht aus einem Brief ein veröffentlichungsfertiges KDP-Produkt. Viele Autoren könnten beide nutzen." },
           { question: "Schreibt DraftToDone auch Belletristik?", answer: "Ja, es erzeugt vollständige Manuskripte, aber der Fokus liegt auf dem kompletten veröffentlichungsfertigen KDP-Produkt statt auf literarischer Feinarbeit Zeile für Zeile." }
         ],
+        comparison: {
+          heading: "DraftToDone vs Sudowrite, Zeile für Zeile",
+          rivalName: "Sudowrite",
+          rivalUrl: "https://www.sudowrite.com/",
+          oursLabel: "DraftToDone",
+          rows: [
+          { criterion: "Worauf es optimiert", ours: "Ein fertiges, hochladbares Produkt.", rival: "Die Qualität der Prosa selbst.", rivalWins: true },
+          { criterion: "Textkontrolle", ours: "Briefings auf Kapitelebene und Qualitätsgates.", rival: "Umschreiben, Ausbauen und Beschreiben auf Satzebene, gebaut für Belletristik.", rivalWins: true },
+          { criterion: "Ergebnis", ours: "Manuskript, kompletter Umschlag, KDP-Metadaten und druckfertiges PDF.", rival: "Text, den du danach selbst setzt, gestaltest und veröffentlichst." },
+          { criterion: "Cover und Metadaten", ours: "Werden mit dem Buch erzeugt.", rival: "Nicht abgedeckt." },
+          { criterion: "Mensch im Prozess", ours: "Du prüfst und gibst frei, bevor veröffentlicht wird.", rival: "Du schreibst durchgehend damit; es ist eine Mitarbeiterin, keine Straße.", rivalWins: true },
+          { criterion: "Preis", ours: "14,99 € pro Woche oder 390 € pro Jahr, je fertigem Buch-Guthaben.", rival: "Monatspläne, abgerechnet in KI-Credits." },
+          { criterion: "Für wen", ours: "Für Betreiber, die viele Titel ausliefern.", rival: "Für Romanautorinnen mit einem Buch, das ihnen am Herzen liegt.", rivalWins: true },
+          ],
+          footnote: "Sudowrite ist ein Handwerkszeug für Romanautorinnen, die Satz für Satz arbeiten; DraftToDone ist eine Produktionsstraße für einen Katalog. Wenn dir die Prosa eines einzelnen Buches wichtig ist, zählt genau die Zeile, die das sagt. Geprüft an den öffentlichen Seiten beider Produkte am 21. August 2026.",
+        },
         cta: "App öffnen",
       },
     },
@@ -1582,6 +2139,22 @@ export const solutionPages: SolutionPage[] = [
           { question: "Does DraftToDone format print and ebook files like Atticus?", answer: "Formatting is one stage of the pipeline. The focus is producing the whole product — manuscript, cover and metadata — ready for KDP, rather than being a standalone formatting editor." },
           { question: "Is DraftToDone a subscription or a one-time purchase?", answer: "DraftToDone is a book-credit subscription (one credit makes one complete book). Atticus is a one-time purchase for its editor and formatter. Different models for different jobs." }
         ],
+        comparison: {
+          heading: "DraftToDone vs Atticus, row by row",
+          rivalName: "Atticus",
+          rivalUrl: "https://www.atticus.io/",
+          oursLabel: "DraftToDone",
+          rows: [
+          { criterion: "What it starts from", ours: "A niche brief. It writes the manuscript.", rival: "A manuscript you have already written.", rivalWins: true },
+          { criterion: "Writing", ours: "Generates the full draft with AI.", rival: "None. It is a formatter and a writing environment, not a generator." },
+          { criterion: "Interior formatting", ours: "Produces a KDP interior PDF, and a free browser formatter for a .docx you wrote.", rival: "Its core strength: precise, themeable typesetting with live preview.", rivalWins: true },
+          { criterion: "Cover", ours: "Full wraparound cover with imagery and typography.", rival: "No cover design." },
+          { criterion: "KDP metadata", ours: "Title, subtitle, description and 7 keywords generated with the book.", rival: "Not covered." },
+          { criterion: "Pricing", ours: "Subscription: EUR 14.99 a week or EUR 390 a year.", rival: "One-time licence, no subscription.", rivalWins: true },
+          { criterion: "Who it fits", ours: "Operators running a catalog of books.", rival: "Authors typesetting their own book to a high standard.", rivalWins: true },
+          ],
+          footnote: "Atticus is a one-time purchase for formatting books you have written; DraftToDone is a subscription that generates them. They overlap on the output file and on almost nothing else. Checked against both products' public pages on 21 August 2026.",
+        },
         cta: "Open the app",
       },
       fr: {
@@ -1589,6 +2162,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Alternative à Atticus pour générer le livre, pas seulement le formater",
         description:
           "Vous cherchez une alternative à Atticus ? Atticus formate les livres que vous avez écrits ; DraftToDone génère le manuscrit, la couverture et les métadonnées KDP.",
+        seoTitle: "Alternative à Atticus : générer le livre, pas le formater",
+        seoDescription:
+          "Atticus formate ce que vous avez écrit. DraftToDone génère manuscrit, couverture et métadonnées KDP. Comparaison honnête, y compris où Atticus gagne.",
         eyebrow: "Alternative à Atticus",
         h1: "Une alternative à Atticus qui construit le livre, pas seulement le met en page.",
         lead: "Atticus est un outil d'écriture et de mise en page soigné. DraftToDone commence plus tôt et finit plus tard : il génère le manuscrit, la couverture complète et les métadonnées KDP, puis vérifie la qualité avant l'upload.",
@@ -1603,6 +2179,22 @@ export const solutionPages: SolutionPage[] = [
           { question: "DraftToDone met-il en page les fichiers print et ebook ?", answer: "La mise en page est une étape du pipeline. L'objectif est de produire tout le produit — manuscrit, couverture et métadonnées — prêt pour KDP, plutôt que d'être un éditeur de mise en page autonome." },
           { question: "DraftToDone est-il un abonnement ou un achat unique ?", answer: "DraftToDone est un abonnement à crédits livres (1 crédit = 1 livre complet). Atticus est un achat unique pour son éditeur et son outil de mise en page. Des modèles différents pour des besoins différents." }
         ],
+        comparison: {
+          heading: "DraftToDone vs Atticus, ligne par ligne",
+          rivalName: "Atticus",
+          rivalUrl: "https://www.atticus.io/",
+          oursLabel: "DraftToDone",
+          rows: [
+          { criterion: "Point de départ", ours: "Un brief de niche. Il écrit le manuscrit.", rival: "Un manuscrit que vous avez déjà écrit.", rivalWins: true },
+          { criterion: "Écriture", ours: "Génère le premier jet complet avec l'IA.", rival: "Aucune. C'est un formateur et un environnement d'écriture, pas un générateur." },
+          { criterion: "Mise en page intérieure", ours: "Produit un PDF d'intérieur KDP, plus un formateur gratuit pour un .docx que vous avez écrit.", rival: "Son point fort : composition précise et thématisable, avec aperçu en direct.", rivalWins: true },
+          { criterion: "Couverture", ours: "Couverture complète avec images et typographie.", rival: "Pas de création de couverture." },
+          { criterion: "Métadonnées KDP", ours: "Titre, sous-titre, description et 7 mots-clés générés avec le livre.", rival: "Non couvert." },
+          { criterion: "Prix", ours: "Abonnement : 14,99 € par semaine ou 390 € par an.", rival: "Licence unique, sans abonnement.", rivalWins: true },
+          { criterion: "À qui ça convient", ours: "Aux opérateurs qui gèrent un catalogue.", rival: "Aux auteurs qui composent leur propre livre avec exigence.", rivalWins: true },
+          ],
+          footnote: "Atticus est un achat unique pour formater les livres que vous avez écrits ; DraftToDone est un abonnement qui les génère. Ils se recoupent sur le fichier de sortie et presque rien d'autre. Vérifié sur les pages publiques des deux produits le 21 août 2026.",
+        },
         cta: "Ouvrir l'app",
       },
       it: {
@@ -1610,6 +2202,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Alternativa ad Atticus per generare il libro, non solo formattarlo",
         description:
           "Cerchi un'alternativa ad Atticus? Atticus formatta i libri che hai scritto; DraftToDone genera il manoscritto, la copertina e i metadati KDP in un pipeline.",
+        seoTitle: "Alternativa ad Atticus: generare il libro, non formattarlo",
+        seoDescription:
+          "Atticus formatta ciò che hai scritto. DraftToDone genera manoscritto, copertina e metadati KDP. Confronto onesto, anche dove vince Atticus.",
         eyebrow: "Alternativa ad Atticus",
         h1: "Un'alternativa ad Atticus che costruisce il libro, non solo lo impagina.",
         lead: "Atticus è un curato strumento di scrittura e impaginazione. DraftToDone inizia prima e finisce dopo: genera il manoscritto, la copertina completa e i metadati KDP, poi verifica la qualità prima dell'upload.",
@@ -1624,6 +2219,22 @@ export const solutionPages: SolutionPage[] = [
           { question: "DraftToDone impagina i file print ed ebook come Atticus?", answer: "L'impaginazione è una tappa del pipeline. L'obiettivo è produrre tutto il prodotto — manoscritto, copertina e metadati — pronto per KDP, più che essere un editor di impaginazione autonomo." },
           { question: "DraftToDone è un abbonamento o un acquisto unico?", answer: "DraftToDone è un abbonamento a crediti libri (1 credito = 1 libro completo). Atticus è un acquisto unico per il suo editor e impaginatore. Modelli diversi per esigenze diverse." }
         ],
+        comparison: {
+          heading: "DraftToDone vs Atticus, riga per riga",
+          rivalName: "Atticus",
+          rivalUrl: "https://www.atticus.io/",
+          oursLabel: "DraftToDone",
+          rows: [
+          { criterion: "Da dove parte", ours: "Un brief di nicchia. Scrive il manoscritto.", rival: "Un manoscritto che hai già scritto.", rivalWins: true },
+          { criterion: "Scrittura", ours: "Genera l'intera bozza con l'IA.", rival: "Nessuna. È un impaginatore e un ambiente di scrittura, non un generatore." },
+          { criterion: "Impaginazione interna", ours: "Produce un PDF interno per KDP, più un formattatore gratuito per un .docx tuo.", rival: "Il suo punto forte: composizione precisa e personalizzabile, con anteprima dal vivo.", rivalWins: true },
+          { criterion: "Copertina", ours: "Copertina completa con immagini e tipografia.", rival: "Nessuna progettazione di copertina." },
+          { criterion: "Metadati KDP", ours: "Titolo, sottotitolo, descrizione e 7 keyword generati con il libro.", rival: "Non coperto." },
+          { criterion: "Prezzo", ours: "Abbonamento: 14,99 € a settimana o 390 € all'anno.", rival: "Licenza una tantum, senza abbonamento.", rivalWins: true },
+          { criterion: "A chi serve", ours: "Agli operatori che gestiscono un catalogo.", rival: "Agli autori che impaginano il proprio libro con cura.", rivalWins: true },
+          ],
+          footnote: "Atticus è un acquisto una tantum per impaginare libri che hai già scritto; DraftToDone è un abbonamento che li genera. Si sovrappongono sul file finale e su quasi nient'altro. Verificato sulle pagine pubbliche di entrambi il 21 agosto 2026.",
+        },
         cta: "Apri l'app",
       },
       de: {
@@ -1631,6 +2242,9 @@ export const solutionPages: SolutionPage[] = [
         title: "Atticus-Alternative, die das Buch erzeugt, nicht nur formatiert",
         description:
           "Du suchst eine Atticus-Alternative? Atticus formatiert Bücher, die du geschrieben hast; DraftToDone erzeugt Manuskript, Cover und KDP-Metadaten als eine Pipeline.",
+        seoTitle: "Atticus-Alternative: das Buch erzeugen, nicht formatieren",
+        seoDescription:
+          "Atticus formatiert, was du geschrieben hast. DraftToDone erzeugt Manuskript, Cover und KDP-Metadaten. Ehrlicher Vergleich, auch wo Atticus gewinnt.",
         eyebrow: "Atticus-Alternative",
         h1: "Eine Atticus-Alternative, die das Buch baut, nicht nur formatiert.",
         lead: "Atticus ist ein ausgereiftes Schreib- und Formatierungstool. DraftToDone beginnt früher und endet später: es erzeugt Manuskript, das komplette Cover und die KDP-Metadaten und prüft die Qualität vor dem Upload.",
@@ -1645,6 +2259,22 @@ export const solutionPages: SolutionPage[] = [
           { question: "Formatiert DraftToDone Print- und Ebook-Dateien wie Atticus?", answer: "Formatierung ist eine Stufe der Pipeline. Der Fokus liegt darauf, das ganze Produkt — Manuskript, Cover und Metadaten — fertig für KDP zu erzeugen, statt ein eigenständiger Formatierungseditor zu sein." },
           { question: "Ist DraftToDone ein Abo oder ein Einmalkauf?", answer: "DraftToDone ist ein Buch-Kredit-Abo (1 Kredit = 1 komplettes Buch). Atticus ist ein Einmalkauf für Editor und Formatierer. Verschiedene Modelle für verschiedene Aufgaben." }
         ],
+        comparison: {
+          heading: "DraftToDone vs Atticus, Zeile für Zeile",
+          rivalName: "Atticus",
+          rivalUrl: "https://www.atticus.io/",
+          oursLabel: "DraftToDone",
+          rows: [
+          { criterion: "Ausgangspunkt", ours: "Ein Nischen-Briefing. Es schreibt das Manuskript.", rival: "Ein Manuskript, das du schon geschrieben hast.", rivalWins: true },
+          { criterion: "Schreiben", ours: "Erzeugt den kompletten Entwurf mit KI.", rival: "Keins. Es ist ein Satzprogramm und eine Schreibumgebung, kein Generator." },
+          { criterion: "Innenteil-Satz", ours: "Erzeugt ein KDP-Innenteil-PDF, dazu einen gratis Formatierer für deine eigene .docx.", rival: "Seine Stärke: präziser, thematisierbarer Satz mit Live-Vorschau.", rivalWins: true },
+          { criterion: "Cover", ours: "Kompletter Umschlag mit Bildern und Typografie.", rival: "Keine Cover-Gestaltung." },
+          { criterion: "KDP-Metadaten", ours: "Titel, Untertitel, Beschreibung und 7 Keywords, mit dem Buch erzeugt.", rival: "Nicht abgedeckt." },
+          { criterion: "Preis", ours: "Abo: 14,99 € pro Woche oder 390 € pro Jahr.", rival: "Einmallizenz, kein Abo.", rivalWins: true },
+          { criterion: "Für wen", ours: "Für Betreiber, die einen Katalog fahren.", rival: "Für Autorinnen, die ihr eigenes Buch anspruchsvoll setzen.", rivalWins: true },
+          ],
+          footnote: "Atticus ist ein Einmalkauf zum Setzen von Büchern, die du geschrieben hast; DraftToDone ist ein Abo, das sie erzeugt. Überschneidung gibt es bei der Ausgabedatei und fast nirgends sonst. Geprüft an den öffentlichen Seiten beider Produkte am 21. August 2026.",
+        },
         cta: "App öffnen",
       },
     },
@@ -2103,6 +2733,12 @@ export function editorialUrl(locale: Locale) {
 
 export function getSolutionBySlug(locale: Locale, slug: string) {
   return solutionPages.find((page) => page.translations[locale].slug === slug);
+}
+
+export function getSolutionByKey(key: string) {
+  const page = solutionPages.find((item) => item.key === key);
+  if (!page) throw new Error(`Unknown solution page: ${key}`);
+  return page;
 }
 
 export function solutionPath(locale: Locale, page: SolutionPage) {

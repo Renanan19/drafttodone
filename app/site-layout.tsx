@@ -33,6 +33,10 @@ const hanken = Hanken_Grotesk({
 
 const COMMERCIAL_PAGES = [
   {
+    name: "Free KDP interior formatter",
+    url: `${SITE_URL}/en/kdp-interior-formatter`,
+  },
+  {
     name: "AI publishing software",
     url: `${SITE_URL}/en/ai-publishing-software`,
   },
