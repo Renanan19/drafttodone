@@ -9,6 +9,19 @@ name: Deploy to GitHub Pages
 #
 # To publish: Actions -> "Deploy to GitHub Pages" -> Run workflow (on main),
 # or `gh workflow run deploy.yml --ref main`.
+#
+# Do not downgrade the action versions below.
+#
+# On 17 Aug 2026 a build failed while downloading `upload-pages-artifact`, and
+# commit c9cad5f read that as a bad version pin and rolled every action back a
+# major version or two. The logs say otherwise: codeload.github.com answered 429
+# Too Many Requests and 503 Service Unavailable across three retries. It was a
+# transient GitHub outage, and the next run succeeded because the outage had
+# passed, not because of the rollback. What the rollback did achieve was pinning
+# the whole workflow to actions that target the deprecated Node 20 runtime.
+#
+# A download failure names the action it was fetching, which makes it look like
+# a version problem. Read the status code before touching a version.
 on:
   workflow_dispatch:
 
@@ -25,15 +38,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
       - run: npm ci
       - run: npm run build
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: ./out
 
@@ -44,10 +57,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v5
         id: deployment
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
       - run: npm run indexnow
