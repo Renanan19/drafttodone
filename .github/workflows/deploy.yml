@@ -23,6 +23,9 @@ name: Deploy to GitHub Pages
 # A download failure names the action it was fetching, which makes it look like
 # a version problem. Read the status code before touching a version.
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
