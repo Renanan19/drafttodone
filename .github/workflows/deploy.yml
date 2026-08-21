@@ -1,8 +1,15 @@
 name: Deploy to GitHub Pages
 
+# Deploys are manual on purpose.
+#
+# This repo is worked on a single branch, so `main` was both the working branch
+# and production: every commit went live within minutes, with no step in between
+# where the site could be looked at first. Removing the push trigger separates
+# committing from publishing without needing a second branch or a pull request.
+#
+# To publish: Actions -> "Deploy to GitHub Pages" -> Run workflow (on main),
+# or `gh workflow run deploy.yml --ref main`.
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
