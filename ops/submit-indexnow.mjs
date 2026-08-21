@@ -36,24 +36,18 @@ async function main() {
     urlList,
   };
 
-  const response = await fetch(endpoint, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-    },
-    body: JSON.stringify(payload),
-  });
+  const { response, responseText, attempts } = await submitWithRetry(payload);
 
-  const responseText = await response.text();
   const accepted = response.status === 200 || response.status === 202;
   const message = [
     `IndexNow endpoint: ${endpoint}`,
     `Submitted URLs: ${urlList.length}`,
+    `Attempts: ${attempts}`,
     `Response: HTTP ${response.status}`,
-    responseText.trim() ? `Body: ${responseText.trim()}` : null,
-  ]
-    .filter(Boolean)
-    .join("\n");
+    // The body is the only thing that distinguishes a throttle from a rejected
+    // key, and the August 2026 403 was never diagnosed because it was dropped.
+    responseText.trim() ? `Body: ${responseText.trim()}` : "Body: (empty)",
+  ].join("\n");
 
   if (!accepted) {
     console.warn(message);
@@ -62,6 +56,35 @@ async function main() {
   }
 
   console.log(message);
+}
+
+/**
+ * IndexNow answers 403 both for a key it cannot verify and for a caller it is
+ * throttling, and a shared GitHub Actions egress IP hits the second far more
+ * often than the first. Retrying separates them: a key problem fails three
+ * times identically, a throttle usually clears.
+ */
+async function submitWithRetry(payload, maxAttempts = 3) {
+  let last;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      body: JSON.stringify(payload),
+    });
+    const responseText = await response.text();
+    last = { response, responseText, attempts: attempt };
+
+    if (response.status === 200 || response.status === 202) return last;
+    if (attempt === maxAttempts) break;
+
+    const waitMs = 5000 * 2 ** (attempt - 1);
+    console.warn(`IndexNow HTTP ${response.status}, retrying in ${waitMs / 1000}s.`);
+    await new Promise((resolve) => setTimeout(resolve, waitMs));
+  }
+
+  return last;
 }
 
 main().catch((error) => {

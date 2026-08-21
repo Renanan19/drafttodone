@@ -26,9 +26,21 @@ import { partnersPath } from "./partners-content";
 
 export const dynamic = "force-static";
 
+/**
+ * The home entry is the one place where a naive `${SITE_URL}${path}` disagrees
+ * with the page it describes: Next resolves `canonical: "/"` to
+ * `https://drafttodone.io` with no trailing slash, and the rendered hreflang
+ * set matches. Concatenating "/" here produced `https://drafttodone.io/`, so
+ * the sitemap's `<loc>` was absent from its own hreflang set — the condition
+ * under which the whole cluster gets discarded. Normalising the root path back
+ * to "" keeps the sitemap byte-identical to the HTML.
+ */
 function absoluteAlternates(alternates: Record<string, string>) {
   return Object.fromEntries(
-    Object.entries(alternates).map(([locale, path]) => [locale, `${SITE_URL}${path}`]),
+    Object.entries(alternates).map(([locale, path]) => [
+      locale,
+      `${SITE_URL}${path === "/" ? "" : path}`,
+    ]),
   );
 }
 
