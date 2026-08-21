@@ -27,3 +27,15 @@ declare module "hyphenation.en-us" {
   const patterns: HyphenationPatterns;
   export default patterns;
 }
+
+declare module "hyphenation.de" {
+  import type { HyphenationPatterns } from "hypher";
+  const patterns: HyphenationPatterns;
+  export default patterns;
+}
+
+declare module "hyphenation.it" {
+  import type { HyphenationPatterns } from "hypher";
+  const patterns: HyphenationPatterns;
+  export default patterns;
+}

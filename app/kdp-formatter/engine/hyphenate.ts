@@ -25,13 +25,28 @@ type Hyphenator = { hyphenate(word: string): string[] };
 const loaded = new Map<DocLang, Hyphenator>();
 const cache = new Map<string, number[]>();
 
+/**
+ * One pattern set per language, each behind its own dynamic import so a reader
+ * formatting an Italian book never downloads the German patterns.
+ *
+ * German is the language that most needs this module: its compounds are long
+ * enough that an unhyphenated justified line has nowhere to break, which is the
+ * same failure mode measured on French above.
+ */
+const PATTERNS: Record<DocLang, () => Promise<{ default: unknown }>> = {
+  en: () => import("hyphenation.en-us"),
+  fr: () => import("hyphenation.fr"),
+  de: () => import("hyphenation.de"),
+  it: () => import("hyphenation.it"),
+};
+
 export async function loadHyphenator(lang: DocLang): Promise<void> {
   if (loaded.has(lang)) return;
   const [{ default: Hypher }, patterns] = await Promise.all([
     import("hypher"),
-    lang === "fr" ? import("hyphenation.fr") : import("hyphenation.en-us"),
+    PATTERNS[lang](),
   ]);
-  loaded.set(lang, new Hypher(patterns.default) as unknown as Hyphenator);
+  loaded.set(lang, new Hypher(patterns.default as never) as unknown as Hyphenator);
 }
 
 /**
@@ -48,7 +63,10 @@ export function hyphenationPoints(word: string, lang: DocLang): number[] {
   if (hit) return hit;
 
   const points = compute(word, lang);
-  cache.set(key, points);
+  // Never cache a result computed without patterns. `compute` returns [] when
+  // the language has not been loaded yet, and caching that would disable
+  // hyphenation for the word permanently, even after loadHyphenator resolves.
+  if (loaded.has(lang)) cache.set(key, points);
   return points;
 }
 

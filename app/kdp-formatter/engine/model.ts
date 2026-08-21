@@ -5,7 +5,7 @@
  * nothing else, so neither of them can grow a dependency on Word's quirks.
  */
 
-export type DocLang = "fr" | "en";
+export type DocLang = "en" | "fr" | "de" | "it";
 
 /** A stretch of text carrying inline formatting. */
 export type Inline = {

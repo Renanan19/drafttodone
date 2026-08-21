@@ -100,6 +100,65 @@ export const FOLIO_OFFSET = inches(0.35);
 export const spineWidthInches = (pageCount: number, paper: "white" | "cream"): number =>
   pageCount * (paper === "white" ? 0.002252 : 0.0025);
 
+/**
+ * The trim sizes KDP prints, for the cover template tool.
+ *
+ * `TRIM` above stays 6 × 9 because the formatter only typesets that size; the
+ * cover generator has no such limit, since a template is arithmetic rather
+ * than typesetting. Both read their gutter and spine rules from this file, so
+ * a cover built here can never disagree with an interior built there.
+ */
+export const TRIM_SIZES: ReadonlyArray<{ widthIn: number; heightIn: number; label: string }> = [
+  { widthIn: 5, heightIn: 8, label: '5" × 8"' },
+  { widthIn: 5.06, heightIn: 7.81, label: '5.06" × 7.81"' },
+  { widthIn: 5.25, heightIn: 8, label: '5.25" × 8"' },
+  { widthIn: 5.5, heightIn: 8.5, label: '5.5" × 8.5"' },
+  { widthIn: 6, heightIn: 9, label: '6" × 9"' },
+  { widthIn: 6.14, heightIn: 9.21, label: '6.14" × 9.21"' },
+  { widthIn: 6.69, heightIn: 9.61, label: '6.69" × 9.61"' },
+  { widthIn: 7, heightIn: 10, label: '7" × 10"' },
+  { widthIn: 7.44, heightIn: 9.69, label: '7.44" × 9.69"' },
+  { widthIn: 7.5, heightIn: 9.25, label: '7.5" × 9.25"' },
+  { widthIn: 8, heightIn: 10, label: '8" × 10"' },
+  { widthIn: 8.5, heightIn: 11, label: '8.5" × 11"' },
+];
+
+/** KDP asks for 0.125" of bleed on the three outer edges of a cover. */
+export const COVER_BLEED_IN = 0.125;
+
+/** Keep text and logos this far inside the trim and away from the spine folds. */
+export const COVER_SAFE_MARGIN_IN = 0.25;
+
+/** KDP prints paperbacks from 24 pages up. */
+export const MIN_PRINT_PAGES = 24;
+
+export type CoverTemplate = {
+  spineIn: number;
+  /** Full flat cover including bleed: back + spine + front. */
+  totalWidthIn: number;
+  totalHeightIn: number;
+  /** Whether KDP permits type on the spine at this page count. */
+  spineTextAllowed: boolean;
+};
+
+/**
+ * The full wraparound a printer needs: back cover, spine and front cover laid
+ * flat, plus bleed on the top, bottom and both outer edges.
+ */
+export const coverTemplate = (
+  pageCount: number,
+  paper: "white" | "cream",
+  trim: { widthIn: number; heightIn: number },
+): CoverTemplate => {
+  const spineIn = spineWidthInches(pageCount, paper);
+  return {
+    spineIn,
+    totalWidthIn: trim.widthIn * 2 + spineIn + COVER_BLEED_IN * 2,
+    totalHeightIn: trim.heightIn + COVER_BLEED_IN * 2,
+    spineTextAllowed: pageCount >= SPINE_TEXT_MIN_PAGES,
+  };
+};
+
 /** KDP only allows text on the spine from 100 pages up. */
 export const SPINE_TEXT_MIN_PAGES = 100;
 

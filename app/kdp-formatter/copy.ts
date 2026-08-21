@@ -1,9 +1,10 @@
-/** Every string the formatter shows, in the two languages it ships in. */
+/** Every string the formatter shows, in the four languages it ships in. */
 
 import type { WarningCode } from "./engine/report";
 import type { DocxError } from "./engine/docx-reader";
+import type { DocLang } from "./engine/model";
 
-export type ToolLocale = "en" | "fr";
+export type ToolLocale = "en" | "fr" | "de" | "it";
 
 type Copy = {
   eyebrow: string;
@@ -112,7 +113,7 @@ export const formatterCopy: Record<ToolLocale, Copy> = {
       "Format 6 × 9 pouces, sans fond perdu, polices incorporées.",
       "Marge de reliure calculée sur la pagination réelle, un cran au-dessus du minimum KDP.",
       "Chapitres en belle page, têtes de page et folios, page de titre et page de copyright.",
-      "Césure française ou anglaise, apostrophes, guillemets et espaces insécables.",
+      "Césure française, anglaise, allemande ou italienne, apostrophes, guillemets et espaces insécables.",
       "Images rééchantillonnées à 300 DPI, avec alerte sur celles qui sont trop peu définies.",
     ],
   },
@@ -182,11 +183,234 @@ export const formatterCopy: Record<ToolLocale, Copy> = {
       "6 × 9 inches, no bleed, fonts embedded.",
       "Gutter computed from the real page count, one step above the KDP minimum.",
       "Chapters on a recto, running heads and folios, title page and copyright page.",
-      "French or English hyphenation, curly apostrophes, quotation marks and no-break spaces.",
+      "English, French, German or Italian hyphenation, curly apostrophes, quotation marks and no-break spaces.",
       "Images resampled to 300 DPI, with a warning on any that are too low to print well.",
     ],
   },
+  de: {
+    eyebrow: "Kostenloses Tool",
+    title: "Formatiere deinen Roman für KDP",
+    subtitle:
+      "Lade dein Word-Manuskript hoch. Du bekommst einen 6 × 9 Zoll Innenteil nach den Regeln unten, plus das passende Kindle-EPUB.",
+    privacy:
+      "Alles läuft in deinem Browser. Dein Manuskript wird nirgendwo hochgeladen, und ein Konto brauchst du nicht.",
+    drop: "Lege deine .docx hier ab",
+    dropHint: "oder klicke, um eine zu wählen — maximal 50 MB",
+    choose: "Datei wählen",
+    reading: "Manuskript wird gelesen…",
+    bookTitle: "Titel",
+    author: "Autor",
+    authorPlaceholder: "Dein Name",
+    language: "Sprache",
+    chaptersFound: "Kapitel gefunden",
+    chapterSource: {
+      headings: "aus deinen Überschrift-1-Formatvorlagen",
+      heuristic: "geraten: das Dokument hat keine Überschrift 1",
+      single: "keine Kapitelgrenzen gefunden; das Buch wird als ein Block gesetzt",
+    },
+    generate: "Mein Buch formatieren",
+    working: "Seiten werden gesetzt…",
+    again: "Mit einer anderen Datei neu starten",
+    downloadPdf: "Innenteil-PDF herunterladen",
+    downloadEpub: "EPUB herunterladen",
+    results: "Was KDP bekommt",
+    pages: "Seiten",
+    gutter: "Bundsteg",
+    gutterDetail: "KDP-Minimum",
+    spine: "Buchrücken",
+    spineDetail: "weiß / cremefarben, für dein Cover",
+    trim: "Format",
+    warningsTitle: "Bitte prüfen",
+    warnings: {
+      chaptersGuessed:
+        "Dein Dokument nutzt keine Überschrift 1, also wurden die Kapitel geraten. Prüfe die Liste oben, bevor du veröffentlichst.",
+      noChapters:
+        "Es konnten keine Kapitel erkannt werden, das Buch wird als ein durchgehender Block gesetzt. Weise deinen Kapiteltiteln Überschrift 1 zu.",
+      imagesBelowDpi: (n: number) =>
+        `${n} Bild(er) drucken in der platzierten Größe unter 300 DPI und wirken unscharf. Ersetze sie durch höher aufgelöste Versionen.`,
+      imagesUnreadable: (n: number) =>
+        `${n} Bild(er) konnten nicht aus dem Dokument gelesen werden und fehlen in den erzeugten Dateien.`,
+      linesOverflow: (n: number) =>
+        `${n} Zeile(n) ragen über die Textspalte hinaus, meist wegen eines sehr langen Wortes oder einer URL.`,
+      loose:
+        "Einige Zeilen sind stark gedehnt. Ein ungewöhnlich langes Wort ist meist die Ursache.",
+      spineTooThinForText:
+        "Unter 100 Seiten erlaubt KDP keinen Rückentext, plane also ein Cover mit leerem Buchrücken.",
+      belowKdpMinimumPages: "KDP druckt keine Taschenbücher unter 24 Seiten.",
+    },
+    errors: {
+      "not-a-zip":
+        "Das ist keine lesbare .docx. Speichere sie in Word erneut als „Word-Dokument (.docx)“.",
+      "not-a-docx": "Das Archiv enthält kein Word-Dokument. Speichere es erneut aus Word.",
+      "legacy-doc":
+        "Das ist eine alte .doc-Datei. Öffne sie in Word und nutze „Speichern unter“, um eine .docx zu erzeugen.",
+      "too-large": "Datei zu groß: die Grenze liegt bei 50 MB.",
+      empty: "Dieses Dokument enthält keinen Text.",
+      unknown:
+        "Die Formatierung ist fehlgeschlagen. Wenn es wieder passiert, sag uns, welches Textprogramm du benutzt hast.",
+    },
+    ctaTitle: "Ein Buch ist gratis. Ein Katalog ist ein Beruf.",
+    ctaBody:
+      "DraftToDone macht dasselbe über eine ganze Produktion: Innenteil, Cover, Metadaten und Veröffentlichung.",
+    ctaLink: "DraftToDone ansehen",
+    notes: [
+      "6 × 9 Zoll, ohne Beschnitt, Schriften eingebettet.",
+      "Bundsteg aus der echten Seitenzahl berechnet, eine Stufe über dem KDP-Minimum.",
+      "Kapitel auf der rechten Seite, Kolumnentitel und Seitenzahlen, Titelei und Impressum.",
+      "Deutsche, englische, französische oder italienische Silbentrennung, typografische Apostrophe, Anführungszeichen und geschützte Leerzeichen.",
+      "Bilder auf 300 DPI neu berechnet, mit Warnung bei allen, die für den Druck zu grob sind.",
+    ],
+  },
+  it: {
+    eyebrow: "Strumento gratuito",
+    title: "Formatta il tuo romanzo per KDP",
+    subtitle:
+      "Carica il manoscritto Word. Ottieni un interno 6 × 9 pollici conforme alle regole qui sotto, più l'EPUB Kindle abbinato.",
+    privacy:
+      "Tutto avviene nel tuo browser. Il manoscritto non viene caricato da nessuna parte e non serve alcun account.",
+    drop: "Trascina qui il tuo .docx",
+    dropHint: "oppure clicca per sceglierlo — massimo 50 MB",
+    choose: "Scegli un file",
+    reading: "Lettura del manoscritto…",
+    bookTitle: "Titolo",
+    author: "Autore",
+    authorPlaceholder: "Il tuo nome",
+    language: "Lingua",
+    chaptersFound: "capitolo/i trovato/i",
+    chapterSource: {
+      headings: "dai tuoi stili Titolo 1",
+      heuristic: "ipotizzati: il documento non usa lo stile Titolo 1",
+      single: "nessuna divisione in capitoli; il libro è impaginato come un blocco unico",
+    },
+    generate: "Formatta il mio libro",
+    working: "Impaginazione in corso…",
+    again: "Ricomincia con un altro file",
+    downloadPdf: "Scarica il PDF dell'interno",
+    downloadEpub: "Scarica l'EPUB",
+    results: "Cosa riceverà KDP",
+    pages: "Pagine",
+    gutter: "Margine interno",
+    gutterDetail: "minimo KDP",
+    spine: "Dorso",
+    spineDetail: "bianco / avorio, per la tua copertina",
+    trim: "Formato",
+    warningsTitle: "Da verificare",
+    warnings: {
+      chaptersGuessed:
+        "Il documento non usa lo stile Titolo 1, quindi i capitoli sono stati ipotizzati. Controlla l'elenco qui sopra prima di pubblicare.",
+      noChapters:
+        "Non è stato possibile identificare capitoli: il libro è impaginato come un blocco unico. Applica Titolo 1 ai titoli dei capitoli.",
+      imagesBelowDpi: (n: number) =>
+        `${n} immagine/i verranno stampate sotto i 300 DPI alla dimensione in cui sono inserite e appariranno sfocate. Sostituiscile con versioni più definite.`,
+      imagesUnreadable: (n: number) =>
+        `${n} immagine/i non sono state estratte dal documento e mancano nei file prodotti.`,
+      linesOverflow: (n: number) =>
+        `${n} riga/righe escono dalla colonna di testo, di solito per una parola o un URL molto lungo.`,
+      loose:
+        "Alcune righe sono molto dilatate. Di solito la causa è una parola insolitamente lunga.",
+      spineTooThinForText:
+        "Sotto le 100 pagine KDP non ammette testo sul dorso: prevedi una copertina con dorso vuoto.",
+      belowKdpMinimumPages: "KDP non stampa paperback sotto le 24 pagine.",
+    },
+    errors: {
+      "not-a-zip":
+        "Questo non è un .docx leggibile. Risalvalo da Word come «Documento di Word (.docx)».",
+      "not-a-docx": "L'archivio non contiene un documento Word. Risalvalo da Word.",
+      "legacy-doc":
+        "Questo è un vecchio file .doc. Aprilo in Word e usa «Salva con nome» per creare un .docx.",
+      "too-large": "File troppo pesante: il limite è 50 MB.",
+      empty: "Questo documento non contiene testo.",
+      unknown:
+        "La formattazione non è riuscita. Se succede di nuovo, dicci quale programma di videoscrittura hai usato.",
+    },
+    ctaTitle: "Un libro è gratis. Un catalogo è un mestiere.",
+    ctaBody:
+      "DraftToDone fa lo stesso su un'intera produzione: interno, copertina, metadati e pubblicazione.",
+    ctaLink: "Scopri DraftToDone",
+    notes: [
+      "6 × 9 pollici, senza abbondanza, font incorporati.",
+      "Margine interno calcolato sul numero di pagine reale, un gradino sopra il minimo KDP.",
+      "Capitoli in pagina destra, testatine e numeri di pagina, frontespizio e pagina del copyright.",
+      "Sillabazione italiana, inglese, francese o tedesca, apostrofi tipografici, virgolette e spazi unificatori.",
+      "Immagini ricampionate a 300 DPI, con avviso su quelle troppo poco definite per la stampa.",
+    ],
+  },
 };
+
+/**
+ * The copyright page, in the language of the *book* rather than of the UI: a
+ * French reader may well be formatting an English manuscript, and the legal
+ * page has to match what is printed on the pages around it.
+ */
+export const legalLines: Record<DocLang, (year: number, author: string) => string[]> = {
+  en: (year, author) => [
+    `© ${year} ${author}. All rights reserved.`,
+    "No part of this book may be reproduced without written permission.",
+    "Typeset with DraftToDone.io",
+  ],
+  fr: (year, author) => [
+    `© ${year} ${author}. Tous droits réservés.`,
+    "Aucune partie de ce livre ne peut être reproduite sans autorisation écrite.",
+    "Mis en page avec DraftToDone.io",
+  ],
+  de: (year, author) => [
+    `© ${year} ${author}. Alle Rechte vorbehalten.`,
+    "Kein Teil dieses Buches darf ohne schriftliche Genehmigung vervielfältigt werden.",
+    "Gesetzt mit DraftToDone.io",
+  ],
+  it: (year, author) => [
+    `© ${year} ${author}. Tutti i diritti riservati.`,
+    "Nessuna parte di questo libro può essere riprodotta senza autorizzazione scritta.",
+    "Impaginato con DraftToDone.io",
+  ],
+};
+
+/**
+ * The card the paperback guide shows in place of the tool.
+ *
+ * The tool moved to its own route so it could be linked to as a tool; the
+ * guide keeps the query that brings people to it and hands them across, rather
+ * than rendering a second interactive copy that would compete with the page.
+ */
+export const formatterCallout: Record<ToolLocale, {
+  eyebrow: string;
+  title: string;
+  body: string;
+  link: string;
+}> = {
+  en: {
+    eyebrow: "Free tool",
+    title: "Apply these rules to your own manuscript",
+    body: "The free KDP interior formatter takes your .docx and returns a 6 × 9 print interior PDF and a Kindle EPUB, in the browser. Nothing is uploaded and no account is needed.",
+    link: "Open the KDP interior formatter",
+  },
+  fr: {
+    eyebrow: "Outil gratuit",
+    title: "Appliquez ces règles à votre propre manuscrit",
+    body: "Le formateur d'intérieur KDP gratuit prend votre .docx et renvoie un PDF d'intérieur 6 × 9 et un EPUB Kindle, dans le navigateur. Aucun envoi, aucun compte.",
+    link: "Ouvrir le formateur d'intérieur KDP",
+  },
+  de: {
+    eyebrow: "Kostenloses Tool",
+    title: "Wende diese Regeln auf dein eigenes Manuskript an",
+    body: "Der kostenlose KDP-Innenteil-Formatierer nimmt deine .docx und gibt ein 6 × 9 Innenteil-PDF und ein Kindle-EPUB zurück, im Browser. Kein Upload, kein Konto.",
+    link: "Den KDP-Innenteil-Formatierer öffnen",
+  },
+  it: {
+    eyebrow: "Strumento gratuito",
+    title: "Applica queste regole al tuo manoscritto",
+    body: "Il formattatore interno KDP gratuito prende il tuo .docx e restituisce un PDF interno 6 × 9 e un EPUB Kindle, nel browser. Nessun caricamento, nessun account.",
+    link: "Apri il formattatore interno KDP",
+  },
+};
+
+/** The book-language picker, labelled in each language's own words. */
+export const LANGUAGE_OPTIONS: ReadonlyArray<{ value: DocLang; label: string }> = [
+  { value: "en", label: "English" },
+  { value: "fr", label: "Français" },
+  { value: "de", label: "Deutsch" },
+  { value: "it", label: "Italiano" },
+];
 
 export const formatInches = inches;
 

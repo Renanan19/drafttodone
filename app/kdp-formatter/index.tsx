@@ -11,9 +11,17 @@
 import { useCallback, useMemo, useRef, useState } from "react";
 import { ArrowRight, Check, Download, FileText, Loader2, TriangleAlert, Upload } from "lucide-react";
 
-import { formatInches, formatterCopy, warningText, type ToolLocale } from "./copy";
+import {
+  formatInches,
+  formatterCopy,
+  LANGUAGE_OPTIONS,
+  legalLines,
+  warningText,
+  type ToolLocale,
+} from "./copy";
 import type { BlockDoc, DocLang } from "./engine/model";
 import type { Report } from "./engine/report";
+import { homePath } from "../home-content";
 
 type Stage = "idle" | "reading" | "ready" | "working" | "done";
 
@@ -54,18 +62,7 @@ export function KdpFormatter({ locale }: { locale: ToolLocale }) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const legal = useMemo(
-    () =>
-      lang === "fr"
-        ? [
-            `© ${new Date().getFullYear()} ${author || "—"}. Tous droits réservés.`,
-            "Aucune partie de ce livre ne peut être reproduite sans autorisation écrite.",
-            "Mis en page avec DraftToDone.io",
-          ]
-        : [
-            `© ${new Date().getFullYear()} ${author || "—"}. All rights reserved.`,
-            "No part of this book may be reproduced without written permission.",
-            "Typeset with DraftToDone.io",
-          ],
+    () => legalLines[lang](new Date().getFullYear(), author || "—"),
     [author, lang],
   );
 
@@ -248,8 +245,11 @@ export function KdpFormatter({ locale }: { locale: ToolLocale }) {
                   onChange={(event) => setLang(event.target.value as DocLang)}
                   className="h-12 rounded-xl border border-line bg-paper px-4 text-[15px] font-medium text-ink outline-none transition-colors focus:border-mint"
                 >
-                  <option value="fr">Français</option>
-                  <option value="en">English</option>
+                  {LANGUAGE_OPTIONS.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
                 </select>
               </label>
             </div>
@@ -378,7 +378,8 @@ export function KdpFormatter({ locale }: { locale: ToolLocale }) {
               <p className="font-display text-2xl font-medium tracking-[-0.01em]">{t.ctaTitle}</p>
               <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-paper/70">{t.ctaBody}</p>
               <a
-                href={locale === "fr" ? "/fr" : "/en"}
+                // The English home is the site root; `/en` is a 404.
+                href={homePath(locale)}
                 className="mt-5 inline-flex items-center gap-1.5 text-[15px] font-medium text-mint transition-opacity hover:opacity-80"
               >
                 {t.ctaLink}
