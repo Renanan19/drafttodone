@@ -109,7 +109,7 @@ export const partnersCopy: Record<Locale, PartnersCopy> = {
       },
       {
         q: "What does the customer actually pay?",
-        a: "€14.99 a week for 6 book credits, or €390 a year for 312. One credit produces one complete book package. At 40% recurring, the yearly plan pays you about €156 per customer per year, for as long as they stay.",
+        a: "€10 for a single book with no subscription, €14.99 a week for 2 book credits, or €390 a year for 52. One credit produces one complete book package. At 40% recurring, the yearly plan pays you about €156 per customer per year, for as long as they stay.",
       },
       {
         q: "Will you send me something to say?",
@@ -179,7 +179,7 @@ export const partnersCopy: Record<Locale, PartnersCopy> = {
       },
       {
         q: "Combien paie réellement le client ?",
-        a: "14,99 € par semaine pour 6 crédits, ou 390 € par an pour 312. Un crédit produit un pack livre complet. À 40 % récurrent, l'offre annuelle vous rapporte environ 156 € par client et par an, tant qu'il reste.",
+        a: "10 € le livre à l'unité sans abonnement, 14,99 € par semaine pour 2 crédits, ou 390 € par an pour 52. Un crédit produit un pack livre complet. À 40 % récurrent, l'offre annuelle vous rapporte environ 156 € par client et par an, tant qu'il reste.",
       },
       {
         q: "Vous m'envoyez un script ?",
@@ -249,7 +249,7 @@ export const partnersCopy: Record<Locale, PartnersCopy> = {
       },
       {
         q: "Quanto paga davvero il cliente?",
-        a: "14,99 € a settimana per 6 crediti, oppure 390 € l'anno per 312. Un credito produce un pacchetto libro completo. Al 40% ricorrente, il piano annuale ti rende circa 156 € per cliente all'anno, finché resta.",
+        a: "10 € a libro senza abbonamento, 14,99 € a settimana per 2 crediti, oppure 390 € l'anno per 52. Un credito produce un pacchetto libro completo. Al 40% ricorrente, il piano annuale ti rende circa 156 € per cliente all'anno, finché resta.",
       },
       {
         q: "Mi mandi uno script?",
@@ -319,7 +319,7 @@ export const partnersCopy: Record<Locale, PartnersCopy> = {
       },
       {
         q: "Was zahlt der Kunde tatsächlich?",
-        a: "14,99 € pro Woche für 6 Credits oder 390 € pro Jahr für 312. Ein Credit ergibt ein komplettes Buchpaket. Bei 40 % wiederkehrend bringt dir der Jahresplan rund 156 € pro Kunde und Jahr, solange er bleibt.",
+        a: "10 € pro Buch ohne Abo, 14,99 € pro Woche für 2 Credits oder 390 € pro Jahr für 52. Ein Credit ergibt ein komplettes Buchpaket. Bei 40 % wiederkehrend bringt dir der Jahresplan rund 156 € pro Kunde und Jahr, solange er bleibt.",
       },
       {
         q: "Schickst du mir ein Skript?",

@@ -666,7 +666,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       bestFor: [
         "Best for buyers comparing AI book tools on finished output rather than demo chapters.",
         "Best for publishers who need cover and metadata in the same workflow as the text.",
-        "Best for weighing cost per book: EUR 14.99 per week is 6 book credits.",
+        "Best for weighing cost per book: EUR 14.99 per week is 2 book credits, or EUR 10 for a single book with no subscription.",
       ],
       notFor: [
         "Not for writers shopping for a prose-craft assistant to co-write with.",
@@ -685,7 +685,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       bestFor: [
         "Idéal pour comparer les outils IA sur le produit fini plutôt que sur un chapitre de démo.",
         "Idéal pour les éditeurs qui veulent couverture et métadonnées dans le même flux.",
-        "Idéal pour évaluer le coût par livre : 14,99 € par semaine donnent 6 crédits.",
+        "Idéal pour évaluer le coût par livre : 14,99 € par semaine donnent 2 crédits, ou 10 € le livre à l'unité sans abonnement.",
       ],
       notFor: [
         "Pas pour les auteurs qui cherchent un assistant d'écriture à quatre mains.",
@@ -704,7 +704,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       bestFor: [
         "Ideale per confrontare gli strumenti IA sul prodotto finito e non su un capitolo demo.",
         "Ideale per publisher che vogliono copertina e metadati nello stesso flusso del testo.",
-        "Ideale per valutare il costo a libro: 14,99 € a settimana danno 6 crediti.",
+        "Ideale per valutare il costo a libro: 14,99 € a settimana danno 2 crediti, oppure 10 € a libro senza abbonamento.",
       ],
       notFor: [
         "Non per chi cerca un assistente di scrittura con cui rifinire la prosa.",
@@ -723,7 +723,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       bestFor: [
         "Am besten für Käufer, die KI-Buchtools am fertigen Output statt am Demokapitel messen.",
         "Am besten für Publisher, die Cover und Metadaten im selben Workflow wie den Text brauchen.",
-        "Am besten, um Kosten pro Buch zu prüfen: 14,99 € pro Woche sind 6 Buch-Credits.",
+        "Am besten, um Kosten pro Buch zu prüfen: 14,99 € pro Woche sind 2 Buch-Credits, oder 10 € pro Buch ohne Abo.",
       ],
       notFor: [
         "Nicht für Autoren, die einen Schreibpartner für Prosa-Feinarbeit suchen.",

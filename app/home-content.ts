@@ -218,8 +218,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       includes: ["Full manuscript", "Front & back cover", "KDP-ready PDF", "Verified pen name"],
       note: "No free plan. Cancel anytime from the app.",
       plans: [
-        { name: "Weekly", price: "€14.99", period: "/ week", credits: "6 books every week", perBook: "≈ €2.50 per book", highlight: false },
-        { name: "Yearly", price: "€390", period: "/ year", credits: "312 books a year", perBook: "≈ €1.25 per book", highlight: true },
+        { name: "Pay per book", price: "€10", period: "/ book", credits: "Buy 1 or 20, no subscription", perBook: "Credits never expire", highlight: true },
+        { name: "Weekly", price: "€14.99", period: "/ week", credits: "2 books every week", perBook: "≈ €7.50 per book", highlight: false },
+        { name: "Yearly", price: "€390", period: "/ year", credits: "52 books a year", perBook: "≈ €7.50 per book", highlight: false },
       ],
     },
     founding: {
@@ -352,8 +353,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       includes: ["Manuscrit complet", "Couverture recto-verso", "PDF prêt pour KDP", "Nom de plume vérifié"],
       note: "Pas d'offre gratuite. Annulable à tout moment depuis l'app.",
       plans: [
-        { name: "Hebdomadaire", price: "14,99 €", period: "/ semaine", credits: "6 livres chaque semaine", perBook: "≈ 2,50 € par livre", highlight: false },
-        { name: "Annuel", price: "390 €", period: "/ an", credits: "312 livres par an", perBook: "≈ 1,25 € par livre", highlight: true },
+        { name: "À l'unité", price: "10 €", period: "/ livre", credits: "1 ou 20, sans abonnement", perBook: "Les crédits n'expirent pas", highlight: true },
+        { name: "Hebdomadaire", price: "14,99 €", period: "/ semaine", credits: "2 livres chaque semaine", perBook: "≈ 7,50 € par livre", highlight: false },
+        { name: "Annuel", price: "390 €", period: "/ an", credits: "52 livres par an", perBook: "≈ 7,50 € par livre", highlight: false },
       ],
     },
     founding: {
@@ -486,8 +488,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       includes: ["Manoscritto completo", "Copertina fronte e retro", "PDF pronto per KDP", "Nome d'autore verificato"],
       note: "Nessun piano gratuito. Annulla quando vuoi dall'app.",
       plans: [
-        { name: "Settimanale", price: "14,99 €", period: "/ settimana", credits: "6 libri ogni settimana", perBook: "≈ 2,50 € a libro", highlight: false },
-        { name: "Annuale", price: "390 €", period: "/ anno", credits: "312 libri all'anno", perBook: "≈ 1,25 € a libro", highlight: true },
+        { name: "A libro", price: "10 €", period: "/ libro", credits: "1 o 20, senza abbonamento", perBook: "I crediti non scadono", highlight: true },
+        { name: "Settimanale", price: "14,99 €", period: "/ settimana", credits: "2 libri ogni settimana", perBook: "≈ 7,50 € a libro", highlight: false },
+        { name: "Annuale", price: "390 €", period: "/ anno", credits: "52 libri all'anno", perBook: "≈ 7,50 € a libro", highlight: false },
       ],
     },
     founding: {
@@ -620,8 +623,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       includes: ["Komplettes Manuskript", "Vorder- und Rückseite", "KDP-fertiges PDF", "Verifizierter Autorname"],
       note: "Kein Gratisplan. Jederzeit in der App kündbar.",
       plans: [
-        { name: "Wöchentlich", price: "14,99 €", period: "/ Woche", credits: "6 Bücher pro Woche", perBook: "≈ 2,50 € pro Buch", highlight: false },
-        { name: "Jährlich", price: "390 €", period: "/ Jahr", credits: "312 Bücher pro Jahr", perBook: "≈ 1,25 € pro Buch", highlight: true },
+        { name: "Pro Buch", price: "10 €", period: "/ Buch", credits: "1 oder 20, ohne Abo", perBook: "Credits verfallen nie", highlight: true },
+        { name: "Wöchentlich", price: "14,99 €", period: "/ Woche", credits: "2 Bücher pro Woche", perBook: "≈ 7,50 € pro Buch", highlight: false },
+        { name: "Jährlich", price: "390 €", period: "/ Jahr", credits: "52 Bücher pro Jahr", perBook: "≈ 7,50 € pro Buch", highlight: false },
       ],
     },
     founding: {

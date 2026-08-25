@@ -50,7 +50,7 @@ export const glanceCopy: Record<Locale, GlanceCopy> = {
       {
         label: "Price",
         value:
-          "EUR 14.99 per week for 6 book credits, or EUR 390 per year for 312 credits. 1 credit = 1 finished book. No free plan.",
+          "EUR 10 per book with no subscription, EUR 14.99 per week for 2 book credits, or EUR 390 per year for 52 credits. 1 credit = 1 finished book. No free plan.",
       },
       {
         label: "Agent access",
@@ -92,7 +92,7 @@ export const glanceCopy: Record<Locale, GlanceCopy> = {
       {
         label: "Prix",
         value:
-          "14,99 € par semaine pour 6 crédits livre, ou 390 € par an pour 312 crédits. 1 crédit = 1 livre terminé. Pas d'offre gratuite.",
+          "10 € le livre sans abonnement, 14,99 € par semaine pour 2 crédits livre, ou 390 € par an pour 52 crédits. 1 crédit = 1 livre terminé. Pas d'offre gratuite.",
       },
       {
         label: "Accès agent",
@@ -134,7 +134,7 @@ export const glanceCopy: Record<Locale, GlanceCopy> = {
       {
         label: "Prezzo",
         value:
-          "14,99 € a settimana per 6 crediti libro, oppure 390 € all'anno per 312 crediti. 1 credito = 1 libro finito. Nessun piano gratuito.",
+          "10 € a libro senza abbonamento, 14,99 € a settimana per 2 crediti libro, oppure 390 € all'anno per 52 crediti. 1 credito = 1 libro finito. Nessun piano gratuito.",
       },
       {
         label: "Accesso per agenti",
@@ -176,7 +176,7 @@ export const glanceCopy: Record<Locale, GlanceCopy> = {
       {
         label: "Preis",
         value:
-          "14,99 € pro Woche für 6 Buch-Credits oder 390 € pro Jahr für 312 Credits. 1 Credit = 1 fertiges Buch. Kein Gratis-Plan.",
+          "10 € pro Buch ohne Abo, 14,99 € pro Woche für 2 Buch-Credits oder 390 € pro Jahr für 52 Credits. 1 Credit = 1 fertiges Buch. Kein Gratis-Plan.",
       },
       {
         label: "Agentenzugriff",

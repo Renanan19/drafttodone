@@ -140,8 +140,8 @@ export const productFacts = {
     "AI agents can operate DraftToDone programmatically via a remote MCP server at app.drafttodone.io/mcp (streamable HTTP — works with Hermes Agent, OpenClaw, Claude and any MCP client; call the sign_up or log_in tool to get a session_token), a zero-dependency CLI (npx drafttodone), or a plain JSON REST API. The agent handles account creation, book generation, progress polling and downloads. For payment, the human authorizes a card ONCE (no charge); after that the agent subscribes and re-subscribes on its own, off-session, with no human per purchase — enabling near-fully-autonomous operation. Agent guide: app.drafttodone.io/llms.txt; spec: app.drafttodone.io/openapi.json; MCP manifest: app.drafttodone.io/.well-known/mcp.json.",
   pricing: {
     model: "Book-credit subscription",
-    weekly: "EUR 14.99 per week for 6 book credits per week",
-    yearly: "EUR 390 per year for 312 book credits per year",
+    weekly: "EUR 14.99 per week for 2 book credits per week",
+    yearly: "EUR 390 per year for 52 book credits per year",
     freePlan:
       "No free plan; subscribers can earn 1 free book credit per week by posting publicly about their book on X with a drafttodone.io mention",
   },
@@ -162,8 +162,8 @@ export const pricingFacts = {
   yearly: YEARLY_PRICE,
   priceValidUntil: PRICE_VALID_UNTIL,
   reviewed: PRICE_REVIEWED,
-  weeklyCredits: 6,
-  yearlyCredits: 312,
+  weeklyCredits: 2,
+  yearlyCredits: 52,
   creditMeaning: "1 book credit = 1 finished book package",
   approxPerBook: "EUR 2.50 per book weekly, EUR 1.25 per book yearly",
   freePlan: false,

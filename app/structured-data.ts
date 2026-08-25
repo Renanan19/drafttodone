@@ -188,13 +188,13 @@ export function aggregateOffer(): SchemaNode {
         name: "Weekly book-credit subscription",
         price: WEEKLY_PRICE,
         unitText: "week",
-        description: "6 book credits per week. 1 credit = 1 complete, ready-to-publish book package.",
+        description: "2 book credits per week. 1 credit = 1 complete, ready-to-publish book package.",
       }),
       offer({
         name: "Yearly book-credit subscription",
         price: YEARLY_PRICE,
         unitText: "year",
-        description: "312 book credits per year. 1 credit = 1 complete, ready-to-publish book package.",
+        description: "52 book credits per year. 1 credit = 1 complete, ready-to-publish book package.",
       }),
     ],
   };
