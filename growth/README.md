@@ -65,7 +65,7 @@ Everything writable is written. What is left needs you, a camera, or a decision.
 
 ## Two things worth disagreeing with me about
 
-**The volume promise.** "312 books a year" is, read plainly, the behaviour Amazon KDP is
+**The volume promise.** "104 books a year" is, read plainly, the behaviour Amazon KDP is
 actively suppressing — and the founder's own origin story is getting banned. The copy now
 treats volume as a capability rather than the promise. If you disagree, it is one line per
 locale in `home-content.ts`.

@@ -5,7 +5,7 @@ HOW TO USE,"Fill one row per published book. Update the sales columns at 30 and 
 ,,,,,,,,,
 YOUR COST BASE,,,,,,,,,
 Item,Value,Notes,,,,,,,
-Cost per book credit (EUR),2.50,"Weekly plan: 14.99 / 6 credits. Yearly: 390 / 312 = 1.25",,,,,,
+Cost per book credit (EUR),10.00,"Pay per book: 10 with no subscription. Weekly: 14.99 / 2 credits = 7.50. Yearly: 624 / 104 = 6.00",,,,,,
 Your time per book (hours),1.5,"Review, metadata, upload. Be honest — this is the real cost.",,,,,,
 Your hourly value (EUR),25,"What an hour of your time is worth elsewhere",,,,,,
 TOTAL COST PER BOOK (EUR),40.00,"= credit cost + (hours x hourly value). Edit the formula for your numbers.",,,,,,

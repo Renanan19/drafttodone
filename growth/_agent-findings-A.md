@@ -1,6 +1,6 @@
 # Agent Findings A — Florian Darroman podcast batch (7 episodes)
 
-Mined for DraftToDone.io (€0 MRR, product-led, prosumer, ICP = KDP catalog operator, €14.99/wk or €390/yr).
+Mined for DraftToDone.io (€0 MRR, product-led, prosumer, ICP = KDP catalog operator, €10/book, €14.99/wk or €624/yr).
 Only NEW material vs. the already-extracted list. Contradictions flagged with **[CONTRADICTS]**.
 
 ---

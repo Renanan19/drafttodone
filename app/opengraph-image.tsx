@@ -14,7 +14,7 @@ export default function OpengraphImage() {
       <OgCard
         eyebrow="1 brief -> 1 complete KDP book"
         title="One idea becomes the whole book."
-        footer="Manuscript + full cover + KDP metadata — 6 ready-to-publish books a week."
+        footer="Manuscript + full cover + KDP metadata — €10 a book, no subscription."
         titleFontSize={88}
       />
     ),

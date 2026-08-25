@@ -21,7 +21,7 @@
 | Stage | Launched, 2026. Every CTA sends visitors to the live app. |
 | Positioning | "The complete AI publishing machine" — generate the whole book *product*, not just text |
 | Origin story | Founder ran an Amazon KDP catalog (~€400/mo), got permanently banned over a pen-name issue, is rebuilding the private automation as a SaaS and building in public to recover lost MRR. |
-| Business model | Book-credit subscription: 1 credit = 1 ready-to-publish book. Weekly €14.99 (6 books/wk) · Yearly €390 (312 books/yr). |
+| Business model | Book credits: 1 credit = 1 ready-to-publish book. €10 per book with no subscription (lead offer) · Weekly €14.99 (2 books/wk) · Yearly €624 (104 books/yr). |
 | Conversion | CTAs to app.drafttodone.io (no on-site signup) |
 
 ## Product (what we actually generate)
@@ -39,7 +39,7 @@ One controlled pipeline from idea to KDP upload:
 - **Who:** indie publishers, self-publishing authors, KDP "operators" running catalogs at scale.
 - **Job to be done:** ship more publish-ready books, faster, without quality or compliance blowups.
 - **Languages:** English, French, Italian, German (full site i18n).
-- **Average customer value:** subscription (≈€15/wk or €390/yr).
+- **Average customer value:** €10 per book one-off, or subscription (≈€15/wk or €624/yr).
 
 ## SEO goals (priority order)
 

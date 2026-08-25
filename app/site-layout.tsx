@@ -66,7 +66,7 @@ export const siteMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "DraftToDone.io - Turn One Idea Into a Complete KDP Book",
   description:
-    "Generate a manuscript, full wrap cover, KDP metadata, and a verified pen name from one niche brief. Build 6 ready-to-publish books a week.",
+    "Generate a manuscript, full wrap cover, KDP metadata, and a verified pen name from one niche brief. Buy one book for €10, or 2 a week on subscription.",
   applicationName: SITE_NAME,
   category: "AI publishing software",
   classification:

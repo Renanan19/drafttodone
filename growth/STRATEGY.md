@@ -44,7 +44,7 @@ exactly this: *"the product was cool but it wasn't made for anyone specifically,
 loved it."*
 
 An indie author writing one passion project and an operator building a catalog want opposite
-things. The whole product is built for the operator: €14.99/week for 6 book credits, a founder
+things. The whole product is built for the operator: €10 per book, or €14.99/week for 2 book credits, a founder
 story about a €400/month catalog, a durable job queue, an MCP server, a CLI.
 
 **Locked: the ICP is the KDP catalog operator.** Every landing page, every post, every outreach
@@ -52,7 +52,7 @@ message speaks to that one person from now on.
 
 ### A real risk worth naming
 
-The current headline promise — *"312 books a year"* — is, read plainly, the exact behaviour
+The current headline promise — *"104 books a year"* — is, read plainly, the exact behaviour
 Amazon KDP is actively suppressing (3 titles/day cap, mandatory AI disclosure, quality reviews).
 The founder's own origin story is *getting banned*. Selling volume attracts buyers who get
 banned, churn immediately, and leave bad reviews.

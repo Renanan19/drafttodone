@@ -30,6 +30,8 @@ export const PRICE_REVIEWED = "2026-07-24";
 export const PRICE_VALID_UNTIL = "2027-07-24";
 
 export const PRICE_CURRENCY = "EUR";
+// The lead offer: a single book, bought outright, no subscription.
+export const ONEOFF_PRICE = "10";
 export const WEEKLY_PRICE = "14.99";
 export const YEARLY_PRICE = "624";
 
@@ -178,12 +180,23 @@ export function aggregateOffer(): SchemaNode {
   return {
     "@type": "AggregateOffer",
     availability: "https://schema.org/InStock",
-    lowPrice: WEEKLY_PRICE,
+    // Answer engines quote lowPrice as "how much does it cost". Before the
+    // one-off existed that was 14.99 a week; leaving it there would keep every
+    // AI answer quoting a subscription as the only way in.
+    lowPrice: ONEOFF_PRICE,
     highPrice: YEARLY_PRICE,
-    offerCount: "2",
+    offerCount: "3",
     priceCurrency: PRICE_CURRENCY,
     url: APP_SIGNUP_URL,
     offers: [
+      offer({
+        name: "Single book credit",
+        price: ONEOFF_PRICE,
+        unitText: "book",
+        category: "OneTimePayment",
+        description:
+          "1 book credit, bought outright with no subscription. 1 credit = 1 complete, ready-to-publish book package. Credits do not expire.",
+      }),
       offer({
         name: "Weekly book-credit subscription",
         price: WEEKLY_PRICE,
@@ -205,11 +218,14 @@ export function offer({
   price,
   unitText,
   description,
+  category = "Subscription",
 }: {
   name: string;
   price: string;
   unitText: string;
   description: string;
+  /** "Subscription" for the recurring plans; the one-off pack is not one. */
+  category?: string;
 }): SchemaNode {
   return {
     "@type": "Offer",
@@ -220,7 +236,7 @@ export function offer({
     priceValidUntil: PRICE_VALID_UNTIL,
     availability: "https://schema.org/InStock",
     url: APP_SIGNUP_URL,
-    category: "Subscription",
+    category,
     seller: organizationRef,
     priceSpecification: {
       "@type": "UnitPriceSpecification",

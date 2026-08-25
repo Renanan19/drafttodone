@@ -31,11 +31,12 @@ export function GET() {
     `Canonical URL: ${productFacts.canonicalUrl}`,
     `Live app: ${productFacts.appUrl}`,
     `Description: ${productFacts.shortDescription}`,
-    `Pricing: ${productFacts.pricing.weekly}; ${productFacts.pricing.yearly}; ${productFacts.pricing.freePlan}.`,
+    `Pricing: ${productFacts.pricing.oneOff}; ${productFacts.pricing.weekly}; ${productFacts.pricing.yearly}; ${productFacts.pricing.freePlan}.`,
   ].join("\n");
 
   const pricingLines = [
     `Currency: ${pricingFacts.currency}`,
+    `One-off: ${pricingFacts.currency} ${pricingFacts.oneOff} for 1 book credit, no subscription, never expires`,
     `Weekly: ${pricingFacts.currency} ${pricingFacts.weekly} for ${pricingFacts.weeklyCredits} book credits per week`,
     `Yearly: ${pricingFacts.currency} ${pricingFacts.yearly} for ${pricingFacts.yearlyCredits} book credits per year`,
     `Credit meaning: ${pricingFacts.creditMeaning}`,

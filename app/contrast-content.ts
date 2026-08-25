@@ -13,7 +13,7 @@ import type { Locale } from "./blog-content";
  * Rules that must survive every edit:
  * - No claim about rankings, KDP approval, sales or income.
  * - No competitor fact that is not already stated on the page itself.
- * - Prices: EUR 14.99 / EUR 624 in en, 14,99 € / 624 € in fr, it and de.
+ * - Prices: EUR 10 one-off / EUR 14.99 weekly / EUR 624 yearly, localised in fr, it and de.
  */
 
 export type ContrastBlock = {
@@ -118,7 +118,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Not for novelists who want to write every sentence themselves.",
-        "Not for a single one-off book if a weekly subscription makes no sense.",
+        "Best when you publish regularly; a single book is 10 EUR with no subscription.",
         "Not an Amazon uploader: you publish from your own KDP account and disclose AI use.",
       ],
       contrasts: [
@@ -137,7 +137,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Pas pour les romanciers qui veulent écrire chaque phrase eux-mêmes.",
-        "Pas pour un livre unique si un abonnement hebdomadaire n'a aucun sens.",
+        "Surtout utile si vous publiez régulièrement ; un livre seul coûte 10 € sans abonnement.",
         "Pas un outil d'upload : vous publiez depuis votre compte KDP et déclarez l'usage de l'IA.",
       ],
       contrasts: [
@@ -156,7 +156,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Non per romanzieri che vogliono scrivere ogni frase da soli.",
-        "Non per un libro unico, se un abbonamento settimanale non ha senso.",
+        "Soprattutto se pubblichi con regolarità; un libro singolo costa 10 € senza abbonamento.",
         "Non carica su Amazon: pubblichi dal tuo account KDP e dichiari l'uso dell'IA.",
       ],
       contrasts: [
@@ -175,7 +175,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Nicht für Romanautoren, die jeden Satz selbst schreiben wollen.",
-        "Nicht für ein einzelnes Buch, wenn ein Wochenabo keinen Sinn ergibt.",
+        "Vor allem, wenn du regelmäßig veröffentlichst; ein einzelnes Buch kostet 10 € ohne Abo.",
         "Kein Amazon-Uploader: du veröffentlichst aus deinem KDP-Konto und legst KI-Nutzung offen.",
       ],
       contrasts: [
@@ -518,7 +518,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       contrasts: [
         "Unlike desktop formatters, nothing installs and nothing uploads: the reader, typesetter and both writers run in your own tab.",
-        "Free tool vs paid pipeline: this formats one manuscript you wrote, DraftToDone generates whole books for EUR 14.99 a week.",
+        "Free tool vs paid pipeline: this formats one manuscript you wrote, DraftToDone generates whole books from EUR 10 each.",
         "Guide vs tool: the paperback formatting guide explains the rules, this page applies them to your file.",
       ],
     },
@@ -537,7 +537,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       contrasts: [
         "Contrairement aux logiciels de bureau, rien à installer et rien à envoyer : tout tourne dans votre propre onglet.",
-        "Outil gratuit vs pipeline payant : ici vous formatez un manuscrit que vous avez écrit, DraftToDone génère des livres entiers à 14,99 € par semaine.",
+        "Outil gratuit vs pipeline payant : ici vous formatez un manuscrit que vous avez écrit, DraftToDone génère des livres entiers à partir de 10 € pièce.",
         "Guide vs outil : le guide de mise en page explique les règles, cette page les applique à votre fichier.",
       ],
     },
@@ -556,7 +556,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       contrasts: [
         "A differenza dei programmi da installare, qui non si installa e non si carica nulla: tutto gira nella tua scheda.",
-        "Strumento gratuito vs pipeline a pagamento: qui impagini un manoscritto tuo, DraftToDone genera libri interi a 14,99 € a settimana.",
+        "Strumento gratuito vs pipeline a pagamento: qui impagini un manoscritto tuo, DraftToDone genera libri interi a partire da 10 € ciascuno.",
         "Guida vs strumento: la guida all'impaginazione spiega le regole, questa pagina le applica al tuo file.",
       ],
     },
@@ -575,7 +575,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       contrasts: [
         "Anders als Desktop-Programme wird nichts installiert und nichts hochgeladen: alles läuft in deinem eigenen Tab.",
-        "Kostenloses Tool vs bezahlte Pipeline: hier setzt du ein Manuskript, das du geschrieben hast, DraftToDone erzeugt ganze Bücher für 14,99 € pro Woche.",
+        "Kostenloses Tool vs bezahlte Pipeline: hier setzt du ein Manuskript, das du geschrieben hast, DraftToDone erzeugt ganze Bücher ab 10 € pro Stück.",
         "Leitfaden vs Tool: der Formatierungs-Leitfaden erklärt die Regeln, diese Seite wendet sie auf deine Datei an.",
       ],
     },
@@ -670,7 +670,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Not for writers shopping for a prose-craft assistant to co-write with.",
-        "Not for a single one-off book if a weekly subscription makes no sense.",
+        "Best when you publish regularly; a single book is 10 EUR with no subscription.",
         "Not a shortcut past human review: you inspect every book before upload.",
       ],
       contrasts: [
@@ -689,7 +689,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Pas pour les auteurs qui cherchent un assistant d'écriture à quatre mains.",
-        "Pas pour un livre unique si un abonnement hebdomadaire n'a aucun sens.",
+        "Surtout utile si vous publiez régulièrement ; un livre seul coûte 10 € sans abonnement.",
         "Pas un raccourci pour éviter la relecture : vous inspectez chaque livre.",
       ],
       contrasts: [
@@ -708,7 +708,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Non per chi cerca un assistente di scrittura con cui rifinire la prosa.",
-        "Non per un libro unico, se un abbonamento settimanale non ha senso.",
+        "Soprattutto se pubblichi con regolarità; un libro singolo costa 10 € senza abbonamento.",
         "Non è una scorciatoia per saltare la revisione: controlli ogni libro.",
       ],
       contrasts: [
@@ -727,7 +727,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Nicht für Autoren, die einen Schreibpartner für Prosa-Feinarbeit suchen.",
-        "Nicht für ein einzelnes Buch, wenn ein Wochenabo keinen Sinn ergibt.",
+        "Vor allem, wenn du regelmäßig veröffentlichst; ein einzelnes Buch kostet 10 € ohne Abo.",
         "Keine Abkürzung an der Prüfung vorbei: du siehst jedes Buch vor dem Upload durch.",
       ],
       contrasts: [
@@ -828,7 +828,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Not for novelists who want a craft partner for scenes and line-level prose.",
-        "Not for a single one-off book if a weekly subscription makes no sense.",
+        "Best when you publish regularly; a single book is 10 EUR with no subscription.",
         "Not a replacement for your own reading pass before you publish anything.",
       ],
       contrasts: [
@@ -847,7 +847,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Pas pour les romanciers qui veulent un partenaire de scènes et de prose.",
-        "Pas pour un livre unique si un abonnement hebdomadaire n'a aucun sens.",
+        "Surtout utile si vous publiez régulièrement ; un livre seul coûte 10 € sans abonnement.",
         "Pas un substitut à votre propre relecture avant de publier quoi que ce soit.",
       ],
       contrasts: [
@@ -866,7 +866,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Non per romanzieri che cercano un partner per scene e prosa riga per riga.",
-        "Non per un libro unico, se un abbonamento settimanale non ha senso.",
+        "Soprattutto se pubblichi con regolarità; un libro singolo costa 10 € senza abbonamento.",
         "Non sostituisce la tua rilettura prima di pubblicare qualsiasi cosa.",
       ],
       contrasts: [
@@ -885,7 +885,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Nicht für Romanautoren, die einen Partner für Szenen und Prosa suchen.",
-        "Nicht für ein einzelnes Buch, wenn ein Wochenabo keinen Sinn ergibt.",
+        "Vor allem, wenn du regelmäßig veröffentlichst; ein einzelnes Buch kostet 10 € ohne Abo.",
         "Kein Ersatz für deinen eigenen Lesedurchgang vor der Veröffentlichung.",
       ],
       contrasts: [
@@ -908,7 +908,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       notFor: [
         "Not a formatting editor you drive manually with your own templates.",
         "Not for authors who write their own books and only need beautiful files.",
-        "Not a one-time purchase: it is a book-credit subscription, 1 credit = 1 book.",
+        "Buy a single book outright for 10 EUR, or subscribe to book credits, 1 credit = 1 book.",
       ],
       contrasts: [
         "Atticus vs DraftToDone: one is a one-time-purchase writing and formatting tool, the other starts earlier and ends later, generating manuscript, cover and metadata.",
@@ -927,7 +927,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       notFor: [
         "Pas un éditeur de mise en page que vous pilotez avec vos propres modèles.",
         "Pas pour les auteurs qui écrivent leurs livres et veulent juste de beaux fichiers.",
-        "Pas un achat unique : c'est un abonnement à crédits, 1 crédit = 1 livre.",
+        "Achetez un livre seul à 10 €, ou abonnez-vous aux crédits, 1 crédit = 1 livre.",
       ],
       contrasts: [
         "Atticus vs DraftToDone : l'un est un outil d'écriture et de mise en page en achat unique, l'autre commence plus tôt et finit plus tard, du manuscrit aux métadonnées.",
@@ -946,7 +946,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       notFor: [
         "Non è un editor di impaginazione che guidi con i tuoi modelli.",
         "Non per autori che scrivono i propri libri e vogliono solo file belli.",
-        "Non è un acquisto unico: è un abbonamento a crediti, 1 credito = 1 libro.",
+        "Compra un singolo libro a 10 €, oppure abbonati ai crediti, 1 credito = 1 libro.",
       ],
       contrasts: [
         "Atticus vs DraftToDone: uno è uno strumento di scrittura e impaginazione ad acquisto unico, l'altro inizia prima e finisce dopo, dal manoscritto ai metadati.",
@@ -965,7 +965,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       notFor: [
         "Kein Formatierungseditor, den du mit eigenen Vorlagen selbst steuerst.",
         "Nicht für Autoren, die ihre Bücher selbst schreiben und nur schöne Dateien brauchen.",
-        "Kein Einmalkauf: es ist ein Buch-Kredit-Abo, 1 Kredit = 1 fertiges Buch.",
+        "Kaufe ein einzelnes Buch für 10 €, oder abonniere Buch-Credits, 1 Kredit = 1 Buch.",
       ],
       contrasts: [
         "Atticus vs DraftToDone: das eine ist ein Schreib- und Formatierungstool zum Einmalkauf, das andere beginnt früher und endet später, vom Manuskript bis zu den Metadaten.",

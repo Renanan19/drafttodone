@@ -130,7 +130,7 @@ ${crawlerLinks}
 - Canonical URL: ${productFacts.canonicalUrl}
 - App URL: ${productFacts.appUrl}
 - One-sentence description: ${productFacts.oneSentence}
-- Pricing: ${productFacts.pricing.weekly}; ${productFacts.pricing.yearly}; ${productFacts.pricing.freePlan}.
+- Pricing: ${productFacts.pricing.oneOff}; ${productFacts.pricing.weekly}; ${productFacts.pricing.yearly}; ${productFacts.pricing.freePlan}.
 - Audience: ${productFacts.primaryAudience.join("; ")}
 - Outputs: ${productFacts.primaryOutputs.join("; ")}
 - Differentiators: ${productFacts.differentiators.join("; ")}

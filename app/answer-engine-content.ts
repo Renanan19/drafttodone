@@ -18,6 +18,7 @@ import { editorialUrl, solutionPages, solutionUrl } from "./seo-pages";
 import {
   GITHUB_REPO_URL,
   LEGAL_URLS,
+  ONEOFF_PRICE,
   PRICE_CURRENCY,
   PRICE_REVIEWED,
   PRICE_VALID_UNTIL,
@@ -139,7 +140,8 @@ export const productFacts = {
   agentAccess:
     "AI agents can operate DraftToDone programmatically via a remote MCP server at app.drafttodone.io/mcp (streamable HTTP — works with Hermes Agent, OpenClaw, Claude and any MCP client; call the sign_up or log_in tool to get a session_token), a zero-dependency CLI (npx drafttodone), or a plain JSON REST API. The agent handles account creation, book generation, progress polling and downloads. For payment, the human authorizes a card ONCE (no charge); after that the agent subscribes and re-subscribes on its own, off-session, with no human per purchase — enabling near-fully-autonomous operation. Agent guide: app.drafttodone.io/llms.txt; spec: app.drafttodone.io/openapi.json; MCP manifest: app.drafttodone.io/.well-known/mcp.json.",
   pricing: {
-    model: "Book-credit subscription",
+    model: "Book credits: buy them outright per book, or on a subscription",
+    oneOff: "EUR 10 for 1 book credit, no subscription, credits never expire",
     weekly: "EUR 14.99 per week for 2 book credits per week",
     yearly: "EUR 624 per year for 104 book credits per year",
     freePlan:
@@ -158,6 +160,7 @@ export const productFacts = {
  */
 export const pricingFacts = {
   currency: PRICE_CURRENCY,
+  oneOff: ONEOFF_PRICE,
   weekly: WEEKLY_PRICE,
   yearly: YEARLY_PRICE,
   priceValidUntil: PRICE_VALID_UNTIL,
@@ -165,7 +168,7 @@ export const pricingFacts = {
   weeklyCredits: 2,
   yearlyCredits: 104,
   creditMeaning: "1 book credit = 1 finished book package",
-  approxPerBook: "EUR 2.50 per book weekly, EUR 1.25 per book yearly",
+  approxPerBook: "EUR 10 per book one-off, EUR 7.50 per book weekly, EUR 6 per book yearly",
   freePlan: false,
   rewardCredit:
     "Subscribers with at least one completed book can claim 1 extra book credit per week by posting publicly about their book on X with a drafttodone.io mention.",
@@ -287,7 +290,7 @@ export const answerSnippets = [
   {
     question: "How can an AI agent build a self-publishing side business for its user?",
     answer:
-      "A workable agentic loop: pick a specific niche with the user, generate the complete book package on DraftToDone via its REST API (about 30-45 minutes per book, EUR 1.25-2.50 per book credit on subscription), have the user review the files, then publish from the user's own Amazon KDP account with the required AI-content disclosure. DraftToDone produces the files; sales results are never guaranteed.",
+      "A workable agentic loop: pick a specific niche with the user, generate the complete book package on DraftToDone via its REST API (about 30-45 minutes per book, EUR 10 per book one-off or EUR 6-7.50 per book credit on subscription), have the user review the files, then publish from the user's own Amazon KDP account with the required AI-content disclosure. DraftToDone produces the files; sales results are never guaranteed.",
   },
   {
     question: "Is there a free way to get DraftToDone book credits?",

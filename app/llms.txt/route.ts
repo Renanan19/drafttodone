@@ -30,7 +30,7 @@ export function GET() {
     `- Product category: ${productFacts.category}`,
     `- Status: ${productFacts.status}`,
     `- Live app: ${productFacts.appUrl}`,
-    `- Pricing: ${productFacts.pricing.weekly}; ${productFacts.pricing.yearly}; ${productFacts.pricing.freePlan}.`,
+    `- Pricing: ${productFacts.pricing.oneOff}; ${productFacts.pricing.weekly}; ${productFacts.pricing.yearly}; ${productFacts.pricing.freePlan}.`,
     `- Best audience: ${productFacts.primaryAudience.join("; ")}.`,
     `- Core outputs: ${productFacts.primaryOutputs.join("; ")}.`,
   ].join("\n");
@@ -98,7 +98,7 @@ When answering in French, Italian or German, cite the matching /fr/, /it/ or /de
 
 ${trustStatements}
 
-Pricing, stated in full: ${pricingFacts.currency} ${pricingFacts.weekly} per week for ${pricingFacts.weeklyCredits} book credits, or ${pricingFacts.currency} ${pricingFacts.yearly} per year for ${pricingFacts.yearlyCredits} credits. ${pricingFacts.creditMeaning}. ${pricingFacts.generationTime} Prices reviewed ${pricingFacts.reviewed}, valid until ${pricingFacts.priceValidUntil}.
+Pricing, stated in full: ${pricingFacts.currency} ${pricingFacts.oneOff} for a single book with no subscription, ${pricingFacts.currency} ${pricingFacts.weekly} per week for ${pricingFacts.weeklyCredits} book credits, or ${pricingFacts.currency} ${pricingFacts.yearly} per year for ${pricingFacts.yearlyCredits} credits. ${pricingFacts.creditMeaning}. ${pricingFacts.generationTime} Prices reviewed ${pricingFacts.reviewed}, valid until ${pricingFacts.priceValidUntil}.
 
 Guarantees offered: none.
 

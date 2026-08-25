@@ -1864,7 +1864,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           { id: "package", title: "What does the KDP book package actually include?", body: "The workflow mirrors the decisions a publisher makes before opening KDP, so the output is easier to review and package.", points: ["Manuscript shaped from the niche brief", "Title and subtitle drafted with reader intent", "Description and seven keyword slots prepared", "Cover direction kept consistent with the book promise"] },
           { id: "quality", title: "What is checked before the book reaches Amazon?", body: "AI speed only matters if the book can survive human review. DraftToDone keeps the publisher in the loop before anything reaches Amazon.", points: ["Review checklist for content and metadata", "No promise of account safety or guaranteed approval", "Human rights and policy checks remain required", "Catalog notes for improvements after launch"] },
-          { id: "catalog", title: "Best for operators running a catalog, not a single title", body: "The point is not one random book. The point is a repeatable system for producing, checking and improving many titles over time.", points: ["Book-credit subscription", "Repeatable briefs and packaging", "Metadata snapshots for future refreshes", "Useful for multi-title publishing operations"] }
+          { id: "catalog", title: "Best for operators running a catalog, not a single title", body: "The point is not one random book. The point is a repeatable system for producing, checking and improving many titles over time.", points: ["Book credits: 10 EUR a book, or a subscription", "Repeatable briefs and packaging", "Metadata snapshots for future refreshes", "Useful for multi-title publishing operations"] }
         ],
         faq: [
           { question: "Can I upload the output directly to KDP?", answer: "DraftToDone prepares the book package for review, but you should inspect the manuscript, cover and metadata yourself before uploading anything to Amazon." },
@@ -1888,7 +1888,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           { id: "package", title: "Que contient exactement le package de livre KDP ?", body: "Le workflow suit les décisions qu'un éditeur prend avant d'ouvrir KDP, pour un résultat plus facile à relire et empaqueter.", points: ["Manuscrit construit depuis le brief de niche", "Titre et sous-titre orientés lecteur", "Description et sept champs mots-clés préparés", "Direction de couverture cohérente avec la promesse"] },
           { id: "qualite", title: "Que vérifie-t-on avant que le livre arrive sur Amazon ?", body: "La vitesse de l'IA compte seulement si le livre tient la revue humaine. DraftToDone garde l'éditeur dans la boucle avant Amazon.", points: ["Checklist de revue contenu et métadonnées", "Aucune promesse de sécurité de compte ou validation garantie", "Contrôles droits et politique toujours requis", "Notes catalogue pour améliorer après lancement"] },
-          { id: "catalogue", title: "Fait pour un catalogue entier, pas pour un titre isolé", body: "L'objectif n'est pas un livre isolé au hasard. L'objectif est un système répétable pour produire, contrôler et améliorer plusieurs titres.", points: ["Abonnement par crédits de livres", "Briefs et packaging répétables", "Snapshots de métadonnées pour refresh futur", "Utile pour opérations multi-titres"] }
+          { id: "catalogue", title: "Fait pour un catalogue entier, pas pour un titre isolé", body: "L'objectif n'est pas un livre isolé au hasard. L'objectif est un système répétable pour produire, contrôler et améliorer plusieurs titres.", points: ["Crédits livres : 10 € le livre, ou un abonnement", "Briefs et packaging répétables", "Snapshots de métadonnées pour refresh futur", "Utile pour opérations multi-titres"] }
         ],
         faq: [
           { question: "Puis-je uploader le résultat directement sur KDP ?", answer: "DraftToDone prépare un package à relire, mais vous devez inspecter manuscrit, couverture et métadonnées avant tout upload sur Amazon." },
@@ -1912,7 +1912,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           { id: "pacchetto", title: "Cosa contiene davvero il pacchetto libro KDP?", body: "Il workflow segue le decisioni che un publisher prende prima di aprire KDP, così l'output è più facile da rivedere e confezionare.", points: ["Manoscritto modellato dal brief di nicchia", "Titolo e sottotitolo orientati al lettore", "Descrizione e sette campi keyword preparati", "Direzione copertina coerente con la promessa"] },
           { id: "qualita", title: "Cosa si controlla prima che il libro arrivi su Amazon?", body: "La velocità dell'IA conta solo se il libro supera una revisione umana. DraftToDone tiene il publisher nel flusso prima di Amazon.", points: ["Checklist per contenuto e metadati", "Nessuna promessa di sicurezza account o approvazione garantita", "Controlli diritti e policy sempre necessari", "Note catalogo per miglioramenti post-lancio"] },
-          { id: "catalogo", title: "Ideale per chi gestisce un catalogo, non un singolo titolo", body: "Il punto non è un libro casuale. Il punto è un sistema ripetibile per produrre, controllare e migliorare molti titoli nel tempo.", points: ["Abbonamento a crediti libro", "Brief e packaging ripetibili", "Snapshot metadati per refresh futuri", "Utile per operazioni multi-titolo"] }
+          { id: "catalogo", title: "Ideale per chi gestisce un catalogo, non un singolo titolo", body: "Il punto non è un libro casuale. Il punto è un sistema ripetibile per produrre, controllare e migliorare molti titoli nel tempo.", points: ["Crediti libro: 10 € a libro, oppure un abbonamento", "Brief e packaging ripetibili", "Snapshot metadati per refresh futuri", "Utile per operazioni multi-titolo"] }
         ],
         faq: [
           { question: "Posso caricare l'output direttamente su KDP?", answer: "DraftToDone prepara un pacchetto da rivedere, ma devi controllare manoscritto, copertina e metadati prima di caricare su Amazon." },
@@ -1936,7 +1936,7 @@ export const solutionPages: SolutionPage[] = [
         sections: [
           { id: "paket", title: "Was steckt genau im KDP-Buchpaket?", body: "Der Workflow folgt den Entscheidungen, die ein Publisher vor KDP trifft, damit der Output leichter prüfbar und verpackbar ist.", points: ["Manuskript aus dem Nischenbriefing geformt", "Titel und Untertitel nach Leserintention", "Beschreibung und sieben Keyword-Felder vorbereitet", "Cover-Richtung passend zum Buchversprechen"] },
           { id: "qualitaet", title: "Was wird geprüft, bevor das Buch zu Amazon geht?", body: "KI-Geschwindigkeit zählt nur, wenn das Buch menschliche Prüfung übersteht. DraftToDone hält den Publisher vor Amazon im Prozess.", points: ["Checkliste für Inhalt und Metadaten", "Keine Garantie für Kontosicherheit oder Freigabe", "Rechte- und Policy-Prüfungen bleiben Pflicht", "Katalognotizen für Verbesserungen nach Launch"] },
-          { id: "katalog", title: "Für Katalogbetreiber gedacht, nicht für einen Einzeltitel", body: "Es geht nicht um ein zufälliges einzelnes Buch. Es geht um ein wiederholbares System für viele Titel.", points: ["Book-Credit-Abonnement", "Wiederholbare Briefings und Verpackung", "Metadaten-Snapshots für spätere Refreshes", "Nützlich für Multi-Titel-Operationen"] }
+          { id: "katalog", title: "Für Katalogbetreiber gedacht, nicht für einen Einzeltitel", body: "Es geht nicht um ein zufälliges einzelnes Buch. Es geht um ein wiederholbares System für viele Titel.", points: ["Buch-Credits: 10 € pro Buch, oder ein Abo", "Wiederholbare Briefings und Verpackung", "Metadaten-Snapshots für spätere Refreshes", "Nützlich für Multi-Titel-Operationen"] }
         ],
         faq: [
           { question: "Kann ich den Output direkt bei KDP hochladen?", answer: "DraftToDone bereitet das Buchpaket zur Prüfung vor, aber du solltest Manuskript, Cover und Metadaten selbst prüfen, bevor du etwas bei Amazon hochlädst." },
@@ -2137,7 +2137,7 @@ export const solutionPages: SolutionPage[] = [
         faq: [
           { question: "Is DraftToDone available now?", answer: "Yes — DraftToDone is live. Open the app at app.drafttodone.io to start publishing today." },
           { question: "Does DraftToDone format print and ebook files like Atticus?", answer: "Formatting is one stage of the pipeline. The focus is producing the whole product — manuscript, cover and metadata — ready for KDP, rather than being a standalone formatting editor." },
-          { question: "Is DraftToDone a subscription or a one-time purchase?", answer: "DraftToDone is a book-credit subscription (one credit makes one complete book). Atticus is a one-time purchase for its editor and formatter. Different models for different jobs." }
+          { question: "Is DraftToDone a subscription or a one-time purchase?", answer: "DraftToDone sells book credits outright at 10 EUR a book, or on subscription (one credit makes one complete book). Atticus is a one-time purchase for its editor and formatter. Different models for different jobs." }
         ],
         comparison: {
           heading: "DraftToDone vs Atticus, row by row",
@@ -2153,7 +2153,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Pricing", ours: "EUR 10 a book with no subscription, or EUR 14.99 a week / EUR 624 a year.", rival: "One-time licence, no subscription." },
           { criterion: "Who it fits", ours: "Operators running a catalog of books.", rival: "Authors typesetting their own book to a high standard.", rivalWins: true },
           ],
-          footnote: "Atticus is a one-time purchase for formatting books you have written; DraftToDone is a subscription that generates them. They overlap on the output file and on almost nothing else. Checked against both products' public pages on 21 August 2026.",
+          footnote: "Atticus is a one-time purchase for formatting books you have written; DraftToDone generates them, from 10 EUR a book. They overlap on the output file and on almost nothing else. Checked against both products' public pages on 21 August 2026.",
         },
         cta: "Open the app",
       },
@@ -2177,7 +2177,7 @@ export const solutionPages: SolutionPage[] = [
         faq: [
           { question: "DraftToDone est-il disponible maintenant ?", answer: "Oui — DraftToDone est en ligne. Ouvrez l'app sur app.drafttodone.io pour commencer à publier dès aujourd'hui." },
           { question: "DraftToDone met-il en page les fichiers print et ebook ?", answer: "La mise en page est une étape du pipeline. L'objectif est de produire tout le produit — manuscrit, couverture et métadonnées — prêt pour KDP, plutôt que d'être un éditeur de mise en page autonome." },
-          { question: "DraftToDone est-il un abonnement ou un achat unique ?", answer: "DraftToDone est un abonnement à crédits livres (1 crédit = 1 livre complet). Atticus est un achat unique pour son éditeur et son outil de mise en page. Des modèles différents pour des besoins différents." }
+          { question: "DraftToDone est-il un abonnement ou un achat unique ?", answer: "DraftToDone vend des crédits livres à l'unité, 10 € le livre, ou en abonnement (1 crédit = 1 livre complet). Atticus est un achat unique pour son éditeur et son outil de mise en page. Des modèles différents pour des besoins différents." }
         ],
         comparison: {
           heading: "DraftToDone vs Atticus, ligne par ligne",
@@ -2193,7 +2193,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Prix", ours: "10 € le livre sans abonnement, ou 14,99 € par semaine / 624 € par an.", rival: "Licence unique, sans abonnement." },
           { criterion: "À qui ça convient", ours: "Aux opérateurs qui gèrent un catalogue.", rival: "Aux auteurs qui composent leur propre livre avec exigence.", rivalWins: true },
           ],
-          footnote: "Atticus est un achat unique pour formater les livres que vous avez écrits ; DraftToDone est un abonnement qui les génère. Ils se recoupent sur le fichier de sortie et presque rien d'autre. Vérifié sur les pages publiques des deux produits le 21 août 2026.",
+          footnote: "Atticus est un achat unique pour formater les livres que vous avez écrits ; DraftToDone les génère, à partir de 10 € le livre. Ils se recoupent sur le fichier de sortie et presque rien d'autre. Vérifié sur les pages publiques des deux produits le 21 août 2026.",
         },
         cta: "Ouvrir l'app",
       },
@@ -2217,7 +2217,7 @@ export const solutionPages: SolutionPage[] = [
         faq: [
           { question: "DraftToDone è disponibile ora?", answer: "Sì — DraftToDone è online. Apri l'app su app.drafttodone.io e inizia a pubblicare oggi." },
           { question: "DraftToDone impagina i file print ed ebook come Atticus?", answer: "L'impaginazione è una tappa del pipeline. L'obiettivo è produrre tutto il prodotto — manoscritto, copertina e metadati — pronto per KDP, più che essere un editor di impaginazione autonomo." },
-          { question: "DraftToDone è un abbonamento o un acquisto unico?", answer: "DraftToDone è un abbonamento a crediti libri (1 credito = 1 libro completo). Atticus è un acquisto unico per il suo editor e impaginatore. Modelli diversi per esigenze diverse." }
+          { question: "DraftToDone è un abbonamento o un acquisto unico?", answer: "DraftToDone vende crediti libro singoli a 10 € a libro, oppure in abbonamento (1 credito = 1 libro completo). Atticus è un acquisto unico per il suo editor e impaginatore. Modelli diversi per esigenze diverse." }
         ],
         comparison: {
           heading: "DraftToDone vs Atticus, riga per riga",
@@ -2233,7 +2233,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Prezzo", ours: "10 € a libro senza abbonamento, oppure 14,99 € a settimana / 624 € all'anno.", rival: "Licenza una tantum, senza abbonamento." },
           { criterion: "A chi serve", ours: "Agli operatori che gestiscono un catalogo.", rival: "Agli autori che impaginano il proprio libro con cura.", rivalWins: true },
           ],
-          footnote: "Atticus è un acquisto una tantum per impaginare libri che hai già scritto; DraftToDone è un abbonamento che li genera. Si sovrappongono sul file finale e su quasi nient'altro. Verificato sulle pagine pubbliche di entrambi il 21 agosto 2026.",
+          footnote: "Atticus è un acquisto una tantum per impaginare libri che hai già scritto; DraftToDone li genera, a partire da 10 € a libro. Si sovrappongono sul file finale e su quasi nient'altro. Verificato sulle pagine pubbliche di entrambi il 21 agosto 2026.",
         },
         cta: "Apri l'app",
       },
@@ -2257,7 +2257,7 @@ export const solutionPages: SolutionPage[] = [
         faq: [
           { question: "Ist DraftToDone jetzt verfügbar?", answer: "Ja — DraftToDone ist live. Öffne die App unter app.drafttodone.io und starte noch heute." },
           { question: "Formatiert DraftToDone Print- und Ebook-Dateien wie Atticus?", answer: "Formatierung ist eine Stufe der Pipeline. Der Fokus liegt darauf, das ganze Produkt — Manuskript, Cover und Metadaten — fertig für KDP zu erzeugen, statt ein eigenständiger Formatierungseditor zu sein." },
-          { question: "Ist DraftToDone ein Abo oder ein Einmalkauf?", answer: "DraftToDone ist ein Buch-Kredit-Abo (1 Kredit = 1 komplettes Buch). Atticus ist ein Einmalkauf für Editor und Formatierer. Verschiedene Modelle für verschiedene Aufgaben." }
+          { question: "Ist DraftToDone ein Abo oder ein Einmalkauf?", answer: "DraftToDone verkauft Buch-Credits einzeln für 10 € pro Buch oder im Abo (1 Kredit = 1 komplettes Buch). Atticus ist ein Einmalkauf für Editor und Formatierer. Verschiedene Modelle für verschiedene Aufgaben." }
         ],
         comparison: {
           heading: "DraftToDone vs Atticus, Zeile für Zeile",
@@ -2273,7 +2273,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Preis", ours: "10 € pro Buch ohne Abo, oder 14,99 € pro Woche / 624 € pro Jahr.", rival: "Einmallizenz, kein Abo." },
           { criterion: "Für wen", ours: "Für Betreiber, die einen Katalog fahren.", rival: "Für Autorinnen, die ihr eigenes Buch anspruchsvoll setzen.", rivalWins: true },
           ],
-          footnote: "Atticus ist ein Einmalkauf zum Setzen von Büchern, die du geschrieben hast; DraftToDone ist ein Abo, das sie erzeugt. Überschneidung gibt es bei der Ausgabedatei und fast nirgends sonst. Geprüft an den öffentlichen Seiten beider Produkte am 21. August 2026.",
+          footnote: "Atticus ist ein Einmalkauf zum Setzen von Büchern, die du geschrieben hast; DraftToDone erzeugt sie, ab 10 € pro Buch. Überschneidung gibt es bei der Ausgabedatei und fast nirgends sonst. Geprüft an den öffentlichen Seiten beider Produkte am 21. August 2026.",
         },
         cta: "App öffnen",
       },
