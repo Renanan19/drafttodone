@@ -220,7 +220,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       plans: [
         { name: "Pay per book", price: "€10", period: "/ book", credits: "Buy 1 or 20, no subscription", perBook: "Credits never expire", highlight: true },
         { name: "Weekly", price: "€14.99", period: "/ week", credits: "2 books every week", perBook: "≈ €7.50 per book", highlight: false },
-        { name: "Yearly", price: "€390", period: "/ year", credits: "52 books a year", perBook: "≈ €7.50 per book", highlight: false },
+        { name: "Yearly", price: "€624", period: "/ year", credits: "104 books a year", perBook: "≈ €6 per book — 20% off weekly", highlight: false },
       ],
     },
     founding: {
@@ -355,7 +355,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       plans: [
         { name: "À l'unité", price: "10 €", period: "/ livre", credits: "1 ou 20, sans abonnement", perBook: "Les crédits n'expirent pas", highlight: true },
         { name: "Hebdomadaire", price: "14,99 €", period: "/ semaine", credits: "2 livres chaque semaine", perBook: "≈ 7,50 € par livre", highlight: false },
-        { name: "Annuel", price: "390 €", period: "/ an", credits: "52 livres par an", perBook: "≈ 7,50 € par livre", highlight: false },
+        { name: "Annuel", price: "624 €", period: "/ an", credits: "104 livres par an", perBook: "≈ 6 € par livre — 20 % moins cher", highlight: false },
       ],
     },
     founding: {
@@ -490,7 +490,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       plans: [
         { name: "A libro", price: "10 €", period: "/ libro", credits: "1 o 20, senza abbonamento", perBook: "I crediti non scadono", highlight: true },
         { name: "Settimanale", price: "14,99 €", period: "/ settimana", credits: "2 libri ogni settimana", perBook: "≈ 7,50 € a libro", highlight: false },
-        { name: "Annuale", price: "390 €", period: "/ anno", credits: "52 libri all'anno", perBook: "≈ 7,50 € a libro", highlight: false },
+        { name: "Annuale", price: "624 €", period: "/ anno", credits: "104 libri all'anno", perBook: "≈ 6 € a libro — 20% in meno", highlight: false },
       ],
     },
     founding: {
@@ -625,7 +625,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       plans: [
         { name: "Pro Buch", price: "10 €", period: "/ Buch", credits: "1 oder 20, ohne Abo", perBook: "Credits verfallen nie", highlight: true },
         { name: "Wöchentlich", price: "14,99 €", period: "/ Woche", credits: "2 Bücher pro Woche", perBook: "≈ 7,50 € pro Buch", highlight: false },
-        { name: "Jährlich", price: "390 €", period: "/ Jahr", credits: "52 Bücher pro Jahr", perBook: "≈ 7,50 € pro Buch", highlight: false },
+        { name: "Jährlich", price: "624 €", period: "/ Jahr", credits: "104 Bücher pro Jahr", perBook: "≈ 6 € pro Buch — 20 % günstiger", highlight: false },
       ],
     },
     founding: {

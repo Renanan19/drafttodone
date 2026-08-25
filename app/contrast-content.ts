@@ -13,7 +13,7 @@ import type { Locale } from "./blog-content";
  * Rules that must survive every edit:
  * - No claim about rankings, KDP approval, sales or income.
  * - No competitor fact that is not already stated on the page itself.
- * - Prices: EUR 14.99 / EUR 390 in en, 14,99 € / 390 € in fr, it and de.
+ * - Prices: EUR 14.99 / EUR 624 in en, 14,99 € / 624 € in fr, it and de.
  */
 
 export type ContrastBlock = {

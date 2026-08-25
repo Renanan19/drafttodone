@@ -31,7 +31,7 @@ export const PRICE_VALID_UNTIL = "2027-07-24";
 
 export const PRICE_CURRENCY = "EUR";
 export const WEEKLY_PRICE = "14.99";
-export const YEARLY_PRICE = "390";
+export const YEARLY_PRICE = "624";
 
 export const organizationRef = { "@id": ORGANIZATION_ID };
 export const websiteRef = { "@id": WEBSITE_ID };
@@ -194,7 +194,7 @@ export function aggregateOffer(): SchemaNode {
         name: "Yearly book-credit subscription",
         price: YEARLY_PRICE,
         unitText: "year",
-        description: "52 book credits per year. 1 credit = 1 complete, ready-to-publish book package.",
+        description: "104 book credits per year. 1 credit = 1 complete, ready-to-publish book package.",
       }),
     ],
   };

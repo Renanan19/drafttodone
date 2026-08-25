@@ -141,7 +141,7 @@ export const productFacts = {
   pricing: {
     model: "Book-credit subscription",
     weekly: "EUR 14.99 per week for 2 book credits per week",
-    yearly: "EUR 390 per year for 52 book credits per year",
+    yearly: "EUR 624 per year for 104 book credits per year",
     freePlan:
       "No free plan; subscribers can earn 1 free book credit per week by posting publicly about their book on X with a drafttodone.io mention",
   },
@@ -163,7 +163,7 @@ export const pricingFacts = {
   priceValidUntil: PRICE_VALID_UNTIL,
   reviewed: PRICE_REVIEWED,
   weeklyCredits: 2,
-  yearlyCredits: 52,
+  yearlyCredits: 104,
   creditMeaning: "1 book credit = 1 finished book package",
   approxPerBook: "EUR 2.50 per book weekly, EUR 1.25 per book yearly",
   freePlan: false,
