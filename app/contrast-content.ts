@@ -13,7 +13,7 @@ import type { Locale } from "./blog-content";
  * Rules that must survive every edit:
  * - No claim about rankings, KDP approval, sales or income.
  * - No competitor fact that is not already stated on the page itself.
- * - Prices: EUR 10 one-off / EUR 14.99 weekly / EUR 624 yearly, localised in fr, it and de.
+ * - Prices: EUR 10 one-off / EUR 14.99 weekly / EUR 390 yearly, localised in fr, it and de.
  */
 
 export type ContrastBlock = {

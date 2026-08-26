@@ -143,7 +143,7 @@ export const productFacts = {
     model: "Book credits: buy them outright per book, or on a subscription",
     oneOff: "EUR 10 for 1 book credit, no subscription, credits never expire",
     weekly: "EUR 14.99 per week for 2 book credits per week",
-    yearly: "EUR 624 per year for 104 book credits per year",
+    yearly: "EUR 390 per year for 104 book credits per year",
     freePlan:
       "No free plan; subscribers can earn 1 free book credit per week by posting publicly about their book on X with a drafttodone.io mention",
   },

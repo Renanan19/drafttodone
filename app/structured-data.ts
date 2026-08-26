@@ -33,7 +33,7 @@ export const PRICE_CURRENCY = "EUR";
 // The lead offer: a single book, bought outright, no subscription.
 export const ONEOFF_PRICE = "10";
 export const WEEKLY_PRICE = "14.99";
-export const YEARLY_PRICE = "624";
+export const YEARLY_PRICE = "390";
 
 export const organizationRef = { "@id": ORGANIZATION_ID };
 export const websiteRef = { "@id": WEBSITE_ID };

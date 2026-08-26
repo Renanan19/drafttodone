@@ -13,7 +13,7 @@ import { SITE_NAME, type Locale } from "./blog-content";
 /** Recurring, for as long as the referred customer stays. */
 export const AFFILIATE_COMMISSION_PCT = 40;
 /** Yearly plan price, used to make the commission concrete rather than abstract. */
-export const YEARLY_PLAN_EUR = 624;
+export const YEARLY_PLAN_EUR = 390;
 export const yearlyCommissionEur = () =>
   Math.round((YEARLY_PLAN_EUR * AFFILIATE_COMMISSION_PCT) / 100);
 
@@ -109,7 +109,7 @@ export const partnersCopy: Record<Locale, PartnersCopy> = {
       },
       {
         q: "What does the customer actually pay?",
-        a: "€10 for a single book with no subscription, €14.99 a week for 2 book credits, or €624 a year for 104. One credit produces one complete book package. At 40% recurring, the yearly plan pays you about €250 per customer per year, for as long as they stay.",
+        a: "€10 for a single book with no subscription, €14.99 a week for 2 book credits, or €390 a year for 104. One credit produces one complete book package. At 40% recurring, the yearly plan pays you about €156 per customer per year, for as long as they stay.",
       },
       {
         q: "Will you send me something to say?",
@@ -179,7 +179,7 @@ export const partnersCopy: Record<Locale, PartnersCopy> = {
       },
       {
         q: "Combien paie réellement le client ?",
-        a: "10 € le livre à l'unité sans abonnement, 14,99 € par semaine pour 2 crédits, ou 624 € par an pour 104. Un crédit produit un pack livre complet. À 40 % récurrent, l'offre annuelle vous rapporte environ 250 € par client et par an, tant qu'il reste.",
+        a: "10 € le livre à l'unité sans abonnement, 14,99 € par semaine pour 2 crédits, ou 390 € par an pour 104. Un crédit produit un pack livre complet. À 40 % récurrent, l'offre annuelle vous rapporte environ 156 € par client et par an, tant qu'il reste.",
       },
       {
         q: "Vous m'envoyez un script ?",
@@ -249,7 +249,7 @@ export const partnersCopy: Record<Locale, PartnersCopy> = {
       },
       {
         q: "Quanto paga davvero il cliente?",
-        a: "10 € a libro senza abbonamento, 14,99 € a settimana per 2 crediti, oppure 624 € l'anno per 104. Un credito produce un pacchetto libro completo. Al 40% ricorrente, il piano annuale ti rende circa 250 € per cliente all'anno, finché resta.",
+        a: "10 € a libro senza abbonamento, 14,99 € a settimana per 2 crediti, oppure 390 € l'anno per 104. Un credito produce un pacchetto libro completo. Al 40% ricorrente, il piano annuale ti rende circa 156 € per cliente all'anno, finché resta.",
       },
       {
         q: "Mi mandi uno script?",
@@ -319,7 +319,7 @@ export const partnersCopy: Record<Locale, PartnersCopy> = {
       },
       {
         q: "Was zahlt der Kunde tatsächlich?",
-        a: "10 € pro Buch ohne Abo, 14,99 € pro Woche für 2 Credits oder 624 € pro Jahr für 104. Ein Credit ergibt ein komplettes Buchpaket. Bei 40 % wiederkehrend bringt dir der Jahresplan rund 250 € pro Kunde und Jahr, solange er bleibt.",
+        a: "10 € pro Buch ohne Abo, 14,99 € pro Woche für 2 Credits oder 390 € pro Jahr für 104. Ein Credit ergibt ein komplettes Buchpaket. Bei 40 % wiederkehrend bringt dir der Jahresplan rund 156 € pro Kunde und Jahr, solange er bleibt.",
       },
       {
         q: "Schickst du mir ein Skript?",
