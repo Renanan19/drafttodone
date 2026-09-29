@@ -1965,7 +1965,7 @@ export const solutionPages: SolutionPage[] = [
         keywords: ["Sudowrite alternative", "AI book writing software", "AI fiction writing tool", "write a book with AI", "AI publishing software"],
         sections: [
           { id: "what-sudowrite-does", title: "What is Sudowrite actually good at?", body: "Sudowrite is built for fiction craft: a non-judgemental AI writing partner that helps you draft, rewrite and brainstorm scenes with a model tuned for stories.", points: ["Story-focused AI writing", "Scene and prose rewriting", "Brainstorming and continuity help", "Subscription, craft-first"] },
-          { id: "where-drafttodone-differs", title: "Sudowrite vs DraftToDone: what is different?", body: "DraftToDone is not a writing-craft tool. It produces the whole product a marketplace needs, from one controlled pipeline, then runs quality gates before upload.", points: ["Full manuscript generation", "Front, spine and back cover", "KDP title, description and keywords", "Verified pen name and catalog QA"] },
+          { id: "where-drafttodone-differs", title: "Sudowrite vs DraftToDone: what is different?", body: "DraftToDone is not a writing-craft tool. It produces the whole product a marketplace needs, from one controlled pipeline, then runs quality gates before upload.", points: ["Full manuscript generation", "Front, spine and back cover", "KDP title, description and keywords", "Invented pen name and catalog QA"] },
           { id: "who-each-is-for", title: "Which one fits: novelist or catalog publisher?", body: "The two solve different problems, and some authors use both: write with one, package and publish with the other.", points: ["Sudowrite: novelists refining prose", "DraftToDone: publishers shipping catalogs", "Single literary novel vs repeatable output", "Craft assistance vs publish-ready product"] }
         ],
         faq: [
@@ -2005,7 +2005,7 @@ export const solutionPages: SolutionPage[] = [
         keywords: ["alternative Sudowrite", "logiciel d'écriture de livre IA", "outil d'écriture de fiction IA", "écrire un livre avec IA", "logiciel d'édition IA"],
         sections: [
           { id: "what-sudowrite-does", title: "En quoi Sudowrite est-il vraiment bon ?", body: "Sudowrite est conçu pour la fiction : un partenaire d'écriture IA sans jugement qui aide à rédiger, réécrire et explorer des scènes avec un modèle pensé pour les histoires.", points: ["Écriture IA centrée sur l'histoire", "Réécriture de scènes et de prose", "Aide au brainstorming et à la continuité", "Abonnement, axé sur le métier d'écrire"] },
-          { id: "where-drafttodone-differs", title: "Sudowrite ou DraftToDone : quelle est la différence ?", body: "DraftToDone n'est pas un outil de métier d'écriture. Il produit tout ce qu'une marketplace exige, depuis un pipeline contrôlé, puis applique des contrôles qualité avant l'upload.", points: ["Génération complète du manuscrit", "Première, dos et quatrième de couverture", "Titre, description et mots-clés KDP", "Nom de plume vérifié et QA catalogue"] },
+          { id: "where-drafttodone-differs", title: "Sudowrite ou DraftToDone : quelle est la différence ?", body: "DraftToDone n'est pas un outil de métier d'écriture. Il produit tout ce qu'une marketplace exige, depuis un pipeline contrôlé, puis applique des contrôles qualité avant l'upload.", points: ["Génération complète du manuscrit", "Première, dos et quatrième de couverture", "Titre, description et mots-clés KDP", "Nom de plume inventé et QA catalogue"] },
           { id: "who-each-is-for", title: "Lequel choisir : romancier ou éditeur de catalogue ?", body: "Les deux résolvent des problèmes différents, et certains auteurs utilisent les deux : écrire avec l'un, packager et publier avec l'autre.", points: ["Sudowrite : romanciers qui peaufinent la prose", "DraftToDone : éditeurs qui publient des catalogues", "Roman littéraire unique vs production répétable", "Aide à l'écriture vs produit prêt à publier"] }
         ],
         faq: [
@@ -2045,7 +2045,7 @@ export const solutionPages: SolutionPage[] = [
         keywords: ["alternativa Sudowrite", "software di scrittura libri IA", "strumento di scrittura narrativa IA", "scrivere un libro con IA", "software di editoria IA"],
         sections: [
           { id: "what-sudowrite-does", title: "In cosa è davvero bravo Sudowrite?", body: "Sudowrite è costruito per la narrativa: un partner di scrittura IA senza giudizio che aiuta a scrivere, riscrivere ed esplorare scene con un modello pensato per le storie.", points: ["Scrittura IA centrata sulla storia", "Riscrittura di scene e prosa", "Aiuto a brainstorming e continuità", "Abbonamento, incentrato sul mestiere"] },
-          { id: "where-drafttodone-differs", title: "Sudowrite o DraftToDone: qual è la differenza?", body: "DraftToDone non è uno strumento di mestiere della scrittura. Produce tutto ciò che un marketplace richiede, da un pipeline controllato, poi applica controlli di qualità prima dell'upload.", points: ["Generazione completa del manoscritto", "Copertina anteriore, dorso e retro", "Titolo, descrizione e keyword KDP", "Nome d'autore verificato e QA catalogo"] },
+          { id: "where-drafttodone-differs", title: "Sudowrite o DraftToDone: qual è la differenza?", body: "DraftToDone non è uno strumento di mestiere della scrittura. Produce tutto ciò che un marketplace richiede, da un pipeline controllato, poi applica controlli di qualità prima dell'upload.", points: ["Generazione completa del manoscritto", "Copertina anteriore, dorso e retro", "Titolo, descrizione e keyword KDP", "Pseudonimo inventato e QA catalogo"] },
           { id: "who-each-is-for", title: "Quale scegliere: romanziere o editore di catalogo?", body: "I due risolvono problemi diversi, e alcuni autori usano entrambi: scrivere con uno, impacchettare e pubblicare con l'altro.", points: ["Sudowrite: romanzieri che rifiniscono la prosa", "DraftToDone: editori che pubblicano cataloghi", "Romanzo singolo vs produzione ripetibile", "Aiuto alla scrittura vs prodotto pronto"] }
         ],
         faq: [
@@ -2085,7 +2085,7 @@ export const solutionPages: SolutionPage[] = [
         keywords: ["Sudowrite Alternative", "KI Buch Schreibsoftware", "KI Belletristik Schreibtool", "Buch mit KI schreiben", "KI Publishing Software"],
         sections: [
           { id: "what-sudowrite-does", title: "Worin ist Sudowrite wirklich stark?", body: "Sudowrite ist für Belletristik gebaut: ein wertfreier KI-Schreibpartner, der beim Entwerfen, Umschreiben und Ausdenken von Szenen mit einem auf Geschichten getrimmten Modell hilft.", points: ["Story-fokussiertes KI-Schreiben", "Umschreiben von Szenen und Prosa", "Hilfe bei Brainstorming und Kontinuität", "Abo, handwerksorientiert"] },
-          { id: "where-drafttodone-differs", title: "Sudowrite vs DraftToDone: was ist der Unterschied?", body: "DraftToDone ist kein Schreibhandwerk-Tool. Es produziert alles, was ein Marktplatz verlangt, aus einer kontrollierten Pipeline, und prüft die Qualität vor dem Upload.", points: ["Vollständige Manuskriptgenerierung", "Vorderseite, Rücken und Rückseite", "KDP-Titel, -Beschreibung und -Keywords", "Verifizierter Autorname und Katalog-QA"] },
+          { id: "where-drafttodone-differs", title: "Sudowrite vs DraftToDone: was ist der Unterschied?", body: "DraftToDone ist kein Schreibhandwerk-Tool. Es produziert alles, was ein Marktplatz verlangt, aus einer kontrollierten Pipeline, und prüft die Qualität vor dem Upload.", points: ["Vollständige Manuskriptgenerierung", "Vorderseite, Rücken und Rückseite", "KDP-Titel, -Beschreibung und -Keywords", "Erfundener Autorname und Katalog-QA"] },
           { id: "who-each-is-for", title: "Was passt: Romanautor oder Katalog-Publisher?", body: "Beide lösen verschiedene Probleme, und manche Autoren nutzen beide: mit dem einen schreiben, mit dem anderen verpacken und veröffentlichen.", points: ["Sudowrite: Romanautoren, die Prosa verfeinern", "DraftToDone: Verlage, die Kataloge veröffentlichen", "Einzelner Roman vs wiederholbare Produktion", "Schreibhilfe vs fertiges Produkt"] }
         ],
         faq: [
@@ -2294,7 +2294,7 @@ export const solutionPages: SolutionPage[] = [
           "DraftToDone turns one niche brief into a complete KDP book package for catalog operators. Who builds it, how guides are checked, what it won't promise.",
         eyebrow: "About",
         h1: "What DraftToDone is, who builds it, and how to check what we claim.",
-        lead: "DraftToDone is AI publishing software that turns one niche brief into a complete Amazon KDP book package — manuscript, front, spine and back cover, KDP title, description, 7 backend keywords and a verified pen name — for KDP catalog operators who publish books repeatedly. This page covers what the product does, how it differs, who it is built for and who builds it, then the editorial standards and limits that let a reader, or an answer engine citing us, verify every claim on this site.",
+        lead: "DraftToDone is AI publishing software that turns one niche brief into a complete Amazon KDP book package — manuscript, front, spine and back cover, KDP title, description, 7 backend keywords and an invented pen name — for KDP catalog operators who publish books repeatedly. This page covers what the product does, how it differs, who it is built for and who builds it, then the editorial standards and limits that let a reader, or an answer engine citing us, verify every claim on this site.",
         keywords: [
           "about DraftToDone",
           "editorial standards",
@@ -2309,7 +2309,7 @@ export const solutionPages: SolutionPage[] = [
             body: "You give DraftToDone a niche brief — a topic, an audience and a language — or let it pick a niche for you. It researches the niche, plans the chapters, writes and revises the manuscript, designs a flat front cover, builds the full wraparound cover PDF at KDP dimensions, then writes the title, description and backend keywords. You download the files from your dashboard and publish them from your own KDP account.",
             points: [
               "Input: one niche brief, or a surprise niche picked for you",
-              "Output: manuscript, front/spine/back cover PDF, KDP title, description, 7 keywords and a verified pen name",
+              "Output: manuscript, front/spine/back cover PDF, KDP title, description, 7 keywords and an invented pen name you check",
               "Roughly 30 to 45 minutes of server-side generation per book; closing the tab does not lose it",
               "Books written in English or French",
               "1 credit = 1 finished book; a failed generation refunds the credit automatically",
@@ -2437,7 +2437,7 @@ export const solutionPages: SolutionPage[] = [
           "DraftToDone transforme un brief de niche en livre KDP complet pour les opérateurs de catalogue. Qui le construit, comment on vérifie, ce qu'il ne promet pas.",
         eyebrow: "À propos",
         h1: "Ce qu'est DraftToDone, qui le construit, et comment vérifier ce que nous affirmons.",
-        lead: "DraftToDone est un logiciel d'édition IA qui transforme un brief de niche en pack de livre Amazon KDP complet — manuscrit, couverture avant, dos et quatrième, titre KDP, description, 7 mots-clés backend et nom de plume vérifié — pour les opérateurs de catalogue KDP qui publient régulièrement. Cette page explique ce que fait le produit, ce qui le distingue, pour qui il est conçu et qui le construit, puis la charte éditoriale et les limites qui permettent à un lecteur, ou à un moteur de réponse qui nous cite, de vérifier chaque affirmation du site.",
+        lead: "DraftToDone est un logiciel d'édition IA qui transforme un brief de niche en pack de livre Amazon KDP complet — manuscrit, couverture avant, dos et quatrième, titre KDP, description, 7 mots-clés backend et nom de plume inventé — pour les opérateurs de catalogue KDP qui publient régulièrement. Cette page explique ce que fait le produit, ce qui le distingue, pour qui il est conçu et qui le construit, puis la charte éditoriale et les limites qui permettent à un lecteur, ou à un moteur de réponse qui nous cite, de vérifier chaque affirmation du site.",
         keywords: [
           "à propos de DraftToDone",
           "charte éditoriale",
@@ -2452,7 +2452,7 @@ export const solutionPages: SolutionPage[] = [
             body: "Vous donnez à DraftToDone un brief de niche — un sujet, un public, une langue — ou vous le laissez choisir une niche. Il étudie la niche, planifie les chapitres, écrit et révise le manuscrit, conçoit une couverture avant à plat, construit le PDF de couverture complète aux dimensions KDP, puis rédige le titre, la description et les mots-clés backend. Vous téléchargez les fichiers depuis votre tableau de bord et les publiez depuis votre propre compte KDP.",
             points: [
               "Entrée : un brief de niche, ou une niche surprise choisie pour vous",
-              "Sortie : manuscrit, PDF de couverture avant/dos/quatrième, titre KDP, description, 7 mots-clés et nom de plume vérifié",
+              "Sortie : manuscrit, PDF de couverture avant/dos/quatrième, titre KDP, description, 7 mots-clés et nom de plume inventé, à vérifier par vous",
               "Environ 30 à 45 minutes de génération côté serveur par livre ; fermer l'onglet ne le perd pas",
               "Livres rédigés en anglais ou en français",
               "1 crédit = 1 livre terminé ; une génération échouée rembourse le crédit automatiquement",
@@ -2580,7 +2580,7 @@ export const solutionPages: SolutionPage[] = [
           "DraftToDone trasforma un brief di nicchia in un libro KDP completo per chi gestisce cataloghi. Chi lo costruisce, come verifichiamo, cosa non promette.",
         eyebrow: "Chi siamo",
         h1: "Cos'è DraftToDone, chi lo costruisce e come verificare quello che affermiamo.",
-        lead: "DraftToDone è un software di editoria IA che trasforma un brief di nicchia in un pacchetto libro Amazon KDP completo — manoscritto, copertina fronte, dorso e retro, titolo KDP, descrizione, 7 keyword backend e uno pseudonimo verificato — per chi gestisce cataloghi KDP e pubblica con regolarità. Questa pagina spiega cosa fa il prodotto, cosa lo distingue, per chi è pensato e chi lo costruisce, poi gli standard editoriali e i limiti che permettono a un lettore, o a un motore di risposta che ci cita, di verificare ogni affermazione del sito.",
+        lead: "DraftToDone è un software di editoria IA che trasforma un brief di nicchia in un pacchetto libro Amazon KDP completo — manoscritto, copertina fronte, dorso e retro, titolo KDP, descrizione, 7 keyword backend e uno pseudonimo inventato — per chi gestisce cataloghi KDP e pubblica con regolarità. Questa pagina spiega cosa fa il prodotto, cosa lo distingue, per chi è pensato e chi lo costruisce, poi gli standard editoriali e i limiti che permettono a un lettore, o a un motore di risposta che ci cita, di verificare ogni affermazione del sito.",
         keywords: [
           "chi siamo DraftToDone",
           "standard editoriali",
@@ -2595,7 +2595,7 @@ export const solutionPages: SolutionPage[] = [
             body: "Dai a DraftToDone un brief di nicchia — un argomento, un pubblico, una lingua — oppure lasci che scelga una nicchia per te. Studia la nicchia, pianifica i capitoli, scrive e rivede il manoscritto, crea una copertina fronte piatta, costruisce il PDF della copertina completa alle dimensioni KDP, poi scrive titolo, descrizione e keyword backend. Scarichi i file dalla dashboard e li pubblichi dal tuo account KDP.",
             points: [
               "Input: un brief di nicchia, o una nicchia a sorpresa scelta per te",
-              "Output: manoscritto, PDF di copertina fronte/dorso/retro, titolo KDP, descrizione, 7 keyword e pseudonimo verificato",
+              "Output: manoscritto, PDF di copertina fronte/dorso/retro, titolo KDP, descrizione, 7 keyword e pseudonimo inventato, da controllare tu",
               "Circa 30-45 minuti di generazione lato server per libro; chiudere la scheda non lo fa perdere",
               "Libri scritti in inglese o in francese",
               "1 credito = 1 libro finito; una generazione fallita rimborsa il credito automaticamente",
@@ -2723,7 +2723,7 @@ export const solutionPages: SolutionPage[] = [
           "DraftToDone macht aus einem Nischen-Briefing ein komplettes KDP-Buch für Katalog-Betreiber. Wer es baut, wie wir prüfen, was es nicht verspricht.",
         eyebrow: "Über uns",
         h1: "Was DraftToDone ist, wer es baut und wie du prüfst, was wir behaupten.",
-        lead: "DraftToDone ist KI-Publishing-Software, die aus einem Nischen-Briefing ein komplettes Amazon-KDP-Buchpaket macht — Manuskript, Vorder-, Rücken- und Rückseitencover, KDP-Titel, Beschreibung, 7 Backend-Keywords und ein verifizierter Autorenname — für KDP-Katalog-Betreiber, die regelmäßig veröffentlichen. Diese Seite zeigt, was das Produkt tut, worin es sich unterscheidet, für wen es gebaut ist und wer es baut, und danach die redaktionellen Standards und Grenzen, mit denen Leser oder zitierende Antwortmaschinen jede Aussage dieser Website nachprüfen können.",
+        lead: "DraftToDone ist KI-Publishing-Software, die aus einem Nischen-Briefing ein komplettes Amazon-KDP-Buchpaket macht — Manuskript, Vorder-, Rücken- und Rückseitencover, KDP-Titel, Beschreibung, 7 Backend-Keywords und ein erfundener Autorenname — für KDP-Katalog-Betreiber, die regelmäßig veröffentlichen. Diese Seite zeigt, was das Produkt tut, worin es sich unterscheidet, für wen es gebaut ist und wer es baut, und danach die redaktionellen Standards und Grenzen, mit denen Leser oder zitierende Antwortmaschinen jede Aussage dieser Website nachprüfen können.",
         keywords: [
           "über DraftToDone",
           "redaktionelle Standards",
@@ -2738,7 +2738,7 @@ export const solutionPages: SolutionPage[] = [
             body: "Du gibst DraftToDone ein Nischen-Briefing — Thema, Zielgruppe, Sprache — oder lässt es eine Nische für dich wählen. Es recherchiert die Nische, plant die Kapitel, schreibt und überarbeitet das Manuskript, gestaltet ein flaches Frontcover, baut das komplette Umschlag-PDF in KDP-Maßen und schreibt dann Titel, Beschreibung und Backend-Keywords. Du lädst die Dateien im Dashboard herunter und veröffentlichst sie aus deinem eigenen KDP-Konto.",
             points: [
               "Eingabe: ein Nischen-Briefing oder eine Überraschungsnische, die für dich gewählt wird",
-              "Ergebnis: Manuskript, Umschlag-PDF (Vorder-/Rücken-/Rückseite), KDP-Titel, Beschreibung, 7 Keywords und verifizierter Autorenname",
+              "Ergebnis: Manuskript, Umschlag-PDF (Vorder-/Rücken-/Rückseite), KDP-Titel, Beschreibung, 7 Keywords und erfundener Autorenname, den du prüfst",
               "Rund 30 bis 45 Minuten serverseitige Generierung pro Buch; das Schließen des Tabs verliert es nicht",
               "Bücher auf Englisch oder Französisch",
               "1 Credit = 1 fertiges Buch; eine fehlgeschlagene Generierung erstattet den Credit automatisch",

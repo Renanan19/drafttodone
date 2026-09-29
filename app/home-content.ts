@@ -114,7 +114,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     meta: {
       title: `${SITE_NAME} — Turn One Idea Into a Complete KDP Book`,
       description:
-        "Generate a manuscript, full wrap cover, KDP metadata, and a verified pen name from one niche brief. Buy one book for €10, or 2 a week on subscription.",
+        "Generate a manuscript, full wrap cover, KDP metadata, and an invented pen name from one niche brief. Buy one book for €10, or 2 a week on subscription.",
     },
     nav: { blog: "Blog", pricing: "Pricing", openApp: "Generate a book" },
     hero: {
@@ -122,9 +122,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h1main: "Turn one idea into a complete",
       h1accent: "KDP book.",
       sub: "DraftToDone generates the manuscript, front and back cover, title, description, keywords, and pen name from a single niche brief.",
-      subHighlight: "Built to pass KDP review, not to flood it.",
+      subHighlight: "Built for a reviewable KDP workflow. Check every manuscript, cover and listing before you submit.",
       microcopy: "No free plan: every credit goes toward a real book.",
-      chips: ["Manuscript", "Front cover", "Back cover", "Verified pen name"],
+      chips: ["Manuscript", "Front cover", "Back cover", "Invented pen name"],
       caption: "One book at a time, or two a week. Reviewed before every upload.",
       openApp: "Generate my book",
     },
@@ -169,11 +169,11 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     features: {
       eyebrow: "The engine",
       h2: "From blank page to published.",
-      sub: "Three systems. One pipeline. Every asset a marketplace demands — generated, formatted, and ready to upload.",
+      sub: "Three systems. One pipeline. Every asset a marketplace demands — generated and formatted to KDP dimensions, for you to review.",
       items: [
         { title: "Full Manuscript Generation", text: "The AI determines the ideal length and writes the entire book autonomously based on your niche." },
         { title: "Complete Cover Design", text: "Generates the front cover, spine, and back cover layout with AI imagery, ready for print." },
-        { title: "Optimized Metadata", text: "Generates SEO-optimized titles, descriptions, and verified pen names to avoid copyright strikes." },
+        { title: "Optimized Metadata", text: "Generates SEO-optimized titles, descriptions, and an invented pen name you check before publishing." },
       ],
     },
     comparison: {
@@ -203,19 +203,19 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
     faqHeading: "Questions, answered.",
     faq: [
-      { q: "What is DraftToDone?", a: "DraftToDone is AI publishing software that generates the whole book product — manuscript, front and back cover, and an SEO-optimized title and description — ready to upload to Amazon KDP." },
+      { q: "What is DraftToDone?", a: "DraftToDone is AI publishing software that generates the whole book product — manuscript, front and back cover, and an SEO-optimized title and description — as KDP-sized files you review before uploading to Amazon KDP." },
       { q: "Does it write the entire book?", a: "Yes. The AI determines the ideal length and writes the full manuscript from your niche brief, then builds the cover package and metadata around it." },
-      { q: "Is the content allowed on Amazon KDP?", a: "DraftToDone is built around KDP content and AI-disclosure rules, with verified pen names to reduce copyright-strike risk. You stay responsible for reviewing each book and disclosing AI use as KDP requires." },
-      { q: "How many books can I publish?", a: "One credit makes one complete, ready-to-publish book. Buy credits outright at €10 a book with no subscription, or take the weekly plan for 2 books a week." },
+      { q: "Is the content allowed on Amazon KDP?", a: "DraftToDone is built around KDP content and AI-disclosure rules, and it invents a pen name rather than borrowing a real one; check that name yourself. Amazon can still reject a book, and you stay responsible for reviewing each book and disclosing AI use as KDP requires." },
+      { q: "How many books can I publish?", a: "One credit makes one complete book package. Buy credits outright at €10 a book with no subscription, or take the weekly plan for 2 books a week." },
       { q: "Is it available now?", a: "Yes — DraftToDone is live. Open the app at app.drafttodone.io and start publishing today." },
     ],
     pricing: {
       eyebrow: "Pricing",
       h2: "Simple plans. Real books.",
-      sub: "One credit makes one complete, ready-to-publish book. Buy credits outright, or subscribe — either way you manage everything in the app.",
+      sub: "One credit makes one complete book package. Buy credits outright, or subscribe — either way you manage everything in the app.",
       cta: "Generate my book",
       best: "Best value",
-      includes: ["Full manuscript", "Front & back cover", "KDP-ready PDF", "Verified pen name"],
+      includes: ["Full manuscript", "Front & back cover", "KDP-sized cover PDF", "Invented pen name"],
       note: "No free plan. Cancel anytime from the app.",
       plans: [
         { name: "Pay per book", price: "€10", period: "/ book", credits: "Buy 1 or 20, no subscription", perBook: "Credits never expire", highlight: true },
@@ -249,7 +249,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     meta: {
       title: `${SITE_NAME} — Transformez une idée en livre KDP complet`,
       description:
-        "Générez manuscrit, couverture complète, métadonnées KDP et nom de plume vérifié depuis un seul brief de niche. 10 € le livre, ou 2 par semaine en abonnement.",
+        "Générez manuscrit, couverture complète, métadonnées KDP et nom de plume inventé depuis un seul brief de niche. 10 € le livre, ou 2 par semaine en abonnement.",
     },
     nav: { blog: "Blog", pricing: "Tarifs", openApp: "Générer un livre" },
     hero: {
@@ -257,9 +257,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h1main: "Transformez une idée en livre",
       h1accent: "prêt pour KDP.",
       sub: "DraftToDone génère le manuscrit, la couverture recto-verso, le titre, la description, les mots-clés et le nom de plume depuis un seul brief de niche.",
-      subHighlight: "Conçu pour passer la revue KDP, pas pour l'inonder.",
+      subHighlight: "Conçu pour un workflow KDP relu. Vérifiez chaque manuscrit, couverture et fiche avant de soumettre.",
       microcopy: "Pas d'offre gratuite : chaque crédit sert à produire un vrai livre.",
-      chips: ["Manuscrit", "Couverture", "Quatrième", "Nom de plume vérifié"],
+      chips: ["Manuscrit", "Couverture", "Quatrième", "Nom de plume inventé"],
       caption: "Un livre à la fois, ou deux par semaine. Relus avant chaque upload.",
       openApp: "Générer mon livre",
     },
@@ -304,11 +304,11 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     features: {
       eyebrow: "Le moteur",
       h2: "De la page blanche au livre publié.",
-      sub: "Trois systèmes. Un seul pipeline. Chaque élément exigé par les plateformes — généré, formaté et prêt à publier.",
+      sub: "Trois systèmes. Un seul pipeline. Chaque élément exigé par les plateformes — généré et formaté aux dimensions KDP, pour que vous le relisiez.",
       items: [
         { title: "Génération complète du manuscrit", text: "L'IA détermine la longueur idéale et rédige le livre entier de façon autonome selon votre niche." },
         { title: "Couverture complète", text: "Génère la première de couverture, le dos et la quatrième avec des visuels IA, prêts pour l'impression." },
-        { title: "Métadonnées optimisées", text: "Génère des titres et descriptions optimisés pour le SEO et des noms de plume vérifiés pour éviter les litiges de droits." },
+        { title: "Métadonnées optimisées", text: "Génère des titres et descriptions optimisés pour le SEO et un nom de plume inventé, que vous vérifiez avant de publier." },
       ],
     },
     comparison: {
@@ -338,19 +338,19 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
     faqHeading: "Vos questions, nos réponses.",
     faq: [
-      { q: "Qu'est-ce que DraftToDone ?", a: "DraftToDone est un logiciel d'édition IA qui génère tout le produit livre — manuscrit, première et quatrième de couverture, titre et description optimisés SEO — prêt à publier sur Amazon KDP." },
+      { q: "Qu'est-ce que DraftToDone ?", a: "DraftToDone est un logiciel d'édition IA qui génère tout le produit livre — manuscrit, première et quatrième de couverture, titre et description optimisés SEO — en fichiers aux dimensions KDP, à relire avant de les téléverser sur Amazon KDP." },
       { q: "Écrit-il le livre entier ?", a: "Oui. L'IA détermine la longueur idéale et rédige le manuscrit complet à partir de votre brief de niche, puis construit la couverture et les métadonnées autour." },
-      { q: "Le contenu est-il autorisé sur Amazon KDP ?", a: "DraftToDone est conçu autour des règles KDP de contenu et de divulgation IA, avec des noms de plume vérifiés pour réduire le risque de litige. Vous restez responsable de relire chaque livre et de déclarer l'usage de l'IA comme l'exige KDP." },
-      { q: "Combien de livres puis-je publier ?", a: "1 crédit = 1 livre complet prêt à publier. Achetez des crédits à l'unité, 10 € le livre sans abonnement, ou prenez l'offre hebdomadaire pour 2 livres par semaine." },
+      { q: "Le contenu est-il autorisé sur Amazon KDP ?", a: "DraftToDone est conçu autour des règles KDP de contenu et de divulgation IA, et il invente un nom de plume au lieu d'en emprunter un réel ; vérifiez ce nom vous-même. Amazon peut toujours refuser un livre, et vous restez responsable de relire chaque livre et de déclarer l'usage de l'IA comme l'exige KDP." },
+      { q: "Combien de livres puis-je publier ?", a: "1 crédit = 1 pack de livre complet. Achetez des crédits à l'unité, 10 € le livre sans abonnement, ou prenez l'offre hebdomadaire pour 2 livres par semaine." },
       { q: "Est-ce disponible maintenant ?", a: "Oui — DraftToDone est en ligne. Ouvrez l'app sur app.drafttodone.io et commencez à publier dès aujourd'hui." },
     ],
     pricing: {
       eyebrow: "Tarifs",
       h2: "Des offres simples. De vrais livres.",
-      sub: "1 crédit = 1 livre complet, prêt à publier. Achetez des crédits à l'unité ou abonnez-vous — tout se gère dans l'app.",
+      sub: "1 crédit = 1 pack de livre complet. Achetez des crédits à l'unité ou abonnez-vous — tout se gère dans l'app.",
       cta: "Générer mon livre",
       best: "Meilleur rapport",
-      includes: ["Manuscrit complet", "Couverture recto-verso", "PDF prêt pour KDP", "Nom de plume vérifié"],
+      includes: ["Manuscrit complet", "Couverture recto-verso", "PDF de couverture aux dimensions KDP", "Nom de plume inventé"],
       note: "Pas d'offre gratuite. Annulable à tout moment depuis l'app.",
       plans: [
         { name: "À l'unité", price: "10 €", period: "/ livre", credits: "1 ou 20, sans abonnement", perBook: "Les crédits n'expirent pas", highlight: true },
@@ -384,7 +384,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     meta: {
       title: `${SITE_NAME} — Trasforma un'idea in un libro KDP completo`,
       description:
-        "Genera manoscritto, copertina completa, metadati KDP e pseudonimo verificato da un solo brief di nicchia. 10 € a libro, oppure 2 a settimana in abbonamento.",
+        "Genera manoscritto, copertina completa, metadati KDP e pseudonimo inventato da un solo brief di nicchia. 10 € a libro, oppure 2 a settimana in abbonamento.",
     },
     nav: { blog: "Blog", pricing: "Prezzi", openApp: "Genera un libro" },
     hero: {
@@ -392,9 +392,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h1main: "Trasforma un'idea in un libro",
       h1accent: "pronto per KDP.",
       sub: "DraftToDone genera manoscritto, copertina fronte-retro, titolo, descrizione, keyword e pseudonimo da un solo brief di nicchia.",
-      subHighlight: "Fatto per superare la revisione KDP, non per inondarla.",
+      subHighlight: "Pensato per un workflow KDP revisionabile. Controlla ogni manoscritto, copertina e scheda prima di inviare.",
       microcopy: "Nessun piano gratuito: ogni credito produce un libro reale.",
-      chips: ["Manoscritto", "Copertina", "Quarta di copertina", "Nome d'autore verificato"],
+      chips: ["Manoscritto", "Copertina", "Quarta di copertina", "Pseudonimo inventato"],
       caption: "Un libro alla volta, o due a settimana. Riletti prima di ogni upload.",
       openApp: "Genera il mio libro",
     },
@@ -443,7 +443,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       items: [
         { title: "Generazione completa del manoscritto", text: "L'IA determina la lunghezza ideale e scrive l'intero libro in autonomia in base alla tua nicchia." },
         { title: "Copertina completa", text: "Genera fronte, dorso e retro con immagini IA, pronti per la stampa." },
-        { title: "Metadati ottimizzati", text: "Genera titoli e descrizioni ottimizzati SEO e nomi d'autore verificati per evitare segnalazioni di copyright." },
+        { title: "Metadati ottimizzati", text: "Genera titoli e descrizioni ottimizzati SEO e uno pseudonimo inventato, da controllare prima di pubblicare." },
       ],
     },
     comparison: {
@@ -473,19 +473,19 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
     faqHeading: "Le tue domande, le nostre risposte.",
     faq: [
-      { q: "Cos'è DraftToDone?", a: "DraftToDone è un software di editoria IA che genera l'intero prodotto libro — manoscritto, copertina anteriore e posteriore, e titolo e descrizione ottimizzati SEO — pronto per la pubblicazione su Amazon KDP." },
+      { q: "Cos'è DraftToDone?", a: "DraftToDone è un software di editoria IA che genera l'intero prodotto libro — manoscritto, copertina anteriore e posteriore, e titolo e descrizione ottimizzati SEO — in file nei formati KDP, da rivedere prima del caricamento su Amazon KDP." },
       { q: "Scrive l'intero libro?", a: "Sì. L'IA determina la lunghezza ideale e scrive il manoscritto completo dal tuo brief di nicchia, poi costruisce intorno copertina e metadati." },
-      { q: "Il contenuto è ammesso su Amazon KDP?", a: "DraftToDone è costruito attorno alle regole KDP su contenuti e divulgazione dell'IA, con nomi d'autore verificati per ridurre il rischio di violazioni. Resti responsabile di rivedere ogni libro e dichiarare l'uso dell'IA come richiede KDP." },
-      { q: "Quanti libri posso pubblicare?", a: "1 credito = 1 libro completo pronto da pubblicare. Compra crediti singoli a 10 € a libro senza abbonamento, oppure prendi il piano settimanale per 2 libri a settimana." },
+      { q: "Il contenuto è ammesso su Amazon KDP?", a: "DraftToDone è costruito attorno alle regole KDP su contenuti e divulgazione dell'IA, e inventa uno pseudonimo invece di prenderne uno reale; controlla tu quel nome. Amazon può comunque rifiutare un libro, e resti responsabile di rivedere ogni libro e dichiarare l'uso dell'IA come richiede KDP." },
+      { q: "Quanti libri posso pubblicare?", a: "1 credito = 1 pacchetto libro completo. Compra crediti singoli a 10 € a libro senza abbonamento, oppure prendi il piano settimanale per 2 libri a settimana." },
       { q: "È disponibile ora?", a: "Sì — DraftToDone è online. Apri l'app su app.drafttodone.io e inizia a pubblicare oggi." },
     ],
     pricing: {
       eyebrow: "Prezzi",
       h2: "Piani semplici. Libri veri.",
-      sub: "1 credito = 1 libro completo pronto da pubblicare. Compra crediti singoli o abbonati — gestisci tutto nell'app.",
+      sub: "1 credito = 1 pacchetto libro completo. Compra crediti singoli o abbonati — gestisci tutto nell'app.",
       cta: "Genera il mio libro",
       best: "Miglior valore",
-      includes: ["Manoscritto completo", "Copertina fronte e retro", "PDF pronto per KDP", "Nome d'autore verificato"],
+      includes: ["Manoscritto completo", "Copertina fronte e retro", "PDF di copertina in formato KDP", "Pseudonimo inventato"],
       note: "Nessun piano gratuito. Annulla quando vuoi dall'app.",
       plans: [
         { name: "A libro", price: "10 €", period: "/ libro", credits: "1 o 20, senza abbonamento", perBook: "I crediti non scadono", highlight: true },
@@ -519,7 +519,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     meta: {
       title: `${SITE_NAME} — Aus einer Idee wird ein komplettes KDP-Buch`,
       description:
-        "Erzeuge Manuskript, komplettes Cover, KDP-Metadaten und verifizierten Autorennamen aus einem einzigen Nischenbrief. 10 € pro Buch, oder 2 pro Woche im Abo.",
+        "Erzeuge Manuskript, komplettes Cover, KDP-Metadaten und einen erfundenen Autorennamen aus einem einzigen Nischenbrief. 10 € pro Buch, oder 2 pro Woche im Abo.",
     },
     nav: { blog: "Blog", pricing: "Preise", openApp: "Buch erzeugen" },
     hero: {
@@ -527,9 +527,9 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h1main: "Mach aus einer Idee ein",
       h1accent: "KDP-fertiges Buch.",
       sub: "DraftToDone erzeugt Manuskript, Vorder- und Rückcover, Titel, Beschreibung, Keywords und Autorennamen aus einem einzigen Nischenbrief.",
-      subHighlight: "Gebaut, um die KDP-Prüfung zu bestehen, nicht um sie zu fluten.",
+      subHighlight: "Gebaut für einen prüfbaren KDP-Workflow. Prüfe jedes Manuskript, Cover und Listing vor dem Einreichen.",
       microcopy: "Kein Gratisplan: jeder Credit produziert ein echtes Buch.",
-      chips: ["Manuskript", "Cover", "Rückseite", "Verifizierter Autorname"],
+      chips: ["Manuskript", "Cover", "Rückseite", "Erfundener Autorname"],
       caption: "Ein Buch nach dem anderen, oder zwei pro Woche. Vor jedem Upload geprüft.",
       openApp: "Mein Buch erzeugen",
     },
@@ -574,11 +574,11 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     features: {
       eyebrow: "Der Motor",
       h2: "Vom leeren Blatt zum veröffentlichten Buch.",
-      sub: "Drei Systeme. Eine Pipeline. Jedes Element, das ein Marktplatz verlangt — erzeugt, formatiert und bereit zum Upload.",
+      sub: "Drei Systeme. Eine Pipeline. Jedes Element, das ein Marktplatz verlangt — erzeugt und in KDP-Maßen formatiert, damit du es prüfst.",
       items: [
         { title: "Vollständige Manuskriptgenerierung", text: "Die KI bestimmt die ideale Länge und schreibt das ganze Buch eigenständig nach deiner Nische." },
         { title: "Komplettes Cover", text: "Erzeugt Vorderseite, Rücken und Rückseite mit KI-Bildern, druckfertig." },
-        { title: "Optimierte Metadaten", text: "Erzeugt SEO-optimierte Titel und Beschreibungen sowie verifizierte Autornamen, um Copyright-Probleme zu vermeiden." },
+        { title: "Optimierte Metadaten", text: "Erzeugt SEO-optimierte Titel und Beschreibungen sowie einen erfundenen Autorennamen, den du vor dem Veröffentlichen prüfst." },
       ],
     },
     comparison: {
@@ -608,19 +608,19 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
     faqHeading: "Deine Fragen, beantwortet.",
     faq: [
-      { q: "Was ist DraftToDone?", a: "DraftToDone ist KI-Publishing-Software, die das ganze Buchprodukt erzeugt — Manuskript, Vorder- und Rückseite sowie SEO-optimierten Titel und Beschreibung — fertig für Amazon KDP." },
+      { q: "Was ist DraftToDone?", a: "DraftToDone ist KI-Publishing-Software, die das ganze Buchprodukt erzeugt — Manuskript, Vorder- und Rückseite sowie SEO-optimierten Titel und Beschreibung — als Dateien in KDP-Maßen, die du vor dem Upload zu Amazon KDP prüfst." },
       { q: "Schreibt es das ganze Buch?", a: "Ja. Die KI bestimmt die ideale Länge und schreibt das komplette Manuskript aus deinem Nischen-Brief, dann baut sie Cover und Metadaten darum herum." },
-      { q: "Ist der Inhalt auf Amazon KDP erlaubt?", a: "DraftToDone ist um die KDP-Regeln zu Inhalten und KI-Offenlegung herum gebaut, mit verifizierten Autornamen, um das Risiko von Verstößen zu senken. Du bleibst verantwortlich, jedes Buch zu prüfen und die KI-Nutzung wie von KDP verlangt offenzulegen." },
-      { q: "Wie viele Bücher kann ich veröffentlichen?", a: "1 Kredit = 1 komplettes, veröffentlichungsfertiges Buch. Kaufe Credits einzeln für 10 € pro Buch ohne Abo, oder nimm den Wochenplan für 2 Bücher pro Woche." },
+      { q: "Ist der Inhalt auf Amazon KDP erlaubt?", a: "DraftToDone ist um die KDP-Regeln zu Inhalten und KI-Offenlegung herum gebaut, und erfindet einen Autorennamen, statt einen echten zu übernehmen; prüfe diesen Namen selbst. Amazon kann ein Buch trotzdem ablehnen, und du bleibst verantwortlich, jedes Buch zu prüfen und die KI-Nutzung wie von KDP verlangt offenzulegen." },
+      { q: "Wie viele Bücher kann ich veröffentlichen?", a: "1 Kredit = 1 komplettes Buchpaket. Kaufe Credits einzeln für 10 € pro Buch ohne Abo, oder nimm den Wochenplan für 2 Bücher pro Woche." },
       { q: "Ist es jetzt verfügbar?", a: "Ja — DraftToDone ist live. Öffne die App unter app.drafttodone.io und starte noch heute." },
     ],
     pricing: {
       eyebrow: "Preise",
       h2: "Einfache Pläne. Echte Bücher.",
-      sub: "1 Kredit = 1 komplettes, veröffentlichungsfertiges Buch. Kaufe Credits einzeln oder abonniere — alles wird in der App verwaltet.",
+      sub: "1 Kredit = 1 komplettes Buchpaket. Kaufe Credits einzeln oder abonniere — alles wird in der App verwaltet.",
       cta: "Mein Buch erzeugen",
       best: "Bestes Angebot",
-      includes: ["Komplettes Manuskript", "Vorder- und Rückseite", "KDP-fertiges PDF", "Verifizierter Autorname"],
+      includes: ["Komplettes Manuskript", "Vorder- und Rückseite", "Cover-PDF in KDP-Maßen", "Erfundener Autorname"],
       note: "Kein Gratisplan. Jederzeit in der App kündbar.",
       plans: [
         { name: "Pro Buch", price: "10 €", period: "/ Buch", credits: "1 oder 20, ohne Abo", perBook: "Credits verfallen nie", highlight: true },

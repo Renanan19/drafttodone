@@ -40,7 +40,7 @@ export const glanceCopy: Record<Locale, GlanceCopy> = {
       {
         label: "What you get",
         value:
-          "Full manuscript, front/spine/back cover, KDP title, description and 7 backend keywords, plus a verified pen name.",
+          "Full manuscript, front/spine/back cover, KDP title, description and 7 backend keywords, plus an invented pen name.",
       },
       {
         label: "Time per book",
@@ -82,7 +82,7 @@ export const glanceCopy: Record<Locale, GlanceCopy> = {
       {
         label: "Ce que vous obtenez",
         value:
-          "Manuscrit complet, couverture (plat recto, dos, plat verso), titre, description et 7 mots-clés KDP, plus un nom de plume vérifié.",
+          "Manuscrit complet, couverture (plat recto, dos, plat verso), titre, description et 7 mots-clés KDP, plus un nom de plume inventé.",
       },
       {
         label: "Durée par livre",
@@ -124,7 +124,7 @@ export const glanceCopy: Record<Locale, GlanceCopy> = {
       {
         label: "Cosa ottieni",
         value:
-          "Manoscritto completo, copertina (fronte, dorso, retro), titolo, descrizione e 7 keyword KDP, più uno pseudonimo verificato.",
+          "Manoscritto completo, copertina (fronte, dorso, retro), titolo, descrizione e 7 keyword KDP, più uno pseudonimo inventato.",
       },
       {
         label: "Tempo per libro",
@@ -166,7 +166,7 @@ export const glanceCopy: Record<Locale, GlanceCopy> = {
       {
         label: "Was du bekommst",
         value:
-          "Komplettes Manuskript, Cover (Vorderseite, Rücken, Rückseite), KDP-Titel, -Beschreibung und 7 Keywords sowie einen verifizierten Autorennamen.",
+          "Komplettes Manuskript, Cover (Vorderseite, Rücken, Rückseite), KDP-Titel, -Beschreibung und 7 Keywords sowie einen erfundenen Autorennamen.",
       },
       {
         label: "Dauer pro Buch",

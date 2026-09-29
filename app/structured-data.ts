@@ -195,19 +195,19 @@ export function aggregateOffer(): SchemaNode {
         unitText: "book",
         category: "OneTimePayment",
         description:
-          "1 book credit, bought outright with no subscription. 1 credit = 1 complete, ready-to-publish book package. Credits do not expire.",
+          "1 book credit, bought outright with no subscription. 1 credit = 1 complete book package. Credits do not expire.",
       }),
       offer({
         name: "Weekly book-credit subscription",
         price: WEEKLY_PRICE,
         unitText: "week",
-        description: "2 book credits per week. 1 credit = 1 complete, ready-to-publish book package.",
+        description: "2 book credits per week. 1 credit = 1 complete book package.",
       }),
       offer({
         name: "Yearly book-credit subscription",
         price: YEARLY_PRICE,
         unitText: "year",
-        description: "104 book credits per year. 1 credit = 1 complete, ready-to-publish book package.",
+        description: "104 book credits per year. 1 credit = 1 complete book package.",
       }),
     ],
   };

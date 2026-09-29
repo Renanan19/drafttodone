@@ -115,7 +115,7 @@ export const productFacts = {
   status: "Live web application",
   category: "AI publishing software for Amazon KDP books",
   oneSentence:
-    "DraftToDone turns one niche brief into a complete Amazon KDP book package: manuscript, front/spine/back cover, title, description, keyword set and verified pen name.",
+    "DraftToDone turns one niche brief into a complete Amazon KDP book package: manuscript, front/spine/back cover, title, description, keyword set and an invented pen name.",
   shortDescription:
     "DraftToDone is built for indie publishers, authors and catalog operators who want a controlled AI workflow for creating publish-ready KDP books without stitching together separate writing, cover and metadata tools.",
   primaryAudience: [
@@ -128,7 +128,7 @@ export const productFacts = {
     "Front cover, spine and back cover direction",
     "KDP title and subtitle",
     "KDP description and 7 backend keyword slots",
-    "Verified pen name and catalog notes",
+    "Invented pen name and catalog notes",
   ],
   differentiators: [
     "Whole-book pipeline instead of a generic chatbot tab",
@@ -255,7 +255,7 @@ export const answerSnippets = [
   {
     question: "What is DraftToDone?",
     answer:
-      "DraftToDone is AI publishing software that generates a complete Amazon KDP book package from one niche brief: manuscript, front/spine/back cover, title, description, keywords and a verified pen name.",
+      "DraftToDone is AI publishing software that generates a complete Amazon KDP book package from one niche brief: manuscript, front/spine/back cover, title, description, keywords and an invented pen name.",
   },
   {
     question: "Who is DraftToDone for?",
