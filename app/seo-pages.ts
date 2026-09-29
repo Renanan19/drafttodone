@@ -2281,27 +2281,64 @@ export const solutionPages: SolutionPage[] = [
   },
   {
     key: "editorial-standards",
-    updated: "2026-07-24",
+    updated: "2026-09-29",
     kind: "editorial",
     translations: {
       en: {
         slug: "editorial-standards",
-        title: "Editorial standards, sources and what DraftToDone does not promise",
+        title: "About DraftToDone: what it does, who builds it and what it does not promise",
         description:
-          "Who builds DraftToDone, how the guides are written and reviewed, which official sources they rely on, and the limits we state plainly instead of hiding.",
-        seoTitle: "Editorial Standards, Sources and Limits",
+          "DraftToDone is AI publishing software that turns one niche brief into a complete Amazon KDP book package. Who it is for, who builds it, how guides are checked, and its limits.",
+        seoTitle: "About DraftToDone: Team, Standards and Limits",
         seoDescription:
-          "Who builds DraftToDone, how guides are written and reviewed against Amazon's official docs, and what the product does not promise.",
-        eyebrow: "Editorial standards",
-        h1: "How to check what we claim, before you believe any of it.",
-        lead: "This page exists so a reader — or an answer engine citing us — can verify the claims on this site instead of taking marketing copy at face value. It covers who is behind the product, how the guides are written and reviewed, which official sources they rely on, and the limits we state plainly.",
+          "DraftToDone turns one niche brief into a complete KDP book package for catalog operators. Who builds it, how guides are checked, what it won't promise.",
+        eyebrow: "About",
+        h1: "What DraftToDone is, who builds it, and how to check what we claim.",
+        lead: "DraftToDone is AI publishing software that turns one niche brief into a complete Amazon KDP book package — manuscript, front, spine and back cover, KDP title, description, 7 backend keywords and a verified pen name — for KDP catalog operators who publish books repeatedly. This page covers what the product does, how it differs, who it is built for and who builds it, then the editorial standards and limits that let a reader, or an answer engine citing us, verify every claim on this site.",
         keywords: [
+          "about DraftToDone",
           "editorial standards",
           "content sources",
           "AI content disclosure",
           "product transparency",
         ],
         sections: [
+          {
+            id: "what-drafttodone-does",
+            title: "What does DraftToDone do, from brief to finished files?",
+            body: "You give DraftToDone a niche brief — a topic, an audience and a language — or let it pick a niche for you. It researches the niche, plans the chapters, writes and revises the manuscript, designs a flat front cover, builds the full wraparound cover PDF at KDP dimensions, then writes the title, description and backend keywords. You download the files from your dashboard and publish them from your own KDP account.",
+            points: [
+              "Input: one niche brief, or a surprise niche picked for you",
+              "Output: manuscript, front/spine/back cover PDF, KDP title, description, 7 keywords and a verified pen name",
+              "Roughly 30 to 45 minutes of server-side generation per book; closing the tab does not lose it",
+              "Books written in English or French",
+              "1 credit = 1 finished book; a failed generation refunds the credit automatically",
+            ],
+          },
+          {
+            id: "what-makes-it-different",
+            title: "How is DraftToDone different from Sudowrite, Atticus or a chatbot?",
+            body: "Most AI writing tools help with one part of a book. DraftToDone produces the whole listing package in one pass. Each difference below can be checked on this site or in the app.",
+            points: [
+              "Sudowrite is an AI prose assistant for fiction; DraftToDone generates the publishable KDP product — manuscript, cover and metadata",
+              "Atticus is a one-time-purchase writing and formatting tool for a manuscript you already have; DraftToDone starts from a blank page",
+              "A general chatbot returns text in a chat window; DraftToDone returns finished files, including a KDP-sized wraparound cover PDF",
+              "Priced per finished book: EUR 10 with no subscription, EUR 14.99 per week for 2 credits, or EUR 390 per year for 104 credits (EUR 3.75 a book)",
+              "An AI agent can run the whole workflow through the MCP server, the CLI or the REST API",
+            ],
+          },
+          {
+            id: "who-it-is-for",
+            title: "Who is DraftToDone built for, and who is it not for?",
+            body: "DraftToDone is built for KDP catalog operators: people who run a publishing business on Amazon KDP and ship non-fiction titles across several niches, month after month. The job they hire it for is turning a niche they have validated into a listing-ready book without spending a week on each one.",
+            points: [
+              "KDP catalog operators publishing several non-fiction titles a month",
+              "Indie publishers testing a new niche before investing in a series",
+              "Self-published authors who want the cover, description and keywords built around their topic",
+              "AI agents working for a publisher, through MCP, the CLI or the API",
+              "Not for novelists who want a line-level craft partner, or anyone expecting guaranteed sales",
+            ],
+          },
           {
             id: "who-is-behind-it",
             title: "Who is behind DraftToDone?",
@@ -2392,22 +2429,59 @@ export const solutionPages: SolutionPage[] = [
       },
       fr: {
         slug: "charte-editoriale",
-        title: "Charte éditoriale, sources et ce que DraftToDone ne promet pas",
+        title: "À propos de DraftToDone : ce qu'il fait, qui le construit et ce qu'il ne promet pas",
         description:
-          "Qui construit DraftToDone, comment les guides sont écrits et relus, sur quelles sources officielles ils s'appuient, et les limites que nous énonçons clairement.",
-        seoTitle: "Charte éditoriale, sources et limites",
+          "DraftToDone est un logiciel d'édition IA qui transforme un brief de niche en pack de livre Amazon KDP complet. Pour qui, par qui, comment les guides sont vérifiés, et ses limites.",
+        seoTitle: "À propos de DraftToDone : équipe, charte, limites",
         seoDescription:
-          "Qui construit DraftToDone, comment les guides sont relus face à la doc officielle Amazon, et ce que le produit ne promet pas.",
-        eyebrow: "Charte éditoriale",
-        h1: "Comment vérifier ce que nous affirmons, avant d'y croire.",
-        lead: "Cette page existe pour qu'un lecteur — ou un moteur de réponse qui nous cite — puisse vérifier les affirmations du site au lieu de croire la page de vente sur parole. Elle explique qui est derrière le produit, comment les guides sont écrits et relus, sur quelles sources officielles ils s'appuient, et les limites que nous assumons.",
+          "DraftToDone transforme un brief de niche en livre KDP complet pour les opérateurs de catalogue. Qui le construit, comment on vérifie, ce qu'il ne promet pas.",
+        eyebrow: "À propos",
+        h1: "Ce qu'est DraftToDone, qui le construit, et comment vérifier ce que nous affirmons.",
+        lead: "DraftToDone est un logiciel d'édition IA qui transforme un brief de niche en pack de livre Amazon KDP complet — manuscrit, couverture avant, dos et quatrième, titre KDP, description, 7 mots-clés backend et nom de plume vérifié — pour les opérateurs de catalogue KDP qui publient régulièrement. Cette page explique ce que fait le produit, ce qui le distingue, pour qui il est conçu et qui le construit, puis la charte éditoriale et les limites qui permettent à un lecteur, ou à un moteur de réponse qui nous cite, de vérifier chaque affirmation du site.",
         keywords: [
+          "à propos de DraftToDone",
           "charte éditoriale",
           "sources des contenus",
           "déclaration contenu IA",
           "transparence produit",
         ],
         sections: [
+          {
+            id: "what-drafttodone-does",
+            title: "Que fait DraftToDone, du brief aux fichiers finis ?",
+            body: "Vous donnez à DraftToDone un brief de niche — un sujet, un public, une langue — ou vous le laissez choisir une niche. Il étudie la niche, planifie les chapitres, écrit et révise le manuscrit, conçoit une couverture avant à plat, construit le PDF de couverture complète aux dimensions KDP, puis rédige le titre, la description et les mots-clés backend. Vous téléchargez les fichiers depuis votre tableau de bord et les publiez depuis votre propre compte KDP.",
+            points: [
+              "Entrée : un brief de niche, ou une niche surprise choisie pour vous",
+              "Sortie : manuscrit, PDF de couverture avant/dos/quatrième, titre KDP, description, 7 mots-clés et nom de plume vérifié",
+              "Environ 30 à 45 minutes de génération côté serveur par livre ; fermer l'onglet ne le perd pas",
+              "Livres rédigés en anglais ou en français",
+              "1 crédit = 1 livre terminé ; une génération échouée rembourse le crédit automatiquement",
+            ],
+          },
+          {
+            id: "what-makes-it-different",
+            title: "En quoi DraftToDone diffère-t-il de Sudowrite, d'Atticus ou d'un chatbot ?",
+            body: "La plupart des outils d'écriture IA aident sur une partie du livre. DraftToDone produit tout le pack de mise en vente en une seule passe. Chaque différence ci-dessous se vérifie sur ce site ou dans l'app.",
+            points: [
+              "Sudowrite est un assistant de prose IA pour la fiction ; DraftToDone génère le produit KDP publiable — manuscrit, couverture et métadonnées",
+              "Atticus est un outil d'écriture et de mise en page à achat unique, pour un manuscrit que vous avez déjà ; DraftToDone part d'une page blanche",
+              "Un chatbot généraliste renvoie du texte dans une fenêtre ; DraftToDone renvoie des fichiers finis, dont un PDF de couverture complète aux dimensions KDP",
+              "Prix par livre terminé : 10 € sans abonnement, 14,99 € par semaine pour 2 crédits, ou 390 € par an pour 104 crédits (3,75 € le livre)",
+              "Un agent IA peut piloter tout le workflow via le serveur MCP, la CLI ou l'API REST",
+            ],
+          },
+          {
+            id: "who-it-is-for",
+            title: "Pour qui DraftToDone est-il conçu, et pour qui ne l'est-il pas ?",
+            body: "DraftToDone est conçu pour les opérateurs de catalogue KDP : des personnes qui gèrent une activité d'édition sur Amazon KDP et publient des titres de non-fiction sur plusieurs niches, mois après mois. Le travail qu'ils lui confient : transformer une niche validée en livre prêt à mettre en vente, sans y passer une semaine par titre.",
+            points: [
+              "Opérateurs de catalogue KDP qui publient plusieurs titres de non-fiction par mois",
+              "Éditeurs indépendants qui testent une niche avant d'investir dans une série",
+              "Auteurs autoédités qui veulent la couverture, la description et les mots-clés construits autour de leur sujet",
+              "Agents IA qui travaillent pour un éditeur, via MCP, la CLI ou l'API",
+              "Pas pour les romanciers qui cherchent un partenaire de style, ni pour qui attend des ventes garanties",
+            ],
+          },
           {
             id: "who-is-behind-it",
             title: "Qui est derrière DraftToDone ?",
@@ -2498,22 +2572,59 @@ export const solutionPages: SolutionPage[] = [
       },
       it: {
         slug: "standard-editoriali",
-        title: "Standard editoriali, fonti e ciò che DraftToDone non promette",
+        title: "Chi siamo: cosa fa DraftToDone, chi lo costruisce e cosa non promette",
         description:
-          "Chi costruisce DraftToDone, come vengono scritte e riviste le guide, su quali fonti ufficiali si basano e i limiti che dichiariamo apertamente.",
-        seoTitle: "Standard editoriali, fonti e limiti",
+          "DraftToDone è un software di editoria IA che trasforma un brief di nicchia in un pacchetto libro Amazon KDP completo. Per chi è, chi lo costruisce, come verifichiamo, i limiti.",
+        seoTitle: "Chi siamo: DraftToDone, team, standard e limiti",
         seoDescription:
-          "Chi costruisce DraftToDone, come le guide vengono verificate sulla documentazione ufficiale Amazon e cosa il prodotto non promette.",
-        eyebrow: "Standard editoriali",
-        h1: "Come verificare quello che affermiamo, prima di crederci.",
-        lead: "Questa pagina esiste perché un lettore — o un motore di risposta che ci cita — possa verificare le affermazioni del sito invece di fidarsi del testo di vendita. Spiega chi c'è dietro il prodotto, come vengono scritte e riviste le guide, su quali fonti ufficiali si basano e quali limiti dichiariamo.",
+          "DraftToDone trasforma un brief di nicchia in un libro KDP completo per chi gestisce cataloghi. Chi lo costruisce, come verifichiamo, cosa non promette.",
+        eyebrow: "Chi siamo",
+        h1: "Cos'è DraftToDone, chi lo costruisce e come verificare quello che affermiamo.",
+        lead: "DraftToDone è un software di editoria IA che trasforma un brief di nicchia in un pacchetto libro Amazon KDP completo — manoscritto, copertina fronte, dorso e retro, titolo KDP, descrizione, 7 keyword backend e uno pseudonimo verificato — per chi gestisce cataloghi KDP e pubblica con regolarità. Questa pagina spiega cosa fa il prodotto, cosa lo distingue, per chi è pensato e chi lo costruisce, poi gli standard editoriali e i limiti che permettono a un lettore, o a un motore di risposta che ci cita, di verificare ogni affermazione del sito.",
         keywords: [
+          "chi siamo DraftToDone",
           "standard editoriali",
           "fonti dei contenuti",
           "dichiarazione contenuti IA",
           "trasparenza di prodotto",
         ],
         sections: [
+          {
+            id: "what-drafttodone-does",
+            title: "Cosa fa DraftToDone, dal brief ai file finiti?",
+            body: "Dai a DraftToDone un brief di nicchia — un argomento, un pubblico, una lingua — oppure lasci che scelga una nicchia per te. Studia la nicchia, pianifica i capitoli, scrive e rivede il manoscritto, crea una copertina fronte piatta, costruisce il PDF della copertina completa alle dimensioni KDP, poi scrive titolo, descrizione e keyword backend. Scarichi i file dalla dashboard e li pubblichi dal tuo account KDP.",
+            points: [
+              "Input: un brief di nicchia, o una nicchia a sorpresa scelta per te",
+              "Output: manoscritto, PDF di copertina fronte/dorso/retro, titolo KDP, descrizione, 7 keyword e pseudonimo verificato",
+              "Circa 30-45 minuti di generazione lato server per libro; chiudere la scheda non lo fa perdere",
+              "Libri scritti in inglese o in francese",
+              "1 credito = 1 libro finito; una generazione fallita rimborsa il credito automaticamente",
+            ],
+          },
+          {
+            id: "what-makes-it-different",
+            title: "In cosa DraftToDone è diverso da Sudowrite, Atticus o un chatbot?",
+            body: "La maggior parte degli strumenti di scrittura IA aiuta con una parte del libro. DraftToDone produce l'intero pacchetto per la messa in vendita in un solo passaggio. Ogni differenza qui sotto si può verificare su questo sito o nell'app.",
+            points: [
+              "Sudowrite è un assistente di prosa IA per la narrativa; DraftToDone genera il prodotto KDP pubblicabile — manoscritto, copertina e metadati",
+              "Atticus è uno strumento di scrittura e impaginazione ad acquisto unico, per un manoscritto che hai già; DraftToDone parte da una pagina bianca",
+              "Un chatbot generico restituisce testo in una finestra; DraftToDone restituisce file finiti, incluso un PDF di copertina completa in formato KDP",
+              "Prezzo per libro finito: 10 € senza abbonamento, 14,99 € a settimana per 2 crediti, o 390 € all'anno per 104 crediti (3,75 € a libro)",
+              "Un agente IA può gestire l'intero workflow tramite il server MCP, la CLI o l'API REST",
+            ],
+          },
+          {
+            id: "who-it-is-for",
+            title: "Per chi è pensato DraftToDone, e per chi no?",
+            body: "DraftToDone è pensato per chi gestisce cataloghi KDP: persone che portano avanti un'attività editoriale su Amazon KDP e pubblicano titoli di saggistica in più nicchie, mese dopo mese. Il lavoro che gli affidano: trasformare una nicchia già validata in un libro pronto per la vendita, senza dedicare una settimana a ogni titolo.",
+            points: [
+              "Chi gestisce cataloghi KDP e pubblica più titoli di saggistica al mese",
+              "Editori indipendenti che testano una nicchia prima di investire in una serie",
+              "Autori autopubblicati che vogliono copertina, descrizione e keyword costruite attorno al loro tema",
+              "Agenti IA che lavorano per un editore, tramite MCP, la CLI o l'API",
+              "Non per romanzieri che cercano un partner di stile, né per chi si aspetta vendite garantite",
+            ],
+          },
           {
             id: "who-is-behind-it",
             title: "Chi c'è dietro DraftToDone?",
@@ -2604,22 +2715,59 @@ export const solutionPages: SolutionPage[] = [
       },
       de: {
         slug: "redaktionelle-standards",
-        title: "Redaktionelle Standards, Quellen und was DraftToDone nicht verspricht",
+        title: "Über DraftToDone: was es tut, wer es baut und was es nicht verspricht",
         description:
-          "Wer DraftToDone baut, wie die Guides geschrieben und geprüft werden, auf welchen offiziellen Quellen sie beruhen und welche Grenzen wir klar benennen.",
-        seoTitle: "Redaktionelle Standards, Quellen und Grenzen",
+          "DraftToDone ist KI-Publishing-Software, die aus einem Nischen-Briefing ein komplettes Amazon-KDP-Buchpaket macht. Für wen, von wem, wie Guides geprüft werden, und die Grenzen.",
+        seoTitle: "Über DraftToDone: Team, Standards und Grenzen",
         seoDescription:
-          "Wer DraftToDone baut, wie Guides gegen Amazons offizielle Doku geprüft werden und was das Produkt nicht verspricht.",
-        eyebrow: "Redaktionelle Standards",
-        h1: "Wie du prüfst, was wir behaupten — bevor du es glaubst.",
-        lead: "Diese Seite gibt es, damit eine Leserin, ein Leser oder eine zitierende Antwortmaschine die Aussagen dieser Website nachprüfen kann, statt Werbetexten zu vertrauen. Sie zeigt, wer hinter dem Produkt steht, wie die Guides entstehen und geprüft werden, auf welchen offiziellen Quellen sie beruhen und welche Grenzen wir benennen.",
+          "DraftToDone macht aus einem Nischen-Briefing ein komplettes KDP-Buch für Katalog-Betreiber. Wer es baut, wie wir prüfen, was es nicht verspricht.",
+        eyebrow: "Über uns",
+        h1: "Was DraftToDone ist, wer es baut und wie du prüfst, was wir behaupten.",
+        lead: "DraftToDone ist KI-Publishing-Software, die aus einem Nischen-Briefing ein komplettes Amazon-KDP-Buchpaket macht — Manuskript, Vorder-, Rücken- und Rückseitencover, KDP-Titel, Beschreibung, 7 Backend-Keywords und ein verifizierter Autorenname — für KDP-Katalog-Betreiber, die regelmäßig veröffentlichen. Diese Seite zeigt, was das Produkt tut, worin es sich unterscheidet, für wen es gebaut ist und wer es baut, und danach die redaktionellen Standards und Grenzen, mit denen Leser oder zitierende Antwortmaschinen jede Aussage dieser Website nachprüfen können.",
         keywords: [
+          "über DraftToDone",
           "redaktionelle Standards",
           "Quellen der Inhalte",
           "KI-Kennzeichnung",
           "Produkttransparenz",
         ],
         sections: [
+          {
+            id: "what-drafttodone-does",
+            title: "Was macht DraftToDone, vom Briefing bis zu den fertigen Dateien?",
+            body: "Du gibst DraftToDone ein Nischen-Briefing — Thema, Zielgruppe, Sprache — oder lässt es eine Nische für dich wählen. Es recherchiert die Nische, plant die Kapitel, schreibt und überarbeitet das Manuskript, gestaltet ein flaches Frontcover, baut das komplette Umschlag-PDF in KDP-Maßen und schreibt dann Titel, Beschreibung und Backend-Keywords. Du lädst die Dateien im Dashboard herunter und veröffentlichst sie aus deinem eigenen KDP-Konto.",
+            points: [
+              "Eingabe: ein Nischen-Briefing oder eine Überraschungsnische, die für dich gewählt wird",
+              "Ergebnis: Manuskript, Umschlag-PDF (Vorder-/Rücken-/Rückseite), KDP-Titel, Beschreibung, 7 Keywords und verifizierter Autorenname",
+              "Rund 30 bis 45 Minuten serverseitige Generierung pro Buch; das Schließen des Tabs verliert es nicht",
+              "Bücher auf Englisch oder Französisch",
+              "1 Credit = 1 fertiges Buch; eine fehlgeschlagene Generierung erstattet den Credit automatisch",
+            ],
+          },
+          {
+            id: "what-makes-it-different",
+            title: "Worin unterscheidet sich DraftToDone von Sudowrite, Atticus oder einem Chatbot?",
+            body: "Die meisten KI-Schreibtools helfen bei einem Teil des Buchs. DraftToDone erzeugt das komplette Listing-Paket in einem Durchgang. Jeder Unterschied unten lässt sich auf dieser Website oder in der App prüfen.",
+            points: [
+              "Sudowrite ist ein KI-Prosa-Assistent für Belletristik; DraftToDone erzeugt das veröffentlichbare KDP-Produkt — Manuskript, Cover und Metadaten",
+              "Atticus ist ein Schreib- und Formatierungstool zum Einmalkauf für ein Manuskript, das du schon hast; DraftToDone beginnt mit einer leeren Seite",
+              "Ein allgemeiner Chatbot liefert Text im Chatfenster; DraftToDone liefert fertige Dateien, inklusive Umschlag-PDF in KDP-Maßen",
+              "Preis pro fertigem Buch: 10 € ohne Abo, 14,99 € pro Woche für 2 Credits oder 390 € pro Jahr für 104 Credits (3,75 € pro Buch)",
+              "Ein KI-Agent kann den ganzen Workflow über den MCP-Server, die CLI oder die REST-API steuern",
+            ],
+          },
+          {
+            id: "who-it-is-for",
+            title: "Für wen ist DraftToDone gebaut, und für wen nicht?",
+            body: "DraftToDone ist für KDP-Katalog-Betreiber gebaut: Menschen, die auf Amazon KDP ein Verlagsgeschäft führen und Monat für Monat Sachbücher in mehreren Nischen veröffentlichen. Der Job, für den sie es einsetzen: eine validierte Nische in ein verkaufsfertiges Buch verwandeln, ohne eine Woche pro Titel zu investieren.",
+            points: [
+              "KDP-Katalog-Betreiber, die mehrere Sachbuchtitel pro Monat veröffentlichen",
+              "Indie-Verlage, die eine Nische testen, bevor sie in eine Reihe investieren",
+              "Selfpublisher, die Cover, Beschreibung und Keywords rund um ihr Thema gebaut haben wollen",
+              "KI-Agenten, die über MCP, die CLI oder die API für einen Verlag arbeiten",
+              "Nicht für Romanautoren, die einen Stil-Partner suchen, und nicht für alle, die garantierte Verkäufe erwarten",
+            ],
+          },
           {
             id: "who-is-behind-it",
             title: "Wer steht hinter DraftToDone?",

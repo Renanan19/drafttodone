@@ -9,12 +9,8 @@ import {
   type BlogPost,
   type Locale,
 } from "./blog-content";
-import {
-  commercialSolutionPages,
-  editorialPath,
-  getEditorialPage,
-  solutionPath,
-} from "./seo-pages";
+import { editorialPath, getEditorialPage } from "./seo-pages";
+import { FooterMoneyNav } from "./footer-links";
 import { legalFooterLinks } from "./glance-content";
 import { APP_SIGNUP_URL, homePath } from "./home-content";
 import { playbookCopy, playbookPath } from "./playbook-content";
@@ -111,23 +107,7 @@ export function BlogFooter({ locale }: { locale: Locale }) {
   return (
     <footer className="border-t border-line/70">
       <div className="mx-auto max-w-6xl px-5 py-12 sm:px-6">
-        <nav
-          aria-label={t.tools}
-          className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm sm:justify-start"
-        >
-          <span className="text-[12px] font-semibold uppercase tracking-[0.18em] text-mint-deep">
-            {t.tools}
-          </span>
-          {commercialSolutionPages.map((page) => (
-            <a
-              key={page.key}
-              href={solutionPath(locale, page)}
-              className="text-muted transition-colors hover:text-ink"
-            >
-              {page.translations[locale].eyebrow}
-            </a>
-          ))}
-        </nav>
+        <FooterMoneyNav locale={locale} />
         <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-line/70 pt-8 text-sm sm:flex-row">
           <Logo locale={locale} />
           <p className="text-center text-faint sm:text-left">{t.footer}</p>

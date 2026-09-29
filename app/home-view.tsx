@@ -30,6 +30,7 @@ import { LeadCapture } from "./lead-capture";
 import { playbookPath } from "./playbook-content";
 import { LATEST_CONTENT_UPDATE } from "./answer-engine-content";
 import { editorialPath, getEditorialPage } from "./seo-pages";
+import { FooterMoneyNav } from "./footer-links";
 import { legalFooterLinks } from "./glance-content";
 import {
   aggregateOffer,
@@ -886,6 +887,9 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
 
       {/* Footer */}
       <footer className="border-t border-line/70">
+        <div className="mx-auto max-w-6xl px-5 pt-10 sm:px-6">
+          <FooterMoneyNav locale={locale} />
+        </div>
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-10 text-sm sm:flex-row sm:px-6">
           <Logo locale={locale} />
           <p className="text-faint">{t.footer}</p>

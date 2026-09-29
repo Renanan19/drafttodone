@@ -198,7 +198,7 @@ export const trustFacts = {
   ],
   verifyAt: [
     {
-      label: "Editorial standards, sources and limits",
+      label: "About DraftToDone: team, editorial standards and limits",
       url: answerEngineResources.editorialStandards,
       note: "Who builds the product, how guides are written and reviewed, and what is explicitly not promised.",
     },
