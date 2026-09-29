@@ -255,7 +255,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     hero: {
       eyebrow: "Pour les opérateurs de catalogue KDP",
       h1main: "Transformez une idée en livre",
-      h1accent: "prêt pour KDP.",
+      h1accent: "KDP complet.",
       sub: "DraftToDone génère le manuscrit, la couverture recto-verso, le titre, la description, les mots-clés et le nom de plume depuis un seul brief de niche.",
       subHighlight: "Conçu pour un workflow KDP relu. Vérifiez chaque manuscrit, couverture et fiche avant de soumettre.",
       microcopy: "Pas d'offre gratuite : chaque crédit sert à produire un vrai livre.",
@@ -390,7 +390,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     hero: {
       eyebrow: "Per operatori di cataloghi KDP",
       h1main: "Trasforma un'idea in un libro",
-      h1accent: "pronto per KDP.",
+      h1accent: "KDP completo.",
       sub: "DraftToDone genera manoscritto, copertina fronte-retro, titolo, descrizione, keyword e pseudonimo da un solo brief di nicchia.",
       subHighlight: "Pensato per un workflow KDP revisionabile. Controlla ogni manoscritto, copertina e scheda prima di inviare.",
       microcopy: "Nessun piano gratuito: ogni credito produce un libro reale.",
@@ -439,7 +439,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     features: {
       eyebrow: "Il motore",
       h2: "Dalla pagina bianca al libro pubblicato.",
-      sub: "Tre sistemi. Un solo pipeline. Ogni elemento richiesto da un marketplace — generato, formattato e pronto da caricare.",
+      sub: "Tre sistemi. Un solo pipeline. Ogni elemento richiesto da un marketplace — generato e impaginato nei formati KDP, da rivedere.",
       items: [
         { title: "Generazione completa del manoscritto", text: "L'IA determina la lunghezza ideale e scrive l'intero libro in autonomia in base alla tua nicchia." },
         { title: "Copertina completa", text: "Genera fronte, dorso e retro con immagini IA, pronti per la stampa." },
@@ -525,7 +525,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     hero: {
       eyebrow: "Für KDP-Katalogbetreiber",
       h1main: "Mach aus einer Idee ein",
-      h1accent: "KDP-fertiges Buch.",
+      h1accent: "komplettes KDP-Buch.",
       sub: "DraftToDone erzeugt Manuskript, Vorder- und Rückcover, Titel, Beschreibung, Keywords und Autorennamen aus einem einzigen Nischenbrief.",
       subHighlight: "Gebaut für einen prüfbaren KDP-Workflow. Prüfe jedes Manuskript, Cover und Listing vor dem Einreichen.",
       microcopy: "Kein Gratisplan: jeder Credit produziert ein echtes Buch.",

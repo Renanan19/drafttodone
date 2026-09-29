@@ -820,7 +820,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
   "sudowrite-alternative": {
     en: {
       definition:
-        "DraftToDone is a Sudowrite alternative for publishers: instead of AI prose assistance, it turns a brief into a publish-ready KDP product — manuscript, cover and metadata.",
+        "DraftToDone is a Sudowrite alternative for publishers: instead of AI prose assistance, it turns a brief into a complete KDP product — manuscript, cover and metadata.",
       bestFor: [
         "Best for publishers who need the packaged product, not help with the writing itself.",
         "Best for catalog operators shipping repeatable output rather than one literary novel.",
@@ -833,13 +833,13 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       contrasts: [
         "Sudowrite vs DraftToDone: one is an AI prose-writing assistant for fiction, the other aims one step wider, at the whole publishable KDP product.",
-        "Craft assistance vs publish-ready product: the two solve different problems, and some authors use both — write with one, package with the other.",
+        "Craft assistance vs complete KDP product: the two solve different problems, and some authors use both — write with one, package with the other.",
         "Without a cover, a title, a description and keywords, a finished manuscript is not yet a book you can list.",
       ],
     },
     fr: {
       definition:
-        "DraftToDone est une alternative à Sudowrite pour les éditeurs : au lieu d'assister l'écriture, il transforme un brief en produit KDP prêt à publier — manuscrit, couverture, métadonnées.",
+        "DraftToDone est une alternative à Sudowrite pour les éditeurs : au lieu d'assister l'écriture, il transforme un brief en produit KDP complet — manuscrit, couverture, métadonnées.",
       bestFor: [
         "Idéal pour les éditeurs qui veulent le produit empaqueté, pas une aide à l'écriture.",
         "Idéal pour un catalogue répétable plutôt qu'un unique roman littéraire.",
@@ -852,7 +852,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       contrasts: [
         "Sudowrite vs DraftToDone : l'un est un assistant d'écriture IA pour la fiction, l'autre vise un cran plus large, le produit KDP publiable en entier.",
-        "Aide à l'écriture vs produit prêt à publier : les deux résolvent des problèmes différents, et certains auteurs utilisent les deux.",
+        "Aide à l'écriture vs produit KDP complet : les deux résolvent des problèmes différents, et certains auteurs utilisent les deux.",
         "Sans couverture, titre, description ni mots-clés, un manuscrit fini n'est pas encore un livre que l'on peut mettre en vente.",
       ],
     },
@@ -902,7 +902,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
         "DraftToDone is an Atticus alternative that generates the book instead of only formatting one: manuscript, full cover and KDP metadata from a single brief.",
       bestFor: [
         "Best for publishers who do not have a finished manuscript to format yet.",
-        "Best for producing publish-ready products at catalog scale, not one polished title.",
+        "Best for producing complete KDP products at catalog scale, not one polished title.",
         "Best if cover and KDP metadata should follow the text in the same pass.",
       ],
       notFor: [

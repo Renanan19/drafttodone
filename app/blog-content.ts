@@ -272,7 +272,7 @@ export const posts: BlogPost[] = [
     translations: {
       en: {
         slug: "ai-book-publishing-workflow",
-        title: "AI book publishing workflow: from niche idea to ready-to-upload book",
+        title: "AI book publishing workflow: from niche idea to complete KDP book",
         description:
           "A complete workflow for AI-assisted publishing: niche validation, outline, manuscript, editing, cover, metadata and final quality control.",
         keywords: [
@@ -371,7 +371,7 @@ export const posts: BlogPost[] = [
       },
       fr: {
         slug: "workflow-publication-livre-ia",
-        title: "Workflow de publication de livre IA : de l'idée de niche au livre prêt à publier",
+        title: "Workflow de publication de livre IA : de l'idée de niche au livre KDP complet",
         description:
           "Un workflow complet pour l'édition assistée par IA : validation de niche, plan, manuscrit, édition, couverture, métadonnées et contrôle qualité.",
         keywords: [
@@ -569,7 +569,7 @@ export const posts: BlogPost[] = [
       },
       de: {
         slug: "ki-buchveroeffentlichung-workflow",
-        title: "KI-Buchveröffentlichung: vom Nischenkonzept zum uploadfertigen Buch",
+        title: "KI-Buchveröffentlichung: vom Nischenkonzept zum kompletten KDP-Buch",
         description:
           "Ein kompletter Workflow für KI-gestütztes Publishing: Nische, Outline, Manuskript, Lektorat, Cover, Metadaten und Qualitätskontrolle.",
         keywords: [

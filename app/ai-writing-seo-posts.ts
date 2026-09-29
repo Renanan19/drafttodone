@@ -469,7 +469,7 @@ export const aiWritingSeoPosts: BlogPost[] = [
             bullets: [
               "Chatbot: il più economico, completamente manuale, contesto fragile — ideale per imparare.",
               "Script API: automatizzato, ma il codice e la sua manutenzione sono vostri.",
-              "Pipeline (DraftToDone): il metodo completo automatizzato lato server, con controlli qualità e file pronti per KDP.",
+              "Pipeline (DraftToDone): il metodo completo automatizzato lato server, con controlli qualità e file nei formati KDP.",
               "Stesso metodo a ogni livello — l'automazione cambia le ore, non i passaggi.",
             ],
           },
@@ -636,7 +636,7 @@ export const aiWritingSeoPosts: BlogPost[] = [
             bullets: [
               "Chatbot: am günstigsten, vollständig manuell, fragiler Kontext — ideal zum Lernen.",
               "API-Skript: automatisiert, aber Code und Wartung gehören Ihnen.",
-              "Pipeline (DraftToDone): die komplette Methode serverseitig automatisiert, mit Qualitätskontrollen und KDP-fertigen Dateien.",
+              "Pipeline (DraftToDone): die komplette Methode serverseitig automatisiert, mit Qualitätskontrollen und Dateien in KDP-Maßen.",
               "Dieselbe Methode auf jeder Stufe — Automatisierung ändert die Stunden, nicht die Schritte.",
             ],
           },
@@ -884,7 +884,7 @@ export const aiWritingSeoPosts: BlogPost[] = [
             bullets: [
               "Chatbots : manuels, conversationnels, entrée la moins chère.",
               "Applications d'écriture : co-écriture avec mémoire de projet, idéales pour la fiction.",
-              "Pipelines : une niche en entrée, un livre prêt pour KDP en sortie.",
+              "Pipelines : une niche en entrée, un livre KDP complet en sortie.",
               "Les modèles se recoupent ; la vraie différence est le flux de travail et les heures.",
             ],
           },
@@ -1042,7 +1042,7 @@ export const aiWritingSeoPosts: BlogPost[] = [
             bullets: [
               "Chatbot: manuali, conversazionali, ingresso più economico.",
               "App di scrittura: co-scrittura con memoria di progetto, ideali per la narrativa.",
-              "Pipeline: una nicchia in ingresso, un libro pronto per KDP in uscita.",
+              "Pipeline: una nicchia in ingresso, un libro KDP completo in uscita.",
               "I modelli si sovrappongono; la vera differenza sono flusso di lavoro e ore.",
             ],
           },
@@ -1080,7 +1080,7 @@ export const aiWritingSeoPosts: BlogPost[] = [
             id: "pipeline",
             title: "Pipeline di libro: cosa esce quando entra la nicchia?",
             body: [
-              "Le pipeline automatizzano l'intero metodo: ricerca di nicchia, piano dettagliato, stesura capitolo per capitolo con contesto scorrevole, passate di revisione, controlli qualità, poi creazione della copertina e file pronti per KDP. L'unità di interazione è il libro, non il paragrafo. DraftToDone è la nostra implementazione: indicate una nicchia (o chiedete una sorpresa), scegliete la lingua, e ritirate manoscritto, copertina e PDF avvolgente pronto per la stampa a fine generazione.",
+              "Le pipeline automatizzano l'intero metodo: ricerca di nicchia, piano dettagliato, stesura capitolo per capitolo con contesto scorrevole, passate di revisione, controlli qualità, poi creazione della copertina e file nei formati KDP. L'unità di interazione è il libro, non il paragrafo. DraftToDone è la nostra implementazione: indicate una nicchia (o chiedete una sorpresa), scegliete la lingua, e ritirate manoscritto, copertina e PDF avvolgente pronto per la stampa a fine generazione.",
               "Due proprietà separano le pipeline serie dai semplici involucri di prompt. Primo, la durabilità: la generazione gira lato server con punti di ripresa — un computer chiuso, un browser bloccato o un worker riavviato riprendono il lavoro invece di perderlo, e un libro fallito non deve mai essere addebitato. Secondo, i controlli qualità bloccanti: soglie minime di parole e capitoli che impediscono la consegna di un manoscritto magro.",
               "I limiti onesti: rinunciate al controllo creativo a livello di paragrafo, e la scelta della nicchia come la rilettura umana finale restano compito vostro. Una pipeline disciplina la produzione; non sostituisce il giudizio su cosa pubblicare.",
             ],
@@ -1112,13 +1112,13 @@ export const aiWritingSeoPosts: BlogPost[] = [
             body: [
               "Pubblicare un libro che porta la vostra voce personale? Chatbot o app di scrittura, più la guida al metodo, più pazienza. Le ore fanno parte del progetto.",
               "Scrivere narrativa con l'IA come partner creativo? App di scrittura. La memoria di progetto e il controllo per scena sono fatti esattamente per questo.",
-              "Costruire un catalogo — più titoli di saggistica o di nicchia, eventualmente in più lingue, dove economia unitaria e affidabilità decidono se l'attività funziona? Pipeline. Valutate qualsiasi pipeline (la nostra compresa) su quattro domande: sopravvive alle interruzioni senza perdere il lavoro? Rifiuta di consegnare libri magri? Produce file davvero pronti per KDP? Il suo prezzo rende il margine per libro calcolabile in anticipo?",
+              "Costruire un catalogo — più titoli di saggistica o di nicchia, eventualmente in più lingue, dove economia unitaria e affidabilità decidono se l'attività funziona? Pipeline. Valutate qualsiasi pipeline (la nostra compresa) su quattro domande: sopravvive alle interruzioni senza perdere il lavoro? Rifiuta di consegnare libri magri? Produce file davvero conformi ai formati KDP? Il suo prezzo rende il margine per libro calcolabile in anticipo?",
             ],
             bullets: [
               "Un libro personale → chatbot o app di scrittura.",
               "Narrativa con controllo creativo → app di scrittura.",
               "Economia di catalogo → pipeline.",
-              "Checklist pipeline: durabilità, controlli qualità, file pronti per KDP, costo per libro calcolabile.",
+              "Checklist pipeline: durabilità, controlli qualità, file nei formati KDP, costo per libro calcolabile.",
             ],
           },
         ],
@@ -1200,7 +1200,7 @@ export const aiWritingSeoPosts: BlogPost[] = [
             bullets: [
               "Chatbots: manuell, konversationell, günstigster Einstieg.",
               "Schreib-Apps: Co-Writing mit Projektgedächtnis, am besten für Belletristik.",
-              "Pipelines: Nische rein, KDP-fertiges Buch raus.",
+              "Pipelines: Nische rein, komplettes KDP-Buch raus.",
               "Die Modelle überlappen; der echte Unterschied sind Workflow und Stunden.",
             ],
           },
@@ -1238,7 +1238,7 @@ export const aiWritingSeoPosts: BlogPost[] = [
             id: "pipelines",
             title: "Buchpipelines: Was kommt heraus, wenn die Nische hineingeht?",
             body: [
-              "Pipelines automatisieren die ganze Methode: Nischenrecherche, Blueprint, Kapitelentwurf mit rollendem Kontext, Überarbeitungsdurchgänge, Qualitätskontrollen, dann Coverdesign und KDP-fertige Dateien. Die Interaktionseinheit ist das Buch, nicht der Absatz. DraftToDone ist unsere Implementierung: Sie geben eine Nische an (oder lassen sich überraschen), wählen die Sprache und holen am Ende Manuskript, Cover und druckfertiges Umschlag-PDF ab.",
+              "Pipelines automatisieren die ganze Methode: Nischenrecherche, Blueprint, Kapitelentwurf mit rollendem Kontext, Überarbeitungsdurchgänge, Qualitätskontrollen, dann Coverdesign und Dateien in KDP-Maßen. Die Interaktionseinheit ist das Buch, nicht der Absatz. DraftToDone ist unsere Implementierung: Sie geben eine Nische an (oder lassen sich überraschen), wählen die Sprache und holen am Ende Manuskript, Cover und druckfertiges Umschlag-PDF ab.",
               "Zwei Eigenschaften trennen ernsthafte Pipelines von Prompt-Hüllen. Erstens die Dauerhaftigkeit: Die Generierung läuft serverseitig mit Checkpoints — ein zugeklappter Laptop, ein abgestürzter Browser oder ein neu gestarteter Worker setzen den Job fort, statt ihn zu verlieren, und ein gescheitertes Buch darf nie berechnet werden. Zweitens harte Qualitätskontrollen: Mindestschwellen für Wörter und Kapitel, die die Lieferung eines dünnen Manuskripts blockieren.",
               "Die ehrlichen Grenzen: Sie geben die kreative Kontrolle auf Absatzebene auf, und Nischenwahl plus finale menschliche Durchsicht bleiben Ihre Aufgabe. Eine Pipeline diszipliniert die Produktion; sie ersetzt nicht das Urteil darüber, was veröffentlicht werden soll.",
             ],
@@ -1270,13 +1270,13 @@ export const aiWritingSeoPosts: BlogPost[] = [
             body: [
               "Ein Buch veröffentlichen, das Ihre persönliche Stimme trägt? Chatbot oder Schreib-App, plus Methodenleitfaden, plus Geduld. Die Stunden gehören zum Projekt.",
               "Belletristik mit KI als kreativem Partner schreiben? Schreib-App. Projektgedächtnis und Szenenkontrolle sind genau dafür gebaut.",
-              "Einen Katalog aufbauen — mehrere Sach- oder Nischentitel, eventuell in mehreren Sprachen, wo Stückökonomie und Zuverlässigkeit entscheiden, ob das Geschäft funktioniert? Pipeline. Bewerten Sie jede Pipeline (unsere eingeschlossen) anhand von vier Fragen: Übersteht sie Unterbrechungen ohne Arbeitsverlust? Verweigert sie die Lieferung dünner Bücher? Produziert sie wirklich KDP-fertige Dateien? Macht ihr Preis Ihre Marge pro Buch im Voraus kalkulierbar?",
+              "Einen Katalog aufbauen — mehrere Sach- oder Nischentitel, eventuell in mehreren Sprachen, wo Stückökonomie und Zuverlässigkeit entscheiden, ob das Geschäft funktioniert? Pipeline. Bewerten Sie jede Pipeline (unsere eingeschlossen) anhand von vier Fragen: Übersteht sie Unterbrechungen ohne Arbeitsverlust? Verweigert sie die Lieferung dünner Bücher? Produziert sie wirklich Dateien in KDP-Maßen? Macht ihr Preis Ihre Marge pro Buch im Voraus kalkulierbar?",
             ],
             bullets: [
               "Ein persönliches Buch → Chatbot oder Schreib-App.",
               "Belletristik mit kreativer Kontrolle → Schreib-App.",
               "Katalogökonomie → Pipeline.",
-              "Pipeline-Checkliste: Dauerhaftigkeit, Qualitätskontrollen, KDP-fertige Dateien, kalkulierbare Kosten pro Buch.",
+              "Pipeline-Checkliste: Dauerhaftigkeit, Qualitätskontrollen, Dateien in KDP-Maßen, kalkulierbare Kosten pro Buch.",
             ],
           },
         ],

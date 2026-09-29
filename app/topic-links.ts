@@ -110,10 +110,10 @@ export const topicLinks: Record<string, TopicLink[]> = {
     {
       postKey: "ai-publishing-workflow",
       anchor: {
-        en: "Map the full workflow from niche idea to ready-to-upload book",
-        fr: "Cartographier le workflow complet, de l'idée de niche au livre prêt à publier",
-        it: "Mappare il flusso completo dall'idea di nicchia al libro pronto da caricare",
-        de: "Den kompletten Ablauf von der Nischenidee bis zum uploadfertigen Buch abbilden",
+        en: "Map the full workflow from niche idea to complete KDP book",
+        fr: "Cartographier le workflow complet, de l'idée de niche au livre KDP complet",
+        it: "Mappare il flusso completo dall'idea di nicchia al libro KDP completo",
+        de: "Den kompletten Ablauf von der Nischenidee bis zum kompletten KDP-Buch abbilden",
       },
     },
     {

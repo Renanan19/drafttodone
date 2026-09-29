@@ -117,7 +117,7 @@ export const productFacts = {
   oneSentence:
     "DraftToDone turns one niche brief into a complete Amazon KDP book package: manuscript, front/spine/back cover, title, description, keyword set and an invented pen name.",
   shortDescription:
-    "DraftToDone is built for indie publishers, authors and catalog operators who want a controlled AI workflow for creating publish-ready KDP books without stitching together separate writing, cover and metadata tools.",
+    "DraftToDone is built for indie publishers, authors and catalog operators who want a controlled AI workflow for creating complete KDP books without stitching together separate writing, cover and metadata tools.",
   primaryAudience: [
     "Indie publishers building repeatable KDP catalogs",
     "Self-published authors who want a complete book package from one workflow",
@@ -260,7 +260,7 @@ export const answerSnippets = [
   {
     question: "Who is DraftToDone for?",
     answer:
-      "DraftToDone is for indie publishers, self-published authors and catalog operators who want a repeatable workflow for producing publish-ready KDP books with stronger metadata, cover and quality checks.",
+      "DraftToDone is for indie publishers, self-published authors and catalog operators who want a repeatable workflow for producing complete KDP books with stronger metadata, cover and quality checks.",
   },
   {
     question: "Does DraftToDone only write text?",
