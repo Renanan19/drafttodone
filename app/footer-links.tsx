@@ -3,11 +3,14 @@ import { homeCopy, homePath } from "./home-content";
 import { commercialSolutionPages, solutionPath } from "./seo-pages";
 
 // The pages where a visitor becomes a customer, in the shared footer so every
-// page on the site links to them. Kept to five on purpose: pricing, the main
-// product, the KDP-operator use case, the free tool and the comparison page.
-// The other tools stay reachable from the home #tools grid and each tool page.
+// page on the site links to them: pricing, the main product, the free tools
+// with real search demand (book title generator ~8,100/mo US, AI book cover
+// generator ~1,300/mo) and the comparison page. The other tools stay reachable
+// from the home #tools grid and each tool page.
 const FOOTER_MONEY_KEYS = [
   "ai-book-generator",
+  "book-title-generator",
+  "ai-book-cover-generator",
   "kdp-interior-formatter",
   "kdp-royalty-calculator",
   "sudowrite-alternative",

@@ -33,6 +33,7 @@ export type PlaybookCopy = {
   stepsHeading: string;
   steps: PlaybookStep[];
   mistakeLabel: string;
+  stepLinksLabel: string;
   toolHeading: string;
   toolBody: string;
   toolCta: string;
@@ -132,6 +133,7 @@ export const playbookCopy: Record<Locale, PlaybookCopy> = {
       },
     ],
     mistakeLabel: "The mistake",
+    stepLinksLabel: "Go further",
     toolHeading: "Where the tool fits",
     toolBody: `Steps 1, 3 and 4 are judgement — no tool replaces them. Step 2, plus the production itself, is mechanical, and that is the part ${SITE_NAME} does: one niche brief in, and the manuscript, the full wrap cover, the KDP title, subtitle, description and 7 keyword slots come out as one package, with a pen name attached. You still read the book before you upload it.`,
     toolCta: "See how it works",
@@ -246,6 +248,7 @@ export const playbookCopy: Record<Locale, PlaybookCopy> = {
       },
     ],
     mistakeLabel: "L'erreur",
+    stepLinksLabel: "Pour aller plus loin",
     toolHeading: "Où l'outil intervient",
     toolBody: `Les étapes 1, 3 et 4 relèvent du jugement — aucun outil ne les remplace. L'étape 2, et la production elle-même, sont mécaniques : c'est la partie que fait ${SITE_NAME}. Un brief de niche entre ; le manuscrit, la couverture complète, le titre, le sous-titre, la description et les 7 mots-clés KDP sortent en un seul pack, avec un nom de plume. Vous relisez toujours le livre avant l'upload.`,
     toolCta: "Voir comment ça marche",
@@ -360,6 +363,7 @@ export const playbookCopy: Record<Locale, PlaybookCopy> = {
       },
     ],
     mistakeLabel: "L'errore",
+    stepLinksLabel: "Per approfondire",
     toolHeading: "Dove entra lo strumento",
     toolBody: `I passi 1, 3 e 4 richiedono giudizio — nessuno strumento li sostituisce. Il passo 2, e la produzione stessa, sono meccanici: è la parte che fa ${SITE_NAME}. Entra un brief di nicchia; escono manoscritto, copertina completa, titolo, sottotitolo, descrizione e 7 parole chiave KDP in un unico pacchetto, con uno pseudonimo. Il libro lo rileggi comunque tu prima dell'upload.`,
     toolCta: "Guarda come funziona",
@@ -474,6 +478,7 @@ export const playbookCopy: Record<Locale, PlaybookCopy> = {
       },
     ],
     mistakeLabel: "Der Fehler",
+    stepLinksLabel: "Weiterführend",
     toolHeading: "Wo das Tool hineinpasst",
     toolBody: `Schritt 1, 3 und 4 sind Urteilsvermögen — kein Tool ersetzt sie. Schritt 2 und die Produktion selbst sind mechanisch, und genau das macht ${SITE_NAME}: ein Nischen-Brief rein, und Manuskript, komplettes Cover, KDP-Titel, Untertitel, Beschreibung und 7 Keyword-Slots kommen als ein Paket heraus, mit Pseudonym. Das Buch liest du trotzdem vor dem Upload.`,
     toolCta: "Ansehen, wie es funktioniert",
@@ -499,6 +504,25 @@ export const playbookCopy: Record<Locale, PlaybookCopy> = {
     closingHeading: "Wenn du nur eines mitnimmst",
     closingBody:
       "Der Katalog, der gewinnt, ist nicht der größte. Es ist der, der in achtzehn Monaten noch steht — weil jedes Buch vor dem Upload geprüft und jede Nische auf Belege hin gewählt wurde.",
+  },
+};
+
+/**
+ * The site pages that do each step's mechanical part, by key rather than by
+ * URL so a renamed slug cannot leave a dead link. The page resolves them per
+ * locale and fails the build on an unknown key; a guide missing in a locale is
+ * skipped there rather than linked to the English one.
+ */
+export const playbookStepLinks: Record<string, { tools: string[]; posts: string[] }> = {
+  niche: { tools: ["kdp-keyword-tool"], posts: ["kdp-categories-bsr", "kdp-book-not-selling"] },
+  metadata: {
+    tools: ["book-title-generator", "book-description-generator", "kdp-keyword-tool"],
+    posts: ["kdp-keywords-beginner", "book-description-copywriting"],
+  },
+  compliance: { tools: [], posts: ["kdp-ai-content-policy", "low-content-books-kdp"] },
+  production: {
+    tools: ["kdp-interior-formatter", "ai-book-cover-generator", "kdp-royalty-calculator"],
+    posts: ["book-pricing-strategy"],
   },
 };
 

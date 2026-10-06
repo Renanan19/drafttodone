@@ -209,9 +209,10 @@ function ProductDemo({ demo }: { demo: HomeCopy["demo"] }) {
               <BookCover cls="cover-mint" title={coverTitle} label="KDP" className="w-32 sm:w-36" />
             </div>
             <div className="min-w-0">
-              <h3 className="font-display text-3xl font-medium leading-tight text-paper">
+              {/* A sample book's title inside the demo, not a section of the page. */}
+              <p className="font-display text-3xl font-medium leading-tight text-paper">
                 {demo.outputTitle}
-              </h3>
+              </p>
               <p className="mt-3 text-[15px] leading-relaxed text-paper/68">{demo.outputSubtitle}</p>
               <div className="mt-6 grid gap-2 sm:grid-cols-2">
                 {demo.artifacts.map((artifact, index) => {

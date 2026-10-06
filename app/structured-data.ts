@@ -243,7 +243,9 @@ export function offer({
       price,
       priceCurrency: PRICE_CURRENCY,
       unitText,
-      valueAddedTaxIncluded: false,
+      // No valueAddedTaxIncluded: checkout adds no tax line, so the buyer pays
+      // the displayed price. `false` told search engines tax would be added on
+      // top, which no page says and checkout does not do.
     },
   };
 }

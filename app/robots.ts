@@ -7,9 +7,10 @@ export const dynamic = "force-static";
 /**
  * The machine-readable surfaces an answer engine should be able to reach
  * without guessing. They are listed explicitly in `allow` (nothing on this site
- * is disallowed, but stating them makes the intent unambiguous) and announced
- * alongside the XML sitemap so a crawler that only reads robots.txt still
- * discovers the feed plane.
+ * is disallowed, but stating them makes the intent unambiguous). They are not
+ * declared as `Sitemap:` lines: that directive is for files in a sitemap format
+ * (XML sitemap, RSS/Atom), and a text or JSON file announced there is reported
+ * as an invalid sitemap. llms.txt links to the rest.
  */
 const aiResourcePaths = [
   "/llms.txt",
@@ -28,15 +29,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent,
       allow: ["/", ...aiResourcePaths],
     })),
-    sitemap: [
-      answerEngineResources.sitemap,
-      answerEngineResources.rss,
-      answerEngineResources.llms,
-      answerEngineResources.llmsFull,
-      answerEngineResources.ai,
-      answerEngineResources.answerEngine,
-      answerEngineResources.contentIndex,
-    ],
+    sitemap: [answerEngineResources.sitemap, answerEngineResources.rss],
     host: SITE_URL,
   };
 }

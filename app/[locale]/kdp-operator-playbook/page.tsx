@@ -5,6 +5,8 @@ import {
   blogCopy,
   isLocale,
   locales,
+  postPath,
+  posts,
   SITE_NAME,
   SITE_URL,
   type Locale,
@@ -12,7 +14,8 @@ import {
 import { BlogFooter, BlogHeader } from "@/app/blog-ui";
 import { APP_SIGNUP_URL } from "@/app/home-content";
 import { LeadCapture } from "@/app/lead-capture";
-import { playbookCopy, playbookPath } from "@/app/playbook-content";
+import { playbookCopy, playbookPath, playbookStepLinks } from "@/app/playbook-content";
+import { getSolutionByKey, solutionPath } from "@/app/seo-pages";
 import { seoDescription, seoTitle } from "@/app/seo-metadata";
 import {
   breadcrumbList,
@@ -66,6 +69,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: { card: "summary_large_image", title, description },
   };
+}
+
+function stepLinks(stepId: string, locale: Locale) {
+  const keys = playbookStepLinks[stepId] ?? { tools: [], posts: [] };
+  const tools = keys.tools.map((key) => {
+    const page = getSolutionByKey(key);
+    return { href: solutionPath(locale, page), label: page.translations[locale].eyebrow };
+  });
+  const guides = keys.posts.flatMap((key) => {
+    const post = posts.find((item) => item.key === key);
+    if (!post) throw new Error(`playbook links to unknown post: ${key}`);
+    const translation = post.translations[locale];
+    return translation ? [{ href: postPath(locale, post), label: translation.title }] : [];
+  });
+  return [...tools, ...guides];
 }
 
 export default async function PlaybookPage({ params }: PageProps) {
@@ -209,6 +227,26 @@ export default async function PlaybookPage({ params }: PageProps) {
                     {step.mistake}
                   </p>
                 </div>
+                {stepLinks(step.id, locale).length > 0 && (
+                  <div className="mt-6">
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.16em] text-mint-deep">
+                      {copy.stepLinksLabel}
+                    </p>
+                    <ul className="mt-3 grid gap-2">
+                      {stepLinks(step.id, locale).map((link) => (
+                        <li key={link.href}>
+                          <a
+                            href={link.href}
+                            className="inline-flex items-start gap-2 text-[15px] leading-snug text-ink underline decoration-line underline-offset-4 transition-colors hover:decoration-ink"
+                          >
+                            <ArrowRight className="mt-1 h-3.5 w-3.5 shrink-0 text-mint-deep" strokeWidth={2.25} />
+                            {link.label}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </article>
             ))}
           </div>
@@ -247,6 +285,12 @@ export default async function PlaybookPage({ params }: PageProps) {
           >
             {copy.toolCta}
             <ArrowRight className="h-4 w-4" strokeWidth={2.25} />
+          </a>
+          <a
+            href={solutionPath(locale, getSolutionByKey("ai-book-generator"))}
+            className="mt-5 block text-[15px] text-ink underline decoration-line underline-offset-4 transition-colors hover:decoration-ink"
+          >
+            {getSolutionByKey("ai-book-generator").translations[locale].eyebrow}
           </a>
         </section>
 
