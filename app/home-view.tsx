@@ -1,6 +1,3 @@
-"use client";
-
-import { useEffect } from "react";
 import {
   ArrowRight,
   BookOpen,
@@ -27,6 +24,7 @@ import {
   type HomeCopy,
 } from "./home-content";
 import { LeadCapture } from "./lead-capture";
+import { ScrollReveal } from "./scroll-reveal";
 import { playbookPath } from "./playbook-content";
 import { LATEST_CONTENT_UPDATE } from "./answer-engine-content";
 import { editorialPath, getEditorialPage } from "./seo-pages";
@@ -423,30 +421,6 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
     },
   ];
 
-  /* scroll reveal */
-  useEffect(() => {
-    const els = Array.from(document.querySelectorAll<HTMLElement>("[data-reveal]"));
-    const io = new IntersectionObserver(
-      (entries) => {
-        for (const e of entries) {
-          if (e.isIntersecting) {
-            e.target.classList.add("in");
-            io.unobserve(e.target);
-          }
-        }
-      },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
-    );
-    els.forEach((el) => io.observe(el));
-    const failsafe = window.setTimeout(() => {
-      els.forEach((el) => el.classList.add("in"));
-    }, 2200);
-    return () => {
-      io.disconnect();
-      window.clearTimeout(failsafe);
-    };
-  }, []);
-
   const featureIcons: LucideIcon[] = [BookOpen, ImageIcon, Settings];
   const toolIcons: LucideIcon[] = [Calculator, Wand2, Settings];
   const blogPath = `/${locale}/blog`;
@@ -457,6 +431,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
       />
+      <ScrollReveal />
 
       {/* Header */}
       <header className="sticky top-0 z-40 border-b border-line/70 bg-paper/80 backdrop-blur-xl">

@@ -69,14 +69,15 @@
   transform: none;
 }
 
-/* CSS-only load reveal (above the fold) — runs without JS, never gets stuck */
+/* CSS-only load reveal (above the fold) — runs without JS, never gets stuck.
+ * Movement only, no fade: the hero headline is the page's largest text, and
+ * Chrome does not count a paint at opacity 0 as content. Fading it in made the
+ * header logo the LCP element instead, measured at 5.6 s on simulated mobile. */
 @keyframes revealUp {
   from {
-    opacity: 0;
-    transform: translateY(22px);
+    transform: translateY(14px);
   }
   to {
-    opacity: 1;
     transform: none;
   }
 }

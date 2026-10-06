@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node tools/write-redirects.mjs",
+    "build": "next build && node tools/write-redirects.mjs && node tools/preload-fonts.mjs",
     "indexnow": "node ops/submit-indexnow.mjs",
     "seo:gate": "node tools/seo-gate.mjs",
     "start": "next start",
