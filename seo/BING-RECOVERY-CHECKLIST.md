@@ -1,5 +1,14 @@
 # Bing: 26 jours à zéro — checklist de diagnostic
 
+> **Résolu le 6 octobre 2026 pour IndexNow.** La clé `a4b7e2c9…102345ab` n'était
+> pas aléatoire (motif de clé d'exemple, sans doute réutilisée ailleurs) : Yandex
+> (202) et Seznam (200) l'acceptaient, Bing seul répondait 403
+> `UserForbiddedToAccessSite`. Remplacée par une clé `secrets.token_hex(16)`
+> (`29103ca5…306e5b`, commit « rotate the IndexNow key ») : HTTP 202 au déploiement,
+> puis 200 sur les soumissions suivantes. Les vérifications 1 à 3 ci-dessous
+> restent à faire dans Bing Webmaster Tools : IndexNow réparé ne prouve pas que
+> l'index est revenu.
+
 > À exécuter dans l'interface Bing Webmaster Tools. Rien ici ne peut être fait
 > depuis le code ou en ligne de commande : les vérifications scriptées de
 > `site:drafttodone.io` renvoient des pages anti-bot (une requête de contrôle
