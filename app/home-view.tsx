@@ -245,6 +245,103 @@ function ProductDemo({ demo }: { demo: HomeCopy["demo"] }) {
   );
 }
 
+// Intrinsic sizes of the exported sample images, so the browser reserves
+// their space before they load (no layout shift).
+const SAMPLE_IMAGE_SIZES: Record<string, [number, number]> = {
+  "/sample/cover.webp": [640, 954],
+  "/sample/page-1.webp": [600, 902],
+  "/sample/page-7.webp": [600, 902],
+};
+
+function SampleSection({ sample }: { sample: HomeCopy["sample"] }) {
+  // Real output from book 47b956ce (public/sample), exported from its PDFs
+  // without retouching. Images are lazy: the section sits below the fold.
+  return (
+    <section id="sample" className="relative border-t border-line/70">
+      <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
+        <div className="mx-auto max-w-2xl text-center">
+          <p data-reveal className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep">
+            {sample.eyebrow}
+          </p>
+          <h2
+            data-reveal
+            style={{ transitionDelay: "60ms" }}
+            className="reveal-up text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
+          >
+            {sample.h2}
+          </h2>
+          <p
+            data-reveal
+            style={{ transitionDelay: "120ms" }}
+            className="reveal-up mt-5 text-balance text-lg leading-relaxed text-muted"
+          >
+            {sample.sub}
+          </p>
+        </div>
+
+        <figure data-reveal style={{ transitionDelay: "160ms" }} className="reveal-up mx-auto mt-14 max-w-5xl">
+          <div className="overflow-hidden rounded-[20px] border border-line bg-paper-2 p-3 shadow-[0_30px_80px_-44px_rgba(16,24,40,0.55)] sm:p-5">
+            <img
+              src="/sample/wrap.webp"
+              alt={sample.wrapAlt}
+              width={1400}
+              height={1020}
+              loading="lazy"
+              decoding="async"
+              className="h-auto w-full rounded-lg"
+            />
+          </div>
+          <figcaption className="mt-3 text-center text-[13px] text-faint">{sample.wrapCaption}</figcaption>
+        </figure>
+
+        <div className="mx-auto mt-8 grid max-w-5xl grid-cols-3 gap-3 sm:gap-6">
+          {sample.pages.map((page, i) => (
+            <figure key={page.src} data-reveal style={{ transitionDelay: `${200 + i * 80}ms` }} className="reveal-up">
+              {/* Opens the full-size page: at phone width the thumbnail is too small to read. */}
+              <a
+                href={page.src}
+                target="_blank"
+                rel="noopener"
+                className="block transition-transform duration-200 hover:-translate-y-0.5"
+              >
+                <img
+                  src={page.src}
+                  alt={page.alt}
+                  width={SAMPLE_IMAGE_SIZES[page.src]?.[0] ?? 600}
+                  height={SAMPLE_IMAGE_SIZES[page.src]?.[1] ?? 902}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-auto w-full rounded-md border border-line bg-paper shadow-[0_18px_40px_-28px_rgba(16,24,40,0.5)]"
+                />
+              </a>
+              <figcaption className="mt-2.5 text-center text-[12px] leading-snug text-faint sm:text-[13px]">
+                {page.caption}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <ul className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-2">
+          {sample.facts.map((fact) => (
+            <li
+              key={fact}
+              className="inline-flex items-center gap-1.5 rounded-full border border-line bg-paper-2 px-3 py-1.5 text-[13px] font-medium text-ink-soft"
+            >
+              <Check className="h-3.5 w-3.5 text-mint" strokeWidth={3} />
+              {fact}
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-9 flex flex-col items-center gap-3">
+          <OpenAppButton label={sample.cta} size="md" />
+          <p className="max-w-md text-center text-[13px] text-faint">{sample.note}</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ProofSection({ proof }: { proof: HomeCopy["proof"] }) {
   return (
     <section className="relative border-t border-line/70 bg-paper-2">
@@ -512,6 +609,9 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
             <ProductDemo demo={t.demo} />
           </div>
         </section>
+
+        {/* A real generated book, before any claim about it */}
+        <SampleSection sample={t.sample} />
 
         {/* Origin story */}
         <section className="relative border-t border-line/70 bg-paper-2">
