@@ -274,16 +274,12 @@ function ProofSection({ proof }: { proof: HomeCopy["proof"] }) {
           style={{ transitionDelay: "160ms" }}
           className="reveal-up rounded-[24px] border border-line bg-paper p-7 shadow-[0_24px_70px_-42px_rgba(16,24,40,0.48)] sm:p-8"
         >
-          <p className="text-balance font-display text-2xl font-medium leading-snug text-ink-soft">
-            “{proof.quote}”
-          </p>
-          <p className="mt-5 text-sm font-semibold uppercase tracking-[0.16em] text-faint">
-            {proof.byline}
-          </p>
-          <div className="mt-7 grid gap-3">
+          {/* The founder's story is told in the origin section just above; this
+              card carries what the reader gets from it, not a second retelling. */}
+          <div className="grid gap-5">
             {proof.points.map((point) => (
-              <p key={point} className="flex gap-3 text-[15px] leading-relaxed text-muted">
-                <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-mint" strokeWidth={2.4} />
+              <p key={point} className="flex gap-4 font-display text-xl leading-snug text-ink-soft sm:text-2xl">
+                <ShieldCheck className="mt-1 h-5 w-5 shrink-0 text-mint" strokeWidth={2.4} />
                 {point}
               </p>
             ))}
@@ -697,7 +693,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
               </p>
             </div>
 
-            <div className="mx-auto mt-14 grid max-w-3xl gap-5 sm:grid-cols-2">
+            <div className="mx-auto mt-14 grid max-w-5xl gap-5 md:grid-cols-3">
               {t.pricing.plans.map((p, i) => (
                 <article
                   key={p.name}

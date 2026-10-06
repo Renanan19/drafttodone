@@ -60,8 +60,6 @@ export type HomeCopy = {
     eyebrow: string;
     h2: string;
     sub: string;
-    quote: string;
-    byline: string;
     points: string[];
   };
   features: { eyebrow: string; h2: string; sub: string; items: { title: string; text: string }[] };
@@ -123,7 +121,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h1accent: "KDP book.",
       sub: "DraftToDone generates the manuscript, front and back cover, title, description, keywords, and pen name from a single niche brief.",
       subHighlight: "Built for a reviewable KDP workflow. Check every manuscript, cover and listing before you submit.",
-      microcopy: "No free plan: every credit goes toward a real book.",
+      microcopy: "€10 a book. No subscription, credits never expire.",
       chips: ["Manuscript", "Front cover", "Back cover", "Invented pen name"],
       caption: "One book at a time, or two a week. Reviewed before every upload.",
       openApp: "Generate my book",
@@ -139,7 +137,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       metrics: [
         { value: "1", label: "brief in" },
         { value: "4", label: "assets out" },
-        { value: "2", label: "books/week target" },
+        { value: "1–3 h", label: "to generate" },
       ],
     },
     origin: {
@@ -157,9 +155,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       eyebrow: "Founder proof",
       h2: "Built from a workflow that already sold on KDP.",
       sub: "The promise is not magic content spam. It is a repeatable product pipeline for operators who want catalog leverage.",
-      quote:
-        "I lost the KDP account overnight. DraftToDone is the rebuilt system: fewer prompts, cleaner packaging, and a stronger review loop before upload.",
-      byline: "Antoine, founder of DraftToDone",
       points: [
         "No generic chatbot tab to babysit",
         "One product package instead of scattered files",
@@ -214,7 +209,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h2: "Simple plans. Real books.",
       sub: "One credit makes one complete book package. Buy credits outright, or subscribe — either way you manage everything in the app.",
       cta: "Generate my book",
-      best: "Best value",
+      best: "Start here",
       includes: ["Full manuscript", "Front & back cover", "KDP-sized cover PDF", "Invented pen name"],
       note: "No free plan. Cancel anytime from the app.",
       plans: [
@@ -258,7 +253,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h1accent: "KDP complet.",
       sub: "DraftToDone génère le manuscrit, la couverture recto-verso, le titre, la description, les mots-clés et le nom de plume depuis un seul brief de niche.",
       subHighlight: "Conçu pour un workflow KDP relu. Vérifiez chaque manuscrit, couverture et fiche avant de soumettre.",
-      microcopy: "Pas d'offre gratuite : chaque crédit sert à produire un vrai livre.",
+      microcopy: "10 € le livre. Sans abonnement, crédits sans date d'expiration.",
       chips: ["Manuscrit", "Couverture", "Quatrième", "Nom de plume inventé"],
       caption: "Un livre à la fois, ou deux par semaine. Relus avant chaque upload.",
       openApp: "Générer mon livre",
@@ -274,7 +269,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       metrics: [
         { value: "1", label: "brief entrant" },
         { value: "4", label: "assets générés" },
-        { value: "2", label: "livres/semaine visés" },
+        { value: "1–3 h", label: "de génération" },
       ],
     },
     origin: {
@@ -292,9 +287,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       eyebrow: "Preuve fondateur",
       h2: "Construit à partir d'un workflow qui a déjà vendu sur KDP.",
       sub: "La promesse n'est pas de spammer du contenu magique. C'est un pipeline produit reproductible pour bâtir un catalogue avec levier.",
-      quote:
-        "J'ai perdu le compte KDP du jour au lendemain. DraftToDone est le système reconstruit : moins de prompts, un packaging plus propre et une meilleure boucle de relecture avant l'upload.",
-      byline: "Antoine, fondateur de DraftToDone",
       points: [
         "Pas d'onglet chatbot générique à surveiller",
         "Un pack produit au lieu de fichiers éparpillés",
@@ -349,7 +341,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h2: "Des offres simples. De vrais livres.",
       sub: "1 crédit = 1 pack de livre complet. Achetez des crédits à l'unité ou abonnez-vous — tout se gère dans l'app.",
       cta: "Générer mon livre",
-      best: "Meilleur rapport",
+      best: "Pour commencer",
       includes: ["Manuscrit complet", "Couverture recto-verso", "PDF de couverture aux dimensions KDP", "Nom de plume inventé"],
       note: "Pas d'offre gratuite. Annulable à tout moment depuis l'app.",
       plans: [
@@ -393,7 +385,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h1accent: "KDP completo.",
       sub: "DraftToDone genera manoscritto, copertina fronte-retro, titolo, descrizione, keyword e pseudonimo da un solo brief di nicchia.",
       subHighlight: "Pensato per un workflow KDP revisionabile. Controlla ogni manoscritto, copertina e scheda prima di inviare.",
-      microcopy: "Nessun piano gratuito: ogni credito produce un libro reale.",
+      microcopy: "10 € a libro. Senza abbonamento, i crediti non scadono.",
       chips: ["Manoscritto", "Copertina", "Quarta di copertina", "Pseudonimo inventato"],
       caption: "Un libro alla volta, o due a settimana. Riletti prima di ogni upload.",
       openApp: "Genera il mio libro",
@@ -409,7 +401,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       metrics: [
         { value: "1", label: "brief in input" },
         { value: "4", label: "asset in output" },
-        { value: "2", label: "libri/settimana target" },
+        { value: "1–3 h", label: "di generazione" },
       ],
     },
     origin: {
@@ -427,9 +419,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       eyebrow: "Prova del founder",
       h2: "Costruito da un workflow che aveva già venduto su KDP.",
       sub: "La promessa non è spam di contenuti magici. È una pipeline prodotto ripetibile per chi vuole leva sul catalogo.",
-      quote:
-        "Ho perso l'account KDP in una notte. DraftToDone è il sistema ricostruito: meno prompt, packaging più pulito e un ciclo di revisione migliore prima dell'upload.",
-      byline: "Antoine, founder di DraftToDone",
       points: [
         "Nessuna tab chatbot generica da sorvegliare",
         "Un pacchetto prodotto invece di file sparsi",
@@ -484,7 +473,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h2: "Piani semplici. Libri veri.",
       sub: "1 credito = 1 pacchetto libro completo. Compra crediti singoli o abbonati — gestisci tutto nell'app.",
       cta: "Genera il mio libro",
-      best: "Miglior valore",
+      best: "Per iniziare",
       includes: ["Manoscritto completo", "Copertina fronte e retro", "PDF di copertina in formato KDP", "Pseudonimo inventato"],
       note: "Nessun piano gratuito. Annulla quando vuoi dall'app.",
       plans: [
@@ -528,7 +517,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h1accent: "komplettes KDP-Buch.",
       sub: "DraftToDone erzeugt Manuskript, Vorder- und Rückcover, Titel, Beschreibung, Keywords und Autorennamen aus einem einzigen Nischenbrief.",
       subHighlight: "Gebaut für einen prüfbaren KDP-Workflow. Prüfe jedes Manuskript, Cover und Listing vor dem Einreichen.",
-      microcopy: "Kein Gratisplan: jeder Credit produziert ein echtes Buch.",
+      microcopy: "10 € pro Buch. Ohne Abo, Credits verfallen nie.",
       chips: ["Manuskript", "Cover", "Rückseite", "Erfundener Autorname"],
       caption: "Ein Buch nach dem anderen, oder zwei pro Woche. Vor jedem Upload geprüft.",
       openApp: "Mein Buch erzeugen",
@@ -544,7 +533,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       metrics: [
         { value: "1", label: "Brief hinein" },
         { value: "4", label: "Assets heraus" },
-        { value: "2", label: "Bücher/Woche Ziel" },
+        { value: "1–3 h", label: "Generierung" },
       ],
     },
     origin: {
@@ -562,9 +551,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       eyebrow: "Founder-Beweis",
       h2: "Aus einem Workflow gebaut, der auf KDP schon verkauft hat.",
       sub: "Das Versprechen ist kein magischer Content-Spam. Es ist eine wiederholbare Produkt-Pipeline für Kataloghebel.",
-      quote:
-        "Ich verlor das KDP-Konto über Nacht. DraftToDone ist das neu gebaute System: weniger Prompts, saubereres Packaging und eine stärkere Review-Schleife vor dem Upload.",
-      byline: "Antoine, Gründer von DraftToDone",
       points: [
         "Kein generischer Chatbot-Tab zum Überwachen",
         "Ein Produktpaket statt verstreuter Dateien",
@@ -619,7 +605,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h2: "Einfache Pläne. Echte Bücher.",
       sub: "1 Kredit = 1 komplettes Buchpaket. Kaufe Credits einzeln oder abonniere — alles wird in der App verwaltet.",
       cta: "Mein Buch erzeugen",
-      best: "Bestes Angebot",
+      best: "Zum Einstieg",
       includes: ["Komplettes Manuskript", "Vorder- und Rückseite", "Cover-PDF in KDP-Maßen", "Erfundener Autorname"],
       note: "Kein Gratisplan. Jederzeit in der App kündbar.",
       plans: [
