@@ -32,7 +32,7 @@ import {
  * it is stated once here and reused by every surface instead of being retyped.
  */
 export const ANSWER_ENGINE_UPDATED = "2026-07-24";
-export const INDEXNOW_KEY = "a4b7e2c9d1f03a6b8c5d9e7f102345ab";
+export const INDEXNOW_KEY = "29103ca57d01035cc65bbbf660306e5b";
 
 /** ISO-8601 dates sort lexicographically, so "latest" is a plain string compare. */
 function maxIsoDate(dates: readonly string[]): string {

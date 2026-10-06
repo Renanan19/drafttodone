@@ -1,6 +1,6 @@
 const siteUrl = process.env.SITE_URL ?? "https://drafttodone.io";
 const endpoint = process.env.INDEXNOW_ENDPOINT ?? "https://www.bing.com/indexnow";
-const key = process.env.INDEXNOW_KEY ?? "a4b7e2c9d1f03a6b8c5d9e7f102345ab";
+const key = process.env.INDEXNOW_KEY ?? "29103ca57d01035cc65bbbf660306e5b";
 const keyFile = `${key}.txt`;
 
 function decodeXml(value) {

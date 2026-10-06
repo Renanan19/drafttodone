@@ -1,6 +1,6 @@
 export const dynamic = "force-static";
 
-const indexNowKey = "a4b7e2c9d1f03a6b8c5d9e7f102345ab";
+const indexNowKey = "29103ca57d01035cc65bbbf660306e5b";
 
 export function GET() {
   return new Response(indexNowKey, {
