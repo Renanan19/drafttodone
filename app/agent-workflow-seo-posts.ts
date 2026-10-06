@@ -84,7 +84,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
             title: "What does the full flow look like, from signup to download?",
             body: [
               "A complete terminal session reads like this: 'npx drafttodone signup --email your-email-address --password \"min8chars\"', then 'npx drafttodone checkout --plan weekly' and pay the printed URL in a browser. Replace the email placeholder first, then confirm credits landed with 'npx drafttodone status'.",
-              "Then generate and collect: 'npx drafttodone create --niche \"beginner yoga for seniors\" --lang en' returns a book id; 'npx drafttodone wait <book-id>' blocks for the 1 to 3 hours of server-side generation; 'npx drafttodone download <book-id> --out ./my-book' saves the manuscript, interior PDF, cover image and KDP cover PDF.",
+              "Then generate and collect: 'npx drafttodone create --niche \"beginner yoga for seniors\" --lang en' returns a book id; 'npx drafttodone wait <book-id>' blocks for the server-side generation, usually about an hour; 'npx drafttodone download <book-id> --out ./my-book' saves the manuscript, interior PDF, cover image and KDP cover PDF.",
               "From there it is your turn: review the manuscript, adjust anything you want, then upload to Amazon KDP with the AI-content disclosure. The CLI and MCP server get you to production-ready files fast; the editorial and publishing decisions stay yours, which is exactly where they belong.",
             ],
             bullets: [
@@ -204,7 +204,7 @@ export const agentWorkflowSeoPosts: BlogPost[] = [
             title: "À quoi ressemble le flux complet, de l'inscription au téléchargement ?",
             body: [
               "Une session terminal complète ressemble à ceci : « npx drafttodone signup --email votre-adresse-email --password \"min8car\" », puis « npx drafttodone checkout --plan weekly » et payez l'URL affichée dans un navigateur. Remplacez d'abord le placeholder, puis confirmez l'arrivée des crédits avec « npx drafttodone status ».",
-              "Ensuite générez et récupérez : « npx drafttodone create --niche \"yoga pour seniors débutants\" --lang fr » renvoie un identifiant de livre ; « npx drafttodone wait <book-id> » bloque pendant la génération côté serveur, 1 à 3 heures en général, serveur ; « npx drafttodone download <book-id> --out ./mon-livre » sauvegarde le manuscrit, le PDF intérieur, l'image de couverture et le PDF de couverture KDP.",
+              "Ensuite générez et récupérez : « npx drafttodone create --niche \"yoga pour seniors débutants\" --lang fr » renvoie un identifiant de livre ; « npx drafttodone wait <book-id> » bloque pendant la génération côté serveur, environ 1 heure en général ; « npx drafttodone download <book-id> --out ./mon-livre » sauvegarde le manuscrit, le PDF intérieur, l'image de couverture et le PDF de couverture KDP.",
               "À partir de là, c'est votre tour : relisez le manuscrit, ajustez ce que vous voulez, puis téléversez sur Amazon KDP avec la déclaration de contenu IA. Le CLI et le serveur MCP vous amènent vite à des fichiers prêts pour la production ; les décisions éditoriales et de publication restent les vôtres, ce qui est exactement leur place.",
             ],
             bullets: [

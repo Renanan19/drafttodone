@@ -137,7 +137,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       metrics: [
         { value: "1", label: "brief in" },
         { value: "4", label: "assets out" },
-        { value: "1–3 h", label: "to generate" },
+        { value: "~1 h", label: "to generate" },
       ],
     },
     origin: {
@@ -269,7 +269,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       metrics: [
         { value: "1", label: "brief entrant" },
         { value: "4", label: "assets générés" },
-        { value: "1–3 h", label: "de génération" },
+        { value: "~1 h", label: "de génération" },
       ],
     },
     origin: {
@@ -401,7 +401,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       metrics: [
         { value: "1", label: "brief in input" },
         { value: "4", label: "asset in output" },
-        { value: "1–3 h", label: "di generazione" },
+        { value: "~1 h", label: "di generazione" },
       ],
     },
     origin: {
@@ -533,7 +533,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       metrics: [
         { value: "1", label: "Brief hinein" },
         { value: "4", label: "Assets heraus" },
-        { value: "1–3 h", label: "Generierung" },
+        { value: "~1 Std.", label: "Generierung" },
       ],
     },
     origin: {

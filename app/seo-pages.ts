@@ -1812,7 +1812,7 @@ export const solutionPages: SolutionPage[] = [
             points: [
               "Input: one niche brief, or a surprise niche picked for you",
               "Output: manuscript, front/spine/back cover PDF, KDP title, description, 7 keywords and an invented pen name you check",
-              "Usually 1 to 3 hours of server-side generation per book; closing the tab does not lose it",
+              "Usually about 1 hour of server-side generation per book; closing the tab does not lose it",
               "Books written in English or French",
               "1 credit = 1 finished book; a failed generation refunds the credit automatically",
             ],
@@ -1955,7 +1955,7 @@ export const solutionPages: SolutionPage[] = [
             points: [
               "Entrée : un brief de niche, ou une niche surprise choisie pour vous",
               "Sortie : manuscrit, PDF de couverture avant/dos/quatrième, titre KDP, description, 7 mots-clés et nom de plume inventé, à vérifier par vous",
-              "En général 1 à 3 heures de génération côté serveur par livre ; fermer l'onglet ne le perd pas",
+              "En général environ 1 heure de génération côté serveur par livre ; fermer l'onglet ne le perd pas",
               "Livres rédigés en anglais ou en français",
               "1 crédit = 1 livre terminé ; une génération échouée rembourse le crédit automatiquement",
             ],
@@ -2098,7 +2098,7 @@ export const solutionPages: SolutionPage[] = [
             points: [
               "Input: un brief di nicchia, o una nicchia a sorpresa scelta per te",
               "Output: manoscritto, PDF di copertina fronte/dorso/retro, titolo KDP, descrizione, 7 keyword e pseudonimo inventato, da controllare tu",
-              "Di solito 1-3 ore di generazione lato server per libro; chiudere la scheda non lo fa perdere",
+              "Di solito circa 1 ora di generazione lato server per libro; chiudere la scheda non lo fa perdere",
               "Libri scritti in inglese o in francese",
               "1 credito = 1 libro finito; una generazione fallita rimborsa il credito automaticamente",
             ],
@@ -2241,7 +2241,7 @@ export const solutionPages: SolutionPage[] = [
             points: [
               "Eingabe: ein Nischen-Briefing oder eine Überraschungsnische, die für dich gewählt wird",
               "Ergebnis: Manuskript, Umschlag-PDF (Vorder-/Rücken-/Rückseite), KDP-Titel, Beschreibung, 7 Keywords und erfundener Autorenname, den du prüfst",
-              "Meist 1 bis 3 Stunden serverseitige Generierung pro Buch; das Schließen des Tabs verliert es nicht",
+              "Meist etwa 1 Stunde serverseitige Generierung pro Buch; das Schließen des Tabs verliert es nicht",
               "Bücher auf Englisch oder Französisch",
               "1 Credit = 1 fertiges Buch; eine fehlgeschlagene Generierung erstattet den Credit automatisch",
             ],

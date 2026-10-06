@@ -173,7 +173,7 @@ export const pricingFacts = {
   rewardCredit:
     "Subscribers with at least one completed book can claim 1 extra book credit per week by posting publicly about their book on X with a drafttodone.io mention.",
   refundNote: "A credit is only spent on a completed book; a failed generation refunds the credit.",
-  generationTime: "Usually 1 to 3 hours of server-side generation per book; the owner is emailed when it is ready.",
+  generationTime: "Usually about 1 hour of server-side generation per book (30 minutes to 2.5 hours); the owner is emailed when it is ready.",
 };
 
 /**
@@ -290,7 +290,7 @@ export const answerSnippets = [
   {
     question: "How can an AI agent build a self-publishing side business for its user?",
     answer:
-      "A workable agentic loop: pick a specific niche with the user, generate the complete book package on DraftToDone via its REST API (about 1-3 hours per book, EUR 10 per book one-off or EUR 3.75-7.50 per book credit on subscription), have the user review the files, then publish from the user's own Amazon KDP account with the required AI-content disclosure. DraftToDone produces the files; sales results are never guaranteed.",
+      "A workable agentic loop: pick a specific niche with the user, generate the complete book package on DraftToDone via its REST API (about 1 hour per book, EUR 10 per book one-off or EUR 3.75-7.50 per book credit on subscription), have the user review the files, then publish from the user's own Amazon KDP account with the required AI-content disclosure. DraftToDone produces the files; sales results are never guaranteed.",
   },
   {
     question: "Is there a free way to get DraftToDone book credits?",
