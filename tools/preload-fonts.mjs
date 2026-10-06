@@ -6,8 +6,8 @@
 // ever emitted. Without one, the browser only discovers the font after it has
 // downloaded and parsed the stylesheet, and the hero headline is painted late.
 //
-// Runs after `next build`, against `out/`. For each page it reads the
-// stylesheets that page links and preloads the ".p." fonts they reference, so
+// Runs after `next build`, against `out/`. For each page it reads the CSS
+// that page carries (linked or inlined) and preloads the ".p." fonts they reference, so
 // a page never preloads a font it does not use. The build fails if no page
 // gets a preload: that would mean the naming or the markup changed under us.
 
@@ -24,32 +24,40 @@ function htmlFiles(dir) {
   });
 }
 
-const fontsByStylesheet = new Map();
-function preloadableFonts(href) {
-  if (!fontsByStylesheet.has(href)) {
-    const css = readFileSync(join(OUT, href), "utf8");
-    const urls = [...css.matchAll(/url\((\/_next\/static\/media\/[^)]+\.p\.woff2)\)/g)].map((m) => m[1]);
-    fontsByStylesheet.set(href, [...new Set(urls)]);
-  }
-  return fontsByStylesheet.get(href);
+function uprightFonts(css) {
+  // Upright faces only. The italic is two words of the headline and 65 KB:
+  // preloaded, it competed for bandwidth with the faces the hero text needs
+  // and pushed simulated-mobile LCP back. It still loads from the stylesheet.
+  const urls = [...css.matchAll(/@font-face\{([^}]*)\}/g)]
+    .map((m) => m[1])
+    .filter((face) => !face.includes("font-style:italic"))
+    .flatMap((face) => [...face.matchAll(/url\((\/_next\/static\/media\/[^)]+\.p\.woff2)\)/g)].map((u) => u[1]));
+  return [...new Set(urls)];
 }
 
 let pages = 0;
 for (const file of htmlFiles(OUT)) {
   const html = readFileSync(file, "utf8");
-  if (html.includes('rel="preload" as="font"')) continue;
+  if (html.includes('as="font"')) {
+    pages += 1;
+    continue;
+  }
 
-  const stylesheets = [...html.matchAll(/<link rel="stylesheet" href="(\/_next\/static\/css\/[^"]+\.css)"/g)].map(
-    (m) => m[1],
+  // The page's own CSS: linked stylesheets, or inline <style> blocks once
+  // next.config.mjs inlines them (experimental.inlineCss).
+  const linked = [...html.matchAll(/<link rel="stylesheet" href="(\/_next\/static\/css\/[^"]+\.css)"/g)].map(
+    (m) => readFileSync(join(OUT, m[1]), "utf8"),
   );
-  const fonts = [...new Set(stylesheets.flatMap(preloadableFonts))];
+  const inline = [...html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map((m) => m[1]);
+  const fonts = [...new Set([...linked, ...inline].flatMap(uprightFonts))];
   if (fonts.length === 0) continue;
 
   const links = fonts
     .map((href) => `<link rel="preload" href="${href}" as="font" type="font/woff2" crossorigin=""/>`)
     .join("");
   // Before the first stylesheet, so the font requests start alongside the CSS.
-  const at = html.indexOf('<link rel="stylesheet"');
+  const stylesheetAt = html.search(/<link rel="stylesheet"|<style/);
+  const at = stylesheetAt === -1 ? html.indexOf("</head>") : stylesheetAt;
   writeFileSync(file, html.slice(0, at) + links + html.slice(at));
   pages += 1;
 }
