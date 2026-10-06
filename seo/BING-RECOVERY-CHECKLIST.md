@@ -8,6 +8,12 @@
 > puis 200 sur les soumissions suivantes. Les vérifications 1 à 3 ci-dessous
 > restent à faire dans Bing Webmaster Tools : IndexNow réparé ne prouve pas que
 > l'index est revenu.
+>
+> **Vérifications 1 et 2 faites le 6 octobre 2026 (Antoine, dans BWT) :** site
+> toujours vérifié ; URL Inspection sur `/` et sur `/en/ai-book-generator` →
+> « Indexed successfully — URL can appear on Bing », « No SEO/GEO issues found ».
+> Pas de désindexation ni de sanction de domaine : les pages sont dans l'index
+> mais ne sont plus servies. C'est un problème de classement, pas d'indexation.
 
 > À exécuter dans l'interface Bing Webmaster Tools. Rien ici ne peut être fait
 > depuis le code ou en ligne de commande : les vérifications scriptées de
