@@ -101,6 +101,13 @@ const failures = [];
 const titles = new Map();
 let checked = 0;
 
+/**
+ * Retired URLs are redirect stubs written by tools/write-redirects.mjs, not
+ * pages: they carry no schema by design. What they must get right is pointing
+ * at the page that replaced them, both by canonical and by refresh.
+ */
+const redirects = JSON.parse(readFileSync(join(ROOT, "seo", "redirects.json"), "utf8"));
+
 for (const file of htmlFiles(OUT)) {
   const rel = relative(OUT, file);
   const kind = classify(rel);
@@ -109,6 +116,14 @@ for (const file of htmlFiles(OUT)) {
 
   const html = readFileSync(file, "utf8");
   const fail = (message) => failures.push(`${rel}: ${message}`);
+
+  const urlPath = `/${rel.split(sep).join("/").replace(/\.html$/, "")}`;
+  if (urlPath in redirects) {
+    const target = `https://drafttodone.io${redirects[urlPath]}`;
+    if (!html.includes(`<link rel="canonical" href="${target}">`)) fail(`redirect canonical is not ${target}`);
+    if (!html.includes(`content="0; url=${target}"`)) fail(`redirect refresh is not ${target}`);
+    continue;
+  }
 
   // --- title ---
   const titleMatch = html.match(/<title>([\s\S]*?)<\/title>/);

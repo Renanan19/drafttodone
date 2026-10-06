@@ -8,7 +8,7 @@ import { commercialSolutionPages, solutionPath } from "./seo-pages";
 // The other tools stay reachable from the home #tools grid and each tool page.
 const FOOTER_MONEY_KEYS = [
   "ai-book-generator",
-  "kdp-book-generator",
+  "kdp-interior-formatter",
   "kdp-royalty-calculator",
   "sudowrite-alternative",
 ] as const;

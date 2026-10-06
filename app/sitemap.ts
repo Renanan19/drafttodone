@@ -15,8 +15,6 @@ import {
   solutionUrl,
 } from "./seo-pages";
 import {
-  ANSWER_ENGINE_UPDATED,
-  answerEngineResources,
   LATEST_CONTENT_UPDATE,
   latestArticleUpdate,
 } from "./answer-engine-content";
@@ -71,42 +69,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
-    {
-      url: answerEngineResources.llms,
-      lastModified: new Date(ANSWER_ENGINE_UPDATED),
-      changeFrequency: "weekly",
-      priority: 0.4,
-    },
-    {
-      url: answerEngineResources.llmsFull,
-      lastModified: new Date(ANSWER_ENGINE_UPDATED),
-      changeFrequency: "weekly",
-      priority: 0.4,
-    },
-    {
-      url: answerEngineResources.ai,
-      lastModified: new Date(ANSWER_ENGINE_UPDATED),
-      changeFrequency: "weekly",
-      priority: 0.4,
-    },
-    {
-      url: answerEngineResources.contentIndex,
-      lastModified: new Date(ANSWER_ENGINE_UPDATED),
-      changeFrequency: "weekly",
-      priority: 0.4,
-    },
-    {
-      url: answerEngineResources.answerEngine,
-      lastModified: new Date(ANSWER_ENGINE_UPDATED),
-      changeFrequency: "weekly",
-      priority: 0.4,
-    },
-    {
-      url: answerEngineResources.rss,
-      lastModified: new Date(latestArticleUpdate("en")),
-      changeFrequency: "weekly",
-      priority: 0.4,
-    },
+    // The machine-readable resources (llms.txt, ai.txt, feeds, JSON indexes)
+    // stay crawlable and are announced from robots.txt and llms.txt, but they
+    // are not pages a person should land on from search, so they are kept out
+    // of the sitemap. Listing them got text files indexed as search results.
     // Includes the editorial standards page: it is part of solutionPages and
     // must stay crawlable, just at a lower priority than the commercial pages.
     ...solutionPages.flatMap((page) => {

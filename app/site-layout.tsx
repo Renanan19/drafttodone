@@ -37,20 +37,8 @@ const COMMERCIAL_PAGES = [
     url: `${SITE_URL}/en/kdp-interior-formatter`,
   },
   {
-    name: "AI publishing software",
-    url: `${SITE_URL}/en/ai-publishing-software`,
-  },
-  {
     name: "AI book generator",
     url: `${SITE_URL}/en/ai-book-generator`,
-  },
-  {
-    name: "Best AI book generator",
-    url: `${SITE_URL}/en/best-ai-book-generator`,
-  },
-  {
-    name: "KDP book generator",
-    url: `${SITE_URL}/en/kdp-book-generator`,
   },
   {
     name: "KDP keyword tool",
