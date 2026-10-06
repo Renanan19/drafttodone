@@ -249,12 +249,12 @@ function ProductDemo({ demo }: { demo: HomeCopy["demo"] }) {
 // their space before they load (no layout shift).
 const SAMPLE_IMAGE_SIZES: Record<string, [number, number]> = {
   "/sample/cover.webp": [640, 954],
-  "/sample/page-1.webp": [600, 902],
   "/sample/page-7.webp": [600, 902],
+  "/sample/page-13.webp": [600, 902],
 };
 
 function SampleSection({ sample }: { sample: HomeCopy["sample"] }) {
-  // Real output from book 47b956ce (public/sample), exported from its PDFs
+  // Real output from book 7b68aacb (public/sample), exported from its PDFs
   // without retouching. Images are lazy: the section sits below the fold.
   return (
     <section id="sample" className="relative border-t border-line/70">
@@ -285,7 +285,7 @@ function SampleSection({ sample }: { sample: HomeCopy["sample"] }) {
               src="/sample/wrap.webp"
               alt={sample.wrapAlt}
               width={1400}
-              height={1020}
+              height={1032}
               loading="lazy"
               decoding="async"
               className="h-auto w-full rounded-lg"
