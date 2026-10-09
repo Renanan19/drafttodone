@@ -30,6 +30,7 @@ import {
   solutionUrl,
 } from "@/app/seo-pages";
 import { ArticleAnswer } from "@/app/article-answer";
+import { KdpAiDisclosure } from "@/app/tools/kdp-ai-disclosure";
 import { formatterCallout } from "@/app/kdp-formatter/copy";
 import { getSolutionBackAnchor, getSolutionForPost, topicLinkCopy } from "@/app/topic-links";
 import {
@@ -372,6 +373,10 @@ export default async function BlogArticlePage({ params }: ArticlePageProps) {
                   This guide keeps the query that brings people here and hands
                   them across — rendering a second interactive copy would put
                   two of our own URLs in the same result set. */}
+              {/* KDP's own definitions, applied to the reader's book. Inside the
+                  guide that explains them, for the same reason as above. */}
+              {post.key === "kdp-ai-content-policy" && <KdpAiDisclosure locale={locale} />}
+
               {post.key === "kdp-paperback-formatting" && (
                 <a
                   href={solutionPath(locale, getSolutionByKey("kdp-interior-formatter"))}

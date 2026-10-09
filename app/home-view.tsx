@@ -23,6 +23,7 @@ import {
   homeUrl,
   type HomeCopy,
 } from "./home-content";
+import { HeroBrief } from "./hero-brief";
 import { LeadCapture } from "./lead-capture";
 import { ScrollReveal } from "./scroll-reveal";
 import { playbookPath } from "./playbook-content";
@@ -585,9 +586,9 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
 
             <div
               style={{ animationDelay: "240ms" }}
-              className="reveal-load mx-auto mt-9 flex max-w-lg flex-col items-center gap-3"
+              className="reveal-load mx-auto mt-9 flex flex-col items-center gap-3"
             >
-              <OpenAppButton label={t.hero.openApp} size="lg" />
+              <HeroBrief copy={t.hero.brief} />
               <p className="text-sm text-faint">{t.hero.microcopy}</p>
             </div>
 
