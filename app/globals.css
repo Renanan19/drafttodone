@@ -192,3 +192,8 @@
 .kdp-preview i {
   font-style: italic;
 }
+
+
+/* Headline split test: control unless the head script picked "b". */
+html:not([data-hv="b"]) .hv-b { display: none; }
+html[data-hv="b"] .hv-a { display: none; }

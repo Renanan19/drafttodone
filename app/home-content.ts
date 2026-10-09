@@ -1,5 +1,6 @@
 import { SITE_NAME, SITE_URL, type Locale } from "./blog-content";
 import type { HeroBriefCopy } from "./hero-brief";
+import type { FlipbookCopy } from "./sample-flipbook";
 
 /* The live app (sign up, subscribe, generate). */
 export const APP_URL = "https://app.drafttodone.io";
@@ -29,6 +30,12 @@ export type HomeCopy = {
     eyebrow: string;
     h1main: string;
     h1accent: string;
+    /**
+     * The challenger headline (Ogilvy's split: two promises, half the
+     * visitors each, count the signups). h1main/h1accent stay the control.
+     * Assigned in SiteDocument's head script, carried as utm_content.
+     */
+    h1test: { main: string; accent: string };
     sub: string;
     subHighlight: string;
     microcopy: string;
@@ -67,6 +74,8 @@ export type HomeCopy = {
     wrapAlt: string;
     wrapCaption: string;
     pages: { src: string; alt: string; caption: string }[];
+    /** The leaf-through viewer (app/sample-flipbook.tsx): real pages, read before being chosen. */
+    flip: FlipbookCopy;
     facts: string[];
     note: string;
     cta: string;
@@ -79,6 +88,8 @@ export type HomeCopy = {
   };
   /** Brief, free preview, whole book: the three steps, in order. */
   how: { eyebrow: string; h2: string; steps: { title: string; text: string }[] };
+  /** Measured facts instead of testimonials we do not have. */
+  facts: { items: { value: string; label: string }[]; source: string };
   features: { eyebrow: string; h2: string; sub: string; items: { title: string; text: string }[] };
   comparison: {
     eyebrow: string;
@@ -106,6 +117,8 @@ export type HomeCopy = {
     best: string;
     includes: string[];
     note: string;
+    /** Risk reversal: only finished books are paid for. */
+    guarantee: string;
     plans: { name: string; price: string; period: string; credits: string; perBook: string; highlight: boolean }[];
   };
   /** The capped first cohort: the launch mechanic, and the email capture. */
@@ -136,6 +149,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       eyebrow: "For KDP catalog operators",
       h1main: "Turn one idea into a complete",
       h1accent: "KDP book.",
+      h1test: { main: "See your book's title and cover in a minute, free.", accent: "Get the whole book in about an hour." },
       sub: "DraftToDone generates the manuscript, front and back cover, title, description, keywords, and pen name from a single niche brief.",
       subHighlight: "Built for a reviewable KDP workflow. Check every manuscript, cover and listing before you submit.",
       microcopy: "Free preview · no credit card to start · cancel anytime · from €3.75 a book.",
@@ -190,6 +204,24 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { src: "/sample/page-7.webp", alt: "Page 7 of the interior PDF: the opening of the introduction", caption: "Page 7, the introduction" },
         { src: "/sample/page-13.webp", alt: "Page 13 of the interior PDF: the opening page of chapter 1", caption: "Page 13, chapter 1" },
       ],
+      flip: {
+        label: "Flip through Silent Leverage",
+        prev: "Previous page",
+        next: "Next page",
+        counter: "Page {n} of {total} shown · 132 in the book",
+        pages: [
+          { src: "/sample/cover.webp", caption: "Front cover", alt: "Silent Leverage — Front cover" },
+          { src: "/sample/flip/p1.webp", caption: "Title page", alt: "Silent Leverage — Title page" },
+          { src: "/sample/flip/p3.webp", caption: "Table of contents", alt: "Silent Leverage — Table of contents" },
+          { src: "/sample/flip/p7.webp", caption: "Introduction, p. 7", alt: "Silent Leverage — Introduction, p. 7" },
+          { src: "/sample/flip/p13.webp", caption: "Chapter 1, p. 13", alt: "Silent Leverage — Chapter 1, p. 13" },
+          { src: "/sample/flip/p32.webp", caption: "An exercise, p. 32", alt: "Silent Leverage — An exercise, p. 32" },
+          { src: "/sample/flip/p56.webp", caption: "A negotiation script, p. 56", alt: "Silent Leverage — A negotiation script, p. 56" },
+          { src: "/sample/flip/p81.webp", caption: "An email script, p. 81", alt: "Silent Leverage — An email script, p. 81" },
+          { src: "/sample/flip/p105.webp", caption: "A checklist, p. 105", alt: "Silent Leverage — A checklist, p. 105" },
+          { src: "/sample/flip/p115.webp", caption: "Conclusion, p. 115", alt: "Silent Leverage — Conclusion, p. 115" },
+        ],
+      },
       facts: ["132-page 6×9 interior PDF", "Editable Word manuscript", "Front cover + full KDP wrap", "Description, 7 keywords, 3 categories", "Invented pen name"],
       note: "The pen name was invented by the engine. Review every book before you publish it.",
       cta: "Preview my book, free",
@@ -212,6 +244,15 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { title: "See your free preview", text: "Your title, promise, pen name and cover in about a minute. No credit card." },
         { title: "Get the whole book", text: "Subscribe or buy the book: manuscript, 6×9 interior PDF, full KDP cover and listing arrive in about an hour, written from that exact preview. You review, then publish." },
       ],
+    },
+    facts: {
+      items: [
+        { value: "≈ 1 min", label: "Free preview: title, promise, pen name and cover" },
+        { value: "≈ 1 h", label: "The whole book, 30 min to 2.5 h" },
+        { value: "270–500", label: "Printed pages, non-fiction, 6×9" },
+        { value: "€7.50", label: "A book on the weekly plan" },
+      ],
+      source: "Measured on the books DraftToDone generated in October 2026.",
     },
     features: {
       eyebrow: "The engine",
@@ -267,6 +308,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       best: "Recommended",
       includes: ["Full manuscript", "Front & back cover", "KDP-sized cover PDF", "Invented pen name"],
       note: "One free preview per account: your title, promise, pen name and cover, no credit card. Cancel anytime from the app.",
+      guarantee: "You only pay for finished books: the credit is spent when the book is done, so a failed generation costs you nothing.",
       plans: [
         { name: "Pay per book", price: "€10", period: "/ book", credits: "Buy 1 or 20, no subscription", perBook: "Credits never expire", highlight: false },
         { name: "Weekly", price: "€14.99", period: "/ week", credits: "2 books every week", perBook: "≈ €7.50 per book", highlight: true },
@@ -306,6 +348,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       eyebrow: "Pour les opérateurs de catalogue KDP",
       h1main: "Transformez une idée en livre",
       h1accent: "KDP complet.",
+      h1test: { main: "Voyez le titre et la couverture de votre livre en une minute, gratuitement.", accent: "Recevez le livre entier en une heure environ." },
       sub: "DraftToDone génère le manuscrit, la couverture recto-verso, le titre, la description, les mots-clés et le nom de plume depuis un seul brief de niche.",
       subHighlight: "Conçu pour un workflow KDP relu. Vérifiez chaque manuscrit, couverture et fiche avant de soumettre.",
       microcopy: "Aperçu gratuit · sans carte bancaire pour commencer · annulable à tout moment · dès 3,75 € le livre.",
@@ -360,6 +403,24 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { src: "/sample/page-7.webp", alt: "Page 7 du PDF intérieur : le début de l'introduction", caption: "Page 7, l'introduction" },
         { src: "/sample/page-13.webp", alt: "Page 13 du PDF intérieur : l'ouverture du chapitre 1", caption: "Page 13, le chapitre 1" },
       ],
+      flip: {
+        label: "Feuilletez Silent Leverage",
+        prev: "Page précédente",
+        next: "Page suivante",
+        counter: "Page {n} sur {total} montrées · 132 dans le livre",
+        pages: [
+          { src: "/sample/cover.webp", caption: "Couverture", alt: "Silent Leverage — Couverture" },
+          { src: "/sample/flip/p1.webp", caption: "Page de titre", alt: "Silent Leverage — Page de titre" },
+          { src: "/sample/flip/p3.webp", caption: "Table des matières", alt: "Silent Leverage — Table des matières" },
+          { src: "/sample/flip/p7.webp", caption: "Introduction, p. 7", alt: "Silent Leverage — Introduction, p. 7" },
+          { src: "/sample/flip/p13.webp", caption: "Chapitre 1, p. 13", alt: "Silent Leverage — Chapitre 1, p. 13" },
+          { src: "/sample/flip/p32.webp", caption: "Un exercice, p. 32", alt: "Silent Leverage — Un exercice, p. 32" },
+          { src: "/sample/flip/p56.webp", caption: "Un script de négociation, p. 56", alt: "Silent Leverage — Un script de négociation, p. 56" },
+          { src: "/sample/flip/p81.webp", caption: "Un e-mail type, p. 81", alt: "Silent Leverage — Un e-mail type, p. 81" },
+          { src: "/sample/flip/p105.webp", caption: "Une checklist, p. 105", alt: "Silent Leverage — Une checklist, p. 105" },
+          { src: "/sample/flip/p115.webp", caption: "Conclusion, p. 115", alt: "Silent Leverage — Conclusion, p. 115" },
+        ],
+      },
       facts: ["PDF intérieur 6×9 de 132 pages", "Manuscrit Word modifiable", "Couverture + PDF KDP complet", "Description, 7 mots-clés, 3 catégories", "Nom de plume inventé"],
       note: "Cet exemple est en anglais ; DraftToDone écrit aussi en français. Le nom de plume a été inventé par le moteur. Relisez chaque livre avant de le publier.",
       cta: "Voir mon aperçu gratuit",
@@ -382,6 +443,15 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { title: "Voyez votre aperçu gratuit", text: "Titre, promesse, nom de plume et couverture en une minute environ. Sans carte bancaire." },
         { title: "Recevez le livre entier", text: "Abonnez-vous ou achetez le livre : manuscrit, PDF intérieur 6×9, couverture KDP complète et fiche arrivent en une heure environ, écrits à partir de cet aperçu exact. Vous relisez, puis vous publiez." },
       ],
+    },
+    facts: {
+      items: [
+        { value: "≈ 1 min", label: "Aperçu gratuit : titre, promesse, nom de plume et couverture" },
+        { value: "≈ 1 h", label: "Le livre entier, de 30 min à 2 h 30" },
+        { value: "270–500", label: "Pages imprimées, documentaire, 6×9" },
+        { value: "7,50 €", label: "Le livre avec l'abonnement hebdomadaire" },
+      ],
+      source: "Mesuré sur les livres générés par DraftToDone en octobre 2026.",
     },
     features: {
       eyebrow: "Le moteur",
@@ -437,6 +507,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       best: "Recommandé",
       includes: ["Manuscrit complet", "Couverture recto-verso", "PDF de couverture aux dimensions KDP", "Nom de plume inventé"],
       note: "Un aperçu gratuit par compte : titre, promesse, nom de plume et couverture, sans carte bancaire. Annulable à tout moment depuis l'app.",
+      guarantee: "Vous ne payez que des livres terminés : le crédit n'est débité qu'une fois le livre prêt, une génération ratée ne vous coûte rien.",
       plans: [
         { name: "À l'unité", price: "10 €", period: "/ livre", credits: "1 ou 20, sans abonnement", perBook: "Les crédits n'expirent pas", highlight: false },
         { name: "Hebdomadaire", price: "14,99 €", period: "/ semaine", credits: "2 livres chaque semaine", perBook: "≈ 7,50 € par livre", highlight: true },
@@ -476,6 +547,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       eyebrow: "Per operatori di cataloghi KDP",
       h1main: "Trasforma un'idea in un libro",
       h1accent: "KDP completo.",
+      h1test: { main: "Guarda titolo e copertina del tuo libro in un minuto, gratis.", accent: "Ricevi il libro intero in circa un'ora." },
       sub: "DraftToDone genera manoscritto, copertina fronte-retro, titolo, descrizione, keyword e pseudonimo da un solo brief di nicchia.",
       subHighlight: "Pensato per un workflow KDP revisionabile. Controlla ogni manoscritto, copertina e scheda prima di inviare.",
       microcopy: "Anteprima gratuita · nessuna carta per iniziare · annulli quando vuoi · da 3,75 € a libro.",
@@ -530,6 +602,24 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { src: "/sample/page-7.webp", alt: "Pagina 7 del PDF interno: l'inizio dell'introduzione", caption: "Pagina 7, l'introduzione" },
         { src: "/sample/page-13.webp", alt: "Pagina 13 del PDF interno: l'apertura del capitolo 1", caption: "Pagina 13, il capitolo 1" },
       ],
+      flip: {
+        label: "Sfoglia Silent Leverage",
+        prev: "Pagina precedente",
+        next: "Pagina successiva",
+        counter: "Pagina {n} di {total} mostrate · 132 nel libro",
+        pages: [
+          { src: "/sample/cover.webp", caption: "Copertina", alt: "Silent Leverage — Copertina" },
+          { src: "/sample/flip/p1.webp", caption: "Frontespizio", alt: "Silent Leverage — Frontespizio" },
+          { src: "/sample/flip/p3.webp", caption: "Indice", alt: "Silent Leverage — Indice" },
+          { src: "/sample/flip/p7.webp", caption: "Introduzione, p. 7", alt: "Silent Leverage — Introduzione, p. 7" },
+          { src: "/sample/flip/p13.webp", caption: "Capitolo 1, p. 13", alt: "Silent Leverage — Capitolo 1, p. 13" },
+          { src: "/sample/flip/p32.webp", caption: "Un esercizio, p. 32", alt: "Silent Leverage — Un esercizio, p. 32" },
+          { src: "/sample/flip/p56.webp", caption: "Uno script di negoziazione, p. 56", alt: "Silent Leverage — Uno script di negoziazione, p. 56" },
+          { src: "/sample/flip/p81.webp", caption: "Un'email tipo, p. 81", alt: "Silent Leverage — Un'email tipo, p. 81" },
+          { src: "/sample/flip/p105.webp", caption: "Una checklist, p. 105", alt: "Silent Leverage — Una checklist, p. 105" },
+          { src: "/sample/flip/p115.webp", caption: "Conclusione, p. 115", alt: "Silent Leverage — Conclusione, p. 115" },
+        ],
+      },
       facts: ["PDF interno 6×9 di 132 pagine", "Manoscritto Word modificabile", "Copertina + PDF KDP completo", "Descrizione, 7 keyword, 3 categorie", "Pseudonimo inventato"],
       note: "Questo esempio è in inglese. Lo pseudonimo è stato inventato dal motore. Rileggi ogni libro prima di pubblicarlo.",
       cta: "Vedi l'anteprima gratis",
@@ -552,6 +642,15 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { title: "Guarda l'anteprima gratuita", text: "Titolo, promessa, pseudonimo e copertina in circa un minuto. Senza carta." },
         { title: "Ricevi il libro intero", text: "Abbonati o compra il libro: manoscritto, PDF interno 6×9, copertina KDP completa e scheda arrivano in circa un'ora, scritti da quell'anteprima esatta. Rileggi, poi pubblichi." },
       ],
+    },
+    facts: {
+      items: [
+        { value: "≈ 1 min", label: "Anteprima gratuita: titolo, promessa, pseudonimo e copertina" },
+        { value: "≈ 1 h", label: "Il libro intero, da 30 min a 2 h 30" },
+        { value: "270–500", label: "Pagine stampate, saggistica, 6×9" },
+        { value: "7,50 €", label: "Un libro con il piano settimanale" },
+      ],
+      source: "Misurato sui libri generati da DraftToDone a ottobre 2026.",
     },
     features: {
       eyebrow: "Il motore",
@@ -607,6 +706,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       best: "Consigliato",
       includes: ["Manoscritto completo", "Copertina fronte e retro", "PDF di copertina in formato KDP", "Pseudonimo inventato"],
       note: "Un'anteprima gratuita per account: titolo, promessa, pseudonimo e copertina, senza carta. Annulli quando vuoi dall'app.",
+      guarantee: "Paghi solo libri finiti: il credito si spende quando il libro è pronto, una generazione fallita non ti costa nulla.",
       plans: [
         { name: "A libro", price: "10 €", period: "/ libro", credits: "1 o 20, senza abbonamento", perBook: "I crediti non scadono", highlight: false },
         { name: "Settimanale", price: "14,99 €", period: "/ settimana", credits: "2 libri ogni settimana", perBook: "≈ 7,50 € a libro", highlight: true },
@@ -646,6 +746,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       eyebrow: "Für KDP-Katalogbetreiber",
       h1main: "Mach aus einer Idee ein",
       h1accent: "komplettes KDP-Buch.",
+      h1test: { main: "Sieh Titel und Cover deines Buchs in einer Minute, gratis.", accent: "Erhalte das ganze Buch in etwa einer Stunde." },
       sub: "DraftToDone erzeugt Manuskript, Vorder- und Rückcover, Titel, Beschreibung, Keywords und Autorennamen aus einem einzigen Nischenbrief.",
       subHighlight: "Gebaut für einen prüfbaren KDP-Workflow. Prüfe jedes Manuskript, Cover und Listing vor dem Einreichen.",
       microcopy: "Gratis-Vorschau · keine Kreditkarte zum Start · jederzeit kündbar · ab 3,75 € pro Buch.",
@@ -700,6 +801,24 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { src: "/sample/page-7.webp", alt: "Seite 7 des Innenteil-PDFs: der Anfang der Einleitung", caption: "Seite 7, die Einleitung" },
         { src: "/sample/page-13.webp", alt: "Seite 13 des Innenteil-PDFs: die Eröffnungsseite von Kapitel 1", caption: "Seite 13, Kapitel 1" },
       ],
+      flip: {
+        label: "Blättere durch Silent Leverage",
+        prev: "Vorherige Seite",
+        next: "Nächste Seite",
+        counter: "Seite {n} von {total} gezeigt · 132 im Buch",
+        pages: [
+          { src: "/sample/cover.webp", caption: "Cover", alt: "Silent Leverage — Cover" },
+          { src: "/sample/flip/p1.webp", caption: "Titelseite", alt: "Silent Leverage — Titelseite" },
+          { src: "/sample/flip/p3.webp", caption: "Inhaltsverzeichnis", alt: "Silent Leverage — Inhaltsverzeichnis" },
+          { src: "/sample/flip/p7.webp", caption: "Einleitung, S. 7", alt: "Silent Leverage — Einleitung, S. 7" },
+          { src: "/sample/flip/p13.webp", caption: "Kapitel 1, S. 13", alt: "Silent Leverage — Kapitel 1, S. 13" },
+          { src: "/sample/flip/p32.webp", caption: "Eine Übung, S. 32", alt: "Silent Leverage — Eine Übung, S. 32" },
+          { src: "/sample/flip/p56.webp", caption: "Ein Verhandlungsskript, S. 56", alt: "Silent Leverage — Ein Verhandlungsskript, S. 56" },
+          { src: "/sample/flip/p81.webp", caption: "Eine Muster-E-Mail, S. 81", alt: "Silent Leverage — Eine Muster-E-Mail, S. 81" },
+          { src: "/sample/flip/p105.webp", caption: "Eine Checkliste, S. 105", alt: "Silent Leverage — Eine Checkliste, S. 105" },
+          { src: "/sample/flip/p115.webp", caption: "Schluss, S. 115", alt: "Silent Leverage — Schluss, S. 115" },
+        ],
+      },
       facts: ["132-seitiges 6×9-Innenteil-PDF", "Bearbeitbares Word-Manuskript", "Cover + vollständiges KDP-PDF", "Beschreibung, 7 Keywords, 3 Kategorien", "Erfundenes Pseudonym"],
       note: "Dieses Beispiel ist auf Englisch. Das Pseudonym hat die Engine erfunden. Prüfen Sie jedes Buch, bevor Sie es veröffentlichen.",
       cta: "Gratis-Vorschau ansehen",
@@ -722,6 +841,15 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { title: "Sieh deine Gratis-Vorschau", text: "Titel, Versprechen, Autorenname und Cover in etwa einer Minute. Ohne Kreditkarte." },
         { title: "Erhalte das ganze Buch", text: "Abonniere oder kaufe das Buch: Manuskript, 6×9-Innen-PDF, vollständiges KDP-Cover und Produkttext kommen in etwa einer Stunde, geschrieben aus genau dieser Vorschau. Du prüfst, dann veröffentlichst du." },
       ],
+    },
+    facts: {
+      items: [
+        { value: "≈ 1 Min.", label: "Gratis-Vorschau: Titel, Versprechen, Autorenname und Cover" },
+        { value: "≈ 1 Std.", label: "Das ganze Buch, 30 Min. bis 2,5 Std." },
+        { value: "270–500", label: "Gedruckte Seiten, Sachbuch, 6×9" },
+        { value: "7,50 €", label: "Ein Buch im Wochenplan" },
+      ],
+      source: "Gemessen an den Büchern, die DraftToDone im Oktober 2026 erzeugt hat.",
     },
     features: {
       eyebrow: "Der Motor",
@@ -777,6 +905,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       best: "Empfohlen",
       includes: ["Komplettes Manuskript", "Vorder- und Rückseite", "Cover-PDF in KDP-Maßen", "Erfundener Autorname"],
       note: "Eine Gratis-Vorschau pro Konto: Titel, Versprechen, Autorenname und Cover, ohne Kreditkarte. Jederzeit in der App kündbar.",
+      guarantee: "Du zahlst nur fertige Bücher: Der Credit wird erst abgebucht, wenn das Buch fertig ist, eine fehlgeschlagene Erzeugung kostet dich nichts.",
       plans: [
         { name: "Pro Buch", price: "10 €", period: "/ Buch", credits: "1 oder 20, ohne Abo", perBook: "Credits verfallen nie", highlight: false },
         { name: "Wöchentlich", price: "14,99 €", period: "/ Woche", credits: "2 Bücher pro Woche", perBook: "≈ 7,50 € pro Buch", highlight: true },

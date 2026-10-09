@@ -24,6 +24,11 @@ export type HeroBriefCopy = {
  * with the brief.
  */
 const SIGNUP_ACTION = `${APP_URL}/signup`;
+
+/** "h1-control" (h1main) or "h1-sample" (h1test), as assigned before paint. */
+function headlineVariant(): string {
+  return document.documentElement.getAttribute("data-hv") === "b" ? "h1-sample" : "h1-control";
+}
 const MAX_LENGTH = 500;
 
 export function HeroBrief({
@@ -53,10 +58,14 @@ export function HeroBrief({
   }, []);
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
+    // Which headline this visitor saw (site-layout.tsx head script).
+    const variant = headlineVariant();
+    const field = e.currentTarget.elements.namedItem("utm_content") as HTMLInputElement | null;
+    if (field) field.value = variant;
     // An empty brief is not an error: the visitor still wants the app.
     if (!brief.trim()) {
       e.preventDefault();
-      window.location.href = `${SIGNUP_ACTION}?utm_source=drafttodone.io&utm_medium=owned_web&utm_campaign=hero_brief&lang=${locale}`;
+      window.location.href = `${SIGNUP_ACTION}?utm_source=drafttodone.io&utm_medium=owned_web&utm_campaign=hero_brief&utm_content=${variant}&lang=${locale}`;
     }
   }
 
@@ -80,6 +89,7 @@ export function HeroBrief({
         <input type="hidden" name="utm_source" value="drafttodone.io" />
         <input type="hidden" name="utm_medium" value="owned_web" />
         <input type="hidden" name="utm_campaign" value="hero_brief" />
+        <input type="hidden" name="utm_content" value="h1-control" />
         {/* The page's language, not the browser's: it is the language the
             brief was written in, and the app writes the book in it. */}
         <input type="hidden" name="lang" value={locale} />

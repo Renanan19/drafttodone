@@ -310,6 +310,18 @@ export function SiteDocument({
 }) {
   return (
     <html lang={lang} className={`${newsreader.variable} ${hanken.variable}`}>
+      <head>
+        {/* Headline split test (home hero). Runs before first paint so no
+            visitor ever sees the headline swap. The assignment sticks per
+            browser, and the hero form sends it as utm_content, which the app's
+            signup attribution stores: Ogilvy's two-promise test, counted in
+            signups. Storage blocked → the control, never an error. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var k="dtd_hv",v=localStorage.getItem(k);if(v!=="a"&&v!=="b"){v=Math.random()<0.5?"a":"b";localStorage.setItem(k,v)}document.documentElement.setAttribute("data-hv",v)}catch(e){}`,
+          }}
+        />
+      </head>
       <body>
         {/* No-JS fallback: reveal-up elements must stay visible without the observer */}
         <noscript>

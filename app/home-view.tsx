@@ -22,6 +22,7 @@ import {
   type HomeCopy,
 } from "./home-content";
 import { HeroBrief } from "./hero-brief";
+import { SampleFlipbook } from "./sample-flipbook";
 import { LeadCapture } from "./lead-capture";
 import { ScrollReveal } from "./scroll-reveal";
 import { playbookPath } from "./playbook-content";
@@ -91,6 +92,29 @@ function OpenAppButton({ label, size = "lg" }: { label: string; size?: "lg" | "m
         strokeWidth={2.25}
       />
     </a>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*  Measured facts (Ogilvy's Rolls-Royce: facts, no adjectives)               */
+/* -------------------------------------------------------------------------- */
+function FactsStrip({ facts }: { facts: HomeCopy["facts"] }) {
+  return (
+    <section className="border-t border-line/70 bg-paper-2">
+      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6">
+        <dl className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
+          {facts.items.map((f, i) => (
+            <div key={f.label} data-reveal style={{ transitionDelay: `${i * 70}ms` }} className="reveal-up text-center">
+              <dt className="font-display text-[40px] font-medium leading-none tracking-[-0.02em] text-ink">
+                {f.value}
+              </dt>
+              <dd className="mx-auto mt-3 max-w-[16rem] text-[14px] leading-snug text-muted">{f.label}</dd>
+            </div>
+          ))}
+        </dl>
+        <p className="mt-10 text-center text-[12px] text-faint">{facts.source}</p>
+      </div>
+    </section>
   );
 }
 
@@ -341,32 +365,7 @@ function SampleSection({ sample }: { sample: HomeCopy["sample"] }) {
           <figcaption className="mt-3 text-center text-[13px] text-faint">{sample.wrapCaption}</figcaption>
         </figure>
 
-        <div className="mx-auto mt-8 grid max-w-5xl grid-cols-3 gap-3 sm:gap-6">
-          {sample.pages.map((page, i) => (
-            <figure key={page.src} data-reveal style={{ transitionDelay: `${200 + i * 80}ms` }} className="reveal-up">
-              {/* Opens the full-size page: at phone width the thumbnail is too small to read. */}
-              <a
-                href={page.src}
-                target="_blank"
-                rel="noopener"
-                className="block transition-transform duration-200 hover:-translate-y-0.5"
-              >
-                <img
-                  src={page.src}
-                  alt={page.alt}
-                  width={SAMPLE_IMAGE_SIZES[page.src]?.[0] ?? 600}
-                  height={SAMPLE_IMAGE_SIZES[page.src]?.[1] ?? 902}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-auto w-full rounded-md border border-line bg-paper shadow-[0_18px_40px_-28px_rgba(16,24,40,0.5)]"
-                />
-              </a>
-              <figcaption className="mt-2.5 text-center text-[12px] leading-snug text-faint sm:text-[13px]">
-                {page.caption}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+        <SampleFlipbook copy={sample.flip} />
 
         <ul className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-2">
           {sample.facts.map((fact) => (
@@ -621,7 +620,14 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
               style={{ animationDelay: "80ms" }}
               className="reveal-load mx-auto max-w-[20rem] text-balance font-display text-[2.05rem] font-medium leading-[1.05] tracking-[-0.005em] text-ink sm:max-w-4xl sm:text-6xl sm:tracking-[-0.02em]"
             >
-              {t.hero.h1main} <em className="italic text-mint">{t.hero.h1accent}</em>
+              {/* Ogilvy's split test: two promises, one per visitor (see the
+                  head script in site-layout.tsx). No-JS and crawlers get the control. */}
+              <span className="hv-a">
+                {t.hero.h1main} <em className="italic text-mint">{t.hero.h1accent}</em>
+              </span>
+              <span className="hv-b">
+                {t.hero.h1test.main} <em className="italic text-mint">{t.hero.h1test.accent}</em>
+              </span>
             </h1>
 
             <p
@@ -661,6 +667,8 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
         <SampleSection sample={t.sample} />
 
         <HowSection how={t.how} cta={t.hero.openApp} />
+
+        <FactsStrip facts={t.facts} />
 
         {/* Origin story */}
         <section className="relative border-t border-line/70 bg-paper-2">
@@ -898,7 +906,11 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
               ))}
             </div>
 
-            <p className="mt-8 text-center text-sm text-faint">{t.pricing.note}</p>
+            <p className="mx-auto mt-8 flex max-w-2xl items-start justify-center gap-2.5 text-center text-[15px] font-medium text-ink-soft">
+              <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-mint" strokeWidth={2.25} />
+              <span>{t.pricing.guarantee}</span>
+            </p>
+            <p className="mt-3 text-center text-sm text-faint">{t.pricing.note}</p>
           </div>
         </section>
 
