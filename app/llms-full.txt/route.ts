@@ -41,7 +41,7 @@ export function GET() {
     `Yearly: ${pricingFacts.currency} ${pricingFacts.yearly} for ${pricingFacts.yearlyCredits} book credits per year`,
     `Credit meaning: ${pricingFacts.creditMeaning}`,
     `Approximate unit price: ${pricingFacts.approxPerBook}`,
-    `Free plan: none`,
+    `Free plan: none. Free preview: one per account (title, subtitle, promise, pen name and a watermarked front cover), no credit card; buying it writes the full book from that exact plan and cover`,
     `Reward credit: ${pricingFacts.rewardCredit}`,
     `Refunds: ${pricingFacts.refundNote}`,
     `Generation time: ${pricingFacts.generationTime}`,

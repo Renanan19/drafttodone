@@ -1,6 +1,8 @@
-# Free preview before the first credit — plan (no code yet)
+# Free preview before the first credit
 
-Written 2026-10-09 from the getebook.ai teardown. **Decision needed from Antoine before any code.**
+**Status 2026-10-09: approved by Antoine and built** (app + worker, migration 0015 applied). The section *As built* below supersedes the plan where they differ.
+
+Written 2026-10-09 from the getebook.ai teardown. Original plan below, kept for the reasoning.
 Touches the worker and the `books` / `credit_ledger` tables: message the worker session
 (antoine-12) before starting, and push worker/ only when no book is queued or running.
 
@@ -73,3 +75,49 @@ earns: **1.5% at €0.15 a preview**. Measure it from the ledger, not from impre
   unmeasurable.
 - No "credits" relabelling to make prices look smaller. getebook sells 300 credits for $29, where
   a how-to guide costs 35 credits, about $3.40. DraftToDone says €10 a book, and that is clearer.
+
+
+---
+
+## As built (2026-10-09)
+
+**What the preview is:** the first step of each engine, run on its own, plus the cover step.
+- Non-fiction: `generate_book_info` (title, subtitle, audience, objectives, invented pen name).
+  The "promises" shown are the model's objectives, with the engine's generic padding lines
+  ("Understand the foundations") filtered out.
+- Fiction: `story_idea` + `coerce_idea` + `names.scrub` (title, genre, hook, synopsis); the pen
+  name comes from the cover step, as in a paid run.
+- No chapter plan: the non-fiction chapter plan is built deep inside the vendored engine, and
+  showing one that the paid run then re-plans would be a promise broken. The preview shows
+  only what the paid book is guaranteed to keep.
+
+**Same book, nothing paid twice:** buying the preview creates a normal book job with
+`params.preview_seed` (+ the cover refs and the pen name). The non-fiction runner replays the seed
+(`seed_book_info`, no new title call; template + Perplexity avatar still computed). The fiction
+runner takes `seed_idea` (commit 804f3bc). The cover step downloads the preview's clean cover
+instead of drawing a new one.
+
+**Measured cost (two real runs in the worker container, 2026-10-09):**
+
+| Run | Time | Text | Image | Total |
+|---|---|---|---|---|
+| Non-fiction ("Stop the One-Star Slide") | 72 s | $0.0014 | $0.10 (1 draw) | **$0.10** |
+| Fiction ("Hardcovers and High Tides") | 63 s | $0.0018 | $0.30 (3 draws: proofread rejected stray text) | **$0.30** |
+
+The image is the cost. The proofread redraws are the same ones a paid book would make, and the
+cover is reused on purchase, so the extra spend on a converted preview is zero; it is lost only on
+previews that never convert. **Kill line, recomputed:** at ~$0.20 average a preview (≈ €0.18), it
+stops paying when fewer than **1.8%** of previews lead to a €10 purchase.
+
+**Abuse limits:** one preview per account (unique index; a *failed* preview can be retried), 3 per
+IP per day (`PREVIEW_IP_RATE_LIMIT_PER_DAY`), 150 a day in total (`PREVIEW_DAILY_CAP`).
+Worst case, about $45 a day; the daily cap bounds it.
+
+**Measure:**
+```sql
+select status, count(*) from book_previews group by 1;
+-- preview → paid book
+select count(*) filter (where book_id is not null) * 1.0 / nullif(count(*) filter (where status in ('ready','converted')), 0)
+  from book_previews;
+select avg((usage->>'routed_cost_usd')::numeric) from book_previews where usage is not null;
+```

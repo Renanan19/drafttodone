@@ -145,7 +145,7 @@ export const productFacts = {
     weekly: "EUR 14.99 per week for 2 book credits per week",
     yearly: "EUR 390 per year for 104 book credits per year",
     freePlan:
-      "No free plan; subscribers can earn 1 free book credit per week by posting publicly about their book on X with a drafttodone.io mention",
+      "No free plan. One free preview per account (title, promise, pen name and a watermarked front cover), no credit card required. Subscribers can earn 1 free book credit per week by posting publicly about their book on X with a drafttodone.io mention",
   },
   complianceNotes: [
     "DraftToDone does not guarantee Amazon rankings, sales or KDP approval.",

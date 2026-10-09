@@ -136,14 +136,14 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h1accent: "KDP book.",
       sub: "DraftToDone generates the manuscript, front and back cover, title, description, keywords, and pen name from a single niche brief.",
       subHighlight: "Built for a reviewable KDP workflow. Check every manuscript, cover and listing before you submit.",
-      microcopy: "As low as €3.75 a book.",
+      microcopy: "Free preview · no credit card to start · cancel anytime · from €3.75 a book.",
       chips: ["Manuscript", "Front cover", "Back cover", "Invented pen name"],
       caption: "One book at a time, or two a week. Reviewed before every upload.",
       openApp: "Generate my book",
       brief: {
         label: "One or two sentences: who the book is for and what it promises them.",
         placeholder: "A practical guide for introverted software engineers who want a higher salary without the awkward conversation…",
-        submit: "Generate my book",
+        submit: "Preview my book, free",
         examplesLabel: "Try:",
         examples: [
           "A 30-day guide for short-term rental hosts who want fewer bad reviews",
@@ -255,7 +255,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       cta: "Generate my book",
       best: "Start here",
       includes: ["Full manuscript", "Front & back cover", "KDP-sized cover PDF", "Invented pen name"],
-      note: "No free plan. Cancel anytime from the app.",
+      note: "One free preview per account: your title, promise, pen name and cover, no credit card. Cancel anytime from the app.",
       plans: [
         { name: "Pay per book", price: "€10", period: "/ book", credits: "Buy 1 or 20, no subscription", perBook: "Credits never expire", highlight: true },
         { name: "Weekly", price: "€14.99", period: "/ week", credits: "2 books every week", perBook: "≈ €7.50 per book", highlight: false },
@@ -297,14 +297,14 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h1accent: "KDP complet.",
       sub: "DraftToDone génère le manuscrit, la couverture recto-verso, le titre, la description, les mots-clés et le nom de plume depuis un seul brief de niche.",
       subHighlight: "Conçu pour un workflow KDP relu. Vérifiez chaque manuscrit, couverture et fiche avant de soumettre.",
-      microcopy: "À partir de 3,75 € le livre.",
+      microcopy: "Aperçu gratuit · sans carte bancaire pour commencer · annulable à tout moment · dès 3,75 € le livre.",
       chips: ["Manuscrit", "Couverture", "Quatrième", "Nom de plume inventé"],
       caption: "Un livre à la fois, ou deux par semaine. Relus avant chaque upload.",
       openApp: "Générer mon livre",
       brief: {
         label: "Une ou deux phrases : pour qui est le livre et ce qu'il lui promet.",
         placeholder: "Un guide pratique pour les ingénieurs logiciels introvertis qui veulent un meilleur salaire sans la conversation gênante…",
-        submit: "Générer mon livre",
+        submit: "Voir mon aperçu gratuit",
         examplesLabel: "Essayez :",
         examples: [
           "Un guide de 30 jours pour hôtes Airbnb qui veulent moins de mauvais avis",
@@ -416,7 +416,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       cta: "Générer mon livre",
       best: "Pour commencer",
       includes: ["Manuscrit complet", "Couverture recto-verso", "PDF de couverture aux dimensions KDP", "Nom de plume inventé"],
-      note: "Pas d'offre gratuite. Annulable à tout moment depuis l'app.",
+      note: "Un aperçu gratuit par compte : titre, promesse, nom de plume et couverture, sans carte bancaire. Annulable à tout moment depuis l'app.",
       plans: [
         { name: "À l'unité", price: "10 €", period: "/ livre", credits: "1 ou 20, sans abonnement", perBook: "Les crédits n'expirent pas", highlight: true },
         { name: "Hebdomadaire", price: "14,99 €", period: "/ semaine", credits: "2 livres chaque semaine", perBook: "≈ 7,50 € par livre", highlight: false },
@@ -458,14 +458,14 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h1accent: "KDP completo.",
       sub: "DraftToDone genera manoscritto, copertina fronte-retro, titolo, descrizione, keyword e pseudonimo da un solo brief di nicchia.",
       subHighlight: "Pensato per un workflow KDP revisionabile. Controlla ogni manoscritto, copertina e scheda prima di inviare.",
-      microcopy: "A partire da 3,75 € a libro.",
+      microcopy: "Anteprima gratuita · nessuna carta per iniziare · annulli quando vuoi · da 3,75 € a libro.",
       chips: ["Manoscritto", "Copertina", "Quarta di copertina", "Pseudonimo inventato"],
       caption: "Un libro alla volta, o due a settimana. Riletti prima di ogni upload.",
       openApp: "Genera il mio libro",
       brief: {
         label: "Una o due frasi: per chi è il libro e cosa gli promette. I libri sono scritti in inglese o in francese.",
         placeholder: "A practical guide for introverted software engineers who want a higher salary without the awkward conversation…",
-        submit: "Genera il mio libro",
+        submit: "Vedi l'anteprima gratis",
         examplesLabel: "Prova:",
         examples: [
           "A 30-day guide for short-term rental hosts who want fewer bad reviews",
@@ -577,7 +577,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       cta: "Genera il mio libro",
       best: "Per iniziare",
       includes: ["Manoscritto completo", "Copertina fronte e retro", "PDF di copertina in formato KDP", "Pseudonimo inventato"],
-      note: "Nessun piano gratuito. Annulla quando vuoi dall'app.",
+      note: "Un'anteprima gratuita per account: titolo, promessa, pseudonimo e copertina, senza carta. Annulli quando vuoi dall'app.",
       plans: [
         { name: "A libro", price: "10 €", period: "/ libro", credits: "1 o 20, senza abbonamento", perBook: "I crediti non scadono", highlight: true },
         { name: "Settimanale", price: "14,99 €", period: "/ settimana", credits: "2 libri ogni settimana", perBook: "≈ 7,50 € a libro", highlight: false },
@@ -619,14 +619,14 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       h1accent: "komplettes KDP-Buch.",
       sub: "DraftToDone erzeugt Manuskript, Vorder- und Rückcover, Titel, Beschreibung, Keywords und Autorennamen aus einem einzigen Nischenbrief.",
       subHighlight: "Gebaut für einen prüfbaren KDP-Workflow. Prüfe jedes Manuskript, Cover und Listing vor dem Einreichen.",
-      microcopy: "Ab 3,75 € pro Buch.",
+      microcopy: "Gratis-Vorschau · keine Kreditkarte zum Start · jederzeit kündbar · ab 3,75 € pro Buch.",
       chips: ["Manuskript", "Cover", "Rückseite", "Erfundener Autorname"],
       caption: "Ein Buch nach dem anderen, oder zwei pro Woche. Vor jedem Upload geprüft.",
       openApp: "Mein Buch erzeugen",
       brief: {
         label: "Ein oder zwei Sätze: Für wen ist das Buch und was verspricht es? Bücher werden auf Englisch oder Französisch geschrieben.",
         placeholder: "A practical guide for introverted software engineers who want a higher salary without the awkward conversation…",
-        submit: "Mein Buch erzeugen",
+        submit: "Gratis-Vorschau ansehen",
         examplesLabel: "Probieren:",
         examples: [
           "A 30-day guide for short-term rental hosts who want fewer bad reviews",
@@ -738,7 +738,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       cta: "Mein Buch erzeugen",
       best: "Zum Einstieg",
       includes: ["Komplettes Manuskript", "Vorder- und Rückseite", "Cover-PDF in KDP-Maßen", "Erfundener Autorname"],
-      note: "Kein Gratisplan. Jederzeit in der App kündbar.",
+      note: "Eine Gratis-Vorschau pro Konto: Titel, Versprechen, Autorenname und Cover, ohne Kreditkarte. Jederzeit in der App kündbar.",
       plans: [
         { name: "Pro Buch", price: "10 €", period: "/ Buch", credits: "1 oder 20, ohne Abo", perBook: "Credits verfallen nie", highlight: true },
         { name: "Wöchentlich", price: "14,99 €", period: "/ Woche", credits: "2 Bücher pro Woche", perBook: "≈ 7,50 € pro Buch", highlight: false },
