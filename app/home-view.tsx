@@ -17,8 +17,6 @@ import {
 import { blogIndexPath, locales, SITE_URL, type Locale } from "./blog-content";
 import {
   APP_SIGNUP_URL,
-  FOUNDING_SEATS_TOTAL,
-  foundingSeatsLeft,
   homePath,
   homeUrl,
   type HomeCopy,
@@ -84,7 +82,7 @@ function OpenAppButton({ label, size = "lg" }: { label: string; size?: "lg" | "m
   const pad = size === "lg" ? "px-7 py-4 text-base" : "px-6 py-3.5 text-[15px]";
   return (
     <a
-      href={APP_SIGNUP_URL}
+      href="#brief"
       className={`group inline-flex items-center justify-center gap-2 rounded-xl bg-ink ${pad} font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft active:translate-y-0`}
     >
       {label}
@@ -93,6 +91,54 @@ function OpenAppButton({ label, size = "lg" }: { label: string; size?: "lg" | "m
         strokeWidth={2.25}
       />
     </a>
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/*  How it works: brief, free preview, whole book                             */
+/* -------------------------------------------------------------------------- */
+function HowSection({ how, cta }: { how: HomeCopy["how"]; cta: string }) {
+  return (
+    <section id="how" className="relative border-t border-line/70">
+      <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
+        <div className="mx-auto max-w-2xl text-center">
+          <p data-reveal className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep">
+            {how.eyebrow}
+          </p>
+          <h2
+            data-reveal
+            style={{ transitionDelay: "60ms" }}
+            className="reveal-up text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
+          >
+            {how.h2}
+          </h2>
+        </div>
+        <ol className="mt-14 grid gap-5 md:grid-cols-3">
+          {how.steps.map((step, i) => (
+            <li
+              key={step.title}
+              data-reveal
+              style={{ transitionDelay: `${i * 90}ms` }}
+              className="reveal-up relative rounded-2xl border border-line bg-paper-2 p-7"
+            >
+              <span className="grid h-10 w-10 place-items-center rounded-full bg-ink font-display text-lg text-paper">
+                {i + 1}
+              </span>
+              <h3 className="mt-5 font-display text-2xl font-medium text-ink">{step.title}</h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-muted">{step.text}</p>
+              {i === 1 && (
+                <span className="mt-4 inline-flex rounded-full bg-mint-soft px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-mint-deep">
+                  0 €
+                </span>
+              )}
+            </li>
+          ))}
+        </ol>
+        <div className="mt-12 flex justify-center">
+          <OpenAppButton label={cta} size="lg" />
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -547,9 +593,10 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
             >
               {t.nav.pricing}
             </a>
+            {/* Visible at every width: on a phone it used to be the logo alone. */}
             <a
-              href={APP_SIGNUP_URL}
-              className="hidden whitespace-nowrap rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-ink-soft sm:inline-flex"
+              href="#brief"
+              className="inline-flex whitespace-nowrap rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
             >
               {t.nav.openApp}
             </a>
@@ -588,8 +635,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
               style={{ animationDelay: "240ms" }}
               className="reveal-load mx-auto mt-9 flex flex-col items-center gap-3"
             >
-              <HeroBrief copy={t.hero.brief} locale={locale} />
-              <p className="text-sm text-faint">{t.hero.microcopy}</p>
+              <HeroBrief copy={t.hero.brief} locale={locale} note={t.hero.microcopy} />
             </div>
 
             <div
@@ -613,6 +659,8 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
 
         {/* A real generated book, before any claim about it */}
         <SampleSection sample={t.sample} />
+
+        <HowSection how={t.how} cta={t.hero.openApp} />
 
         {/* Origin story */}
         <section className="relative border-t border-line/70 bg-paper-2">
@@ -833,7 +881,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
                   </ul>
 
                   <a
-                    href={APP_SIGNUP_URL}
+                    href="#brief"
                     className={`group mt-7 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-[15px] font-medium shadow-sm transition-all duration-200 hover:-translate-y-0.5 ${
                       p.highlight
                         ? "bg-ink text-paper hover:bg-ink-soft"
@@ -902,13 +950,9 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
               {t.founding.sub}
             </p>
 
-            <p className="mt-7 inline-flex items-center gap-2 rounded-full border border-mint/50 bg-paper px-3.5 py-1.5 text-[13px] font-semibold text-mint-deep">
-              <span className="h-1.5 w-1.5 rounded-full bg-mint" />
-              {t.founding.seats
-                .replace("{left}", String(foundingSeatsLeft()))
-                .replace("{total}", String(FOUNDING_SEATS_TOTAL))}
-            </p>
-
+            {/* No seat counter: "48 of 50 left" told every visitor we had two
+                customers. The cap stays in home-content.ts for when it reads
+                as scarcity, not as an empty room. */}
             <ul className="mt-7 grid gap-3">
               {t.founding.includes.map((item) => (
                 <li key={item} className="flex gap-3 text-[15px] leading-relaxed text-ink-soft">

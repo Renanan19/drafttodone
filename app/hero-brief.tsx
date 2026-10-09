@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, type FormEvent, type KeyboardEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from "react";
 import { ArrowRight } from "lucide-react";
 import { APP_URL } from "./home-content";
 
@@ -26,10 +26,31 @@ export type HeroBriefCopy = {
 const SIGNUP_ACTION = `${APP_URL}/signup`;
 const MAX_LENGTH = 500;
 
-export function HeroBrief({ copy, locale }: { copy: HeroBriefCopy; locale: string }) {
+export function HeroBrief({
+  copy,
+  locale,
+  note,
+}: {
+  copy: HeroBriefCopy;
+  locale: string;
+  /** "Free preview · no credit card…": under the box, above the examples, so a phone shows it without scrolling. */
+  note?: string;
+}) {
   const [brief, setBrief] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
   const fieldRef = useRef<HTMLTextAreaElement>(null);
+
+  // Every "Preview my book, free" on the page points here (#brief). Land with
+  // the cursor in the box, so the next thing they do is type their book.
+  useEffect(() => {
+    function onClick(e: MouseEvent) {
+      const link = (e.target as Element | null)?.closest?.('a[href="#brief"]');
+      if (!link) return;
+      window.setTimeout(() => fieldRef.current?.focus({ preventScroll: true }), 450);
+    }
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, []);
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     // An empty brief is not an error: the visitor still wants the app.
@@ -48,7 +69,7 @@ export function HeroBrief({ copy, locale }: { copy: HeroBriefCopy; locale: strin
   }
 
   return (
-    <div className="mx-auto w-full max-w-2xl text-left">
+    <div id="brief" className="mx-auto w-full max-w-2xl scroll-mt-24 text-left">
       <form
         ref={formRef}
         action={SIGNUP_ACTION}
@@ -91,6 +112,8 @@ export function HeroBrief({ copy, locale }: { copy: HeroBriefCopy; locale: strin
           </button>
         </div>
       </form>
+
+      {note && <p className="mt-3 text-center text-sm text-faint">{note}</p>}
 
       <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
         <span className="text-[12px] text-faint">{copy.examplesLabel}</span>

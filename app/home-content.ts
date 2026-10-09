@@ -77,6 +77,8 @@ export type HomeCopy = {
     sub: string;
     points: string[];
   };
+  /** Brief, free preview, whole book: the three steps, in order. */
+  how: { eyebrow: string; h2: string; steps: { title: string; text: string }[] };
   features: { eyebrow: string; h2: string; sub: string; items: { title: string; text: string }[] };
   comparison: {
     eyebrow: string;
@@ -129,7 +131,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       description:
         "Generate a manuscript, full wrap cover, KDP metadata, and an invented pen name from one niche brief. Buy one book for €10, or 2 a week on subscription.",
     },
-    nav: { blog: "Blog", pricing: "Pricing", openApp: "Generate a book" },
+    nav: { blog: "Blog", pricing: "Pricing", openApp: "Free preview" },
     hero: {
       eyebrow: "For KDP catalog operators",
       h1main: "Turn one idea into a complete",
@@ -139,7 +141,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       microcopy: "Free preview · no credit card to start · cancel anytime · from €3.75 a book.",
       chips: ["Manuscript", "Front cover", "Back cover", "Invented pen name"],
       caption: "One book at a time, or two a week. Reviewed before every upload.",
-      openApp: "Generate my book",
+      openApp: "Preview my book, free",
       brief: {
         label: "One or two sentences: who the book is for and what it promises them.",
         placeholder: "A practical guide for introverted software engineers who want a higher salary without the awkward conversation…",
@@ -190,7 +192,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       ],
       facts: ["132-page 6×9 interior PDF", "Editable Word manuscript", "Front cover + full KDP wrap", "Description, 7 keywords, 3 categories", "Invented pen name"],
       note: "The pen name was invented by the engine. Review every book before you publish it.",
-      cta: "Generate my book",
+      cta: "Preview my book, free",
     },
     proof: {
       eyebrow: "Founder proof",
@@ -200,6 +202,15 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         "No generic chatbot tab to babysit",
         "One product package instead of scattered files",
         "Built around KDP metadata and AI disclosure rules",
+      ],
+    },
+    how: {
+      eyebrow: "How it works",
+      h2: "From one sentence to a finished KDP book.",
+      steps: [
+        { title: "Write your brief", text: "One or two sentences: who the book is for and what it promises them. That is the whole setup." },
+        { title: "See your free preview", text: "Your title, promise, pen name and cover in about a minute. No credit card." },
+        { title: "Get the whole book", text: "Subscribe or buy the book: manuscript, 6×9 interior PDF, full KDP cover and listing arrive in about an hour, written from that exact preview. You review, then publish." },
       ],
     },
     features: {
@@ -252,13 +263,13 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       eyebrow: "Pricing",
       h2: "Simple plans. Real books.",
       sub: "One credit makes one complete book package. Buy credits outright, or subscribe — either way you manage everything in the app.",
-      cta: "Generate my book",
-      best: "Start here",
+      cta: "Preview my book, free",
+      best: "Recommended",
       includes: ["Full manuscript", "Front & back cover", "KDP-sized cover PDF", "Invented pen name"],
       note: "One free preview per account: your title, promise, pen name and cover, no credit card. Cancel anytime from the app.",
       plans: [
-        { name: "Pay per book", price: "€10", period: "/ book", credits: "Buy 1 or 20, no subscription", perBook: "Credits never expire", highlight: true },
-        { name: "Weekly", price: "€14.99", period: "/ week", credits: "2 books every week", perBook: "≈ €7.50 per book", highlight: false },
+        { name: "Pay per book", price: "€10", period: "/ book", credits: "Buy 1 or 20, no subscription", perBook: "Credits never expire", highlight: false },
+        { name: "Weekly", price: "€14.99", period: "/ week", credits: "2 books every week", perBook: "≈ €7.50 per book", highlight: true },
         { name: "Yearly", price: "€390", period: "/ year", credits: "104 books a year", perBook: "≈ €3.75 per book — half the weekly rate", highlight: false },
       ],
     },
@@ -290,7 +301,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       description:
         "Générez manuscrit, couverture complète, métadonnées KDP et nom de plume inventé depuis un seul brief de niche. 10 € le livre, ou 2 par semaine en abonnement.",
     },
-    nav: { blog: "Blog", pricing: "Tarifs", openApp: "Générer un livre" },
+    nav: { blog: "Blog", pricing: "Tarifs", openApp: "Aperçu gratuit" },
     hero: {
       eyebrow: "Pour les opérateurs de catalogue KDP",
       h1main: "Transformez une idée en livre",
@@ -300,7 +311,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       microcopy: "Aperçu gratuit · sans carte bancaire pour commencer · annulable à tout moment · dès 3,75 € le livre.",
       chips: ["Manuscrit", "Couverture", "Quatrième", "Nom de plume inventé"],
       caption: "Un livre à la fois, ou deux par semaine. Relus avant chaque upload.",
-      openApp: "Générer mon livre",
+      openApp: "Voir mon aperçu gratuit",
       brief: {
         label: "Une ou deux phrases : pour qui est le livre et ce qu'il lui promet.",
         placeholder: "Un guide pratique pour les ingénieurs logiciels introvertis qui veulent un meilleur salaire sans la conversation gênante…",
@@ -351,7 +362,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       ],
       facts: ["PDF intérieur 6×9 de 132 pages", "Manuscrit Word modifiable", "Couverture + PDF KDP complet", "Description, 7 mots-clés, 3 catégories", "Nom de plume inventé"],
       note: "Cet exemple est en anglais ; DraftToDone écrit aussi en français. Le nom de plume a été inventé par le moteur. Relisez chaque livre avant de le publier.",
-      cta: "Générer mon livre",
+      cta: "Voir mon aperçu gratuit",
     },
     proof: {
       eyebrow: "Preuve fondateur",
@@ -361,6 +372,15 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         "Pas d'onglet chatbot générique à surveiller",
         "Un pack produit au lieu de fichiers éparpillés",
         "Pensé autour des métadonnées KDP et des règles de déclaration IA",
+      ],
+    },
+    how: {
+      eyebrow: "Comment ça marche",
+      h2: "D'une phrase à un livre KDP terminé.",
+      steps: [
+        { title: "Écrivez votre brief", text: "Une ou deux phrases : pour qui est le livre et ce qu'il lui promet. C'est tout." },
+        { title: "Voyez votre aperçu gratuit", text: "Titre, promesse, nom de plume et couverture en une minute environ. Sans carte bancaire." },
+        { title: "Recevez le livre entier", text: "Abonnez-vous ou achetez le livre : manuscrit, PDF intérieur 6×9, couverture KDP complète et fiche arrivent en une heure environ, écrits à partir de cet aperçu exact. Vous relisez, puis vous publiez." },
       ],
     },
     features: {
@@ -413,13 +433,13 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       eyebrow: "Tarifs",
       h2: "Des offres simples. De vrais livres.",
       sub: "1 crédit = 1 pack de livre complet. Achetez des crédits à l'unité ou abonnez-vous — tout se gère dans l'app.",
-      cta: "Générer mon livre",
-      best: "Pour commencer",
+      cta: "Voir mon aperçu gratuit",
+      best: "Recommandé",
       includes: ["Manuscrit complet", "Couverture recto-verso", "PDF de couverture aux dimensions KDP", "Nom de plume inventé"],
       note: "Un aperçu gratuit par compte : titre, promesse, nom de plume et couverture, sans carte bancaire. Annulable à tout moment depuis l'app.",
       plans: [
-        { name: "À l'unité", price: "10 €", period: "/ livre", credits: "1 ou 20, sans abonnement", perBook: "Les crédits n'expirent pas", highlight: true },
-        { name: "Hebdomadaire", price: "14,99 €", period: "/ semaine", credits: "2 livres chaque semaine", perBook: "≈ 7,50 € par livre", highlight: false },
+        { name: "À l'unité", price: "10 €", period: "/ livre", credits: "1 ou 20, sans abonnement", perBook: "Les crédits n'expirent pas", highlight: false },
+        { name: "Hebdomadaire", price: "14,99 €", period: "/ semaine", credits: "2 livres chaque semaine", perBook: "≈ 7,50 € par livre", highlight: true },
         { name: "Annuel", price: "390 €", period: "/ an", credits: "104 livres par an", perBook: "≈ 3,75 € par livre — moitié prix", highlight: false },
       ],
     },
@@ -451,7 +471,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       description:
         "Genera manoscritto, copertina completa, metadati KDP e pseudonimo inventato da un solo brief di nicchia. 10 € a libro, oppure 2 a settimana in abbonamento.",
     },
-    nav: { blog: "Blog", pricing: "Prezzi", openApp: "Genera un libro" },
+    nav: { blog: "Blog", pricing: "Prezzi", openApp: "Anteprima gratis" },
     hero: {
       eyebrow: "Per operatori di cataloghi KDP",
       h1main: "Trasforma un'idea in un libro",
@@ -461,7 +481,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       microcopy: "Anteprima gratuita · nessuna carta per iniziare · annulli quando vuoi · da 3,75 € a libro.",
       chips: ["Manoscritto", "Copertina", "Quarta di copertina", "Pseudonimo inventato"],
       caption: "Un libro alla volta, o due a settimana. Riletti prima di ogni upload.",
-      openApp: "Genera il mio libro",
+      openApp: "Vedi l'anteprima gratis",
       brief: {
         label: "Una o due frasi: per chi è il libro e cosa gli promette. I libri sono scritti in inglese o in francese.",
         placeholder: "A practical guide for introverted software engineers who want a higher salary without the awkward conversation…",
@@ -512,7 +532,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       ],
       facts: ["PDF interno 6×9 di 132 pagine", "Manoscritto Word modificabile", "Copertina + PDF KDP completo", "Descrizione, 7 keyword, 3 categorie", "Pseudonimo inventato"],
       note: "Questo esempio è in inglese. Lo pseudonimo è stato inventato dal motore. Rileggi ogni libro prima di pubblicarlo.",
-      cta: "Genera il mio libro",
+      cta: "Vedi l'anteprima gratis",
     },
     proof: {
       eyebrow: "Prova del founder",
@@ -522,6 +542,15 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         "Nessuna tab chatbot generica da sorvegliare",
         "Un pacchetto prodotto invece di file sparsi",
         "Pensato intorno a metadati KDP e regole di disclosure IA",
+      ],
+    },
+    how: {
+      eyebrow: "Come funziona",
+      h2: "Da una frase a un libro KDP finito.",
+      steps: [
+        { title: "Scrivi il tuo brief", text: "Una o due frasi: per chi è il libro e cosa gli promette. Tutto qui." },
+        { title: "Guarda l'anteprima gratuita", text: "Titolo, promessa, pseudonimo e copertina in circa un minuto. Senza carta." },
+        { title: "Ricevi il libro intero", text: "Abbonati o compra il libro: manoscritto, PDF interno 6×9, copertina KDP completa e scheda arrivano in circa un'ora, scritti da quell'anteprima esatta. Rileggi, poi pubblichi." },
       ],
     },
     features: {
@@ -574,13 +603,13 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       eyebrow: "Prezzi",
       h2: "Piani semplici. Libri veri.",
       sub: "1 credito = 1 pacchetto libro completo. Compra crediti singoli o abbonati — gestisci tutto nell'app.",
-      cta: "Genera il mio libro",
-      best: "Per iniziare",
+      cta: "Vedi l'anteprima gratis",
+      best: "Consigliato",
       includes: ["Manoscritto completo", "Copertina fronte e retro", "PDF di copertina in formato KDP", "Pseudonimo inventato"],
       note: "Un'anteprima gratuita per account: titolo, promessa, pseudonimo e copertina, senza carta. Annulli quando vuoi dall'app.",
       plans: [
-        { name: "A libro", price: "10 €", period: "/ libro", credits: "1 o 20, senza abbonamento", perBook: "I crediti non scadono", highlight: true },
-        { name: "Settimanale", price: "14,99 €", period: "/ settimana", credits: "2 libri ogni settimana", perBook: "≈ 7,50 € a libro", highlight: false },
+        { name: "A libro", price: "10 €", period: "/ libro", credits: "1 o 20, senza abbonamento", perBook: "I crediti non scadono", highlight: false },
+        { name: "Settimanale", price: "14,99 €", period: "/ settimana", credits: "2 libri ogni settimana", perBook: "≈ 7,50 € a libro", highlight: true },
         { name: "Annuale", price: "390 €", period: "/ anno", credits: "104 libri all'anno", perBook: "≈ 3,75 € a libro — metà prezzo", highlight: false },
       ],
     },
@@ -612,7 +641,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       description:
         "Erzeuge Manuskript, komplettes Cover, KDP-Metadaten und einen erfundenen Autorennamen aus einem einzigen Nischenbrief. 10 € pro Buch, oder 2 pro Woche im Abo.",
     },
-    nav: { blog: "Blog", pricing: "Preise", openApp: "Buch erzeugen" },
+    nav: { blog: "Blog", pricing: "Preise", openApp: "Gratis-Vorschau" },
     hero: {
       eyebrow: "Für KDP-Katalogbetreiber",
       h1main: "Mach aus einer Idee ein",
@@ -622,7 +651,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       microcopy: "Gratis-Vorschau · keine Kreditkarte zum Start · jederzeit kündbar · ab 3,75 € pro Buch.",
       chips: ["Manuskript", "Cover", "Rückseite", "Erfundener Autorname"],
       caption: "Ein Buch nach dem anderen, oder zwei pro Woche. Vor jedem Upload geprüft.",
-      openApp: "Mein Buch erzeugen",
+      openApp: "Gratis-Vorschau ansehen",
       brief: {
         label: "Ein oder zwei Sätze: Für wen ist das Buch und was verspricht es? Bücher werden auf Englisch oder Französisch geschrieben.",
         placeholder: "A practical guide for introverted software engineers who want a higher salary without the awkward conversation…",
@@ -673,7 +702,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       ],
       facts: ["132-seitiges 6×9-Innenteil-PDF", "Bearbeitbares Word-Manuskript", "Cover + vollständiges KDP-PDF", "Beschreibung, 7 Keywords, 3 Kategorien", "Erfundenes Pseudonym"],
       note: "Dieses Beispiel ist auf Englisch. Das Pseudonym hat die Engine erfunden. Prüfen Sie jedes Buch, bevor Sie es veröffentlichen.",
-      cta: "Mein Buch erzeugen",
+      cta: "Gratis-Vorschau ansehen",
     },
     proof: {
       eyebrow: "Founder-Beweis",
@@ -683,6 +712,15 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         "Kein generischer Chatbot-Tab zum Überwachen",
         "Ein Produktpaket statt verstreuter Dateien",
         "Rund um KDP-Metadaten und KI-Offenlegungsregeln gebaut",
+      ],
+    },
+    how: {
+      eyebrow: "So funktioniert's",
+      h2: "Von einem Satz zum fertigen KDP-Buch.",
+      steps: [
+        { title: "Schreib deinen Brief", text: "Ein oder zwei Sätze: für wen das Buch ist und was es verspricht. Mehr braucht es nicht." },
+        { title: "Sieh deine Gratis-Vorschau", text: "Titel, Versprechen, Autorenname und Cover in etwa einer Minute. Ohne Kreditkarte." },
+        { title: "Erhalte das ganze Buch", text: "Abonniere oder kaufe das Buch: Manuskript, 6×9-Innen-PDF, vollständiges KDP-Cover und Produkttext kommen in etwa einer Stunde, geschrieben aus genau dieser Vorschau. Du prüfst, dann veröffentlichst du." },
       ],
     },
     features: {
@@ -735,13 +773,13 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       eyebrow: "Preise",
       h2: "Einfache Pläne. Echte Bücher.",
       sub: "1 Kredit = 1 komplettes Buchpaket. Kaufe Credits einzeln oder abonniere — alles wird in der App verwaltet.",
-      cta: "Mein Buch erzeugen",
-      best: "Zum Einstieg",
+      cta: "Gratis-Vorschau ansehen",
+      best: "Empfohlen",
       includes: ["Komplettes Manuskript", "Vorder- und Rückseite", "Cover-PDF in KDP-Maßen", "Erfundener Autorname"],
       note: "Eine Gratis-Vorschau pro Konto: Titel, Versprechen, Autorenname und Cover, ohne Kreditkarte. Jederzeit in der App kündbar.",
       plans: [
-        { name: "Pro Buch", price: "10 €", period: "/ Buch", credits: "1 oder 20, ohne Abo", perBook: "Credits verfallen nie", highlight: true },
-        { name: "Wöchentlich", price: "14,99 €", period: "/ Woche", credits: "2 Bücher pro Woche", perBook: "≈ 7,50 € pro Buch", highlight: false },
+        { name: "Pro Buch", price: "10 €", period: "/ Buch", credits: "1 oder 20, ohne Abo", perBook: "Credits verfallen nie", highlight: false },
+        { name: "Wöchentlich", price: "14,99 €", period: "/ Woche", credits: "2 Bücher pro Woche", perBook: "≈ 7,50 € pro Buch", highlight: true },
         { name: "Jährlich", price: "390 €", period: "/ Jahr", credits: "104 Bücher pro Jahr", perBook: "≈ 3,75 € pro Buch — halber Preis", highlight: false },
       ],
     },
