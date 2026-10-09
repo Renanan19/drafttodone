@@ -588,7 +588,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
               style={{ animationDelay: "240ms" }}
               className="reveal-load mx-auto mt-9 flex flex-col items-center gap-3"
             >
-              <HeroBrief copy={t.hero.brief} />
+              <HeroBrief copy={t.hero.brief} locale={locale} />
               <p className="text-sm text-faint">{t.hero.microcopy}</p>
             </div>
 

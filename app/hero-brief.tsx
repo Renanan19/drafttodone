@@ -26,7 +26,7 @@ export type HeroBriefCopy = {
 const SIGNUP_ACTION = `${APP_URL}/signup`;
 const MAX_LENGTH = 500;
 
-export function HeroBrief({ copy }: { copy: HeroBriefCopy }) {
+export function HeroBrief({ copy, locale }: { copy: HeroBriefCopy; locale: string }) {
   const [brief, setBrief] = useState("");
   const formRef = useRef<HTMLFormElement>(null);
   const fieldRef = useRef<HTMLTextAreaElement>(null);
@@ -35,7 +35,7 @@ export function HeroBrief({ copy }: { copy: HeroBriefCopy }) {
     // An empty brief is not an error: the visitor still wants the app.
     if (!brief.trim()) {
       e.preventDefault();
-      window.location.href = `${SIGNUP_ACTION}?utm_source=drafttodone.io&utm_medium=owned_web&utm_campaign=hero_brief`;
+      window.location.href = `${SIGNUP_ACTION}?utm_source=drafttodone.io&utm_medium=owned_web&utm_campaign=hero_brief&lang=${locale}`;
     }
   }
 
@@ -59,6 +59,9 @@ export function HeroBrief({ copy }: { copy: HeroBriefCopy }) {
         <input type="hidden" name="utm_source" value="drafttodone.io" />
         <input type="hidden" name="utm_medium" value="owned_web" />
         <input type="hidden" name="utm_campaign" value="hero_brief" />
+        {/* The page's language, not the browser's: it is the language the
+            brief was written in, and the app writes the book in it. */}
+        <input type="hidden" name="lang" value={locale} />
         <label htmlFor="hero-brief" className="sr-only">
           {copy.label}
         </label>
