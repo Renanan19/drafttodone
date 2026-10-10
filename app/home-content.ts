@@ -51,6 +51,8 @@ export type HomeCopy = {
     inputFacts: string[];
     outputLabel: string;
     outputTitle: string;
+    /** Real cover drawn by the cover engine for this brief (public/sample/calm). */
+    outputCover: string;
     outputSubtitle: string;
     artifacts: string[];
     metrics: { value: string; label: string }[];
@@ -176,6 +178,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       inputFacts: ["Reader promise: fewer guest issues", "Format: 10 chapters", "Marketplace: Amazon KDP"],
       outputLabel: "Generated package",
       outputTitle: "The Calm Host Playbook",
+      outputCover: "/sample/calm/en.webp",
       outputSubtitle: "Manuscript, full cover, KDP description, 7 keyword slots, and pen name.",
       artifacts: ["38,000-word manuscript", "Front/spine/back cover", "KDP title + subtitle", "Description + keywords"],
       metrics: [
@@ -404,6 +407,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       inputFacts: ["Promesse lecteur : moins de problèmes voyageurs", "Format : 10 chapitres", "Marketplace : Amazon KDP"],
       outputLabel: "Pack généré",
       outputTitle: "Le guide de l'hôte serein",
+      outputCover: "/sample/calm/fr.webp",
       outputSubtitle: "Manuscrit, couverture complète, description KDP, 7 mots-clés et nom de plume.",
       artifacts: ["Manuscrit de 38 000 mots", "Couverture recto/dos/verso", "Titre + sous-titre KDP", "Description + mots-clés"],
       metrics: [
@@ -632,6 +636,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       inputFacts: ["Promessa al lettore: meno problemi con gli ospiti", "Formato: 10 capitoli", "Marketplace: Amazon KDP"],
       outputLabel: "Pacchetto generato",
       outputTitle: "Il manuale dell'host sereno",
+      outputCover: "/sample/calm/it.webp",
       outputSubtitle: "Manoscritto, copertina completa, descrizione KDP, 7 keyword e pseudonimo.",
       artifacts: ["Manoscritto da 38.000 parole", "Copertina fronte/dorso/retro", "Titolo + sottotitolo KDP", "Descrizione + keyword"],
       metrics: [
@@ -860,6 +865,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       inputFacts: ["Leserversprechen: weniger Gästefragen", "Format: 10 Kapitel", "Marketplace: Amazon KDP"],
       outputLabel: "Erzeugtes Paket",
       outputTitle: "Das Handbuch für entspannte Gastgeber",
+      outputCover: "/sample/calm/de.webp",
       outputSubtitle: "Manuskript, komplettes Cover, KDP-Beschreibung, 7 Keyword-Slots und Autorenname.",
       artifacts: ["38.000-Wort-Manuskript", "Vorderseite/Rücken/Rückseite", "KDP-Titel + Untertitel", "Beschreibung + Keywords"],
       metrics: [

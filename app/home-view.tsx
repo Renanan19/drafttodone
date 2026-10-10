@@ -201,42 +201,8 @@ function FeatureCard({
   );
 }
 
-/* -------------------------------------------------------------------------- */
-/*  Hero visual — fan of AI-generated book covers on a mint pedestal          */
-/* -------------------------------------------------------------------------- */
-function BookCover({
-  cls,
-  title,
-  label,
-  className = "",
-}: {
-  cls: string;
-  title: string;
-  label: string;
-  className?: string;
-}) {
-  return (
-    <div
-      className={`cover ${cls} relative flex aspect-[5/7] w-28 flex-col justify-between overflow-hidden rounded-[10px] p-3.5 transition-all duration-500 ease-out sm:w-36 ${className}`}
-    >
-      <div className="flex justify-end">
-        <span className="grid h-5 w-5 place-items-center rounded-full bg-white/55 text-ink/70 backdrop-blur-sm">
-          <Check className="h-3 w-3" strokeWidth={3} />
-        </span>
-      </div>
-      <div>
-        <p className="font-display text-base font-medium leading-tight text-ink/85 sm:text-lg">
-          {title}
-        </p>
-        <p className="mt-1 text-[9px] uppercase tracking-[0.18em] text-ink/45">{label}</p>
-      </div>
-    </div>
-  );
-}
-
 function ProductDemo({ demo }: { demo: HomeCopy["demo"] }) {
   const artifactIcons: LucideIcon[] = [FileText, ImageIcon, Search, ShieldCheck];
-  const coverTitle = demo.outputTitle.split(" ").slice(-2).join(" ");
 
   return (
     <div className="reveal-load relative mx-auto mt-14 max-w-full text-left sm:max-w-5xl" style={{ animationDelay: "420ms" }}>
@@ -276,7 +242,14 @@ function ProductDemo({ demo }: { demo: HomeCopy["demo"] }) {
 
           <div className="grid gap-6 p-5 sm:grid-cols-[auto_1fr] sm:p-6">
             <div className="flex justify-center sm:block">
-              <BookCover cls="cover-mint" title={coverTitle} label="KDP" className="w-32 sm:w-36" />
+              <img
+                src={demo.outputCover}
+                alt={demo.outputTitle}
+                width={400}
+                height={600}
+                decoding="async"
+                className="aspect-[2/3] h-auto w-32 rounded-md shadow-[0_18px_40px_-18px_rgba(0,0,0,0.7)] ring-1 ring-white/10 sm:w-36"
+              />
             </div>
             <div className="min-w-0">
               {/* A sample book's title inside the demo, not a section of the page. */}
