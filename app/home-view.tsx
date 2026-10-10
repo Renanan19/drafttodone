@@ -319,7 +319,7 @@ function ProductDemo({ demo }: { demo: HomeCopy["demo"] }) {
 // Intrinsic sizes of the exported sample images, so the browser reserves
 // their space before they load (no layout shift).
 const SAMPLE_IMAGE_SIZES: Record<string, [number, number]> = {
-  "/sample/cover.webp": [640, 954],
+  "/sample/cover-v2.webp": [640, 954],
   "/sample/page-7.webp": [600, 902],
   "/sample/page-13.webp": [600, 902],
 };
@@ -353,7 +353,7 @@ function SampleSection({ sample }: { sample: HomeCopy["sample"] }) {
         <figure data-reveal style={{ transitionDelay: "160ms" }} className="reveal-up mx-auto mt-14 max-w-5xl">
           <div className="overflow-hidden rounded-[20px] border border-line bg-paper-2 p-3 shadow-[0_30px_80px_-44px_rgba(16,24,40,0.55)] sm:p-5">
             <img
-              src="/sample/wrap.webp"
+              src="/sample/wrap-v2.webp"
               alt={sample.wrapAlt}
               width={1400}
               height={1032}
