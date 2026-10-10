@@ -67,7 +67,8 @@ export function SampleFlipbook({ copy }: { copy: FlipbookCopy }) {
       aria-label={copy.label}
       className="mx-auto mt-10 max-w-xl outline-none"
     >
-      {/* The shelf: one cover per book. */}
+      {/* The shelf: one cover per book (only when there is more than one). */}
+      {copy.books.length > 1 && (
       <div role="group" aria-label={copy.shelf} className="mb-7 flex justify-center gap-2.5 overflow-x-auto pb-1">
         {copy.books.map((bk, k) => (
           <button
@@ -88,8 +89,13 @@ export function SampleFlipbook({ copy }: { copy: FlipbookCopy }) {
           </button>
         ))}
       </div>
-      <p className="mb-4 text-center font-display text-xl font-medium text-ink">{book.title}</p>
-      <p className="-mt-3 mb-5 text-center text-[12px] text-faint">{book.meta}</p>
+      )}
+      {copy.books.length > 1 && (
+        <>
+          <p className="mb-4 text-center font-display text-xl font-medium text-ink">{book.title}</p>
+          <p className="-mt-3 mb-5 text-center text-[12px] text-faint">{book.meta}</p>
+        </>
+      )}
 
       <div
         className="relative"
