@@ -354,6 +354,12 @@ export const solutionBackAnchors: Record<string, Record<Locale, string>> = {
     it: "Portare il manoscritto oltre la prosa, fino al libro pubblicabile",
     de: "Das Manuskript über die Prosa hinaus zum veröffentlichungsreifen Buch bringen",
   },
+  "getebook-alternative": {
+    en: "Get the KDP paperback, not only the ebook file",
+    fr: "Obtenir le broché KDP, pas seulement le fichier ebook",
+    it: "Ottenere la brossura KDP, non solo il file ebook",
+    de: "Das KDP-Taschenbuch bekommen, nicht nur die E-Book-Datei",
+  },
   "atticus-alternative": {
     en: "Get the book generated, not only formatted",
     fr: "Obtenir un livre généré, pas seulement mis en page",

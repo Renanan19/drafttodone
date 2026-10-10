@@ -583,6 +583,84 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
 
 
 
+  "getebook-alternative": {
+    en: {
+      definition:
+        "DraftToDone is a getebook.ai alternative for KDP paperbacks: instead of short ebooks on a monthly plan, it delivers full-length books with their wrap cover and listing text, paid per finished book.",
+      bestFor: [
+        "Best for publishers listing paperbacks on KDP, where the spine, back cover and listing text are required.",
+        "Best for full-length non-fiction guides of 270 to 500 printed pages.",
+        "Best if you would rather pay per finished book than keep a monthly subscription.",
+      ],
+      notFor: [
+        "Not for lead magnets or coloring books: getebook.ai covers those formats.",
+        "Not if you need to read the whole book before paying anything: getebook.ai previews all of it.",
+        "Not a replacement for your own reading pass before you publish anything.",
+      ],
+      contrasts: [
+        "getebook.ai vs DraftToDone: short ebooks on a monthly plan versus full-length paperbacks paid per finished book.",
+        "An ebook file is not yet a KDP paperback: it still needs a print interior, a spine and back cover sized to the page count, and the listing text.",
+        "Credits that reset every month versus credits that never expire.",
+      ],
+    },
+    fr: {
+      definition:
+        "DraftToDone est une alternative à getebook.ai pour les brochés KDP : au lieu d'ebooks courts sur abonnement mensuel, il livre des livres complets avec leur couverture complète et leur fiche, payés au livre fini.",
+      bestFor: [
+        "Idéal pour les éditeurs qui publient des brochés sur KDP, où dos, quatrième et texte de fiche sont obligatoires.",
+        "Idéal pour des guides complets de 270 à 500 pages imprimées.",
+        "Idéal si vous préférez payer au livre fini plutôt qu'un abonnement mensuel.",
+      ],
+      notFor: [
+        "Pas pour les lead magnets ni les livres de coloriage : getebook.ai couvre ces formats.",
+        "Pas si vous voulez lire tout le livre avant de payer quoi que ce soit : getebook.ai le prévisualise en entier.",
+        "Pas un substitut à votre propre relecture avant de publier quoi que ce soit.",
+      ],
+      contrasts: [
+        "getebook.ai vs DraftToDone : des ebooks courts sur abonnement mensuel contre des brochés complets payés au livre fini.",
+        "Un fichier ebook n'est pas encore un broché KDP : il lui faut un intérieur d'impression, un dos et une quatrième à la bonne épaisseur, et le texte de la fiche.",
+        "Des crédits remis à zéro chaque mois contre des crédits qui n'expirent pas.",
+      ],
+    },
+    it: {
+      definition:
+        "DraftToDone è un'alternativa a getebook.ai per le brossure KDP: invece di ebook brevi con abbonamento mensile, consegna libri completi con copertina completa e scheda, pagati a libro finito.",
+      bestFor: [
+        "Ideale per editori che pubblicano brossure su KDP, dove dorso, retro e testo della scheda sono obbligatori.",
+        "Ideale per guide complete da 270 a 500 pagine stampate.",
+        "Ideale se preferisci pagare a libro finito invece di un abbonamento mensile.",
+      ],
+      notFor: [
+        "Non per lead magnet o libri da colorare: getebook.ai copre quei formati.",
+        "Non se vuoi leggere tutto il libro prima di pagare: getebook.ai lo mostra per intero in anteprima.",
+        "Non sostituisce la tua rilettura prima di pubblicare qualsiasi cosa.",
+      ],
+      contrasts: [
+        "getebook.ai vs DraftToDone: ebook brevi con abbonamento mensile contro brossure complete pagate a libro finito.",
+        "Un file ebook non è ancora una brossura KDP: servono un interno di stampa, dorso e retro della misura giusta e il testo della scheda.",
+        "Crediti che si azzerano ogni mese contro crediti che non scadono.",
+      ],
+    },
+    de: {
+      definition:
+        "DraftToDone ist eine getebook.ai-Alternative für KDP-Taschenbücher: statt kurzer E-Books im Monatsabo liefert es vollständige Bücher mit Umschlag und Listing-Text, bezahlt pro fertigem Buch.",
+      bestFor: [
+        "Ideal für Verlage, die Taschenbücher auf KDP listen, wo Rücken, Rückseite und Listing-Text Pflicht sind.",
+        "Ideal für vollständige Ratgeber mit 270 bis 500 gedruckten Seiten.",
+        "Ideal, wenn du lieber pro fertigem Buch zahlst als ein Monatsabo.",
+      ],
+      notFor: [
+        "Nicht für Lead-Magnete oder Malbücher: Diese Formate deckt getebook.ai ab.",
+        "Nicht, wenn du das ganze Buch vor jeder Zahlung lesen willst: getebook.ai zeigt es komplett in der Vorschau.",
+        "Kein Ersatz für deine eigene Durchsicht vor jeder Veröffentlichung.",
+      ],
+      contrasts: [
+        "getebook.ai vs DraftToDone: kurze E-Books im Monatsabo gegen vollständige Taschenbücher, bezahlt pro fertigem Buch.",
+        "Eine E-Book-Datei ist noch kein KDP-Taschenbuch: Es fehlen Druck-Innenteil, Rücken und Rückseite passend zur Seitenzahl und der Listing-Text.",
+        "Credits, die jeden Monat verfallen, gegen Credits, die nicht verfallen.",
+      ],
+    },
+  },
   "sudowrite-alternative": {
     en: {
       definition:
