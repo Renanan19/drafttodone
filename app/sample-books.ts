@@ -7,7 +7,6 @@ import type { FlipBook } from "./sample-flipbook";
  * chosen; the pages shown were read.
  */
 const NOVELS = [
-  { slug: "shipwreck", title: "The Secret of the Shipwreck", pages: 142, nums: { mid: 76, late: 131 } },
   { slug: "polwenna", title: "The Secrets of Polwenna Cove", pages: 138, nums: { mid: 72, late: 129 } },
   { slug: "ink-ice", title: "Ink, Ice, and Inquest", pages: 155, nums: { mid: 79, late: 147 } },
   { slug: "dead-men", title: "Dead Men Don’t Return Library Books", pages: 141, nums: { mid: 74, late: 132 } },

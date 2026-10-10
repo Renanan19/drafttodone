@@ -197,7 +197,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     sample: {
       eyebrow: "A real book, not a mockup",
       h2: "One brief went in. This came out.",
-      sub: "Five books DraftToDone generated, each from a single brief: a guide on salary negotiation for introverted engineers, and four novels. Pick one and leaf through it: the pages are shown exactly as generated, not retouched.",
+      sub: "Four books DraftToDone generated, each from a single brief: a guide on salary negotiation for introverted engineers, and three novels. Pick one and leaf through it: the pages are shown exactly as generated, not retouched.",
       wrapAlt: "Full KDP paperback cover of Silent Leverage: back cover text, spine with title and author, and a teal front cover with a keyboard under a rising growth chart",
       wrapCaption: "The KDP cover PDF of Silent Leverage: back, spine and front, sized for the page count",
       pages: [
@@ -407,7 +407,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     sample: {
       eyebrow: "Un vrai livre, pas une maquette",
       h2: "Un brief en entrée. Voici ce qui en est sorti.",
-      sub: "Cinq livres générés par DraftToDone, chacun à partir d'un seul brief : un guide sur la négociation de salaire pour ingénieurs introvertis, et quatre romans. Choisis-en un et feuillette-le : les pages sont montrées telles que générées, sans retouche.",
+      sub: "Quatre livres générés par DraftToDone, chacun à partir d'un seul brief : un guide sur la négociation de salaire pour ingénieurs introvertis, et trois romans. Choisis-en un et feuillette-le : les pages sont montrées telles que générées, sans retouche.",
       wrapAlt: "Couverture KDP complète de Silent Leverage : texte de quatrième, tranche avec titre et auteur, et première de couverture bleu-vert avec un clavier sous une courbe de croissance",
       wrapCaption: "Le PDF de couverture KDP de Silent Leverage : quatrième, tranche et première, calculés pour le nombre de pages",
       pages: [
@@ -617,7 +617,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     sample: {
       eyebrow: "Un libro vero, non un mockup",
       h2: "È entrato un brief. È uscito questo.",
-      sub: "Cinque libri generati da DraftToDone, ciascuno da un solo brief: una guida sulla negoziazione dello stipendio per ingegneri introversi e quattro romanzi. Scegline uno e sfoglialo: le pagine sono mostrate così come generate, senza ritocchi.",
+      sub: "Quattro libri generati da DraftToDone, ciascuno da un solo brief: una guida sulla negoziazione dello stipendio per ingegneri introversi e tre romanzi. Scegline uno e sfoglialo: le pagine sono mostrate così come generate, senza ritocchi.",
       wrapAlt: "Copertina KDP completa di Silent Leverage: testo di quarta, dorso con titolo e autore, e prima di copertina verde acqua con una tastiera sotto un grafico in crescita",
       wrapCaption: "Il PDF di copertina KDP di Silent Leverage: quarta, dorso e prima, calcolati sul numero di pagine",
       pages: [
@@ -827,7 +827,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     sample: {
       eyebrow: "Ein echtes Buch, kein Mockup",
       h2: "Ein Briefing hinein. Das kam heraus.",
-      sub: "Fünf Bücher, die DraftToDone erzeugt hat, jedes aus einem einzigen Briefing: ein Ratgeber zur Gehaltsverhandlung für introvertierte Entwickler und vier Romane. Such dir eines aus und blättere darin: Die Seiten werden so gezeigt, wie sie erzeugt wurden, ohne Nachbearbeitung.",
+      sub: "Vier Bücher, die DraftToDone erzeugt hat, jedes aus einem einzigen Briefing: ein Ratgeber zur Gehaltsverhandlung für introvertierte Entwickler und drei Romane. Such dir eines aus und blättere darin: Die Seiten werden so gezeigt, wie sie erzeugt wurden, ohne Nachbearbeitung.",
       wrapAlt: "Vollständiges KDP-Cover von Silent Leverage: Rückseitentext, Buchrücken mit Titel und Autor und eine petrolfarbene Vorderseite mit einer Tastatur unter einer steigenden Wachstumskurve",
       wrapCaption: "Das KDP-Cover-PDF von Silent Leverage: Rückseite, Buchrücken und Vorderseite, passend zur Seitenzahl",
       pages: [
