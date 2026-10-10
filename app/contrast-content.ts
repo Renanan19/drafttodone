@@ -590,7 +590,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       bestFor: [
         "Best for publishers listing paperbacks on KDP, where the spine, back cover and listing text are required.",
         "Best for full-length non-fiction guides of 270 to 500 printed pages.",
-        "Best if you would rather pay per finished book than keep a monthly subscription.",
+        "Best if you would rather pay for finished books, from 3.75 EUR each, than for monthly access.",
       ],
       notFor: [
         "Not for lead magnets or coloring books: getebook.ai covers those formats.",
@@ -609,7 +609,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       bestFor: [
         "Idéal pour les éditeurs qui publient des brochés sur KDP, où dos, quatrième et texte de fiche sont obligatoires.",
         "Idéal pour des guides complets de 270 à 500 pages imprimées.",
-        "Idéal si vous préférez payer au livre fini plutôt qu'un abonnement mensuel.",
+        "Idéal si vous préférez payer des livres finis, dès 3,75 € l'un, plutôt qu'un accès mensuel.",
       ],
       notFor: [
         "Pas pour les lead magnets ni les livres de coloriage : getebook.ai couvre ces formats.",
@@ -628,7 +628,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       bestFor: [
         "Ideale per editori che pubblicano brossure su KDP, dove dorso, retro e testo della scheda sono obbligatori.",
         "Ideale per guide complete da 270 a 500 pagine stampate.",
-        "Ideale se preferisci pagare a libro finito invece di un abbonamento mensile.",
+        "Ideale se preferisci pagare libri finiti, da 3,75 € l'uno, invece di un accesso mensile.",
       ],
       notFor: [
         "Non per lead magnet o libri da colorare: getebook.ai copre quei formati.",
@@ -647,7 +647,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       bestFor: [
         "Ideal für Verlage, die Taschenbücher auf KDP listen, wo Rücken, Rückseite und Listing-Text Pflicht sind.",
         "Ideal für vollständige Ratgeber mit 270 bis 500 gedruckten Seiten.",
-        "Ideal, wenn du lieber pro fertigem Buch zahlst als ein Monatsabo.",
+        "Ideal, wenn du lieber für fertige Bücher zahlst, ab 3,75 € pro Stück, als für monatlichen Zugang.",
       ],
       notFor: [
         "Nicht für Lead-Magnete oder Malbücher: Diese Formate deckt getebook.ai ab.",
@@ -672,7 +672,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Not for novelists who want a craft partner for scenes and line-level prose.",
-        "Best when you publish regularly; a single book is 10 EUR with no subscription.",
+        "Best when you publish regularly: from 3.75 EUR a book on the yearly plan; a single book is 10 EUR.",
         "Not a replacement for your own reading pass before you publish anything.",
       ],
       contrasts: [
@@ -691,7 +691,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Pas pour les romanciers qui veulent un partenaire de scènes et de prose.",
-        "Surtout utile si vous publiez régulièrement ; un livre seul coûte 10 € sans abonnement.",
+        "Surtout utile si vous publiez régulièrement : dès 3,75 € le livre en annuel ; un livre seul coûte 10 €.",
         "Pas un substitut à votre propre relecture avant de publier quoi que ce soit.",
       ],
       contrasts: [
@@ -710,7 +710,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Non per romanzieri che cercano un partner per scene e prosa riga per riga.",
-        "Soprattutto se pubblichi con regolarità; un libro singolo costa 10 € senza abbonamento.",
+        "Soprattutto se pubblichi con regolarità: da 3,75 € a libro con l'annuale; un libro singolo costa 10 €.",
         "Non sostituisce la tua rilettura prima di pubblicare qualsiasi cosa.",
       ],
       contrasts: [
@@ -729,7 +729,7 @@ export const contrastCopy: Record<string, Record<Locale, ContrastBlock>> = {
       ],
       notFor: [
         "Nicht für Romanautoren, die einen Partner für Szenen und Prosa suchen.",
-        "Vor allem, wenn du regelmäßig veröffentlichst; ein einzelnes Buch kostet 10 € ohne Abo.",
+        "Vor allem, wenn du regelmäßig veröffentlichst: ab 3,75 € pro Buch im Jahrestarif; ein einzelnes Buch kostet 10 €.",
         "Kein Ersatz für deinen eigenen Lesedurchgang vor der Veröffentlichung.",
       ],
       contrasts: [

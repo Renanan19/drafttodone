@@ -1489,7 +1489,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Cover and KDP listing", ours: "Front cover and wrap sized to the page count, plus description, 7 keywords, 3 categories and A+ text.", rival: "Not part of the product.", oursWins: true },
           { criterion: "Non-fiction guides", ours: "Built for them: practical guides of 270 to 500 printed pages.", rival: "Built for fiction, with its own story models.", oursWins: true },
           { criterion: "Line-by-line prose control", ours: "Chapter-level brief and automatic checks; you edit the Word file afterwards.", rival: "Sentence-level Write, Rewrite, Describe and Expand tools, plus developmental and line edits on higher plans.", rivalWins: true },
-          { criterion: "Pricing", ours: "EUR 10 per finished book, no subscription needed. A failed generation costs nothing.", rival: "USD 10, 22 or 44 a month for AI credits." },
+          { criterion: "Pricing", ours: "From EUR 3.75 a finished book on the yearly plan (EUR 7.50 weekly), or EUR 10 to try a single one. A failed generation costs nothing.", rival: "USD 10, 22 or 44 a month for AI credits." },
           { criterion: "Who it fits", ours: "Publishers putting finished books on KDP.", rival: "Novelists who want to write every line themselves." },
           ],
           footnote: "Sudowrite is a good writing partner for a novelist who wants to write every line. DraftToDone is for getting a finished, publishable book out of one brief. Checked against both products’ public pages on 10 October 2026.",
@@ -1530,7 +1530,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Couverture et fiche KDP", ours: "Couverture et couverture complète à la bonne épaisseur de dos, plus description, 7 mots-clés, 3 catégories et textes A+.", rival: "Hors du produit.", oursWins: true },
           { criterion: "Guides pratiques (non-fiction)", ours: "Faits pour ça : des guides de 270 à 500 pages imprimées.", rival: "Fait pour la fiction, avec ses propres modèles d’histoire.", oursWins: true },
           { criterion: "Contrôle de la prose, phrase par phrase", ours: "Brief par chapitre et contrôles automatiques ; vous retouchez le fichier Word ensuite.", rival: "Outils Write, Rewrite, Describe et Expand à la phrase, plus corrections de fond et de style sur les offres hautes.", rivalWins: true },
-          { criterion: "Prix", ours: "10 € par livre fini, sans abonnement obligatoire. Une génération ratée ne coûte rien.", rival: "10, 22 ou 44 $ par mois en crédits IA." },
+          { criterion: "Prix", ours: "Dès 3,75 € le livre fini avec la formule annuelle (7,50 € en hebdomadaire), ou 10 € pour en essayer un seul. Une génération ratée ne coûte rien.", rival: "10, 22 ou 44 $ par mois en crédits IA." },
           { criterion: "Pour qui", ours: "Les éditeurs qui mettent des livres finis sur KDP.", rival: "Les romanciers qui veulent écrire chaque ligne eux-mêmes." },
           ],
           footnote: "Sudowrite est un bon partenaire d’écriture pour un romancier qui veut écrire chaque ligne. DraftToDone sert à obtenir un livre fini et publiable à partir d’un seul brief. Vérifié sur les pages publiques des deux produits le 10 octobre 2026.",
@@ -1571,7 +1571,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Copertina e scheda KDP", ours: "Copertina e copertina completa con il dorso giusto, più descrizione, 7 parole chiave, 3 categorie e testi A+.", rival: "Non fa parte del prodotto.", oursWins: true },
           { criterion: "Guide pratiche (saggistica)", ours: "Fatto per queste: guide da 270 a 500 pagine stampate.", rival: "Fatto per la narrativa, con i suoi modelli per le storie.", oursWins: true },
           { criterion: "Controllo della prosa, frase per frase", ours: "Brief per capitolo e controlli automatici; ritocchi il file Word dopo.", rival: "Strumenti Write, Rewrite, Describe ed Expand a livello di frase, più editing strutturale e di stile nei piani alti.", rivalWins: true },
-          { criterion: "Prezzo", ours: "10 € per libro finito, senza abbonamento obbligatorio. Una generazione fallita non costa nulla.", rival: "10, 22 o 44 $ al mese in crediti IA." },
+          { criterion: "Prezzo", ours: "Da 3,75 € a libro finito con il piano annuale (7,50 € con il settimanale), o 10 € per provarne uno solo. Una generazione fallita non costa nulla.", rival: "10, 22 o 44 $ al mese in crediti IA." },
           { criterion: "Per chi", ours: "Editori che mettono libri finiti su KDP.", rival: "Romanzieri che vogliono scrivere ogni riga da soli." },
           ],
           footnote: "Sudowrite è un buon partner di scrittura per un romanziere che vuole scrivere ogni riga. DraftToDone serve a ottenere un libro finito e pubblicabile da un solo brief. Verificato sulle pagine pubbliche di entrambi il 10 ottobre 2026.",
@@ -1612,7 +1612,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Cover und KDP-Listing", ours: "Vorderseite und Umschlag passend zur Seitenzahl, dazu Beschreibung, 7 Keywords, 3 Kategorien und A+-Texte.", rival: "Nicht Teil des Produkts.", oursWins: true },
           { criterion: "Sachbuch-Ratgeber", ours: "Dafür gebaut: Ratgeber mit 270 bis 500 gedruckten Seiten.", rival: "Für Belletristik gebaut, mit eigenen Story-Modellen.", oursWins: true },
           { criterion: "Kontrolle über die Prosa, Satz für Satz", ours: "Briefing pro Kapitel und automatische Prüfungen; du überarbeitest die Word-Datei danach.", rival: "Write-, Rewrite-, Describe- und Expand-Werkzeuge auf Satzebene, dazu Struktur- und Stillektorat in den höheren Tarifen.", rivalWins: true },
-          { criterion: "Preis", ours: "10 € pro fertigem Buch, ohne Abo-Pflicht. Eine fehlgeschlagene Generierung kostet nichts.", rival: "10, 22 oder 44 $ im Monat für KI-Credits." },
+          { criterion: "Preis", ours: "Ab 3,75 € pro fertigem Buch im Jahrestarif (7,50 € im Wochentarif) oder 10 €, um ein einzelnes zu testen. Eine fehlgeschlagene Generierung kostet nichts.", rival: "10, 22 oder 44 $ im Monat für KI-Credits." },
           { criterion: "Für wen", ours: "Verlage, die fertige Bücher auf KDP bringen.", rival: "Romanautoren, die jede Zeile selbst schreiben wollen." },
           ],
           footnote: "Sudowrite ist ein guter Schreibpartner für Romanautoren, die jede Zeile selbst schreiben wollen. DraftToDone liefert aus einem einzigen Briefing ein fertiges, veröffentlichbares Buch. Geprüft an den öffentlichen Seiten beider Produkte am 10. Oktober 2026.",
@@ -1629,7 +1629,7 @@ export const solutionPages: SolutionPage[] = [
         slug: "getebook-alternative",
         title: "getebook.ai alternative for full-length KDP paperbacks",
         description:
-          "Looking for a getebook.ai alternative? DraftToDone builds full-length paperbacks with their KDP wrap cover and listing, paid per finished book, no subscription.",
+          "Looking for a getebook.ai alternative? DraftToDone builds full-length paperbacks with their KDP wrap cover and listing, from EUR 3.75 a finished book.",
         seoTitle: "getebook.ai Alternative: Full KDP Paperbacks, No Subscription",
         seoDescription:
           "getebook.ai makes short ebooks on a monthly plan. DraftToDone makes 270-500 page paperbacks with the KDP wrap and listing, from EUR 10 a book. Row by row.",
@@ -1639,12 +1639,12 @@ export const solutionPages: SolutionPage[] = [
         keywords: ["getebook.ai alternative", "getebook alternative", "AI ebook generator", "AI book generator for KDP", "KDP paperback AI"],
         sections: [
           { id: "what-getebook-does", title: "What is getebook.ai good at?", body: "getebook.ai builds short ebooks from one sentence and lets you watch them being written. You can preview the whole ebook for free and export PDF, EPUB or DOCX once you subscribe.", points: ["Lead magnets, guides, workbooks, courses, novels", "Print-ready coloring books", "Free preview of the whole ebook", "Subscription from USD 29 a month"] },
-          { id: "where-drafttodone-differs", title: "getebook.ai vs DraftToDone: what is different?", body: "DraftToDone is built for the KDP paperback: full-length books, a print interior, a wrap cover with spine and back sized to the page count, and the listing text Amazon asks for.", points: ["Non-fiction guides of 270 to 500 printed pages", "Front, spine and back cover", "Description, 7 keywords, 3 categories, A+ text", "EUR 10 per finished book, no subscription"] },
+          { id: "where-drafttodone-differs", title: "getebook.ai vs DraftToDone: what is different?", body: "DraftToDone is built for the KDP paperback: full-length books, a print interior, a wrap cover with spine and back sized to the page count, and the listing text Amazon asks for.", points: ["Non-fiction guides of 270 to 500 printed pages", "Front, spine and back cover", "Description, 7 keywords, 3 categories, A+ text", "From EUR 3.75 a finished book"] },
           { id: "who-each-is-for", title: "Which one fits: short ebooks or paperbacks on KDP?", body: "If you want quick lead magnets and short ebooks to sell on Etsy or give away, getebook.ai fits. If you want full books listed as KDP paperbacks, DraftToDone does that job end to end.", points: ["getebook.ai: short ebooks and lead magnets", "DraftToDone: full-length KDP paperbacks", "Monthly credits vs credits per finished book", "Ebook files vs the whole KDP product"] },
         ],
         faq: [
           { question: "Is DraftToDone better than getebook.ai for KDP paperbacks?", answer: "Yes. DraftToDone delivers the full-length book, the 6x9 print PDF, the wrap cover sized to its page count and the KDP listing text. getebook.ai's public pages describe ebook exports and a front cover, with no spine, back cover or listing text." },
-          { question: "Do I need a subscription?", answer: "No. A finished book costs EUR 10 and those credits never expire; weekly and yearly plans are optional. getebook.ai requires a subscription, from USD 29 a month, to download a book." },
+          { question: "How much does a book cost?", answer: "From EUR 3.75 a finished book on the yearly plan (104 books for EUR 390), EUR 7.50 on the weekly plan (2 books for EUR 14.99), or EUR 10 to try a single book with no subscription. Each credit makes one complete book. getebook.ai requires a subscription, from USD 29 a month, just to download a book." },
           { question: "Can I see the book before I pay?", answer: "You get a free preview with the title, the promise, the pen name and the cover. getebook.ai goes further here: you can preview the whole ebook before subscribing." },
         ],
         comparison: {
@@ -1657,7 +1657,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Book length", ours: "Non-fiction guides of 270 to 500 printed pages.", rival: "Priced by format: a how-to guide is 10 to 12 chapters. Page counts are not stated.", oursWins: true },
           { criterion: "Paperback cover (spine and back)", ours: "Front, spine and back, sized to the book’s page count.", rival: "Not mentioned on its public pages.", oursWins: true },
           { criterion: "KDP listing text", ours: "Description, 7 keywords, 3 categories and A+ text, in the book’s language.", rival: "Not mentioned on its public pages.", oursWins: true },
-          { criterion: "Paying", ours: "EUR 10 per finished book, no subscription needed, and those credits never expire.", rival: "A subscription is required to download, from USD 29 a month. Credits reset each month.", oursWins: true },
+          { criterion: "Paying", ours: "From EUR 3.75 a finished book on the yearly plan, EUR 7.50 weekly, or EUR 10 for a single one. You pay for books, not for access.", rival: "A subscription is required to download, from USD 29 a month. Credits reset each month.", oursWins: true },
           { criterion: "When a generation fails", ours: "Costs nothing: the credit is spent only when the book is done.", rival: "Regenerating costs credits again (18 for a how-to guide).", oursWins: true },
           { criterion: "Seeing it before paying", ours: "Free preview: title, promise, pen name and cover.", rival: "The whole ebook can be previewed for free; you pay to download it.", rivalWins: true },
           { criterion: "Formats", ours: "Non-fiction guides and novels, in English or French.", rival: "Lead magnets, reports, workbooks, courses, novels and coloring books.", rivalWins: true },
@@ -1670,8 +1670,8 @@ export const solutionPages: SolutionPage[] = [
         slug: "alternative-getebook",
         title: "Alternative à getebook.ai pour des livres brochés KDP complets",
         description:
-          "Vous cherchez une alternative à getebook.ai ? DraftToDone produit des livres complets avec leur couverture KDP et leur fiche, payés au livre fini, sans abonnement.",
-        seoTitle: "Alternative à getebook.ai : livres brochés KDP, sans abonnement",
+          "Vous cherchez une alternative à getebook.ai ? DraftToDone produit des livres complets avec leur couverture KDP et leur fiche, dès 3,75 € le livre fini.",
+        seoTitle: "Alternative à getebook.ai : livres brochés KDP, dès 3,75 € le livre",
         seoDescription:
           "getebook.ai fait des ebooks courts sur abonnement mensuel. DraftToDone fait des livres de 270 à 500 pages avec couverture KDP et fiche, dès 10 € le livre.",
         eyebrow: "Alternative à getebook.ai",
@@ -1680,12 +1680,12 @@ export const solutionPages: SolutionPage[] = [
         keywords: ["alternative getebook.ai", "alternative getebook", "générateur d'ebook IA", "générateur de livre IA KDP", "livre broché KDP IA"],
         sections: [
           { id: "what-getebook-does", title: "À quoi getebook.ai est-il bon ?", body: "getebook.ai fabrique des ebooks courts à partir d'une phrase et vous laisse les regarder s'écrire. Vous pouvez prévisualiser tout l'ebook gratuitement et l'exporter en PDF, EPUB ou DOCX une fois abonné.", points: ["Lead magnets, guides, cahiers, cours, romans", "Livres de coloriage prêts à imprimer", "Aperçu gratuit de tout l'ebook", "Abonnement dès 29 $ par mois"] },
-          { id: "where-drafttodone-differs", title: "getebook.ai vs DraftToDone : qu'est-ce qui change ?", body: "DraftToDone est pensé pour le broché KDP : des livres complets, un intérieur d'impression, une couverture avec dos et quatrième à la bonne épaisseur, et le texte de fiche qu'Amazon demande.", points: ["Guides de 270 à 500 pages imprimées", "Couverture, dos et quatrième", "Description, 7 mots-clés, 3 catégories, textes A+", "10 € par livre fini, sans abonnement"] },
+          { id: "where-drafttodone-differs", title: "getebook.ai vs DraftToDone : qu'est-ce qui change ?", body: "DraftToDone est pensé pour le broché KDP : des livres complets, un intérieur d'impression, une couverture avec dos et quatrième à la bonne épaisseur, et le texte de fiche qu'Amazon demande.", points: ["Guides de 270 à 500 pages imprimées", "Couverture, dos et quatrième", "Description, 7 mots-clés, 3 catégories, textes A+", "Dès 3,75 € le livre fini"] },
           { id: "who-each-is-for", title: "Lequel choisir : ebooks courts ou brochés sur KDP ?", body: "Pour des lead magnets et des ebooks courts à vendre sur Etsy ou à offrir, getebook.ai convient. Pour des livres complets vendus en broché sur KDP, DraftToDone fait tout le travail.", points: ["getebook.ai : ebooks courts et lead magnets", "DraftToDone : livres brochés KDP complets", "Crédits mensuels vs crédits au livre fini", "Fichiers ebook vs le produit KDP entier"] },
         ],
         faq: [
           { question: "DraftToDone est-il meilleur que getebook.ai pour des brochés KDP ?", answer: "Oui. DraftToDone livre le livre complet, le PDF d'impression 6×9, la couverture complète à la bonne épaisseur de dos et le texte de la fiche KDP. Les pages publiques de getebook.ai décrivent des exports ebook et une couverture de face, sans dos, quatrième ni texte de fiche." },
-          { question: "Faut-il un abonnement ?", answer: "Non. Un livre fini coûte 10 € et ces crédits n'expirent pas ; les formules hebdomadaire et annuelle sont facultatives. getebook.ai exige un abonnement, dès 29 $ par mois, pour télécharger un livre." },
+          { question: "Combien coûte un livre ?", answer: "Dès 3,75 € le livre fini avec la formule annuelle (104 livres pour 390 €), 7,50 € avec la formule hebdomadaire (2 livres pour 14,99 €), ou 10 € pour en essayer un seul, sans abonnement. Chaque crédit fait un livre complet. getebook.ai exige un abonnement, dès 29 $ par mois, rien que pour télécharger un livre." },
           { question: "Puis-je voir le livre avant de payer ?", answer: "Vous avez un aperçu gratuit avec le titre, la promesse, le nom de plume et la couverture. getebook.ai va plus loin sur ce point : on peut prévisualiser tout l'ebook avant de s'abonner." },
         ],
         comparison: {
@@ -1698,7 +1698,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Longueur du livre", ours: "Des guides de 270 à 500 pages imprimées.", rival: "Prix selon le format : un guide pratique fait 10 à 12 chapitres. Le nombre de pages n’est pas indiqué.", oursWins: true },
           { criterion: "Couverture de broché (dos et quatrième)", ours: "Face, dos et quatrième, à l’épaisseur du livre.", rival: "Pas mentionné sur ses pages publiques.", oursWins: true },
           { criterion: "Texte de la fiche KDP", ours: "Description, 7 mots-clés, 3 catégories et textes A+, dans la langue du livre.", rival: "Pas mentionné sur ses pages publiques.", oursWins: true },
-          { criterion: "Paiement", ours: "10 € par livre fini, sans abonnement obligatoire, et ces crédits n’expirent pas.", rival: "Abonnement obligatoire pour télécharger, dès 29 $ par mois. Les crédits repartent à zéro chaque mois.", oursWins: true },
+          { criterion: "Paiement", ours: "Dès 3,75 € le livre fini en annuel, 7,50 € en hebdomadaire, ou 10 € pour un seul. Vous payez des livres, pas un accès.", rival: "Abonnement obligatoire pour télécharger, dès 29 $ par mois. Les crédits repartent à zéro chaque mois.", oursWins: true },
           { criterion: "Quand une génération échoue", ours: "Ça ne coûte rien : le crédit n’est dépensé que quand le livre est fini.", rival: "Régénérer coûte de nouveau des crédits (18 pour un guide pratique).", oursWins: true },
           { criterion: "Voir avant de payer", ours: "Aperçu gratuit : titre, promesse, nom de plume et couverture.", rival: "Tout l’ebook se prévisualise gratuitement ; on paie pour le télécharger.", rivalWins: true },
           { criterion: "Formats", ours: "Guides pratiques et romans, en anglais ou en français.", rival: "Lead magnets, rapports, cahiers d’exercices, cours, romans et livres de coloriage.", rivalWins: true },
@@ -1711,8 +1711,8 @@ export const solutionPages: SolutionPage[] = [
         slug: "alternativa-getebook",
         title: "Alternativa a getebook.ai per libri in brossura KDP completi",
         description:
-          "Cerchi un'alternativa a getebook.ai? DraftToDone crea libri completi con la copertina KDP e la scheda, pagati a libro finito, senza abbonamento.",
-        seoTitle: "Alternativa a getebook.ai: brossure KDP complete, senza abbonamento",
+          "Cerchi un'alternativa a getebook.ai? DraftToDone crea libri completi con la copertina KDP e la scheda, da 3,75 € a libro finito.",
+        seoTitle: "Alternativa a getebook.ai: brossure KDP complete, da 3,75 € a libro",
         seoDescription:
           "getebook.ai crea ebook brevi con abbonamento mensile. DraftToDone crea libri da 270 a 500 pagine con copertina KDP e scheda, da 10 € a libro.",
         eyebrow: "Alternativa a getebook.ai",
@@ -1721,12 +1721,12 @@ export const solutionPages: SolutionPage[] = [
         keywords: ["alternativa getebook.ai", "alternativa getebook", "generatore di ebook IA", "generatore di libri IA per KDP", "brossura KDP IA"],
         sections: [
           { id: "what-getebook-does", title: "In cosa è bravo getebook.ai?", body: "getebook.ai crea ebook brevi da una frase e ti fa guardare mentre li scrive. Puoi vedere l'anteprima di tutto l'ebook gratis ed esportarlo in PDF, EPUB o DOCX una volta abbonato.", points: ["Lead magnet, guide, quaderni, corsi, romanzi", "Libri da colorare pronti per la stampa", "Anteprima gratuita di tutto l'ebook", "Abbonamento da 29 $ al mese"] },
-          { id: "where-drafttodone-differs", title: "getebook.ai vs DraftToDone: cosa cambia?", body: "DraftToDone è pensato per la brossura KDP: libri completi, un interno di stampa, una copertina con dorso e retro della misura giusta e il testo della scheda che Amazon richiede.", points: ["Guide da 270 a 500 pagine stampate", "Fronte, dorso e retro di copertina", "Descrizione, 7 parole chiave, 3 categorie, testi A+", "10 € a libro finito, senza abbonamento"] },
+          { id: "where-drafttodone-differs", title: "getebook.ai vs DraftToDone: cosa cambia?", body: "DraftToDone è pensato per la brossura KDP: libri completi, un interno di stampa, una copertina con dorso e retro della misura giusta e il testo della scheda che Amazon richiede.", points: ["Guide da 270 a 500 pagine stampate", "Fronte, dorso e retro di copertina", "Descrizione, 7 parole chiave, 3 categorie, testi A+", "Da 3,75 € a libro finito"] },
           { id: "who-each-is-for", title: "Quale scegliere: ebook brevi o brossure su KDP?", body: "Per lead magnet ed ebook brevi da vendere su Etsy o regalare, getebook.ai va bene. Per libri completi venduti in brossura su KDP, DraftToDone fa tutto il lavoro.", points: ["getebook.ai: ebook brevi e lead magnet", "DraftToDone: brossure KDP complete", "Crediti mensili vs crediti a libro finito", "File ebook vs l'intero prodotto KDP"] },
         ],
         faq: [
           { question: "DraftToDone è migliore di getebook.ai per le brossure KDP?", answer: "Sì. DraftToDone consegna il libro completo, il PDF di stampa 6×9, la copertina completa con il dorso giusto e il testo della scheda KDP. Le pagine pubbliche di getebook.ai descrivono esportazioni ebook e una copertina frontale, senza dorso, retro né testo della scheda." },
-          { question: "Serve un abbonamento?", answer: "No. Un libro finito costa 10 € e quei crediti non scadono; i piani settimanale e annuale sono facoltativi. getebook.ai richiede un abbonamento, da 29 $ al mese, per scaricare un libro." },
+          { question: "Quanto costa un libro?", answer: "Da 3,75 € a libro finito con il piano annuale (104 libri per 390 €), 7,50 € con il settimanale (2 libri per 14,99 €), o 10 € per provarne uno solo, senza abbonamento. Ogni credito fa un libro completo. getebook.ai richiede un abbonamento, da 29 $ al mese, solo per scaricare un libro." },
           { question: "Posso vedere il libro prima di pagare?", answer: "Hai un'anteprima gratuita con titolo, promessa, pseudonimo e copertina. getebook.ai va oltre su questo punto: puoi vedere l'anteprima di tutto l'ebook prima di abbonarti." },
         ],
         comparison: {
@@ -1739,7 +1739,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Lunghezza del libro", ours: "Guide da 270 a 500 pagine stampate.", rival: "Prezzo in base al formato: una guida pratica ha da 10 a 12 capitoli. Il numero di pagine non è indicato.", oursWins: true },
           { criterion: "Copertina in brossura (dorso e retro)", ours: "Fronte, dorso e retro, della misura del libro.", rival: "Non menzionato nelle sue pagine pubbliche.", oursWins: true },
           { criterion: "Testo della scheda KDP", ours: "Descrizione, 7 parole chiave, 3 categorie e testi A+, nella lingua del libro.", rival: "Non menzionato nelle sue pagine pubbliche.", oursWins: true },
-          { criterion: "Pagamento", ours: "10 € a libro finito, senza abbonamento obbligatorio, e quei crediti non scadono.", rival: "Abbonamento obbligatorio per scaricare, da 29 $ al mese. I crediti si azzerano ogni mese.", oursWins: true },
+          { criterion: "Pagamento", ours: "Da 3,75 € a libro finito con l’annuale, 7,50 € con il settimanale, o 10 € per uno solo. Paghi libri, non un accesso.", rival: "Abbonamento obbligatorio per scaricare, da 29 $ al mese. I crediti si azzerano ogni mese.", oursWins: true },
           { criterion: "Quando una generazione fallisce", ours: "Non costa nulla: il credito si spende solo quando il libro è finito.", rival: "Rigenerare costa di nuovo crediti (18 per una guida pratica).", oursWins: true },
           { criterion: "Vedere prima di pagare", ours: "Anteprima gratuita: titolo, promessa, pseudonimo e copertina.", rival: "Tutto l’ebook si vede in anteprima gratis; si paga per scaricarlo.", rivalWins: true },
           { criterion: "Formati", ours: "Guide pratiche e romanzi, in inglese o in francese.", rival: "Lead magnet, report, quaderni, corsi, romanzi e libri da colorare.", rivalWins: true },
@@ -1752,8 +1752,8 @@ export const solutionPages: SolutionPage[] = [
         slug: "getebook-alternative",
         title: "getebook.ai-Alternative für vollständige KDP-Taschenbücher",
         description:
-          "Auf der Suche nach einer getebook.ai-Alternative? DraftToDone erstellt vollständige Bücher mit KDP-Umschlag und Listing, bezahlt pro fertigem Buch, ohne Abo.",
-        seoTitle: "getebook.ai-Alternative: KDP-Taschenbücher ohne Abo",
+          "Auf der Suche nach einer getebook.ai-Alternative? DraftToDone erstellt vollständige Bücher mit KDP-Umschlag und Listing, ab 3,75 € pro fertigem Buch.",
+        seoTitle: "getebook.ai-Alternative: KDP-Taschenbücher ab 3,75 € pro Buch",
         seoDescription:
           "getebook.ai macht kurze E-Books im Monatsabo. DraftToDone macht Bücher mit 270 bis 500 Seiten samt KDP-Umschlag und Listing, ab 10 € pro Buch.",
         eyebrow: "getebook.ai-Alternative",
@@ -1762,12 +1762,12 @@ export const solutionPages: SolutionPage[] = [
         keywords: ["getebook.ai Alternative", "getebook Alternative", "KI E-Book Generator", "KI Buchgenerator für KDP", "KDP Taschenbuch KI"],
         sections: [
           { id: "what-getebook-does", title: "Worin ist getebook.ai gut?", body: "getebook.ai erstellt kurze E-Books aus einem Satz und lässt dich zusehen, wie sie entstehen. Du kannst das ganze E-Book kostenlos ansehen und es mit Abo als PDF, EPUB oder DOCX exportieren.", points: ["Lead-Magnete, Ratgeber, Arbeitshefte, Kurse, Romane", "Druckfertige Malbücher", "Kostenlose Vorschau des ganzen E-Books", "Abo ab 29 $ im Monat"] },
-          { id: "where-drafttodone-differs", title: "getebook.ai vs DraftToDone: was ist anders?", body: "DraftToDone ist für das KDP-Taschenbuch gebaut: vollständige Bücher, ein Druck-Innenteil, ein Umschlag mit Rücken und Rückseite passend zur Seitenzahl und der Listing-Text, den Amazon verlangt.", points: ["Ratgeber mit 270 bis 500 gedruckten Seiten", "Vorderseite, Rücken und Rückseite", "Beschreibung, 7 Keywords, 3 Kategorien, A+-Texte", "10 € pro fertigem Buch, ohne Abo"] },
+          { id: "where-drafttodone-differs", title: "getebook.ai vs DraftToDone: was ist anders?", body: "DraftToDone ist für das KDP-Taschenbuch gebaut: vollständige Bücher, ein Druck-Innenteil, ein Umschlag mit Rücken und Rückseite passend zur Seitenzahl und der Listing-Text, den Amazon verlangt.", points: ["Ratgeber mit 270 bis 500 gedruckten Seiten", "Vorderseite, Rücken und Rückseite", "Beschreibung, 7 Keywords, 3 Kategorien, A+-Texte", "Ab 3,75 € pro fertigem Buch"] },
           { id: "who-each-is-for", title: "Was passt: kurze E-Books oder Taschenbücher auf KDP?", body: "Für Lead-Magnete und kurze E-Books für Etsy oder zum Verschenken passt getebook.ai. Für vollständige Bücher als KDP-Taschenbuch erledigt DraftToDone die ganze Arbeit.", points: ["getebook.ai: kurze E-Books und Lead-Magnete", "DraftToDone: vollständige KDP-Taschenbücher", "Monats-Credits vs Credits pro fertigem Buch", "E-Book-Dateien vs das ganze KDP-Produkt"] },
         ],
         faq: [
           { question: "Ist DraftToDone für KDP-Taschenbücher besser als getebook.ai?", answer: "Ja. DraftToDone liefert das vollständige Buch, das 6×9-Druck-PDF, den Umschlag passend zur Seitenzahl und den KDP-Listing-Text. Die öffentlichen Seiten von getebook.ai beschreiben E-Book-Exporte und eine Vorderseite, ohne Rücken, Rückseite oder Listing-Text." },
-          { question: "Brauche ich ein Abo?", answer: "Nein. Ein fertiges Buch kostet 10 € und diese Credits verfallen nicht; Wochen- und Jahrestarife sind optional. getebook.ai verlangt ein Abo ab 29 $ im Monat, um ein Buch herunterzuladen." },
+          { question: "Was kostet ein Buch?", answer: "Ab 3,75 € pro fertigem Buch im Jahrestarif (104 Bücher für 390 €), 7,50 € im Wochentarif (2 Bücher für 14,99 €) oder 10 €, um ein einzelnes ohne Abo zu testen. Jeder Credit ergibt ein vollständiges Buch. getebook.ai verlangt ein Abo ab 29 $ im Monat, nur um ein Buch herunterzuladen." },
           { question: "Kann ich das Buch vor dem Bezahlen sehen?", answer: "Du bekommst eine kostenlose Vorschau mit Titel, Versprechen, Pseudonym und Cover. getebook.ai geht hier weiter: Dort lässt sich das ganze E-Book vor dem Abo ansehen." },
         ],
         comparison: {
@@ -1780,7 +1780,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Buchlänge", ours: "Ratgeber mit 270 bis 500 gedruckten Seiten.", rival: "Preis nach Format: Ein Ratgeber hat 10 bis 12 Kapitel. Seitenzahlen werden nicht genannt.", oursWins: true },
           { criterion: "Taschenbuch-Umschlag (Rücken und Rückseite)", ours: "Vorderseite, Rücken und Rückseite, passend zur Seitenzahl.", rival: "Auf den öffentlichen Seiten nicht erwähnt.", oursWins: true },
           { criterion: "KDP-Listing-Text", ours: "Beschreibung, 7 Keywords, 3 Kategorien und A+-Texte, in der Sprache des Buchs.", rival: "Auf den öffentlichen Seiten nicht erwähnt.", oursWins: true },
-          { criterion: "Bezahlen", ours: "10 € pro fertigem Buch, ohne Abo-Pflicht, und diese Credits verfallen nicht.", rival: "Zum Herunterladen ist ein Abo nötig, ab 29 $ im Monat. Credits verfallen jeden Monat.", oursWins: true },
+          { criterion: "Bezahlen", ours: "Ab 3,75 € pro fertigem Buch im Jahrestarif, 7,50 € im Wochentarif oder 10 € für ein einzelnes. Du zahlst für Bücher, nicht für Zugang.", rival: "Zum Herunterladen ist ein Abo nötig, ab 29 $ im Monat. Credits verfallen jeden Monat.", oursWins: true },
           { criterion: "Wenn eine Generierung fehlschlägt", ours: "Kostet nichts: Der Credit wird erst beim fertigen Buch verbraucht.", rival: "Neu generieren kostet erneut Credits (18 für einen Ratgeber).", oursWins: true },
           { criterion: "Vor dem Bezahlen ansehen", ours: "Kostenlose Vorschau: Titel, Versprechen, Pseudonym und Cover.", rival: "Das ganze E-Book lässt sich gratis ansehen; bezahlt wird der Download.", rivalWins: true },
           { criterion: "Formate", ours: "Ratgeber und Romane, auf Englisch oder Französisch.", rival: "Lead-Magnete, Berichte, Arbeitshefte, Kurse, Romane und Malbücher.", rivalWins: true },
@@ -1815,7 +1815,7 @@ export const solutionPages: SolutionPage[] = [
         faq: [
           { question: "Is DraftToDone available now?", answer: "Yes — DraftToDone is live. Open the app at app.drafttodone.io to start publishing today." },
           { question: "Does DraftToDone format print and ebook files like Atticus?", answer: "Formatting is one stage of the pipeline. The focus is producing the whole product — manuscript, cover and metadata — ready for KDP, rather than being a standalone formatting editor." },
-          { question: "Is DraftToDone a subscription or a one-time purchase?", answer: "DraftToDone sells book credits outright at 10 EUR a book, or on subscription (one credit makes one complete book). Atticus is a one-time purchase for its editor and formatter. Different models for different jobs." }
+          { question: "Is DraftToDone a subscription or a one-time purchase?", answer: "DraftToDone works best on subscription, from 3.75 EUR a book on the yearly plan; a single book is 10 EUR (one credit makes one complete book). Atticus is a one-time purchase for its editor and formatter. Different models for different jobs." }
         ],
         comparison: {
           heading: "DraftToDone vs Atticus, row by row",
@@ -1828,7 +1828,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Cover", ours: "Front cover and full KDP wrap: spine and back sized to the page count.", rival: "Not mentioned on its public pages.", oursWins: true },
           { criterion: "KDP listing text", ours: "Description, 7 keywords, 3 categories and A+ text, in the book’s language.", rival: "Not mentioned on its public pages.", oursWins: true },
           { criterion: "Interior formatting", ours: "A 6×9 print PDF and the Word file, laid out automatically.", rival: "Its core strength: 17+ chapter themes, over 1,500 fonts, live preview, EPUB, PDF and DOCX export.", rivalWins: true },
-          { criterion: "Pricing", ours: "EUR 10 per finished book, no subscription; credits never expire.", rival: "USD 147 once, for unlimited books and future updates." },
+          { criterion: "Pricing", ours: "From EUR 3.75 a finished book on the yearly plan (EUR 7.50 weekly), or EUR 10 for a single one.", rival: "USD 147 once, for unlimited books and future updates." },
           { criterion: "Who it fits", ours: "Publishers who want finished books on KDP without writing them.", rival: "Authors who write their own books and want to typeset them themselves." },
           ],
           footnote: "Atticus formats books you have written, for USD 147 once; DraftToDone writes the book and hands you its print file, KDP cover and listing, from EUR 10 a book. Checked against both products’ public pages on 10 October 2026.",
@@ -1855,7 +1855,7 @@ export const solutionPages: SolutionPage[] = [
         faq: [
           { question: "DraftToDone est-il disponible maintenant ?", answer: "Oui — DraftToDone est en ligne. Ouvrez l'app sur app.drafttodone.io pour commencer à publier dès aujourd'hui." },
           { question: "DraftToDone met-il en page les fichiers print et ebook ?", answer: "La mise en page est une étape du pipeline. L'objectif est de produire tout le produit — manuscrit, couverture et métadonnées — aux formats KDP, plutôt que d'être un éditeur de mise en page autonome." },
-          { question: "DraftToDone est-il un abonnement ou un achat unique ?", answer: "DraftToDone vend des crédits livres à l'unité, 10 € le livre, ou en abonnement (1 crédit = 1 livre complet). Atticus est un achat unique pour son éditeur et son outil de mise en page. Des modèles différents pour des besoins différents." }
+          { question: "DraftToDone est-il un abonnement ou un achat unique ?", answer: "DraftToDone se prend surtout en abonnement, dès 3,75 € le livre en annuel ; un livre seul coûte 10 € (1 crédit = 1 livre complet). Atticus est un achat unique pour son éditeur et son outil de mise en page. Des modèles différents pour des besoins différents." }
         ],
         comparison: {
           heading: "DraftToDone vs Atticus, ligne par ligne",
@@ -1868,7 +1868,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Couverture", ours: "Couverture et couverture KDP complète : dos et quatrième à l’épaisseur du livre.", rival: "Pas mentionné sur ses pages publiques.", oursWins: true },
           { criterion: "Texte de la fiche KDP", ours: "Description, 7 mots-clés, 3 catégories et textes A+, dans la langue du livre.", rival: "Pas mentionné sur ses pages publiques.", oursWins: true },
           { criterion: "Mise en page de l’intérieur", ours: "Un PDF d’impression 6×9 et le fichier Word, mis en page automatiquement.", rival: "Son point fort : plus de 17 thèmes de chapitre, plus de 1 500 polices, aperçu en direct, export EPUB, PDF et DOCX.", rivalWins: true },
-          { criterion: "Prix", ours: "10 € par livre fini, sans abonnement ; les crédits n’expirent pas.", rival: "147 $ une fois, pour des livres illimités et les mises à jour." },
+          { criterion: "Prix", ours: "Dès 3,75 € le livre fini en annuel (7,50 € en hebdomadaire), ou 10 € pour un seul.", rival: "147 $ une fois, pour des livres illimités et les mises à jour." },
           { criterion: "Pour qui", ours: "Les éditeurs qui veulent des livres finis sur KDP sans les écrire.", rival: "Les auteurs qui écrivent leurs livres et veulent les mettre en page eux-mêmes." },
           ],
           footnote: "Atticus met en page les livres que vous avez écrits, pour 147 $ une fois ; DraftToDone écrit le livre et vous remet son fichier d’impression, sa couverture KDP et sa fiche, dès 10 € le livre. Vérifié sur les pages publiques des deux produits le 10 octobre 2026.",
@@ -1895,7 +1895,7 @@ export const solutionPages: SolutionPage[] = [
         faq: [
           { question: "DraftToDone è disponibile ora?", answer: "Sì — DraftToDone è online. Apri l'app su app.drafttodone.io e inizia a pubblicare oggi." },
           { question: "DraftToDone impagina i file print ed ebook come Atticus?", answer: "L'impaginazione è una tappa del pipeline. L'obiettivo è produrre tutto il prodotto — manoscritto, copertina e metadati — nei formati KDP, più che essere un editor di impaginazione autonomo." },
-          { question: "DraftToDone è un abbonamento o un acquisto unico?", answer: "DraftToDone vende crediti libro singoli a 10 € a libro, oppure in abbonamento (1 credito = 1 libro completo). Atticus è un acquisto unico per il suo editor e impaginatore. Modelli diversi per esigenze diverse." }
+          { question: "DraftToDone è un abbonamento o un acquisto unico?", answer: "DraftToDone si usa soprattutto in abbonamento, da 3,75 € a libro con l'annuale; un libro singolo costa 10 € (1 credito = 1 libro completo). Atticus è un acquisto unico per il suo editor e impaginatore. Modelli diversi per esigenze diverse." }
         ],
         comparison: {
           heading: "DraftToDone vs Atticus, riga per riga",
@@ -1908,7 +1908,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Copertina", ours: "Copertina e copertina KDP completa: dorso e retro della misura del libro.", rival: "Non menzionato nelle sue pagine pubbliche.", oursWins: true },
           { criterion: "Testo della scheda KDP", ours: "Descrizione, 7 parole chiave, 3 categorie e testi A+, nella lingua del libro.", rival: "Non menzionato nelle sue pagine pubbliche.", oursWins: true },
           { criterion: "Impaginazione dell’interno", ours: "Un PDF di stampa 6×9 e il file Word, impaginati automaticamente.", rival: "Il suo punto forte: oltre 17 temi per i capitoli, più di 1.500 font, anteprima dal vivo, export EPUB, PDF e DOCX.", rivalWins: true },
-          { criterion: "Prezzo", ours: "10 € a libro finito, senza abbonamento; i crediti non scadono.", rival: "147 $ una volta, per libri illimitati e aggiornamenti futuri." },
+          { criterion: "Prezzo", ours: "Da 3,75 € a libro finito con l’annuale (7,50 € con il settimanale), o 10 € per uno solo.", rival: "147 $ una volta, per libri illimitati e aggiornamenti futuri." },
           { criterion: "Per chi", ours: "Editori che vogliono libri finiti su KDP senza scriverli.", rival: "Autori che scrivono i propri libri e vogliono impaginarli da soli." },
           ],
           footnote: "Atticus impagina i libri che hai scritto, per 147 $ una volta; DraftToDone scrive il libro e ti consegna file di stampa, copertina KDP e scheda, da 10 € a libro. Verificato sulle pagine pubbliche di entrambi il 10 ottobre 2026.",
@@ -1935,7 +1935,7 @@ export const solutionPages: SolutionPage[] = [
         faq: [
           { question: "Ist DraftToDone jetzt verfügbar?", answer: "Ja — DraftToDone ist live. Öffne die App unter app.drafttodone.io und starte noch heute." },
           { question: "Formatiert DraftToDone Print- und Ebook-Dateien wie Atticus?", answer: "Formatierung ist eine Stufe der Pipeline. Der Fokus liegt darauf, das ganze Produkt — Manuskript, Cover und Metadaten — in KDP-Maßen zu erzeugen, statt ein eigenständiger Formatierungseditor zu sein." },
-          { question: "Ist DraftToDone ein Abo oder ein Einmalkauf?", answer: "DraftToDone verkauft Buch-Credits einzeln für 10 € pro Buch oder im Abo (1 Kredit = 1 komplettes Buch). Atticus ist ein Einmalkauf für Editor und Formatierer. Verschiedene Modelle für verschiedene Aufgaben." }
+          { question: "Ist DraftToDone ein Abo oder ein Einmalkauf?", answer: "DraftToDone nutzt man am besten im Abo, ab 3,75 € pro Buch im Jahrestarif; ein einzelnes Buch kostet 10 € (1 Credit = 1 komplettes Buch). Atticus ist ein Einmalkauf für Editor und Formatierer. Verschiedene Modelle für verschiedene Aufgaben." }
         ],
         comparison: {
           heading: "DraftToDone vs Atticus, Zeile für Zeile",
@@ -1948,7 +1948,7 @@ export const solutionPages: SolutionPage[] = [
           { criterion: "Cover", ours: "Vorderseite und kompletter KDP-Umschlag: Rücken und Rückseite passend zur Seitenzahl.", rival: "Auf den öffentlichen Seiten nicht erwähnt.", oursWins: true },
           { criterion: "KDP-Listing-Text", ours: "Beschreibung, 7 Keywords, 3 Kategorien und A+-Texte, in der Sprache des Buchs.", rival: "Auf den öffentlichen Seiten nicht erwähnt.", oursWins: true },
           { criterion: "Satz des Innenteils", ours: "Ein 6×9-Druck-PDF und die Word-Datei, automatisch gesetzt.", rival: "Seine Stärke: über 17 Kapitel-Themes, mehr als 1.500 Schriften, Live-Vorschau, Export als EPUB, PDF und DOCX.", rivalWins: true },
-          { criterion: "Preis", ours: "10 € pro fertigem Buch, ohne Abo; Credits verfallen nicht.", rival: "147 $ einmalig, für unbegrenzt viele Bücher und künftige Updates." },
+          { criterion: "Preis", ours: "Ab 3,75 € pro fertigem Buch im Jahrestarif (7,50 € im Wochentarif) oder 10 € für ein einzelnes.", rival: "147 $ einmalig, für unbegrenzt viele Bücher und künftige Updates." },
           { criterion: "Für wen", ours: "Verlage, die fertige Bücher auf KDP wollen, ohne sie zu schreiben.", rival: "Autoren, die ihre Bücher selbst schreiben und selbst setzen wollen." },
           ],
           footnote: "Atticus setzt Bücher, die du geschrieben hast, für einmalig 147 $; DraftToDone schreibt das Buch und liefert Druckdatei, KDP-Umschlag und Listing, ab 10 € pro Buch. Geprüft an den öffentlichen Seiten beider Produkte am 10. Oktober 2026.",
