@@ -438,7 +438,11 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
                         >
                           {row.criterion}
                         </th>
-                        <td className="px-5 py-4 align-top leading-relaxed text-muted">
+                        <td
+                          className={`px-5 py-4 align-top leading-relaxed ${
+                            row.oursWins ? "bg-mint-soft/35 font-medium text-ink" : "text-muted"
+                          }`}
+                        >
                           {row.ours}
                         </td>
                         <td

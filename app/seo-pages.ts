@@ -30,14 +30,16 @@ export type SolutionTranslation = {
    * A comparison page that never names the thing it is an alternative to is
    * not a comparison, to a reader or to a retrieval system. `rivalWins` marks
    * the rows where the other tool is the better choice; a table without any is
-   * a sales sheet, so the renderer expects at least one.
+   * a sales sheet, so the renderer expects at least one. `oursWins` marks
+   * ours the same way: highlighting only the rival's wins made DraftToDone
+   * look like the weaker tool on its own page (Antoine, 2026-10-10).
    */
   comparison?: {
     heading: string;
     rivalName: string;
     rivalUrl: string;
     oursLabel: string;
-    rows: { criterion: string; ours: string; rival: string; rivalWins?: boolean }[];
+    rows: { criterion: string; ours: string; rival: string; rivalWins?: boolean; oursWins?: boolean }[];
     footnote: string;
   };
   cta: string;
@@ -1451,7 +1453,7 @@ export const solutionPages: SolutionPage[] = [
   },
   {
     key: "sudowrite-alternative",
-    updated: "2026-06-19",
+    updated: "2026-10-10",
     translations: {
       en: {
         slug: "sudowrite-alternative",
@@ -1472,7 +1474,7 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           { question: "Is DraftToDone available now?", answer: "Yes — DraftToDone is live. Open the app at app.drafttodone.io to start publishing today." },
-          { question: "Is DraftToDone better than Sudowrite for publishing?", answer: "They do different jobs. Sudowrite helps you write better fiction; DraftToDone turns a brief into a complete KDP product. Plenty of authors could use both." },
+          { question: "Is DraftToDone better than Sudowrite for publishing?", answer: "For publishing, yes: DraftToDone hands you the finished book, its cover and its KDP listing from one brief. Sudowrite helps you write the text yourself and stops there; its own FAQ says it is not intended to write for you." },
           { question: "Does DraftToDone write fiction too?", answer: "Yes, it generates full manuscripts, but its focus is the complete publishable product for KDP rather than line-by-line literary craft." }
         ],
         comparison: {
@@ -1481,15 +1483,16 @@ export const solutionPages: SolutionPage[] = [
           rivalUrl: "https://www.sudowrite.com/",
           oursLabel: "DraftToDone",
           rows: [
-          { criterion: "What it optimises for", ours: "A finished, uploadable product.", rival: "The quality of the prose itself.", rivalWins: true },
-          { criterion: "Prose control", ours: "Chapter-level briefs and quality gates.", rival: "Sentence-level rewriting, expansion and description tools built for fiction.", rivalWins: true },
-          { criterion: "Output", ours: "Manuscript, wraparound cover, KDP metadata and a print-ready PDF.", rival: "Text you then format, cover and publish yourself." },
-          { criterion: "Cover and metadata", ours: "Generated with the book.", rival: "Not covered." },
-          { criterion: "Human in the loop", ours: "You review and approve before publishing.", rival: "You write with it continuously; it is a collaborator, not a pipeline.", rivalWins: true },
-          { criterion: "Pricing", ours: "EUR 10 a book with no subscription, EUR 14.99 a week, or EUR 390 a year, per finished book credit.", rival: "Monthly plans priced by AI credits." },
-          { criterion: "Who it fits", ours: "Operators shipping many titles.", rival: "Novelists writing one book they care about.", rivalWins: true },
+          { criterion: "What you have at the end", ours: "A finished book: manuscript, 6×9 print PDF, front cover, full KDP wrap and the listing text.", rival: "A draft you wrote with its help. Formatting, cover and listing are up to you.", oursWins: true },
+          { criterion: "Time to a finished book", ours: "About an hour, unattended (30 min to 2.5 h).", rival: "As long as you take to write it, session by session.", oursWins: true },
+          { criterion: "Writing work on your side", ours: "One brief. You review the book, you don’t draft it.", rival: "You write; it suggests, rewrites and expands. Its own FAQ: “It’s not intended to write for you.”", oursWins: true },
+          { criterion: "Cover and KDP listing", ours: "Front cover and wrap sized to the page count, plus description, 7 keywords, 3 categories and A+ text.", rival: "Not part of the product.", oursWins: true },
+          { criterion: "Non-fiction guides", ours: "Built for them: practical guides of 270 to 500 printed pages.", rival: "Built for fiction, with its own story models.", oursWins: true },
+          { criterion: "Line-by-line prose control", ours: "Chapter-level brief and automatic checks; you edit the Word file afterwards.", rival: "Sentence-level Write, Rewrite, Describe and Expand tools, plus developmental and line edits on higher plans.", rivalWins: true },
+          { criterion: "Pricing", ours: "EUR 10 per finished book, no subscription needed. A failed generation costs nothing.", rival: "USD 10, 22 or 44 a month for AI credits." },
+          { criterion: "Who it fits", ours: "Publishers putting finished books on KDP.", rival: "Novelists who want to write every line themselves." },
           ],
-          footnote: "Sudowrite is a craft tool for novelists working line by line; DraftToDone is a production pipeline for a catalog. If you care about the prose of one book, the row below that says so is the one that matters. Checked against both products' public pages on 21 August 2026.",
+          footnote: "Sudowrite is a good writing partner for a novelist who wants to write every line. DraftToDone is for getting a finished, publishable book out of one brief. Checked against both products’ public pages on 10 October 2026.",
         },
         cta: "Open the app",
       },
@@ -1512,7 +1515,7 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           { question: "DraftToDone est-il disponible maintenant ?", answer: "Oui — DraftToDone est en ligne. Ouvrez l'app sur app.drafttodone.io pour commencer à publier dès aujourd'hui." },
-          { question: "DraftToDone est-il meilleur que Sudowrite pour publier ?", answer: "Ils font des choses différentes. Sudowrite aide à mieux écrire la fiction ; DraftToDone transforme un brief en produit KDP complet. Beaucoup d'auteurs pourraient utiliser les deux." },
+          { question: "DraftToDone est-il meilleur que Sudowrite pour publier ?", answer: "Pour publier, oui : DraftToDone vous remet le livre fini, sa couverture et sa fiche KDP à partir d'un seul brief. Sudowrite vous aide à écrire le texte vous-même et s'arrête là ; sa propre FAQ dit qu'il n'est pas fait pour écrire à votre place." },
           { question: "DraftToDone écrit-il aussi de la fiction ?", answer: "Oui, il génère des manuscrits complets, mais son objectif est le produit publiable complet pour KDP plutôt que le travail littéraire ligne à ligne." }
         ],
         comparison: {
@@ -1521,15 +1524,16 @@ export const solutionPages: SolutionPage[] = [
           rivalUrl: "https://www.sudowrite.com/",
           oursLabel: "DraftToDone",
           rows: [
-          { criterion: "Ce qu'il optimise", ours: "Un produit complet, à relire avant téléversement.", rival: "La qualité de la prose elle-même.", rivalWins: true },
-          { criterion: "Contrôle du texte", ours: "Briefs au niveau du chapitre et contrôles qualité.", rival: "Réécriture, expansion et description au niveau de la phrase, pensées pour la fiction.", rivalWins: true },
-          { criterion: "Sortie", ours: "Manuscrit, couverture complète, métadonnées KDP et PDF prêt à imprimer.", rival: "Du texte que vous formatez, habillez et publiez ensuite vous-même." },
-          { criterion: "Couverture et métadonnées", ours: "Générées avec le livre.", rival: "Non couvert." },
-          { criterion: "Humain dans la boucle", ours: "Vous relisez et validez avant publication.", rival: "Vous écrivez avec lui en continu ; c'est un collaborateur, pas une chaîne.", rivalWins: true },
-          { criterion: "Prix", ours: "10 € le livre sans abonnement, 14,99 € par semaine ou 390 € par an, par crédit de livre fini.", rival: "Forfaits mensuels tarifés en crédits IA." },
-          { criterion: "À qui ça convient", ours: "Aux opérateurs qui publient beaucoup de titres.", rival: "Aux romanciers qui écrivent un livre auquel ils tiennent.", rivalWins: true },
+          { criterion: "Ce que vous avez à la fin", ours: "Un livre fini : manuscrit, PDF d’impression 6×9, couverture, couverture KDP complète et texte de la fiche.", rival: "Un brouillon écrit avec son aide. Mise en page, couverture et fiche restent à faire.", oursWins: true },
+          { criterion: "Délai jusqu’au livre fini", ours: "Environ une heure, sans rien faire (de 30 min à 2 h 30).", rival: "Le temps qu’il vous faut pour l’écrire, séance après séance.", oursWins: true },
+          { criterion: "Travail d’écriture de votre côté", ours: "Un brief. Vous relisez le livre, vous ne le rédigez pas.", rival: "Vous écrivez ; il suggère, réécrit et développe. Sa propre FAQ : « It’s not intended to write for you » (il n’est pas fait pour écrire à votre place).", oursWins: true },
+          { criterion: "Couverture et fiche KDP", ours: "Couverture et couverture complète à la bonne épaisseur de dos, plus description, 7 mots-clés, 3 catégories et textes A+.", rival: "Hors du produit.", oursWins: true },
+          { criterion: "Guides pratiques (non-fiction)", ours: "Faits pour ça : des guides de 270 à 500 pages imprimées.", rival: "Fait pour la fiction, avec ses propres modèles d’histoire.", oursWins: true },
+          { criterion: "Contrôle de la prose, phrase par phrase", ours: "Brief par chapitre et contrôles automatiques ; vous retouchez le fichier Word ensuite.", rival: "Outils Write, Rewrite, Describe et Expand à la phrase, plus corrections de fond et de style sur les offres hautes.", rivalWins: true },
+          { criterion: "Prix", ours: "10 € par livre fini, sans abonnement obligatoire. Une génération ratée ne coûte rien.", rival: "10, 22 ou 44 $ par mois en crédits IA." },
+          { criterion: "Pour qui", ours: "Les éditeurs qui mettent des livres finis sur KDP.", rival: "Les romanciers qui veulent écrire chaque ligne eux-mêmes." },
           ],
-          footnote: "Sudowrite est un outil d'artisanat pour romanciers qui travaillent phrase par phrase ; DraftToDone est une chaîne de production pour un catalogue. Si la prose d'un seul livre vous importe, la ligne qui le dit est celle qui compte. Vérifié sur les pages publiques des deux produits le 21 août 2026.",
+          footnote: "Sudowrite est un bon partenaire d’écriture pour un romancier qui veut écrire chaque ligne. DraftToDone sert à obtenir un livre fini et publiable à partir d’un seul brief. Vérifié sur les pages publiques des deux produits le 10 octobre 2026.",
         },
         cta: "Ouvrir l'app",
       },
@@ -1552,7 +1556,7 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           { question: "DraftToDone è disponibile ora?", answer: "Sì — DraftToDone è online. Apri l'app su app.drafttodone.io e inizia a pubblicare oggi." },
-          { question: "DraftToDone è migliore di Sudowrite per pubblicare?", answer: "Fanno cose diverse. Sudowrite aiuta a scrivere meglio la narrativa; DraftToDone trasforma un brief in un prodotto KDP completo. Molti autori potrebbero usare entrambi." },
+          { question: "DraftToDone è migliore di Sudowrite per pubblicare?", answer: "Per pubblicare, sì: DraftToDone ti consegna il libro finito, la copertina e la scheda KDP da un solo brief. Sudowrite ti aiuta a scrivere il testo da solo e si ferma lì; la sua stessa FAQ dice che non è fatto per scrivere al posto tuo." },
           { question: "DraftToDone scrive anche narrativa?", answer: "Sì, genera manoscritti completi, ma il suo obiettivo è il prodotto pubblicabile completo per KDP più che il lavoro letterario riga per riga." }
         ],
         comparison: {
@@ -1561,15 +1565,16 @@ export const solutionPages: SolutionPage[] = [
           rivalUrl: "https://www.sudowrite.com/",
           oursLabel: "DraftToDone",
           rows: [
-          { criterion: "Cosa ottimizza", ours: "Un prodotto completo, da rivedere prima del caricamento.", rival: "La qualità della prosa stessa.", rivalWins: true },
-          { criterion: "Controllo del testo", ours: "Brief a livello di capitolo e controlli qualità.", rival: "Riscrittura, espansione e descrizione a livello di frase, pensate per la narrativa.", rivalWins: true },
-          { criterion: "Output", ours: "Manoscritto, copertina completa, metadati KDP e PDF pronto per la stampa.", rival: "Testo che poi impagini, vesti e pubblichi tu." },
-          { criterion: "Copertina e metadati", ours: "Generati con il libro.", rival: "Non coperto." },
-          { criterion: "Umano nel processo", ours: "Rivedi e approvi prima di pubblicare.", rival: "Ci scrivi insieme in continuo; è un collaboratore, non una pipeline.", rivalWins: true },
-          { criterion: "Prezzo", ours: "10 € a libro senza abbonamento, 14,99 € a settimana o 390 € all'anno, per credito di libro finito.", rival: "Piani mensili tariffati a crediti IA." },
-          { criterion: "A chi serve", ours: "Agli operatori che pubblicano molti titoli.", rival: "Ai romanzieri che scrivono un libro a cui tengono.", rivalWins: true },
+          { criterion: "Cosa hai alla fine", ours: "Un libro finito: manoscritto, PDF di stampa 6×9, copertina, copertina KDP completa e testo della scheda.", rival: "Una bozza scritta con il suo aiuto. Impaginazione, copertina e scheda restano a te.", oursWins: true },
+          { criterion: "Tempo fino al libro finito", ours: "Circa un’ora, senza fare nulla (da 30 min a 2 h 30).", rival: "Il tempo che ti serve per scriverlo, sessione dopo sessione.", oursWins: true },
+          { criterion: "Lavoro di scrittura da parte tua", ours: "Un brief. Rileggi il libro, non lo scrivi.", rival: "Scrivi tu; lui suggerisce, riscrive ed espande. La sua stessa FAQ: “It’s not intended to write for you” (non è fatto per scrivere al posto tuo).", oursWins: true },
+          { criterion: "Copertina e scheda KDP", ours: "Copertina e copertina completa con il dorso giusto, più descrizione, 7 parole chiave, 3 categorie e testi A+.", rival: "Non fa parte del prodotto.", oursWins: true },
+          { criterion: "Guide pratiche (saggistica)", ours: "Fatto per queste: guide da 270 a 500 pagine stampate.", rival: "Fatto per la narrativa, con i suoi modelli per le storie.", oursWins: true },
+          { criterion: "Controllo della prosa, frase per frase", ours: "Brief per capitolo e controlli automatici; ritocchi il file Word dopo.", rival: "Strumenti Write, Rewrite, Describe ed Expand a livello di frase, più editing strutturale e di stile nei piani alti.", rivalWins: true },
+          { criterion: "Prezzo", ours: "10 € per libro finito, senza abbonamento obbligatorio. Una generazione fallita non costa nulla.", rival: "10, 22 o 44 $ al mese in crediti IA." },
+          { criterion: "Per chi", ours: "Editori che mettono libri finiti su KDP.", rival: "Romanzieri che vogliono scrivere ogni riga da soli." },
           ],
-          footnote: "Sudowrite è uno strumento di mestiere per romanzieri che lavorano frase per frase; DraftToDone è una linea di produzione per un catalogo. Se ti importa della prosa di un solo libro, la riga che lo dice è quella che conta. Verificato sulle pagine pubbliche di entrambi il 21 agosto 2026.",
+          footnote: "Sudowrite è un buon partner di scrittura per un romanziere che vuole scrivere ogni riga. DraftToDone serve a ottenere un libro finito e pubblicabile da un solo brief. Verificato sulle pagine pubbliche di entrambi il 10 ottobre 2026.",
         },
         cta: "Apri l'app",
       },
@@ -1592,7 +1597,7 @@ export const solutionPages: SolutionPage[] = [
         ],
         faq: [
           { question: "Ist DraftToDone jetzt verfügbar?", answer: "Ja — DraftToDone ist live. Öffne die App unter app.drafttodone.io und starte noch heute." },
-          { question: "Ist DraftToDone besser als Sudowrite zum Veröffentlichen?", answer: "Sie machen Verschiedenes. Sudowrite hilft, bessere Belletristik zu schreiben; DraftToDone macht aus einem Brief ein komplettes KDP-Produkt. Viele Autoren könnten beide nutzen." },
+          { question: "Ist DraftToDone besser als Sudowrite zum Veröffentlichen?", answer: "Zum Veröffentlichen ja: DraftToDone liefert aus einem Briefing das fertige Buch, sein Cover und sein KDP-Listing. Sudowrite hilft dir, den Text selbst zu schreiben, und hört dort auf; die eigene FAQ sagt, es soll nicht für dich schreiben." },
           { question: "Schreibt DraftToDone auch Belletristik?", answer: "Ja, es erzeugt vollständige Manuskripte, aber der Fokus liegt auf dem kompletten KDP-Produkt statt auf literarischer Feinarbeit Zeile für Zeile." }
         ],
         comparison: {
@@ -1601,15 +1606,16 @@ export const solutionPages: SolutionPage[] = [
           rivalUrl: "https://www.sudowrite.com/",
           oursLabel: "DraftToDone",
           rows: [
-          { criterion: "Worauf es optimiert", ours: "Ein fertiges, hochladbares Produkt.", rival: "Die Qualität der Prosa selbst.", rivalWins: true },
-          { criterion: "Textkontrolle", ours: "Briefings auf Kapitelebene und Qualitätsgates.", rival: "Umschreiben, Ausbauen und Beschreiben auf Satzebene, gebaut für Belletristik.", rivalWins: true },
-          { criterion: "Ergebnis", ours: "Manuskript, kompletter Umschlag, KDP-Metadaten und druckfertiges PDF.", rival: "Text, den du danach selbst setzt, gestaltest und veröffentlichst." },
-          { criterion: "Cover und Metadaten", ours: "Werden mit dem Buch erzeugt.", rival: "Nicht abgedeckt." },
-          { criterion: "Mensch im Prozess", ours: "Du prüfst und gibst frei, bevor veröffentlicht wird.", rival: "Du schreibst durchgehend damit; es ist eine Mitarbeiterin, keine Straße.", rivalWins: true },
-          { criterion: "Preis", ours: "10 € pro Buch ohne Abo, 14,99 € pro Woche oder 390 € pro Jahr, je fertigem Buch-Guthaben.", rival: "Monatspläne, abgerechnet in KI-Credits." },
-          { criterion: "Für wen", ours: "Für Betreiber, die viele Titel ausliefern.", rival: "Für Romanautorinnen mit einem Buch, das ihnen am Herzen liegt.", rivalWins: true },
+          { criterion: "Was du am Ende hast", ours: "Ein fertiges Buch: Manuskript, 6×9-Druck-PDF, Vorderseite, komplettes KDP-Cover und Listing-Text.", rival: "Einen Entwurf, den du mit seiner Hilfe geschrieben hast. Satz, Cover und Listing bleiben bei dir.", oursWins: true },
+          { criterion: "Zeit bis zum fertigen Buch", ours: "Etwa eine Stunde, ohne dein Zutun (30 Min. bis 2,5 Std.).", rival: "So lange, wie du zum Schreiben brauchst, Sitzung für Sitzung.", oursWins: true },
+          { criterion: "Schreibarbeit auf deiner Seite", ours: "Ein Briefing. Du prüfst das Buch, du schreibst es nicht.", rival: "Du schreibst; es schlägt vor, formuliert um und erweitert. Die eigene FAQ: „It’s not intended to write for you“ (es soll nicht für dich schreiben).", oursWins: true },
+          { criterion: "Cover und KDP-Listing", ours: "Vorderseite und Umschlag passend zur Seitenzahl, dazu Beschreibung, 7 Keywords, 3 Kategorien und A+-Texte.", rival: "Nicht Teil des Produkts.", oursWins: true },
+          { criterion: "Sachbuch-Ratgeber", ours: "Dafür gebaut: Ratgeber mit 270 bis 500 gedruckten Seiten.", rival: "Für Belletristik gebaut, mit eigenen Story-Modellen.", oursWins: true },
+          { criterion: "Kontrolle über die Prosa, Satz für Satz", ours: "Briefing pro Kapitel und automatische Prüfungen; du überarbeitest die Word-Datei danach.", rival: "Write-, Rewrite-, Describe- und Expand-Werkzeuge auf Satzebene, dazu Struktur- und Stillektorat in den höheren Tarifen.", rivalWins: true },
+          { criterion: "Preis", ours: "10 € pro fertigem Buch, ohne Abo-Pflicht. Eine fehlgeschlagene Generierung kostet nichts.", rival: "10, 22 oder 44 $ im Monat für KI-Credits." },
+          { criterion: "Für wen", ours: "Verlage, die fertige Bücher auf KDP bringen.", rival: "Romanautoren, die jede Zeile selbst schreiben wollen." },
           ],
-          footnote: "Sudowrite ist ein Handwerkszeug für Romanautorinnen, die Satz für Satz arbeiten; DraftToDone ist eine Produktionsstraße für einen Katalog. Wenn dir die Prosa eines einzelnen Buches wichtig ist, zählt genau die Zeile, die das sagt. Geprüft an den öffentlichen Seiten beider Produkte am 21. August 2026.",
+          footnote: "Sudowrite ist ein guter Schreibpartner für Romanautoren, die jede Zeile selbst schreiben wollen. DraftToDone liefert aus einem einzigen Briefing ein fertiges, veröffentlichbares Buch. Geprüft an den öffentlichen Seiten beider Produkte am 10. Oktober 2026.",
         },
         cta: "App öffnen",
       },
