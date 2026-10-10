@@ -3,18 +3,31 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+export type FlipPage = { src: string; caption: string; alt: string };
+export type FlipBook = {
+  id: string;
+  title: string;
+  /** "Novel · 142 pages". */
+  meta: string;
+  /** Pages in the printed book (the viewer shows a selection). */
+  pageCount: number;
+  cover: string;
+  pages: FlipPage[];
+};
 export type FlipbookCopy = {
   label: string;
+  /** Label of the row of covers that switches book. */
+  shelf: string;
   prev: string;
   next: string;
-  /** Tokens {n} and {total}. */
+  /** Tokens {n}, {total} and {pages}. */
   counter: string;
-  pages: { src: string; caption: string; alt: string }[];
+  books: FlipBook[];
 };
 
 /**
- * Leaf through the real sample book: cover, front matter, a chapter opener,
- * an exercise, two scripts, a checklist, the conclusion.
+ * A shelf of real books the engine produced, each to leaf through: cover,
+ * front matter, chapter openers, pages from the middle and the end.
  *
  * Every page here was read before being chosen, as generated, not retouched.
  * Pages whose AI illustrations print garbled lettering were left out rather
@@ -22,8 +35,10 @@ export type FlipbookCopy = {
  * behind.
  */
 export function SampleFlipbook({ copy }: { copy: FlipbookCopy }) {
+  const [b, setB] = useState(0);
   const [i, setI] = useState(0);
-  const total = copy.pages.length;
+  const book = copy.books[b];
+  const total = book.pages.length;
   const go = useCallback((d: number) => setI((v) => Math.min(total - 1, Math.max(0, v + d))), [total]);
   const root = useRef<HTMLDivElement>(null);
   const touchX = useRef<number | null>(null);
@@ -40,7 +55,7 @@ export function SampleFlipbook({ copy }: { copy: FlipbookCopy }) {
     return () => el.removeEventListener("keydown", onKey);
   }, [go]);
 
-  const page = copy.pages[i];
+  const page = book.pages[i];
   const btn =
     "grid h-11 w-11 shrink-0 place-items-center rounded-full border border-line bg-paper text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-ink/25 disabled:pointer-events-none disabled:opacity-30";
 
@@ -52,6 +67,30 @@ export function SampleFlipbook({ copy }: { copy: FlipbookCopy }) {
       aria-label={copy.label}
       className="mx-auto mt-10 max-w-xl outline-none"
     >
+      {/* The shelf: one cover per book. */}
+      <div role="group" aria-label={copy.shelf} className="mb-7 flex justify-center gap-2.5 overflow-x-auto pb-1">
+        {copy.books.map((bk, k) => (
+          <button
+            key={bk.id}
+            type="button"
+            onClick={() => {
+              setB(k);
+              setI(0);
+            }}
+            aria-label={bk.title}
+            aria-pressed={k === b}
+            className={`w-[62px] shrink-0 overflow-hidden rounded-[4px] border transition sm:w-[72px] ${
+              k === b ? "border-ink ring-2 ring-mint/50" : "border-line opacity-70 hover:-translate-y-0.5 hover:opacity-100"
+            }`}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={bk.cover} alt="" loading="lazy" decoding="async" className="aspect-[2/3] w-full object-cover" />
+          </button>
+        ))}
+      </div>
+      <p className="mb-4 text-center font-display text-xl font-medium text-ink">{book.title}</p>
+      <p className="-mt-3 mb-5 text-center text-[12px] text-faint">{book.meta}</p>
+
       <div
         className="relative"
         onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
@@ -85,12 +124,12 @@ export function SampleFlipbook({ copy }: { copy: FlipbookCopy }) {
         {page.caption}
       </p>
       <p className="mt-1 text-center text-[12px] tabular-nums text-faint">
-        {copy.counter.replace("{n}", String(i + 1)).replace("{total}", String(total))}
+        {copy.counter.replace("{n}", String(i + 1)).replace("{total}", String(total)).replace("{pages}", String(book.pageCount))}
       </p>
 
       {/* Every page, one tap away. Preloads them too, so flipping never waits. */}
       <div className="mt-5 flex justify-center gap-1.5 overflow-x-auto pb-1">
-        {copy.pages.map((p, k) => (
+        {book.pages.map((p, k) => (
           <button
             key={p.src}
             type="button"
