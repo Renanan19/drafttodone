@@ -76,6 +76,8 @@ export type HomeCopy = {
     pages: { src: string; alt: string; caption: string }[];
     /** The leaf-through viewer (app/sample-flipbook.tsx): real pages, read before being chosen. */
     flip: FlipbookCopy;
+    /** A wall of covers the engine drew from one-line briefs (public/sample/wall). */
+    wall: { h3: string; caption: string };
     facts: string[];
     note: string;
     cta: string;
@@ -250,6 +252,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
           },
         ],
       },
+      wall: { h3: "Fifteen briefs, fifteen covers", caption: "Each cover drawn by DraftToDone from a one-line niche brief, title and pen name included, shown as generated. Sample previews, not published books." },
       facts: ["6×9 interior PDF, ready for KDP", "Editable Word manuscript", "Front cover + full KDP wrap", "Description, 7 keywords, 3 categories", "Invented pen name"],
       note: "The pen name was invented by the engine. Review every book before you publish it.",
       cta: "Preview my book, free",
@@ -477,6 +480,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
           },
         ],
       },
+      wall: { h3: "Quinze briefs, quinze couvertures", caption: "Chaque couverture est dessinée par DraftToDone à partir d'un brief d'une ligne, titre et nom de plume compris, montrée telle quelle. Des aperçus d'exemple, pas des livres publiés." },
       facts: ["PDF intérieur 6×9, prêt pour KDP", "Manuscrit Word modifiable", "Couverture + PDF KDP complet", "Description, 7 mots-clés, 3 catégories", "Nom de plume inventé"],
       note: "Cet exemple est en anglais ; DraftToDone écrit aussi en français. Le nom de plume a été inventé par le moteur. Relisez chaque livre avant de le publier.",
       cta: "Voir mon aperçu gratuit",
@@ -704,6 +708,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
           },
         ],
       },
+      wall: { h3: "Quindici brief, quindici copertine", caption: "Ogni copertina è disegnata da DraftToDone a partire da un brief di una riga, titolo e pseudonimo compresi, mostrata così com'è. Anteprime di esempio, non libri pubblicati." },
       facts: ["PDF interno 6×9, pronto per KDP", "Manoscritto Word modificabile", "Copertina + PDF KDP completo", "Descrizione, 7 keyword, 3 categorie", "Pseudonimo inventato"],
       note: "Questo esempio è in inglese. Lo pseudonimo è stato inventato dal motore. Rileggi ogni libro prima di pubblicarlo.",
       cta: "Vedi l'anteprima gratis",
@@ -931,6 +936,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
           },
         ],
       },
+      wall: { h3: "Fünfzehn Briefings, fünfzehn Cover", caption: "Jedes Cover hat DraftToDone aus einem einzeiligen Nischen-Briefing gezeichnet, Titel und Pseudonym inklusive, unverändert gezeigt. Beispielvorschauen, keine veröffentlichten Bücher." },
       facts: ["6×9-Innenteil-PDF, bereit für KDP", "Bearbeitbares Word-Manuskript", "Cover + vollständiges KDP-PDF", "Beschreibung, 7 Keywords, 3 Kategorien", "Erfundenes Pseudonym"],
       note: "Dieses Beispiel ist auf Englisch. Das Pseudonym hat die Engine erfunden. Prüfen Sie jedes Buch, bevor Sie es veröffentlichen.",
       cta: "Gratis-Vorschau ansehen",
@@ -1065,3 +1071,23 @@ export function getHomeAlternates() {
     "x-default": "/",
   };
 }
+
+
+/** Covers on the sample wall: drawn by the cover engine from one-line briefs (2026-10-10), not edited. */
+export const SAMPLE_WALL: { src: string; alt: string }[] = [
+  { src: "/sample/wall/01.webp", alt: "The Perfect Replacement by Sarah J. Miller" },
+  { src: "/sample/wall/02.webp", alt: "Murder at Low Tide by Eleanor H. Sterling" },
+  { src: "/sample/wall/03.webp", alt: "Where the Embers Bloom by Elena Hayes" },
+  { src: "/sample/wall/04.webp", alt: "The Cartographer’s Reach by Edwin Kemble" },
+  { src: "/sample/wall/05.webp", alt: "The Last Harvest at Miller’s Creek by Leah Novak" },
+  { src: "/sample/wall/06.webp", alt: "Henry’s Hidden Note by Daniel Walsh" },
+  { src: "/sample/wall/07.webp", alt: "The Infinite Pause by Nathan Price" },
+  { src: "/sample/wall/08.webp", alt: "The 30s Pivot by Theo Tate" },
+  { src: "/sample/wall/09.webp", alt: "The 30-Minute Mediterranean Table by Elena Rossi" },
+  { src: "/sample/wall/10.webp", alt: "The Sourdough Starter Handbook by Sarah Jenkins" },
+  { src: "/sample/wall/11.webp", alt: "The Europa Silence by Kevin Bishop" },
+  { src: "/sample/wall/12.webp", alt: "The Cipher’s Shadow by Frank Grant" },
+  { src: "/sample/wall/13.webp", alt: "Stronger Every Decade by Nina Shaw" },
+  { src: "/sample/wall/14.webp", alt: "The Last Ridge by Carla Larsen" },
+  { src: "/sample/wall/15.webp", alt: "The Etsy Blueprint by Theo Doyle" },
+];

@@ -19,6 +19,7 @@ import {
   APP_SIGNUP_URL,
   homePath,
   homeUrl,
+  SAMPLE_WALL,
   type HomeCopy,
 } from "./home-content";
 import { HeroBrief } from "./hero-brief";
@@ -366,6 +367,26 @@ function SampleSection({ sample }: { sample: HomeCopy["sample"] }) {
         </figure>
 
         <SampleFlipbook copy={sample.flip} />
+
+        <div className="mx-auto mt-16 max-w-5xl">
+          <h3 className="text-center font-display text-[26px] font-medium tracking-tight text-ink">{sample.wall.h3}</h3>
+          <p className="mx-auto mt-2 max-w-2xl text-center text-[13px] text-faint">{sample.wall.caption}</p>
+          <ul className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-5">
+            {SAMPLE_WALL.map((c) => (
+              <li key={c.src}>
+                <img
+                  src={c.src}
+                  alt={c.alt}
+                  width={400}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                  className="aspect-[2/3] h-auto w-full rounded-md shadow-sm ring-1 ring-black/5"
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <ul className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-2">
           {sample.facts.map((fact) => (
