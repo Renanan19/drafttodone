@@ -1095,5 +1095,5 @@ export const SAMPLE_WALL: { src: string; alt: string }[] = [
   { src: "/sample/wall/12.webp", alt: "The Cipher’s Shadow by Frank Grant" },
   { src: "/sample/wall/13.webp", alt: "Stronger Every Decade by Nina Shaw" },
   { src: "/sample/wall/14.webp", alt: "The Last Ridge by Carla Larsen" },
-  { src: "/sample/wall/15.webp", alt: "The Etsy Blueprint by Theo Doyle" },
+  { src: "/sample/wall/15.webp", alt: "Winged Neighbors by Greg Grant" },
 ];
