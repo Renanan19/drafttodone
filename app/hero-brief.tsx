@@ -84,7 +84,7 @@ export function HeroBrief({
         action={SIGNUP_ACTION}
         method="get"
         onSubmit={onSubmit}
-        className="rounded-2xl border border-line bg-paper p-2 shadow-[0_20px_60px_-30px_rgba(20,40,32,0.35)] transition focus-within:border-ink/25 focus-within:ring-4 focus-within:ring-mint/15"
+        className="rounded-xl border border-line bg-paper p-2 shadow-[0_16px_48px_-30px_rgba(20,40,32,0.3)] transition focus-within:border-ink/30 focus-within:ring-4 focus-within:ring-mint/15"
       >
         <input type="hidden" name="utm_source" value="drafttodone.io" />
         <input type="hidden" name="utm_medium" value="owned_web" />
@@ -106,13 +106,13 @@ export function HeroBrief({
           onChange={(e) => setBrief(e.target.value)}
           onKeyDown={onKeyDown}
           placeholder={copy.placeholder}
-          className="block w-full resize-none rounded-xl bg-transparent px-4 pt-3 text-base leading-relaxed text-ink outline-none placeholder:text-faint sm:text-[17px]"
+          className="block w-full resize-none rounded-md bg-transparent px-4 pt-3 text-base leading-relaxed text-ink outline-none placeholder:text-faint sm:text-[17px]"
         />
         <div className="flex items-center justify-between gap-3 px-2 pb-1 pt-2">
           <span className="hidden text-[12px] text-faint sm:inline">{copy.label}</span>
           <button
             type="submit"
-            className="group ml-auto inline-flex items-center justify-center gap-2 rounded-xl bg-ink px-5 py-3 text-[15px] font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft active:translate-y-0"
+            className="group ml-auto inline-flex items-center justify-center gap-2 rounded-md bg-ink px-5 py-3 text-[15px] font-medium text-paper transition-colors duration-200 hover:bg-ink-soft"
           >
             {copy.submit}
             <ArrowRight
@@ -135,7 +135,7 @@ export function HeroBrief({
               setBrief(example);
               fieldRef.current?.focus();
             }}
-            className="rounded-full border border-line bg-paper-2 px-3 py-1.5 text-[13px] text-muted transition-colors hover:border-ink/25 hover:text-ink"
+            className="rounded-full border border-line px-3 py-1.5 text-[13px] text-muted transition-colors hover:border-ink/25 hover:text-ink"
           >
             {example}
           </button>

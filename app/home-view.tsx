@@ -1,18 +1,8 @@
 import {
   ArrowRight,
-  BookOpen,
-  Calculator,
   Check,
-  FileText,
-  Image as ImageIcon,
-  Layers,
-  Search,
-  Settings,
   Share2,
   ShieldCheck,
-  Sparkles,
-  Wand2,
-  type LucideIcon,
 } from "lucide-react";
 import { blogIndexPath, locales, SITE_URL, type Locale } from "./blog-content";
 import {
@@ -45,7 +35,7 @@ import {
 function Logo({ locale }: { locale: Locale }) {
   return (
     <a href={homePath(locale)} className="flex items-center gap-2.5">
-      <span className="grid h-8 w-8 place-items-center rounded-[9px] bg-ink">
+      <span className="grid h-8 w-8 place-items-center rounded-[3px] bg-ink">
         <Check className="h-4 w-4 text-mint-soft" strokeWidth={3} />
       </span>
       <span className="font-display text-[19px] font-medium tracking-tight text-ink">
@@ -60,14 +50,14 @@ function Logo({ locale }: { locale: Locale }) {
 /* -------------------------------------------------------------------------- */
 function LanguageLinks({ locale }: { locale: Locale }) {
   return (
-    <nav className="inline-flex items-center rounded-full border border-line bg-paper p-0.5 text-[12px] font-medium">
+    <nav className="inline-flex items-center gap-0.5 text-[12px] font-medium">
       {locales.map((l) => (
         <a
           key={l}
           href={homePath(l)}
           aria-current={locale === l ? "page" : undefined}
-          className={`rounded-full px-2.5 py-1 uppercase tracking-wide transition-colors ${
-            locale === l ? "bg-ink text-paper" : "text-muted hover:text-ink"
+          className={`px-2 py-1 uppercase tracking-wide transition-colors ${
+            locale === l ? "text-ink underline decoration-ink underline-offset-[6px]" : "text-muted hover:text-ink"
           }`}
         >
           {l}
@@ -80,12 +70,22 @@ function LanguageLinks({ locale }: { locale: Locale }) {
 /* -------------------------------------------------------------------------- */
 /*  Primary CTA → the live app                                                */
 /* -------------------------------------------------------------------------- */
-function OpenAppButton({ label, size = "lg" }: { label: string; size?: "lg" | "md" }) {
+function OpenAppButton({
+  label,
+  size = "lg",
+  tone = "dark",
+}: {
+  label: string;
+  size?: "lg" | "md";
+  tone?: "dark" | "light";
+}) {
   const pad = size === "lg" ? "px-7 py-4 text-base" : "px-6 py-3.5 text-[15px]";
   return (
     <a
       href="#brief"
-      className={`group inline-flex items-center justify-center gap-2 rounded-xl bg-ink ${pad} font-medium text-paper shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-ink-soft active:translate-y-0`}
+      className={`group inline-flex items-center justify-center gap-2 rounded-md ${pad} font-medium transition-colors duration-200 ${
+        tone === "dark" ? "bg-ink text-paper hover:bg-ink-soft" : "bg-paper text-ink hover:bg-paper-2"
+      }`}
     >
       {label}
       <ArrowRight
@@ -105,7 +105,7 @@ function FactsStrip({ facts }: { facts: HomeCopy["facts"] }) {
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-6">
         <dl className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-4">
           {facts.items.map((f, i) => (
-            <div key={f.label} data-reveal style={{ transitionDelay: `${i * 70}ms` }} className="reveal-up text-center">
+            <div key={f.label} data-reveal style={{ transitionDelay: `${i * 70}ms` }} className="reveal-up text-center md:border-l md:border-line md:first:border-0">
               <dt className="font-display text-[40px] font-medium leading-none tracking-[-0.02em] text-ink">
                 {f.value}
               </dt>
@@ -127,7 +127,7 @@ function HowSection({ how, cta }: { how: HomeCopy["how"]; cta: string }) {
     <section id="how" className="relative border-t border-line/70">
       <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p data-reveal className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep">
+          <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
             {how.eyebrow}
           </p>
           <h2
@@ -138,21 +138,21 @@ function HowSection({ how, cta }: { how: HomeCopy["how"]; cta: string }) {
             {how.h2}
           </h2>
         </div>
-        <ol className="mt-14 grid gap-5 md:grid-cols-3">
+        <ol className="mt-14 grid gap-x-10 gap-y-10 md:grid-cols-3">
           {how.steps.map((step, i) => (
             <li
               key={step.title}
               data-reveal
               style={{ transitionDelay: `${i * 90}ms` }}
-              className="reveal-up relative rounded-2xl border border-line bg-paper-2 p-7"
+              className="reveal-up relative border-t border-ink/80 pt-5"
             >
-              <span className="grid h-10 w-10 place-items-center rounded-full bg-ink font-display text-lg text-paper">
+              <span className="block font-display text-[44px] leading-none text-ink">
                 {i + 1}
               </span>
-              <h3 className="mt-5 font-display text-2xl font-medium text-ink">{step.title}</h3>
+              <h3 className="mt-4 font-display text-2xl font-medium text-ink">{step.title}</h3>
               <p className="mt-3 text-[15px] leading-relaxed text-muted">{step.text}</p>
               {i === 1 && (
-                <span className="mt-4 inline-flex rounded-full bg-mint-soft px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-mint-deep">
+                <span className="mt-4 inline-flex rounded-sm border border-mint px-2 py-0.5 text-[11px] font-medium uppercase tracking-wide text-mint-deep">
                   0 €
                 </span>
               )}
@@ -172,75 +172,47 @@ function HowSection({ how, cta }: { how: HomeCopy["how"]; cta: string }) {
 /* -------------------------------------------------------------------------- */
 function FeatureCard({
   index,
-  icon: Icon,
   title,
   text,
   delay,
 }: {
   index: string;
-  icon: LucideIcon;
   title: string;
   text: string;
   delay: number;
 }) {
   return (
-    <article
-      data-reveal
-      style={{ transitionDelay: `${delay}ms` }}
-      className="reveal-up group relative rounded-2xl border border-line bg-paper p-7 transition-shadow duration-300 hover:shadow-[0_24px_60px_-30px_rgba(16,24,40,0.45)]"
-    >
-      <div className="flex items-center justify-between">
-        <span className="grid h-12 w-12 place-items-center rounded-xl bg-paper-3 text-ink transition-colors duration-300 group-hover:bg-mint-soft group-hover:text-mint-deep">
-          <Icon className="h-5 w-5" strokeWidth={1.75} />
-        </span>
-        <span className="font-display text-sm italic text-faint">{index}</span>
-      </div>
-      <h3 className="mt-6 font-display text-xl font-medium text-ink">{title}</h3>
+    <article data-reveal style={{ transitionDelay: `${delay}ms` }} className="reveal-up border-t border-ink/80 pt-5">
+      <span className="font-display text-sm italic text-faint">{index}</span>
+      <h3 className="mt-3 font-display text-xl font-medium text-ink">{title}</h3>
       <p className="mt-3 text-[15px] leading-relaxed text-muted">{text}</p>
     </article>
   );
 }
 
 function ProductDemo({ demo }: { demo: HomeCopy["demo"] }) {
-  const artifactIcons: LucideIcon[] = [FileText, ImageIcon, Search, ShieldCheck];
-
   return (
     <div className="reveal-load relative mx-auto mt-14 max-w-full text-left sm:max-w-5xl" style={{ animationDelay: "420ms" }}>
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-[min(820px,94vw)] -translate-x-1/2 -translate-y-1/2 rounded-[100%] bg-[radial-gradient(closest-side,rgba(126,224,203,0.45),rgba(191,233,255,0.2),transparent)] blur-2xl"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-[min(820px,94vw)] -translate-x-1/2 -translate-y-1/2 rounded-[100%] bg-[radial-gradient(closest-side,rgba(126,224,203,0.4),rgba(191,233,255,0.18),transparent)] blur-2xl"
       />
 
-      <div className="relative grid min-w-0 gap-4 lg:grid-cols-[0.82fr_1.18fr]">
-        <div className="min-w-0 rounded-[22px] border border-line bg-paper p-5 shadow-[0_24px_70px_-42px_rgba(16,24,40,0.45)] sm:p-6">
-          <div className="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.18em] text-mint-deep">
-            <Layers className="h-4 w-4" strokeWidth={2} />
-            {demo.inputLabel}
-          </div>
-          <p className="mt-5 text-balance font-display text-2xl font-medium leading-tight text-ink sm:text-3xl">
-            {demo.input}
-          </p>
-          <div className="mt-6 grid gap-2.5">
-            {demo.inputFacts.map((fact) => (
-              <p key={fact} className="flex items-center gap-2.5 text-sm text-muted">
-                <Check className="h-4 w-4 shrink-0 text-mint" strokeWidth={3} />
-                {fact}
-              </p>
-            ))}
-          </div>
-        </div>
-
-        <div className="min-w-0 overflow-hidden rounded-[22px] border border-ink bg-ink text-paper shadow-[0_26px_80px_-42px_rgba(16,24,40,0.65)]">
-          <div className="flex items-center justify-between border-b border-white/10 px-5 py-3 text-[12px] text-paper/55">
-            <div className="flex gap-1.5">
-              <span className="h-2.5 w-2.5 rounded-full bg-peach" />
-              <span className="h-2.5 w-2.5 rounded-full bg-mint-soft" />
-              <span className="h-2.5 w-2.5 rounded-full bg-aqua" />
-            </div>
-            <span>{demo.outputLabel}</span>
+      <div className="relative min-w-0 rounded-2xl border border-line bg-paper shadow-[0_28px_80px_-44px_rgba(16,24,40,0.45)]">
+        <div className="grid min-w-0 gap-8 p-6 sm:p-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-0">
+          <div className="min-w-0 lg:pr-10">
+            <p className="text-[13px] font-medium text-mint-deep">{demo.inputLabel}</p>
+            <p className="mt-3 text-balance font-display text-2xl font-medium leading-tight text-ink sm:text-3xl">
+              {demo.input}
+            </p>
+            <ul className="mt-5 grid gap-1.5 text-sm text-muted">
+              {demo.inputFacts.map((fact) => (
+                <li key={fact}>{fact}</li>
+              ))}
+            </ul>
           </div>
 
-          <div className="grid gap-6 p-5 sm:grid-cols-[auto_1fr] sm:p-6">
+          <div className="grid min-w-0 gap-6 sm:grid-cols-[auto_1fr] sm:gap-8 lg:border-l lg:border-line lg:pl-10">
             <div className="flex justify-center sm:block">
               <img
                 src={demo.outputCover}
@@ -248,43 +220,34 @@ function ProductDemo({ demo }: { demo: HomeCopy["demo"] }) {
                 width={400}
                 height={600}
                 decoding="async"
-                className="aspect-[2/3] h-auto w-32 rounded-md shadow-[0_18px_40px_-18px_rgba(0,0,0,0.7)] ring-1 ring-white/10 sm:w-36"
+                className="aspect-[2/3] h-auto w-32 rounded-[3px] shadow-[0_18px_36px_-16px_rgba(20,16,8,0.5)] ring-1 ring-black/10 sm:w-36"
               />
             </div>
             <div className="min-w-0">
+              <p className="text-[13px] font-medium text-mint-deep">{demo.outputLabel}</p>
               {/* A sample book's title inside the demo, not a section of the page. */}
-              <p className="font-display text-3xl font-medium leading-tight text-paper">
-                {demo.outputTitle}
-              </p>
-              <p className="mt-3 text-[15px] leading-relaxed text-paper/68">{demo.outputSubtitle}</p>
-              <div className="mt-6 grid gap-2 sm:grid-cols-2">
-                {demo.artifacts.map((artifact, index) => {
-                  const Icon = artifactIcons[index] ?? Check;
-                  return (
-                    <div
-                      key={artifact}
-                      className="flex min-h-16 items-start gap-3 rounded-xl border border-white/10 bg-white/[0.06] p-3"
-                    >
-                      <Icon className="mt-0.5 h-4 w-4 shrink-0 text-mint-soft" strokeWidth={2.2} />
-                      <span className="text-sm leading-snug text-paper/78">{artifact}</span>
-                    </div>
-                  );
-                })}
-              </div>
+              <p className="mt-3 font-display text-3xl font-medium leading-tight text-ink">{demo.outputTitle}</p>
+              <p className="mt-3 text-[15px] leading-relaxed text-muted">{demo.outputSubtitle}</p>
+              <ul className="mt-5 text-sm text-ink-soft">
+                {demo.artifacts.map((artifact) => (
+                  <li key={artifact} className="border-t border-line py-2.5 last:border-b">
+                    {artifact}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="relative mt-4 grid min-w-0 gap-3 sm:grid-cols-3">
-        {demo.metrics.map((metric) => (
-          <div key={metric.label} className="rounded-2xl border border-line bg-paper/90 px-5 py-4 text-center shadow-sm backdrop-blur">
-            <p className="font-display text-3xl font-medium leading-none text-ink">{metric.value}</p>
-            <p className="mt-1 text-[12px] font-medium uppercase tracking-[0.16em] text-faint">
-              {metric.label}
-            </p>
-          </div>
-        ))}
+        <dl className="grid grid-cols-3 divide-x divide-line border-t border-line">
+          {demo.metrics.map((metric) => (
+            <div key={metric.label} className="px-4 py-5 text-center">
+              <dt className="sr-only">{metric.label}</dt>
+              <dd className="font-display text-3xl font-medium leading-none text-ink">{metric.value}</dd>
+              <p className="mt-2 text-[12px] text-faint">{metric.label}</p>
+            </div>
+          ))}
+        </dl>
       </div>
     </div>
   );
@@ -305,7 +268,7 @@ function SampleSection({ sample }: { sample: HomeCopy["sample"] }) {
     <section id="sample" className="relative border-t border-line/70">
       <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p data-reveal className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep">
+          <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
             {sample.eyebrow}
           </p>
           <h2
@@ -325,7 +288,7 @@ function SampleSection({ sample }: { sample: HomeCopy["sample"] }) {
         </div>
 
         <figure data-reveal style={{ transitionDelay: "160ms" }} className="reveal-up mx-auto mt-14 max-w-5xl">
-          <div className="overflow-hidden rounded-[20px] border border-line bg-paper-2 p-3 shadow-[0_30px_80px_-44px_rgba(16,24,40,0.55)] sm:p-5">
+          <div className="overflow-hidden border border-line bg-paper-2 p-3 sm:p-5">
             <img
               src="/sample/wrap-v2.webp"
               alt={sample.wrapAlt}
@@ -333,7 +296,7 @@ function SampleSection({ sample }: { sample: HomeCopy["sample"] }) {
               height={1032}
               loading="lazy"
               decoding="async"
-              className="h-auto w-full rounded-lg"
+              className="h-auto w-full"
             />
           </div>
           <figcaption className="mt-3 text-center text-[13px] text-faint">{sample.wrapCaption}</figcaption>
@@ -354,18 +317,18 @@ function SampleSection({ sample }: { sample: HomeCopy["sample"] }) {
                   height={600}
                   loading="lazy"
                   decoding="async"
-                  className="aspect-[2/3] h-auto w-full rounded-md shadow-sm ring-1 ring-black/5"
+                  className="aspect-[2/3] h-auto w-full rounded-[2px] ring-1 ring-black/10"
                 />
               </li>
             ))}
           </ul>
         </div>
 
-        <ul className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-2">
+        <ul className="mx-auto mt-12 flex max-w-3xl flex-wrap justify-center gap-x-7 gap-y-2 border-t border-line pt-5">
           {sample.facts.map((fact) => (
             <li
               key={fact}
-              className="inline-flex items-center gap-1.5 rounded-full border border-line bg-paper-2 px-3 py-1.5 text-[13px] font-medium text-ink-soft"
+              className="inline-flex items-center gap-2 text-[14px] text-ink-soft"
             >
               <Check className="h-3.5 w-3.5 text-mint" strokeWidth={3} />
               {fact}
@@ -387,7 +350,7 @@ function ProofSection({ proof }: { proof: HomeCopy["proof"] }) {
     <section className="relative border-t border-line/70 bg-paper-2">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-24 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <div>
-          <p data-reveal className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep">
+          <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
             {proof.eyebrow}
           </p>
           <h2
@@ -409,14 +372,14 @@ function ProofSection({ proof }: { proof: HomeCopy["proof"] }) {
         <div
           data-reveal
           style={{ transitionDelay: "160ms" }}
-          className="reveal-up rounded-[24px] border border-line bg-paper p-7 shadow-[0_24px_70px_-42px_rgba(16,24,40,0.48)] sm:p-8"
+          className="reveal-up border-t border-ink pt-6"
         >
           {/* The founder's story is told in the origin section just above; this
               card carries what the reader gets from it, not a second retelling. */}
           <div className="grid gap-5">
             {proof.points.map((point) => (
               <p key={point} className="flex gap-4 font-display text-xl leading-snug text-ink-soft sm:text-2xl">
-                <ShieldCheck className="mt-1 h-5 w-5 shrink-0 text-mint" strokeWidth={2.4} />
+                <span aria-hidden className="mt-3 h-px w-5 shrink-0 bg-ink" />
                 {point}
               </p>
             ))}
@@ -432,7 +395,7 @@ function ComparisonSection({ comparison }: { comparison: HomeCopy["comparison"] 
     <section className="relative border-t border-line/70">
       <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <p data-reveal className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep">
+          <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
             {comparison.eyebrow}
           </p>
           <h2
@@ -454,13 +417,13 @@ function ComparisonSection({ comparison }: { comparison: HomeCopy["comparison"] 
         <div
           data-reveal
           style={{ transitionDelay: "160ms" }}
-          className="reveal-up mx-auto mt-12 max-w-4xl divide-y divide-line rounded-[22px] border border-line bg-paper shadow-[0_24px_70px_-44px_rgba(16,24,40,0.42)]"
+          className="reveal-up mt-12 max-w-4xl divide-y divide-line border-y border-ink"
         >
           {comparison.rows.map((row) => (
             <div key={row.label} className="grid gap-4 p-5 sm:grid-cols-[0.7fr_1fr_1fr] sm:items-center sm:p-6">
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-faint">{row.label}</p>
+              <p className="text-[13px] font-medium uppercase tracking-[0.12em] text-muted">{row.label}</p>
               <p className="text-[15px] leading-relaxed text-muted">{row.manual}</p>
-              <p className="flex gap-2.5 rounded-xl bg-mint-soft/45 p-4 text-[15px] font-medium leading-relaxed text-ink">
+              <p className="flex gap-2.5 border-l-2 border-mint pl-4 text-[15px] font-medium leading-relaxed text-ink">
                 <Check className="mt-0.5 h-4 w-4 shrink-0 text-mint-deep" strokeWidth={3} />
                 {row.drafttodone}
               </p>
@@ -485,7 +448,7 @@ function ShareFooter({ locale, share }: { locale: Locale; share: HomeCopy["share
           href={shareHref}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-paper px-5 py-3 text-sm font-medium text-ink transition-colors hover:bg-mint-soft"
+          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md bg-paper px-5 py-3 text-sm font-medium text-ink transition-colors hover:bg-paper-2"
         >
           <Share2 className="h-4 w-4" strokeWidth={2.2} />
           {share.cta}
@@ -554,8 +517,6 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
     },
   ];
 
-  const featureIcons: LucideIcon[] = [BookOpen, ImageIcon, Settings];
-  const toolIcons: LucideIcon[] = [Calculator, Wand2, Settings];
   const blogPath = `/${locale}/blog`;
 
   return (
@@ -567,7 +528,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
       <ScrollReveal />
 
       {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-line/70 bg-paper/80 backdrop-blur-xl">
+      <header className="sticky top-0 z-40 border-b border-line bg-paper/95">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-6">
           <Logo locale={locale} />
           <div className="flex items-center gap-3 sm:gap-4">
@@ -589,7 +550,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
             {/* Visible at every width: on a phone it used to be the logo alone. */}
             <a
               href="#brief"
-              className="inline-flex whitespace-nowrap rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
+              className="inline-flex whitespace-nowrap rounded-md bg-ink px-4 py-2 text-sm font-medium text-paper transition-colors hover:bg-ink-soft"
             >
               {t.nav.openApp}
             </a>
@@ -600,15 +561,8 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
       <main>
         {/* Hero */}
         <section className="relative overflow-hidden">
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-x-0 top-0 h-[420px] bg-[radial-gradient(60%_100%_at_50%_0%,rgba(169,240,214,0.28),transparent)]"
-          />
           <div className="relative mx-auto max-w-6xl px-5 pb-8 pt-16 text-center sm:px-6 sm:pt-24">
-            <p className="reveal-load mb-7 inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3.5 py-1.5 text-[13px] font-medium text-ink-soft shadow-sm">
-              <span className="h-1.5 w-1.5 rounded-full bg-mint" />
-              {t.hero.eyebrow}
-            </p>
+            <p className="reveal-load mb-6 text-[14px] font-medium text-mint-deep">{t.hero.eyebrow}</p>
 
             <h1
               style={{ animationDelay: "80ms" }}
@@ -638,20 +592,9 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
               <HeroBrief copy={t.hero.brief} locale={locale} note={t.hero.microcopy} />
             </div>
 
-            <div
-              style={{ animationDelay: "320ms" }}
-              className="reveal-load mt-9 flex flex-wrap items-center justify-center gap-2"
-            >
-              {t.hero.chips.map((c) => (
-                <span
-                  key={c}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-line bg-paper-2 px-3 py-1 text-[12px] font-medium text-muted"
-                >
-                  <Check className="h-3 w-3 text-mint" strokeWidth={3} />
-                  {c}
-                </span>
-              ))}
-            </div>
+            <p style={{ animationDelay: "320ms" }} className="reveal-load mt-8 text-[13px] text-muted">
+              {t.hero.chips.join("  ·  ")}
+            </p>
 
             <ProductDemo demo={t.demo} />
           </div>
@@ -667,7 +610,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
         {/* Origin story */}
         <section className="relative border-t border-line/70 bg-paper-2">
           <div className="mx-auto max-w-3xl px-5 py-24 sm:px-6">
-            <p data-reveal className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep">
+            <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
               {t.origin.eyebrow}
             </p>
             <h2
@@ -681,27 +624,16 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
             <div
               data-reveal
               style={{ transitionDelay: "120ms" }}
-              className="reveal-up relative mt-9 border-l-2 border-mint/50 pl-6 sm:pl-8"
+              className="reveal-up relative mt-9 border-l-2 border-ink pl-6 sm:pl-8"
             >
-              <span
-                aria-hidden
-                className="absolute -left-2.5 -top-9 select-none font-display text-7xl leading-none text-mint/25"
-              >
-                &ldquo;
-              </span>
               <p className="text-balance text-xl leading-relaxed text-ink-soft sm:text-2xl">
                 {t.origin.pre} <span className="font-semibold text-ink">{t.origin.money}</span>{" "}
                 {t.origin.mid} <span className="text-mint-deep">{t.origin.ban}</span> {t.origin.post}{" "}
                 <span className="font-semibold text-ink">{t.origin.mrr}</span>
               </p>
-              <div className="mt-7 flex items-center gap-3">
-                <span className="grid h-9 w-9 place-items-center rounded-full bg-ink text-mint-soft">
-                  <Sparkles className="h-4 w-4" strokeWidth={2.25} />
-                </span>
-                <span className="text-sm font-medium uppercase tracking-wider text-faint">
-                  {t.origin.sign}
-                </span>
-              </div>
+              <p className="mt-7 text-[13px] font-medium uppercase tracking-[0.14em] text-faint">
+                {t.origin.sign}
+              </p>
             </div>
           </div>
         </section>
@@ -712,7 +644,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
         <section id="features" className="relative border-t border-line/70">
           <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
             <div className="mx-auto max-w-2xl text-center">
-              <p data-reveal className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep">
+              <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
                 {t.features.eyebrow}
               </p>
               <h2
@@ -731,12 +663,11 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
               </p>
             </div>
 
-            <div className="mt-14 grid gap-5 md:grid-cols-3">
+            <div className="mt-14 grid gap-x-10 gap-y-10 md:grid-cols-3">
               {t.features.items.map((f, i) => (
                 <FeatureCard
                   key={f.title}
                   index={`0${i + 1}`}
-                  icon={featureIcons[i]}
                   title={f.title}
                   text={f.text}
                   delay={i * 90}
@@ -752,7 +683,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
         <section id="tools" className="relative border-t border-line/70 bg-paper-2">
           <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
             <div className="mx-auto max-w-2xl text-center">
-              <p data-reveal className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep">
+              <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
                 {t.tools.eyebrow}
               </p>
               <h2
@@ -771,49 +702,35 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
               </p>
             </div>
 
-            <div className="mt-14 grid gap-5 md:grid-cols-3">
-              {t.tools.items.map((item, i) => {
-                const Icon = toolIcons[i] ?? Wand2;
-                return (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    data-reveal
-                    style={{ transitionDelay: `${i * 90}ms` }}
-                    className="reveal-up group relative rounded-2xl border border-line bg-paper p-7 transition-shadow duration-300 hover:shadow-[0_24px_60px_-30px_rgba(16,24,40,0.45)]"
-                  >
-                    <span className="grid h-12 w-12 place-items-center rounded-xl bg-paper-3 text-ink transition-colors duration-300 group-hover:bg-mint-soft group-hover:text-mint-deep">
-                      <Icon className="h-5 w-5" strokeWidth={1.75} />
-                    </span>
-                    <h3 className="mt-6 font-display text-xl font-medium text-ink">{item.title}</h3>
-                    <p className="mt-3 text-[15px] leading-relaxed text-muted">{item.text}</p>
-                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors group-hover:text-ink">
-                      {t.tools.explore}
-                      <ArrowRight
-                        className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
-                        strokeWidth={2.25}
-                      />
-                    </span>
-                  </a>
-                );
-              })}
+            <div className="mt-14 grid gap-x-10 gap-y-10 md:grid-cols-3">
+              {t.tools.items.map((item, i) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  data-reveal
+                  style={{ transitionDelay: `${i * 90}ms` }}
+                  className="reveal-up group relative border-t border-ink/80 pt-5"
+                >
+                  <h3 className="font-display text-xl font-medium text-ink">{item.title}</h3>
+                  <p className="mt-3 text-[15px] leading-relaxed text-muted">{item.text}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-ink underline decoration-line underline-offset-4 transition-colors group-hover:decoration-ink">
+                    {t.tools.explore}
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" strokeWidth={2.25} />
+                  </span>
+                </a>
+              ))}
             </div>
 
             <a
               href={blogPath}
               data-reveal
-              className="reveal-up group mt-5 flex flex-col items-start justify-between gap-5 rounded-2xl border border-line bg-paper p-7 transition-shadow duration-300 hover:shadow-[0_24px_60px_-30px_rgba(16,24,40,0.45)] sm:flex-row sm:items-center"
+              className="reveal-up group mt-12 flex flex-col items-start justify-between gap-5 border-y border-line py-7 sm:flex-row sm:items-center"
             >
-              <div className="flex items-start gap-4">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-paper-3 text-ink transition-colors duration-300 group-hover:bg-mint-soft group-hover:text-mint-deep">
-                  <BookOpen className="h-5 w-5" strokeWidth={1.75} />
-                </span>
-                <div>
-                  <h3 className="font-display text-xl font-medium text-ink">{t.tools.blogTitle}</h3>
-                  <p className="mt-2 text-[15px] leading-relaxed text-muted">{t.tools.blogText}</p>
-                </div>
+              <div>
+                <h3 className="font-display text-xl font-medium text-ink">{t.tools.blogTitle}</h3>
+                <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-muted">{t.tools.blogText}</p>
               </div>
-              <span className="inline-flex shrink-0 items-center gap-2 rounded-xl border border-line bg-paper px-5 py-3 text-sm font-medium text-ink transition-colors group-hover:border-ink/25">
+              <span className="inline-flex shrink-0 items-center gap-2 rounded-md border border-ink px-5 py-3 text-sm font-medium text-ink transition-colors group-hover:bg-ink group-hover:text-paper">
                 {t.tools.blogCta}
                 <ArrowRight className="h-4 w-4" strokeWidth={2.25} />
               </span>
@@ -825,7 +742,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
         <section id="pricing" className="relative border-t border-line/70">
           <div className="mx-auto max-w-5xl px-5 py-24 sm:px-6">
             <div className="mx-auto max-w-2xl text-center">
-              <p data-reveal className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep">
+              <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
                 {t.pricing.eyebrow}
               </p>
               <h2
@@ -850,14 +767,12 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
                   key={p.name}
                   data-reveal
                   style={{ transitionDelay: `${i * 90}ms` }}
-                  className={`reveal-up relative flex flex-col rounded-2xl border p-7 ${
-                    p.highlight
-                      ? "border-mint/40 bg-gradient-to-b from-mint-soft/40 to-paper shadow-[0_24px_60px_-30px_rgba(16,24,40,0.45)]"
-                      : "border-line bg-paper"
+                  className={`reveal-up relative flex flex-col rounded-xl border p-7 ${
+                    p.highlight ? "border-ink bg-paper-2" : "border-line bg-paper"
                   }`}
                 >
                   {p.highlight && (
-                    <span className="absolute right-5 top-5 rounded-full bg-mint-soft px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-mint-deep">
+                    <span className="absolute right-5 top-5 rounded-sm bg-ink px-2 py-0.5 text-[11px] font-medium uppercase tracking-wide text-paper">
                       {t.pricing.best}
                     </span>
                   )}
@@ -874,9 +789,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
                   <ul className="mt-6 grid gap-2.5">
                     {t.pricing.includes.map((inc) => (
                       <li key={inc} className="flex items-center gap-2.5 text-[14px] text-muted">
-                        <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-mint-soft text-mint-deep">
-                          <Check className="h-3 w-3" strokeWidth={3} />
-                        </span>
+                        <Check className="h-3.5 w-3.5 shrink-0 text-mint" strokeWidth={2.5} />
                         {inc}
                       </li>
                     ))}
@@ -884,10 +797,10 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
 
                   <a
                     href="#brief"
-                    className={`group mt-7 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-[15px] font-medium shadow-sm transition-all duration-200 hover:-translate-y-0.5 ${
+                    className={`group mt-7 inline-flex items-center justify-center gap-2 rounded-md px-5 py-3.5 text-[15px] font-medium transition-colors duration-200 ${
                       p.highlight
                         ? "bg-ink text-paper hover:bg-ink-soft"
-                        : "border border-line bg-paper text-ink hover:border-ink/25"
+                        : "border border-ink/60 bg-paper text-ink hover:border-ink"
                     }`}
                   >
                     {t.pricing.cta}
@@ -900,7 +813,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
               ))}
             </div>
 
-            <p className="mx-auto mt-8 flex max-w-2xl items-start justify-center gap-2.5 text-center text-[15px] font-medium text-ink-soft">
+            <p className="mx-auto mt-10 flex max-w-2xl items-start justify-center gap-2.5 text-center text-[15px] font-medium text-ink-soft">
               <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-mint" strokeWidth={2.25} />
               <span>{t.pricing.guarantee}</span>
             </p>
@@ -920,11 +833,11 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
             <div
               data-reveal
               style={{ transitionDelay: "80ms" }}
-              className="reveal-up mt-10 divide-y divide-line rounded-[18px] border border-line bg-paper"
+              className="reveal-up mt-10 divide-y divide-line border-y border-ink"
             >
               {t.faq.map((f) => (
-                <div key={f.q} className="p-6 sm:p-7">
-                  <h3 className="text-lg font-semibold text-ink">{f.q}</h3>
+                <div key={f.q} className="py-6">
+                  <h3 className="font-display text-xl font-medium text-ink">{f.q}</h3>
                   <p className="mt-3 text-[15px] leading-relaxed text-muted">{f.a}</p>
                 </div>
               ))}
@@ -937,7 +850,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
           <div className="mx-auto max-w-3xl px-5 py-24 sm:px-6">
             <p
               data-reveal
-              className="reveal-up mb-4 text-[12px] font-semibold uppercase tracking-[0.22em] text-mint-deep"
+              className="reveal-up mb-3 text-[14px] font-medium text-mint-deep"
             >
               {t.founding.eyebrow}
             </p>
@@ -962,9 +875,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
             <ul className="mt-7 grid gap-3">
               {t.founding.includes.map((item) => (
                 <li key={item} className="flex gap-3 text-[15px] leading-relaxed text-ink-soft">
-                  <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-mint-soft text-mint-deep">
-                    <Check className="h-3 w-3" strokeWidth={3} />
-                  </span>
+                  <Check className="mt-1 h-4 w-4 shrink-0 text-mint" strokeWidth={2.5} />
                   <span>{item}</span>
                 </li>
               ))}
@@ -991,15 +902,15 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
           <div className="mx-auto max-w-5xl px-5 py-24 sm:px-6">
             <div
               data-reveal
-              className="reveal-up relative overflow-hidden rounded-[28px] border border-line bg-gradient-to-b from-mint-soft/45 to-paper-2 px-6 py-16 text-center sm:px-12"
+              className="reveal-up relative rounded-2xl bg-ink px-6 py-16 text-center text-paper sm:px-12"
             >
-              <h2 className="text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl">
+              <h2 className="mx-auto max-w-3xl text-balance font-display text-4xl font-medium tracking-[-0.015em] text-paper sm:text-5xl">
                 {t.cta.h2}
               </h2>
-              <p className="mx-auto mt-5 max-w-lg text-balance text-lg text-muted">{t.cta.sub}</p>
+              <p className="mx-auto mt-5 max-w-lg text-balance text-lg text-paper/70">{t.cta.sub}</p>
               <div className="mt-9 flex flex-col items-center gap-3">
-                <OpenAppButton label={t.hero.openApp} size="lg" />
-                <p className="text-sm text-faint">{t.hero.microcopy}</p>
+                <OpenAppButton label={t.hero.openApp} size="lg" tone="light" />
+                <p className="text-sm text-paper/60">{t.hero.microcopy}</p>
               </div>
             </div>
           </div>

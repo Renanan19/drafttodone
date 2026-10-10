@@ -12,7 +12,7 @@
   --color-ink: #0b0b0c;
   --color-ink-soft: #2c2c30;
   --color-muted: #6b6b73;
-  --color-faint: #9a9aa2;
+  --color-faint: #85858d;
   --color-line: #ececea;
   --color-mint: #10b58a;
   --color-mint-deep: #0a8f6c;
@@ -57,10 +57,10 @@
 /* ---- Scroll reveal ---- */
 .reveal-up {
   opacity: 0;
-  transform: translateY(26px);
+  transform: translateY(12px);
   transition:
-    opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
