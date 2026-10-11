@@ -45,7 +45,7 @@ export const glanceCopy: Record<Locale, GlanceCopy> = {
       {
         label: "Time per book",
         value:
-          "Usually about 1 hour of server-side generation (30 minutes to 2.5 hours), with an email when it is ready. Closing the tab does not lose the book.",
+          "Usually about 30 minutes of server-side generation (20 to 45 minutes), with an email when it is ready. Closing the tab does not lose the book.",
       },
       {
         label: "Price",
@@ -87,7 +87,7 @@ export const glanceCopy: Record<Locale, GlanceCopy> = {
       {
         label: "Durée par livre",
         value:
-          "En général environ 1 heure de génération côté serveur (30 min à 2 h 30), avec un email quand c'est prêt. Fermer l'onglet ne fait perdre aucun livre.",
+          "En général environ 30 minutes de génération côté serveur (20 à 45 min), avec un email quand c'est prêt. Fermer l'onglet ne fait perdre aucun livre.",
       },
       {
         label: "Prix",
@@ -129,7 +129,7 @@ export const glanceCopy: Record<Locale, GlanceCopy> = {
       {
         label: "Tempo per libro",
         value:
-          "Di solito circa 1 ora di generazione lato server (da 30 minuti a 2 ore e mezza), con un'email quando è pronto. Chiudere la scheda non fa perdere il libro.",
+          "Di solito circa 30 minuti di generazione lato server (da 20 a 45 minuti), con un'email quando è pronto. Chiudere la scheda non fa perdere il libro.",
       },
       {
         label: "Prezzo",
@@ -171,7 +171,7 @@ export const glanceCopy: Record<Locale, GlanceCopy> = {
       {
         label: "Dauer pro Buch",
         value:
-          "Meist etwa 1 Stunde serverseitige Generierung (30 Minuten bis 2,5 Stunden), mit einer E-Mail, wenn es fertig ist. Den Tab zu schließen kostet kein Buch.",
+          "Meist etwa 30 Minuten serverseitige Generierung (20 bis 45 Minuten), mit einer E-Mail, wenn es fertig ist. Den Tab zu schließen kostet kein Buch.",
       },
       {
         label: "Preis",

@@ -1484,7 +1484,7 @@ export const solutionPages: SolutionPage[] = [
           oursLabel: "DraftToDone",
           rows: [
           { criterion: "What you have at the end", ours: "A finished book: manuscript, 6×9 print PDF, front cover, full KDP wrap and the listing text.", rival: "A draft you wrote with its help. Formatting, cover and listing are up to you.", oursWins: true },
-          { criterion: "Time to a finished book", ours: "About an hour, unattended (30 min to 2.5 h).", rival: "As long as you take to write it, session by session.", oursWins: true },
+          { criterion: "Time to a finished book", ours: "About 30 minutes, unattended (20 to 45 min).", rival: "As long as you take to write it, session by session.", oursWins: true },
           { criterion: "Writing work on your side", ours: "One brief. You review the book, you don’t draft it.", rival: "You write; it suggests, rewrites and expands. Its own FAQ: “It’s not intended to write for you.”", oursWins: true },
           { criterion: "Cover and KDP listing", ours: "Front cover and wrap sized to the page count, plus description, 7 keywords, 3 categories and A+ text.", rival: "Not part of the product.", oursWins: true },
           { criterion: "Non-fiction guides", ours: "Built for them: practical guides of 270 to 500 printed pages.", rival: "Built for fiction, with its own story models.", oursWins: true },
@@ -1525,7 +1525,7 @@ export const solutionPages: SolutionPage[] = [
           oursLabel: "DraftToDone",
           rows: [
           { criterion: "Ce que vous avez à la fin", ours: "Un livre fini : manuscrit, PDF d’impression 6×9, couverture, couverture KDP complète et texte de la fiche.", rival: "Un brouillon écrit avec son aide. Mise en page, couverture et fiche restent à faire.", oursWins: true },
-          { criterion: "Délai jusqu’au livre fini", ours: "Environ une heure, sans rien faire (de 30 min à 2 h 30).", rival: "Le temps qu’il vous faut pour l’écrire, séance après séance.", oursWins: true },
+          { criterion: "Délai jusqu’au livre fini", ours: "Environ 30 minutes, sans rien faire (de 20 à 45 min).", rival: "Le temps qu’il vous faut pour l’écrire, séance après séance.", oursWins: true },
           { criterion: "Travail d’écriture de votre côté", ours: "Un brief. Vous relisez le livre, vous ne le rédigez pas.", rival: "Vous écrivez ; il suggère, réécrit et développe. Sa propre FAQ : « It’s not intended to write for you » (il n’est pas fait pour écrire à votre place).", oursWins: true },
           { criterion: "Couverture et fiche KDP", ours: "Couverture et couverture complète à la bonne épaisseur de dos, plus description, 7 mots-clés, 3 catégories et textes A+.", rival: "Hors du produit.", oursWins: true },
           { criterion: "Guides pratiques (non-fiction)", ours: "Faits pour ça : des guides de 270 à 500 pages imprimées.", rival: "Fait pour la fiction, avec ses propres modèles d’histoire.", oursWins: true },
@@ -1566,7 +1566,7 @@ export const solutionPages: SolutionPage[] = [
           oursLabel: "DraftToDone",
           rows: [
           { criterion: "Cosa hai alla fine", ours: "Un libro finito: manoscritto, PDF di stampa 6×9, copertina, copertina KDP completa e testo della scheda.", rival: "Una bozza scritta con il suo aiuto. Impaginazione, copertina e scheda restano a te.", oursWins: true },
-          { criterion: "Tempo fino al libro finito", ours: "Circa un’ora, senza fare nulla (da 30 min a 2 h 30).", rival: "Il tempo che ti serve per scriverlo, sessione dopo sessione.", oursWins: true },
+          { criterion: "Tempo fino al libro finito", ours: "Circa 30 minuti, senza fare nulla (da 20 a 45 min).", rival: "Il tempo che ti serve per scriverlo, sessione dopo sessione.", oursWins: true },
           { criterion: "Lavoro di scrittura da parte tua", ours: "Un brief. Rileggi il libro, non lo scrivi.", rival: "Scrivi tu; lui suggerisce, riscrive ed espande. La sua stessa FAQ: “It’s not intended to write for you” (non è fatto per scrivere al posto tuo).", oursWins: true },
           { criterion: "Copertina e scheda KDP", ours: "Copertina e copertina completa con il dorso giusto, più descrizione, 7 parole chiave, 3 categorie e testi A+.", rival: "Non fa parte del prodotto.", oursWins: true },
           { criterion: "Guide pratiche (saggistica)", ours: "Fatto per queste: guide da 270 a 500 pagine stampate.", rival: "Fatto per la narrativa, con i suoi modelli per le storie.", oursWins: true },
@@ -1607,7 +1607,7 @@ export const solutionPages: SolutionPage[] = [
           oursLabel: "DraftToDone",
           rows: [
           { criterion: "Was du am Ende hast", ours: "Ein fertiges Buch: Manuskript, 6×9-Druck-PDF, Vorderseite, komplettes KDP-Cover und Listing-Text.", rival: "Einen Entwurf, den du mit seiner Hilfe geschrieben hast. Satz, Cover und Listing bleiben bei dir.", oursWins: true },
-          { criterion: "Zeit bis zum fertigen Buch", ours: "Etwa eine Stunde, ohne dein Zutun (30 Min. bis 2,5 Std.).", rival: "So lange, wie du zum Schreiben brauchst, Sitzung für Sitzung.", oursWins: true },
+          { criterion: "Zeit bis zum fertigen Buch", ours: "Etwa 30 Minuten, ohne dein Zutun (20 bis 45 Min.).", rival: "So lange, wie du zum Schreiben brauchst, Sitzung für Sitzung.", oursWins: true },
           { criterion: "Schreibarbeit auf deiner Seite", ours: "Ein Briefing. Du prüfst das Buch, du schreibst es nicht.", rival: "Du schreibst; es schlägt vor, formuliert um und erweitert. Die eigene FAQ: „It’s not intended to write for you“ (es soll nicht für dich schreiben).", oursWins: true },
           { criterion: "Cover und KDP-Listing", ours: "Vorderseite und Umschlag passend zur Seitenzahl, dazu Beschreibung, 7 Keywords, 3 Kategorien und A+-Texte.", rival: "Nicht Teil des Produkts.", oursWins: true },
           { criterion: "Sachbuch-Ratgeber", ours: "Dafür gebaut: Ratgeber mit 270 bis 500 gedruckten Seiten.", rival: "Für Belletristik gebaut, mit eigenen Story-Modellen.", oursWins: true },
@@ -1824,7 +1824,7 @@ export const solutionPages: SolutionPage[] = [
           oursLabel: "DraftToDone",
           rows: [
           { criterion: "What you start from", ours: "A one-line brief. It writes the book.", rival: "A manuscript you have already written.", oursWins: true },
-          { criterion: "Writing the book", ours: "Generated in about an hour (30 min to 2.5 h), unattended.", rival: "You write it yourself, in its editor or elsewhere.", oursWins: true },
+          { criterion: "Writing the book", ours: "Generated in about 30 minutes (20 to 45 min), unattended.", rival: "You write it yourself, in its editor or elsewhere.", oursWins: true },
           { criterion: "Cover", ours: "Front cover and full KDP wrap: spine and back sized to the page count.", rival: "Not mentioned on its public pages.", oursWins: true },
           { criterion: "KDP listing text", ours: "Description, 7 keywords, 3 categories and A+ text, in the book’s language.", rival: "Not mentioned on its public pages.", oursWins: true },
           { criterion: "Interior formatting", ours: "A 6×9 print PDF and the Word file, laid out automatically.", rival: "Its core strength: 17+ chapter themes, over 1,500 fonts, live preview, EPUB, PDF and DOCX export.", rivalWins: true },
@@ -1864,7 +1864,7 @@ export const solutionPages: SolutionPage[] = [
           oursLabel: "DraftToDone",
           rows: [
           { criterion: "Point de départ", ours: "Un brief d’une ligne. Il écrit le livre.", rival: "Un manuscrit que vous avez déjà écrit.", oursWins: true },
-          { criterion: "Écriture du livre", ours: "Générée en environ une heure (de 30 min à 2 h 30), sans rien faire.", rival: "Vous l’écrivez vous-même, dans son éditeur ou ailleurs.", oursWins: true },
+          { criterion: "Écriture du livre", ours: "Générée en environ 30 minutes (de 20 à 45 min), sans rien faire.", rival: "Vous l’écrivez vous-même, dans son éditeur ou ailleurs.", oursWins: true },
           { criterion: "Couverture", ours: "Couverture et couverture KDP complète : dos et quatrième à l’épaisseur du livre.", rival: "Pas mentionné sur ses pages publiques.", oursWins: true },
           { criterion: "Texte de la fiche KDP", ours: "Description, 7 mots-clés, 3 catégories et textes A+, dans la langue du livre.", rival: "Pas mentionné sur ses pages publiques.", oursWins: true },
           { criterion: "Mise en page de l’intérieur", ours: "Un PDF d’impression 6×9 et le fichier Word, mis en page automatiquement.", rival: "Son point fort : plus de 17 thèmes de chapitre, plus de 1 500 polices, aperçu en direct, export EPUB, PDF et DOCX.", rivalWins: true },
@@ -1904,7 +1904,7 @@ export const solutionPages: SolutionPage[] = [
           oursLabel: "DraftToDone",
           rows: [
           { criterion: "Punto di partenza", ours: "Un brief di una riga. Scrive lui il libro.", rival: "Un manoscritto che hai già scritto.", oursWins: true },
-          { criterion: "Scrittura del libro", ours: "Generato in circa un’ora (da 30 min a 2 h 30), senza fare nulla.", rival: "Lo scrivi tu, nel suo editor o altrove.", oursWins: true },
+          { criterion: "Scrittura del libro", ours: "Generato in circa 30 minuti (da 20 a 45 min), senza fare nulla.", rival: "Lo scrivi tu, nel suo editor o altrove.", oursWins: true },
           { criterion: "Copertina", ours: "Copertina e copertina KDP completa: dorso e retro della misura del libro.", rival: "Non menzionato nelle sue pagine pubbliche.", oursWins: true },
           { criterion: "Testo della scheda KDP", ours: "Descrizione, 7 parole chiave, 3 categorie e testi A+, nella lingua del libro.", rival: "Non menzionato nelle sue pagine pubbliche.", oursWins: true },
           { criterion: "Impaginazione dell’interno", ours: "Un PDF di stampa 6×9 e il file Word, impaginati automaticamente.", rival: "Il suo punto forte: oltre 17 temi per i capitoli, più di 1.500 font, anteprima dal vivo, export EPUB, PDF e DOCX.", rivalWins: true },
@@ -1944,7 +1944,7 @@ export const solutionPages: SolutionPage[] = [
           oursLabel: "DraftToDone",
           rows: [
           { criterion: "Ausgangspunkt", ours: "Ein Briefing in einer Zeile. Es schreibt das Buch.", rival: "Ein Manuskript, das du schon geschrieben hast.", oursWins: true },
-          { criterion: "Das Buch schreiben", ours: "In etwa einer Stunde generiert (30 Min. bis 2,5 Std.), ohne dein Zutun.", rival: "Du schreibst es selbst, im Editor oder anderswo.", oursWins: true },
+          { criterion: "Das Buch schreiben", ours: "In etwa 30 Minuten generiert (20 bis 45 Min.), ohne dein Zutun.", rival: "Du schreibst es selbst, im Editor oder anderswo.", oursWins: true },
           { criterion: "Cover", ours: "Vorderseite und kompletter KDP-Umschlag: Rücken und Rückseite passend zur Seitenzahl.", rival: "Auf den öffentlichen Seiten nicht erwähnt.", oursWins: true },
           { criterion: "KDP-Listing-Text", ours: "Beschreibung, 7 Keywords, 3 Kategorien und A+-Texte, in der Sprache des Buchs.", rival: "Auf den öffentlichen Seiten nicht erwähnt.", oursWins: true },
           { criterion: "Satz des Innenteils", ours: "Ein 6×9-Druck-PDF und die Word-Datei, automatisch gesetzt.", rival: "Seine Stärke: über 17 Kapitel-Themes, mehr als 1.500 Schriften, Live-Vorschau, Export als EPUB, PDF und DOCX.", rivalWins: true },
@@ -1988,7 +1988,7 @@ export const solutionPages: SolutionPage[] = [
             points: [
               "Input: one niche brief, or a surprise niche picked for you",
               "Output: manuscript, front/spine/back cover PDF, KDP title, description, 7 keywords and an invented pen name you check",
-              "Usually about 1 hour of server-side generation per book; closing the tab does not lose it",
+              "Usually about 30 minutes of server-side generation per book; closing the tab does not lose it",
               "Books written in English or French",
               "1 credit = 1 finished book; a failed generation refunds the credit automatically",
             ],
@@ -2131,7 +2131,7 @@ export const solutionPages: SolutionPage[] = [
             points: [
               "Entrée : un brief de niche, ou une niche surprise choisie pour vous",
               "Sortie : manuscrit, PDF de couverture avant/dos/quatrième, titre KDP, description, 7 mots-clés et nom de plume inventé, à vérifier par vous",
-              "En général environ 1 heure de génération côté serveur par livre ; fermer l'onglet ne le perd pas",
+              "En général environ 30 minutes de génération côté serveur par livre ; fermer l'onglet ne le perd pas",
               "Livres rédigés en anglais ou en français",
               "1 crédit = 1 livre terminé ; une génération échouée rembourse le crédit automatiquement",
             ],
@@ -2274,7 +2274,7 @@ export const solutionPages: SolutionPage[] = [
             points: [
               "Input: un brief di nicchia, o una nicchia a sorpresa scelta per te",
               "Output: manoscritto, PDF di copertina fronte/dorso/retro, titolo KDP, descrizione, 7 keyword e pseudonimo inventato, da controllare tu",
-              "Di solito circa 1 ora di generazione lato server per libro; chiudere la scheda non lo fa perdere",
+              "Di solito circa 30 minuti di generazione lato server per libro; chiudere la scheda non lo fa perdere",
               "Libri scritti in inglese o in francese",
               "1 credito = 1 libro finito; una generazione fallita rimborsa il credito automaticamente",
             ],
@@ -2417,7 +2417,7 @@ export const solutionPages: SolutionPage[] = [
             points: [
               "Eingabe: ein Nischen-Briefing oder eine Überraschungsnische, die für dich gewählt wird",
               "Ergebnis: Manuskript, Umschlag-PDF (Vorder-/Rücken-/Rückseite), KDP-Titel, Beschreibung, 7 Keywords und erfundener Autorenname, den du prüfst",
-              "Meist etwa 1 Stunde serverseitige Generierung pro Buch; das Schließen des Tabs verliert es nicht",
+              "Meist etwa 30 Minuten serverseitige Generierung pro Buch; das Schließen des Tabs verliert es nicht",
               "Bücher auf Englisch oder Französisch",
               "1 Credit = 1 fertiges Buch; eine fehlgeschlagene Generierung erstattet den Credit automatisch",
             ],
