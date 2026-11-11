@@ -3,8 +3,9 @@ import {
   blogIndexUrl,
   getBlogIndexAlternates,
   getPostAlternates,
+  indexedBlogLocales,
+  indexedPostLocales,
   locales,
-  postLocales,
   posts,
   postUrl,
   SITE_URL,
@@ -106,7 +107,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
       alternates: { languages: partnersAlternates },
     })),
-    ...locales.map((locale) => ({
+    // Blog: English and French only (see indexedBlogLocales).
+    ...indexedBlogLocales.map((locale) => ({
       url: blogIndexUrl(locale),
       lastModified: new Date(latestArticleUpdate(locale)),
       changeFrequency: "weekly" as const,
@@ -118,7 +120,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...posts.flatMap((post) => {
       const alternates = absoluteAlternates(getPostAlternates(post));
 
-      return postLocales(post).map((locale) => ({
+      return indexedPostLocales(post).map((locale) => ({
         url: postUrl(locale, post),
         lastModified: new Date(post.updated),
         changeFrequency: "monthly" as const,

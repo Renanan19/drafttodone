@@ -7,6 +7,7 @@ import {
   blogIndexPath,
   getArticleStaticParams,
   getPostAlternates,
+  isBlogLocaleIndexed,
   getPostBySlug,
   getPostsForLocale,
   getPostTranslation,
@@ -106,9 +107,11 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     description: metadataDescription,
     keywords: article.keywords,
     authors: [{ name: BLOG_AUTHOR }],
+    // Italian and German guides: readable, not offered to search (blog-content.ts).
+    ...(isBlogLocaleIndexed(locale) ? {} : { robots: { index: false, follow: true } }),
     alternates: {
       canonical: postPath(locale, post),
-      languages: getPostAlternates(post),
+      ...(isBlogLocaleIndexed(locale) ? { languages: getPostAlternates(post) } : {}),
     },
     openGraph: {
       title: metadataTitle,

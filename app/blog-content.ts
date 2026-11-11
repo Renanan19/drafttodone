@@ -309,12 +309,29 @@ export function postUrl(locale: Locale, post: BlogPost) {
   return `${SITE_URL}${postPath(locale, post)}`;
 }
 
+/**
+ * Blog locales offered to search engines.
+ *
+ * The Italian and German guides are translations of the same articles. Since
+ * the August 2026 spam update the domain is indexed but demoted, and a batch of
+ * translated guides is the scaled-content pattern that update targets. They
+ * stay online for readers and linked from the Italian and German pages, but
+ * they carry `noindex, follow`, leave the sitemap and leave the hreflang
+ * clusters (2026-11-11). To offer one again, add its locale here.
+ */
+export const indexedBlogLocales: readonly Locale[] = ["en", "fr"];
+
+export function isBlogLocaleIndexed(locale: Locale) {
+  return indexedBlogLocales.includes(locale);
+}
+
+export function indexedPostLocales(post: BlogPost): Locale[] {
+  return postLocales(post).filter(isBlogLocaleIndexed);
+}
+
 export function getBlogIndexAlternates() {
   return {
-    en: blogIndexPath("en"),
-    fr: blogIndexPath("fr"),
-    it: blogIndexPath("it"),
-    de: blogIndexPath("de"),
+    ...Object.fromEntries(indexedBlogLocales.map((locale) => [locale, blogIndexPath(locale)])),
     "x-default": blogIndexPath(defaultLocale),
   };
 }
@@ -322,7 +339,7 @@ export function getBlogIndexAlternates() {
 export function getPostAlternates(post: BlogPost) {
   return {
     ...Object.fromEntries(
-      postLocales(post).map((locale) => [locale, postPath(locale, post)]),
+      indexedPostLocales(post).map((locale) => [locale, postPath(locale, post)]),
     ),
     "x-default": postPath(defaultLocale, post),
   };

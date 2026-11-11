@@ -6,6 +6,7 @@ import {
   blogIndexPath,
   blogIndexUrl,
   getBlogIndexAlternates,
+  isBlogLocaleIndexed,
   getPostsForLocale,
   isLocale,
   locales,
@@ -57,9 +58,11 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     title: metadataTitle,
     description: metadataDescription,
     keywords: t.keywords,
+    // Italian and German blog indexes list guides that are not offered to search.
+    ...(isBlogLocaleIndexed(locale) ? {} : { robots: { index: false, follow: true } }),
     alternates: {
       canonical: blogIndexPath(locale),
-      languages: getBlogIndexAlternates(),
+      ...(isBlogLocaleIndexed(locale) ? { languages: getBlogIndexAlternates() } : {}),
     },
     openGraph: {
       title: metadataTitle,
