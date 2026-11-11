@@ -84,6 +84,7 @@ and publishing.
 
 ## How DraftToDone compares
 
+- [**AI book generators for Amazon KDP: 7 tools, sorted by the job each one does**](./AI-BOOK-GENERATORS-FOR-KDP.md) — KDP Builder, Inkfluence, Youbooks, Sudowrite, Atticus, Publisher Rocket and DraftToDone, with prices.
 - [DraftToDone vs Sudowrite](https://drafttodone.io/en/sudowrite-alternative) — the whole publishable product vs AI fiction craft.
 - [DraftToDone vs Atticus](https://drafttodone.io/en/atticus-alternative) — generate the book vs format one you wrote.
 - [DraftToDone vs getebook.ai](https://drafttodone.io/en/getebook-alternative)

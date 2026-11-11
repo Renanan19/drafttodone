@@ -3,6 +3,12 @@
 Florian ranked #1 for a commercial term in 48–72 hours with nothing but a Medium listicle and a
 LinkedIn article, with **no website at all**. This is the fastest AI-visibility win available.
 
+> **2026-11-11: the text to publish is now [`/AI-BOOK-GENERATORS-FOR-KDP.md`](../../AI-BOOK-GENERATORS-FOR-KDP.md)**, already live in the
+> public GitHub repo. It replaces the article below: the direct competitors are in it (KDP Builder,
+> Inkfluence, Youbooks), every price was read on the vendor's site that day, and the title uses
+> the words people search ("AI book generator", 1,900 searches a month in the US; nobody searches
+> "KDP catalog operators"). Paste that file on Medium and as a LinkedIn article.
+
 **Publish in three places:**
 1. **Medium** — as written below
 2. **LinkedIn** — as an **article**, not a post (LinkedIn articles are indexed by Google, and
