@@ -30,7 +30,7 @@ export const glanceCopy: Record<Locale, GlanceCopy> = {
       {
         label: "What it is",
         value:
-          "AI publishing software that turns one niche brief into a complete Amazon KDP book package.",
+          "An AI book generator for Amazon KDP: one niche brief becomes a complete book package in about 30 minutes.",
       },
       {
         label: "Who it is for",

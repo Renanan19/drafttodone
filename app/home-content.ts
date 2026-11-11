@@ -28,6 +28,8 @@ export type HomeCopy = {
   nav: { blog: string; pricing: string; openApp: string };
   hero: {
     eyebrow: string;
+    /** The real book shown beside the brief box (public/sample, Silent Leverage). */
+    proof: { alt: string; caption: string; cta: string };
     h1main: string;
     h1accent: string;
     /**
@@ -44,18 +46,6 @@ export type HomeCopy = {
     openApp: string;
     /** The brief box: the visitor writes the book before making an account. */
     brief: HeroBriefCopy;
-  };
-  demo: {
-    inputLabel: string;
-    input: string;
-    inputFacts: string[];
-    outputLabel: string;
-    outputTitle: string;
-    /** Real cover drawn by the cover engine for this brief (public/sample/calm). */
-    outputCover: string;
-    outputSubtitle: string;
-    artifacts: string[];
-    metrics: { value: string; label: string }[];
   };
   origin: {
     eyebrow: string;
@@ -84,17 +74,10 @@ export type HomeCopy = {
     note: string;
     cta: string;
   };
-  proof: {
-    eyebrow: string;
-    h2: string;
-    sub: string;
-    points: string[];
-  };
   /** Brief, free preview, whole book: the three steps, in order. */
   how: { eyebrow: string; h2: string; steps: { title: string; text: string }[] };
   /** Measured facts instead of testimonials we do not have. */
   facts: { items: { value: string; label: string }[]; source: string };
-  features: { eyebrow: string; h2: string; sub: string; items: { title: string; text: string }[] };
   comparison: {
     eyebrow: string;
     h2: string;
@@ -144,13 +127,18 @@ export type HomeCopy = {
 export const homeCopy: Record<Locale, HomeCopy> = {
   en: {
     meta: {
-      title: `${SITE_NAME} — Turn One Idea Into a Complete KDP Book`,
+      title: `AI Book Generator for Amazon KDP — ${SITE_NAME}`,
       description:
-        "Generate a manuscript, full wrap cover, KDP metadata, and an invented pen name from one niche brief. Buy one book for €10, or 2 a week on subscription.",
+        "One sentence in, a complete KDP book out in about 30 minutes: manuscript, 6×9 interior PDF, wrap cover, listing. Free preview, then €10 a book.",
     },
     nav: { blog: "Blog", pricing: "Pricing", openApp: "Free preview" },
     hero: {
-      eyebrow: "For KDP catalog operators",
+      eyebrow: "AI book generator for Amazon KDP",
+      proof: {
+        alt: "Silent Leverage: front cover, table of contents and the first page of chapter 1",
+        caption: "Silent Leverage, 132 pages. A real book DraftToDone generated from one brief, shown as generated.",
+        cta: "Leaf through it",
+      },
       h1main: "Turn one idea into a complete",
       h1accent: "KDP book.",
       h1test: { main: "See your book's title and cover in a minute, free.", accent: "Get the whole book in about 30 minutes." },
@@ -171,21 +159,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
           "A cozy mystery novel set in a seaside bookshop",
         ],
       },
-    },
-    demo: {
-      inputLabel: "Niche brief",
-      input: "A practical 30-day guide for short-term rental hosts who want fewer bad reviews.",
-      inputFacts: ["Reader promise: fewer guest issues", "Format: 10 chapters", "Marketplace: Amazon KDP"],
-      outputLabel: "Generated package",
-      outputTitle: "The Calm Host Playbook",
-      outputCover: "/sample/calm/en.webp",
-      outputSubtitle: "Manuscript, full cover, KDP description, 7 keyword slots, and pen name.",
-      artifacts: ["38,000-word manuscript", "Front/spine/back cover", "KDP title + subtitle", "Description + keywords"],
-      metrics: [
-        { value: "1", label: "brief in" },
-        { value: "4", label: "assets out" },
-        { value: "~30 min", label: "to generate" },
-      ],
     },
     origin: {
       eyebrow: "The origin story",
@@ -279,16 +252,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       note: "The pen name was invented by the engine. Review every book before you publish it.",
       cta: "Preview my book, free",
     },
-    proof: {
-      eyebrow: "Founder proof",
-      h2: "Built from a workflow that already sold on KDP.",
-      sub: "The promise is not magic content spam. It is a repeatable product pipeline for operators who want catalog leverage.",
-      points: [
-        "No generic chatbot tab to babysit",
-        "One product package instead of scattered files",
-        "Built around KDP metadata and AI disclosure rules",
-      ],
-    },
     how: {
       eyebrow: "How it works",
       h2: "From one sentence to a finished KDP book.",
@@ -306,16 +269,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { value: "€7.50", label: "A book on the weekly plan" },
       ],
       source: "Measured on the books DraftToDone generated in October 2026.",
-    },
-    features: {
-      eyebrow: "The engine",
-      h2: "From blank page to published.",
-      sub: "Three systems. One pipeline. Every asset a marketplace demands — generated and formatted to KDP dimensions, for you to review.",
-      items: [
-        { title: "Full Manuscript Generation", text: "The AI determines the ideal length and writes the entire book autonomously based on your niche." },
-        { title: "Complete Cover Design", text: "Generates the front cover, spine, and back cover layout with AI imagery, ready for print." },
-        { title: "Optimized Metadata", text: "Generates SEO-optimized titles, descriptions, and an invented pen name you check before publishing." },
-      ],
     },
     comparison: {
       eyebrow: "Why switch",
@@ -344,7 +297,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
     faqHeading: "Questions, answered.",
     faq: [
-      { q: "What is DraftToDone?", a: "DraftToDone is AI publishing software that generates the whole book product — manuscript, front and back cover, and an SEO-optimized title and description — as KDP-sized files you review before uploading to Amazon KDP." },
+      { q: "What is DraftToDone?", a: "DraftToDone is an AI book generator for Amazon KDP. From one brief it produces the whole book product — manuscript, 6×9 interior PDF, front and back cover, title, description and keywords — as KDP-sized files you review before uploading. A book takes about 30 minutes and costs €10, or less on subscription." },
       { q: "How is this different from ChatGPT?", a: "ChatGPT gives you text in a chat window. You still have to plan the chapters, keep them consistent, lay out a 6×9 interior, design a cover whose spine fits the page count, and write the listing. DraftToDone does that whole job from one brief: an editable Word manuscript, a print-ready interior PDF, a front cover plus the full KDP wrap, and the description, 7 keywords and 3 categories. You stay the editor." },
       { q: "Who is it for?", a: "People who run a catalog of books on Amazon KDP and want each new title to arrive as a complete package. If you want to craft one book by hand, line by line, a writing app will suit you better." },
       { q: "Is the writing good enough to sell?", a: "Judge for yourself: the sample book on this page is shown exactly as generated, not retouched. The engine plans the book before writing it, and fiction runs a story bible, continuity checks and review passes. That is why a book takes about 30 minutes, not a few minutes. You still read every book before you publish it." },
@@ -392,13 +345,18 @@ export const homeCopy: Record<Locale, HomeCopy> = {
   },
   fr: {
     meta: {
-      title: `${SITE_NAME} — Transformez une idée en livre KDP complet`,
+      title: `Générateur de livres IA pour Amazon KDP — ${SITE_NAME}`,
       description:
-        "Générez manuscrit, couverture complète, métadonnées KDP et nom de plume inventé depuis un seul brief de niche. 10 € le livre, ou 2 par semaine en abonnement.",
+        "Une phrase, et un livre KDP complet en 30 minutes environ : manuscrit, PDF intérieur 6×9, couverture, fiche. Aperçu gratuit, puis 10 € le livre.",
     },
     nav: { blog: "Blog", pricing: "Tarifs", openApp: "Aperçu gratuit" },
     hero: {
-      eyebrow: "Pour les opérateurs de catalogue KDP",
+      eyebrow: "Générateur de livres IA pour Amazon KDP",
+      proof: {
+        alt: "Silent Leverage : couverture, table des matières et première page du chapitre 1",
+        caption: "Silent Leverage, 132 pages. Un vrai livre généré par DraftToDone à partir d'un seul brief, montré tel quel.",
+        cta: "Feuilletez-le",
+      },
       h1main: "Transformez une idée en livre",
       h1accent: "KDP complet.",
       h1test: { main: "Voyez le titre et la couverture de votre livre en une minute, gratuitement.", accent: "Recevez le livre entier en 30 minutes environ." },
@@ -419,21 +377,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
           "Un roman policier cosy dans une librairie au bord de la mer",
         ],
       },
-    },
-    demo: {
-      inputLabel: "Brief de niche",
-      input: "Un guide pratique de 30 jours pour hôtes en location courte durée qui veulent réduire les mauvais avis.",
-      inputFacts: ["Promesse lecteur : moins de problèmes voyageurs", "Format : 10 chapitres", "Marketplace : Amazon KDP"],
-      outputLabel: "Pack généré",
-      outputTitle: "Le guide de l'hôte serein",
-      outputCover: "/sample/calm/fr.webp",
-      outputSubtitle: "Manuscrit, couverture complète, description KDP, 7 mots-clés et nom de plume.",
-      artifacts: ["Manuscrit de 38 000 mots", "Couverture recto/dos/verso", "Titre + sous-titre KDP", "Description + mots-clés"],
-      metrics: [
-        { value: "1", label: "brief entrant" },
-        { value: "4", label: "assets générés" },
-        { value: "~30 min", label: "de génération" },
-      ],
     },
     origin: {
       eyebrow: "L'histoire",
@@ -527,16 +470,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       note: "Cet exemple est en anglais ; DraftToDone écrit aussi en français. Le nom de plume a été inventé par le moteur. Relisez chaque livre avant de le publier.",
       cta: "Voir mon aperçu gratuit",
     },
-    proof: {
-      eyebrow: "Preuve fondateur",
-      h2: "Construit à partir d'un workflow qui a déjà vendu sur KDP.",
-      sub: "La promesse n'est pas de spammer du contenu magique. C'est un pipeline produit reproductible pour bâtir un catalogue avec levier.",
-      points: [
-        "Pas d'onglet chatbot générique à surveiller",
-        "Un pack produit au lieu de fichiers éparpillés",
-        "Pensé autour des métadonnées KDP et des règles de déclaration IA",
-      ],
-    },
     how: {
       eyebrow: "Comment ça marche",
       h2: "D'une phrase à un livre KDP terminé.",
@@ -554,16 +487,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { value: "7,50 €", label: "Le livre avec l'abonnement hebdomadaire" },
       ],
       source: "Mesuré sur les livres générés par DraftToDone en octobre 2026.",
-    },
-    features: {
-      eyebrow: "Le moteur",
-      h2: "De la page blanche au livre publié.",
-      sub: "Trois systèmes. Un seul pipeline. Chaque élément exigé par les plateformes — généré et formaté aux dimensions KDP, pour que vous le relisiez.",
-      items: [
-        { title: "Génération complète du manuscrit", text: "L'IA détermine la longueur idéale et rédige le livre entier de façon autonome selon votre niche." },
-        { title: "Couverture complète", text: "Génère la première de couverture, le dos et la quatrième avec des visuels IA, prêts pour l'impression." },
-        { title: "Métadonnées optimisées", text: "Génère des titres et descriptions optimisés pour le SEO et un nom de plume inventé, que vous vérifiez avant de publier." },
-      ],
     },
     comparison: {
       eyebrow: "Pourquoi changer",
@@ -592,7 +515,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
     faqHeading: "Vos questions, nos réponses.",
     faq: [
-      { q: "Qu'est-ce que DraftToDone ?", a: "DraftToDone est un logiciel d'édition IA qui génère tout le produit livre — manuscrit, première et quatrième de couverture, titre et description optimisés SEO — en fichiers aux dimensions KDP, à relire avant de les téléverser sur Amazon KDP." },
+      { q: "Qu'est-ce que DraftToDone ?", a: "DraftToDone est un générateur de livres IA pour Amazon KDP. À partir d'un seul brief, il produit tout le produit livre — manuscrit, PDF intérieur 6×9, première et quatrième de couverture, titre, description et mots-clés — en fichiers aux dimensions KDP, à relire avant de les téléverser. Un livre prend environ 30 minutes et coûte 10 €, ou moins en abonnement." },
       { q: "Quelle différence avec ChatGPT ?", a: "ChatGPT vous donne du texte dans une fenêtre de chat. Il vous reste à bâtir le plan, garder les chapitres cohérents, mettre en page un intérieur 6×9, créer une couverture dont la tranche correspond au nombre de pages, et rédiger la fiche. DraftToDone fait tout ce travail à partir d'un seul brief : manuscrit Word modifiable, PDF intérieur prêt à imprimer, couverture plus la jaquette KDP complète, description, 7 mots-clés et 3 catégories. Vous restez l'éditeur." },
       { q: "Pour qui est-ce ?", a: "Pour ceux qui gèrent un catalogue de livres sur Amazon KDP et veulent que chaque nouveau titre arrive en pack complet. Si vous voulez façonner un seul livre à la main, ligne par ligne, un logiciel d'écriture vous conviendra mieux." },
       { q: "L'écriture est-elle assez bonne pour vendre ?", a: "Jugez vous-même : le livre exemple de cette page est montré tel que généré, sans retouche. Le moteur planifie le livre avant de l'écrire, et la fiction passe par une bible d'univers, des contrôles de continuité et des passes de relecture. C'est pour cela qu'un livre prend environ 30 minutes, pas quelques minutes. Vous relisez quand même chaque livre avant de le publier." },
@@ -640,13 +563,18 @@ export const homeCopy: Record<Locale, HomeCopy> = {
   },
   it: {
     meta: {
-      title: `${SITE_NAME} — Trasforma un'idea in un libro KDP completo`,
+      title: `Generatore di libri IA per Amazon KDP — ${SITE_NAME}`,
       description:
-        "Genera manoscritto, copertina completa, metadati KDP e pseudonimo inventato da un solo brief di nicchia. 10 € a libro, oppure 2 a settimana in abbonamento.",
+        "Una frase, e un libro KDP completo in circa 30 minuti: manoscritto, PDF interno 6×9, copertina, scheda. Anteprima gratis, poi 10 € a libro.",
     },
     nav: { blog: "Blog", pricing: "Prezzi", openApp: "Anteprima gratis" },
     hero: {
-      eyebrow: "Per operatori di cataloghi KDP",
+      eyebrow: "Generatore di libri IA per Amazon KDP",
+      proof: {
+        alt: "Silent Leverage: copertina, indice e prima pagina del capitolo 1",
+        caption: "Silent Leverage, 132 pagine. Un libro vero generato da DraftToDone da un solo brief, mostrato così com'è.",
+        cta: "Sfoglialo",
+      },
       h1main: "Trasforma un'idea in un libro",
       h1accent: "KDP completo.",
       h1test: { main: "Guarda titolo e copertina del tuo libro in un minuto, gratis.", accent: "Ricevi il libro intero in circa 30 minuti." },
@@ -667,21 +595,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
           "A cozy mystery novel set in a seaside bookshop",
         ],
       },
-    },
-    demo: {
-      inputLabel: "Brief di nicchia",
-      input: "Una guida pratica di 30 giorni per host di affitti brevi che vogliono meno recensioni negative.",
-      inputFacts: ["Promessa al lettore: meno problemi con gli ospiti", "Formato: 10 capitoli", "Marketplace: Amazon KDP"],
-      outputLabel: "Pacchetto generato",
-      outputTitle: "Il manuale dell'host sereno",
-      outputCover: "/sample/calm/it.webp",
-      outputSubtitle: "Manoscritto, copertina completa, descrizione KDP, 7 keyword e pseudonimo.",
-      artifacts: ["Manoscritto da 38.000 parole", "Copertina fronte/dorso/retro", "Titolo + sottotitolo KDP", "Descrizione + keyword"],
-      metrics: [
-        { value: "1", label: "brief in input" },
-        { value: "4", label: "asset in output" },
-        { value: "~30 min", label: "di generazione" },
-      ],
     },
     origin: {
       eyebrow: "La storia",
@@ -775,16 +688,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       note: "Questo esempio è in inglese. Lo pseudonimo è stato inventato dal motore. Rileggi ogni libro prima di pubblicarlo.",
       cta: "Vedi l'anteprima gratis",
     },
-    proof: {
-      eyebrow: "Prova del founder",
-      h2: "Costruito da un workflow che aveva già venduto su KDP.",
-      sub: "La promessa non è spam di contenuti magici. È una pipeline prodotto ripetibile per chi vuole leva sul catalogo.",
-      points: [
-        "Nessuna tab chatbot generica da sorvegliare",
-        "Un pacchetto prodotto invece di file sparsi",
-        "Pensato intorno a metadati KDP e regole di disclosure IA",
-      ],
-    },
     how: {
       eyebrow: "Come funziona",
       h2: "Da una frase a un libro KDP finito.",
@@ -802,16 +705,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { value: "7,50 €", label: "Un libro con il piano settimanale" },
       ],
       source: "Misurato sui libri generati da DraftToDone a ottobre 2026.",
-    },
-    features: {
-      eyebrow: "Il motore",
-      h2: "Dalla pagina bianca al libro pubblicato.",
-      sub: "Tre sistemi. Un solo pipeline. Ogni elemento richiesto da un marketplace — generato e impaginato nei formati KDP, da rivedere.",
-      items: [
-        { title: "Generazione completa del manoscritto", text: "L'IA determina la lunghezza ideale e scrive l'intero libro in autonomia in base alla tua nicchia." },
-        { title: "Copertina completa", text: "Genera fronte, dorso e retro con immagini IA, pronti per la stampa." },
-        { title: "Metadati ottimizzati", text: "Genera titoli e descrizioni ottimizzati SEO e uno pseudonimo inventato, da controllare prima di pubblicare." },
-      ],
     },
     comparison: {
       eyebrow: "Perché cambiare",
@@ -840,7 +733,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
     faqHeading: "Le tue domande, le nostre risposte.",
     faq: [
-      { q: "Cos'è DraftToDone?", a: "DraftToDone è un software di editoria IA che genera l'intero prodotto libro — manoscritto, copertina anteriore e posteriore, e titolo e descrizione ottimizzati SEO — in file nei formati KDP, da rivedere prima del caricamento su Amazon KDP." },
+      { q: "Cos'è DraftToDone?", a: "DraftToDone è un generatore di libri IA per Amazon KDP. Da un solo brief produce l'intero prodotto libro — manoscritto, PDF interno 6×9, copertina anteriore e posteriore, titolo, descrizione e keyword — in file nei formati KDP, da rivedere prima del caricamento. Un libro richiede circa 30 minuti e costa 10 €, o meno in abbonamento." },
       { q: "Che differenza c'è con ChatGPT?", a: "ChatGPT ti dà del testo in una finestra di chat. Ti resta da costruire la struttura, tenere coerenti i capitoli, impaginare un interno 6×9, creare una copertina con il dorso adatto al numero di pagine e scrivere la scheda. DraftToDone fa tutto questo da un solo brief: manoscritto Word modificabile, PDF interno pronto per la stampa, copertina più la sovraccoperta KDP completa, descrizione, 7 parole chiave e 3 categorie. L'editore resti tu." },
       { q: "Per chi è?", a: "Per chi gestisce un catalogo di libri su Amazon KDP e vuole che ogni nuovo titolo arrivi come pacchetto completo. Se vuoi scrivere un solo libro a mano, riga per riga, un'app di scrittura ti servirà meglio." },
       { q: "La scrittura è abbastanza buona da vendere?", a: "Giudica tu: il libro d'esempio in questa pagina è mostrato così come è stato generato, senza ritocchi. Il motore pianifica il libro prima di scriverlo, e la narrativa passa per una bibbia della storia, controlli di continuità e passaggi di revisione. Per questo un libro richiede circa 30 minuti, non pochi minuti. Rileggi comunque ogni libro prima di pubblicarlo." },
@@ -888,13 +781,18 @@ export const homeCopy: Record<Locale, HomeCopy> = {
   },
   de: {
     meta: {
-      title: `${SITE_NAME} — Aus einer Idee wird ein komplettes KDP-Buch`,
+      title: `KI-Buchgenerator für Amazon KDP — ${SITE_NAME}`,
       description:
-        "Erzeuge Manuskript, komplettes Cover, KDP-Metadaten und einen erfundenen Autorennamen aus einem einzigen Nischenbrief. 10 € pro Buch, oder 2 pro Woche im Abo.",
+        "Ein Satz, und in etwa 30 Minuten ein komplettes KDP-Buch: Manuskript, 6×9-Innen-PDF, Umschlag, Listing. Gratis-Vorschau, dann 10 € pro Buch.",
     },
     nav: { blog: "Blog", pricing: "Preise", openApp: "Gratis-Vorschau" },
     hero: {
-      eyebrow: "Für KDP-Katalogbetreiber",
+      eyebrow: "KI-Buchgenerator für Amazon KDP",
+      proof: {
+        alt: "Silent Leverage: Cover, Inhaltsverzeichnis und erste Seite von Kapitel 1",
+        caption: "Silent Leverage, 132 Seiten. Ein echtes Buch, von DraftToDone aus einem einzigen Brief erzeugt, unverändert gezeigt.",
+        cta: "Durchblättern",
+      },
       h1main: "Mach aus einer Idee ein",
       h1accent: "komplettes KDP-Buch.",
       h1test: { main: "Sieh Titel und Cover deines Buchs in einer Minute, gratis.", accent: "Erhalte das ganze Buch in etwa 30 Minuten." },
@@ -915,21 +813,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
           "A cozy mystery novel set in a seaside bookshop",
         ],
       },
-    },
-    demo: {
-      inputLabel: "Nischenbrief",
-      input: "Ein praktischer 30-Tage-Guide für Kurzzeitvermieter, die weniger schlechte Bewertungen wollen.",
-      inputFacts: ["Leserversprechen: weniger Gästefragen", "Format: 10 Kapitel", "Marketplace: Amazon KDP"],
-      outputLabel: "Erzeugtes Paket",
-      outputTitle: "Das Handbuch für entspannte Gastgeber",
-      outputCover: "/sample/calm/de.webp",
-      outputSubtitle: "Manuskript, komplettes Cover, KDP-Beschreibung, 7 Keyword-Slots und Autorenname.",
-      artifacts: ["38.000-Wort-Manuskript", "Vorderseite/Rücken/Rückseite", "KDP-Titel + Untertitel", "Beschreibung + Keywords"],
-      metrics: [
-        { value: "1", label: "Brief hinein" },
-        { value: "4", label: "Assets heraus" },
-        { value: "~30 Min.", label: "Generierung" },
-      ],
     },
     origin: {
       eyebrow: "Die Geschichte",
@@ -1023,16 +906,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
       note: "Dieses Beispiel ist auf Englisch. Das Pseudonym hat die Engine erfunden. Prüfen Sie jedes Buch, bevor Sie es veröffentlichen.",
       cta: "Gratis-Vorschau ansehen",
     },
-    proof: {
-      eyebrow: "Founder-Beweis",
-      h2: "Aus einem Workflow gebaut, der auf KDP schon verkauft hat.",
-      sub: "Das Versprechen ist kein magischer Content-Spam. Es ist eine wiederholbare Produkt-Pipeline für Kataloghebel.",
-      points: [
-        "Kein generischer Chatbot-Tab zum Überwachen",
-        "Ein Produktpaket statt verstreuter Dateien",
-        "Rund um KDP-Metadaten und KI-Offenlegungsregeln gebaut",
-      ],
-    },
     how: {
       eyebrow: "So funktioniert's",
       h2: "Von einem Satz zum fertigen KDP-Buch.",
@@ -1050,16 +923,6 @@ export const homeCopy: Record<Locale, HomeCopy> = {
         { value: "7,50 €", label: "Ein Buch im Wochenplan" },
       ],
       source: "Gemessen an den Büchern, die DraftToDone im Oktober 2026 erzeugt hat.",
-    },
-    features: {
-      eyebrow: "Der Motor",
-      h2: "Vom leeren Blatt zum veröffentlichten Buch.",
-      sub: "Drei Systeme. Eine Pipeline. Jedes Element, das ein Marktplatz verlangt — erzeugt und in KDP-Maßen formatiert, damit du es prüfst.",
-      items: [
-        { title: "Vollständige Manuskriptgenerierung", text: "Die KI bestimmt die ideale Länge und schreibt das ganze Buch eigenständig nach deiner Nische." },
-        { title: "Komplettes Cover", text: "Erzeugt Vorderseite, Rücken und Rückseite mit KI-Bildern, druckfertig." },
-        { title: "Optimierte Metadaten", text: "Erzeugt SEO-optimierte Titel und Beschreibungen sowie einen erfundenen Autorennamen, den du vor dem Veröffentlichen prüfst." },
-      ],
     },
     comparison: {
       eyebrow: "Warum wechseln",
@@ -1088,7 +951,7 @@ export const homeCopy: Record<Locale, HomeCopy> = {
     },
     faqHeading: "Deine Fragen, beantwortet.",
     faq: [
-      { q: "Was ist DraftToDone?", a: "DraftToDone ist KI-Publishing-Software, die das ganze Buchprodukt erzeugt — Manuskript, Vorder- und Rückseite sowie SEO-optimierten Titel und Beschreibung — als Dateien in KDP-Maßen, die du vor dem Upload zu Amazon KDP prüfst." },
+      { q: "Was ist DraftToDone?", a: "DraftToDone ist ein KI-Buchgenerator für Amazon KDP. Aus einem einzigen Brief entsteht das ganze Buchprodukt — Manuskript, 6×9-Innen-PDF, Vorder- und Rückseite, Titel, Beschreibung und Keywords — als Dateien in KDP-Maßen, die du vor dem Upload prüfst. Ein Buch dauert etwa 30 Minuten und kostet 10 €, im Abo weniger." },
       { q: "Was ist anders als bei ChatGPT?", a: "ChatGPT gibt dir Text in einem Chatfenster. Du musst noch die Gliederung bauen, die Kapitel stimmig halten, ein 6×9-Innenlayout setzen, ein Cover gestalten, dessen Buchrücken zur Seitenzahl passt, und den Produkttext schreiben. DraftToDone erledigt das alles aus einem Brief: bearbeitbares Word-Manuskript, druckfertiges Innen-PDF, Cover plus vollständiger KDP-Umschlag, Beschreibung, 7 Keywords und 3 Kategorien. Du bleibst der Lektor." },
       { q: "Für wen ist es?", a: "Für alle, die einen Buchkatalog auf Amazon KDP betreiben und jeden neuen Titel als komplettes Paket bekommen wollen. Wer ein einziges Buch Zeile für Zeile von Hand schreiben will, ist mit einer Schreib-App besser bedient." },
       { q: "Ist der Text gut genug zum Verkaufen?", a: "Urteile selbst: Das Beispielbuch auf dieser Seite ist so gezeigt, wie es erzeugt wurde, ohne Nachbearbeitung. Die Engine plant das Buch, bevor sie es schreibt, und Romane durchlaufen eine Story-Bibel, Kontinuitätsprüfungen und Überarbeitungsdurchgänge. Deshalb dauert ein Buch etwa 30 Minuten, nicht ein paar Minuten. Du liest trotzdem jedes Buch, bevor du es veröffentlichst." },

@@ -112,7 +112,7 @@ export function HeroBrief({
           <span className="hidden text-[12px] text-faint sm:inline">{copy.label}</span>
           <button
             type="submit"
-            className="group ml-auto inline-flex items-center justify-center gap-2 rounded-md bg-ink px-5 py-3 text-[15px] font-medium text-paper transition-colors duration-200 hover:bg-ink-soft"
+            className="group ml-auto inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md bg-ink px-5 py-3 text-[15px] font-medium text-paper transition-colors duration-200 hover:bg-ink-soft"
           >
             {copy.submit}
             <ArrowRight

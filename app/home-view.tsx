@@ -124,7 +124,7 @@ function FactsStrip({ facts }: { facts: HomeCopy["facts"] }) {
 /* -------------------------------------------------------------------------- */
 function HowSection({ how, cta }: { how: HomeCopy["how"]; cta: string }) {
   return (
-    <section id="how" className="relative border-t border-line/70">
+    <section id="how" className="relative border-t border-line/70 bg-paper-2">
       <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
@@ -168,88 +168,40 @@ function HowSection({ how, cta }: { how: HomeCopy["how"]; cta: string }) {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Feature card                                                              */
+/*  Hero book: real output, in view before any scroll                         */
 /* -------------------------------------------------------------------------- */
-function FeatureCard({
-  index,
-  title,
-  text,
-  delay,
-}: {
-  index: string;
-  title: string;
-  text: string;
-  delay: number;
-}) {
+function HeroBook({ proof }: { proof: HomeCopy["hero"]["proof"] }) {
+  // Silent Leverage (book 7b68aacb): cover, table of contents, chapter 1 opener,
+  // exported from its PDFs without retouching. The cover is the LCP image.
+  const page = "absolute top-[9%] h-auto w-[40%] rounded-[2px] bg-paper shadow-[0_14px_30px_-18px_rgba(20,16,8,0.45)] ring-1 ring-black/10";
   return (
-    <article data-reveal style={{ transitionDelay: `${delay}ms` }} className="reveal-up border-t border-ink/80 pt-5">
-      <span className="font-display text-sm italic text-faint">{index}</span>
-      <h3 className="mt-3 font-display text-xl font-medium text-ink">{title}</h3>
-      <p className="mt-3 text-[15px] leading-relaxed text-muted">{text}</p>
-    </article>
-  );
-}
-
-function ProductDemo({ demo }: { demo: HomeCopy["demo"] }) {
-  return (
-    <div className="reveal-load relative mx-auto mt-14 max-w-full text-left sm:max-w-5xl" style={{ animationDelay: "420ms" }}>
+    <figure
+      style={{ animationDelay: "320ms" }}
+      className="reveal-load relative mx-auto w-full max-w-[26rem]"
+    >
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-[min(820px,94vw)] -translate-x-1/2 -translate-y-1/2 rounded-[100%] bg-[radial-gradient(closest-side,rgba(126,224,203,0.4),rgba(191,233,255,0.18),transparent)] blur-2xl"
+        className="pointer-events-none absolute left-1/2 top-[45%] h-[80%] w-[115%] -translate-x-1/2 -translate-y-1/2 rounded-[100%] bg-[radial-gradient(closest-side,rgba(126,224,203,0.45),rgba(191,233,255,0.18),transparent)] blur-2xl"
       />
-
-      <div className="relative min-w-0 rounded-2xl border border-line bg-paper shadow-[0_28px_80px_-44px_rgba(16,24,40,0.45)]">
-        <div className="grid min-w-0 gap-8 p-6 sm:p-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-0">
-          <div className="min-w-0 lg:pr-10">
-            <p className="text-[13px] font-medium text-mint-deep">{demo.inputLabel}</p>
-            <p className="mt-3 text-balance font-display text-2xl font-medium leading-tight text-ink sm:text-3xl">
-              {demo.input}
-            </p>
-            <ul className="mt-5 grid gap-1.5 text-sm text-muted">
-              {demo.inputFacts.map((fact) => (
-                <li key={fact}>{fact}</li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="grid min-w-0 gap-6 sm:grid-cols-[auto_1fr] sm:gap-8 lg:border-l lg:border-line lg:pl-10">
-            <div className="flex justify-center sm:block">
-              <img
-                src={demo.outputCover}
-                alt={demo.outputTitle}
-                width={400}
-                height={600}
-                decoding="async"
-                className="aspect-[2/3] h-auto w-32 rounded-[3px] shadow-[0_18px_36px_-16px_rgba(20,16,8,0.5)] ring-1 ring-black/10 sm:w-36"
-              />
-            </div>
-            <div className="min-w-0">
-              <p className="text-[13px] font-medium text-mint-deep">{demo.outputLabel}</p>
-              {/* A sample book's title inside the demo, not a section of the page. */}
-              <p className="mt-3 font-display text-3xl font-medium leading-tight text-ink">{demo.outputTitle}</p>
-              <p className="mt-3 text-[15px] leading-relaxed text-muted">{demo.outputSubtitle}</p>
-              <ul className="mt-5 text-sm text-ink-soft">
-                {demo.artifacts.map((artifact) => (
-                  <li key={artifact} className="border-t border-line py-2.5 last:border-b">
-                    {artifact}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <dl className="grid grid-cols-3 divide-x divide-line border-t border-line">
-          {demo.metrics.map((metric) => (
-            <div key={metric.label} className="px-4 py-5 text-center">
-              <dt className="sr-only">{metric.label}</dt>
-              <dd className="font-display text-3xl font-medium leading-none text-ink">{metric.value}</dd>
-              <p className="mt-2 text-[12px] text-faint">{metric.label}</p>
-            </div>
-          ))}
-        </dl>
-      </div>
-    </div>
+      <a href="#sample" className="relative block aspect-[5/4]">
+        <img src="/sample/flip/p3.webp" alt="" width={720} height={1082} decoding="async" className={`${page} left-[3%] -rotate-[7deg]`} />
+        <img src="/sample/flip/p13.webp" alt="" width={720} height={1082} decoding="async" className={`${page} right-[3%] rotate-[7deg]`} />
+        <img
+          src="/sample/cover-v2.webp"
+          alt={proof.alt}
+          width={640}
+          height={954}
+          fetchPriority="high"
+          className="absolute left-1/2 top-0 h-auto w-[46%] -translate-x-1/2 rounded-[3px] shadow-[0_24px_48px_-20px_rgba(20,16,8,0.55)] ring-1 ring-black/10"
+        />
+      </a>
+      <figcaption className="relative mx-auto mt-5 max-w-sm text-center text-[13px] leading-relaxed text-muted">
+        {proof.caption}{" "}
+        <a href="#sample" className="whitespace-nowrap font-medium text-ink underline decoration-line underline-offset-4 transition-colors hover:decoration-ink">
+          {proof.cta}
+        </a>
+      </figcaption>
+    </figure>
   );
 }
 
@@ -345,54 +297,9 @@ function SampleSection({ sample }: { sample: HomeCopy["sample"] }) {
   );
 }
 
-function ProofSection({ proof }: { proof: HomeCopy["proof"] }) {
-  return (
-    <section className="relative border-t border-line/70 bg-paper-2">
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-24 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-        <div>
-          <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
-            {proof.eyebrow}
-          </p>
-          <h2
-            data-reveal
-            style={{ transitionDelay: "60ms" }}
-            className="reveal-up text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
-          >
-            {proof.h2}
-          </h2>
-          <p
-            data-reveal
-            style={{ transitionDelay: "120ms" }}
-            className="reveal-up mt-5 max-w-xl text-balance text-lg leading-relaxed text-muted"
-          >
-            {proof.sub}
-          </p>
-        </div>
-
-        <div
-          data-reveal
-          style={{ transitionDelay: "160ms" }}
-          className="reveal-up border-t border-ink pt-6"
-        >
-          {/* The founder's story is told in the origin section just above; this
-              card carries what the reader gets from it, not a second retelling. */}
-          <div className="grid gap-5">
-            {proof.points.map((point) => (
-              <p key={point} className="flex gap-4 font-display text-xl leading-snug text-ink-soft sm:text-2xl">
-                <span aria-hidden className="mt-3 h-px w-5 shrink-0 bg-ink" />
-                {point}
-              </p>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function ComparisonSection({ comparison }: { comparison: HomeCopy["comparison"] }) {
   return (
-    <section className="relative border-t border-line/70">
+    <section className="relative border-t border-line/70 bg-paper-2">
       <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
@@ -417,7 +324,7 @@ function ComparisonSection({ comparison }: { comparison: HomeCopy["comparison"] 
         <div
           data-reveal
           style={{ transitionDelay: "160ms" }}
-          className="reveal-up mt-12 max-w-4xl divide-y divide-line border-y border-ink"
+          className="reveal-up mx-auto mt-12 max-w-4xl divide-y divide-line border-y border-ink"
         >
           {comparison.rows.map((row) => (
             <div key={row.label} className="grid gap-4 p-5 sm:grid-cols-[0.7fr_1fr_1fr] sm:items-center sm:p-6">
@@ -559,184 +466,48 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
       </header>
 
       <main>
-        {/* Hero */}
+        {/* Hero: the brief on one side, a real generated book on the other */}
         <section className="relative overflow-hidden">
-          <div className="relative mx-auto max-w-6xl px-5 pb-8 pt-16 text-center sm:px-6 sm:pt-24">
-            <p className="reveal-load mb-6 text-[14px] font-medium text-mint-deep">{t.hero.eyebrow}</p>
+          <div className="relative mx-auto grid max-w-6xl gap-14 px-5 pb-16 pt-12 sm:px-6 sm:pt-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-10 lg:pb-24">
+            <div className="text-center lg:text-left">
+              <p className="reveal-load mb-5 text-[14px] font-medium text-mint-deep">{t.hero.eyebrow}</p>
 
-            <h1
-              style={{ animationDelay: "80ms" }}
-              className="reveal-load mx-auto max-w-[20rem] text-balance font-display text-[2.05rem] font-medium leading-[1.05] tracking-[-0.005em] text-ink sm:max-w-4xl sm:text-6xl sm:tracking-[-0.02em]"
-            >
-              {/* Ogilvy's split test: two promises, one per visitor (see the
-                  head script in site-layout.tsx). No-JS and crawlers get the control. */}
-              <span className="hv-a">
-                {t.hero.h1main} <em className="italic text-mint">{t.hero.h1accent}</em>
-              </span>
-              <span className="hv-b">
-                {t.hero.h1test.main} <em className="italic text-mint">{t.hero.h1test.accent}</em>
-              </span>
-            </h1>
+              <h1
+                style={{ animationDelay: "80ms" }}
+                className="reveal-load mx-auto max-w-[20rem] text-balance font-display text-[2.05rem] font-medium leading-[1.05] tracking-[-0.005em] text-ink sm:max-w-2xl sm:text-5xl sm:tracking-[-0.02em] lg:mx-0 lg:text-[3.3rem]"
+              >
+                {/* Ogilvy's split test: two promises, one per visitor (see the
+                    head script in site-layout.tsx). No-JS and crawlers get the control. */}
+                <span className="hv-a">
+                  {t.hero.h1main} <em className="italic text-mint">{t.hero.h1accent}</em>
+                </span>
+                <span className="hv-b">
+                  {t.hero.h1test.main} <em className="italic text-mint">{t.hero.h1test.accent}</em>
+                </span>
+              </h1>
 
-            <p
-              style={{ animationDelay: "160ms" }}
-              className="reveal-load mx-auto mt-6 max-w-[20rem] text-balance text-base leading-relaxed text-muted sm:max-w-xl sm:text-lg"
-            >
-              {t.hero.sub} <span className="font-medium text-ink">{t.hero.subHighlight}</span>
-            </p>
+              <p
+                style={{ animationDelay: "160ms" }}
+                className="reveal-load mx-auto mt-5 max-w-[20rem] text-balance text-base leading-relaxed text-muted sm:max-w-xl sm:text-lg lg:mx-0"
+              >
+                {t.hero.sub} <span className="font-medium text-ink">{t.hero.subHighlight}</span>
+              </p>
 
-            <div
-              style={{ animationDelay: "240ms" }}
-              className="reveal-load mx-auto mt-9 flex flex-col items-center gap-3"
-            >
-              <HeroBrief copy={t.hero.brief} locale={locale} note={t.hero.microcopy} />
+              <div style={{ animationDelay: "240ms" }} className="reveal-load mt-8">
+                <HeroBrief copy={t.hero.brief} locale={locale} note={t.hero.microcopy} />
+              </div>
             </div>
 
-            <p style={{ animationDelay: "320ms" }} className="reveal-load mt-8 text-[13px] text-muted">
-              {t.hero.chips.join("  ·  ")}
-            </p>
-
-            <ProductDemo demo={t.demo} />
+            <HeroBook proof={t.hero.proof} />
           </div>
         </section>
+
+        <FactsStrip facts={t.facts} />
 
         {/* A real generated book, before any claim about it */}
         <SampleSection sample={t.sample} />
 
         <HowSection how={t.how} cta={t.hero.openApp} />
-
-        <FactsStrip facts={t.facts} />
-
-        {/* Origin story */}
-        <section className="relative border-t border-line/70 bg-paper-2">
-          <div className="mx-auto max-w-3xl px-5 py-24 sm:px-6">
-            <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
-              {t.origin.eyebrow}
-            </p>
-            <h2
-              data-reveal
-              style={{ transitionDelay: "60ms" }}
-              className="reveal-up font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
-            >
-              {t.origin.h2}
-            </h2>
-
-            <div
-              data-reveal
-              style={{ transitionDelay: "120ms" }}
-              className="reveal-up relative mt-9 border-l-2 border-ink pl-6 sm:pl-8"
-            >
-              <p className="text-balance text-xl leading-relaxed text-ink-soft sm:text-2xl">
-                {t.origin.pre} <span className="font-semibold text-ink">{t.origin.money}</span>{" "}
-                {t.origin.mid} <span className="text-mint-deep">{t.origin.ban}</span> {t.origin.post}{" "}
-                <span className="font-semibold text-ink">{t.origin.mrr}</span>
-              </p>
-              <p className="mt-7 text-[13px] font-medium uppercase tracking-[0.14em] text-faint">
-                {t.origin.sign}
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <ProofSection proof={t.proof} />
-
-        {/* Features */}
-        <section id="features" className="relative border-t border-line/70">
-          <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
-            <div className="mx-auto max-w-2xl text-center">
-              <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
-                {t.features.eyebrow}
-              </p>
-              <h2
-                data-reveal
-                style={{ transitionDelay: "60ms" }}
-                className="reveal-up text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
-              >
-                {t.features.h2}
-              </h2>
-              <p
-                data-reveal
-                style={{ transitionDelay: "120ms" }}
-                className="reveal-up mx-auto mt-5 max-w-xl text-balance text-lg text-muted"
-              >
-                {t.features.sub}
-              </p>
-            </div>
-
-            <div className="mt-14 grid gap-x-10 gap-y-10 md:grid-cols-3">
-              {t.features.items.map((f, i) => (
-                <FeatureCard
-                  key={f.title}
-                  index={`0${i + 1}`}
-                  title={f.title}
-                  text={f.text}
-                  delay={i * 90}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <ComparisonSection comparison={t.comparison} />
-
-        {/* Tools & guides (internal links to money pages) */}
-        <section id="tools" className="relative border-t border-line/70 bg-paper-2">
-          <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
-            <div className="mx-auto max-w-2xl text-center">
-              <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
-                {t.tools.eyebrow}
-              </p>
-              <h2
-                data-reveal
-                style={{ transitionDelay: "60ms" }}
-                className="reveal-up text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
-              >
-                {t.tools.h2}
-              </h2>
-              <p
-                data-reveal
-                style={{ transitionDelay: "120ms" }}
-                className="reveal-up mx-auto mt-5 max-w-xl text-balance text-lg text-muted"
-              >
-                {t.tools.sub}
-              </p>
-            </div>
-
-            <div className="mt-14 grid gap-x-10 gap-y-10 md:grid-cols-3">
-              {t.tools.items.map((item, i) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  data-reveal
-                  style={{ transitionDelay: `${i * 90}ms` }}
-                  className="reveal-up group relative border-t border-ink/80 pt-5"
-                >
-                  <h3 className="font-display text-xl font-medium text-ink">{item.title}</h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-muted">{item.text}</p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-ink underline decoration-line underline-offset-4 transition-colors group-hover:decoration-ink">
-                    {t.tools.explore}
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" strokeWidth={2.25} />
-                  </span>
-                </a>
-              ))}
-            </div>
-
-            <a
-              href={blogPath}
-              data-reveal
-              className="reveal-up group mt-12 flex flex-col items-start justify-between gap-5 border-y border-line py-7 sm:flex-row sm:items-center"
-            >
-              <div>
-                <h3 className="font-display text-xl font-medium text-ink">{t.tools.blogTitle}</h3>
-                <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-muted">{t.tools.blogText}</p>
-              </div>
-              <span className="inline-flex shrink-0 items-center gap-2 rounded-md border border-ink px-5 py-3 text-sm font-medium text-ink transition-colors group-hover:bg-ink group-hover:text-paper">
-                {t.tools.blogCta}
-                <ArrowRight className="h-4 w-4" strokeWidth={2.25} />
-              </span>
-            </a>
-          </div>
-        </section>
 
         {/* Pricing */}
         <section id="pricing" className="relative border-t border-line/70">
@@ -821,6 +592,39 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
           </div>
         </section>
 
+        <ComparisonSection comparison={t.comparison} />
+
+        {/* Origin story */}
+        <section className="relative border-t border-line/70">
+          <div className="mx-auto max-w-3xl px-5 py-24 sm:px-6">
+            <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
+              {t.origin.eyebrow}
+            </p>
+            <h2
+              data-reveal
+              style={{ transitionDelay: "60ms" }}
+              className="reveal-up font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
+            >
+              {t.origin.h2}
+            </h2>
+
+            <div
+              data-reveal
+              style={{ transitionDelay: "120ms" }}
+              className="reveal-up relative mt-9 border-l-2 border-ink pl-6 sm:pl-8"
+            >
+              <p className="text-balance text-xl leading-relaxed text-ink-soft sm:text-2xl">
+                {t.origin.pre} <span className="font-semibold text-ink">{t.origin.money}</span>{" "}
+                {t.origin.mid} <span className="text-mint-deep">{t.origin.ban}</span> {t.origin.post}{" "}
+                <span className="font-semibold text-ink">{t.origin.mrr}</span>
+              </p>
+              <p className="mt-7 text-[13px] font-medium uppercase tracking-[0.14em] text-faint">
+                {t.origin.sign}
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section id="faq" className="relative border-t border-line/70 bg-paper-2">
           <div className="mx-auto max-w-3xl px-5 py-24 sm:px-6">
@@ -842,6 +646,65 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Tools & guides (internal links to money pages) */}
+        <section id="tools" className="relative border-t border-line/70">
+          <div className="mx-auto max-w-6xl px-5 py-24 sm:px-6">
+            <div className="mx-auto max-w-2xl text-center">
+              <p data-reveal className="reveal-up mb-3 text-[14px] font-medium text-mint-deep">
+                {t.tools.eyebrow}
+              </p>
+              <h2
+                data-reveal
+                style={{ transitionDelay: "60ms" }}
+                className="reveal-up text-balance font-display text-4xl font-medium tracking-[-0.015em] text-ink sm:text-5xl"
+              >
+                {t.tools.h2}
+              </h2>
+              <p
+                data-reveal
+                style={{ transitionDelay: "120ms" }}
+                className="reveal-up mx-auto mt-5 max-w-xl text-balance text-lg text-muted"
+              >
+                {t.tools.sub}
+              </p>
+            </div>
+
+            <div className="mt-14 grid gap-x-10 gap-y-10 md:grid-cols-3">
+              {t.tools.items.map((item, i) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  data-reveal
+                  style={{ transitionDelay: `${i * 90}ms` }}
+                  className="reveal-up group relative border-t border-ink/80 pt-5"
+                >
+                  <h3 className="font-display text-xl font-medium text-ink">{item.title}</h3>
+                  <p className="mt-3 text-[15px] leading-relaxed text-muted">{item.text}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-ink underline decoration-line underline-offset-4 transition-colors group-hover:decoration-ink">
+                    {t.tools.explore}
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" strokeWidth={2.25} />
+                  </span>
+                </a>
+              ))}
+            </div>
+
+            <a
+              href={blogPath}
+              data-reveal
+              className="reveal-up group mt-12 flex flex-col items-start justify-between gap-5 border-y border-line py-7 sm:flex-row sm:items-center"
+            >
+              <div>
+                <h3 className="font-display text-xl font-medium text-ink">{t.tools.blogTitle}</h3>
+                <p className="mt-2 max-w-xl text-[15px] leading-relaxed text-muted">{t.tools.blogText}</p>
+              </div>
+              <span className="inline-flex shrink-0 items-center gap-2 rounded-md border border-ink px-5 py-3 text-sm font-medium text-ink transition-colors group-hover:bg-ink group-hover:text-paper">
+                {t.tools.blogCta}
+                <ArrowRight className="h-4 w-4" strokeWidth={2.25} />
+              </span>
+            </a>
           </div>
         </section>
 

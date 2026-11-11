@@ -56,9 +56,9 @@ export const siteMetadata: Metadata = {
   description:
     "Generate a manuscript, full wrap cover, KDP metadata, and an invented pen name from one niche brief. Buy one book for €10, or 2 a week on subscription.",
   applicationName: SITE_NAME,
-  category: "AI publishing software",
+  category: "AI book generator",
   classification:
-    "AI publishing software, KDP automation, book SEO, AI book cover generation, manuscript generation",
+    "AI book generator, Amazon KDP, AI publishing software, KDP automation, book SEO, AI book cover generation, manuscript generation",
   manifest: "/manifest.webmanifest",
   alternates: {
     types: {
@@ -110,7 +110,7 @@ const siteJsonLd = [
     }),
     image: { "@id": LOGO_ID },
     description:
-      "AI publishing software for creating manuscripts, book covers, KDP metadata and repeatable publishing catalog workflows.",
+      "AI book generator for Amazon KDP: creates manuscripts, book covers, KDP metadata and repeatable publishing catalog workflows.",
     foundingDate: "2026",
     founder: {
       "@type": "Person",
@@ -224,7 +224,7 @@ const siteJsonLd = [
     name: SITE_NAME,
     alternateName: "DraftToDone",
     applicationCategory: "PublishingApplication",
-    applicationSubCategory: "AI publishing software",
+    applicationSubCategory: "AI book generator",
     operatingSystem: "Web",
     url: APP_URL,
     // Straight to signup: the bare app root answers 307, and every redirect hop
@@ -250,7 +250,7 @@ const siteJsonLd = [
       ],
     },
     description:
-      "AI publishing software for turning one niche brief into a manuscript, full cover, KDP metadata and catalog quality workflow.",
+      "AI book generator for Amazon KDP that turns one niche brief into a manuscript, full cover, KDP metadata and catalog quality workflow.",
     brand: {
       "@id": ORGANIZATION_ID,
     },

@@ -31,7 +31,7 @@ import {
  * Freshness is an explicit ranking signal for retrieval-augmented engines, so
  * it is stated once here and reused by every surface instead of being retyped.
  */
-export const ANSWER_ENGINE_UPDATED = "2026-07-24";
+export const ANSWER_ENGINE_UPDATED = "2026-11-11";
 export const INDEXNOW_KEY = "29103ca57d01035cc65bbbf660306e5b";
 
 /** ISO-8601 dates sort lexicographically, so "latest" is a plain string compare. */
@@ -113,7 +113,7 @@ export const productFacts = {
   canonicalUrl: SITE_URL,
   appUrl: APP_URL,
   status: "Live web application",
-  category: "AI publishing software for Amazon KDP books",
+  category: "AI book generator for Amazon KDP",
   oneSentence:
     "DraftToDone turns one niche brief into a complete Amazon KDP book package: manuscript, front/spine/back cover, title, description, keyword set and an invented pen name.",
   shortDescription:
@@ -255,7 +255,7 @@ export const answerSnippets = [
   {
     question: "What is DraftToDone?",
     answer:
-      "DraftToDone is AI publishing software that generates a complete Amazon KDP book package from one niche brief: manuscript, front/spine/back cover, title, description, keywords and an invented pen name.",
+      "DraftToDone is an AI book generator for Amazon KDP. It generates a complete book package from one niche brief: manuscript, front/spine/back cover, title, description, keywords and an invented pen name.",
   },
   {
     question: "Who is DraftToDone for?",

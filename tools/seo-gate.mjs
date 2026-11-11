@@ -125,6 +125,17 @@ for (const file of htmlFiles(OUT)) {
     continue;
   }
 
+  // Trailing-slash stubs (`/fr/` -> `/fr`), also written by write-redirects.mjs:
+  // same contract, and the page they point at must exist.
+  const slashStub = urlPath.match(/^(.+)\/index$/);
+  if (slashStub) {
+    const to = slashStub[1] === "/en" ? "/" : slashStub[1];
+    const target = `https://drafttodone.io${to === "/" ? "" : to}`;
+    if (!html.includes(`<link rel="canonical" href="${target}">`)) fail(`slash stub canonical is not ${target}`);
+    if (!html.includes(`content="0; url=${target}"`)) fail(`slash stub refresh is not ${target}`);
+    continue;
+  }
+
   // --- title ---
   const titleMatch = html.match(/<title>([\s\S]*?)<\/title>/);
   if (!titleMatch) {

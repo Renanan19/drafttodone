@@ -266,7 +266,7 @@ export function breadcrumbList(items: { name: string; url: string }[]): SchemaNo
 export const softwareEntityFacts = {
   name: SITE_NAME,
   applicationCategory: "PublishingApplication",
-  applicationSubCategory: "AI publishing software",
+  applicationSubCategory: "AI book generator",
   operatingSystem: "Web",
   url: APP_URL,
   installUrl: APP_SIGNUP_URL,
