@@ -479,10 +479,10 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
                 {/* Ogilvy's split test: two promises, one per visitor (see the
                     head script in site-layout.tsx). No-JS and crawlers get the control. */}
                 <span className="hv-a">
-                  {t.hero.h1main} <em className="italic text-mint">{t.hero.h1accent}</em>
+                  {t.hero.h1main} <em className="italic text-mint-deep">{t.hero.h1accent}</em>
                 </span>
                 <span className="hv-b">
-                  {t.hero.h1test.main} <em className="italic text-mint">{t.hero.h1test.accent}</em>
+                  {t.hero.h1test.main} <em className="italic text-mint-deep">{t.hero.h1test.accent}</em>
                 </span>
               </h1>
 
@@ -555,7 +555,7 @@ export function HomeView({ copy, locale }: { copy: HomeCopy; locale: Locale }) {
                     <span className="text-[14px] text-muted">{p.period}</span>
                   </div>
                   <p className="mt-2 text-[15px] text-ink-soft">{p.credits}</p>
-                  <p className="mt-0.5 text-[13px] text-faint">{p.perBook}</p>
+                  <p className="mt-0.5 text-[13px] text-muted">{p.perBook}</p>
 
                   <ul className="mt-6 grid gap-2.5">
                     {t.pricing.includes.map((inc) => (

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SITE_NAME, SITE_URL } from "../blog-content";
 import { getHomeAlternates, homeCopy } from "../home-content";
 import { HomeView } from "../home-view";
+import { homeMarkdownPath } from "../home-markdown";
 
 // English landing lives at the site root `/`. fr/it/de live at `/[locale]`.
 export const metadata: Metadata = {
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
     languages: getHomeAlternates(),
+    types: { "text/markdown": homeMarkdownPath("en") },
   },
   openGraph: {
     title: homeCopy.en.meta.title,

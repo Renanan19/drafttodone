@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { isLocale, locales, SITE_NAME, SITE_URL, type Locale } from "@/app/blog-content";
 import { getHomeAlternates, homeCopy, homePath, homeUrl } from "@/app/home-content";
 import { HomeView } from "@/app/home-view";
+import { homeMarkdownPath, markdownLocales, type MarkdownLocale } from "@/app/home-markdown";
 import { seoDescription, seoTitle } from "@/app/seo-metadata";
 
 export const dynamicParams = false;
@@ -35,6 +36,9 @@ export async function generateMetadata({ params }: LocaleHomeProps): Promise<Met
     alternates: {
       canonical: homePath(locale),
       languages: getHomeAlternates(),
+      ...((markdownLocales as readonly string[]).includes(locale)
+        ? { types: { "text/markdown": homeMarkdownPath(locale as MarkdownLocale) } }
+        : {}),
     },
     openGraph: {
       title: metadataTitle,

@@ -57,6 +57,15 @@ export function HeroBrief({
     return () => document.removeEventListener("click", onClick);
   }, []);
 
+  // The box grows with the brief instead of scrolling inside itself: on a
+  // phone, three fixed rows hid half of the example placeholder.
+  useEffect(() => {
+    const field = fieldRef.current;
+    if (!field) return;
+    field.style.height = "auto";
+    field.style.height = `${field.scrollHeight}px`;
+  }, [brief]);
+
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     // Which headline this visitor saw (site-layout.tsx head script).
     const variant = headlineVariant();
@@ -106,13 +115,13 @@ export function HeroBrief({
           onChange={(e) => setBrief(e.target.value)}
           onKeyDown={onKeyDown}
           placeholder={copy.placeholder}
-          className="block w-full resize-none rounded-md bg-transparent px-4 pt-3 text-base leading-relaxed text-ink outline-none placeholder:text-faint sm:text-[17px]"
+          className="block min-h-[8.5rem] w-full resize-none overflow-hidden rounded-md bg-transparent px-4 pt-3 text-base leading-relaxed text-ink outline-none placeholder:text-faint sm:min-h-0 sm:text-[17px]"
         />
-        <div className="flex items-center justify-between gap-3 px-2 pb-1 pt-2">
+        <div className="flex flex-col items-stretch gap-3 px-1 pb-1 pt-2 sm:flex-row sm:items-center sm:justify-between sm:px-2">
           <span className="hidden text-[12px] text-faint sm:inline">{copy.label}</span>
           <button
             type="submit"
-            className="group ml-auto inline-flex shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md bg-ink px-5 py-3 text-[15px] font-medium text-paper transition-colors duration-200 hover:bg-ink-soft"
+            className="group inline-flex w-full shrink-0 items-center justify-center gap-2 whitespace-nowrap rounded-md bg-ink px-5 py-3.5 text-[15px] font-medium text-paper transition-colors duration-200 hover:bg-ink-soft sm:ml-auto sm:w-auto sm:py-3"
           >
             {copy.submit}
             <ArrowRight
@@ -123,7 +132,7 @@ export function HeroBrief({
         </div>
       </form>
 
-      {note && <p className="mt-3 text-center text-sm text-faint">{note}</p>}
+      {note && <p className="mt-3 text-balance text-center text-sm text-muted">{note}</p>}
 
       <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
         <span className="text-[12px] text-faint">{copy.examplesLabel}</span>
